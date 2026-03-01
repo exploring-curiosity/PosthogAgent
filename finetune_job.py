@@ -49,8 +49,8 @@ parser.add_argument("--all-clusters", action="store_true", help="Train all clust
 parser.add_argument("--cluster", type=int, default=None, help="Train a single cluster by ID")
 parser.add_argument("--model", type=str, default="mistralai/Mistral-7B-Instruct-v0.3")
 parser.add_argument("--epochs", type=int, default=5)
-parser.add_argument("--batch-size", type=int, default=8, help="Per-device batch size (A100 80GB can handle 8+)")
-parser.add_argument("--gradient-accumulation", type=int, default=2, help="Gradient accumulation steps")
+parser.add_argument("--batch-size", type=int, default=4, help="Per-device batch size")
+parser.add_argument("--gradient-accumulation", type=int, default=4, help="Gradient accumulation steps (effective batch = batch_size * this)")
 parser.add_argument("--learning-rate", type=float, default=2e-4)
 parser.add_argument("--lora-rank", type=int, default=32, help="LoRA rank (higher=more capacity, A100 can handle it)")
 parser.add_argument("--lora-alpha", type=int, default=64, help="LoRA alpha (usually 2x rank)")
@@ -207,7 +207,7 @@ def train_cluster(cluster_id: int) -> dict:
     lora_config = LoraConfig(
         r=cli_args.lora_rank,
         lora_alpha=cli_args.lora_alpha,
-        lora_dropout=0.05,
+        lora_dropout=0.0,
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
                         "gate_proj", "up_proj", "down_proj"],
         bias="none",
@@ -257,7 +257,8 @@ def train_cluster(cluster_id: int) -> dict:
             dataset_num_proc=4,
             dataloader_num_workers=4,
             dataloader_pin_memory=True,
-            gradient_checkpointing=False,
+            gradient_checkpointing=True,
+            gradient_checkpointing_kwargs={"use_reentrant": False},
             optim="adamw_torch_fused",
         ),
     )
