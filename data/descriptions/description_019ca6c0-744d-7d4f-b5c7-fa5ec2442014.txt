@@ -1,0 +1,57 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly focused and linear. The user loads a single post URL (`/post/ef376747-f6af-44e4-93fc-6a270cd2b8c7`) at [0.0s] and remains on the same page for the entire 1969.47s session.
+- No exploratory behavior: no additional page loads, subreddit browsing, or cross-post navigation.
+- The duplicate page load at [300.08s] suggests a refresh or reconnection event, not a new navigation.
+
+2. READING BEHAVIOR
+- No scroll data is available, so reading depth cannot be determined.
+- The 300.08s gap between initial load and refresh implies either:
+  a) Deep reading/comment drafting (5+ minutes on a single post), or
+  b) Idle time with the page open (e.g., tab left inactive).
+- No evidence of skimming (e.g., rapid API calls for multiple posts).
+
+3. ENGAGEMENT STYLE
+- No explicit engagement actions (votes, comments) are recorded in the log.
+- API calls at [0.17s] and [0.19s] fetch post comments and post data, indicating passive consumption rather than active participation.
+- Vote-to-comment ratio: 0:0 (no engagement detected).
+
+4. INTERACTION SPEED
+- Initial API calls are rapid:
+  - Comments API: 0.17s after page load.
+  - Post data API: 0.02s after comments API.
+  - Subreddits/trending APIs: 0.03s later (likely parallel requests).
+- Post-initialization: No further interactions for 300.08s until refresh.
+- Overall: Fast initial load, then prolonged inactivity or deep focus.
+
+5. CONTENT PREFERENCES
+- Targeted a single post (`ef376747-f6af-44e4-93fc-6a270cd2b8c7`).
+- No evidence of subreddit or trending content exploration despite API calls for `/api/subreddits` and `/api/trending` at [0.22s]. These may be background requests unrelated to user intent.
+
+6. TYPING BEHAVIOR
+- No typing events (e.g., comment submissions, search queries) are recorded.
+- No input length, speed, or correction data available.
+
+7. FEATURE DISCOVERY
+- Used:
+  - Core post viewing (via `/api/posts/...`).
+  - Comments section (via `/api/posts/.../comments`).
+- Ignored:
+  - Subreddit navigation (no clicks despite `/api/subreddits` call).
+  - Trending content (no follow-up to `/api/trending`).
+  - Voting/commenting (no API calls for these actions).
+  - Search or other UI features (no evidence of use).
+
+8. SESSION FLOW
+- [0.0s–0.22s]: Rapid initialization.
+  - Page load → immediate API calls for post data, comments, and background metadata (subreddits/trending).
+- [0.22s–300.08s]: Prolonged single-page focus.
+  - No interactions; likely reading or idle.
+- [300.08s]: Page refresh/reload.
+  - Identical URL and viewport; no new content loaded.
+- [300.08s–1969.47s]: Extended session tail.
+  - No further actions; session ends after 32.8 minutes of inactivity post-refresh.
+- Arc: Focused consumption → potential abandonment or distraction → passive session persistence.
+```

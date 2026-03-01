@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused bursts**: The user exhibits non-linear, exploratory navigation with abrupt shifts in attention.
+  - Initial page load (0.0s) → immediate "Sign Up" click (7.51s) suggests intent to register, but this is abandoned after 1.55s.
+  - Post-signup (53.54s), they return to the original post (ef376747) but quickly pivot to the homepage (56.4s) via the "🗽 FunCity" logo.
+  - Later, they jump between posts (e.g., 6450bc39 at 103.76s) and comments (110.29s) without sustained engagement.
+  - **Quantitative**: 12 distinct "unknown" clicks in the first 50s (avg. 4.17s between actions) vs. 5 clicks in the last 30s (avg. 6s between actions), indicating early exploratory chaos.
+
+2. READING BEHAVIOR
+- **Skimmer with minimal deep reading**:
+  - **Scrolling**: Only one recorded scroll (115.39s), covering 431px over 0.41s (1,051px/s). This suggests rapid scanning of content without pausing.
+  - **Dwell time**: Spent 56.4s on the initial post (ef376747) but only 7.1s on the second post (6450bc39), implying superficial engagement.
+  - **Comment interaction**: Clicked "comments" API twice (0.04s, 110.29s) but no evidence of reading replies (no scroll depth beyond 434px).
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy, no voting**:
+  - **Commenting**: Typed 28+ distinct inputs (e.g., 36 chars at 68.29s, 28 chars at 89.06s), suggesting intent to post multiple comments.
+  - **Voting**: No evidence of upvote/downvote actions (no API calls to `/api/vote` or click coordinates near vote buttons).
+  - **Ratio**: 0 votes : ≥3 comments (attempted).
+  - **Speed**: First comment attempt began at 14.18s (4 chars in 0.52s), but most inputs were abandoned mid-typing.
+
+4. INTERACTION SPEED
+- **Fast but erratic**:
+  - **Early session**: Actions clustered (e.g., 4 clicks between 9.06s–12.21s, avg. 1.05s apart).
+  - **Typing bursts**: 25-character input in 1.48s (74.19s–75.81s; ~16.9 chars/s), but frequent backspacing (e.g., 83.32s–83.99s: 17→14 chars in 0.67s).
+  - **Deliberate pauses**: 11.26s gap between 58.69s (unknown click) and 68.29s (36-char input), possibly indicating distraction or content evaluation.
+
+5. CONTENT PREFERENCES
+- **Unclear due to limited data**:
+  - **Subreddits**: Loaded `/api/subreddits` 4 times (0.07s, 56.45s, 58.76s, 104.05s) but no clicks on specific subreddits.
+  - **Posts**: Viewed 2 posts (ef376747, 6450bc39) but no metadata to infer topics.
+  - **Trending**: Loaded `/api/trending` 4 times (0.07s, 56.46s, 104.06s, 114.36s), suggesting interest in popular content.
+
+6. TYPING BEHAVIOR
+- **Fast with frequent corrections**:
+  - **Speed**: Peak typing at 28 chars in 1.8s (88.23s–89.06s; ~15.6 chars/s). Average input length: 13.5 chars (median: 11 chars).
+  - **Corrections**: Multiple backspace sequences (e.g., 82.84s–86.98s: 16→15→14→...→17 chars over 4.14s).
+  - **Abandonment**: 12/28 inputs (43%) were ≤5 chars, suggesting indecision or distraction.
+  - **Longest input**: 36 chars at 68.29s (no evidence of submission).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Sign-up flow**: Clicked "Sign Up" (7.51s), completed form (53.4s API call to `/api/auth/signup`).
+  - **Navigation**: Used "🗽 FunCity" logo to return home (56.4s, 114.25s).
+  - **Commenting**: Attempted to post (typing + API calls to `/api/comments` at 110.29s).
+  - **Post browsing**: Clicked on posts (e.g., 103.6s) and comments (110.29s).
+- **Ignored**:
+  - **Voting**: No evidence of upvote/downvote buttons.
+  - **Search**: No clicks on search bar (no API calls to `/api/search`).
+  - **User profiles**: No clicks on usernames/avatars.
+  - **Sidebar**: No interactions with trending/subreddit lists (despite loading `/api/trending` 4x).
+
+8. SESSION FLOW
+- **Arc**: Exploration → Frustrated Sign-Up → Superficial Browsing → Abandoned Commenting → Exit
+  - **0.0s–7.51s**: Initial load; immediate intent to sign up (click "Sign Up").
+  - **7.51s–53.53s**: Struggled with sign-up form (12 unknown clicks, 14 typing bursts). Abandoned after 46s.
+  - **53.53s–56.4s**: Post-signup, returned to original post (API calls to ef376747).
+  - **56.4s–103.76s**: Explored homepage (clicked "🗽 FunCity"), attempted to comment (68.29s–75.81s: 25 chars), but abandoned.
+  - **103.76s–114.25s**: Viewed second post (6450bc39), clicked comments (110.29s), but no submission.
+  - **114.25s–133.7s**: Returned to homepage, rapid scroll (115.39s), then exited via top-right clicks (132.26s, 133.7s).
+- **Exit**: No clear trigger; final actions suggest frustration (rapid clicks in top-right, possibly closing tabs).
+```
+
+**Key Observations**:
+- **High intent to engage** (sign-up + commenting) but **low follow-through** (abandoned 100% of comment attempts).
+- **Desktop user with precise clicks** (e.g., (1536, 12) for "Sign Up") but **no deep content interaction**.
+- **Technical issues likely**: Repeated API calls to the same endpoints (e.g., `/api/trending` 4x in 114s) may indicate loading errors or UI glitches.

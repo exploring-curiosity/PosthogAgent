@@ -1,0 +1,2329 @@
+{
+  "user_profile": {
+    "session_id": "019ca6dd-00e5-70ce-9d95-84a78c75f7b8",
+    "age_group": "18-24",
+    "country": "Algeria",
+    "nyc_familiarity": "live_here",
+    "os": "Windows",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 1600,
+    "viewport_height": 765,
+    "screen_width": 1600,
+    "screen_height": 900
+  },
+  "session_duration_s": 228.66,
+  "total_raw_events": 444,
+  "high_level_actions": [
+    {
+      "time": 11.67,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "1600x731"
+    },
+    {
+      "time": 11.72,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 11.72,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 11.8,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 13.75,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-clock h-4 w-4",
+      "coordinates": [
+        279,
+        92
+      ]
+    },
+    {
+      "time": 14.02,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=new"
+    },
+    {
+      "time": 14.42,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-trending-up h-4 w-4",
+      "coordinates": [
+        359,
+        94
+      ]
+    },
+    {
+      "time": 15.09,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=top"
+    },
+    {
+      "time": 21.82,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Sign Up",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-3 py-1.5 text-sm font-semibold te",
+      "coordinates": [
+        1387,
+        15
+      ]
+    },
+    {
+      "time": 23.24,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        671,
+        271
+      ]
+    },
+    {
+      "time": 24.3,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        643,
+        254
+      ]
+    },
+    {
+      "time": 43.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 44.09,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 44.22,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 44.33,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 69.33,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 69.45,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 69.68,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 69.9,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 70.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 71.29,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 71.57,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 71.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 71.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 72.14,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 73.85,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.08,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.18,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.08,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.48,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.86,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.99,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 76.72,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 76.86,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 78.47,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        593,
+        382
+      ]
+    },
+    {
+      "time": 80.29,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 80.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 84.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 84.68,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 84.84,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 85.78,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 86.21,
+      "action": "API_CALL",
+      "path": "/api/auth/signup",
+      "full_path": "/api/auth/signup"
+    },
+    {
+      "time": 86.45,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=top"
+    },
+    {
+      "time": 88.98,
+      "action": "SCROLL",
+      "scroll_from": 200,
+      "scroll_to": 783,
+      "max_depth": 783,
+      "duration_s": 0.3,
+      "direction": "down"
+    },
+    {
+      "time": 89.93,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        338,
+        321
+      ]
+    },
+    {
+      "time": 90.54,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        351,
+        340
+      ]
+    },
+    {
+      "time": 90.6,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 90.81,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19"
+    },
+    {
+      "time": 90.83,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 90.87,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 90.89,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 92.28,
+      "action": "SCROLL",
+      "scroll_from": 21,
+      "scroll_to": 276,
+      "max_depth": 276,
+      "duration_s": 0.1,
+      "direction": "down"
+    },
+    {
+      "time": 94.47,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        282,
+        527
+      ]
+    },
+    {
+      "time": 95.53,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        302,
+        562
+      ]
+    },
+    {
+      "time": 95.98,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 96.16,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 96.34,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 96.35,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 96.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 96.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 97.19,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 97.34,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 97.48,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 97.61,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 97.83,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 97.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 98.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 98.15,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 98.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 98.6,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 98.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 98.95,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 99.98,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        211,
+        660
+      ]
+    },
+    {
+      "time": 100.13,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 100.25,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 100.57,
+      "action": "SCROLL",
+      "scroll_from": 277,
+      "scroll_to": 364,
+      "max_depth": 364,
+      "duration_s": 0.1,
+      "direction": "down"
+    },
+    {
+      "time": 102.53,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        285,
+        615
+      ]
+    },
+    {
+      "time": 103.87,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        287,
+        637
+      ]
+    },
+    {
+      "time": 104.31,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 104.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 104.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 104.77,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 104.87,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 105.02,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 105.35,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 105.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 105.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 105.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 105.94,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.21,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.29,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.46,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.67,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.84,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.95,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 19,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 107.25,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 20,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 107.42,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 21,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 107.51,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 107.59,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 108.15,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 108.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 109.81,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        218,
+        760
+      ]
+    },
+    {
+      "time": 109.98,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 110.12,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 110.41,
+      "action": "SCROLL",
+      "scroll_from": 452,
+      "scroll_to": 0,
+      "max_depth": 452,
+      "duration_s": 1.1,
+      "direction": "up"
+    },
+    {
+      "time": 112.15,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1270,
+        599
+      ]
+    },
+    {
+      "time": 112.39,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd"
+    },
+    {
+      "time": 112.41,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments"
+    },
+    {
+      "time": 112.44,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 112.45,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 113.24,
+      "action": "SCROLL",
+      "scroll_from": 26,
+      "scroll_to": 119,
+      "max_depth": 119,
+      "duration_s": 0.11,
+      "direction": "down"
+    },
+    {
+      "time": 114.09,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1226,
+        343
+      ]
+    },
+    {
+      "time": 114.15,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 114.22,
+      "action": "API_CALL",
+      "path": "/api/subreddits/nightlife",
+      "full_path": "/api/subreddits/nightlife"
+    },
+    {
+      "time": 114.25,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 114.26,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 114.35,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=440e59cc-6885-4b00-ba22-b697238e66ca"
+    },
+    {
+      "time": 117.48,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "\ud83d\uddfd FunCity",
+      "target_href": "",
+      "target_class": "text-lg font-bold text-neon-cyan",
+      "coordinates": [
+        243,
+        33
+      ]
+    },
+    {
+      "time": 117.55,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 117.63,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 117.65,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 118.4,
+      "action": "SCROLL",
+      "scroll_from": 128,
+      "scroll_to": 0,
+      "max_depth": 558,
+      "duration_s": 0.31,
+      "direction": "up"
+    },
+    {
+      "time": 119.43,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        272,
+        86
+      ]
+    },
+    {
+      "time": 119.58,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=new"
+    },
+    {
+      "time": 120.65,
+      "action": "SCROLL",
+      "scroll_from": 136,
+      "scroll_to": 539,
+      "max_depth": 539,
+      "duration_s": 0.2,
+      "direction": "down"
+    },
+    {
+      "time": 121.37,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        281,
+        378
+      ]
+    },
+    {
+      "time": 121.52,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 121.6,
+      "action": "API_CALL",
+      "path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments",
+      "full_path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments"
+    },
+    {
+      "time": 121.71,
+      "action": "API_CALL",
+      "path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986",
+      "full_path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986"
+    },
+    {
+      "time": 121.73,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 121.74,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 122.42,
+      "action": "SCROLL",
+      "scroll_from": 2,
+      "scroll_to": 11,
+      "max_depth": 11,
+      "duration_s": 0.2,
+      "direction": "down"
+    },
+    {
+      "time": 123.06,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        280,
+        246
+      ]
+    },
+    {
+      "time": 124.35,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.67,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.74,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.99,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 125.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 125.44,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 125.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 125.68,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 125.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 125.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 126.08,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 126.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 126.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 126.46,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 126.85,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 126.98,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 127.95,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 128.33,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 129.24,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 129.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 129.56,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 129.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 129.66,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 129.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 130.01,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 130.21,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 19,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 130.31,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 20,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 176.66,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        241,
+        357
+      ]
+    },
+    {
+      "time": 176.84,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 176.96,
+      "action": "API_CALL",
+      "path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments",
+      "full_path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments"
+    },
+    {
+      "time": 186.07,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1314,
+        375
+      ]
+    },
+    {
+      "time": 186.14,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 186.21,
+      "action": "API_CALL",
+      "path": "/api/subreddits/hidden-gems",
+      "full_path": "/api/subreddits/hidden-gems"
+    },
+    {
+      "time": 186.25,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 186.25,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 186.37,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=d18bbae8-9c8e-45b9-8acd-60960e8bd6b3"
+    },
+    {
+      "time": 189.7,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1274,
+        345
+      ]
+    },
+    {
+      "time": 189.91,
+      "action": "API_CALL",
+      "path": "/api/subreddits/art",
+      "full_path": "/api/subreddits/art"
+    },
+    {
+      "time": 189.94,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 189.94,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 190.05,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=b5ed3109-d16f-4ea7-ad3a-e52c9310e42c"
+    },
+    {
+      "time": 190.91,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1256,
+        132
+      ]
+    },
+    {
+      "time": 191.12,
+      "action": "API_CALL",
+      "path": "/api/subreddits/bronx",
+      "full_path": "/api/subreddits/bronx"
+    },
+    {
+      "time": 191.14,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 191.15,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 191.27,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=81ca6efb-b147-4021-9400-01fcd1d1be71"
+    },
+    {
+      "time": 193.43,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1222,
+        392
+      ]
+    },
+    {
+      "time": 193.51,
+      "action": "API_CALL",
+      "path": "/api/subreddits/hidden-gems",
+      "full_path": "/api/subreddits/hidden-gems"
+    },
+    {
+      "time": 193.53,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 193.53,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 193.62,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=d18bbae8-9c8e-45b9-8acd-60960e8bd6b3"
+    },
+    {
+      "time": 195.36,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1245,
+        569
+      ]
+    },
+    {
+      "time": 195.58,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd"
+    },
+    {
+      "time": 195.62,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments"
+    },
+    {
+      "time": 195.65,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 195.7,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 196.46,
+      "action": "SCROLL",
+      "scroll_from": 5,
+      "scroll_to": 119,
+      "max_depth": 119,
+      "duration_s": 0.1,
+      "direction": "down"
+    },
+    {
+      "time": 197.19,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1238,
+        596
+      ]
+    },
+    {
+      "time": 197.29,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 197.46,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments"
+    },
+    {
+      "time": 197.46,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7"
+    },
+    {
+      "time": 197.52,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 197.53,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 198.88,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1221,
+        24
+      ]
+    },
+    {
+      "time": 198.92,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 199.96,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        644,
+        176
+      ]
+    },
+    {
+      "time": 201.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 201.5,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        505,
+        166
+      ]
+    },
+    {
+      "time": 202.28,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        584,
+        260
+      ]
+    },
+    {
+      "time": 213.46,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 213.81,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 213.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 213.98,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 214.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 214.45,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 214.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 214.76,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.1,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.18,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.23,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.39,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.59,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.6,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.65,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.67,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.69,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 224.2,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 224.33,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts"
+    },
+    {
+      "time": 224.47,
+      "action": "API_CALL",
+      "path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74/comments",
+      "full_path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74/comments"
+    },
+    {
+      "time": 224.57,
+      "action": "API_CALL",
+      "path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74",
+      "full_path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74"
+    },
+    {
+      "time": 224.61,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 224.64,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 225.91,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1371,
+        20
+      ]
+    },
+    {
+      "time": 226.66,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1306,
+        110
+      ]
+    },
+    {
+      "time": 226.67,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/f1cf401b-b15e-47bb-9b76-fb6546d6ac74",
+      "viewport": "1600x765"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=new"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=top"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/auth/signup",
+      "full_path": "/api/auth/signup"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=top"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits/nightlife",
+      "full_path": "/api/subreddits/nightlife"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=440e59cc-6885-4b00-ba22-b697238e66ca"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=new"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986",
+      "full_path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments",
+      "full_path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments",
+      "full_path": "/api/posts/05ca2dee-a220-4ef9-a944-c7c7047bf986/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits/hidden-gems",
+      "full_path": "/api/subreddits/hidden-gems"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=d18bbae8-9c8e-45b9-8acd-60960e8bd6b3"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits/art",
+      "full_path": "/api/subreddits/art"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=b5ed3109-d16f-4ea7-ad3a-e52c9310e42c"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits/bronx",
+      "full_path": "/api/subreddits/bronx"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=81ca6efb-b147-4021-9400-01fcd1d1be71"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits/hidden-gems",
+      "full_path": "/api/subreddits/hidden-gems"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=d18bbae8-9c8e-45b9-8acd-60960e8bd6b3"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74",
+      "full_path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74/comments",
+      "full_path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74/comments"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 226.69,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 226.77,
+      "action": "API_CALL",
+      "path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74/comments",
+      "full_path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74/comments"
+    },
+    {
+      "time": 226.85,
+      "action": "API_CALL",
+      "path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74",
+      "full_path": "/api/posts/f1cf401b-b15e-47bb-9b76-fb6546d6ac74"
+    }
+  ]
+}

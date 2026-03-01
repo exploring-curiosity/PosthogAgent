@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #F8FAFC;
+  --surface: #0F172A;
+  --surface-2: #1E293B;
+  --border: #334155;
+  --muted: #94A3B8;
+  --accent: #22C55E;
+  --accent-dim: rgba(34,197,94,0.15);
+  --cyan: #06B6D4;
+  --purple: #A855F7;
+  --amber: #F59E0B;
+  --red: #EF4444;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0F172A; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Glow effects */
+.glow-green { text-shadow: 0 0 10px rgba(34,197,94,0.5); }
+.glow-cyan { text-shadow: 0 0 10px rgba(6,182,212,0.5); }
+
+/* Pulse animation for active steps */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+.animate-pulse-dot { animation: pulse-dot 1.5s ease-in-out infinite; }
+
+/* Log stream animation */
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-in { animation: slide-in 0.2s ease-out; }
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink { animation: blink 1s step-end infinite; }

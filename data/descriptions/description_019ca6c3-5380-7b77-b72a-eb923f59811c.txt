@@ -1,0 +1,135 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Exploratory → Focused → Scattered → Re-engagement*
+- **Initial Exploration (0–7s):** Linear and rapid. User loads the page and immediately triggers 3 API calls (`/api/subreddits`, `/api/trending`, `/api/posts?sort=hot`) within 0.14s, suggesting they are fetching core content categories upfront. No scrolling or interaction occurs, indicating they are waiting for content to load.
+- **Focused Sign-Up Attempt (7–47s):** After 7.03s, they click "Sign Up" (likely a modal or sidebar button) and proceed through a multi-step form. This phase is **highly focused**—19 actions (clicks + typing) occur in 40s, with no scrolling or content browsing. The lack of distraction suggests intent to register.
+- **Content Engagement (47–135s):** Post-signup, navigation becomes **scattered but purposeful**. They:
+  - Immediately click a post (51.39s, at (314, 127)) and fetch its comments (`/api/posts/.../comments` at 51.94s).
+  - Scroll **deeply but erratically** (e.g., 53.16s: 18px → 97px over 5s; 65.24s: 99px → 188px in 0.21s; 70.21s: 194px → 247px in 0.5s). This suggests **skimming** rather than deep reading (see Section 2).
+  - Vote **repeatedly** (5 upvotes in 25s, 88.94s–119.46s) with minimal time between clicks (avg. 3.5s), indicating **impulsive engagement**.
+- **Re-engagement (135–141s):** Final actions are **abrupt and disjointed**:
+  - Clicks near the top-right (1374, 29) at 135.37s (likely a profile or settings icon).
+  - Clicks again at 139.96s (1338, 108), triggering a **page reload** at 139.97s. This may indicate frustration (e.g., trying to refresh or navigate away) or a UI issue (e.g., accidental click).
+
+---
+
+### 2. READING BEHAVIOR
+**Style:** *Skimmer with occasional deep dives*
+- **Scroll Patterns:**
+  - **Rapid, shallow scrolls:** 53.16s (18px → 97px over 5s), 65.24s (99px → 188px in 0.21s), 70.21s (194px → 247px in 0.5s). These suggest **scanning** for interesting content.
+  - **Single deep scroll:** 83.43s (1px → 343px over 1.8s), followed by a **rapid upward correction** (90.05s: 361px → 0px in 3.1s). This may indicate they found something worth reading but then abandoned it.
+  - **Max scroll depth:** 2052px (logged at 90.05s), but this is likely a **UI artifact** (e.g., infinite scroll or lazy-loaded content). The user never actually scrolled this far—peak observed depth is 447px (117.23s).
+- **Time on Content:**
+  - Spent **~30s** (51.39s–81.59s) on a single post (ID: `6450bc39-b521-49b8-b572-c15c6850bf19`), including:
+    - Fetching comments (51.94s).
+    - Voting on 5 items (88.94s–119.46s).
+    - Brief scrolling (65.24s–75.18s).
+  - **No evidence of deep reading**—scroll speeds and vote frequency suggest **surface-level engagement**.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Actions:** *Voter-heavy, minimal commenting*
+- **Voting:**
+  - **7 upvotes** (88.94s–119.46s), all on the same post/comment thread.
+  - **Vote-to-comment ratio:** 7:0 (no comments posted).
+  - **Speed:** Avg. **3.5s between votes** (e.g., 113.38s, 113.55s, 114.7s, 114.87s). This suggests **impulsive, low-effort engagement**.
+- **Commenting:**
+  - **No comments posted** despite typing in comment boxes (see Section 6).
+  - **Comment API calls** (`/api/comments`) at 63.67s and 74.99s, but no evidence of submission (no `POST` requests).
+- **Content Interaction:**
+  - Clicked "FunCity" logo (95.27s), likely to return to the homepage.
+  - No evidence of **saving, sharing, or cross-posting**.
+
+---
+
+### 4. INTERACTION SPEED
+**Style:** *Fast but error-prone*
+- **Early Session (0–47s):**
+  - **Deliberate but efficient:** 7.03s to click "Sign Up," then **19 actions in 40s** (avg. **2.1s per action**). Typing is **rapid but corrected** (see Section 6).
+- **Post-Signup (47–141s):**
+  - **Faster and more impulsive:**
+    - **Votes:** 7 clicks in 30s (avg. **4.3s between votes**).
+    - **Scrolls:** 11 scroll events in 90s (avg. **8.2s between scrolls**), but many are **instantaneous corrections** (e.g., 75.0s: 0px → 0px).
+  - **Outliers:**
+    - **15.4s pause** (120.2s–135.37s) before final clicks (likely distraction or indecision).
+    - **Page reload at 139.97s** after only **4.6s** of inactivity (may indicate frustration).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Inferred Preferences:**
+- **Subreddit Type:** Likely **local NYC content** (given user profile: "NYC familiarity: live_here" and site name "FunCity").
+  - APIs called: `/api/subreddits` (local communities?), `/api/trending` (popular posts).
+- **Post Sorting:**
+  - **Hot posts** (`/api/posts?sort=hot`) fetched at 0.14s, 47.22s, 81.89s, 140.01s. User prioritizes **trending/popular content**.
+- **Specific Post:**
+  - Spent **~30s** on post `6450bc39-b521-49b8-b572-c15c6850bf19` (51.39s–81.59s), voting 7 times. Likely a **highly engaging or controversial** post (e.g., local event, meme, or news).
+- **Ignored Content:**
+  - No evidence of **searching** (no `/api/search` calls).
+  - No **subreddit-specific browsing** (no `/api/subreddits/[name]` calls).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Style:** *Fast but error-prone, with corrections*
+- **Sign-Up Form (7–47s):**
+  - **4 distinct typing sequences**, likely for **username, email, password, and confirmation**:
+    1. **5 characters** (10.3s–12.97s), then **backspaced to 1 character** (12.97s–13.36s). Suggests **correction of a typo or username availability check**.
+    2. **9 characters** (18.1s–23.17s), then **backspaced to 8** (23.17s). Likely **email or password**.
+    3. **8 characters** (27.9s–31.84s). No backspacing—possibly **password confirmation**.
+    4. **13 characters** (40.74s). Longest input; likely **password or bio**.
+  - **Typing speed:** Avg. **0.12s per keystroke** (e.g., 10.3s–10.57s: 3 characters in 0.27s).
+- **Comment Boxes (61–72s):**
+  - **4 short typing sequences** (1–4 characters each), but **no submissions**:
+    - 61.59s–63.51s: 4 characters (abandoned).
+    - 72.25s–72.56s: 4 characters (abandoned).
+  - Suggests **hesitation or distraction**—user started comments but did not post.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Used Features:**
+- **Sign-Up Flow:** Completed (46.93s: `/api/auth/signup`).
+- **Voting:** Upvoted 7 items (88.94s–119.46s).
+- **Post Browsing:** Clicked and scrolled through 1 post (51.39s–81.59s).
+- **Homepage Navigation:** Clicked "FunCity" logo (95.27s) to return to feed.
+- **Trending/Subreddits:** Fetched via API (0.05s, 81.6s) but no evidence of clicking into specific communities.
+
+**Ignored Features:**
+- **Search:** No `/api/search` calls.
+- **Subreddit Pages:** No `/api/subreddits/[name]` calls.
+- **User Profiles:** No clicks on usernames or profile pages.
+- **Post Creation:** No `/api/posts` (POST) calls.
+- **Messaging:** No `/api/messages` calls.
+- **Settings/Preferences:** No evidence of accessing account settings (though final clicks at 135.37s–139.96s may hint at this).
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploration → Intentional Sign-Up → Impulsive Engagement → Abandonment*
+1. **Exploration (0–7s):**
+   - Loads page, fetches core content (subreddits, trending, hot posts).
+   - **No interaction**—likely assessing the site.
+2. **Intentional Sign-Up (7–47s):**
+   - Clicks "Sign Up" at 7.03s and completes form in **40s**.
+   - **High focus**: 19 actions, no scrolling or distractions.
+3. **Impulsive Engagement (47–135s):**
+   - **Immediate content dive**: Clicks post at 51.39s, fetches comments.
+   - **Skim-heavy**: Scrolls rapidly (avg. 8.2s between scrolls), votes 7 times in 30s.
+   - **Abandoned comments**: Types but does not post (61–72s).
+   - **Erratic navigation**: Clicks logo (95.27s), votes more (113–119s), then **15s pause** (120–135s).
+4. **Abandonment (135–141s):**
+   - Clicks top-right (135.37s, 139.96s), triggers **page reload at 139.97s**.
+   - **No further interaction**—session ends at 141.19s.
+
+**Key Observations:**
+- **Sign-up was the primary goal** (took 40s of focused effort).
+- **Post-signup behavior was impulsive and low-effort** (voting > commenting).
+- **Final actions suggest frustration or loss of interest** (rapid clicks, page reload).
+- **No deep engagement**—user skimmed, voted, and left.
+```

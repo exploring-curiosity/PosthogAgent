@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused bursts**: The user exhibits a non-linear, exploratory pattern with rapid shifts between tasks. They jump between:
+  - Sign-up flow (7.52s–32.53s)
+  - Post/comment exploration (42.85s–58.27s)
+  - Content creation (76.43s–106.56s)
+- **No sustained browsing**: Only 1 scroll action (60.21s) over 12.66s, covering just 4px (0.38% of max depth), suggesting minimal vertical exploration.
+- **High click density**: 28 clicks in 115s (~1 click every 4.1s), with 19 "unknown" clicks (68%) indicating either UI confusion or rapid feature testing.
+
+2. READING BEHAVIOR
+- **Skim-heavy**: The near-absent scroll depth (max 4px) and lack of hover/linger data suggest:
+  - No deep reading of posts/comments (e.g., clicked post at 42.85s but no scroll to read content).
+  - Visual scanning of surface-level elements (titles, thumbnails).
+- **Time-to-click**: Average 3.2s between post load (42.85s) and first comment interaction (44.63s), implying rapid decision-making.
+
+3. ENGAGEMENT STYLE
+- **Comment-first, vote-later**: The user:
+  - Typed 13+ character comments at 52.8s–56.69s (first comment) and 104.44s (second comment, 36 chars).
+  - No explicit voting actions detected (no API calls to `/api/votes`).
+- **Ratio**: 2 comments submitted (58.27s, 106.33s) with no recorded votes.
+- **Speed**: First comment took 3.89s to type (52.8s–56.69s); second took 1.71s (104.44s–104.45s), suggesting pre-composed text or copy-paste.
+
+4. INTERACTION SPEED
+- **Fast but erratic**:
+  - **Peak speed**: 0.09s between keystrokes during sign-up (e.g., 14.53s–15.41s).
+  - **Slowdowns**: 12.66s scroll (60.21s) and 11.8s gap before second comment (96.15s–104.44s).
+  - **Median action interval**: 1.8s (excluding typing bursts).
+- **Sign-up urgency**: Completed 6-field form (username/password/email) in ~25s (7.52s–32.53s), with no visible corrections.
+
+5. CONTENT PREFERENCES
+- **Hot posts first**: Initial API calls fetch `/api/posts?sort=hot` (0.02s) and trending content (0.02s).
+- **Targeted engagement**:
+  - Clicked post at (304, 193) at 42.85s (likely a "hot" post).
+  - Second post interaction at 106.19s (coordinates suggest a different post).
+- **No subreddit focus**: `/api/subreddits` called 5 times but no clicks on subreddit links detected.
+
+6. TYPING BEHAVIOR
+- **High-speed input**:
+  - **Sign-up**: 6-character username (14.53s–15.41s) and 6-character password (17.03s–17.96s) typed at ~0.18s/keystroke.
+  - **Comments**:
+    - First: 13 chars in 3.89s (~0.3s/keystroke).
+    - Second: 36 chars in 1.71s (~0.05s/keystroke), likely copy-pasted.
+- **No corrections**: No backspaces/deletions detected in any typing sequences.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Sign-up flow (7.52s–32.53s).
+  - Commenting (52.8s–58.27s, 104.44s–106.33s).
+  - Post navigation (42.85s, 106.19s).
+  - Trending/hot feeds (API calls at 0.02s, 32.91s, 59.6s).
+- **Ignored**:
+  - Voting (no `/api/votes` calls).
+  - Subreddit exploration (no clicks despite 5 API calls).
+  - User profiles (no clicks on usernames/avatars).
+  - Search (no `/api/search` calls).
+
+8. SESSION FLOW
+- **Phase 1: Immediate Sign-Up (0s–32.53s)**
+  - Loaded page → clicked "Sign Up" at 7.52s → completed form in 25s (3 fields: username, password, email).
+  - **Motivation**: Likely pre-planned (no hesitation before sign-up click).
+- **Phase 2: Post-Sign-Up Exploration (32.91s–60.21s)**
+  - Re-fetched hot posts (32.91s) → clicked first post at 42.85s → typed 13-character comment (52.8s–56.69s) → submitted at 58.27s.
+  - **Behavior**: Rapid content sampling with minimal reading.
+- **Phase 3: Browsing & Second Comment (60.21s–106.56s)**
+  - Scrolled up slightly (60.21s) → clicked trending icon (74.55s) → typed 12-character search (76.43s–84.0s) → clicked second post (106.19s) → typed 36-character comment (104.44s–106.33s).
+  - **Behavior**: Shifted to active participation (commenting) with no passive consumption.
+- **Exit**: Session ended abruptly after second comment submission (no further actions post-106.56s).
+```
+
+**KEY INSIGHTS**:
+- **Goal-oriented**: Prioritized sign-up and commenting over exploration.
+- **Low friction tolerance**: No corrections in typing/form inputs; abandoned features quickly (e.g., subreddits).
+- **Desktop efficiency**: Leveraged keyboard shortcuts/copy-paste (36-char comment in 1.71s).
+- **No passive engagement**: Skipped voting/reading in favor of active participation.

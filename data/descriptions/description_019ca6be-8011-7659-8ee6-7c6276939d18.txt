@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with rapid subreddit switching (e.g., nightlife → food → nature → bronx within 10s at 28.56–35.1s). However, they repeatedly return to "hot" sorted posts (5/12 API calls for posts use `sort=hot`), suggesting a preference for trending content.
+- **Scattered clicks**: 18/33 non-API actions are "unknown" clicks (54%), often in rapid succession (e.g., 3 clicks in 1.2s at 19.5–21.68s), indicating either UI confusion or impatient exploration.
+- **Homepage reliance**: Clicks the "🗽 FunCity" logo 3 times (22.56s, 35.1s, 43.44s) to reset to the default view, suggesting it’s a navigational anchor.
+
+2. READING BEHAVIOR
+- **Skim-heavy**: No sustained scroll depth. The deepest scroll reaches 474px (36.06s), but most scrolls are shallow (e.g., 28→119px at 30.93s) or reset immediately (0px at 31.52s). Average scroll duration: 0.36s.
+- **Low dwell time**: Average time between post-related API calls (e.g., `/api/posts/{id}`) and next action: 1.2s (e.g., 27.15s → 28.56s), implying minimal content consumption.
+- **No deep dives**: Never loads more than 1 page of comments (e.g., `/api/posts/{id}/comments` called 4 times, but no subsequent actions suggest reading).
+
+3. ENGAGEMENT STYLE
+- **No visible voting/commenting**: Zero API calls or UI interactions for upvotes, downvotes, or comments. All engagement is passive (clicking posts/subreddits).
+- **Vote-to-comment ratio**: 0:0 (no evidence of either).
+- **Rapid abandonment**: Posts are opened and closed within 2–5s (e.g., 27.15s → 28.56s for post `ef376747`).
+
+4. INTERACTION SPEED
+- **Fast and erratic**: Median time between actions: 0.8s. Peaks of activity (e.g., 10 typing actions in 3.6s at 9.55–13.55s) alternate with pauses (e.g., 4.6s gap at 24.63–29.27s).
+- **Login attempt**: Typing spans 18.17s (6.86–24.63s), but the 11-character input (likely username) and 10-character input (likely password) are entered with corrections (backspacing at 13.55–13.87s), suggesting familiarity with the form but no hesitation to edit.
+
+5. CONTENT PREFERENCES
+- **Subreddit focus**: Targeted 5 subreddits explicitly:
+  - `nightlife` (20.24s, 30.12s)
+  - `food` (28.7s)
+  - `nature` (29.4s)
+  - `bronx` (33.53s, 40.01s)
+  - Default "hot" posts (5 API calls).
+- **Sorting preference**: 60% of post API calls use `sort=hot`; 20% `sort=new`; 20% `sort=top`. No evidence of filtering by time (e.g., "past week").
+- **Post selection**: Clicked 4 posts (IDs: `ef376747`, `3580c8fb`, `40d2825b`, `d73dbc6b`), but no thematic pattern in titles (not visible in log).
+
+6. TYPING BEHAVIOR
+- **Two distinct inputs**:
+  - **First input**: 11 characters (6.86–11.93s), with 1 correction (backspaced 2 characters at 13.55–13.87s). Typing speed: ~2.5 chars/s.
+  - **Second input**: 11 characters (15.02–18.17s), no corrections. Typing speed: ~3.3 chars/s.
+- **No autocomplete use**: No pauses >0.5s during typing, suggesting manual entry without dropdown selection.
+- **Abandoned login**: No submission after typing (last login-related action is a click at (0,0) at 18.17s, likely outside the form).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Subreddit navigation (sidebar or search).
+  - Post sorting (hot/new/top tabs).
+  - Login form (though abandoned).
+  - Homepage reset ("🗽 FunCity" logo).
+- **Ignored**:
+  - Voting/commenting UI (no API calls or clicks).
+  - Post flairs/tags (no filtering evidence).
+  - User profiles (no `/api/users` calls).
+  - Notifications/settings (no clicks in top-right area).
+
+8. SESSION FLOW
+- **Phase 1 (0–3.03s): Landing & Initial Load**
+  - Loads homepage, triggers 3 API calls for trending/subreddits/posts.
+  - Immediate click on "Log In" (3.03s), suggesting intent to personalize.
+
+- **Phase 2 (3.03–18.38s): Failed Login Attempt**
+  - Clicks login form (3.9s), types credentials (6.86–18.17s) with corrections.
+  - Abandons login (18.17s click at (0,0)), possibly due to error or distraction.
+
+- **Phase 3 (18.38–28.56s): Exploratory Browsing**
+  - Rapid subreddit switching (nightlife → default → nightlife again).
+  - Clicks posts but no deep engagement (e.g., 21.68s → 22.56s: 0.88s dwell time).
+
+- **Phase 4 (28.56–43.44s): Subreddit Hopping**
+  - Focuses on NYC-specific subreddits (food, nature, bronx).
+  - Repeatedly resets to homepage (35.1s, 43.44s), suggesting dissatisfaction with content.
+
+- **Phase 5 (43.44–46.57s): Exit**
+  - Final clicks in top-right area (1355,24 at 45.16s; 1320,97 at 46.57s), likely profile/settings icons.
+  - Session ends without further engagement.
+```
+
+**Summary**: A fast, exploratory user who prioritizes trending content and NYC-specific subreddits but exhibits low engagement depth. Their behavior suggests familiarity with Reddit-like interfaces (e.g., sorting tabs) but frustration with login or content relevance, leading to rapid abandonment. No evidence of social interaction (voting/commenting).

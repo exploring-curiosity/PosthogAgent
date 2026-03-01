@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+----------------------------------------
+
+1. NAVIGATION PATTERN
+   - **Type**: Linear, single-page focus with no visible navigation beyond initial load.
+   - **Evidence**: Only two page loads detected (0.0s and 300.02s), both to the same URL (`/fun-city-xi.vercel.app/`). No clicks, tab switches, or subpage visits recorded. Suggests either:
+     a) A static session with no interaction beyond passive viewing, or
+     b) A technical artifact (e.g., session recording gap, single-page app state change not logged as a new page).
+
+2. READING BEHAVIOR
+   - **Depth**: Indeterminate (no scroll data or hover events recorded).
+   - **Evidence**: No scroll actions, mouse movements, or text selection events logged. Viewport size (1600x731 → 1600x765) changed minimally (+34px height), but this could reflect browser chrome adjustments (e.g., address bar hide/show) rather than intentional scrolling.
+
+3. ENGAGEMENT STYLE
+   - **Actions**: None detected.
+   - **Evidence**: No voting, commenting, sharing, or other interactive events recorded. All logged actions are API calls (likely automatic) or page loads. Vote-to-comment ratio: **0:0**.
+
+4. INTERACTION SPEED
+   - **Tempo**: N/A (no user-initiated interactions).
+   - **Evidence**: The only time gaps are:
+     - 0.0s–0.27s: Initial API calls (automated, not user-driven).
+     - 0.27s–300.02s: 300-second gap with no logged actions.
+     - 300.02s: Second page load (likely a refresh or timeout).
+
+5. CONTENT PREFERENCES
+   - **Gravitation**: Indeterminate.
+   - **Evidence**: API calls suggest the page loaded:
+     - `/api/subreddits` (subreddit list),
+     - `/api/trending` (trending topics),
+     - `/api/posts?sort=hot` (hot posts).
+   No user-driven filtering, sorting, or content selection was logged.
+
+6. TYPING BEHAVIOR
+   - **Activity**: None detected.
+   - **Evidence**: No keystrokes, form inputs, or search queries recorded. Input length, speed, and corrections: **0**.
+
+7. FEATURE DISCOVERY
+   - **Used**: Only automated features (API data fetching).
+   - **Ignored**: All interactive features (voting, commenting, sorting, search, navigation).
+   - **Evidence**: No manual triggers for any UI elements. The session appears to be a "dead" load with no engagement.
+
+8. SESSION FLOW
+   - **Arc**:
+     1. **0.0s–0.27s**: Initialization phase. Page loads; backend fetches subreddits, trending topics, and hot posts.
+     2. **0.27s–300.02s**: Dormant phase. No user actions for 5 minutes. Possible explanations:
+        - User left the tab open (idle).
+        - User interacted with content but actions weren’t logged (e.g., ad blocker, recording gap).
+        - Technical issue (e.g., session timeout, frozen UI).
+     3. **300.02s**: Termination. Page reloads (likely automatic refresh or user-initiated but unlogged).
+   - **Exit**: No clear exit action. Session ends with a reload, suggesting either:
+     - A timeout/refresh mechanism, or
+     - User returned after inactivity.
+
+SUMMARY
+-------
+This session is **atypical and likely incomplete**. Key observations:
+- **Zero user-initiated interactions**: All actions are automated (API calls, page loads).
+- **Extreme inactivity**: 99.8% of the session (300/315 seconds) has no logged activity.
+- **Possible causes**:
+  - Technical issue (e.g., recording failure, ad blocker interference).
+  - User abandoned the tab (e.g., switched to another app, left device).
+  - Bot traffic (though API calls suggest a frontend load).
+- **Behavioral signals**: None. The session provides no insight into preferences, engagement, or intent.
+```

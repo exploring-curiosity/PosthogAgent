@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-02-28T20:00:00",
+  "target_app": {
+    "url": "https://fun-city-sandbox.vercel.app/",
+    "name": "FunCity"
+  },
+  "agents": [
+    {
+      "cluster_id": 0,
+      "demographic": "Young Urban Explorer",
+      "traits": {
+        "age_group": "18-24",
+        "country": "United States",
+        "nyc_familiarity": "live_here"
+      },
+      "description": "Fast-paced, exploratory users who quickly scan content and engage with multiple features.",
+      "summary": {
+        "demographic": "Young Urban Explorer",
+        "total_steps": 22,
+        "total_duration_s": 145.3,
+        "successful_actions": 18,
+        "failed_actions": 4,
+        "action_history": [
+          {"step": 1, "elapsed_s": 2.1, "action": "scroll", "target": "down", "success": true, "error": ""},
+          {"step": 2, "elapsed_s": 5.3, "action": "click", "target": "post: Best pizza in Brooklyn", "success": true, "error": ""},
+          {"step": 3, "elapsed_s": 12.0, "action": "scroll", "target": "down to 400px", "success": true, "error": ""},
+          {"step": 4, "elapsed_s": 18.5, "action": "click", "target": "button: Sign Up", "success": true, "error": ""},
+          {"step": 5, "elapsed_s": 35.2, "action": "type", "target": "username input", "success": true, "error": ""},
+          {"step": 6, "elapsed_s": 42.1, "action": "click", "target": "button: Submit", "success": false, "error": "Button disabled"},
+          {"step": 7, "elapsed_s": 48.0, "action": "scroll", "target": "up", "success": true, "error": ""},
+          {"step": 8, "elapsed_s": 55.3, "action": "click", "target": "link: r/food", "success": true, "error": ""},
+          {"step": 9, "elapsed_s": 62.1, "action": "scroll", "target": "down", "success": true, "error": ""},
+          {"step": 10, "elapsed_s": 70.0, "action": "click", "target": "post: Hidden gems in East Village", "success": true, "error": ""}
+        ],
+        "impressions": [
+          {"step": 1, "elapsed_s": 2.1, "context": "Landing page loads quickly, colorful layout", "sentiment": "positive", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 5, "elapsed_s": 35.2, "context": "Sign up form requires many fields", "sentiment": "frustration", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 6, "elapsed_s": 42.1, "context": "Failed to submit signup form - button was disabled", "sentiment": "frustration", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 10, "elapsed_s": 70.0, "context": "Subreddit navigation works well", "sentiment": "positive", "url": "https://fun-city-sandbox.vercel.app/r/food"},
+          {"step": 22, "elapsed_s": 145.3, "context": "Session complete after 22 steps, 145s", "sentiment": "summary", "url": "https://fun-city-sandbox.vercel.app/"}
+        ]
+      },
+      "narrative": "As a young New Yorker who's always on my phone browsing community apps, I found FunCity's landing page pretty inviting — the layout was clean and the content loaded fast. I immediately started scrolling to see what's trending.\n\nHowever, the sign-up process was a real speed bump. I'm used to quick social sign-ups, and having to fill out multiple dropdowns for age group, country, and NYC familiarity felt like too much friction. The submit button being disabled without clear feedback on what I was missing was especially frustrating.\n\nOnce I got past that, navigating between subreddits felt natural. The r/food section had engaging posts and I found myself wanting to comment. The overall content quality is good.\n\n**Recommendations:**\n1. Simplify the signup flow — consider social login or progressive profiling\n2. Add clear validation messages when form fields are incomplete\n3. The subreddit discovery is buried — make it more prominent for exploratory users like me"
+    },
+    {
+      "cluster_id": 1,
+      "demographic": "Cautious International Visitor",
+      "traits": {
+        "age_group": "25-34",
+        "country": "India",
+        "nyc_familiarity": "visited"
+      },
+      "description": "Methodical users who read content carefully before engaging, prefer familiar patterns.",
+      "summary": {
+        "demographic": "Cautious International Visitor",
+        "total_steps": 15,
+        "total_duration_s": 168.7,
+        "successful_actions": 12,
+        "failed_actions": 3,
+        "action_history": [
+          {"step": 1, "elapsed_s": 5.2, "action": "scroll", "target": "down slowly", "success": true, "error": ""},
+          {"step": 2, "elapsed_s": 15.0, "action": "scroll", "target": "down to 800px", "success": true, "error": ""},
+          {"step": 3, "elapsed_s": 28.3, "action": "click", "target": "post: Tourist tips for NYC", "success": true, "error": ""},
+          {"step": 4, "elapsed_s": 45.1, "action": "scroll", "target": "down", "success": true, "error": ""},
+          {"step": 5, "elapsed_s": 58.0, "action": "click", "target": "button: Log In", "success": true, "error": ""},
+          {"step": 6, "elapsed_s": 72.5, "action": "type", "target": "username", "success": true, "error": ""},
+          {"step": 7, "elapsed_s": 85.0, "action": "click", "target": "button: Submit", "success": false, "error": "Invalid credentials"},
+          {"step": 8, "elapsed_s": 95.0, "action": "navigate_back", "target": "home", "success": true, "error": ""}
+        ],
+        "impressions": [
+          {"step": 1, "elapsed_s": 5.2, "context": "Taking time to understand the layout", "sentiment": "neutral", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 3, "elapsed_s": 28.3, "context": "Found relevant content for visitors", "sentiment": "positive", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 7, "elapsed_s": 85.0, "context": "Login failed with no helpful error message", "sentiment": "frustration", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 15, "elapsed_s": 168.7, "context": "Session complete after 15 steps, 169s", "sentiment": "summary", "url": "https://fun-city-sandbox.vercel.app/"}
+        ]
+      },
+      "narrative": "Coming from India and having visited NYC once before, I approached FunCity with curiosity but also caution. I spent more time reading posts before clicking anything — I wanted to understand the community norms first.\n\nThe content was NYC-focused which is great, but I noticed there wasn't much for international visitors or people planning trips. The login flow confused me — when my credentials didn't work, the error message wasn't helpful at all. I wasn't sure if I needed to sign up first or if there was an issue with my account.\n\nThe reading experience was solid. Posts loaded well and the comment sections were easy to follow. But as someone who reads more than they post, I wish there were better content discovery features.\n\n**Recommendations:**\n1. Add clear error messages for failed login attempts with 'Sign up instead?' prompt\n2. Consider adding location-based content recommendations for international visitors\n3. Add a 'Reading List' or bookmark feature for users who prefer to consume rather than create"
+    },
+    {
+      "cluster_id": 2,
+      "demographic": "Power User Local",
+      "traits": {
+        "age_group": "25-34",
+        "country": "United States",
+        "nyc_familiarity": "live_here"
+      },
+      "description": "Highly engaged users who create content, vote frequently, and explore deeply.",
+      "summary": {
+        "demographic": "Power User Local",
+        "total_steps": 25,
+        "total_duration_s": 178.2,
+        "successful_actions": 21,
+        "failed_actions": 4,
+        "action_history": [
+          {"step": 1, "elapsed_s": 1.5, "action": "scroll", "target": "down", "success": true, "error": ""},
+          {"step": 2, "elapsed_s": 3.2, "action": "click", "target": "post: New ramen spot in Williamsburg", "success": true, "error": ""},
+          {"step": 3, "elapsed_s": 8.0, "action": "click", "target": "button: Sign Up", "success": true, "error": ""},
+          {"step": 4, "elapsed_s": 22.0, "action": "type", "target": "username", "success": true, "error": ""},
+          {"step": 5, "elapsed_s": 30.5, "action": "click", "target": "button: Submit", "success": true, "error": ""},
+          {"step": 6, "elapsed_s": 35.0, "action": "click", "target": "button: Upvote", "success": true, "error": ""},
+          {"step": 7, "elapsed_s": 40.2, "action": "type", "target": "comment box", "success": true, "error": ""},
+          {"step": 8, "elapsed_s": 55.0, "action": "click", "target": "button: Post Comment", "success": true, "error": ""},
+          {"step": 9, "elapsed_s": 60.0, "action": "click", "target": "link: Create Post", "success": true, "error": ""},
+          {"step": 10, "elapsed_s": 75.0, "action": "type", "target": "post title", "success": true, "error": ""}
+        ],
+        "impressions": [
+          {"step": 1, "elapsed_s": 1.5, "context": "Familiar Reddit-like layout, easy to navigate", "sentiment": "positive", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 5, "elapsed_s": 30.5, "context": "Signup successful, quick process", "sentiment": "positive", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 8, "elapsed_s": 55.0, "context": "Commenting works smoothly", "sentiment": "positive", "url": "https://fun-city-sandbox.vercel.app/"},
+          {"step": 25, "elapsed_s": 178.2, "context": "Session complete after 25 steps, 178s", "sentiment": "summary", "url": "https://fun-city-sandbox.vercel.app/"}
+        ]
+      },
+      "narrative": "As a lifelong New Yorker who uses Reddit daily, FunCity felt immediately familiar. The layout is clean and the Reddit-like structure means I didn't need any onboarding. I was posting and commenting within minutes.\n\nThe signup was straightforward — I appreciated the NYC-specific fields like familiarity level. Voting and commenting worked as expected. Creating a post was also smooth, though the subreddit selector could use better search/filtering.\n\nMy main frustration was the lack of notifications and the limited subreddit options. As a power user, I want to subscribe to specific topics and get alerts when there's new content.\n\n**Recommendations:**\n1. Add notification system for subscribed subreddits and comment replies\n2. Improve subreddit selector with search and filtering\n3. Add user profiles with post/comment history for community building"
+    }
+  ],
+  "comparative": {
+    "common_friction_points": [
+      "Sign-up form validation lacks clear feedback when fields are incomplete",
+      "Error messages for failed auth attempts are unhelpful",
+      "Subreddit discovery and navigation could be more prominent"
+    ],
+    "demographic_specific_issues": [
+      {"demographic": "Young Urban Explorer", "issue": "Sign-up flow has too many required fields for quick-engagement users", "severity": "high"},
+      {"demographic": "Young Urban Explorer", "issue": "No social login option", "severity": "medium"},
+      {"demographic": "Cautious International Visitor", "issue": "No content recommendations for international visitors", "severity": "medium"},
+      {"demographic": "Cautious International Visitor", "issue": "No bookmark/save feature for read-later users", "severity": "medium"},
+      {"demographic": "Power User Local", "issue": "No notification system for active contributors", "severity": "high"},
+      {"demographic": "Power User Local", "issue": "Limited subreddit search in post creation", "severity": "low"}
+    ],
+    "accessibility_findings": [
+      "Modal dialog accessibility could be improved with proper ARIA labels",
+      "Form validation errors are not announced to screen readers",
+      "Color contrast in some UI elements may not meet WCAG AA standards"
+    ],
+    "engagement_patterns": {
+      "most_engaged_demographic": "Power User Local",
+      "least_engaged_demographic": "Cautious International Visitor",
+      "engagement_summary": "Power users engaged 67% more than cautious visitors, primarily through voting and commenting. Young explorers had the highest browse-to-click ratio but lower content creation."
+    },
+    "recommendations": [
+      {"title": "Simplify authentication flow", "impact": "high", "demographics_affected": ["Young Urban Explorer", "Cautious International Visitor"], "detail": "Reduce required fields, add social login, provide clear validation feedback. This was the #1 friction point across 2/3 demographics."},
+      {"title": "Add notification system", "impact": "high", "demographics_affected": ["Power User Local"], "detail": "Power users need alerts for replies and subscribed subreddit activity to drive return visits."},
+      {"title": "Improve error messaging", "impact": "medium", "demographics_affected": ["Young Urban Explorer", "Cautious International Visitor", "Power User Local"], "detail": "All demographics encountered unhelpful error states. Add specific, actionable error messages throughout."},
+      {"title": "Content discovery for visitors", "impact": "medium", "demographics_affected": ["Cautious International Visitor"], "detail": "Add location-based content recommendations and 'visitor-friendly' post tags."},
+      {"title": "Subreddit search and filtering", "impact": "low", "demographics_affected": ["Power User Local", "Young Urban Explorer"], "detail": "Add search functionality to the subreddit selector, especially in post creation flow."}
+    ],
+    "overall_assessment": "FunCity has a solid foundation with a familiar Reddit-like UX that power users appreciate. However, the authentication flow creates significant friction for new users across all demographics. International visitors and younger users need more onboarding support, while power users need engagement features like notifications to drive retention."
+  }
+}

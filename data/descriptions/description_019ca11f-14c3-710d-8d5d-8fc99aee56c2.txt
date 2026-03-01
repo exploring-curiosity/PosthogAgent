@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and focused, with minimal deviation.
+- Initial page load (0.0s) triggers 3 immediate API calls (subreddits, trending, hot posts) in rapid succession (0.08–0.43s), suggesting a pre-loaded or cached feed.
+- No evidence of exploratory browsing (e.g., no subreddit navigation, no search queries, no back/forward actions).
+- Single click at 31.56s (unknown element at (522, 348)) leads directly to a post-specific API call (comments + post details) at 32.46–32.88s, indicating a targeted interaction with one post.
+- Session ends with redundant API calls (subreddits/trending at 32.95–32.97s), likely automated or triggered by the click.
+
+2. READING BEHAVIOR
+- No scroll data available, but inferred skimming:
+  - 31.56s gap between initial page load (0.0s) and first click suggests rapid visual scanning of the feed (≈31 seconds to evaluate content).
+  - No evidence of deep reading (e.g., no pauses >5s between actions, no repeated visits to the same post).
+  - Click on a single post at 31.56s implies selection based on title/preview, not full content.
+
+3. ENGAGEMENT STYLE
+- No explicit voting or commenting detected.
+- Interaction limited to:
+  - Passive consumption (31.56s of feed browsing).
+  - Single click on a post (31.56s), triggering comment/post detail APIs (32.46–32.88s), but no follow-up actions (e.g., no upvote/downvote, no comment submission).
+- Vote-to-comment ratio: 0:0 (no engagement beyond view).
+
+4. INTERACTION SPEED
+- Extremely fast initial load (3 API calls in <0.5s).
+- Deliberate pause (31.13s) before first click, likely for content evaluation.
+- Post-click actions rapid (4 API calls in 0.51s at 32.46–32.97s), suggesting automated or pre-fetched responses.
+- No typing detected (see #6).
+
+5. CONTENT PREFERENCES
+- Limited data, but inferred preferences:
+  - Gravitated toward "hot" posts (API call at 0.43s: `/api/posts?sort=hot`).
+  - Selected one post (ID: `6f4e1ef9-ad6e-426e-86a3-257258993b8b`) for deeper interaction (comments API at 32.46s).
+  - No subreddit-specific navigation; content likely from default/r/all or trending.
+
+6. TYPING BEHAVIOR
+- No typing detected in the log.
+- No input fields used (e.g., search, comment box, login).
+- No corrections or delays attributable to typing.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Feed browsing (hot posts).
+  - Post selection (click to view comments/details).
+- Ignored features:
+  - Subreddit navigation (no clicks on subreddit links).
+  - Search (no `/api/search` calls).
+  - Voting/commenting (no `/api/vote` or `/api/comment` calls).
+  - User profiles (no `/api/user` calls).
+  - Settings/filters (no `/api/preferences` or sort changes).
+
+8. SESSION FLOW
+- Arc: **Automated load → Passive scan → Targeted click → Immediate exit**
+  - **0.0–0.43s**: Automated initialization (page load + 3 API calls).
+  - **0.43–31.56s**: Passive feed evaluation (31.13s of inactivity, likely visual scanning).
+  - **31.56–32.97s**: Targeted interaction (click → post/comments API calls).
+  - **32.97s**: Session ends abruptly post-API calls, no further engagement.
+- No progression beyond initial exploration; no deep engagement or return to feed.
+```
+
+**Key Observations**:
+- Session resembles a "drive-by" interaction: minimal effort, no deep engagement.
+- Click at 31.56s may indicate a bot (e.g., automated testing) or a user with a specific goal (e.g., checking comments for one post).
+- Lack of scroll data limits reading behavior analysis, but timing suggests skimming.

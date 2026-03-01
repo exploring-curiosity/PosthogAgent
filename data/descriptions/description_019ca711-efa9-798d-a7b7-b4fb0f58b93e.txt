@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+----------------------------------------
+
+1. NAVIGATION PATTERN:
+   - **Highly focused and linear** with minimal exploration.
+   - No evidence of scrolling, tab switching, or lateral movement (e.g., no subreddit/category browsing).
+   - Direct path: Load → Immediate click on primary content (17.76s) → Single user profile interaction (26.19s) → Exit (27.01s).
+   - **Quantitative**: 3 total clicks in 27.21s; 0 secondary navigation actions (e.g., no sidebar, search, or menu interactions).
+
+2. READING BEHAVIOR:
+   - **No observable reading depth** (no scroll events recorded).
+   - **Skim-like behavior inferred**:
+     - 17.69s elapsed before first click (likely time to visually parse the page).
+     - No evidence of pausing on specific posts (e.g., no hover events, no clicks on post titles/bodies).
+     - Assumed rapid visual scan of initial viewport content only (1920x911 covers ~5-7 posts at typical Reddit-like densities).
+
+3. ENGAGEMENT STYLE:
+   - **No voting or commenting** detected.
+   - **Profile-centric interaction**:
+     - Single click on a username ("amaans") at 26.19s, suggesting a focus on user identity over content.
+     - No subsequent actions (e.g., no follow, message, or profile tab clicks).
+   - **Vote-to-comment ratio**: 0:0 (no engagement with content beyond potential viewing).
+
+4. INTERACTION SPEED:
+   - **Fast but deliberate**:
+     - **Initial latency**: 17.76s to first click (likely time to load + visually process content).
+     - **Subsequent actions**: 8.43s between first click and username click; 0.82s between username click and final click.
+     - **No hesitation indicators** (e.g., no repeated clicks on the same element, no backtracking).
+   - **API call timing**:
+     - 4 API calls in first 0.28s (pre-render data fetch), suggesting the user waited for content to populate before interacting.
+
+5. CONTENT PREFERENCES:
+   - **No explicit content preferences revealed**:
+     - API calls fetch `/api/posts?sort=hot` (default trending content), but no clicks on posts/subreddits.
+     - No evidence of filtering (e.g., no clicks on "hot/new/rising" tabs, no subreddit-specific navigation).
+   - **Implied preference for user profiles**:
+     - Only non-system click was on a username ("amaans"), suggesting interest in user identity over post content.
+
+6. TYPING BEHAVIOR:
+   - **No typing detected**:
+     - No search queries, comments, or form inputs.
+     - No evidence of corrections or input fields (e.g., no `input` or `keydown` events).
+
+7. FEATURE DISCOVERY:
+   - **Features used**:
+     - Core content feed (clicked "main" at 17.76s, likely a post or feed element).
+     - User profile links (clicked "amaans" at 26.19s).
+   - **Features ignored**:
+     - No interaction with navigation menus, search bars, sorting tabs, or sidebar elements.
+     - No evidence of voting buttons, comment sections, or share options.
+     - No scroll events (ignored content below the fold).
+
+8. SESSION FLOW:
+   - **Arc**: **Load → Passive Scan → Targeted Interaction → Immediate Exit**
+     - **0.0s–17.76s (17.76s)**: Page load + API data fetch. User waits for content to render; no interaction.
+     - **17.76s–26.19s (8.43s)**: First click on primary feed ("main"), likely to view a post or expand content. No further engagement with the post itself.
+     - **26.19s–27.01s (0.82s)**: Rapid shift to user profile ("amaans"), followed by an ambiguous final click (possibly a profile action or accidental).
+     - **27.01s–27.21s (0.20s)**: Session ends abruptly post-final click (no exit confirmation or additional actions).
+   - **Exit trigger**: Unknown, but timing suggests either:
+     - Goal completion (e.g., checked a user profile).
+     - Frustration (e.g., unexpected behavior from the final click).
+```
+
+**KEY OBSERVATIONS**:
+- **Efficiency over exploration**: User prioritized speed and direct interaction over discovery.
+- **Profile-driven**: Only non-system interaction was user-centric, not content-centric.
+- **No deep engagement**: No evidence of reading, voting, or commenting—suggests a task-oriented visit (e.g., checking a user) rather than browsing.
+- **Desktop precision**: Clicks at specific coordinates (e.g., (1520, 25) for "amaans") imply familiarity with the UI layout.

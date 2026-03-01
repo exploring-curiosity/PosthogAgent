@@ -1,0 +1,15 @@
+{
+  "cluster_0": {
+    "status": "skipped",
+    "error": "Too few training examples (0)"
+  },
+  "cluster_1": {
+    "status": "skipped",
+    "error": "Too few training examples (5)"
+  },
+  "cluster_2": {
+    "status": "error",
+    "error": "API error occurred: Status 422. Body: {\"detail\": \"Model not available for this type of fine-tuning (completion). Available model(s): \"}",
+    "label": "Young Urban Engager"
+  }
+}

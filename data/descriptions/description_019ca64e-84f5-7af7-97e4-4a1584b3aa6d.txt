@@ -1,0 +1,83 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with distinct phases of focused interaction.
+  - Initial exploration (0.0s–16.96s): Rapid API calls for subreddits/trending/posts suggest broad content scanning.
+  - Focused signup attempt (16.96s–43.21s): Linear progression through a multi-step form (likely signup) with no detours.
+  - Post-signup browsing (48.37s–114.6s): Scattered navigation between posts/comments, with 5 distinct post interactions (IDs: 8675b60b, 10a31f02, ef376747) and 3 voting actions.
+- **Click coordinates** show consistent targeting of UI elements (e.g., repeated clicks near x=372, y=98–102 for voting; x=844 for form fields).
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow dives**: Scroll patterns indicate rapid scanning with minimal deep reading.
+  - **Scroll metrics**:
+    - First scroll (59.55s): 2px → 480px (478px depth) over 1.65s (avg. 290px/s).
+    - Second scroll (73.36s): 73px → 579px (506px depth) over 1.65s (avg. 307px/s).
+    - Third scroll (78.45s): 589px → 0px (rapid upward reset) over 1.28s (avg. 460px/s).
+  - **Dwell time per post**:
+    - Post 8675b60b: 48.37s–64.4s (16.03s).
+    - Post 10a31f02: 64.4s–81.88s (17.48s).
+    - Post ef376747: 83.17s–105.23s (22.06s).
+  - **Comment engagement**: Only 1 comment submitted (105.23s), despite loading comments for 3 posts.
+
+3. ENGAGEMENT STYLE
+- **Vote-heavy, comment-light**: Prioritizes low-effort interactions (votes) over high-effort (comments).
+  - **Votes**: 3 actions (54.09s, 67.34s, 77.61s, 82.36s) with ~13–15s intervals.
+  - **Comments**: 1 action (105.23s) after 103s of typing (likely a long-form reply).
+  - **Ratio**: 3 votes : 1 comment.
+- **Reactivity**: Votes occur within 5–10s of post loading (e.g., 54.09s vote after 48.37s post load).
+
+4. INTERACTION SPEED
+- **Fast but deliberate**: High velocity with occasional pauses for input.
+  - **Median action interval**: 1.8s (excluding typing bursts).
+  - **Typing latency**:
+    - Username/password fields (23.54s–29.85s): ~1.1s/character (6 chars in 6.31s).
+    - Comment (97.07s–103.92s): ~0.5s/character (13 chars in 6.85s).
+  - **Outliers**:
+    - 16.96s delay before first click (likely reading landing page).
+    - 10.2s pause before comment submission (103.92s–105.23s).
+
+5. CONTENT PREFERENCES
+- **Hot/sorted content**: All API calls for posts use `?sort=hot` (0.42s, 43.21s, 57.72s, 72.51s).
+- **Subreddit focus**: Repeated `/api/subreddits` and `/api/trending` calls (0.02s, 49.13s, 57.42s, 64.82s, 72.21s, 83.88s) suggest interest in community discovery.
+- **Post types**: No explicit data, but 3 distinct post IDs interacted with (8675b60b, 10a31f02, ef376747) imply varied content.
+
+6. TYPING BEHAVIOR
+- **Moderate speed with corrections**:
+  - **Signup form**:
+    - Field 1 (23.54s–26.4s): 6 chars in 2.86s (~2.1 chars/s), no corrections.
+    - Field 2 (26.97s–29.85s): 6 chars in 2.88s (~2.1 chars/s), no corrections.
+  - **Comment**:
+    - Initial burst (97.07s–99.47s): 4 chars in 2.4s (~1.7 chars/s), then deletion (3 chars typed at 99.47s).
+    - Final input (100.35s–103.92s): 13 chars in 3.57s (~3.6 chars/s), no corrections.
+- **Input lengths**: 6 chars (signup fields), 13 chars (comment).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Signup flow (16.96s–43.21s): Button click → form fields → submission.
+  - Voting (54.09s, 67.34s, 77.61s, 82.36s): Repeated clicks near x=372 (likely upvote/downvote buttons).
+  - Commenting (105.23s): Single long-form reply.
+  - Post navigation: Clicked on 3 distinct posts (48.37s, 64.4s, 83.17s).
+- **Ignored**:
+  - Trending/subreddit sidebar: No clicks despite repeated API calls.
+  - Post sorting options: No interaction with "hot/new/top" filters after initial load.
+  - User profile/settings: No clicks in top-right area (x=1500+ only at 113.48s, likely a menu).
+
+8. SESSION FLOW
+- **Phase 1: Landing & Exploration (0.0s–16.96s)**
+  - Loads homepage, fetches trending/subreddits/posts (0.02s–0.42s).
+  - 16.96s pause suggests reading landing content before action.
+- **Phase 2: Signup Attempt (16.96s–43.21s)**
+  - Linear progression through signup form (6 fields, 26.25s total).
+  - API call at 43.01s confirms submission.
+- **Phase 3: Post-Signup Browsing (48.37s–114.6s)**
+  - **Subphase 3A: First Post (48.37s–64.4s)**
+    - Loads post 8675b60b (48.37s), votes (54.09s), scrolls (59.55s), exits (64.4s).
+  - **Subphase 3B: Second Post (64.4s–81.88s)**
+    - Loads post 10a31f02 (64.4s), votes (67.34s), scrolls (73.36s), exits (81.88s).
+  - **Subphase 3C: Third Post (83.17s–105.23s)**
+    - Loads post ef376747 (83.17s), votes (82.36s), types 13-char comment (97.07s–103.92s), submits (105.23s).
+- **Phase 4: Exit (113.48s–114.6s)**
+  - Clicks top-right menu (113.48s) and nearby (114.6s), likely to log out or navigate away.
+- **Arc**: Exploration → Focused signup → Shallow browsing → Single deep engagement (comment) → Exit.
+```

@@ -1,0 +1,257 @@
+{
+  "session_id": "019ca1b0-0b09-7402-890c-e7b3e9f23d25",
+  "start_time": 1772241120.066317,
+  "total_duration_s": 74.02,
+  "actions": [
+    {
+      "action_name": "signup",
+      "timestamp": 1772241124.626066,
+      "relative_s": 4.56,
+      "duration_s": 6.59,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "username": "agent_88760",
+        "verified": true
+      }
+    },
+    {
+      "action_name": "scan_feed",
+      "timestamp": 1772241131.220798,
+      "relative_s": 11.15,
+      "duration_s": 1.06,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "pattern": "quick_scan"
+      }
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772241132.277778,
+      "relative_s": 12.21,
+      "duration_s": 7.09,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "post_title": "Staten Island Ferry \u2014 best free thing in NYC"
+      }
+    },
+    {
+      "action_name": "write_comment",
+      "timestamp": 1772241139.3713439,
+      "relative_s": 19.31,
+      "duration_s": 5.97,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "comment_length": 10,
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772241145.339265,
+      "relative_s": 25.27,
+      "duration_s": 0.0,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/6f4e1ef9-ad6e-426e-86a3-257258993b8b",
+      "details": {
+        "skipped": true
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772241145.3393312,
+      "relative_s": 25.27,
+      "duration_s": 3.29,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/6f4e1ef9-ad6e-426e-86a3-257258993b8b",
+      "details": {}
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772241148.630359,
+      "relative_s": 28.56,
+      "duration_s": 5.78,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/6f4e1ef9-ad6e-426e-86a3-257258993b8b",
+      "details": {
+        "post_title": "Bronx Zoo free Wednesdays!"
+      }
+    },
+    {
+      "action_name": "write_comment",
+      "timestamp": 1772241154.414322,
+      "relative_s": 34.35,
+      "duration_s": 0.0,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "skipped": true
+      }
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772241154.414407,
+      "relative_s": 34.35,
+      "duration_s": 2.88,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "browse_subreddit",
+      "timestamp": 1772241157.291532,
+      "relative_s": 37.23,
+      "duration_s": 4.57,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/26e0ded1-5739-4bdb-8358-50ddfae58d54",
+      "details": {
+        "subreddit": "Art & Culture"
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772241161.86555,
+      "relative_s": 41.8,
+      "duration_s": 3.18,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/26e0ded1-5739-4bdb-8358-50ddfae58d54",
+      "details": {}
+    },
+    {
+      "action_name": "browse_subreddit",
+      "timestamp": 1772241165.0436952,
+      "relative_s": 44.98,
+      "duration_s": 4.76,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/r/art",
+      "details": {
+        "subreddit": "Art & Culture"
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772241169.7992551,
+      "relative_s": 49.73,
+      "duration_s": 3.27,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {}
+    },
+    {
+      "action_name": "create_post",
+      "timestamp": 1772241173.073552,
+      "relative_s": 53.01,
+      "duration_s": 8.59,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/r/art",
+      "details": {}
+    },
+    {
+      "action_name": "scan_feed",
+      "timestamp": 1772241181.666398,
+      "relative_s": 61.6,
+      "duration_s": 1.2,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/submit",
+      "details": {
+        "pattern": "quick_scan"
+      }
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772241182.869789,
+      "relative_s": 62.8,
+      "duration_s": 5.61,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/a1320855-9213-4c4a-8c79-928951819531",
+      "details": {
+        "post_title": "Central Park in fall is unmatched"
+      }
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772241188.484889,
+      "relative_s": 68.42,
+      "duration_s": 2.41,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/a1320855-9213-4c4a-8c79-928951819531",
+      "details": {
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772241190.89403,
+      "relative_s": 70.83,
+      "duration_s": 2.99,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/a429bbdf-f2ca-4b17-af0e-e4e2eeb53ac1",
+      "details": {}
+    }
+  ],
+  "stuck_events": [],
+  "errors": [],
+  "summary": {
+    "session_id": "019ca1b0-0b09-7402-890c-e7b3e9f23d25",
+    "total_duration_s": 74.02,
+    "total_actions": 18,
+    "successful_actions": 18,
+    "failed_actions": 0,
+    "completion_rate": 1.0,
+    "stuck_events": 0,
+    "error_count": 0,
+    "avg_action_timings": {
+      "signup": 6.59,
+      "scan_feed": 1.13,
+      "open_post": 6.16,
+      "write_comment": 2.98,
+      "vote_on_post": 1.76,
+      "return_to_feed": 3.18,
+      "browse_subreddit": 4.67,
+      "create_post": 8.59
+    },
+    "action_sequence_actual": [
+      "signup",
+      "scan_feed",
+      "open_post",
+      "write_comment",
+      "vote_on_post",
+      "return_to_feed",
+      "open_post",
+      "write_comment",
+      "vote_on_post",
+      "browse_subreddit",
+      "return_to_feed",
+      "browse_subreddit",
+      "return_to_feed",
+      "create_post",
+      "scan_feed",
+      "open_post",
+      "vote_on_post",
+      "return_to_feed"
+    ]
+  }
+}

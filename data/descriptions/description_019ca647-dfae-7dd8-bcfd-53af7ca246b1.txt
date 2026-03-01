@@ -1,0 +1,87 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused bursts**: The user exhibits a non-linear, exploratory pattern with abrupt shifts in attention.
+  - Initial 0-7s: Linear (page load → API calls → "Sign Up" click).
+  - 7-32s: Highly scattered (10+ unknown clicks in rapid succession, likely form field exploration or UI testing).
+  - 32-59s: Focused on content interaction (voting, post selection).
+  - 300s: Session resets (new page load), suggesting possible refresh or navigation away and return.
+- **No sustained browsing**: No evidence of sequential post-by-post navigation (e.g., no "next post" clicks).
+
+2. READING BEHAVIOR
+- **Skimmer with minimal deep reading**:
+  - **Scroll depth**: Reached 916px (max) at 42.52s, but scroll duration was only 0.21s (extremely fast), indicating a rapid scan rather than reading.
+  - **Dwell time**: Spent ~24s (35.28s–59.5s) on a single post (ID: 8675b60b-979f-456e-9f50-789a2fcb09dd), but this includes voting actions (see Engagement Style).
+  - **No evidence of comment reading**: Loaded comments at 35.61s but no subsequent clicks/scrolls suggest engagement with comment content.
+
+3. ENGAGEMENT STYLE
+- **Voting-heavy, no commenting**:
+  - **Votes**: 8 API calls to `/api/votes` (37.95s–59.78s), clustered in two bursts:
+    - 37.95s–39.88s: 3 votes in 1.93s (rapid up/downvotes).
+    - 44.91s–59.78s: 5 votes in 14.87s (slower, with 10–12s gaps).
+  - **Comments**: No API calls to `/api/comments` for posting, despite loading comments at 35.61s.
+  - **Ratio**: 8 votes : 0 comments.
+- **No other interactions**: No evidence of sharing, saving, or reporting content.
+
+4. INTERACTION SPEED
+- **Fast but inconsistent**:
+  - **Initial form interaction**: 6.97s to first click ("Sign Up"), then 1.13s to next action (8.1s).
+  - **Typing speed**:
+    - First input (10.24s–11.86s): 5 characters in 1.62s (~3.1 chars/sec).
+    - Second input (13.07s–14.19s): 5 chars in 1.12s (~4.5 chars/sec).
+    - Third input (21.61s): 13 chars in 0.01s (likely pasted or autofilled).
+    - Later inputs (24.25s–30.99s): 12 chars in 6.74s (~1.8 chars/sec, with pauses).
+  - **Voting speed**: 3 votes in 1.93s (burst) vs. 5 votes in 14.87s (deliberate).
+  - **Long inactivity**: 59.78s–300.02s (240.24s) with no actions, likely tab abandonment.
+
+5. CONTENT PREFERENCES
+- **Limited data, but trends observed**:
+  - **Sorting**: Only interacted with "hot" posts (API calls to `/api/posts?sort=hot` at 0.28s, 32.81s, 41.86s).
+  - **Post selection**: Clicked a specific post at 35.28s (ID: 8675b60b-979f-456e-9f50-789a2fcb09dd), suggesting interest in its title/thumbnail.
+  - **Subreddit focus**: No explicit subreddit selection; trending/subreddit APIs called at load but no subsequent filtering.
+  - **Content type**: No metadata to infer (e.g., NSFW, flair), but voting on multiple posts implies engagement with diverse topics.
+
+6. TYPING BEHAVIOR
+- **Variable speed with errors/corrections**:
+  - **Early inputs**: Fast (3–4.5 chars/sec), likely username/email fields (short, no pauses).
+  - **Later inputs (24.25s–30.99s)**:
+    - 12-character input with backspacing (evidenced by decreasing character counts at 28.16s–28.22s).
+    - Likely a password field (longer, with corrections).
+  - **Pasted input**: 13 characters at 21.61s in 0.01s (no typing, likely autofill or paste).
+  - **No final submission**: Typing ends at 30.99s; no form submission until 32.65s (`/api/auth/signup`), suggesting possible frustration or distraction.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Sign-up flow**: Clicked "Sign Up" (6.97s), interacted with form fields (10.24s–30.99s), submitted (32.65s).
+  - **Voting**: Up/downvoted 8 times (37.95s–59.78s).
+  - **Post navigation**: Clicked a post (35.28s) and loaded its comments (35.61s).
+  - **Homepage logo**: Clicked "🗽 FunCity" (41.58s) to return to feed.
+- **Ignored**:
+  - **Subreddit filtering**: No clicks on subreddit lists (despite `/api/subreddits` calls).
+  - **Trending/sorting**: No changes to "hot" default sort.
+  - **Comments**: Loaded but no replies or engagement.
+  - **Search**: No evidence of search bar usage.
+  - **User profile**: No clicks on usernames or profile links.
+
+8. SESSION FLOW
+- **Arc**: Exploration → Frustration → Engagement → Abandonment
+  1. **0–7s (Exploration)**:
+     - Page load, API calls, immediate "Sign Up" click (suggests intent to register).
+  2. **7–32s (Frustration/Testing)**:
+     - Rapid, erratic clicks (10+ unknown interactions) and typing in form fields.
+     - Likely testing UI or encountering validation errors (e.g., backspacing in password field).
+     - Submitted signup at 32.65s (successful API call).
+  3. **32–59s (Engagement)**:
+     - Loaded "hot" posts, clicked a specific post (35.28s), and voted 8 times.
+     - Returned to homepage (41.58s) and scrolled rapidly (42.52s).
+     - Continued voting on multiple posts (44.91s–59.78s).
+  4. **59–300s (Abandonment)**:
+     - No actions for 240.24s, then page reload at 300.02s (likely tab closed/reopened or session timeout).
+```
+
+**Key Observations**:
+- **Primary goal**: Sign-up (abandoned mid-process) and voting (high engagement).
+- **Pain points**: Form interaction (backspacing, rapid clicks) suggests usability issues.
+- **Content interaction**: Voted frequently but did not comment or explore subreddits.
+- **Session end**: Inactivity suggests loss of interest or distraction, not a natural exit.

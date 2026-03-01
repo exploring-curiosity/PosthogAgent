@@ -1,0 +1,1189 @@
+{
+  "user_profile": {
+    "session_id": "019ca0c1-4d2a-745d-828e-48c6fc0cd042",
+    "age_group": "25-34",
+    "country": "India",
+    "nyc_familiarity": "live_here",
+    "os": "Mac OS X",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 1512,
+    "viewport_height": 823,
+    "screen_width": 1512,
+    "screen_height": 982
+  },
+  "session_duration_s": 89.53,
+  "total_raw_events": 274,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "1512x823"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.7,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 1.83,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 0,
+      "max_depth": 886,
+      "duration_s": 5.25,
+      "direction": "up"
+    },
+    {
+      "time": 9.85,
+      "action": "CLICK",
+      "target_tag": "p",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "mb-2 line-clamp-3 text-sm text-muted-foreground",
+      "coordinates": [
+        384,
+        200
+      ]
+    },
+    {
+      "time": 10.31,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments"
+    },
+    {
+      "time": 10.45,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2"
+    },
+    {
+      "time": 10.47,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 10.48,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 13.71,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Log In",
+      "target_href": "",
+      "target_class": "rounded-md px-3 py-1.5 text-sm font-medium text-foreground t",
+      "coordinates": [
+        1270,
+        30
+      ]
+    },
+    {
+      "time": 15.99,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        615,
+        389
+      ]
+    },
+    {
+      "time": 16.61,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 16.81,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 16.89,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 16.99,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 17.05,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 17.24,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 17.63,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 17.76,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 17.88,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.13,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.26,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.33,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.53,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.67,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.75,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.92,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 19.8,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        609,
+        477
+      ]
+    },
+    {
+      "time": 20.05,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 20.3,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 20.55,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 20.91,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 21.18,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 21.44,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 22.28,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md bg-neon-cyan py-2 text-sm font-semibold te",
+      "coordinates": [
+        676,
+        534
+      ]
+    },
+    {
+      "time": 22.89,
+      "action": "API_CALL",
+      "path": "/api/auth/login",
+      "full_path": "/api/auth/login"
+    },
+    {
+      "time": 23.06,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments"
+    },
+    {
+      "time": 23.22,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2"
+    },
+    {
+      "time": 27.31,
+      "action": "CLICK",
+      "target_tag": "textarea",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full resize-none rounded-lg border border-border bg-backgr",
+      "coordinates": [
+        284,
+        286
+      ]
+    },
+    {
+      "time": 34.22,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 34.5,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 34.62,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 34.76,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 34.85,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 35.01,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 35.47,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 36.15,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 36.32,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 36.47,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 36.6,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 37.21,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 37.37,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 37.56,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 37.81,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 38.13,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 38.3,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 38.39,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 38.58,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 19,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 38.73,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 20,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 38.88,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 21,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 39.14,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 39.46,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 39.75,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 39.9,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 40.02,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 26,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 40.12,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 27,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 41.03,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 28,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 41.16,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 29,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 41.39,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 30,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 41.53,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 31,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 41.63,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 32,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 41.87,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 33,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 42.04,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 34,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 42.3,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 35,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 42.43,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 42.55,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 37,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 42.76,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 38,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 44.69,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-4 py-1.5 text-sm font-medium text",
+      "coordinates": [
+        208,
+        360
+      ]
+    },
+    {
+      "time": 44.92,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 46.01,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments"
+    },
+    {
+      "time": 48.97,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-chevron-up h-4 w-4",
+      "coordinates": [
+        151,
+        530
+      ]
+    },
+    {
+      "time": 49.27,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 50.65,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "\ud83d\uddfd FunCity",
+      "target_href": "",
+      "target_class": "text-lg font-bold text-neon-cyan",
+      "coordinates": [
+        168,
+        21
+      ]
+    },
+    {
+      "time": 50.8,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 50.83,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 50.97,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 51.61,
+      "action": "SCROLL",
+      "scroll_from": 7,
+      "scroll_to": 886,
+      "max_depth": 886,
+      "duration_s": 0.2,
+      "direction": "down"
+    },
+    {
+      "time": 52.82,
+      "action": "CLICK",
+      "target_tag": "h3",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "mb-1 text-base font-semibold leading-snug text-foreground gr",
+      "coordinates": [
+        304,
+        434
+      ]
+    },
+    {
+      "time": 52.92,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 53.09,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments"
+    },
+    {
+      "time": 53.13,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7"
+    },
+    {
+      "time": 53.16,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 53.17,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 55.31,
+      "action": "CLICK",
+      "target_tag": "textarea",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full resize-none rounded-lg border border-border bg-backgr",
+      "coordinates": [
+        325,
+        272
+      ]
+    },
+    {
+      "time": 62.43,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 62.76,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 62.87,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 63.12,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 63.67,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 64.04,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 64.35,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 64.62,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 64.72,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 64.83,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 64.97,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 65.17,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 65.27,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 65.33,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 65.47,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 65.67,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 65.86,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 65.97,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 66.91,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-4 py-1.5 text-sm font-medium text",
+      "coordinates": [
+        199,
+        357
+      ]
+    },
+    {
+      "time": 67.04,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 67.27,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments"
+    },
+    {
+      "time": 69.25,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-chevron-up h-5 w-5",
+      "coordinates": [
+        158,
+        107
+      ]
+    },
+    {
+      "time": 69.45,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 70.38,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "\ud83d\uddfd FunCity",
+      "target_href": "",
+      "target_class": "text-lg font-bold text-neon-cyan",
+      "coordinates": [
+        192,
+        12
+      ]
+    },
+    {
+      "time": 70.47,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 70.47,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 70.64,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 71.44,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 0,
+      "max_depth": 886,
+      "duration_s": 1.7,
+      "direction": "up"
+    },
+    {
+      "time": 75.52,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "",
+      "target_href": "https://fun-city-xi.vercel.app/r/food",
+      "target_class": "flex items-center gap-2 rounded-md px-2 py-1.5 text-sm trans",
+      "coordinates": [
+        1218,
+        379
+      ]
+    },
+    {
+      "time": 75.85,
+      "action": "API_CALL",
+      "path": "/api/subreddits/food",
+      "full_path": "/api/subreddits/food"
+    },
+    {
+      "time": 75.89,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 75.91,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 75.95,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=d76c8caa-4c04-43e5-8ddc-95321ba2d2b8"
+    },
+    {
+      "time": 79.69,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1179,
+        437
+      ]
+    },
+    {
+      "time": 79.87,
+      "action": "API_CALL",
+      "path": "/api/subreddits/nature",
+      "full_path": "/api/subreddits/nature"
+    },
+    {
+      "time": 79.9,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 79.93,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 80.13,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=7c3cc036-d6f6-4bc7-9bd1-69e7315aa961"
+    },
+    {
+      "time": 81.76,
+      "action": "CLICK",
+      "target_tag": "h3",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "mb-1 text-base font-semibold leading-snug text-foreground gr",
+      "coordinates": [
+        516,
+        277
+      ]
+    },
+    {
+      "time": 81.98,
+      "action": "API_CALL",
+      "path": "/api/posts/3580c8fb-23c0-4cea-9c49-1a0d6f785bbb",
+      "full_path": "/api/posts/3580c8fb-23c0-4cea-9c49-1a0d6f785bbb"
+    },
+    {
+      "time": 81.99,
+      "action": "API_CALL",
+      "path": "/api/posts/3580c8fb-23c0-4cea-9c49-1a0d6f785bbb/comments",
+      "full_path": "/api/posts/3580c8fb-23c0-4cea-9c49-1a0d6f785bbb/comments"
+    },
+    {
+      "time": 82.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 82.03,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 83.33,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-chevron-up h-5 w-5",
+      "coordinates": [
+        160,
+        100
+      ]
+    },
+    {
+      "time": 83.52,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 86.36,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 61.5,
+      "max_depth": 61.5,
+      "duration_s": 0.1,
+      "direction": "down"
+    },
+    {
+      "time": 88.02,
+      "action": "CLICK",
+      "target_tag": "p",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "line-clamp-2 text-sm font-medium leading-snug text-foregroun",
+      "coordinates": [
+        1207,
+        647
+      ]
+    },
+    {
+      "time": 88.1,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 88.22,
+      "action": "API_CALL",
+      "path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719/comments",
+      "full_path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719/comments"
+    },
+    {
+      "time": 88.71,
+      "action": "API_CALL",
+      "path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719",
+      "full_path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719"
+    },
+    {
+      "time": 88.74,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 88.78,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    }
+  ]
+}

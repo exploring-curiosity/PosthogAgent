@@ -1,0 +1,61 @@
+{
+  "user_profile": {
+    "session_id": "019ca6c9-cde7-709a-8a88-87928bf74639",
+    "age_group": null,
+    "country": null,
+    "nyc_familiarity": null,
+    "os": null,
+    "browser": null,
+    "device_type": null,
+    "viewport_width": null,
+    "viewport_height": null,
+    "screen_width": null,
+    "screen_height": null
+  },
+  "session_duration_s": 1089.1,
+  "total_raw_events": 22,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-sandbox.vercel.app/",
+      "viewport": "1600x765"
+    },
+    {
+      "time": 0.1,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.1,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 2.08,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 5.55,
+      "action": "CLICK",
+      "target_tag": "main",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1506,
+        450
+      ]
+    },
+    {
+      "time": 301.03,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-sandbox.vercel.app/",
+      "viewport": "1600x765"
+    }
+  ]
+}

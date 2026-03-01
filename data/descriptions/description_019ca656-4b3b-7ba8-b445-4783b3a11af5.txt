@@ -1,0 +1,94 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with distinct phases of deep engagement.
+  - Initial broad exploration (0-54s): Loads homepage, triggers 3 API calls for trending/subreddit data, but takes 52s before first interaction (scroll).
+  - Focused engagement (54-79s): Rapid sequence of clicks and typing (25 actions in 25s) during signup flow.
+  - Targeted subreddit navigation (99-134s): 4 distinct subreddit switches (Manhattan → Brooklyn → FunCity) with API calls for each.
+- **Scattered returns**: Repeatedly returns to "hot" posts (API calls at 0.22s, 79.86s, 94.9s, 132.9s) between subreddit visits, suggesting indecision or comparison behavior.
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow dives**: Scroll patterns indicate minimal deep reading.
+  - **Scroll metrics**:
+    - First scroll (52.37s): 15px → 0px (0.5s), max depth 224px (likely header-only view).
+    - Post-signup scroll (84.16s): 1px → 246px over 4.62s (average 53px/s), stopping at ~30% of max depth (1146px).
+    - Later scrolls (92.1s, 95.37s, 121.69s, 134.34s): All <62px movements, often resetting to top.
+  - **Content engagement**: Clicks on posts occur after minimal scroll (e.g., 99.41s click at 197px, 115.24s click at 533px), suggesting reliance on visible content without deep scrolling.
+
+3. ENGAGEMENT STYLE
+- **Vote-focused, minimal commenting**: No evidence of comments or replies; all engagement is passive or voting.
+  - **Vote-to-comment ratio**: ∞ (0 comments, unknown votes).
+  - **Timing**:
+    - First post interaction at 90.79s (click at (503, 200)), followed by API call for post/comments (91.13s).
+    - Subsequent post clicks (103.06s, 115.24s, 122.3s) trigger identical API patterns (post + comments), but no typing suggests no comments were submitted.
+  - **Subreddit follows**: No API calls for subreddit subscriptions detected.
+
+4. INTERACTION SPEED
+- **Bimodal speed**: Alternates between rapid bursts and long pauses.
+  - **Fast bursts**:
+    - Signup flow (54.18-79.61s): 25 actions in 25.43s (1 action/1.02s), including 23 clicks/typing inputs.
+    - Subreddit switching (99.41-108.15s): 4 subreddit changes in 8.74s (1 change/2.19s).
+  - **Slow pauses**:
+    - Initial load → first scroll: 52.36s delay.
+    - Post-signup → first post click: 10.55s delay (79.61-90.16s).
+    - Between post views: 3-5s delays (e.g., 104.34-106.74s, 115.51-118.12s).
+- **Click precision**: Unknown clicks cluster in tight Y-axis ranges (e.g., 300-400px, 400-500px), suggesting deliberate targeting of specific UI elements.
+
+5. CONTENT PREFERENCES
+- **Location-based subreddits**: Gravitated toward NYC-specific communities.
+  - **Subreddits accessed**:
+    - `/r/manhattan` (99.66s, 106.74s): 2 API calls.
+    - `/r/brooklyn` (108.33s, 118.12s, 124.55s, 130.05s): 4 API calls.
+    - `/r/FunCity` (132.65s): 1 API call (likely homepage).
+  - **Content types**:
+    - "Hot" posts (default sort) accessed 5 times (0.22s, 79.86s, 94.9s, 106.89s, 132.9s).
+    - No evidence of filtering by "new," "top," or "controversial."
+  - **Post selection**: Clicked 5 distinct posts (UUIDs: ef376747, 448d27c5, 31bbcb04, 8675b60b), but no repeat views.
+
+6. TYPING BEHAVIOR
+- **Rapid, error-prone input**: Typing during signup suggests haste with possible corrections.
+  - **Signup flow (55.75-75.95s)**:
+    - **Field 1**: 3 characters in 1.0s (62.11-63.11s), then abandoned (no further input).
+    - **Field 2**: 3 characters in 0.76s (63.62-64.84s), then 5 characters in 1.65s (66.49-66.5s).
+    - **Field 3**: 9 characters in 7.08s (70.47-77.23s), with 13-character burst (75.94s) likely a password.
+    - **Field 4**: 9 characters in 1.59s (78.82-79.36s).
+  - **Keystroke dynamics**:
+    - Average 0.1-0.2s between keystrokes during bursts (e.g., 71.09-71.81s: 9 characters in 0.72s).
+    - No backspaces detected, but abandoned fields suggest corrections or hesitation.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Signup flow**: Initiated at 54.18s, completed at 79.61s (25.43s duration).
+  - **Subreddit navigation**: Used top-bar or sidebar to switch between Manhattan/Brooklyn/FunCity (99.41-132.65s).
+  - **Post viewing**: Clicked posts to view content/comments (90.79s, 103.06s, 115.24s, 122.3s).
+  - **Homepage return**: Clicked "🗽 FunCity" logo at 132.65s to return to default feed.
+- **Ignored features**:
+  - **Voting**: No API calls for upvote/downvote endpoints.
+  - **Comments**: No typing detected in comment fields despite loading comment APIs.
+  - **Search**: No API calls for search endpoints.
+  - **User profiles**: No clicks on usernames or profile-related APIs.
+  - **Settings/preferences**: No interactions with gear icons or account settings.
+
+8. SESSION FLOW
+- **Phase 1: Passive Observation (0-54s)**
+  - Loads page, triggers initial API calls, but takes 52s to first scroll (minimal movement).
+  - **Behavior**: Likely reading headers or waiting for content to load.
+- **Phase 2: Signup Attempt (54-79s)**
+  - Clicks "Sign Up" at 54.18s, then engages in rapid, error-prone form filling.
+  - **Behavior**: High intent to register, but abandons fields or corrects inputs.
+  - Completes signup at 79.61s (API call to `/api/auth/signup`).
+- **Phase 3: Post-Signup Exploration (80-99s)**
+  - Scrolls down 246px over 4.62s (84.16s), then pauses for 5.7s.
+  - **Behavior**: Likely scanning post previews without deep engagement.
+- **Phase 4: Subreddit Hopping (99-132s)**
+  - Clicks into Manhattan (99.41s), Brooklyn (108.15s), and views 4 posts across subreddits.
+  - **Behavior**: Compares content between NYC subreddits, but no deep dives.
+  - Repeatedly returns to "hot" feed (API calls at 94.9s, 106.89s, 132.9s).
+- **Phase 5: Session Wind-Down (132-135s)**
+  - Returns to FunCity homepage (132.65s), scrolls up (134.34s), no further actions.
+  - **Behavior**: Likely exit preparation; no new content engagement.
+
+OVERALL SUMMARY:
+This user exhibits **exploratory, location-driven behavior** with a clear focus on NYC subreddits. They prioritize **rapid signup** (despite input errors) and **shallow content consumption**, favoring post previews over deep reading. Engagement is **vote-centric** (no comments) with **bimodal interaction speed**—fast during signup/form filling, deliberate during content browsing. The session arc suggests **intent to register** followed by **comparative subreddit browsing**, but no sustained engagement with individual posts or discussions.
+```

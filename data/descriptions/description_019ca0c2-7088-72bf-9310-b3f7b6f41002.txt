@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly focused and linear with minimal exploration.
+- Single-page session: User remained on the initial page (https://fun-city-xi.vercel.app/) for the entire 32.26s duration.
+- No evidence of scrolling, tab switching, or multi-page navigation.
+- All actions stem from the initial load and one subsequent click.
+
+2. READING BEHAVIOR
+- No scroll data available, so reading depth cannot be determined.
+- However, the 31.29s delay before the first (and only) click suggests:
+  - Either deep reading of a single post (likely the one clicked at 31.29s)
+  - Or hesitation/indecision before engaging.
+- The clicked post text ("Tourists pay hundreds for boat tours. Meanwhile th") is truncated, indicating the user likely read the full title before clicking.
+
+3. ENGAGEMENT STYLE
+- Engagement was minimal and late:
+  - First (and only) interaction: Click at 31.29s on a post.
+  - No evidence of voting (upvote/downvote) or commenting.
+  - Post-click, the user triggered API calls for comments (32.0s) and post details (32.17s), but no further interactions (e.g., typing, voting) occurred.
+- Vote-to-comment ratio: 0:0 (no engagement of either type).
+
+4. INTERACTION SPEED
+- Initial load to first interaction: 31.29s (extremely slow for a 32.26s session).
+- Post-click actions were rapid:
+  - Click at 31.29s → Comments API at 32.0s (0.71s delay)
+  - Comments API → Post details API at 32.17s (0.17s delay)
+  - Post details API → Subreddits/trending APIs at 32.24s/32.26s (0.07s/0.02s delays).
+- Suggests the user was either:
+  - Reading the post details/comments quickly, or
+  - The session ended abruptly (e.g., tab closed) immediately after clicking.
+
+5. CONTENT PREFERENCES
+- Only one content interaction: Clicked a post with the title "Tourists pay hundreds for boat tours. Meanwhile th".
+- Themes inferred from the title:
+  - Likely related to NYC tourism, budget travel, or local secrets (given the "meanwhile" phrasing).
+  - No subreddit data is visible in the log, so specific communities cannot be identified.
+- No other content was engaged with (e.g., no clicks on trending/subreddit lists).
+
+6. TYPING BEHAVIOR
+- No typing detected in the session.
+- No evidence of search queries, comments, or form inputs.
+
+7. FEATURE DISCOVERY
+- Features used:
+  - Post viewing (clicked one post).
+  - Post details/comments API calls (likely triggered by the click).
+- Features ignored:
+  - Voting (no upvote/downvote actions).
+  - Commenting (no typing or submission).
+  - Subreddit navigation (no clicks on /api/subreddits or /api/trending lists).
+  - Search or filtering (no API calls for search queries).
+  - User profile or settings (no navigation to account-related pages).
+
+8. SESSION FLOW
+- Arc: Load → Passive Consumption → Single Interaction → Immediate Exit.
+  - 0.0s–31.29s: Passive consumption.
+    - Loaded the page and received initial data (posts, subreddits, trending).
+    - No scrolling or interactions; likely reading the post that was later clicked.
+  - 31.29s: Single engagement.
+    - Clicked a post, triggering a cascade of API calls for comments and details.
+  - 32.0s–32.26s: Rapid API calls (likely automated post-click behavior).
+    - No further user actions; session ended abruptly.
+- Exit: No clear exit action (e.g., no "back" button, no page close event). Session likely terminated by closing the tab/browser.
+```
+
+Key Observations:
+- The user exhibited a "read-first, engage-later" pattern, but engagement was minimal and late.
+- The session was functionally a "bounce" with one click, despite the 32s duration.
+- No evidence of multi-tasking or exploratory behavior.
+- The rapid API calls post-click suggest the user may have intended to engage further but exited immediately.

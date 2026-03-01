@@ -1,0 +1,89 @@
+```
+BEHAVIORAL PROFILE: FUNCITY USER SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused engagement**: The user demonstrates a non-linear, exploratory pattern with distinct phases of deep engagement.
+  - Initial load (0.0s) → immediate API calls for trending/subreddits/posts (0.01–0.7s) suggest broad interest.
+  - First click on a post at 9.85s (after 9.8s of inactivity), followed by rapid navigation to login (13.71s) and comment composition (27.31s).
+  - Returns to homepage (50.65s) and explores subreddits (food at 75.52s, nature at 79.69s) before engaging with specific posts.
+  - **Scattered focus**: Jumps between 5 distinct posts (40d2825b, ef376747, 3580c8fb, e098fca7) and 2 subreddits (food, nature) in 89s.
+  - **Homepage reliance**: Uses the "🗽 FunCity" logo (50.65s, 70.38s) as a navigation anchor 2x, suggesting it’s a primary waypoint.
+
+2. READING BEHAVIOR
+- **Skim-heavy with selective deep reading**:
+  - **Scroll patterns**:
+    - Initial scroll (1.83s) covers 886px (max depth) over 5.25s, indicating a quick scan of the full page.
+    - Later scrolls are minimal (e.g., 7px→886px in 0.2s at 51.61s; 1px→61.5px at 86.36s), suggesting targeted skimming.
+    - **No sustained reading**: Longest dwell time on a post is ~14s (40d2825b: 9.85s–23.06s), but this includes comment API calls and typing.
+  - **Click timing**: Clicks on posts (e.g., 9.85s, 52.82s, 81.76s) occur within 2–4s of landing on a page, implying rapid evaluation.
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy with minimal voting**:
+  - **Actions**:
+    - Comments: 2 (34.22s–44.69s, 62.43s–66.91s)
+    - Votes: 2 (48.97s, 69.25s, 83.33s) → **Vote-to-comment ratio: 1.5:1**
+  - **Speed**:
+    - First comment composed in **17.38s** (27.31s–44.69s) after clicking the post.
+    - Second comment composed in **11.98s** (55.31s–66.91s).
+    - Votes cast within **1–2s** of post interaction (e.g., 48.97s after 44.69s comment submission).
+  - **Login barrier**: Attempts to comment before logging in (13.71s), suggesting high intent to engage.
+
+4. INTERACTION SPEED
+- **Fast but deliberate**:
+  - **API latency tolerance**: Waits 0.7s–1.8s for initial page load, but triggers multiple API calls in parallel (e.g., 10.31s–10.48s for post/comments/subreddits/trending).
+  - **Click intervals**:
+    - **Short**: 0.46s between post click (9.85s) and comment API call (10.31s).
+    - **Long**: 13.7s gap between post click (9.85s) and login (13.71s), likely due to hesitation or reading.
+  - **Typing bursts**: Rapid character entry (e.g., 16.61s–19.8s for username/password) with no pauses >0.3s, suggesting familiarity with the form.
+
+5. CONTENT PREFERENCES
+- **Subreddits**:
+  - **Food** (75.52s): Explicitly navigated via sidebar link.
+  - **Nature** (79.69s): Clicked from trending/hot list.
+  - **General "hot" posts** (0.7s, 50.97s, 70.64s): Primary entry point for content discovery.
+- **Post selection**:
+  - **No clear theme**: Engaged with 4 posts with IDs 40d2825b, ef376747, 3580c8fb, e098fca7 (titles unknown).
+  - **Hot sort preference**: All posts loaded via `/api/posts?sort=hot`; no use of "new" or "top" sorts.
+
+6. TYPING BEHAVIOR
+- **Fast with corrections**:
+  - **Username/password**:
+    - **Username**: 10 characters in **2.32s** (16.61s–18.92s), with a **backspace sequence** (17.63s–17.88s: 5→4→3 chars), suggesting a typo.
+    - **Password**: 6 characters in **2.38s** (20.05s–22.28s), no corrections.
+  - **Comments**:
+    - **First comment**: 38 characters in **17.47s** (34.22s–44.69s), avg **2.2 chars/s**.
+    - **Second comment**: 18 characters in **11.98s** (55.31s–66.91s), avg **1.5 chars/s**.
+    - **Pauses**: Longest pause (1.93s) between chars 27–28 (41.03s–41.16s), possibly reflecting thought.
+  - **No draft abandonment**: Both comments were submitted.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Post engagement**: Comments (2x), votes (3x), post clicks (5x).
+  - **Navigation**: Homepage logo (2x), subreddit links (food, nature), trending/hot feeds.
+  - **Authentication**: Login flow (username/password).
+- **Ignored**:
+  - **Subreddit creation**: No `/api/subreddits` POST calls.
+  - **Post creation**: No `/api/posts` POST calls.
+  - **User profiles**: No clicks on usernames or profile pages.
+  - **Search**: No `/api/search` calls.
+  - **Settings/preferences**: No interactions with gear icons or user menus.
+
+8. SESSION FLOW
+- **Arc**: Exploration → Engagement → Browsing → Re-engagement → Exit
+  1. **Initial exploration (0.0s–9.85s)**:
+     - Loads homepage, scans trending/hot posts (scrolls full page in 5.25s).
+  2. **Deep engagement (9.85s–44.69s)**:
+     - Clicks first post, attempts to comment, logs in (13.71s–22.89s), submits 38-character comment (34.22s–44.69s).
+  3. **Browsing (44.69s–75.52s)**:
+     - Returns to homepage (50.65s), skims (scrolls 7px→886px in 0.2s), clicks second post (52.82s), submits 18-character comment (62.43s–66.91s).
+  4. **Subreddit exploration (75.52s–88.78s)**:
+     - Navigates to food (75.52s) and nature (79.69s) subreddits, engages with 2 more posts (votes, clicks).
+  5. **Abrupt exit (88.78s)**:
+     - Last action: API calls for post e098fca7 (88.71s–88.78s). No logout or navigation away recorded.
+- **Key transitions**:
+  - **9.85s**: First post click marks shift from exploration to engagement.
+  - **50.65s**: Returns to homepage, signaling a reset in focus.
+  - **75.52s**: Subreddit navigation suggests targeted content seeking.
+```
+
+**SUMMARY**: This user is a **fast, comment-driven engager** who explores broadly but commits to deep interactions (comments) on select posts. They prioritize hot/trending content, navigate via homepage anchors, and exhibit efficient typing with minor corrections. The session ends mid-exploration, with no clear exit intent.

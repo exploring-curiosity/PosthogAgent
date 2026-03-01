@@ -1,0 +1,85 @@
+{
+  "user_profile": {
+    "session_id": "019ca711-efa9-798d-a7b7-b4fb0f58b93e",
+    "age_group": "25-34",
+    "country": "United States",
+    "nyc_familiarity": "live_here",
+    "os": "Windows",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 1920,
+    "viewport_height": 911,
+    "screen_width": 1920,
+    "screen_height": 1080
+  },
+  "session_duration_s": 27.21,
+  "total_raw_events": 32,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "1920x911"
+    },
+    {
+      "time": 0.07,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.07,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 0.19,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 0.28,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 17.76,
+      "action": "CLICK",
+      "target_tag": "main",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        166,
+        139
+      ]
+    },
+    {
+      "time": 26.19,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "amaans",
+      "target_href": "",
+      "target_class": "max-w-[120px] truncate font-medium",
+      "coordinates": [
+        1520,
+        25
+      ]
+    },
+    {
+      "time": 27.01,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1471,
+        110
+      ]
+    }
+  ]
+}

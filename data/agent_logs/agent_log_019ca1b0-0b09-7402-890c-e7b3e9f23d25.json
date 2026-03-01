@@ -1,0 +1,258 @@
+{
+  "session_id": "019ca1b0-0b09-7402-890c-e7b3e9f23d25",
+  "start_time": 1772294264.931097,
+  "total_duration_s": 82.33,
+  "actions": [
+    {
+      "action_name": "signup",
+      "timestamp": 1772294271.590185,
+      "relative_s": 6.66,
+      "duration_s": 6.37,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "username": "agent_66755",
+        "verified": true
+      }
+    },
+    {
+      "action_name": "scan_feed",
+      "timestamp": 1772294277.964579,
+      "relative_s": 13.03,
+      "duration_s": 1.31,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "pattern": "quick_scan"
+      }
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772294279.271399,
+      "relative_s": 14.34,
+      "duration_s": 5.55,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "post_title": "\"Good tips"
+      }
+    },
+    {
+      "action_name": "write_comment",
+      "timestamp": 1772294284.824526,
+      "relative_s": 19.89,
+      "duration_s": 6.09,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "comment_length": 10,
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772294290.9152372,
+      "relative_s": 25.98,
+      "duration_s": 2.54,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/a1320855-9213-4c4a-8c79-928951819531",
+      "details": {
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772294293.459842,
+      "relative_s": 28.53,
+      "duration_s": 3.35,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/a1320855-9213-4c4a-8c79-928951819531",
+      "details": {}
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772294296.8124979,
+      "relative_s": 31.88,
+      "duration_s": 6.06,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "post_title": "\"Good tips"
+      }
+    },
+    {
+      "action_name": "write_comment",
+      "timestamp": 1772294302.871733,
+      "relative_s": 37.94,
+      "duration_s": 5.55,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "comment_length": 10,
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772294308.423476,
+      "relative_s": 43.49,
+      "duration_s": 3.64,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/ae6185e9-b8da-496e-9f68-c968f83983ba",
+      "details": {
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "browse_subreddit",
+      "timestamp": 1772294312.059291,
+      "relative_s": 47.13,
+      "duration_s": 3.85,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/ae6185e9-b8da-496e-9f68-c968f83983ba",
+      "details": {
+        "subreddit": "unknown"
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772294315.9073322,
+      "relative_s": 50.98,
+      "duration_s": 3.66,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/ae6185e9-b8da-496e-9f68-c968f83983ba",
+      "details": {}
+    },
+    {
+      "action_name": "browse_subreddit",
+      "timestamp": 1772294319.565405,
+      "relative_s": 54.63,
+      "duration_s": 4.43,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/r/nightlife",
+      "details": {
+        "subreddit": "unknown"
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772294323.9966762,
+      "relative_s": 59.07,
+      "duration_s": 2.94,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {}
+    },
+    {
+      "action_name": "create_post",
+      "timestamp": 1772294326.939544,
+      "relative_s": 62.01,
+      "duration_s": 8.32,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {}
+    },
+    {
+      "action_name": "scan_feed",
+      "timestamp": 1772294335.263893,
+      "relative_s": 70.33,
+      "duration_s": 1.02,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/submit",
+      "details": {
+        "pattern": "quick_scan"
+      }
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772294336.285415,
+      "relative_s": 71.35,
+      "duration_s": 4.84,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/dc787eb9-37bd-4bb1-9aea-8fc61257c21f",
+      "details": {
+        "post_title": "The Cloisters is NYC's best kept secret"
+      }
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772294341.1280398,
+      "relative_s": 76.2,
+      "duration_s": 2.91,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/dc787eb9-37bd-4bb1-9aea-8fc61257c21f",
+      "details": {
+        "skipped": false
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772294344.036631,
+      "relative_s": 79.11,
+      "duration_s": 2.92,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    }
+  ],
+  "stuck_events": [],
+  "errors": [],
+  "summary": {
+    "session_id": "019ca1b0-0b09-7402-890c-e7b3e9f23d25",
+    "total_duration_s": 82.33,
+    "total_actions": 18,
+    "successful_actions": 18,
+    "failed_actions": 0,
+    "completion_rate": 1.0,
+    "stuck_events": 0,
+    "error_count": 0,
+    "avg_action_timings": {
+      "signup": 6.37,
+      "scan_feed": 1.17,
+      "open_post": 5.48,
+      "write_comment": 5.82,
+      "vote_on_post": 3.03,
+      "return_to_feed": 3.22,
+      "browse_subreddit": 4.14,
+      "create_post": 8.32
+    },
+    "action_sequence_actual": [
+      "signup",
+      "scan_feed",
+      "open_post",
+      "write_comment",
+      "vote_on_post",
+      "return_to_feed",
+      "open_post",
+      "write_comment",
+      "vote_on_post",
+      "browse_subreddit",
+      "return_to_feed",
+      "browse_subreddit",
+      "return_to_feed",
+      "create_post",
+      "scan_feed",
+      "open_post",
+      "vote_on_post",
+      "return_to_feed"
+    ]
+  }
+}

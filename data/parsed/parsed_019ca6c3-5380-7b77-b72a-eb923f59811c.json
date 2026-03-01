@@ -1,0 +1,1058 @@
+{
+  "user_profile": {
+    "session_id": "019ca6c3-5380-7b77-b72a-eb923f59811c",
+    "age_group": "25-34",
+    "country": "United States",
+    "nyc_familiarity": "live_here",
+    "os": "Windows",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 1600,
+    "viewport_height": 765,
+    "screen_width": 1600,
+    "screen_height": 900
+  },
+  "session_duration_s": 141.19,
+  "total_raw_events": 394,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "1600x765"
+    },
+    {
+      "time": 0.05,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.05,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 0.14,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 7.03,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Sign Up",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-3 py-1.5 text-sm font-semibold te",
+      "coordinates": [
+        1384,
+        25
+      ]
+    },
+    {
+      "time": 8.79,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        887,
+        355
+      ]
+    },
+    {
+      "time": 10.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 10.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 10.57,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 11.35,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 11.52,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 12.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 13.11,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 13.23,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 13.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 15.43,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        682,
+        267
+      ]
+    },
+    {
+      "time": 16.77,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        675,
+        259
+      ]
+    },
+    {
+      "time": 18.1,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.23,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.35,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 18.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 19.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 20.83,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 20.92,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 21.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 21.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 23.17,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 25.32,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        653,
+        320
+      ]
+    },
+    {
+      "time": 27.9,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 28.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 28.7,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 28.92,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 29.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 29.93,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 30.02,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 30.29,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 31.84,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        670,
+        412
+      ]
+    },
+    {
+      "time": 33.81,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 33.83,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        593,
+        382
+      ]
+    },
+    {
+      "time": 35.12,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        679,
+        470
+      ]
+    },
+    {
+      "time": 40.74,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 40.75,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        593,
+        455
+      ]
+    },
+    {
+      "time": 41.83,
+      "action": "SCROLL",
+      "scroll_from": 13,
+      "scroll_to": 61,
+      "max_depth": 81,
+      "duration_s": 0.7,
+      "direction": "down"
+    },
+    {
+      "time": 43.49,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        689,
+        559
+      ]
+    },
+    {
+      "time": 45.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 45.55,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        593,
+        528
+      ]
+    },
+    {
+      "time": 46.48,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        702,
+        589
+      ]
+    },
+    {
+      "time": 46.93,
+      "action": "API_CALL",
+      "path": "/api/auth/signup",
+      "full_path": "/api/auth/signup"
+    },
+    {
+      "time": 47.22,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 51.39,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        314,
+        127
+      ]
+    },
+    {
+      "time": 51.46,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 51.94,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 51.94,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19"
+    },
+    {
+      "time": 52.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 52.02,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 53.16,
+      "action": "SCROLL",
+      "scroll_from": 18,
+      "scroll_to": 97,
+      "max_depth": 119,
+      "duration_s": 4.98,
+      "direction": "down"
+    },
+    {
+      "time": 59.23,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        282,
+        525
+      ]
+    },
+    {
+      "time": 60.52,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        274,
+        580
+      ]
+    },
+    {
+      "time": 61.59,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 61.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 61.75,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 62.13,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 63.51,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        226,
+        660
+      ]
+    },
+    {
+      "time": 63.67,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 63.91,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 65.24,
+      "action": "SCROLL",
+      "scroll_from": 99,
+      "scroll_to": 188,
+      "max_depth": 188,
+      "duration_s": 0.21,
+      "direction": "down"
+    },
+    {
+      "time": 68.76,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        282,
+        708
+      ]
+    },
+    {
+      "time": 70.21,
+      "action": "SCROLL",
+      "scroll_from": 194,
+      "scroll_to": 247,
+      "max_depth": 247,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 71.52,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        283,
+        716
+      ]
+    },
+    {
+      "time": 72.25,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 72.31,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 72.46,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 72.56,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 73.57,
+      "action": "SCROLL",
+      "scroll_from": 291,
+      "scroll_to": 328,
+      "max_depth": 328,
+      "duration_s": 0.11,
+      "direction": "down"
+    },
+    {
+      "time": 74.84,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        246,
+        700
+      ]
+    },
+    {
+      "time": 74.99,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 75.0,
+      "action": "SCROLL",
+      "scroll_from": 188,
+      "scroll_to": 188,
+      "max_depth": 188,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 75.17,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 75.18,
+      "action": "SCROLL",
+      "scroll_from": 276,
+      "scroll_to": 0,
+      "max_depth": 276,
+      "duration_s": 1.95,
+      "direction": "up"
+    },
+    {
+      "time": 81.59,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 81.6,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 81.89,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 83.43,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 343,
+      "max_depth": 343,
+      "duration_s": 1.8,
+      "direction": "down"
+    },
+    {
+      "time": 88.94,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        185,
+        238
+      ]
+    },
+    {
+      "time": 89.15,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 90.05,
+      "action": "SCROLL",
+      "scroll_from": 361,
+      "scroll_to": 0,
+      "max_depth": 2052,
+      "duration_s": 3.1,
+      "direction": "up"
+    },
+    {
+      "time": 95.27,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "\ud83d\uddfd FunCity",
+      "target_href": "",
+      "target_class": "text-lg font-bold text-neon-cyan",
+      "coordinates": [
+        233,
+        16
+      ]
+    },
+    {
+      "time": 97.61,
+      "action": "SCROLL",
+      "scroll_from": 2,
+      "scroll_to": 0,
+      "max_depth": 2052,
+      "duration_s": 8.73,
+      "direction": "up"
+    },
+    {
+      "time": 111.98,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        195,
+        213
+      ]
+    },
+    {
+      "time": 112.24,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 113.38,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        196,
+        362
+      ]
+    },
+    {
+      "time": 113.55,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 114.7,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        199,
+        500
+      ]
+    },
+    {
+      "time": 114.87,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 115.81,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        193,
+        640
+      ]
+    },
+    {
+      "time": 116.0,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 117.23,
+      "action": "SCROLL",
+      "scroll_from": 73,
+      "scroll_to": 447,
+      "max_depth": 447,
+      "duration_s": 0.42,
+      "direction": "down"
+    },
+    {
+      "time": 119.23,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        199,
+        341
+      ]
+    },
+    {
+      "time": 119.46,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 120.2,
+      "action": "SCROLL",
+      "scroll_from": 431,
+      "scroll_to": 0,
+      "max_depth": 431,
+      "duration_s": 0.62,
+      "direction": "up"
+    },
+    {
+      "time": 135.37,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1374,
+        29
+      ]
+    },
+    {
+      "time": 139.96,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1338,
+        108
+      ]
+    },
+    {
+      "time": 139.97,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "1600x765"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/auth/signup",
+      "full_path": "/api/auth/signup"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments",
+      "full_path": "/api/posts/6450bc39-b521-49b8-b572-c15c6850bf19/comments"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 140.01,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 140.22,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    }
+  ]
+}

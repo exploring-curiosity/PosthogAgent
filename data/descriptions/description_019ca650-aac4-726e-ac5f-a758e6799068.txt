@@ -1,0 +1,96 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with distinct phases of deep engagement. Initial exploration (0-28.57s) is followed by a highly focused signup attempt (28.57-55.0s), then returns to exploratory browsing (55.0-201.26s).
+- **Content hopping**: Jumps between at least two distinct posts (IDs: 8675b60b-979f-456e-9f50-789a2fcb09dd and 3580c8fb-23c0-4cea-9c49-1a0d6f785bbb) with no return visits, suggesting skimming rather than deep reading.
+- **UI interaction density**: 28 clicks in 257s (~1 click every 9.2s), with 12 clicks in the first 55s (signup phase) and 16 clicks in the remaining 202s (browsing phase).
+
+2. READING BEHAVIOR
+- **Skim-heavy with minimal deep reading**: Scrolls down 448px (80% of max depth) over 10.71s (60.97-71.68s) at ~42px/s, then immediately resets to top (72.16s), indicating rapid scanning rather than thorough reading.
+- **No sustained scroll engagement**: Only one scroll event recorded, suggesting either:
+  a) Content was not compelling enough to warrant deeper scrolling, or
+  b) The user found what they needed in the visible viewport.
+- **Comment section avoidance**: Despite loading comments for two posts (26.89s and 72.34s), no clicks or typing in comment areas were recorded.
+
+3. ENGAGEMENT STYLE
+- **No visible voting or commenting**: Despite loading comment sections for two posts, no upvote/downvote actions or comment submissions were recorded. The only engagement was:
+  - Signup attempt (28.57-55.0s)
+  - Comment composition (149.16-155.11s) that was never submitted (no API call to post the comment).
+- **Vote-to-comment ratio**: 0:0 (no recorded votes or comments).
+- **Engagement latency**: First post interaction occurred at 26.59s (click), suggesting initial hesitation or content evaluation.
+
+4. INTERACTION SPEED
+- **Variable speed with deliberate pauses**:
+  - **Fast during signup**: 12 clicks in 26.43s (28.57-55.0s) = ~1 click every 2.2s.
+  - **Slower during browsing**: 16 clicks in 146.26s (55.0-201.26s) = ~1 click every 9.1s.
+  - **Longest pause**: 69.34s (79.82-149.16s) with no recorded actions, likely indicating either:
+    a) Off-screen activity (e.g., reading, distraction), or
+    b) Deep engagement with a single piece of content (though no scroll data supports this).
+- **Typing speed**:
+  - Username (30.5-31.18s): 4 chars in 0.68s (~5.9 chars/s).
+  - Password (35.35-37.76s): 14 chars in 2.41s (~5.8 chars/s).
+  - Comment (149.16-155.11s): 23 chars in 5.95s (~3.9 chars/s), suggesting more deliberate composition.
+
+5. CONTENT PREFERENCES
+- **Hot-sorted posts**: Initial and repeated API calls to `/api/posts?sort=hot` (0.16s, 60.38s, 161.37s) indicate preference for trending content.
+- **Subreddit focus**: Repeated calls to `/api/subreddits` and `/api/trending` (0.01s, 26.98s, 60.2s, 72.45s, 161.2s) suggest interest in discovering communities, but no specific subreddit clicks were recorded.
+- **Post selection**: Interacted with two posts:
+  1. First post (ID: 8675b60b-979f-456e-9f50-789a2fcb09dd) at 26.59s (click) and 26.89s (comments loaded).
+  2. Second post (ID: 3580c8fb-23c0-4cea-9c49-1a0d6f785bbb) at 72.09s (click) and 72.34s (comments loaded).
+  - No data on post topics, but the user spent 45.47s (26.59-72.06s) on the first post before switching.
+
+6. TYPING BEHAVIOR
+- **Three distinct typing sessions**:
+  1. **Unknown field 1** (30.5-31.18s): 4 chars, no corrections, likely a username.
+  2. **Unknown field 2** (35.35-37.76s): 14 chars, no corrections, likely a password (masked input).
+  3. **Comment field** (149.16-155.11s): 23 chars, no visible corrections, but abandoned before submission.
+- **Typing speed consistency**:
+  - Username/password: ~5.8-5.9 chars/s (fast, muscle memory).
+  - Comment: ~3.9 chars/s (slower, likely composing thoughts).
+- **Input lengths**:
+  - Username: 4 chars (short, possibly a handle).
+  - Password: 14 chars (moderate complexity).
+  - Comment: 23 chars (brief, e.g., "This is interesting but needs more detail").
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Post browsing (clicked two posts at 26.59s and 72.09s).
+  - Signup flow (clicked "Sign Up" at 28.57s, completed form fields).
+  - Comment composition (typed 23 chars at 149.16-155.11s).
+  - Homepage navigation (clicked "🗽 FunCity" logo at 161.08s).
+- **Ignored features**:
+  - Voting (no upvote/downvote clicks).
+  - Comment submission (typed comment but did not submit).
+  - Subreddit exploration (no clicks on subreddit links despite loading `/api/subreddits`).
+  - Search functionality (no search bar interactions).
+  - Sorting/filtering (no clicks on "hot/new/top" sort options).
+
+8. SESSION FLOW
+- **Phase 1: Initial Exploration (0-28.57s)**:
+  - Loaded homepage, fetched trending/hot posts (0-0.16s).
+  - Idle for 26.43s (likely evaluating content).
+  - Clicked first post at 26.59s, loaded comments at 26.89s.
+- **Phase 2: Signup Attempt (28.57-55.0s)**:
+  - Clicked "Sign Up" at 28.57s.
+  - Struggled with form fields (12 clicks in 26.43s, including 4 typing sessions).
+  - Submitted signup at 54.87s (`/api/auth/signup`).
+- **Phase 3: Post-Signup Browsing (55.0-161.08s)**:
+  - Returned to post browsing (loaded second post at 72.34s).
+  - Long pause (69.34s) from 79.82-149.16s (likely reading or distracted).
+  - Composed but did not submit a comment (149.16-155.11s).
+  - Clicked homepage logo at 161.08s (reset to hot posts).
+- **Phase 4: Final Interaction (161.08-201.26s)**:
+  - Idle for 40.18s (161.08-201.26s).
+  - Clicked main content area at 201.26s (no further actions).
+- **Exit**: Session ended at 257.06s with no further interactions.
+
+KEY OBSERVATIONS:
+- **Signup friction**: High click density (12 clicks) during signup suggests UX issues (e.g., unclear form fields, validation errors).
+- **Low engagement depth**: Despite loading comments for two posts, no submissions or votes were recorded.
+- **Content abandonment**: Switched posts after 45.47s without deep engagement (no scrolling, no comments).
+- **Comment intent**: Typed a 23-char comment but did not submit, indicating either:
+  a) Second thoughts about content, or
+  b) Technical issue (e.g., button not working).
+- **NYC familiarity**: No explicit behavior tied to "live_here" status, but the "🗽 FunCity" logo click may reflect local interest.
+```

@@ -1,0 +1,79 @@
+{
+  "user_profile": {
+    "session_id": "019ca11f-14c3-710d-8d5d-8fc99aee56c2",
+    "age_group": null,
+    "country": null,
+    "nyc_familiarity": null,
+    "os": null,
+    "browser": null,
+    "device_type": null,
+    "viewport_width": null,
+    "viewport_height": null,
+    "screen_width": null,
+    "screen_height": null
+  },
+  "session_duration_s": 32.97,
+  "total_raw_events": 10,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-sandbox.vercel.app/",
+      "viewport": "800x600"
+    },
+    {
+      "time": 0.08,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.08,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 0.43,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 31.56,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        522,
+        348
+      ]
+    },
+    {
+      "time": 32.46,
+      "action": "API_CALL",
+      "path": "/api/posts/6f4e1ef9-ad6e-426e-86a3-257258993b8b/comments",
+      "full_path": "/api/posts/6f4e1ef9-ad6e-426e-86a3-257258993b8b/comments"
+    },
+    {
+      "time": 32.88,
+      "action": "API_CALL",
+      "path": "/api/posts/6f4e1ef9-ad6e-426e-86a3-257258993b8b",
+      "full_path": "/api/posts/6f4e1ef9-ad6e-426e-86a3-257258993b8b"
+    },
+    {
+      "time": 32.95,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 32.97,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    }
+  ]
+}

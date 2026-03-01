@@ -1,0 +1,1663 @@
+{
+  "user_profile": {
+    "session_id": "019ca1b0-0b09-7402-890c-e7b3e9f23d25",
+    "age_group": "18-24",
+    "country": "India",
+    "nyc_familiarity": "visited",
+    "os": "Mac OS X",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 2560,
+    "viewport_height": 1318,
+    "screen_width": 2560,
+    "screen_height": 1440
+  },
+  "session_duration_s": 105.16,
+  "total_raw_events": 320,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "2560x1318"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 0.05,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 1.08,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Sign Up",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-3 py-1.5 text-sm font-semibold te",
+      "coordinates": [
+        1877,
+        34
+      ]
+    },
+    {
+      "time": 2.28,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "pb-3 text-sm font-medium transition-colors text-muted-foregr",
+      "coordinates": [
+        1165,
+        553
+      ]
+    },
+    {
+      "time": 3.03,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1167,
+        548
+      ]
+    },
+    {
+      "time": 3.77,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 4.29,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 4.37,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 4.53,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 4.61,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 4.77,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 5.97,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1142,
+        591
+      ]
+    },
+    {
+      "time": 6.97,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 7.92,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 8.37,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 8.57,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 8.7,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 8.96,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 10.39,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1151,
+        681
+      ]
+    },
+    {
+      "time": 11.93,
+      "action": "TYPE",
+      "target_tag": "select",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 11.93,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1081,
+        659
+      ]
+    },
+    {
+      "time": 12.18,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1146,
+        739
+      ]
+    },
+    {
+      "time": 15.95,
+      "action": "TYPE",
+      "target_tag": "select",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 15.95,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1081,
+        732
+      ]
+    },
+    {
+      "time": 16.53,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1175,
+        826
+      ]
+    },
+    {
+      "time": 17.97,
+      "action": "TYPE",
+      "target_tag": "select",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 17.97,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1081,
+        805
+      ]
+    },
+    {
+      "time": 18.24,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md bg-neon-cyan py-2 text-sm font-semibold te",
+      "coordinates": [
+        1211,
+        860
+      ]
+    },
+    {
+      "time": 18.8,
+      "action": "API_CALL",
+      "path": "/api/auth/signup",
+      "full_path": "/api/auth/signup"
+    },
+    {
+      "time": 19.05,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 19.07,
+      "action": "SCROLL",
+      "scroll_from": 3,
+      "scroll_to": 10,
+      "max_depth": 10,
+      "duration_s": 0.11,
+      "direction": "down"
+    },
+    {
+      "time": 21.41,
+      "action": "CLICK",
+      "target_tag": "h3",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "mb-1 text-base font-semibold leading-snug text-foreground gr",
+      "coordinates": [
+        882,
+        182
+      ]
+    },
+    {
+      "time": 21.52,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 21.73,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2"
+    },
+    {
+      "time": 22.49,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments"
+    },
+    {
+      "time": 22.53,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 22.54,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 24.43,
+      "action": "CLICK",
+      "target_tag": "textarea",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full resize-none rounded-lg border border-border bg-backgr",
+      "coordinates": [
+        765,
+        284
+      ]
+    },
+    {
+      "time": 25.09,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 25.34,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 25.43,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 25.61,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 25.8,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 26.0,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 26.27,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 26.45,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 26.61,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 26.72,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": "What are your thoughts?"
+    },
+    {
+      "time": 28.05,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-4 py-1.5 text-sm font-medium text",
+      "coordinates": [
+        724,
+        363
+      ]
+    },
+    {
+      "time": 28.24,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 28.42,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments"
+    },
+    {
+      "time": 30.45,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "\ud83d\uddfd FunCity",
+      "target_href": "",
+      "target_class": "text-lg font-bold text-neon-cyan",
+      "coordinates": [
+        747,
+        33
+      ]
+    },
+    {
+      "time": 30.66,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 30.66,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 30.86,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 32.11,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1749,
+        431
+      ]
+    },
+    {
+      "time": 32.33,
+      "action": "API_CALL",
+      "path": "/api/subreddits/nature",
+      "full_path": "/api/subreddits/nature"
+    },
+    {
+      "time": 32.36,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 32.37,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 32.47,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=7c3cc036-d6f6-4bc7-9bd1-69e7315aa961"
+    },
+    {
+      "time": 34.38,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-chevron-up h-5 w-5",
+      "coordinates": [
+        685,
+        278
+      ]
+    },
+    {
+      "time": 34.61,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 37.08,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1722,
+        327
+      ]
+    },
+    {
+      "time": 37.35,
+      "action": "API_CALL",
+      "path": "/api/subreddits/art",
+      "full_path": "/api/subreddits/art"
+    },
+    {
+      "time": 37.38,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 37.4,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 37.55,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=b5ed3109-d16f-4ea7-ad3a-e52c9310e42c"
+    },
+    {
+      "time": 39.17,
+      "action": "CLICK",
+      "target_tag": "path",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        678,
+        272
+      ]
+    },
+    {
+      "time": 39.41,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 40.49,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        752,
+        347
+      ]
+    },
+    {
+      "time": 40.76,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7"
+    },
+    {
+      "time": 40.77,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments"
+    },
+    {
+      "time": 40.8,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 40.82,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 42.52,
+      "action": "CLICK",
+      "target_tag": "p",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "mb-2 text-sm text-foreground",
+      "coordinates": [
+        727,
+        489
+      ]
+    },
+    {
+      "time": 43.11,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "rounded p-1 transition-colors hover:bg-secondary text-muted-",
+      "coordinates": [
+        687,
+        518
+      ]
+    },
+    {
+      "time": 43.37,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 43.9,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "flex items-center gap-2",
+      "coordinates": [
+        936,
+        522
+      ]
+    },
+    {
+      "time": 44.62,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "flex items-center gap-1 rounded px-2 py-1 text-xs text-muted",
+      "coordinates": [
+        799,
+        530
+      ]
+    },
+    {
+      "time": 45.28,
+      "action": "CLICK",
+      "target_tag": "textarea",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full resize-none rounded-lg border border-border bg-backgr",
+      "coordinates": [
+        808,
+        603
+      ]
+    },
+    {
+      "time": 45.77,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 45.92,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 46.13,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 46.32,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 46.5,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 46.74,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 48.09,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 48.36,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 48.47,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 48.69,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 48.96,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 49.2,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 50.0,
+      "action": "TYPE",
+      "target_tag": "textarea",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": "Write a reply..."
+    },
+    {
+      "time": 51.35,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-4 py-1.5 text-sm font-medium text",
+      "coordinates": [
+        699,
+        654
+      ]
+    },
+    {
+      "time": 51.46,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 51.77,
+      "action": "API_CALL",
+      "path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments",
+      "full_path": "/api/posts/ef376747-f6af-44e4-93fc-6a270cd2b8c7/comments"
+    },
+    {
+      "time": 58.35,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "",
+      "target_href": "https://fun-city-xi.vercel.app/submit",
+      "target_class": "flex items-center gap-1.5 rounded-md border border-neon-cyan",
+      "coordinates": [
+        1684,
+        40
+      ]
+    },
+    {
+      "time": 58.45,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 59.36,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1136,
+        179
+      ]
+    },
+    {
+      "time": 61.47,
+      "action": "TYPE",
+      "target_tag": "select",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 61.48,
+      "action": "CLICK",
+      "target_tag": "select",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        985,
+        166
+      ]
+    },
+    {
+      "time": 62.16,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "w-full rounded-md border border-border bg-background px-3 py",
+      "coordinates": [
+        1065,
+        269
+      ]
+    },
+    {
+      "time": 63.46,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 63.65,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 63.79,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 64.54,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 64.67,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 65.33,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 65.57,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 65.64,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 65.85,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 68.11,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 68.27,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 68.4,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 68.6,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 68.7,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 68.9,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 69.14,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 69.33,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 69.44,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 69.57,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 19,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 69.8,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 20,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 69.93,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 21,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 70.05,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 71.87,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 72.04,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 72.29,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 72.37,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 26,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 72.54,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 27,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 72.72,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 28,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 72.92,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 29,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 73.07,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 30,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 73.17,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 31,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 73.39,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 32,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 73.52,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 33,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 73.82,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 34,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 73.93,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 35,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 74.45,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 74.81,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 35,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 75.03,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 75.12,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 37,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 75.23,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 38,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 75.36,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 39,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 76.23,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 40,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 76.37,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 41,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 76.64,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 42,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 79.67,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 43,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 79.88,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 44,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 80.06,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 45,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 80.28,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 46,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 80.46,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 47,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 80.57,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 48,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 80.68,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 49,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 81.11,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 50,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 81.2,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 51,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 82.14,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 52,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 82.5,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 51,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 82.58,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 52,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 82.7,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 53,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 83.09,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 54,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 83.17,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 55,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 83.36,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 56,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 83.82,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 57,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 83.91,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 58,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 84.08,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 59,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 84.26,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 60,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 84.36,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 61,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 84.44,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 62,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 84.65,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 63,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 84.84,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 64,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 84.93,
+      "action": "TYPE",
+      "target_tag": "input",
+      "text_length": 65,
+      "is_masked": true,
+      "target_placeholder": "An interesting title"
+    },
+    {
+      "time": 86.8,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-6 py-2 text-sm font-semibold text",
+      "coordinates": [
+        1034,
+        592
+      ]
+    },
+    {
+      "time": 87.01,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts"
+    },
+    {
+      "time": 87.25,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd/comments"
+    },
+    {
+      "time": 87.33,
+      "action": "API_CALL",
+      "path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd",
+      "full_path": "/api/posts/8675b60b-979f-456e-9f50-789a2fcb09dd"
+    },
+    {
+      "time": 87.38,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 87.38,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 89.63,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-chevron-up h-5 w-5",
+      "coordinates": [
+        687,
+        110
+      ]
+    },
+    {
+      "time": 89.81,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 91.53,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "mx-auto flex h-12 max-w-7xl items-center justify-between px-",
+      "coordinates": [
+        646,
+        25
+      ]
+    },
+    {
+      "time": 91.86,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "\ud83d\uddfd FunCity",
+      "target_href": "",
+      "target_class": "text-lg font-bold text-neon-cyan",
+      "coordinates": [
+        687,
+        24
+      ]
+    },
+    {
+      "time": 91.98,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 91.99,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 92.32,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 92.84,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 509,
+      "max_depth": 509,
+      "duration_s": 0.3,
+      "direction": "down"
+    },
+    {
+      "time": 94.06,
+      "action": "CLICK",
+      "target_tag": "p",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "mb-2 line-clamp-3 text-sm text-muted-foreground",
+      "coordinates": [
+        1055,
+        820
+      ]
+    },
+    {
+      "time": 94.15,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.0,
+      "direction": "up"
+    },
+    {
+      "time": 94.26,
+      "action": "API_CALL",
+      "path": "/api/posts/54fbafb3-692f-431e-a824-3a1ae0e0b004/comments",
+      "full_path": "/api/posts/54fbafb3-692f-431e-a824-3a1ae0e0b004/comments"
+    },
+    {
+      "time": 94.3,
+      "action": "API_CALL",
+      "path": "/api/posts/54fbafb3-692f-431e-a824-3a1ae0e0b004",
+      "full_path": "/api/posts/54fbafb3-692f-431e-a824-3a1ae0e0b004"
+    },
+    {
+      "time": 94.34,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 94.34,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 96.87,
+      "action": "CLICK",
+      "target_tag": "svg",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "lucide lucide-chevron-down h-5 w-5",
+      "coordinates": [
+        682,
+        149
+      ]
+    },
+    {
+      "time": 97.1,
+      "action": "API_CALL",
+      "path": "/api/votes",
+      "full_path": "/api/votes"
+    },
+    {
+      "time": 99.53,
+      "action": "CLICK",
+      "target_tag": "span",
+      "target_text": "\ud83d\uddfd FunCity",
+      "target_href": "",
+      "target_class": "text-lg font-bold text-neon-cyan",
+      "coordinates": [
+        702,
+        28
+      ]
+    },
+    {
+      "time": 99.64,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 99.65,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 99.78,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    }
+  ]
+}

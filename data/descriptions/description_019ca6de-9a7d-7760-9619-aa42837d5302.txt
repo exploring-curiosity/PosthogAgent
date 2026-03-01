@@ -1,0 +1,77 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with distinct phases of deep engagement. Initial navigation is scattered (0-30s), followed by structured browsing (34-122s).
+- **Return-to-home behavior**: Clicks "🗽 FunCity" 5 times (35.91s, 44.71s, 72.62s, 103.87s, 117.45s) to reset to the homepage, suggesting intentional navigation control.
+- **Post-hopping**: Views 4 distinct posts (IDs: ef376747, a08bfac2, 10a31f02, 31bbcb04, 151f7fe0) with rapid transitions (avg 12.5s per post before moving).
+- **UI experimentation**: Early clicks (1.3s-23.35s) target non-standard elements (coordinates like (880,350), (851,332)), indicating exploration of interactive features.
+
+2. READING BEHAVIOR
+- **Skim-heavy with selective deep dives**:
+  - **Scroll metrics**: 3 major scroll events:
+    1. 47.39s: 187px → 616px (429px in 0.41s) = rapid scan
+    2. 49.85s: 617px → 1376px (759px in 0.61s) = moderate scan
+    3. 73.44s: 8px → 2048px (2040px in 9.65s) = deliberate deep read
+  - **Time per post**: Avg 15.4s on a post before first interaction (e.g., 34.23s click after loading post a08bfac2 at 38.13s).
+  - **Comment engagement**: Only 2 comment threads fully loaded (10a31f02 at 51.9s, 31bbcb04 at 86.05s), with typing activity suggesting partial reading.
+
+3. ENGAGEMENT STYLE
+- **Vote-dominant with late commenting**:
+  - **Votes**: 5 vote actions (34.44s, 41.52s, 42.97s, 49.3s, 101.51s, 116.01s) = 1 vote every 20.4s during active browsing.
+  - **Comments**: 2 comment attempts (53.27s-54.53s: 5 chars; 89.27s-93.16s: 5 chars) with no submissions (no /api/comments POST requests).
+  - **Ratio**: 5 votes : 0 submitted comments.
+- **Reaction speed**: First vote at 34.23s (34s after page load), first comment attempt at 53.27s (53s after load).
+
+4. INTERACTION SPEED
+- **Fast but deliberate**:
+  - **Early session**: 1.3s-23.35s: 12 clicks in 22s (0.55s/click) = rapid exploration.
+  - **Mid-session**: 34s-73s: 10 actions in 39s (3.9s/action) = deliberate browsing.
+  - **Typing speed**: 13-char username (8.12s-8.43s) = 0.38s/char; 14-char password (11.01s-11.56s) = 0.04s/char (likely autofill).
+  - **API latency**: Avg 0.12s between related API calls (e.g., post + comments).
+
+5. CONTENT PREFERENCES
+- **Content types**:
+  - **Trending/hot posts**: 4/5 post views triggered /api/trending or /api/posts?sort=hot.
+  - **Subreddit focus**: Repeated /api/subreddits calls (0.69s, 35.99s, 44.78s, etc.) suggest subreddit browsing, but no specific subreddit clicks logged.
+  - **Post topics**: Indeterminate from data, but 5 distinct post IDs suggest varied interests.
+- **Engagement triggers**: Votes/comments occur on posts loaded at 38.13s, 51.62s, 85.79s, and 113.62s—no clear pattern in timing.
+
+6. TYPING BEHAVIOR
+- **Segmented inputs**:
+  - **Username**: 13 chars (8.12s-8.43s) = 3.9 chars/s; no corrections.
+  - **Password**: 14 chars (11.01s) = likely pasted/autofilled (0.04s/char).
+  - **Comments**:
+    1. 5 chars (53.66s-54.53s) = 0.87s/char; 2.5s pause before typing.
+    2. 5 chars (89.27s-93.16s) = 0.97s/char; 3 pauses (90.07s, 91.87s) suggest editing.
+- **Corrections**: Second comment attempt shows 3 pauses (90.07s, 91.87s, 92.01s) = likely backspacing.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Voting**: 6 vote actions (34.44s-116.01s).
+  - **Commenting**: 2 partial attempts (53.27s, 89.27s).
+  - **Sign-up flow**: Initiated at 2.06s (button click), completed at 30.7s (/api/auth/signup).
+  - **Navigation**: Home button ("🗽 FunCity") used 5x; likely sidebar/post links.
+- **Ignored features**:
+  - **No sharing**: No /api/share or social actions.
+  - **No saves/bookmarks**: No /api/saves calls.
+  - **No subreddit subscriptions**: No /api/subscribe calls despite repeated /api/subreddits.
+
+8. SESSION FLOW
+- **Phase 1: Exploration (0-30s)**:
+  - **0-2s**: Page load + API fetches (comments, post, trending, subreddits).
+  - **2-23s**: UI experimentation (12 clicks on non-standard elements), sign-up initiation (2.06s).
+  - **23-30s**: Form completion (username/password) with pauses (e.g., 11.01s-11.56s).
+  - **30s**: Sign-up submission (/api/auth/signup).
+- **Phase 2: Browsing (30-72s)**:
+  - **30-38s**: Post-vote on initial post (34.23s), reload comments (30.88s).
+  - **38-51s**: Navigate to new post (a08bfac2 at 38.13s), vote (41.52s), scroll (47.39s-49.85s).
+  - **51-72s**: Deep dive into post 10a31f02 (51.62s), comment attempt (53.27s-54.53s), return home (72.62s).
+- **Phase 3: Active Engagement (72-117s)**:
+  - **72-85s**: Scroll deep (73.44s: 2048px), click post (85.79s).
+  - **85-98s**: Comment attempt on post 31bbcb04 (89.27s-93.16s), vote (101.51s).
+  - **98-117s**: Navigate to post 151f7fe0 (107.52s), vote (116.01s).
+- **Phase 4: Exit (117-122s)**:
+  - **117-122s**: Return home (117.45s), rapid clicks on top-right UI (119.97s-122.12s), likely account/profile menu.
+- **Arc**: Exploration → Sign-up → Browsing → Deep engagement → Exit via profile.
+```

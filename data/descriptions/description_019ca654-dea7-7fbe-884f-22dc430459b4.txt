@@ -1,0 +1,86 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with 3 distinct "focus phases" (0-23s, 51-63s, 70-85s). Navigation is scattered between these phases, with rapid clicks on unknown elements (18.49s-27.52s) suggesting either UI confusion or feature discovery.
+- **Click distribution**: 17 clicks on unknown elements (avg. 1 every 5s during active phases), with 3 clear clusters:
+  - Top-right (sign-up area: 1314,29 at 16.32s)
+  - Mid-screen (600-750px range, 376-454px: 18.49s-21.58s)
+  - Left-content area (200-300px range, 238-590px: 51.44s-78.84s)
+- **No visible scroll data**: Cannot confirm vertical movement, but horizontal stability (1512px viewport) suggests no lateral navigation.
+
+2. READING BEHAVIOR
+- **Skim-heavy with selective deep dives**: No direct reading metrics (e.g., scroll depth), but inferred from:
+  - **Rapid API calls**: 4 content fetches in first 0.17s (trending, subreddits, hot posts) suggest initial broad scanning.
+  - **Short dwell times**: 12.15s between first API call (0.17s) and first click (16.32s) implies quick scanning of loaded content.
+  - **Comment engagement**: 3 comment-related API calls (51.74s, 63.46s, 79.05s) with typing bursts (5-12 characters) indicate targeted reading of specific threads.
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy, vote-light**: No explicit voting actions detected (no `/api/votes` calls).
+- **Comment activity**:
+  - 3 comment attempts (59.3s-63.27s, 76.42s-78.84s, and earlier at 24.55s-26.45s).
+  - **Timing**: First comment attempt after 59.3s (43s after signup), second after 76.42s (17s after post load).
+  - **Ratio**: 3 comment attempts, 0 votes (undefined vote-to-comment ratio).
+- **Speed**: First comment typed at ~3.5 chars/sec (59.3s-61.84s), second at ~2.3 chars/sec (76.42s-78.03s).
+
+4. INTERACTION SPEED
+- **Bimodal speed**: Alternates between rapid bursts and deliberate pauses.
+  - **Fast phases**:
+    - 0-0.17s: 3 API calls in 0.16s (content preloading).
+    - 19.2s-20.84s: 4 keystrokes + 2 clicks in 1.64s (avg. 0.41s/action).
+    - 24.55s-26.45s: 9 keystrokes + 2 clicks in 1.9s (avg. 0.17s/action).
+  - **Slow phases**:
+    - 21.58s-23.23s: 1.65s between clicks (possible reading/decision time).
+    - 36.37s-37.06s: 0.69s pause after 13-character input (likely correction or hesitation).
+- **Median inter-action time**: 0.78s (excluding API calls).
+
+5. CONTENT PREFERENCES
+- **Content types**: Inferred from API calls:
+  - **Trending posts**: `/api/trending` called 3x (0.01s, 51.79s, 66.51s).
+  - **Hot posts**: `/api/posts?sort=hot` called 2x (0.17s, 40.87s).
+  - **Specific posts**: 2 posts viewed in detail:
+    - `6450bc39-b521-49b8-b572-c15c6850bf19` (51.74s-63.65s).
+    - `3580c8fb-23c0-4cea-9c49-1a0d6f785bbb` (70.99s-79.19s).
+- **Subreddit focus**: `/api/subreddits` called 3x (0.09s, 51.78s, 71.02s), but no subreddit-specific clicks detected.
+
+6. TYPING BEHAVIOR
+- **Variable speed**: 3 distinct typing clusters:
+  - **Signup phase (19.2s-20.84s)**: 4 chars in 1.64s (~2.4 chars/sec), likely username/email.
+  - **First comment (59.3s-61.84s)**: 12 chars in 2.54s (~4.7 chars/sec), no pauses >0.3s.
+  - **Second comment (76.42s-78.03s)**: 7 chars in 1.61s (~4.3 chars/sec), with 0.79s pause before final click (78.84s).
+- **Input lengths**:
+  - Short: 3-5 chars (19.2s-20.84s, 27.52s-29.4s).
+  - Medium: 7-9 chars (24.55s-26.45s, 39.59s).
+  - Long: 12-13 chars (59.3s-61.84s, 36.37s).
+- **Corrections**: Likely at 36.37s (13 chars typed, then immediate click at 549,484—possibly a submit or cancel).
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Signup**: Explicit "Sign Up" button click (16.32s) + `/api/auth/signup` (40.69s).
+  - **Post browsing**: `/api/posts` calls (0.17s, 40.87s, 66.68s).
+  - **Commenting**: 3 `/api/comments` calls (63.46s, 79.05s) with associated typing.
+  - **Content detail**: `/api/posts/[id]` and `/api/posts/[id]/comments` for 2 posts.
+- **Ignored features**:
+  - No `/api/votes` calls (no upvotes/downvotes).
+  - No `/api/messages` or `/api/notifications` calls.
+  - No subreddit-specific actions (e.g., `/r/[name]`).
+  - No search functionality used (no `/api/search` calls).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0-16.32s)**
+  - Loads page, preloads trending/hot content (3 API calls in 0.17s).
+  - 16.15s of apparent inactivity (likely scanning loaded content).
+- **Phase 2: Signup Attempt (16.32s-40.87s)**
+  - Clicks "Sign Up" (16.32s), followed by 23.55s of rapid, erratic clicks (18.49s-39.59s) and typing (19.2s-39.59s).
+  - Possible UI confusion (multiple clicks on unknown elements) or form field navigation.
+  - Completes signup at 40.69s (`/api/auth/signup`).
+- **Phase 3: Content Engagement (40.87s-66.68s)**
+  - Immediately reloads hot posts (40.87s), then 10.57s pause (likely reading).
+  - Clicks post at 51.44s, triggers 4 API calls (post + comments + trending/subreddits).
+  - Types 12-character comment (59.3s-61.84s), submits at 63.27s (`/api/comments`).
+- **Phase 4: Second Post (66.68s-79.19s)**
+  - Loads hot posts again (66.68s), clicks second post at 70.56s.
+  - Types 7-character comment (76.42s-78.03s), submits at 78.84s.
+- **Exit**: Session ends at 85.26s with no further actions.
+- **Arc**: Exploration (0-16s) → Signup struggle (16-41s) → Targeted engagement (41-85s).
+```

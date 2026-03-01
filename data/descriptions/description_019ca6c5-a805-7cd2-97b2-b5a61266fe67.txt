@@ -1,0 +1,86 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with 3 distinct phases:
+  *Initial exploration* (0-35s): Rapid API calls (4 endpoints in first 1.5s) and immediate "Sign Up" click suggest goal-oriented behavior, but subsequent scattered clicks (e.g., unknown at (720,356) at 2.44s) indicate early feature discovery.
+  *Content browsing* (35-122s): Subreddit-specific navigation (e.g., /manhattan at 85.02s, /food at 139.06s) with 7 unique post/comment API calls in 47s.
+  *Re-engagement* (122-156s): Returns to homepage (142.58s "🗽 FunCity" click) before final exit.
+- **Click scatter**: 28 unknown clicks (64% of total clicks) suggest either UI confusion or rapid feature testing. Only 2 clicks have identifiable targets ("Sign Up" and "🗽 FunCity").
+
+2. READING BEHAVIOR
+- **Skim-heavy with selective deep dives**:
+  - *Scroll patterns*: Two major scrolls:
+    1) 38.47-82.91s: 1,908px scroll over 43.61s (avg 43.7px/s) - likely skimming posts.
+    2) 143.29-144.48s: 1,204px scroll in 0.52s (2,315px/s) - rapid re-scan.
+  - *Dwell time*: Only 3 posts/comments loaded for >5s (31bbcb04 at 83.44s, a08bfac2 at 122.49s, 10a31f02 at 144.8s), suggesting minimal deep reading.
+  - *Comment engagement*: Loaded 4 comment threads but only typed in 2 (116.53s and 147.31s), indicating selective participation.
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy with minimal voting**:
+  - *Actions*: 2 comment attempts (116.53s: 51 chars; 147.31s: 9 chars) vs. 0 voting actions (no /api/votes calls).
+  - *Timing*: First comment attempt at 116.53s (34s after post load) suggests moderate deliberation. Second attempt at 147.31s (2.5s after post load) indicates impulsive reaction.
+  - *Ratio*: 2:0 (comments:votes), atypical for Reddit-like platforms where voting is more common.
+
+4. INTERACTION SPEED
+- **Variable speed with deliberate pauses**:
+  - *Initial speed*: First 12s: 15 actions (1.25/s) - rapid form filling (signup/login).
+  - *Mid-session*: 12-82s: 12 actions (0.16/s) - slow browsing/scrolling.
+  - *Late-session*: 113-119s: 48 typing actions (8/s) - intense comment drafting.
+  - *Pauses*: 3 notable gaps >5s (21.31-26.24s, 32.52-34.23s, 109.62-110.95s) suggest cognitive load or distractions.
+
+5. CONTENT PREFERENCES
+- **Location-based and food-related content**:
+  - *Subreddits*: 3 explicit subreddit API calls:
+    1) /manhattan (85.02s, 138.06s) - 2 visits
+    2) /food (139.06s) - 1 visit
+  - *Post selection*: Loaded 5 unique posts (31bbcb04, a08bfac2, 10a31f02, 3580c8fb, plus 2 from /hot). No pattern in post IDs suggests content-driven selection.
+  - *Trending topics*: Repeated /api/trending calls (7 total) indicate interest in popular content.
+
+6. TYPING BEHAVIOR
+- **Fast with corrections and long-form input**:
+  - *Speed*: Average 4.2 chars/s (calculated from 113-119s burst: 51 chars in 6.6s).
+  - *Corrections*: Multiple backspaces/deletions:
+    - 148.43-149.5s: Typed 8 chars, then reduced to 7 (150.71s).
+    - 151.72-152.97s: 3 length adjustments (8→7→8→9 chars).
+  - *Input length*: Two long-form inputs:
+    1) 116.53s: 51-character comment (likely multi-sentence).
+    2) 87.8s: 36-character input (possibly search or comment).
+  - *Form fields*: 4 distinct typing sequences (3-11 chars, 1-11 chars, 1-51 chars, 1-9 chars), suggesting multi-field forms (e.g., login, comment, search).
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - *Core*: Signup/login (1.52s, 34.98s), subreddit navigation (85.02s, 139.06s), commenting (116.53s, 147.31s).
+  - *Secondary*: Trending topics (7 API calls), post sorting (3 /hot calls).
+- **Ignored features**:
+  - *Voting*: No /api/votes calls despite 5 post loads.
+  - *User profiles*: No /api/users calls.
+  - *Messaging*: No /api/messages calls.
+  - *Post creation*: No /api/posts (POST) calls.
+  - *Search*: No /api/search calls despite 36-char input at 87.8s (possibly misclassified).
+
+8. SESSION FLOW
+- **Four-phase arc**:
+  1) *Onboarding (0-35s)*:
+     - Immediate signup attempt (1.52s) → abandoned (no completion).
+     - Login attempt (12.52s) → abandoned (no success).
+     - Successful signup (34.98s) after 32s of form interaction.
+  2) *Exploratory Browsing (35-82s)*:
+     - Post loads (35.59s) → deep scroll (38.47-82.91s).
+     - First post click (82.91s) after 47s of browsing.
+  3) *Targeted Engagement (82-122s)*:
+     - Subreddit navigation (/manhattan at 85.02s, /food at 139.06s).
+     - First comment attempt (116.53s) - 51 chars over 3.5s.
+     - Second post interaction (122.49s) with comment attempt (126.12s).
+  4) *Re-engagement & Exit (122-156s)*:
+     - Returns to homepage (142.58s "🗽 FunCity" click).
+     - Final comment attempt (147.31s) - 9 chars.
+     - Exit via unknown click at 156.82s (no logout).
+- **Exit pattern**: No explicit logout; session ends with click at (1291,118) - likely a UI element in the top-right (profile/settings area).
+```
+
+Key Observations:
+- **Technical issues**: 64% of clicks are "unknown" - suggests either poor UI labeling in PostHog or user confusion.
+- **Content focus**: Despite living in NYC, only 2/5 post interactions were in /manhattan - indicates broader interests.
+- **Form abandonment**: Two failed form submissions (login/signup) before success - may indicate UX friction.
+- **Comment behavior**: Long-form comments (51 chars) suggest intent to engage deeply, but corrections indicate perfectionism or uncertainty.

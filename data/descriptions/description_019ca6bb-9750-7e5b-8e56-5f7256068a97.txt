@@ -1,0 +1,80 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user demonstrates a non-linear, exploratory pattern with distinct phases of focused engagement.
+  - Initial exploration (0-70s): Loads homepage, triggers 3 API calls for subreddits/trending/posts, but takes 70s before first interaction (Sign Up click).
+  - Post-login exploration (110-127s): Rapidly cycles through sorting filters (New → Top → Hot) and 5 NYC borough subreddits (Bronx → Brooklyn → Queens → Staten Island → returns to Staten Island) in 17s.
+  - Targeted content access (127-185s): Focuses on 3 specific posts (IDs: 3580c8fb, 8675b60b, 448d27c5) with repeated comment section access.
+- **Scattered subreddit sampling**: Clicks 8 subreddits in 25s (112.44s-137.53s), averaging 3.1s per subreddit before moving on.
+
+2. READING BEHAVIOR
+- **Skim-heavy with minimal deep reading**:
+  - Scroll patterns: 7 scroll events total, all <0.2s duration. Max scroll depth = 119px (viewport height = 765px), suggesting <15% of content viewed.
+  - Post interaction: Views 5 posts' comment sections but spends only 1.2s (avg) between comment API calls and next action.
+  - Time on content: 120.08s-121.4s (1.32s) on post 8675b60b; 121.53s-122.36s (0.83s) on post 3580c8fb.
+- **No evidence of sustained reading**: All scrolls are abrupt (e.g., 0px→119px in 0.1s at 116.92s) with immediate clicks.
+
+3. ENGAGEMENT STYLE
+- **Comment-focused, no voting**:
+  - Accesses comment sections for 5 posts (118.29s-181.92s) but no evidence of upvote/downvote actions (no API calls to /api/vote).
+  - Typing behavior (92.22s-107.75s) suggests comment composition, but no comment submission API call detected.
+  - **Vote-to-comment ratio**: 0:≥1 (attempted but unsubmitted).
+- **Rapid engagement**: First comment section accessed 118.29s into session; 4 more accessed within 63s.
+
+4. INTERACTION SPEED
+- **Fast but erratic**:
+  - **Pre-login (0-108s)**: 70.35s of inactivity followed by 38s of rapid typing (18 keystroke events in 16s).
+  - **Post-login (110-185s)**: 75 actions in 75s (1 action/sec avg), including:
+    - 11 subreddit/community clicks in 25s (112.44s-137.53s).
+    - 5 comment section accesses in 63s (118.29s-181.92s).
+  - **Deliberate pauses**: 48s gap (127.56s-177.52s) with no actions between returning to homepage and clicking Staten Island.
+
+5. CONTENT PREFERENCES
+- **NYC-local focus**:
+  - 5/8 subreddits clicked are NYC boroughs (Bronx, Brooklyn, Queens, Staten Island ×2, art [likely NYC-specific]).
+  - 3/5 posts accessed via comment sections are from Staten Island (IDs: 3580c8fb, 448d27c5) and one from "hidden-gems" (likely NYC).
+- **Sorting preference**: Initially uses "Hot" (default), then cycles through "New" (110.43s) and "Top" (111.38s) before returning to "Hot" (127.56s).
+
+6. TYPING BEHAVIOR
+- **Fast with corrections**:
+  - **Login phase (72.28s-88.2s)**:
+    - Username: 8 characters in 1.44s (5.56 chars/sec), no corrections.
+    - Password: 11 characters in 1.55s (7.1 chars/sec), no corrections.
+  - **Signup phase (92.22s-107.75s)**:
+    - 4 distinct typing bursts (avg 6.5 chars/burst) with 3 pauses >1s (likely field changes).
+    - Longest burst: 20 characters in 0.73s (27.4 chars/sec) at 101.68s (likely a single field).
+  - **No backspaces detected**: Suggests either no errors or use of password manager for login.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Sorting filters (New/Top/Hot) via button clicks (110.43s-111.51s).
+  - Subreddit navigation (sidebar or dropdown) for NYC boroughs (112.44s-123.92s).
+  - Comment sections (5 accessed via API calls).
+  - Homepage logo (127.33s) to reset view.
+- **Ignored**:
+  - Voting (no /api/vote calls).
+  - Post creation (no /api/posts calls).
+  - Search functionality (no /api/search calls).
+  - User profiles (no /api/users calls).
+
+8. SESSION FLOW
+- **Phase 1: Hesitant Onboarding (0-70s)**
+  - Loads page, triggers initial API calls, but waits 70s before first interaction (Sign Up click).
+  - Likely reading landing page content (no scrolls suggest above-the-fold focus).
+- **Phase 2: Rapid Account Creation (70-108s)**
+  - Clicks Sign Up (70.35s), then engages in 38s of typing (username/password/other fields).
+  - Submits login (88.71s) and signup (108.06s) APIs with no visible errors.
+- **Phase 3: Aggressive Exploration (110-127s)**
+  - Immediately tests sorting filters (New/Top/Hot) in 1.08s.
+  - Samples 5 NYC subreddits in 11s (112.44s-123.92s), averaging 2.2s per subreddit.
+- **Phase 4: Targeted Content Diving (127-185s)**
+  - Returns to homepage (127.33s), then focuses on Staten Island (177.52s) and "hidden-gems" (178.87s).
+  - Accesses 5 comment sections in 63s, with 3/5 from Staten Island.
+  - Session ends during comment section interaction (no exit action detected).
+- **Key transitions**:
+  - 70.35s: Passive → Active (Sign Up click).
+  - 110.43s: Onboarding → Exploration (filter testing).
+  - 127.33s: Scattered → Focused (homepage reset).
+  - 177.52s: Broad → Niche (Staten Island deep dive).
+```

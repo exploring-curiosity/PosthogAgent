@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused bursts**: The user exhibits a non-linear, exploratory pattern with rapid shifts between features. Initial navigation is broad (landing page → sign-up attempt → content exploration), followed by short bursts of focused activity (e.g., 19.36s–22.81s on a single post, 74.22s–78.62s on "nightlife" subreddit).
+- **High feature turnover**: 32 distinct click actions in 122.9s (avg. 1 action every 3.8s), with 18/32 clicks on "unknown" elements (suggesting UI confusion or rapid experimentation).
+- **Backtracking**: Returns to homepage (92.59s) after 70s of exploration, indicating dissatisfaction or reorientation.
+
+2. READING BEHAVIOR
+- **Skim-heavy**: Minimal scroll depth (max 119px across all scrolls) and short dwell times on content:
+  - First post (20.32s–22.81s): 2.49s with 1 scroll (7px→118px).
+  - "Nightlife" subreddit (74.22s–78.62s): 4.4s with 1 scroll (76px→119px).
+- **No deep reading**: No scrolls exceed 119px (viewport height: 731px), and no pauses >5s between actions on content pages.
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy, low voting**: 3 comment attempts (40.43s–42.72s, 61.8s–67.84s, 81.17s–82.91s) with no visible upvote/downvote actions.
+- **Commenting speed**:
+  - First comment: 23 characters in 2.3s (avg. 10 chars/sec).
+  - Second comment: 24 characters in 6.04s (avg. 4 chars/sec) with 10 corrections (backspaces).
+  - Third comment: 4 characters in 1.74s (avg. 2.3 chars/sec).
+- **Vote-to-comment ratio**: 0:3 (no votes, 3 comment attempts).
+
+4. INTERACTION SPEED
+- **Fast but erratic**: Median time between actions: 0.9s (excluding typing). Peaks:
+  - 6.75s–10.79s: 4 actions in 4.04s (sign-up flow).
+  - 61.8s–67.84s: 24 typing actions in 6.04s (comment drafting).
+- **Deliberate pauses**: Only 3 pauses >3s (44.76s–47.09s, 78.62s–81.17s, 84.58s–89.58s), likely content evaluation or distraction.
+
+5. CONTENT PREFERENCES
+- **Subreddit focus**: Explicitly navigated to "nightlife" (74.41s) after 74s of general browsing.
+- **Sorting preferences**:
+  - Initial: "hot" (6.94s, 18.4s, 92.85s).
+  - Later: "top" (19.51s), "new" (89.91s).
+- **Post selection**: Clicked 2 posts (IDs: 8675b60b-979f-456e-9f50-789a2fcb09dd, 3580c8fb-23c0-4cea-9c49-1a0d6f785bbb) with no clear thematic pattern (titles unknown).
+
+6. TYPING BEHAVIOR
+- **High-speed input**: First username/password attempt (13.97s–17.84s): 11 chars in 3.87s (avg. 2.8 chars/sec).
+- **Comment drafting**:
+  - **First comment**: 8 chars in 2.16s (3.7 chars/sec), no corrections.
+  - **Second comment**: 24 chars in 6.04s (4 chars/sec) with 10 backspaces (42% error rate).
+  - **Third comment**: 4 chars in 1.74s (2.3 chars/sec), no corrections.
+- **Input length**: Short (4–24 chars), suggesting terse or impulsive contributions.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Sign-up flow (9.88s).
+  - Post/comment navigation (20.32s, 22.18s, 47.09s).
+  - Subreddit filtering ("nightlife" at 74.22s).
+  - Homepage return (92.59s).
+- **Ignored**:
+  - Trending/sidebar content (API calls at 6.8s, 20.66s, 76.42s, 89.98s, 92.66s show no clicks).
+  - User profile (API call at 89.95s but no follow-up actions).
+  - Voting (no evidence despite 3 post views).
+
+8. SESSION FLOW
+- **0s–10.79s (Exploration)**: Rapid initial load → sign-up attempt → abandoned (no completion).
+- **10.79s–22.81s (First Post)**: Clicked into a post, skimmed (scroll: 7px→118px), attempted comment (failed/abandoned).
+- **22.81s–74.22s (Browsing)**: Scattered clicks (likely post previews), no deep engagement. API calls suggest "hot" and "top" sorting.
+- **74.22s–84.58s (Focused Engagement)**: Navigated to "nightlife" subreddit, clicked 2 posts, attempted comment (failed/abandoned).
+- **84.58s–92.59s (Reorientation)**: Returned to homepage via logo click (92.59s), likely seeking familiar navigation.
+- **92.59s–122.89s (Exit)**: Final clicks on top-right UI (profile/account menu?), no further content interaction.
+- **Arc**: Exploration → superficial engagement → targeted subreddit → frustration/reorientation → exit.
+```

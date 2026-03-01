@@ -1,0 +1,3518 @@
+{
+  "user_profile": {
+    "session_id": "019ca65b-537c-73ca-a29c-7fa62b5aaa08",
+    "age_group": "18-24",
+    "country": "Ukraine",
+    "nyc_familiarity": "never_been",
+    "os": "Mac OS X",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 1512,
+    "viewport_height": 823,
+    "screen_width": 1512,
+    "screen_height": 982
+  },
+  "session_duration_s": 231.56,
+  "total_raw_events": 522,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "1512x823"
+    },
+    {
+      "time": 0.02,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 0.02,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.07,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 57.25,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Sign Up",
+      "target_href": "",
+      "target_class": "rounded-md bg-neon-cyan px-3 py-1.5 text-sm font-semibold te",
+      "coordinates": [
+        1327,
+        12
+      ]
+    },
+    {
+      "time": 65.62,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        640,
+        293
+      ]
+    },
+    {
+      "time": 67.12,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        661,
+        294
+      ]
+    },
+    {
+      "time": 70.22,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 70.29,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 70.44,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 70.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 70.56,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 70.72,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 72.8,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 73.7,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        648,
+        347
+      ]
+    },
+    {
+      "time": 74.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.89,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 74.92,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.04,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.48,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.57,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 75.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 76.67,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        634,
+        419
+      ]
+    },
+    {
+      "time": 78.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 78.39,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        549,
+        411
+      ]
+    },
+    {
+      "time": 78.69,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        599,
+        503
+      ]
+    },
+    {
+      "time": 82.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 82.56,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        549,
+        484
+      ]
+    },
+    {
+      "time": 83.3,
+      "action": "SCROLL",
+      "scroll_from": 2,
+      "scroll_to": 24,
+      "max_depth": 24,
+      "duration_s": 0.1,
+      "direction": "down"
+    },
+    {
+      "time": 83.82,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        624,
+        568
+      ]
+    },
+    {
+      "time": 86.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 86.63,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        549,
+        557
+      ]
+    },
+    {
+      "time": 87.67,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        637,
+        572
+      ]
+    },
+    {
+      "time": 89.32,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 89.32,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        549,
+        557
+      ]
+    },
+    {
+      "time": 89.82,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        629,
+        616
+      ]
+    },
+    {
+      "time": 90.1,
+      "action": "API_CALL",
+      "path": "/api/auth/signup",
+      "full_path": "/api/auth/signup"
+    },
+    {
+      "time": 90.36,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 91.92,
+      "action": "SCROLL",
+      "scroll_from": 17,
+      "scroll_to": 0,
+      "max_depth": 17,
+      "duration_s": 0.1,
+      "direction": "up"
+    },
+    {
+      "time": 94.22,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1201,
+        24
+      ]
+    },
+    {
+      "time": 94.29,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 96.89,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        669,
+        183
+      ]
+    },
+    {
+      "time": 101.43,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        461,
+        166
+      ]
+    },
+    {
+      "time": 101.68,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        886,
+        196
+      ]
+    },
+    {
+      "time": 106.42,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 106.43,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        461,
+        166
+      ]
+    },
+    {
+      "time": 108.04,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        730,
+        257
+      ]
+    },
+    {
+      "time": 110.12,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 110.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 110.51,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 110.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 110.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 110.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 110.98,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 111.66,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 111.81,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 111.96,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 113.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 113.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 113.72,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 113.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 113.9,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 114.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 114.75,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 114.86,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 114.98,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 115.34,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 115.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 115.74,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 115.81,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 115.99,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 116.24,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 19,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 116.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 20,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 116.56,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 21,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 116.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 116.8,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 116.93,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 117.22,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 117.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 117.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 21,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 118.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 20,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 119.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 21,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 119.17,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 119.28,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 119.43,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 120.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 120.81,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 26,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 120.92,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 27,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 121.07,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 28,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 121.19,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 29,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 121.33,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 30,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 121.54,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 31,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 121.65,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 32,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 121.94,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 33,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 122.08,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 34,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 122.26,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 35,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 122.7,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 34,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 123.04,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 35,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 123.61,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 123.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 37,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 123.86,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 38,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 39,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.66,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 40,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 41,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.82,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 42,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 124.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 43,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 127.59,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        557,
+        257
+      ]
+    },
+    {
+      "time": 127.89,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 32,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 129.06,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        528,
+        264
+      ]
+    },
+    {
+      "time": 129.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 130.76,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        503,
+        263
+      ]
+    },
+    {
+      "time": 131.14,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 132.26,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        555,
+        337
+      ]
+    },
+    {
+      "time": 133.22,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        552,
+        274
+      ]
+    },
+    {
+      "time": 133.93,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        551,
+        261
+      ]
+    },
+    {
+      "time": 135.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 137.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 138.14,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 139.04,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        531,
+        370
+      ]
+    },
+    {
+      "time": 141.23,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 141.57,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 141.6,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 141.83,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 142.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 142.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 142.39,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 143.06,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 143.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 144.13,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 144.29,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 144.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 144.56,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 144.69,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 145.26,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 145.76,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 145.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 146.06,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 146.98,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 147.17,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 147.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 147.48,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 147.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 19,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 147.85,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 20,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 147.94,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 21,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 148.12,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 148.18,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 148.25,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 148.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 148.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 26,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 149.18,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 149.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 149.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 149.66,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 150.19,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 150.32,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 150.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 150.51,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 26,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 150.6,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 27,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 151.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 28,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 151.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 29,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 151.64,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 30,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 151.96,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 29,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 152.11,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 28,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 152.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 27,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 152.8,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 26,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 152.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 153.11,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 153.25,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 153.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 22,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 154.06,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 23,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 154.22,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 24,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 154.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 25,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 154.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 26,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 154.43,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 27,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 154.56,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 28,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 155.08,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 29,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 155.17,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 30,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 155.25,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 31,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 155.31,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 32,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 155.6,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 33,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 155.7,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 34,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 155.87,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 35,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 156.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 36,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 156.2,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 37,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 156.61,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 38,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 156.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 39,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 157.68,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 40,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 157.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 41,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 157.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 42,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 158.24,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 43,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 158.31,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 44,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 158.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 45,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 158.65,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 46,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 158.77,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 47,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 158.95,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 48,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 159.39,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 49,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 159.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 50,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 159.6,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 51,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 159.75,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 52,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 160.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 53,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 160.99,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 54,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 161.08,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 55,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 161.16,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 56,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 161.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 57,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 162.01,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 58,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 162.16,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 59,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 163.23,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 60,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 163.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 61,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 163.93,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 62,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 164.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 63,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 164.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 64,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 164.46,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 65,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 164.59,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 66,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 164.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 67,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 165.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 68,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 165.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 69,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 165.69,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 70,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 166.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 71,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 166.15,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 72,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 166.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 73,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 166.39,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 74,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 166.57,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 75,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 166.82,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 76,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 166.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 77,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 167.03,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 78,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 167.22,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 79,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 167.93,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 80,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 167.99,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 81,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 168.25,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 82,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 168.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 83,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 168.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 84,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 168.69,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 85,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 168.87,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 86,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 168.99,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 87,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 169.11,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 88,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 169.23,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 89,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 169.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 90,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 169.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 91,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 169.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 92,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 169.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 93,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 170.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 94,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 170.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 93,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 170.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 94,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 170.54,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 95,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 170.72,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 96,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 170.85,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 97,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 170.96,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 98,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 171.06,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 99,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 172.2,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 100,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 172.28,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 101,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 172.45,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 102,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 172.59,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 103,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 172.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 104,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 173.0,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 105,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 173.2,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 106,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 173.34,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 107,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 173.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 108,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 173.71,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 109,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 174.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 110,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 174.28,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 111,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 174.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 112,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 174.61,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 113,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 174.69,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 114,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 174.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 115,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 175.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 114,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 176.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 113,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 176.2,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 112,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 176.36,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 111,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 176.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 110,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 177.09,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 111,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 177.18,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 112,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 177.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 113,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 177.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 114,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 177.69,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 115,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 178.32,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 114,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 179.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 115,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 179.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 116,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 179.75,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 117,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 179.95,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 118,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 180.03,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 119,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 180.11,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 120,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 180.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 121,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 180.56,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 122,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 180.67,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 123,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 180.74,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 124,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 181.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 125,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 181.76,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 124,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 182.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 125,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 182.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 126,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 182.71,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 127,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 182.89,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 128,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 183.18,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 129,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 183.33,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 130,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 183.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 131,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 183.81,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 130,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 183.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 129,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 184.12,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 128,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 184.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 129,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 184.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 130,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 184.66,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 131,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 185.18,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 132,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 185.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 133,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 185.42,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 134,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 185.74,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 135,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 186.09,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 134,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 186.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 135,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 186.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 136,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 186.72,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 137,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 187.12,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 136,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 187.26,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 137,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 187.43,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 138,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 187.96,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 139,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 188.05,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 140,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 188.15,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 141,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 188.26,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 142,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 188.31,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 143,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 189.1,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 142,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 189.28,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 141,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 189.95,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 142,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 190.01,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 143,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 190.62,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 144,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 190.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 145,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 190.89,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 146,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 191.42,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 147,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 191.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 148,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 191.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 149,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 191.7,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 150,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 191.88,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 151,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 192.02,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 152,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 192.15,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 153,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 192.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 154,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 192.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 155,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 192.72,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 156,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 192.83,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 157,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 193.04,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 158,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 193.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 159,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 193.54,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 160,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 193.71,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 161,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 193.79,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 162,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 193.97,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 163,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 194.33,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 164,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 194.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 165,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 194.6,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 166,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 194.79,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 167,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 194.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 168,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 195.03,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 169,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 195.2,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 170,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 195.5,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 171,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 195.63,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 172,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 195.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 173,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 196.19,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 172,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 196.35,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 171,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 196.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 170,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 196.78,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 171,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 196.93,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 172,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 197.04,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 173,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 197.13,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 174,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 197.24,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 175,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 197.74,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 176,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 197.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 177,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 198.14,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 178,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 198.3,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 179,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 198.41,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 180,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 198.49,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 181,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 198.61,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 182,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 198.87,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 183,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 198.96,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 184,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 199.07,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 185,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 199.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 186,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 199.4,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 187,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 199.58,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 188,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 199.79,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 189,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 199.92,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 190,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 200.29,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 189,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 200.73,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 190,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 201.35,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 191,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 201.43,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 192,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 203.53,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 193,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 203.7,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 194,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 203.85,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 195,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 203.91,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 196,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 204.23,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 197,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 204.42,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 198,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 204.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 199,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 204.7,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 200,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 204.75,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 201,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 206.87,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        513,
+        582
+      ]
+    },
+    {
+      "time": 206.95,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts"
+    },
+    {
+      "time": 207.14,
+      "action": "API_CALL",
+      "path": "/api/posts/25082ad6-d54a-4a8a-8983-03db0ef3e579/comments",
+      "full_path": "/api/posts/25082ad6-d54a-4a8a-8983-03db0ef3e579/comments"
+    },
+    {
+      "time": 207.27,
+      "action": "API_CALL",
+      "path": "/api/posts/25082ad6-d54a-4a8a-8983-03db0ef3e579",
+      "full_path": "/api/posts/25082ad6-d54a-4a8a-8983-03db0ef3e579"
+    },
+    {
+      "time": 207.3,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 207.3,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 212.6,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1188,
+        170
+      ]
+    },
+    {
+      "time": 212.75,
+      "action": "API_CALL",
+      "path": "/api/subreddits/brooklyn",
+      "full_path": "/api/subreddits/brooklyn"
+    },
+    {
+      "time": 212.77,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 212.78,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 213.04,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot&subreddit_id=f698678e-adf1-4908-9e85-89d463b0c719"
+    },
+    {
+      "time": 218.6,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        321,
+        424
+      ]
+    },
+    {
+      "time": 218.79,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2"
+    },
+    {
+      "time": 218.8,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments"
+    },
+    {
+      "time": 218.82,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 218.82,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 219.8,
+      "action": "SCROLL",
+      "scroll_from": 5,
+      "scroll_to": 61.5,
+      "max_depth": 61.5,
+      "duration_s": 0.2,
+      "direction": "down"
+    },
+    {
+      "time": 220.67,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        249,
+        245
+      ]
+    },
+    {
+      "time": 221.38,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 1,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.11,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 2,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.27,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 3,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.55,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 4,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 222.7,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 5,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 223.17,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 6,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 223.31,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 7,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 223.44,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 8,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 223.54,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 9,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 223.67,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 10,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 223.81,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 11,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 223.92,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 12,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 224.07,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 13,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 224.26,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 14,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 224.47,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 15,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 224.68,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 16,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 224.82,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 17,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 224.93,
+      "action": "TYPE",
+      "target_tag": "unknown",
+      "text_length": 18,
+      "is_masked": true,
+      "target_placeholder": ""
+    },
+    {
+      "time": 226.51,
+      "action": "CLICK",
+      "target_tag": "unknown",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        199,
+        291
+      ]
+    },
+    {
+      "time": 226.66,
+      "action": "API_CALL",
+      "path": "/api/comments",
+      "full_path": "/api/comments"
+    },
+    {
+      "time": 226.8,
+      "action": "API_CALL",
+      "path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments",
+      "full_path": "/api/posts/40d2825b-0be2-4097-960b-ab0608111fe2/comments"
+    }
+  ]
+}

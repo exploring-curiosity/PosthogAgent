@@ -1,0 +1,85 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with distinct phases of deep engagement.
+  - Initial load (0-94.78s): Passive observation (91.18s idle after page/API loads).
+  - Post-signup (94.78s-122.58s): Rapid, scattered clicks (5 unknown clicks in 4.58s) suggesting form field navigation or UI exploration.
+  - Content browsing (127.31s-159.26s): Targeted navigation to Brooklyn subreddit (127.46s) and specific post (131.39s), followed by linear comment interaction.
+- **Viewport utilization**: High activity in right-side UI (x-coordinates 800-1549) during signup, shifting to left-side content (x=323-586) during engagement.
+
+2. READING BEHAVIOR
+- **Skim-first, deep-read later**: No scroll data, but timing suggests:
+  - Initial 91.18s idle: Likely skimming trending/subreddit lists (no clicks).
+  - Post-click (131.39s): 4.2s pause before comment typing begins (135.59s), indicating deep reading of post/comments.
+- **Comment interaction**: Typed 28-character comment (135.59s-140.41s) with no deletions, suggesting pre-composed thoughts.
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy with delayed voting**:
+  - **Comments**: 1 long-form comment (28 chars) posted at 141.62s (6.23s after typing start).
+  - **Votes**: 3 votes (145.97s, 146.76s, 148.54s) clustered in 2.57s, all after commenting.
+  - **Ratio**: 3 votes : 1 comment (vote-to-comment ratio = 3:1).
+- **Timing**: Votes occurred 4.35s-7.92s after comment submission, suggesting secondary validation.
+
+4. INTERACTION SPEED
+- **Bimodal speed**:
+  - **Fast**: Post-signup clicks (94.78s-100.37s) averaged 1.13s between actions.
+  - **Deliberate**: Comment typing (135.59s-140.41s) averaged 0.18s/keystroke (155 WPM), with no pauses >1s.
+  - **API latency**: 0.19s-0.24s between related API calls (e.g., 122.58s-122.78s).
+- **Longest pause**: 91.18s (page load to signup click), likely content skimming.
+
+5. CONTENT PREFERENCES
+- **Subreddit focus**: Navigated directly to Brooklyn subreddit (127.46s) after signup.
+- **Post selection**: Chose a "hot" post (131.39s) from Brooklyn, suggesting interest in local/trending content.
+- **No exploration**: Ignored trending/subreddit lists after initial load (no clicks on these elements).
+
+6. TYPING BEHAVIOR
+- **Two distinct typing sessions**:
+  - **Signup (101.92s-117.38s)**:
+    - 11 fields typed (likely username, email, password).
+    - Average 1.33s/field, with variable lengths (5-11 chars/field).
+    - Corrections: 3 backspaces (108.2s: 5 chars deleted, 110.41s: 11 chars retyped).
+  - **Comment (135.59s-140.41s)**:
+    - 28 chars in 4.82s (5.8 chars/s), no deletions.
+    - Progressive acceleration: First 10 chars in 2.8s, last 10 in 1.2s.
+- **Field focus**: Typing clusters suggest tab/click navigation between fields.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Signup flow (94.78s-122.58s).
+  - Subreddit navigation (127.31s).
+  - Post viewing (131.39s).
+  - Commenting (135.59s-141.62s).
+  - Voting (145.97s-148.54s).
+- **Ignored**:
+  - Trending/subreddit lists (no clicks despite API calls).
+  - Post sorting filters (no interaction with "hot/new" toggles).
+  - User profiles (no clicks on usernames).
+  - Search functionality (no search bar interaction).
+
+8. SESSION FLOW
+- **Phase 1: Exploration (0-94.78s)**
+  - Loaded page, passively consumed trending/subreddit data (91.18s idle).
+  - No interaction with content; likely evaluating site trustworthiness.
+- **Phase 2: Signup (94.78s-122.58s)**
+  - Immediate signup intent (clicked "Sign Up" at 94.78s).
+  - Rapid form navigation (5 clicks in 4.58s) followed by typing (15.46s total).
+  - Submitted at 122.58s (27.8s after first click).
+- **Phase 3: Targeted Browsing (122.58s-131.39s)**
+  - Post-signup, navigated directly to Brooklyn subreddit (127.31s).
+  - Selected a "hot" post (131.39s), suggesting local interest.
+- **Phase 4: Deep Engagement (131.39s-148.54s)**
+  - Read post/comments (4.2s pause before typing).
+  - Composed 28-character comment (4.82s typing time).
+  - Voted 3 times (2.57s cluster) after commenting.
+- **Phase 5: Exit (148.54s-159.26s)**
+  - Clicked post content (153.5s), then UI elements (158.0s, 159.26s).
+  - No further content interaction; likely session termination.
+
+---
+KEY OBSERVATIONS:
+- **Local focus**: Prioritized Brooklyn content despite living in NYC (no other subreddits explored).
+- **Efficiency**: Minimal wasted actions; 80% of clicks led to API calls.
+- **Comment-first**: Engaged with content before voting, unlike typical "lurker" behavior.
+- **Desktop precision**: High x-coordinate variance (323-1549) suggests mouse-driven navigation, not touchpad.
+```

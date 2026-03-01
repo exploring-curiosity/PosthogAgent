@@ -1,0 +1,86 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with 3 distinct phases:
+  *Phase 1 (0-32s)*: Rapid initial exploration (6 clicks in 13s, avg 2.2s between actions) with no clear target.
+  *Phase 2 (35-65s)*: Focused engagement on a single post ("Met is okay") and signup flow (12 actions in 30s, avg 2.5s between actions).
+  *Phase 3 (70-103s)*: Subreddit-hopping (3 subreddits in 30s) with content sampling.
+- **Subreddit switching**: Visited 4 subreddits in 30s (brooklyn→queens→staten-island) via direct navigation (no search).
+- **Backtracking**: Returned to "Sign Up" button twice (19.03s, 47.77s) with 28.74s gap, suggesting delayed intent.
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow dives**:
+  - Initial scroll (24.26s): 566px in 0.6s (943px/s) – rapid scan.
+  - Max scroll depth: 570px (≈2-3 post lengths on desktop).
+  - Post engagement: Spent 1.5-3.5s on post pages before interacting (e.g., 35.48s click → 36.04s API call = 0.56s to trigger comment load).
+  - No deep scrolls (>1000px) observed; all scrolls <62px after initial scan.
+- **Comment reading**: Loaded comments for 3 posts (afb9fa2d, 8675b60b, cc5f7d0c) but only typed replies to 2 (e098fca7, cc5f7d0c), suggesting selective engagement.
+
+3. ENGAGEMENT STYLE
+- **Comment-first, vote-second**:
+  - **Comments**: Typed replies to 2 posts (cc5f7d0c at 78.42s, e098fca7 at 92.76s) with 14s and 17s of typing respectively.
+  - **Votes**: Only 1 vote recorded (86.42s, API: /api/votes) – vote-to-comment ratio = 0.5:1.
+- **Latency**:
+  - First comment attempt: 42.96s after session start (78.42s - 35.48s).
+  - First vote: 51.17s after first post click (86.42s - 35.48s).
+- **Abandoned actions**: Began typing in 3 instances but only submitted 2 comments (50.32s-52.8s typing not submitted).
+
+4. INTERACTION SPEED
+- **Fast but deliberate**:
+  - **Early session**: 19.03s to first click (Sign Up), then 1.63s to next click (20.66s).
+  - **Mid-session**: Avg 1.2s between clicks during signup flow (47.77s-65.77s).
+  - **Late session**: Slowed to avg 2.8s between actions (82.44s-97.76s).
+- **API triggers**: Clicks consistently triggered API calls within 0.03-0.15s (e.g., 35.48s click → 36.04s API).
+- **Typing bursts**: 10-17 characters typed in 1.5-3.5s (avg 5-7 chars/s), with corrections (e.g., 96.31s-96.62s backspacing).
+
+5. CONTENT PREFERENCES
+- **Subreddit focus**: NYC-centric (4/4 subreddits visited):
+  - brooklyn (39.72s)
+  - queens (71.19s)
+  - staten-island (83.92s)
+  - Implied: "Met is okay" post (35.48s) likely in r/nyc or similar.
+- **Post selection**: Clicked on 4 posts (afb9fa2d, 8675b60b, cc5f7d0c, e098fca7) with no clear topical pattern from IDs.
+- **Trending reliance**: /api/trending called 8 times (0.02s, 36.07s, 37.87s, 39.75s, 46.59s, 71.23s, 74.11s, 83.94s) – likely used for navigation.
+
+6. TYPING BEHAVIOR
+- **Variable speed with corrections**:
+  - **Short inputs**: 4-8 chars in 0.5-1.5s (e.g., 49.66s-50.32s: 4 chars in 0.66s).
+  - **Long inputs**:
+    - 20 chars in 1.0s (56.56s-56.57s, 20 chars/s).
+    - 17 chars in 3.5s (92.76s-96.31s, 4.9 chars/s) with backspacing (96.31s-96.62s).
+  - **Corrections**: 3 instances of backspacing (e.g., 96.31s: 17→16 chars).
+- **Field ambiguity**: Typing occurred in unidentified fields (likely username/password during signup, then comment boxes).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Subreddit navigation (direct clicks on subreddit links).
+  - Post voting (1 instance at 86.42s).
+  - Commenting (2 submitted comments).
+  - Signup flow (typed credentials at 49.66s-51.18s, submitted at 65.77s).
+  - Trending/sort filters (API calls for /api/posts?sort=hot).
+- **Ignored**:
+  - Search functionality (no /api/search calls).
+  - User profiles (no /api/users calls).
+  - Post creation (no /api/posts calls beyond loading).
+  - Advanced sorting (only "hot" used, no "new" or "top").
+
+8. SESSION FLOW
+- **Arc**: Exploration → Engagement → Browsing → Exit
+  *0-20s*: Landing and initial scan
+    - Loaded page, triggered 3 API calls (posts, trending, subreddits).
+    - Rapid clicks on unknown elements (likely UI exploration).
+  *20-36s*: Signup intent
+    - Clicked "Sign Up" (19.03s), then abandoned.
+    - Scrolled (24.26s) but no deep engagement.
+  *36-66s*: Focused engagement
+    - Clicked "Met is okay" post (35.48s), loaded comments (36.04s).
+    - Returned to "Sign Up" (47.77s), completed signup (49.66s-65.77s).
+  *66-87s*: Subreddit hopping
+    - Navigated to brooklyn (39.72s), queens (71.19s), staten-island (83.92s).
+    - Sampled 2 posts (cc5f7d0c, e098fca7), voted once (86.42s).
+  *87-103s*: Commenting and exit
+    - Typed and submitted 2 comments (78.42s-82.54s, 92.76s-97.92s).
+    - No further actions after 98.06s (session ended at 103.63s).
+- **Exit**: Abrupt termination after last comment API call (98.06s), no logout or navigation away recorded.
+```

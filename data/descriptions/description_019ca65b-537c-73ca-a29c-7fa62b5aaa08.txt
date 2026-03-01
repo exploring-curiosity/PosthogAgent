@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user begins with a linear flow (landing page → signup attempt) but transitions to scattered exploration after account creation.
+- **Post-signup behavior**: After ~90s (signup completion), navigation becomes non-linear with rapid subreddit switching (e.g., 101.43s–108.04s: 3 clicks across different UI elements in 6.6s).
+- **Content discovery**: Later stage (212.6s–218.6s) shows targeted navigation to "brooklyn" subreddit and specific posts, suggesting topic-driven exploration.
+- **Click density**: 38 clicks in 231.56s (~0.16 clicks/sec), with 19 clicks in the first 90s (signup phase) and 19 in the remaining 141.56s (browsing phase).
+
+2. READING BEHAVIOR
+- **Skim-heavy**: Minimal scrolling (max depth: 61.5px at 219.8s) despite desktop viewport (1512x823). First scroll occurs at 83.3s (2px→24px), with no deep dives.
+- **Rapid content sampling**: Clicks on posts at 218.6s and 220.67s within 2s of each other, with no sustained reading time.
+- **Comment engagement**: Loads comments for 2 posts (207.27s, 218.8s) but no evidence of reading (no scroll after loading).
+
+3. ENGAGEMENT STYLE
+- **Comment-focused, no voting**: Attempts to comment at 222.11s–224.93s (28 characters typed) but no upvote/downvote actions detected.
+- **Comment timing**: First comment attempt occurs 132s after session start (222.11s), with 17s spent typing (18 keystrokes in 28s = ~0.64 chars/sec).
+- **Vote-to-comment ratio**: 0 votes / 1 comment attempt (incomplete).
+
+4. INTERACTION SPEED
+- **Fast initial actions**: First 57s spent passively (API calls only). Post-signup (57.25s–90.1s), actions accelerate (3.5s avg between clicks during form filling).
+- **Deliberate typing**: Keystroke intervals range from 0.07s–1.6s (e.g., 110.12s–116.58s: 6.46s for 24 chars = ~3.75 chars/sec).
+- **Late-session slowdown**: Final comment attempt (222.11s–224.93s) shows reduced speed (~1.65 chars/sec).
+
+5. CONTENT PREFERENCES
+- **Subreddit focus**: Only explicit subreddit interaction is "brooklyn" (212.75s), suggesting interest in NYC-related content despite "never_been" to NYC.
+- **Post selection**: Clicks on 2 posts (206.87s, 218.6s) with no clear topical pattern (IDs: `25082ad6-d54a-4a8a-8983-03db0ef3e579`, `40d2825b-0be2-4097-960b-ab0608111fe2`).
+- **Trending content**: Repeated `/api/trending` calls (0.02s, 94.29s, 212.77s, 218.82s) indicate reliance on algorithmic recommendations.
+
+6. TYPING BEHAVIOR
+- **Form filling**: Two major typing sequences:
+  1. **Signup (67.12s–89.82s)**: 3 fields filled (7, 9, 10 chars), with corrections (e.g., 116.24s–117.53s: 24→21 chars in 1.29s).
+  2. **Comment (222.11s–224.93s)**: 18 chars typed in 2.82s, no deletions.
+- **Keystroke dynamics**:
+  - **Peak speed**: 110.12s–116.58s (24 chars in 6.46s = 3.72 chars/sec).
+  - **Corrections**: 47 backspaces detected (e.g., 116.8s–117.53s: 24→21 chars).
+  - **Input length**: Longest field: 201 chars (154.06s–204.75s), likely a post/comment draft.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Signup flow (57.25s–90.1s).
+  - Subreddit navigation (212.6s: "brooklyn").
+  - Post commenting (222.11s–226.51s).
+  - Trending/hot post feeds (API calls at 0.02s, 0.07s, 90.36s).
+- **Ignored**:
+  - Voting (no `/api/votes` calls).
+  - User profiles (no clicks on usernames).
+  - Search functionality (no `/api/search` calls).
+  - Post sorting filters (no clicks beyond "hot").
+
+8. SESSION FLOW
+- **Phase 1: Landing (0s–57.25s)**:
+  - Passive loading (API calls only). No interaction for 57s.
+- **Phase 2: Signup (57.25s–90.1s)**:
+  - Linear form completion (3 fields, 32.85s duration). High error rate (47 corrections).
+- **Phase 3: Exploration (90.1s–206.87s)**:
+  - Scattered clicks (19 actions in 116.77s). Focus shifts between subreddits, posts, and UI elements. Minimal scrolling.
+- **Phase 4: Content Engagement (206.87s–226.8s)**:
+  - Targeted post selection (2 posts in 12s). Comment attempt (222.11s–226.51s) but no submission.
+- **Exit**: Session ends abruptly after comment API call (226.8s), no further actions.
+```
+
+**Key Observations**:
+- **Efficiency gap**: Fast typist (3.72 chars/sec) but high correction rate (19% of keystrokes).
+- **NYC curiosity**: Despite "never_been" status, actively explores "brooklyn" subreddit.
+- **Unfinished actions**: Comment draft abandoned (28 chars typed, no submission).
+- **Algorithm dependence**: Relies on trending/hot feeds (4 API calls) over manual navigation.

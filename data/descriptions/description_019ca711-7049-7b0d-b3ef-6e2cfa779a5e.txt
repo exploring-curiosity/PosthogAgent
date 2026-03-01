@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused bursts**: The user exhibits rapid, non-linear navigation with no clear sequential flow. They jump between subreddits (Manhattan → Brooklyn) and posts within 12.69s, suggesting exploratory behavior with brief periods of focus.
+- **Subreddit switching**: Loads `/r/manhattan` at 0.0s, then switches to `/r/brooklyn` at 10.04s (10.16s API call), indicating a geographic pivot.
+- **Post-level exploration**: Clicks 8 unknown elements (likely posts/comments) between 3.31s–11.36s, with no consistent spatial pattern (coordinates vary widely: e.g., (190, 283) → (1199, 155)).
+
+2. READING BEHAVIOR
+- **Skimmer with minimal depth**: No scroll data is logged, but the rapid succession of clicks (e.g., 5 clicks in 3.8s between 4.5s–8.3s) suggests superficial engagement. Time spent per post:
+  - First post (b08b3804-...): 3.31s (click) → 3.5s (API for comments) = **0.19s** to trigger comment load.
+  - Second post (8675b60b-...): 11.36s (click) → 11.52s (API for post) = **0.16s** to trigger post load.
+- **No evidence of deep reading**: Comments are fetched (3.5s, 11.6s) but no subsequent interactions (e.g., replies, upvotes) occur.
+
+3. ENGAGEMENT STYLE
+- **Passive consumer**: No voting, commenting, or sharing actions detected. All interactions are clicks (likely post expansions or navigation).
+- **Vote-to-comment ratio**: 0:0 (no engagement beyond clicks).
+- **Speed**: First post interaction (click) occurs at 3.31s; first comment fetch at 3.5s (190ms after click). Suggests immediate but shallow engagement.
+
+4. INTERACTION SPEED
+- **Hyper-fast**: Median time between actions: **0.96s** (calculated from 14 logged actions).
+  - Fastest interval: 0.01s (API calls at 0.01s–0.35s).
+  - Slowest interval: 2.83s (10.04s click → 10.16s API).
+- **Deliberate pauses**: Only two intervals >1s:
+  - 3.31s → 4.5s (1.19s; likely scanning a post).
+  - 10.04s → 10.16s (1.12s; subreddit switch).
+
+5. CONTENT PREFERENCES
+- **Subreddits**: Gravitated toward NYC-local subreddits:
+  - `/r/manhattan` (0.0s–10.04s).
+  - `/r/brooklyn` (10.16s–end).
+- **Post sorting**: Consistently used `sort=hot` (default; no evidence of changing sort order).
+- **Post types**: No explicit data, but rapid clicks suggest interest in trending/hot topics (API calls to `/api/trending` at 0.01s, 3.56s, 10.19s, 11.66s).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No input fields (search, comments) were interacted with. All actions are clicks or API fetches.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Subreddit navigation (Manhattan → Brooklyn).
+  - Post expansion (clicks trigger `/api/posts/{id}` and `/api/posts/{id}/comments`).
+  - Trending content (repeated `/api/trending` calls).
+- **Ignored**:
+  - Voting (no `/api/vote` calls).
+  - Commenting (no `/api/comment` calls).
+  - Search/sidebar (no interactions with coordinates outside post/comment areas).
+  - User profiles (no `/api/users` calls).
+
+8. SESSION FLOW
+- **0.0s–3.31s (Exploration)**:
+  - Loads `/r/manhattan`, fetches trending posts (0.01s–0.35s).
+  - Passive API calls suggest initial content load.
+- **3.31s–10.04s (Shallow Engagement)**:
+  - Clicks first post at 3.31s, fetches comments at 3.5s (190ms delay).
+  - 7 additional clicks (4.5s–8.79s) with no further API calls, indicating rapid skimming.
+  - No deep interaction with any post.
+- **10.04s–12.69s (Pivot + Exit)**:
+  - Clicks at (1199, 155) at 10.04s (likely subreddit switch to Brooklyn).
+  - Fetches Brooklyn posts at 10.31s, clicks one post at 11.36s, fetches its comments at 11.6s.
+  - Session ends abruptly (no further actions after 11.66s).
+- **Arc**: **Exploration → Skimming → Geographic Pivot → Exit**. No progression to deeper engagement (e.g., voting, commenting).
+```
+
+**Key Observations**:
+- **Efficiency over depth**: Prioritized breadth (8+ posts in 12.69s) over interaction.
+- **Geographic focus**: NYC-centric subreddits suggest local interest, but no deeper engagement.
+- **Tool limitations**: "Unknown" clicks may reflect uninstrumented UI elements (e.g., post previews, thumbnails).

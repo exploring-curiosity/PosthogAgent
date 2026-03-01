@@ -1,0 +1,88 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused bursts**: The user exhibits a non-linear, exploratory navigation style with 6 distinct page reloads (8.92s, 11.96s, 30.53s, 258.79s, 1164.98s, 1465.17s), suggesting either refreshes, navigation errors, or forced reloads. Between reloads, they engage in short, targeted interactions (e.g., voting at 129.39s, commenting at 239.79s).
+- **Feature hopping**: Jumps between unrelated UI elements (e.g., clicking "Sign Up" at 44.38s, then immediately interacting with form fields at 46.14s–57.8s, followed by a vote at 129.39s). No sustained exploration of a single feature.
+- **Spatial inconsistency**: Clicks cluster in two regions:
+  - Top-right (e.g., (1547, 24) "Sign Up", (1517, 17) likely account/profile icon).
+  - Central-left (e.g., (361, 159) vote, (533, 262) comment box).
+
+2. READING BEHAVIOR
+- **Skimmer with minimal depth**: Single scroll action recorded (21.55s: up from 40px to 0px over 1.13s). No downward scrolling detected, indicating no engagement with content below the initial viewport (max depth: 2190px suggests long-form content existed but was ignored).
+- **Rapid abandonment**: First meaningful interaction (vote) occurs at 129.39s—120s after initial load—implying either slow content evaluation or distraction. No evidence of reading comments (no scrolls to comment sections).
+
+3. ENGAGEMENT STYLE
+- **Low-commitment engagement**: Performs 1 vote (129.39s) and 1 comment (239.79s) in the session.
+  - **Vote-to-comment ratio**: 1:1 (quantitative).
+  - **Latency**: 120s to first vote, 110s between vote and comment.
+- **Comment behavior**:
+  - Typing is fragmented (217.29s–226.15s: 5 characters over 8.86s; 235.29s–235.56s: 2 characters over 0.27s).
+  - No evidence of editing or deleting text.
+- **No replies**: Only top-level comment observed (no nested replies).
+
+4. INTERACTION SPEED
+- **Bimodal speed**:
+  - **Fast bursts**: During signup (48.03s–48.48s: 5 characters in 0.45s; 77.54s–78.38s: 12 characters in 0.84s).
+  - **Deliberate pauses**: 10s+ gaps between actions during comment composition (e.g., 226.15s–234.4s: 8.25s pause before clicking).
+- **Average action interval**: 10.2s (excluding typing bursts).
+- **Slowest intervals**:
+  - 135.98s–216.73s: 80.75s gap (likely idle or reading).
+  - 245.4s–258.79s: 13.39s gap (navigation to reload).
+
+5. CONTENT PREFERENCES
+- **Explicit preferences**: None directly observable. All API calls fetch generic endpoints:
+  - `/api/posts?sort=hot` (default "hot" posts, no subreddit filtering).
+  - `/api/trending` and `/api/subreddits` (no evidence of selection).
+- **Implicit signals**:
+  - Voted on a post with ID `f1cf401b-b15e-47bb-9b76-fb6546d6ac74` (129.39s), then viewed its comments (135.87s), suggesting interest in that specific post.
+  - No evidence of browsing specific subreddits (no `/api/subreddits/[name]` calls).
+
+6. TYPING BEHAVIOR
+- **Variable speed**:
+  - **Fast**: 11.1 characters/second (77.54s–78.38s: 12 chars in 1.08s).
+  - **Slow**: 0.56 characters/second (217.29s–226.15s: 5 chars in 8.86s).
+- **Input lengths**:
+  - Short: 1–5 characters (e.g., 48.03s–48.48s, 52.92s–53.67s).
+  - Medium: 7–13 characters (e.g., 64.39s, 67.17s).
+  - No long-form inputs (>20 characters).
+- **Corrections**: Possible backspacing during 77.54s–78.38s (rapid 12-character input with no pauses >0.1s suggests overwriting or correction).
+- **Field focus**: Typing occurs in 5 distinct clusters (48s, 53s, 64s, 72s, 77s), likely corresponding to signup form fields (username, email, password, etc.).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Signup flow**: Initiated at 44.38s ("Sign Up"), completed at 79.77s (`/api/auth/signup`).
+  - **Voting**: 1 upvote/downvote (129.39s, `/api/votes`).
+  - **Commenting**: 1 top-level comment (239.79s, `/api/comments`).
+  - **Navigation**: Homepage logo click (243.65s, "🗽 FunCity") and profile/account icon (245.4s).
+- **Ignored**:
+  - **Subreddit browsing**: No clicks on `/api/subreddits` results.
+  - **Post sorting**: No interaction with "hot/new/top" filters.
+  - **Search**: No evidence of search bar usage.
+  - **Post expansion**: No clicks on post titles to view full content.
+
+8. SESSION FLOW
+- **Phase 1: Exploration (0s–44s)**
+  - 3 page reloads (8.92s, 11.96s, 30.53s) with API calls for default content.
+  - Minimal interaction (1 scroll up at 21.55s).
+  - **Exit**: Clicks "Sign Up" at 44.38s.
+- **Phase 2: Signup Struggle (44s–85s)**
+  - 20+ clicks/typing actions in signup form (46.14s–78.38s).
+  - 2 failed submissions (`/api/auth/signup` at 79.77s and 84.48s).
+  - **Exit**: Abandons form after second failure.
+- **Phase 3: Idle/Reading (85s–135s)**
+  - 50s gap with no actions (84.7s–129.39s).
+  - **Entry**: First vote at 129.39s.
+- **Phase 4: Light Engagement (135s–245s)**
+  - Views post comments (135.87s), attempts comment (217.29s–239.79s).
+  - **Exit**: Navigates to homepage via logo (243.65s).
+- **Phase 5: Disengagement (245s–1507s)**
+  - 2 page reloads (258.79s, 1164.98s) with no subsequent interactions.
+  - **Exit**: Session ends at 1507.28s (25 minutes of inactivity after 1164.98s).
+```
+
+**Key Observations**:
+- **Primary goal**: Signup (failed twice), not content consumption.
+- **Secondary goal**: Minimal engagement (1 vote, 1 comment).
+- **Friction points**: Signup form (repeated clicks/typing, failed submissions), lack of feature discovery.
+- **Session death**: Likely caused by signup frustration or loss of interest after minimal engagement.

@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Focused → Exploratory → Targeted
+  - Initial 20.42s: Linear (page load → scroll → immediate "Sign Up" click)
+  - 20.42s–164.48s: Exploratory (multiple form interactions, failed attempts, feature testing)
+  - 164.48s–232.13s: Targeted (subreddit-specific navigation, profile access)
+- **Backtracking**: Minimal. Only one scroll-up action (146.22s) after signup attempt.
+- **Depth**: Shallow. Only 2 distinct page contexts (homepage → /r/bronx).
+
+2. READING BEHAVIOR
+- **Scroll Depth**: 1188px (14.7s) on initial load (47% of 2500px+ typical Reddit-like feed).
+- **Scroll Speed**: 1438px/s (1188px over 0.27s) → Skimming.
+- **Dwell Time**: 14.7s before first scroll; 19.76s (20.42s–37.09s) on "Sign Up" form → Suggests reading form fields.
+- **Content Engagement**: No evidence of deep reading (no pauses >5s on scroll positions).
+
+3. ENGAGEMENT STYLE
+- **Actions**: No votes, comments, or shares detected.
+- **Interaction Ratio**: 0:0 (vote:comment).
+- **Timing**:
+  - First engagement (click) at 20.42s (fast).
+  - Longest pause: 24.29s (56.18s–77.91s) → Likely form validation error or distraction.
+- **Attempts**: 3 distinct form submissions (37.09s, 78.47s, 123.16s) → Persistent but unsuccessful.
+
+4. INTERACTION SPEED
+- **Click Latency**:
+  - First click: 20.42s (slow for CTA).
+  - Subsequent clicks: 7.27s–22.16s intervals (deliberate).
+- **Typing Speed**:
+  - Username (28.83s–29.18s): 12 chars in 0.35s → 34.3 chars/s (fast).
+  - Password (29.43s–29.95s): 15 chars in 0.52s → 28.8 chars/s (fast).
+  - Later inputs (e.g., 102.42s–103.45s): 15 chars in 1.03s → 14.6 chars/s (slower, corrections likely).
+- **API Latency**: 0.03s–0.56s between related calls (e.g., 165.2s–165.79s) → Efficient backend.
+
+5. CONTENT PREFERENCES
+- **Subreddits**:
+  - Initial: "hot" sort (0.66s API call).
+  - Later: /r/bronx (164.48s click) → Localized interest (NYC familiarity).
+  - Final: "new" sort (232.06s) → Preference for fresh content.
+- **Content Types**: No explicit data, but "trending" API calls (0.09s, 165.26s, 232.12s) suggest interest in viral topics.
+- **User Profile**: Accessed "alex_johnson" (232.09s) → Possible social curiosity.
+
+6. TYPING BEHAVIOR
+- **Speed**:
+  - Username: 34.3 chars/s (burst typing).
+  - Password: 28.8 chars/s (slightly slower, likely masked input).
+  - Later fields (e.g., 102.42s–104.62s): 5–20 chars in 1.2s–2.2s → Variable (corrections).
+- **Input Lengths**:
+  - Username: 12 chars (28.83s–29.18s).
+  - Password: 15 chars (29.43s–29.95s).
+  - Later fields: 5–20 chars (e.g., 104.06s: 20 chars) → Possible email or bio.
+- **Corrections**: Likely in later inputs (e.g., 103.01s–103.45s: 15 chars in 0.44s, then 104.01s–104.62s: 6–20 chars in 0.61s).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Sign-up flow (20.42s–146.18s).
+  - Subreddit navigation (/r/bronx at 164.48s).
+  - "Hot" → "New" sort toggle (232.06s).
+  - User profile access (232.09s).
+- **Ignored**:
+  - Voting/commenting (no actions).
+  - Trending/sidebar content (no clicks despite API calls).
+  - Mobile-specific features (e.g., hamburger menu, if present).
+
+8. SESSION FLOW
+- **Phase 1: Exploration (0s–20.42s)**
+  - Load → API fetches → Scroll (14.7s) → "Sign Up" click (20.42s).
+  - Goal: Assess site layout and features.
+- **Phase 2: Engagement Attempt (20.42s–146.18s)**
+  - 3 failed sign-up attempts (37.09s, 78.47s, 123.16s).
+  - Long pauses (e.g., 56.18s–77.91s) suggest frustration or validation errors.
+  - Successful signup API call at 146.18s.
+- **Phase 3: Content Browsing (146.18s–232.13s)**
+  - Scroll reset (146.22s) → Immediate /r/bronx click (164.48s).
+  - Profile access (232.09s) → Final "new" sort (232.06s).
+  - Exit during API calls (232.13s).
+- **Arc**: Exploration → Frustrated engagement → Successful signup → Targeted browsing → Abrupt exit.
+```

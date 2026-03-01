@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Hyper-focused**: User remained on a single post URL (`31bbcb04-b01d-4a1b-88c0-587c8b8b853c`) for the entire 1805.28s session with no navigation to other pages, subreddits, or content types.
+- **Static viewport**: Maintained a consistent 1470x659 resolution throughout, suggesting no window resizing or device rotation.
+- **Periodic reloads**: Page reloaded automatically at fixed 300s intervals (300.24s, 601.24s, 902.24s, 1203.24s, 1504.24s, 1805.23s), indicating either:
+  - A scripted refresh (e.g., auto-refresh for new comments)
+  - A browser/extension forcing reloads (e.g., "Always Refresh" extension)
+  - Network instability causing reconnections
+
+2. READING BEHAVIOR
+- **No scroll data**: The log contains no scroll events, mouse movements, or dwell-time metrics. This prevents direct analysis of reading depth or skimming.
+- **Indirect signals**:
+  - **Lack of engagement actions** (votes/comments) suggests either:
+    - Deep reading without interaction (unlikely given 300s intervals)
+    - Passive consumption (e.g., background tab)
+    - Technical issue preventing interaction
+  - **API calls**: Initial `/comments` and `/posts` fetches (0.01s) imply content was loaded but not acted upon.
+
+3. ENGAGEMENT STYLE
+- **Zero explicit engagement**: No votes (up/down), comments, or other interactive actions recorded.
+- **Vote-to-comment ratio**: Undefined (0:0).
+- **Engagement latency**: N/A (no actions taken).
+- **Implicit engagement**: Repeated API calls to `/comments` (0.01s) suggest interest in discussion, but no follow-through.
+
+4. INTERACTION SPEED
+- **No user-initiated actions**: All recorded events are either:
+  - Automatic (page loads, API fetches)
+  - System-triggered (300s reloads)
+- **API response timing**: Initial API calls completed in <0.01s, but no subsequent user-driven requests.
+
+5. CONTENT PREFERENCES
+- **Single-post focus**: Only interacted with one post (`31bbcb04-b01d-4a1b-88c0-587c8b8b853c`).
+- **No subreddit exploration**: Called `/api/subreddits` and `/api/trending` at 0.01s but did not navigate to any.
+- **Content type**: Unknown (post title/body/subreddit not logged).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text input events (e.g., comment composition, search) recorded.
+- **Input length/corrections**: N/A.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Core post viewing (via `/api/posts` calls)
+  - Comment section loading (via `/api/comments` calls)
+  - Trending/subreddit discovery APIs (called but unused)
+- **Features ignored**:
+  - Voting (up/down)
+  - Commenting
+  - Subreddit navigation
+  - Search
+  - User profiles
+  - Settings/preferences
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–300.24s)**: Initial load and API fetches. User likely skimmed content (no scroll data) but took no action.
+- **Phase 2 (300.24s–1805.23s)**: Passive observation with automated reloads. No deviation from the post page.
+  - **Cycle**: Page reload → API refetch → idle → repeat (5 cycles total).
+- **Exit**: Session ended at 1805.23s with a final reload. No explicit logout or navigation away.
+
+KEY OBSERVATIONS:
+- **Anomalous behavior**: The 300s reload pattern is highly unusual for organic user behavior. Likely caused by:
+  - A browser extension (e.g., auto-refresh)
+  - A script (e.g., monitoring for new comments)
+  - Network issues (though unlikely to be this precise)
+- **No human interaction**: The absence of scrolls, clicks, or inputs suggests either:
+  - A bot/script
+  - A user leaving the tab open in the background
+  - A technical issue preventing interaction (e.g., broken UI)
+- **Data gaps**: Critical missing metrics (scroll depth, mouse movement, dwell time) limit behavioral analysis.
+
+SUMMARY:
+This session reflects **passive, script-driven observation** of a single post with no active engagement. The user (or script) loaded the page, fetched initial data, and then idled with automated reloads every 5 minutes. No human-like interaction patterns (scrolling, typing, clicking) were detected.
+```

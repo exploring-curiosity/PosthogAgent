@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Static/Refresh-Driven**: The user exhibits a highly unusual navigation pattern. They remain on the same URL (`https://fun-city-xi.vercel.app/`) for the entire session, with no evidence of clicking links, navigating to subpages, or interacting with UI elements beyond page reloads. The only "movement" is triggered by manual page refreshes (or equivalent, e.g., browser reload, hard reload, or scripted refresh).
+- **Periodic Reloads**: The page is reloaded exactly 4 times at ~300-second intervals (300.38s, 601.38s, 902.37s, 1577.39s), suggesting a deliberate or automated refresh cycle. This is not typical of exploratory or focused browsing.
+
+2. READING BEHAVIOR:
+- **No Observable Scrolling**: The log contains no scroll events, scroll depth, or viewport changes. This implies either:
+  - The user did not scroll at all (unlikely for a content-heavy site like a Reddit clone), or
+  - Scroll data was not captured in the log.
+- **No Content Interaction**: Without scroll data or clicks on posts/comments, there is no evidence of deep reading or skimming. The user may have remained on the initial viewport (1470x797) without engaging with content.
+
+3. ENGAGEMENT STYLE:
+- **No Explicit Engagement**: The log shows no voting (upvote/downvote), commenting, or other interactive actions. The only recorded interactions are:
+  - Initial API calls (`/api/subreddits`, `/api/posts?sort=hot`, `/api/trending`) at 0.02s, likely triggered by page load.
+  - Subsequent page reloads.
+- **Vote-to-Comment Ratio**: Undefined (0:0).
+
+4. INTERACTION SPEED:
+- **Extremely Slow/Inactive**: The user’s only "actions" are:
+  - Initial API calls (0.02s after load, likely automatic).
+  - Page reloads at 300.38s, 601.38s, 902.37s, and 1577.39s (intervals of ~300s, ~300s, ~300s, and ~675s).
+- **No Typing or Clicks**: No evidence of keyboard input, mouse clicks, or other deliberate interactions.
+
+5. CONTENT PREFERENCES:
+- **No Explicit Preferences**: The initial API calls suggest the user loaded:
+  - Subreddit listings (`/api/subreddits`),
+  - "Hot" posts (`/api/posts?sort=hot`),
+  - Trending content (`/api/trending`).
+  However, there is no follow-up interaction (e.g., clicking a post, filtering subreddits) to confirm preferences. The user may not have engaged with the content at all.
+
+6. TYPING BEHAVIOR:
+- **No Typing Detected**: The log contains no keystroke events, input field interactions, or corrections. The user did not type comments, search queries, or other text.
+
+7. FEATURE DISCOVERY:
+- **Minimal Feature Usage**: The only features used are:
+  - Initial content loading (subreddits, posts, trending).
+  - Page refresh (manual or automated).
+- **Ignored Features**: No evidence of use for:
+  - Voting, commenting, or sharing.
+  - Search, filters, or sorting (beyond default "hot" posts).
+  - User profiles, settings, or navigation menus.
+  - Mobile/desktop-specific features (e.g., hamburger menu, swipe gestures).
+
+8. SESSION FLOW:
+- **Arc**: The session follows a rigid, repetitive pattern with no progression:
+  1. **Initial Load (0.0s)**: Page loads; APIs fetch default content (subreddits, hot posts, trending).
+  2. **Inactivity (0.02s–300.38s)**: No interactions for 300 seconds.
+  3. **First Refresh (300.38s)**: Page reloads; APIs called again.
+  4. **Repeat Cycle (300s intervals)**: Identical reloads at 601.38s, 902.37s, and 1577.39s.
+  5. **Session End (1622.8s)**: No exit action recorded; session terminates after 1622.8s.
+- **No Engagement Arc**: The session lacks exploration, engagement, or exit behaviors typical of human users. The pattern is consistent with:
+  - A bot or script refreshing the page periodically.
+  - A user leaving the tab open without interaction.
+  - A technical issue (e.g., broken session recording, missing event logs).
+```
+
+**Key Observations**:
+- The user’s behavior is **abnormal for a human** due to the lack of scrolling, clicks, or engagement.
+- The **300-second refresh interval** suggests automation or a background process.
+- **No content preferences or engagement** can be inferred from the log.
+- **Session duration (1622.8s)** is misleading; "active" time is limited to API calls and reloads.

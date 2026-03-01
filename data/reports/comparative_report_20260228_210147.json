@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-02-28T21:01:47.381309",
+  "target_app": {
+    "url": "https://fun-city-sandbox.vercel.app/",
+    "name": "Web App"
+  },
+  "agents": [
+    {
+      "cluster_id": 0,
+      "demographic": "Engaged Urban Professional",
+      "traits": {
+        "age_group": "25-34",
+        "country": "India",
+        "nyc_familiarity": "live_here",
+        "age_distribution": {
+          "25-34": 1
+        },
+        "country_distribution": {
+          "India": 1
+        }
+      },
+      "description": "A tech-savvy young professional from India living in NYC, exhibiting high engagement and exploratory behavior with focused interactions.",
+      "summary": {
+        "demographic": "Engaged Urban Professional",
+        "error": "'NoneType' object is not subscriptable"
+      },
+      "narrative": "Agent failed: 'NoneType' object is not subscriptable"
+    },
+    {
+      "cluster_id": 1,
+      "demographic": "Engaged Young Explorer",
+      "traits": {
+        "age_group": "18-24",
+        "country": "India",
+        "nyc_familiarity": "visited",
+        "age_distribution": {
+          "18-24": 1
+        },
+        "country_distribution": {
+          "India": 1
+        }
+      },
+      "description": "This demographic consists of young users from India who are highly engaged, exhibiting exploratory navigation patterns with focused bursts of activity.",
+      "summary": {
+        "demographic": "Engaged Young Explorer",
+        "error": "It looks like you are using Playwright Sync API inside the asyncio loop.\nPlease use the Async API instead."
+      },
+      "narrative": "Agent failed: It looks like you are using Playwright Sync API inside the asyncio loop.\nPlease use the Async API instead."
+    }
+  ],
+  "comparative": {
+    "common_friction_points": [
+      "Agent failed to start exploration"
+    ],
+    "demographic_specific_issues": [
+      {
+        "demographic": "Engaged Urban Professional",
+        "issue": "'NoneType' object is not subscriptable",
+        "severity": "high"
+      },
+      {
+        "demographic": "Engaged Young Explorer",
+        "issue": "Using Playwright Sync API inside the asyncio loop",
+        "severity": "high"
+      }
+    ],
+    "accessibility_findings": [],
+    "engagement_patterns": {
+      "most_engaged_demographic": "None",
+      "least_engaged_demographic": "All",
+      "engagement_summary": "Neither demographic was able to engage with the application due to technical issues."
+    },
+    "recommendations": [
+      {
+        "title": "Fix the 'NoneType' object error",
+        "impact": "high",
+        "demographics_affected": [
+          "Engaged Urban Professional"
+        ],
+        "detail": "Investigate and resolve the issue causing the 'NoneType' object is not subscriptable error."
+      },
+      {
+        "title": "Update Playwright API usage",
+        "impact": "high",
+        "demographics_affected": [
+          "Engaged Young Explorer"
+        ],
+        "detail": "Ensure consistent use of Playwright Async API instead of Sync API within asyncio loops."
+      },
+      {
+        "title": "Conduct thorough testing",
+        "impact": "medium",
+        "demographics_affected": [
+          "Engaged Urban Professional",
+          "Engaged Young Explorer"
+        ],
+        "detail": "Perform comprehensive testing to identify and fix any other potential issues before further demographic testing."
+      }
+    ],
+    "overall_assessment": "The current state of the application presents critical technical issues that prevent successful exploration by different demographic agents. Immediate attention is required to resolve these errors to enable proper engagement and assessment."
+  }
+}

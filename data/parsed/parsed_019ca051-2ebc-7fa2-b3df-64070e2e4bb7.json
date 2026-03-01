@@ -1,0 +1,37 @@
+{
+  "user_profile": {
+    "session_id": "019ca051-2ebc-7fa2-b3df-64070e2e4bb7",
+    "age_group": "25-34",
+    "country": "India",
+    "nyc_familiarity": "live_here",
+    "os": "Mac OS X",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 1512,
+    "viewport_height": 823,
+    "screen_width": 1512,
+    "screen_height": 982
+  },
+  "session_duration_s": 119.51,
+  "total_raw_events": 6,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "http://localhost:3000/",
+      "viewport": "2560x1318"
+    },
+    {
+      "time": 59.51,
+      "action": "PAGE_LOAD",
+      "url": "http://localhost:3000/",
+      "viewport": "2560x1318"
+    },
+    {
+      "time": 97.06,
+      "action": "PAGE_LOAD",
+      "url": "http://localhost:3000/",
+      "viewport": "2560x1318"
+    }
+  ]
+}

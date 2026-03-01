@@ -1,0 +1,79 @@
+{
+  "user_profile": {
+    "session_id": "019ca0c2-7088-72bf-9310-b3f7b6f41002",
+    "age_group": null,
+    "country": null,
+    "nyc_familiarity": null,
+    "os": null,
+    "browser": null,
+    "device_type": null,
+    "viewport_width": null,
+    "viewport_height": null,
+    "screen_width": null,
+    "screen_height": null
+  },
+  "session_duration_s": 32.26,
+  "total_raw_events": 10,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "800x600"
+    },
+    {
+      "time": 0.09,
+      "action": "API_CALL",
+      "path": "/api/posts",
+      "full_path": "/api/posts?sort=hot"
+    },
+    {
+      "time": 0.09,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.09,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 31.29,
+      "action": "CLICK",
+      "target_tag": "p",
+      "target_text": "Tourists pay hundreds for boat tours. Meanwhile th",
+      "target_href": "",
+      "target_class": "mb-2 line-clamp-3 text-sm text-muted-foreground",
+      "coordinates": [
+        576,
+        511
+      ]
+    },
+    {
+      "time": 32.0,
+      "action": "API_CALL",
+      "path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719/comments",
+      "full_path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719/comments"
+    },
+    {
+      "time": 32.17,
+      "action": "API_CALL",
+      "path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719",
+      "full_path": "/api/posts/e098fca7-9604-49f0-9f46-b33a5a62d719"
+    },
+    {
+      "time": 32.24,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 32.26,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    }
+  ]
+}

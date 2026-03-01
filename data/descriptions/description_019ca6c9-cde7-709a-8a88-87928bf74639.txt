@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Linear with abrupt reset
+  - The user follows a single, uninterrupted path from initial page load to a single click at 5.55s, then immediately resets the session (new page load at 301.03s).
+  - No evidence of exploratory behavior (no multiple clicks, no navigation to sub-pages, no back/forward actions).
+  - The 301s gap suggests either a manual refresh, a new tab, or a session restart, but the identical URL and viewport indicate a deliberate reset rather than exploration.
+
+2. READING BEHAVIOR
+- **Depth**: Minimal to none
+  - No scroll events are recorded in the log, implying the user did not scroll vertically or horizontally.
+  - The single click at (1506, 450) occurs near the right edge of the viewport (1600px wide), suggesting interaction with a sidebar or edge UI element (e.g., a "main" button or menu) rather than content.
+  - No dwell time on content is observable; the click occurs 5.55s after the last API call, which may indicate skimming or immediate action without reading.
+
+3. ENGAGEMENT STYLE
+- **Actions**: None observed
+  - No votes, comments, or other engagement actions (e.g., upvote/downvote, reply, save) are recorded.
+  - The only interaction is a single click at 5.55s, which does not map to a typical engagement action (e.g., voting or commenting).
+  - **Vote-to-comment ratio**: Undefined (0:0).
+
+4. INTERACTION SPEED
+- **Pacing**: Fast initial load, then slow
+  - **API calls**: 3 requests in the first 2.08s (0.1s, 0.1s, 2.08s), indicating rapid data fetching.
+  - **First interaction**: 5.55s after page load (3.47s after the last API call), suggesting either:
+    - Brief content review (though no scroll data supports this), or
+    - Immediate action on a visible UI element.
+  - **Subsequent inactivity**: 301.03s (5 minutes) of no recorded actions before a page reload, implying either:
+    - Idle time (e.g., tab left open), or
+    - Off-screen activity (e.g., reading content in another tab, typing elsewhere).
+
+5. CONTENT PREFERENCES
+- **Data limitations**: No content-specific actions or selections are recorded.
+  - API calls suggest the user loaded:
+    - `/api/subreddits` (likely a list of communities),
+    - `/api/trending` (trending posts/topics),
+    - `/api/posts?sort=hot` (hot posts, possibly from default or trending subreddits).
+  - No evidence of filtering, searching, or selecting specific subreddits/posts.
+
+6. TYPING BEHAVIOR
+- **Observations**: None
+  - No text input, search queries, or form submissions are recorded.
+  - No typing speed, corrections, or input length can be inferred.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Initial page load (homepage or default view).
+  - API calls to fetch subreddits, trending topics, and hot posts (likely auto-triggered by the page).
+  - Single click on a "main" element (possibly a navigation button, menu, or UI component).
+- **Ignored features**:
+  - No evidence of:
+    - Voting (upvote/downvote),
+    - Commenting or replying,
+    - Searching or filtering content,
+    - Expanding posts or images,
+    - User profile or settings interactions,
+    - Sharing or saving content.
+
+8. SESSION FLOW
+- **Arc**: Minimalist, truncated
+  - **Phase 1 (0–2.08s)**: Rapid initialization
+    - Page load → immediate API calls to fetch core data (subreddits, trending, hot posts).
+  - **Phase 2 (2.08–5.55s)**: Potential skimming (unconfirmed)
+    - 3.47s gap with no scroll data; user may have reviewed visible content or UI.
+  - **Phase 3 (5.55s)**: Single interaction
+    - Click on "main" at (1506, 450), likely a UI element (e.g., a button to return to the homepage or expand a menu).
+  - **Phase 4 (5.55–301.03s)**: Inactivity or off-screen activity
+    - No recorded actions for 5 minutes.
+  - **Phase 5 (301.03s)**: Session reset
+    - Page reloads to the same URL, suggesting either:
+      - A manual refresh,
+      - A session timeout followed by re-entry, or
+      - A new tab/window opened to the same page.
+- **Exit**: No explicit exit action recorded; session ends at 1089.1s (18 minutes) with no further activity.
+```
+
+**Key Takeaways**:
+- The user exhibited **minimal engagement**, with only a single click after rapid initial data loading.
+- **No content consumption** was observable (no scrolls, no dwell time, no selections).
+- The session appears **technical or exploratory** rather than content-driven, possibly testing functionality (e.g., clicking a "main" button to verify behavior).
+- The 5-minute gap and subsequent reload suggest either **idle behavior** or **external distractions**.

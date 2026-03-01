@@ -1,0 +1,54 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   - Strictly linear and minimalist. The user loaded the homepage twice (0.0s and 300.08s) with no intermediate page changes or subreddit clicks.
+   - No exploratory clicks, no back/forward navigation, no tab switches.
+   - Focused on a single view for 99.8 % of the session.
+
+2. READING BEHAVIOR
+   - No scroll events or mouse movements are logged; therefore no scroll-depth data exists.
+   - The 300-second dwell on the same viewport suggests either deep reading of visible content or complete inactivity (no skimming indicators).
+
+3. ENGAGEMENT STYLE
+   - No voting, commenting, or sharing actions recorded.
+   - Vote-to-comment ratio: 0:0.
+   - Engagement score: 0 %.
+
+4. INTERACTION SPEED
+   - First three API calls fired within 1.64 s of page load (0.06 s, 0.06 s, 1.64 s).
+   - No further user-triggered actions for the remaining 341.06 s.
+   - Interaction latency: 0 ms after initial load.
+
+5. CONTENT PREFERENCES
+   - API calls requested:
+     • /api/subreddits (0.06 s)
+     • /api/trending (0.06 s)
+     • /api/posts?sort=hot (1.64 s)
+   - No explicit subreddit selection or filtering; user gravitated toward default “hot” sort.
+
+6. TYPING BEHAVIOR
+   - No keystrokes, search queries, or text inputs logged.
+   - Typing speed: 0 wpm.
+   - Corrections: 0.
+   - Input length: 0 characters.
+
+7. FEATURE DISCOVERY
+   - Used features:
+     • Homepage load
+     • Default “hot” sort feed
+   - Ignored features:
+     • Subreddit navigation
+     • Search bar
+     • Voting buttons
+     • Commenting
+     • Trending tab
+     • User profile / settings
+
+8. SESSION FLOW
+   - 0.0 s – 0.06 s: Initial page load → immediate API calls for subreddits and trending.
+   - 0.06 s – 1.64 s: API call for “hot” posts.
+   - 1.64 s – 300.08 s: Static viewport, no interaction.
+   - 300.08 s: Page reload (likely manual refresh or timeout).
+   - Arc: Load → passive consumption → reload → exit.
+```

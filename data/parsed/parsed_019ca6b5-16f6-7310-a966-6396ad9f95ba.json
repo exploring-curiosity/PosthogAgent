@@ -1,0 +1,97 @@
+{
+  "user_profile": {
+    "session_id": "019ca6b5-16f6-7310-a966-6396ad9f95ba",
+    "age_group": "18-24",
+    "country": "United States",
+    "nyc_familiarity": "live_here",
+    "os": "Mac OS X",
+    "browser": "Chrome",
+    "device_type": "Desktop",
+    "viewport_width": 1470,
+    "viewport_height": 659,
+    "screen_width": 1470,
+    "screen_height": 956
+  },
+  "session_duration_s": 1805.28,
+  "total_raw_events": 20,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "viewport": "1470x659"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c/comments",
+      "full_path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c/comments"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "full_path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "full_path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c/comments",
+      "full_path": "/api/posts/31bbcb04-b01d-4a1b-88c0-587c8b8b853c/comments"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/subreddits",
+      "full_path": "/api/subreddits"
+    },
+    {
+      "time": 0.01,
+      "action": "API_CALL",
+      "path": "/api/trending",
+      "full_path": "/api/trending"
+    },
+    {
+      "time": 300.24,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "viewport": "1470x659"
+    },
+    {
+      "time": 601.24,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "viewport": "1470x659"
+    },
+    {
+      "time": 902.24,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "viewport": "1470x659"
+    },
+    {
+      "time": 1203.24,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "viewport": "1470x659"
+    },
+    {
+      "time": 1504.24,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "viewport": "1470x659"
+    },
+    {
+      "time": 1805.23,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/post/31bbcb04-b01d-4a1b-88c0-587c8b8b853c",
+      "viewport": "1470x659"
+    }
+  ]
+}

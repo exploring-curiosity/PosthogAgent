@@ -1,0 +1,105 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user demonstrates a non-linear, exploratory navigation style with periods of concentrated engagement. Initial exploration (0-21.82s) involves rapid sorting toggles (hot → new → top) via SVG clicks, suggesting content discovery. Post-signup (23.24s+), navigation becomes more targeted, with deep dives into specific posts (e.g., 90.81s: post ID 6450bc39...) and subreddits (e.g., 114.22s: "nightlife", 186.21s: "hidden-gems"). Scattered clicks (e.g., 23.24s, 24.3s) indicate UI experimentation or accidental interactions.
+- **Subreddit hopping**: Visits 7 distinct subreddits (nightlife, hidden-gems, art, bronx) via direct clicks or API calls, with 4/7 accessed within a 10-second window (186.21s–191.12s).
+- **Backtracking**: Repeatedly returns to the homepage (e.g., 117.48s: "🗽 FunCity" click) or trending posts (API calls at 11.72s, 86.45s, 117.55s), suggesting a "hub-and-spoke" pattern.
+
+2. READING BEHAVIOR
+- **Skim-heavy with selective depth**: Scroll patterns reveal rapid skimming interspersed with brief deep reads:
+  - **Short scrolls**: 70% of scrolls last <0.3s (e.g., 88.98s: 200px→783px in 0.3s), covering large vertical distances (avg. 583px/scroll) with minimal dwell time.
+  - **Deep reads**: Only 3 instances of sustained scrolling (e.g., 120.65s: 136px→539px over 0.2s; 110.41s: 452px→0px over 1.1s), likely indicating focused reading of comments or long posts.
+  - **Max scroll depth**: 783px (88.98s), suggesting engagement with ~3–4 posts/comments at a time (assuming 200px/post).
+- **Zero hover data**: No mouse hover events recorded, limiting inference about pre-reading behavior.
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy, vote-light**: Primary engagement is through comments; no explicit voting actions (e.g., upvote/downvote) are recorded.
+  - **Commenting frequency**: 6 distinct comment attempts (identified by typing clusters):
+    1. 43.97s–76.72s (3 input bursts, 4–11 chars)
+    2. 95.98s–99.98s (10 chars)
+    3. 104.31s–107.59s (25 chars)
+    4. 124.35s–129.66s (20 chars, with corrections)
+    5. 201.5s (36 chars, standalone)
+    6. 213.46s–222.69s (11 chars)
+  - **Comment-to-post ratio**: 6 comments across 5 posts (IDs: 6450bc39..., 05ca2dee..., 8675b60b..., ef376747..., f1cf401b...).
+  - **Timing**: Comments are drafted after 15–30s of post interaction (e.g., 90.81s post load → 95.98s typing start).
+- **No visible reactions**: No emoji reactions, shares, or saves recorded.
+
+4. INTERACTION SPEED
+- **Fast initial actions, deliberate later**: Bimodal speed distribution:
+  - **First 22s**: 5 actions (clicks/API calls) in 10.35s (avg. 2.07s/action), including 3 sorting toggles in 1.37s (13.75s–15.09s).
+  - **Post-signup (23.24s–100s)**: Slower pace (avg. 4.2s/action), with typing bursts (e.g., 104.31s–107.59s: 25 chars in 3.28s, ~7.6 chars/s).
+  - **Late session (176.66s–226.77s)**: Erratic timing (e.g., 19.76s gap at 176.96s–196.46s), possibly due to distraction or content digestion.
+- **Typing latency**: Avg. 0.15s between keystrokes during bursts (e.g., 104.31s–107.59s), but pauses up to 1.5s (e.g., 105.88s–105.94s) suggest thought breaks.
+
+5. CONTENT PREFERENCES
+- **Subreddit interests**: Gravitated toward NYC-centric or niche communities:
+  - **Nightlife** (114.22s): Likely bars/clubs (e.g., "nightlife" subreddit).
+  - **Hidden-gems** (186.21s, 193.51s): Offbeat locations or experiences.
+  - **Bronx** (191.12s): Localized content.
+  - **Art** (189.91s): Creative or cultural content.
+- **Post sorting**: Initially cycled through "hot" (11.8s), "new" (14.02s), and "top" (15.09s) sorts, but later defaulted to "hot" (e.g., 117.65s, 186.37s).
+- **Post topics**: Based on subreddit names and typing content (e.g., 201.5s: 36-char input likely a detailed comment), interests include:
+  - Local recommendations (hidden-gems, bronx).
+  - Social events (nightlife).
+  - Visual/cultural content (art).
+
+6. TYPING BEHAVIOR
+- **Bursty with corrections**: Typing occurs in 6 distinct clusters, with the following patterns:
+  - **Speed**: Avg. 6.8 chars/s during bursts (e.g., 104.31s–107.59s: 25 chars in 3.28s), but with pauses (e.g., 1.5s at 105.88s).
+  - **Input length**: Comments range from 4 to 36 chars (avg. 15.3 chars/comment). Longest input (201.5s: 36 chars) is standalone, possibly a post or detailed reply.
+  - **Corrections**: Evident in 3/6 clusters:
+    - 124.35s–129.66s: Backspaces (12 chars → 11 chars at 126.85s–126.98s).
+    - 95.98s–98.95s: Deletion (10 chars → 5 chars at 97.19s–97.34s).
+    - 43.97s–76.72s: Multiple short bursts (4–11 chars) with resets.
+  - **No autocomplete use**: No evidence of dropdown selections or autocomplete-assisted typing.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Sorting**: Toggled post sorts (hot/new/top) via SVG clicks (13.75s–15.09s).
+  - **Sign-up**: Clicked "Sign Up" (21.82s), completed form (43.97s–76.72s), and submitted (86.21s: /api/auth/signup).
+  - **Subreddit navigation**: Directly accessed subreddits via clicks (e.g., 114.22s: "nightlife") or API calls (e.g., 186.21s: "hidden-gems").
+  - **Post deep dives**: Clicked into 5 posts (IDs: 6450bc39..., 05ca2dee..., 8675b60b..., ef376747..., f1cf401b...) and their comments.
+  - **Homepage anchor**: Repeatedly returned to homepage via "🗽 FunCity" click (117.48s).
+- **Ignored features**:
+  - **Voting**: No upvote/downvote actions recorded.
+  - **Search**: No search bar usage (no /api/search calls).
+  - **User profiles**: No clicks on usernames or profile pages.
+  - **Media interaction**: No clicks on images/videos (despite likely presence in posts).
+  - **Bookmarking/saving**: No save/share actions.
+
+8. SESSION FLOW
+- **Phase 1: Exploration (0–21.82s)**
+  - **Goal**: Content discovery.
+  - **Actions**: Rapid sorting toggles (hot/new/top), homepage browsing, and sign-up initiation (21.82s).
+  - **Duration**: 21.82s (9.5% of session).
+- **Phase 2: Sign-up (21.82s–86.45s)**
+  - **Goal**: Account creation.
+  - **Actions**: Form input (43.97s–76.72s: 3 bursts, 4–11 chars), submission (86.21s: /api/auth/signup).
+  - **Duration**: 64.63s (28.3% of session).
+  - **Note**: High effort (3 typing clusters) suggests motivation to engage.
+- **Phase 3: Engagement (86.45s–130.31s)**
+  - **Goal**: Commenting and content interaction.
+  - **Actions**: Deep dives into 3 posts (IDs: 6450bc39..., 05ca2dee..., 8675b60b...), 4 comment attempts (95.98s–107.59s, 124.35s–129.66s), and subreddit exploration (nightlife, hidden-gems).
+  - **Duration**: 43.86s (19.2% of session).
+  - **Key behavior**: Typing corrections (124.35s–129.66s) and scroll depth (e.g., 120.65s: 136px→539px) indicate active participation.
+- **Phase 4: Browsing (130.31s–226.66s)**
+  - **Goal**: Content consumption.
+  - **Actions**: Subreddit hopping (art, bronx, hidden-gems), post skimming (scrolls at 196.46s, 120.65s), and 2 comment attempts (201.5s, 213.46s–222.69s).
+  - **Duration**: 96.35s (42.1% of session).
+  - **Key behavior**: Longer gaps between actions (e.g., 176.66s–186.07s: 9.41s pause) and erratic clicks (e.g., 186.07s: (1314, 375)) suggest distraction or content evaluation.
+- **Phase 5: Exit (226.66s–226.77s)**
+  - **Goal**: Session termination.
+  - **Actions**: Clicked into a post (226.66s: /post/f1cf401b...), triggering a page reload with redundant API calls (226.69s–226.77s).
+  - **Duration**: 0.11s (0.05% of session).
+  - **Note**: No explicit logout; session ends mid-API call burst.
+```
+
+### Summary Metrics:
+- **Actions**: 120 total (40 clicks, 80 API calls/typing/scrolls).
+- **Time per action**: Avg. 1.9s (excluding typing bursts).
+- **Comment attempts**: 6 (4 submitted, 2 abandoned).
+- **Subreddits visited**: 7.
+- **Posts interacted with**: 5.
+- **Scroll depth**: Max 783px (88.98s), avg. 247px/scroll.

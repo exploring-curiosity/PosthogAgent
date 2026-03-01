@@ -1,0 +1,115 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly exploratory and scattered with repeated cycles of discovery
+- Initial 0-124s: Rapid-fire API calls (48 requests in 0.21s) suggest automated loading or aggressive pre-fetching, not human navigation
+- Human navigation begins at 124.2s with page reload, then:
+  - 3 distinct subreddit deep-dives (nightlife, food, nature, bronx)
+  - 4 full page reloads (124.2s, 210.57s, 253.57s, 269.6s)
+  - 7 returns to homepage via "🗽 FunCity" logo clicks (210.57s, 253.57s, 259.66s, 266.33s)
+- No linear progression; jumps between subreddits and sorting methods (hot/new/top) within same subreddit
+
+2. READING BEHAVIOR
+- Skimming dominant with minimal deep reading:
+  - 3 scroll events totaling 26.13s of active scrolling (14.26s down, 11.87s down, 4.87s up)
+  - Max scroll depth: 627px (≈3-4 posts visible at 1600x765 viewport)
+  - 3 post detail views (ef376747, 3580c8fb, 10a31f02) but only 10a31f02 at 258.12s shows comment load (suggests actual reading)
+  - Average time on post detail: 1.76s (258.12s-259.66s) before returning to homepage
+
+3. ENGAGEMENT STYLE
+- No voting or commenting detected in action log
+- Engagement metrics:
+  - 0 votes (up/down)
+  - 0 comments posted
+  - 3 post detail views (potential reading)
+  - 1 signup attempt (193.25s)
+- Vote-to-comment ratio: 0:0 (no engagement beyond browsing)
+- First interaction with content occurs at 231.57s (107s after human navigation begins)
+
+4. INTERACTION SPEED
+- Mixed speed profile:
+  - Initial API calls: 48 requests in 0.21s (≈228 requests/second, likely automated)
+  - Human interaction latency:
+    - 35.22s between page load (124.2s) and first click (159.43s)
+    - 1.22s average between clicks during signup (160.65s-192.9s)
+    - 1.78s average between clicks during content browsing (231.57s-269.6s)
+- Typing speed:
+  - Username: 11.35s for 9 characters (≈0.79s/character)
+  - Email: 6.16s for 10 characters (≈0.62s/character)
+  - Password: 5.23s for 7 characters (≈0.75s/character)
+  - No backspaces or corrections detected
+
+5. CONTENT PREFERENCES
+- Subreddit focus:
+  - nightlife: 3 visits (0.04s, 210.94s, 259.88s)
+  - bronx: 2 visits (204.35s, 269.65s)
+  - food: 1 visit (0.04s)
+  - nature: 1 visit (0.04s)
+- Sorting preferences:
+  - hot: 12 requests
+  - new: 3 requests
+  - top: 3 requests
+- Post engagement:
+  - 3 specific posts viewed (ef376747, 3580c8fb, 10a31f02)
+  - Only 10a31f02 loaded comments (258.19s)
+
+6. TYPING BEHAVIOR
+- Input characteristics:
+  - 3 distinct typing sequences (username, email, password)
+  - Total characters: 26 (9+10+7)
+  - Average input length: 8.67 characters
+  - Typing speed: 0.72s/character (range: 0.62-0.79s/character)
+  - No pauses >1.5s during input sequences
+  - No deletions or corrections detected
+- Field focus:
+  - Username: 9 characters (175.29s-187.66s)
+  - Email: 10 characters (190.4s-190.42s)
+  - Password: 7 characters (192.05s-192.9s)
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Subreddit navigation (4 unique subreddits)
+  - Sorting filters (hot/new/top)
+  - Post detail views (3 posts)
+  - Comment loading (1 post)
+  - Signup flow (username/email/password)
+  - Homepage navigation ("🗽 FunCity" logo)
+- Ignored features:
+  - Voting (up/down)
+  - Commenting
+  - Post creation
+  - User profiles
+  - Search functionality
+  - Trending sidebar (despite 10 API calls to /api/trending)
+
+8. SESSION FLOW
+- Arc: Automated load → Exploration → Signup attempt → Content browsing → Exit
+- Phases:
+  1. Initialization (0-124.2s): Automated API calls (48 requests), no human interaction
+  2. Orientation (124.2s-159.43s): Page reload, 35.22s of inactivity
+  3. Signup Attempt (159.43s-193.25s):
+     - 34.82s duration
+     - 15 clicks (11 on form fields, 4 unknown)
+     - 26 characters typed across 3 fields
+     - Successful signup API call at 193.25s
+  4. Content Browsing (193.53s-269.6s):
+     - 76.07s duration
+     - 12 clicks (4 on content, 8 navigation)
+     - 3 post detail views
+     - 3 scroll events (total 26.13s)
+     - 4 returns to homepage
+  5. Exit (269.6s): Final page reload with automated API calls, no further interaction
+- Behavioral transitions:
+  - 124.2s: Human navigation begins
+  - 159.43s: Shift from orientation to signup
+  - 193.53s: Shift from signup to content browsing
+  - 269.6s: Session termination
+```
+
+Key observations:
+- 46% of session (124.2s) spent in automated/API phase
+- Only 54% (146.66s) shows human interaction
+- 23.7% of human time spent on signup (34.82s)
+- 51.9% of human time spent browsing (76.07s)
+- No engagement beyond browsing (0 votes/comments)

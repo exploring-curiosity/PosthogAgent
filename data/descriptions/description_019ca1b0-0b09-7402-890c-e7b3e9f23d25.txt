@@ -1,0 +1,111 @@
+```
+BEHAVIORAL PROFILE: FUNCITY USER SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with distinct phases of deep engagement.
+  - Initial exploration (0-18.8s): Rapid API calls for subreddits/trending/posts, followed by immediate signup (1.08s).
+  - Post-signup focus (18.8-58.35s): Linear engagement with 2 posts (21.41s and 40.49s), including comments/votes.
+  - Content creation (58.35-87.01s): Dedicated 28.66s to submitting a new post (longest single activity).
+  - Final browsing (87.01-99.78s): Scattered clicks on posts/votes before session end.
+- **Backtracking**: Repeated returns to homepage (30.45s, 91.86s, 99.53s) via "🗽 FunCity" logo clicks, suggesting navigation anchor points.
+- **Subreddit hopping**: Clicked on "nature" (32.11s) and "art" (37.08s) subreddits, but spent <3s in each before returning to hot posts.
+
+2. READING BEHAVIOR
+- **Skim-heavy with minimal deep reading**:
+  - **Scroll patterns**:
+    - Initial scroll: 3px→10px (19.07s) over 0.11s (superficial).
+    - First meaningful scroll: 1px→509px (92.84s) over 0.3s (rapid, likely scanning).
+    - No sustained scrolling; max depth (509px) reached in <1s.
+  - **Post engagement time**:
+    - Post 1 (40d2825b...): 21.41s (click) → 28.24s (comment posted) = **6.83s** to read/comment.
+    - Post 2 (ef376747...): 40.49s (click) → 51.46s (reply posted) = **10.97s** to read/reply.
+    - Post 3 (54fbafb3...): 94.06s (click) → 96.87s (vote) = **2.81s** before voting (no comment).
+  - **Comment reading**: No evidence of reading nested comments (no scrolls/clicks on comment threads).
+
+3. ENGAGEMENT STYLE
+- **Active voter and commenter**:
+  - **Votes**: 4 upvotes/downvotes (34.61s, 39.41s, 89.81s, 97.1s) → **1 vote per 26.3s** of session.
+  - **Comments**: 2 comments (28.24s, 51.46s) + 1 post (87.01s) → **3 written contributions**.
+  - **Vote-to-comment ratio**: 2:1 (votes:comments).
+- **Speed of engagement**:
+  - First vote: 15.54s after landing on post (34.38s click → 34.61s API).
+  - First comment: 6.83s after opening post (21.41s → 28.24s).
+  - Replies: Typed 10-character comment in **2.6s** (25.09-28.05s), 11-character reply in **5.3s** (45.77-51.35s).
+
+4. INTERACTION SPEED
+- **Fast but deliberate**:
+  - **Click intervals**:
+    - Mean time between clicks: **3.1s** (excluding typing).
+    - Fastest sequence: 0.19s between clicks (11.93s and 12.18s during signup dropdowns).
+    - Slowest sequence: 11.35s (62.16s → 73.51s) during post title typing.
+  - **API response latency**: Actions triggered API calls within **0.01-0.2s** (e.g., 34.38s click → 34.61s vote API).
+  - **Typing speed**:
+    - Username (6 chars): **1.2s** (3.77-4.77s) → **5 chars/sec**.
+    - Password (6 chars): **2.0s** (6.97-8.96s) → **3 chars/sec** (likely masked input).
+    - Comment (10 chars): **2.6s** (25.09-28.05s) → **3.8 chars/sec**.
+    - Post title (65 chars): **21.3s** (63.46-84.93s) → **3 chars/sec** (with corrections).
+
+5. CONTENT PREFERENCES
+- **Subreddit interests**:
+  - Explicit clicks: "nature" (32.11s), "art" (37.08s).
+  - Post engagement:
+    - Post 1 (40d2825b...): Likely "hot" feed (no subreddit specified).
+    - Post 2 (ef376747...): "art" subreddit (from 37.35s API call).
+    - Post 3 (54fbafb3...): Unknown subreddit (no API call for subreddit ID).
+  - **Content type**: No multimedia interactions (no clicks on images/videos).
+- **Sorting preference**: Consistently used "hot" sort (API calls at 0.05s, 19.05s, 32.47s, 92.32s).
+
+6. TYPING BEHAVIOR
+- **Variable speed with corrections**:
+  - **Username**: 6 chars in 1.2s (no corrections).
+  - **Password**: 6 chars in 2.0s (likely slower due to masking).
+  - **Post title**:
+    - Initial burst: 35 chars in 10.6s (63.46-74.05s) → **3.3 chars/sec**.
+    - Corrections: Backspaced 1 char (74.81s), retyped to 65 chars (84.93s).
+    - Final speed: 65 chars in 21.3s → **3 chars/sec**.
+  - **Comment/reply**:
+    - First comment: 10 chars in 2.6s (no corrections).
+    - Reply: 11 chars in 5.3s (with 5-char deletion at 48.09s).
+- **Input length**:
+  - Comments: 10-11 chars.
+  - Post title: 65 chars (after corrections).
+  - No long-form content (e.g., no post body text).
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Signup flow (1.08-18.8s): Username, password, dropdowns (likely country/timezone).
+  - Post browsing: "hot" feed, subreddit navigation.
+  - Engagement: Upvoting/downvoting (4x), commenting (2x), post creation (1x).
+  - Navigation: Homepage logo, "submit" button (58.35s).
+- **Ignored features**:
+  - No evidence of:
+    - Search functionality.
+    - User profiles (no clicks on usernames/avatars).
+    - Saved posts/communities.
+    - Notifications/settings.
+    - Multimedia uploads (no clicks on image/video buttons).
+    - Sorting options (e.g., "new", "top").
+
+8. SESSION FLOW
+- **Phase 1: Immediate Signup (0-18.8s)**
+  - Loaded homepage → clicked "Sign Up" (1.08s) → completed form (username, password, dropdowns) in **17.72s**.
+  - **Motivation**: Likely pre-planned signup (no prior browsing).
+- **Phase 2: Post-Signup Exploration (18.8-58.35s)**
+  - **Browsing**: Viewed 2 posts (21.41s, 40.49s), voted 2x, commented 2x.
+  - **Engagement depth**: Shallow (no nested comments, rapid votes).
+  - **Transition**: Clicked "submit" (58.35s) after 39.55s of browsing.
+- **Phase 3: Content Creation (58.35-87.01s)**
+  - **Focused effort**: Spent **28.66s** crafting a post title (65 chars, with corrections).
+  - **Subreddit selection**: Typed 36 chars into dropdown (61.47s), likely searching for a community.
+  - **Post submission**: Clicked "submit" (86.8s) → API call (87.01s).
+- **Phase 4: Final Browsing (87.01-99.78s)**
+  - **Scattered activity**: Voted 2x (89.81s, 97.1s), clicked 1 post (94.06s), returned to homepage 2x.
+  - **Session end**: No exit action (e.g., logout, tab close) recorded.
+
+KEY OBSERVATIONS:
+- **Efficiency**: Prioritized signup and content creation over deep reading.
+- **Correction behavior**: Only corrected post title (not comments/password).
+- **Engagement triggers**: Voted/commented within **<11s** of opening a post.
+- **Navigation anchors**: Used homepage logo as a "reset" button 3x.
+- **Session arc**: Signup → Explore → Create → Browse → Exit (no clear disengagement signal).
+```

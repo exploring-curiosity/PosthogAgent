@@ -1,0 +1,82 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused bursts**: The user exhibits non-linear, exploratory navigation with abrupt shifts in focus.
+  - Initial 0-38s: Linear progression (landing → signup attempt).
+  - 38-77s: Post-signup reload, then immediate jump to "Staten Island" subreddit (52.78s) without browsing homepage content.
+  - 77-95s: Rapid sorting filter toggles (hot → new → top → new → hot) within 13 seconds (82.48s–94.89s), suggesting indecision or content dissatisfaction.
+  - 95-131s: Single deep dive into a post (click at 95.3s, no further interaction until 131.59s).
+  - 341.7s: Session ends with a page reload (likely exit or refresh).
+- **No sustained browsing**: Only 1 post/comment interaction (75.15s–75.78s) despite 448s session duration.
+
+2. READING BEHAVIOR
+- **Skim-heavy with one deep read**:
+  - **Scroll patterns**: No explicit scroll data, but:
+    - Rapid clicks on sorting filters (82.48s–94.89s) imply skimming post lists without reading.
+    - 36s pause (95.3s–131.59s) on a single post suggests deep reading (only confirmed interaction).
+  - **Content consumption**: No evidence of reading multiple posts/comments beyond the one at 75.15s.
+
+3. ENGAGEMENT STYLE
+- **Comment-heavy, no voting**:
+  - **Commenting**: Typed 36 characters (62.99s), then edited extensively (64.79s–72.03s: 32 keystrokes, 14 backspaces). Final comment length: ~22 characters (net).
+  - **Voting**: No upvote/downvote actions detected (no API calls for votes).
+  - **Ratio**: 1 comment attempt, 0 votes (undefined ratio).
+  - **Speed**: Comment initiated 8.07s after post click (95.3s → 62.99s+41.68s = ~103.3s adjusted time).
+
+4. INTERACTION SPEED
+- **Fast but error-prone**:
+  - **Early session**: 3.24s to first click (Sign Up), then 4 rapid unknown clicks (4.16s–6.18s) with <1s intervals.
+  - **Form filling**: 6.18s–19.96s: Typing bursts (7+ characters in 0.65s) with frequent corrections (e.g., 68.97s–69.09s: backspace from 15→13 characters).
+  - **Filter toggling**: 1.18s between sort changes (e.g., 82.48s → 83.29s: new → hot).
+  - **Deliberate pauses**: 36.31s gap (131.59s–341.7s) with no actions (likely reading or distraction).
+
+5. CONTENT PREFERENCES
+- **Subreddit focus**: Only explicit subreddit visited: `/r/staten-island` (52.78s).
+- **Sorting preferences**:
+  - Default: "hot" (loaded 4x: 0.05s, 38.46s, 77.49s, 84.0s).
+  - Explored: "new" (2x: 82.66s, 87.62s), "top" (1x: 88.56s).
+- **Post interaction**: Clicked 1 post (95.3s) in `/r/staten-island` (ID: `b08b3804-9e81-4ac7-b1f7-06fbee53859e`).
+
+6. TYPING BEHAVIOR
+- **Fast with heavy editing**:
+  - **Signup form**:
+    - Username: 7 characters in 0.66s (6.18s–6.84s; ~10.6 chars/sec).
+    - Password: 5 characters in 0.63s (15.71s–16.21s; ~7.9 chars/sec).
+  - **Comment**:
+    - Initial input: 36 characters in ~1s (62.99s–63.0s; ~36 chars/sec).
+    - Editing: 32 keystrokes (14 backspaces) over 7.24s (64.79s–72.03s), avg 4.4 keystrokes/sec.
+    - Final output: ~22 characters (net).
+  - **Corrections**: 44% of comment keystrokes were backspaces (14/32).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Signup flow (3.24s–38.26s).
+  - Subreddit navigation (52.78s: `/r/staten-island`).
+  - Post sorting filters (82.48s–94.89s: hot/new/top).
+  - Commenting (62.99s–73.86s).
+  - Homepage logo click (77.15s: "🗽 FunCity").
+- **Ignored**:
+  - Voting (no API calls for votes).
+  - Post flairs/tags (no clicks on metadata).
+  - User profiles (no clicks on usernames).
+  - Search functionality (no search bar interactions).
+  - Trending/sidebar content (despite 4x `/api/trending` calls).
+
+8. SESSION FLOW
+- **Phase 1: Signup Attempt (0–38s)**
+  - Landed → immediate signup click (3.24s).
+  - Struggled with form (7 unknown clicks, 19 typing actions).
+  - Submitted at 38.26s (API call), page reload at 41.68s.
+- **Phase 2: Subreddit Jump (38–77s)**
+  - Reloaded → skipped homepage content → direct link to `/r/staten-island` (52.78s).
+  - Brief interaction with post list (53.92s click) but no engagement.
+- **Phase 3: Commenting (77–131s)**
+  - Returned to homepage (77.15s) → rapid filter toggling (82.48s–94.89s).
+  - Clicked 1 post (95.3s) → typed/edited comment (62.99s–73.86s).
+  - No submission (no API call for comment post).
+- **Phase 4: Inactivity → Exit (131–448s)**
+  - 36s pause (131.59s–341.7s) → page reload (341.7s).
+  - No further actions; session ends at 448.31s.
+- **Arc**: **Exploration (0–38s) → Targeted Navigation (38–77s) → Frustrated Engagement (77–131s) → Abandonment (131–448s)**.
+```

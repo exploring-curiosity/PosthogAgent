@@ -1,0 +1,258 @@
+{
+  "session_id": "019ca0c1-4d2a-745d-828e-48c6fc0cd042",
+  "start_time": 1772238894.142317,
+  "total_duration_s": 37.85,
+  "actions": [
+    {
+      "action_name": "scan_feed",
+      "timestamp": 1772238900.228559,
+      "relative_s": 6.09,
+      "duration_s": 1.02,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "pattern": "quick_scan"
+      }
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772238901.24669,
+      "relative_s": 7.1,
+      "duration_s": 4.5,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {
+        "post_title": "The Cloisters is NYC's best kept secret"
+      }
+    },
+    {
+      "action_name": "login",
+      "timestamp": 1772238905.747039,
+      "relative_s": 11.6,
+      "duration_s": 7.97,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/",
+      "details": {}
+    },
+    {
+      "action_name": "write_comment",
+      "timestamp": 1772238913.716266,
+      "relative_s": 19.57,
+      "duration_s": 1.95,
+      "success": false,
+      "error": "Comment section not found",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772238915.66223,
+      "relative_s": 21.52,
+      "duration_s": 16.15,
+      "success": false,
+      "error": "Locator.click: Target page, context or browser has been closed\nCall log:\n  - waiting for locator(\"[tf623_id='124']\")\n    - locator resolved to <button disabled tf623_id=\"124\" aria-label=\"Upvote\" class=\"rounded p-1 transition-colors hover:bg-secondary text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50\">\u2026</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    28 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not enabled\n     - retrying click action\n       - waiting 500ms\n",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772238931.817385,
+      "relative_s": 37.68,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "open_post",
+      "timestamp": 1772238931.821287,
+      "relative_s": 37.68,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "write_comment",
+      "timestamp": 1772238931.8230011,
+      "relative_s": 37.68,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772238931.8255901,
+      "relative_s": 37.68,
+      "duration_s": 0.0,
+      "success": true,
+      "error": "",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {
+        "skipped": true
+      }
+    },
+    {
+      "action_name": "return_to_feed",
+      "timestamp": 1772238931.825603,
+      "relative_s": 37.68,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "browse_subreddit",
+      "timestamp": 1772238931.826895,
+      "relative_s": 37.68,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "open_related_post",
+      "timestamp": 1772238931.828185,
+      "relative_s": 37.69,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "vote_on_post",
+      "timestamp": 1772238931.829897,
+      "relative_s": 37.69,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "browse_subreddit",
+      "timestamp": 1772238931.831153,
+      "relative_s": 37.69,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    },
+    {
+      "action_name": "open_related_post",
+      "timestamp": 1772238931.8323462,
+      "relative_s": 37.69,
+      "duration_s": 0.0,
+      "success": false,
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "page_url": "https://fun-city-sandbox.vercel.app/post/4c5231e4-4e39-401c-aa2a-9d0a35835fa7",
+      "details": {}
+    }
+  ],
+  "stuck_events": [],
+  "errors": [
+    {
+      "action": "write_comment",
+      "error": "Comment section not found",
+      "relative_s": 19.57
+    },
+    {
+      "action": "vote_on_post",
+      "error": "Locator.click: Target page, context or browser has been closed\nCall log:\n  - waiting for locator(\"[tf623_id='124']\")\n    - locator resolved to <button disabled tf623_id=\"124\" aria-label=\"Upvote\" class=\"rounded p-1 transition-colors hover:bg-secondary text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50\">\u2026</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    28 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not enabled\n     - retrying click action\n       - waiting 500ms\n",
+      "relative_s": 21.52
+    },
+    {
+      "action": "return_to_feed",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.68
+    },
+    {
+      "action": "open_post",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.68
+    },
+    {
+      "action": "write_comment",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.68
+    },
+    {
+      "action": "return_to_feed",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.68
+    },
+    {
+      "action": "browse_subreddit",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.68
+    },
+    {
+      "action": "open_related_post",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.69
+    },
+    {
+      "action": "vote_on_post",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.69
+    },
+    {
+      "action": "browse_subreddit",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.69
+    },
+    {
+      "action": "open_related_post",
+      "error": "Page.wait_for_timeout: Target page, context or browser has been closed",
+      "relative_s": 37.69
+    }
+  ],
+  "summary": {
+    "session_id": "019ca0c1-4d2a-745d-828e-48c6fc0cd042",
+    "total_duration_s": 37.85,
+    "total_actions": 15,
+    "successful_actions": 4,
+    "failed_actions": 11,
+    "completion_rate": 0.27,
+    "stuck_events": 0,
+    "error_count": 11,
+    "avg_action_timings": {
+      "scan_feed": 1.02,
+      "open_post": 2.25,
+      "login": 7.97,
+      "write_comment": 0.97,
+      "vote_on_post": 5.38,
+      "return_to_feed": 0.0,
+      "browse_subreddit": 0.0,
+      "open_related_post": 0.0
+    },
+    "action_sequence_actual": [
+      "scan_feed",
+      "open_post",
+      "login",
+      "write_comment",
+      "vote_on_post",
+      "return_to_feed",
+      "open_post",
+      "write_comment",
+      "vote_on_post",
+      "return_to_feed",
+      "browse_subreddit",
+      "open_related_post",
+      "vote_on_post",
+      "browse_subreddit",
+      "open_related_post"
+    ]
+  }
+}
