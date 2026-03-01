@@ -49,7 +49,10 @@ python cluster_demographics.py
 python build_training_data.py
 
 # 6. Fine-tune 3 Mistral models (one per demographic)
+#    Option A: Mistral API fine-tuning (cloud)
 python fine_tune.py
+#    Option B: Local LoRA fine-tuning (requires GPU, e.g. A100)
+python finetune_job.py --all-clusters --skip-inference
 
 # 7. Run all 3 agents against the target app
 python run_agents.py
@@ -58,9 +61,26 @@ python run_agents.py
 cd visualizer && npx next dev -p 3333
 ```
 
+### Linux / GPU Server Setup
+
+If running on a remote GPU server (e.g. Shadeform, Lambda, Brev):
+
+```bash
+# Create a virtual environment and install dependencies
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+playwright install chromium
+
+# Run local LoRA fine-tuning
+python3 finetune_job.py --all-clusters --skip-inference
+```
+
+> **Note:** Always use `python3 -m pip install` (not bare `pip install`) to ensure packages install into the correct interpreter.
+
 ## Prerequisites
 
-- **Python 3.11+**
+- **Python 3.10+**
 - **Mistral API key** — [console.mistral.ai](https://console.mistral.ai/) (for description, fine-tuning, and reports)
 - **AgentQL API key** — [agentql.com](https://www.agentql.com/) (for semantic DOM querying)
 - **PostHog Personal API key** — [posthog.com](https://posthog.com/) (for downloading recordings)
@@ -78,10 +98,15 @@ PosthogAgent/
 ├── download_recordings.py       # Fetch all recordings from PostHog API
 ├── cluster_demographics.py      # Process recordings + K-Means clustering
 ├── build_training_data.py       # Generate fine-tuning JSONL from clusters
-├── fine_tune.py                 # Mistral fine-tuning + W&B tracking
+├── fine_tune.py                 # Mistral API fine-tuning + W&B tracking
+├── finetune_job.py              # Local LoRA fine-tuning (A100 optimized)
 ├── run_agents.py                # Launch 3 demographic agents
+├── evaluation.py                # Weave evaluation scorers
+├── process_synthetic_batch.py   # Batch-process synthetic sessions
+├── generate_all_policies.py     # Batch-generate behavioral policies
 ├── config.py                    # Env vars, validation, paths
-├── run_pipeline.py              # Legacy single-session pipeline
+├── run_pipeline.py              # End-to-end single-session pipeline
+├── agentic_loop.py              # Local model agentic loop (LoRA)
 ├── pipeline/
 │   ├── stage1_parse.py          # PostHog JSON → structured events
 │   ├── stage2_describe.py       # Events → behavioral narrative
@@ -90,9 +115,15 @@ PosthogAgent/
 │   ├── stage5_execute.py        # Legacy: fixed-sequence agent
 │   └── stage5_explore.py        # NEW: autonomous exploratory agent
 ├── feedback/
-│   ├── session_logger.py        # Records agent actions
-│   ├── metrics.py               # Quantitative metrics
-│   └── stage6_report.py         # Feedback report generation
+│   ├── session_logger.py        # Records agent actions + stuck detection
+│   ├── metrics.py               # Quantitative agent vs real-user metrics
+│   └── stage6_report.py         # Qualitative + quantitative UX report
+├── online_pipeline/             # FastAPI server for continuous processing
+│   ├── server.py                # Webhook receiver + REST API
+│   ├── poller.py                # Background PostHog polling
+│   ├── processor.py             # Single-recording pipeline processor
+│   ├── store.py                 # JSON-backed state store
+│   └── retrain.py               # Auto-retrain when new data arrives
 ├── visualizer/                  # Next.js comparative dashboard
 │   └── app/components/
 │       ├── ComparativeDashboard.tsx  # Multi-agent comparison view
@@ -123,12 +154,52 @@ python cluster_demographics.py --clusters 3
 # Build training data with larger context window
 python build_training_data.py --window-size 7
 
-# Fine-tune with a specific base model
+# Fine-tune via Mistral API
 python fine_tune.py --base-model open-mistral-nemo
+
+# Fine-tune locally with LoRA (GPU required)
+python finetune_job.py --all-clusters                    # Train all clusters
+python finetune_job.py --cluster 0 --epochs 3            # Train single cluster
+python finetune_job.py --all-clusters --lora-rank 64     # Higher LoRA rank
+python finetune_job.py --all-clusters --no-wandb          # Disable W&B tracking
+
+# Process synthetic sessions (flat-event JSON format)
+python process_synthetic_batch.py --clusters 3 --concurrency 5
+
+# Generate policies for all described sessions
+python generate_all_policies.py
 
 # Run only one demographic
 python run_agents.py --cluster 0 --max-steps 20 --max-duration 120
+
+# Run the agentic loop with local LoRA model
+python agentic_loop.py --url http://localhost:3000 --app-description "..."
+
+# Run evaluation scorers
+python evaluation.py
+
+# Start the online pipeline server
+uvicorn online_pipeline.server:app --port 8100 --reload
 ```
+
+## Fine-Tuning Options
+
+| Approach | Script | Where | Requirements |
+|---|---|---|---|
+| **Mistral API** | `fine_tune.py` | Cloud (Mistral servers) | `MISTRAL_API_KEY` |
+| **Local LoRA** | `finetune_job.py` | Your GPU server | A100 80GB recommended, PyTorch, PEFT, TRL |
+
+The local LoRA approach fine-tunes **Mistral-7B-Instruct-v0.3** with per-cluster LoRA adapters. It supports Flash Attention 2, fused AdamW, gradient checkpointing, and packing for efficient A100 training.
+
+## Online Pipeline
+
+The `online_pipeline/` module provides a FastAPI server for continuous, webhook-driven processing:
+
+- **`POST /webhook/posthog`** — Receive PostHog webhook events for new recordings
+- **`POST /process/{recording_id}`** — Manually trigger processing
+- **`GET /status`** — Pipeline status and per-cluster counts
+- **`POST /retrain/trigger`** — Retrain clusters that have accumulated new data
+- **`POST /poller/start`** — Start background polling (alternative to webhooks)
 
 ## Output
 
