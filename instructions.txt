@@ -1,0 +1,18 @@
+# 1. Parse → Describe (skips cached) → Embed → Cluster into 5
+python process_synthetic_batch.py \
+    --recordings-dir sessions \
+    --clusters 5 \
+    --concurrency 5 \
+    --skip-training-data
+ 
+# 2. Build per-cluster training data
+python build_training_data.py
+ 
+# 3. Fine-tune 5 LoRA adapters (one per cluster)
+python finetune_job.py --all-clusters --no-wandb --skip-inference
+ 
+# 4. Run agentic loop (auto-classifies into cluster, loads matching adapter)
+python agentic_loop.py \
+    --url http://localhost:3000 \
+    --app-description "A social platform for discovering and sharing experiences in NYC" \
+    --max-steps 20

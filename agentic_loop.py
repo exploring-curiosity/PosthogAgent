@@ -179,29 +179,24 @@ print("=" * 60)
 # ============================================================
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 
 print(f"\nLoading model: {args.model}")
-
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16,
-    bnb_4bit_use_double_quant=True,
-)
+print(f"  Mode: Full bf16 (no quantization — A100 80GB)")
 
 try:
     import flash_attn  # noqa: F401
     attn_impl = "flash_attention_2"
+    print(f"  Using Flash Attention 2")
 except ImportError:
     attn_impl = "sdpa"
+    print(f"  Using SDPA")
 
 model = AutoModelForCausalLM.from_pretrained(
     args.model,
-    quantization_config=bnb_config,
     device_map="auto",
-    torch_dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16,
+    torch_dtype=torch.bfloat16,
     attn_implementation=attn_impl,
     trust_remote_code=True,
 )
@@ -212,13 +207,21 @@ if tokenizer.pad_token is None:
 
 if os.path.exists(adapter_path):
     print(f"Loading LoRA adapter: {adapter_path}")
-    model = PeftModel.from_pretrained(model, adapter_path)
+    model = PeftModel.from_pretrained(model, adapter_path, torch_dtype=torch.bfloat16)
     model = model.merge_and_unload()
     print("  Adapter merged successfully")
 else:
     print(f"WARNING: No adapter at {adapter_path}, using base model")
 
 model.eval()
+
+# torch.compile for faster inference on A100
+try:
+    model = torch.compile(model, mode="reduce-overhead")
+    print("  torch.compile enabled (reduce-overhead mode)")
+except Exception as e:
+    print(f"  torch.compile skipped: {e}")
+
 print("Model ready\n")
 
 
