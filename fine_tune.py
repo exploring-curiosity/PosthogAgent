@@ -26,6 +26,13 @@ from config import (
     ensure_data_dirs,
 )
 
+WANDB_AVAILABLE = False
+try:
+    import wandb
+    WANDB_AVAILABLE = True
+except ImportError:
+    pass
+
 
 def init_wandb(cluster_id: int, cluster_label: str, base_model: str):
     """Initialize W&B run for a fine-tuning job. Returns None if W&B not configured."""
@@ -43,7 +50,11 @@ def init_wandb(cluster_id: int, cluster_label: str, base_model: str):
                 "cluster_id": cluster_id,
                 "cluster_label": cluster_label,
                 "base_model": base_model,
+                "method": "Mistral Fine-Tuning API",
+                "num_clusters": 3,
+                "training_data_source": "PostHog session recordings",
             },
+            tags=["hackathon", "mistral-worldwide", "w&b-finetuning-track", "behavioral-finetuning"],
         )
         return run
     except Exception as e:
@@ -263,6 +274,49 @@ def main():
     with open(models_path, "w") as f:
         json.dump(models, f, indent=2)
     print(f"\nSaved model registry to {models_path}")
+
+    # ── Log W&B Artifacts (training data + model registry) ──
+    if WANDB_API_KEY and WANDB_AVAILABLE:
+        try:
+            wandb.login(key=WANDB_API_KEY)
+            artifact_run = wandb.init(
+                project="agentic-world",
+                name="artifact-upload",
+                job_type="artifact-logging",
+                tags=["hackathon", "mistral-worldwide", "w&b-finetuning-track"],
+            )
+
+            # Log training data as artifact
+            data_artifact = wandb.Artifact(
+                "behavioral-training-data", type="dataset",
+                description="PostHog-derived behavioral session data, clustered into 3 demographics",
+            )
+            for jsonl_file in TRAINING_DIR.glob("*.jsonl"):
+                data_artifact.add_file(str(jsonl_file))
+            wandb.log_artifact(data_artifact)
+            print("  W&B: Logged training data artifact")
+
+            # Log model registry as artifact
+            model_ids = [
+                info.get("model_id") for info in models.values()
+                if info.get("status") == "success" and info.get("model_id")
+            ]
+            model_artifact = wandb.Artifact(
+                "mistral-nemo-behavioral-ft", type="model",
+                description="3 demographic-specific Mistral models fine-tuned on real user behavior",
+                metadata={
+                    "base_model": args.base_model,
+                    "fine_tuned_model_ids": model_ids,
+                    "num_clusters": len(clusters_data["clusters"]),
+                },
+            )
+            model_artifact.add_file(str(models_path))
+            wandb.log_artifact(model_artifact)
+            print("  W&B: Logged model registry artifact")
+
+            wandb.finish()
+        except Exception as e:
+            print(f"  W&B artifact logging failed: {e}")
 
     # Summary
     print(f"\n{'='*60}")
