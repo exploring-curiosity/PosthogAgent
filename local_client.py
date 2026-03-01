@@ -57,12 +57,18 @@ parser.add_argument("--max-duration", type=int, default=300, help="Max session d
 parser.add_argument("--max-retries", type=int, default=3, help="Max retries per failed action")
 parser.add_argument("--temperature", type=float, default=0.7)
 parser.add_argument("--headless", action="store_true", help="Run browser headless")
+parser.add_argument("--api-key", type=str, default="", help="API key for VM service (if SERVICE_API_KEY is set on VM)")
 parser.add_argument("--output-dir", type=str, default="eval_results", help="Directory for result files")
 args = parser.parse_args()
 
 VM_URL = args.vm_url.rstrip("/")
 OUTPUT_DIR = Path(args.output_dir)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+# Build auth headers
+VM_HEADERS = {"Content-Type": "application/json"}
+if args.api_key:
+    VM_HEADERS["Authorization"] = f"Bearer {args.api_key}"
 
 
 # ============================================================
@@ -71,14 +77,14 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 def vm_health() -> dict:
     """Check VM service health."""
-    resp = requests.get(f"{VM_URL}/health", timeout=10)
+    resp = requests.get(f"{VM_URL}/health", headers=VM_HEADERS, timeout=10)
     resp.raise_for_status()
     return resp.json()
 
 
 def vm_get_clusters() -> list[dict]:
     """Get available clusters from VM."""
-    resp = requests.get(f"{VM_URL}/clusters", timeout=10)
+    resp = requests.get(f"{VM_URL}/clusters", headers=VM_HEADERS, timeout=10)
     resp.raise_for_status()
     return resp.json()
 
@@ -100,7 +106,7 @@ def vm_predict(cluster_id: int, page_state: str, action_history: list,
         "temperature": args.temperature,
         "window_size": 5,
     }
-    resp = requests.post(f"{VM_URL}/predict", json=payload, timeout=120)
+    resp = requests.post(f"{VM_URL}/predict", json=payload, headers=VM_HEADERS, timeout=120)
     resp.raise_for_status()
     return resp.json()
 

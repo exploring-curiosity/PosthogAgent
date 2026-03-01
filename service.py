@@ -15,8 +15,14 @@ Endpoints:
     GET  /health          — Health check
 
 Usage (on VM):
+    # Basic (local only)
     python service.py
-    # Listens on 0.0.0.0:8000
+
+    # With ngrok tunnel (accessible from anywhere)
+    NGROK_AUTH_TOKEN=<your-token> python service.py
+
+    # With API key protection
+    NGROK_AUTH_TOKEN=<token> SERVICE_API_KEY=mysecret python service.py
 ============================================================
 """
 
@@ -29,7 +35,8 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Depends
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel, Field
 import uvicorn
 
@@ -54,6 +61,18 @@ ensure_data_dirs()
 model_manager: ModelManager | None = None
 model_lock = threading.Lock()
 _current_cluster_id: int | None = None
+
+# Optional API key auth (set SERVICE_API_KEY env var to enable)
+SERVICE_API_KEY = os.environ.get("SERVICE_API_KEY", "")
+security = HTTPBearer(auto_error=False)
+
+
+async def verify_api_key(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    """If SERVICE_API_KEY is set, require Bearer token auth."""
+    if not SERVICE_API_KEY:
+        return  # no auth required
+    if credentials is None or credentials.credentials != SERVICE_API_KEY:
+        raise HTTPException(status_code=401, detail="Invalid or missing API key")
 
 
 # ============================================================
@@ -228,7 +247,7 @@ def _predict_single(cluster_id: int, req: PredictRequest) -> PredictResponse:
 # ============================================================
 
 @app.post("/predict", response_model=PredictResponse)
-def predict(req: PredictRequest):
+def predict(req: PredictRequest, _auth=Depends(verify_api_key)):
     """Predict the next browser action for a specific cluster model."""
     if model_manager is None:
         raise HTTPException(status_code=503, detail="Model not loaded yet")
@@ -244,7 +263,7 @@ def predict(req: PredictRequest):
 
 
 @app.post("/predict/batch", response_model=list[PredictResponse])
-def predict_batch(req: BatchPredictRequest):
+def predict_batch(req: BatchPredictRequest, _auth=Depends(verify_api_key)):
     """Predict next action from ALL cluster models (or specified subset)."""
     if model_manager is None:
         raise HTTPException(status_code=503, detail="Model not loaded yet")
@@ -289,7 +308,7 @@ def predict_batch(req: BatchPredictRequest):
 
 
 @app.post("/switch/{cluster_id}")
-def switch_cluster(cluster_id: int):
+def switch_cluster(cluster_id: int, _auth=Depends(verify_api_key)):
     """Pre-load a specific cluster's adapter into GPU."""
     if model_manager is None:
         raise HTTPException(status_code=503, detail="Model not loaded yet")
@@ -350,11 +369,44 @@ def health():
 # MAIN
 # ============================================================
 
+def _start_ngrok(port: int):
+    """Start ngrok tunnel and print the public URL."""
+    ngrok_token = os.environ.get("NGROK_AUTH_TOKEN", "")
+    if not ngrok_token:
+        print("\n  No NGROK_AUTH_TOKEN set — running local only (port {port})")
+        print("  To expose publicly: NGROK_AUTH_TOKEN=<token> python service.py")
+        return None
+
+    try:
+        from pyngrok import ngrok, conf
+        conf.get_default().auth_token = ngrok_token
+        tunnel = ngrok.connect(port, "http")
+        public_url = tunnel.public_url
+        print(f"\n{'='*60}")
+        print(f"  NGROK TUNNEL ACTIVE")
+        print(f"  Public URL: {public_url}")
+        print(f"  Use this as --vm-url in local_client.py")
+        if SERVICE_API_KEY:
+            print(f"  API Key:    (set via SERVICE_API_KEY env var)")
+        print(f"{'='*60}\n")
+        return public_url
+    except ImportError:
+        print("\n  pyngrok not installed. Run: pip install pyngrok")
+        print("  Falling back to local-only mode.")
+        return None
+    except Exception as e:
+        print(f"\n  ngrok failed: {e}")
+        print("  Falling back to local-only mode.")
+        return None
+
+
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    _start_ngrok(port)
     uvicorn.run(
         "service:app",
         host="0.0.0.0",
-        port=8000,
+        port=port,
         reload=False,
         workers=1,
     )

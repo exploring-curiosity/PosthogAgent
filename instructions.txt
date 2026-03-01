@@ -12,22 +12,33 @@ python build_training_data.py
 python finetune_job.py --all-clusters --no-wandb --skip-inference
  
 # =============================================
-# 4. ON VM: Start GPU inference service (stays running permanently)
+# 4. ON VM: Start GPU inference service with ngrok tunnel
 # =============================================
-python service.py
-# Listens on 0.0.0.0:8000
-# Models stay loaded in GPU — no reload per request
-# Swagger docs at http://<VM_IP>:8000/docs
+# Install ngrok support
+pip install pyngrok
+
+# Get a free ngrok auth token from https://dashboard.ngrok.com/get-started/your-authtoken
+# Start service with tunnel (public HTTPS URL, accessible from anywhere):
+NGROK_AUTH_TOKEN=<your-ngrok-token> SERVICE_API_KEY=<your-secret> python service.py
+
+# Output will show:
+#   NGROK TUNNEL ACTIVE
+#   Public URL: https://xxxx-xxxx.ngrok-free.app
+#   Use this as --vm-url in local_client.py
+
+# Swagger docs at <ngrok-url>/docs
 
 # =============================================
 # 5. ON LOCAL MACHINE: Run browser evaluation client
 # =============================================
-# This runs AgentQL + Playwright locally, calls VM for predictions.
-# Each cluster model gets its own browser session.
-# Closed feedback loop: error → retry with recovery action up to 3 times.
+# Install deps
+pip install agentql playwright requests
+playwright install chromium
 
+# Run all 5 cluster models against the target URL:
 python local_client.py \
-    --vm-url http://<VM_IP>:8000 \
+    --vm-url https://xxxx-xxxx.ngrok-free.app \
+    --api-key <your-secret> \
     --target-url https://fun-city-xi.vercel.app \
     --description "Sign up for an account and comment on the top thread" \
     --app-name "FunCity" \
@@ -36,7 +47,8 @@ python local_client.py \
 
 # Run specific clusters only:
 python local_client.py \
-    --vm-url http://<VM_IP>:8000 \
+    --vm-url https://xxxx-xxxx.ngrok-free.app \
+    --api-key <your-secret> \
     --target-url https://fun-city-xi.vercel.app \
     --description "Browse posts and upvote content" \
     --clusters 0 2 4
@@ -45,12 +57,14 @@ python local_client.py \
 # Useful API calls (from any machine)
 # =============================================
 # Health check
-curl http://<VM_IP>:8000/health
+curl https://xxxx-xxxx.ngrok-free.app/health
 
 # List clusters + personas
-curl http://<VM_IP>:8000/clusters
+curl -H "Authorization: Bearer <your-secret>" \
+  https://xxxx-xxxx.ngrok-free.app/clusters
 
-# Single prediction (raw API)
-curl -X POST http://<VM_IP>:8000/predict \
+# Single prediction
+curl -X POST https://xxxx-xxxx.ngrok-free.app/predict \
   -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <your-secret>" \
   -d '{"cluster_id": 0, "page_state": "Page: https://example.com — Home", "app_description": "Social forum"}'
