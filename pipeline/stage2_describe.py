@@ -100,6 +100,68 @@ Output as a structured behavioral profile in plain text."""
     return response.choices[0].message.content
 
 
+async def describe_session_async(parsed_session: dict, api_key: str) -> str:
+    """Async version of describe_session for concurrent processing."""
+    from mistralai import Mistral
+
+    client = Mistral(api_key=api_key)
+
+    profile = parsed_session["user_profile"]
+    actions = parsed_session["high_level_actions"]
+    duration = parsed_session["session_duration_s"]
+
+    action_log = build_action_log(actions)
+
+    prompt = f"""You are analyzing a web session recording from a web application.
+The session was recorded via PostHog and parsed into a structured action log.
+
+USER PROFILE:
+- Age group: {profile.get('age_group', 'unknown')}
+- Country: {profile.get('country', 'unknown')}
+- NYC familiarity: {profile.get('nyc_familiarity', 'unknown')}
+- Device: {profile.get('device_type', 'unknown')}, {profile.get('browser', 'unknown')} on {profile.get('os', 'unknown')}
+- Viewport: {profile.get('viewport_width')}x{profile.get('viewport_height')}
+
+SESSION DURATION: {duration} seconds
+
+ACTION LOG:
+{action_log}
+
+Based on this action log, produce a detailed behavioral description covering:
+
+1. NAVIGATION PATTERN: How does this user move through the site? (linear, exploratory, focused, scattered?)
+2. READING BEHAVIOR: Do they read deeply or skim? How do scroll patterns indicate this?
+3. ENGAGEMENT STYLE: Do they vote, comment, or both? How quickly? What's their vote-to-comment ratio?
+4. INTERACTION SPEED: Are they fast or deliberate? How long between actions?
+5. CONTENT PREFERENCES: What types of content/subreddits did they gravitate toward?
+6. TYPING BEHAVIOR: How fast do they type? Did they make corrections? How long are their inputs?
+7. FEATURE DISCOVERY: Which features did they find and use? Which did they ignore?
+8. SESSION FLOW: Describe the overall arc of the session (exploration -> engagement -> browsing -> exit)
+
+Be specific and quantitative. Reference actual timestamps and actions.
+Do NOT speculate beyond what the data shows.
+Output as a structured behavioral profile in plain text."""
+
+    response = await client.chat.complete_async(
+        model="mistral-large-latest",
+        messages=[{"role": "user", "content": prompt}],
+    )
+
+    return response.choices[0].message.content
+
+
+async def describe_and_save_async(parsed_session: dict, api_key: str, output_path: str | None = None) -> str:
+    """Async version of describe_and_save."""
+    description = await describe_session_async(parsed_session, api_key)
+
+    if output_path:
+        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, "w") as f:
+            f.write(description)
+
+    return description
+
+
 def describe_and_save(parsed_session: dict, api_key: str, output_path: str | None = None) -> str:
     """Run Stage 2 and optionally save the output."""
     description = describe_session(parsed_session, api_key)

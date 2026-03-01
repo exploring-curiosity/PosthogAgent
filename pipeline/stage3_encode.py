@@ -41,6 +41,37 @@ def encode_multiple_sessions(session_descriptions: list[str], api_key: str) -> l
     return [item.embedding for item in response.data]
 
 
+async def encode_and_save_async(
+    behavioral_description: str,
+    user_profile: dict,
+    api_key: str,
+    output_path: str | None = None,
+) -> dict:
+    """Async version of encode_and_save."""
+    client = Mistral(api_key=api_key)
+
+    response = await client.embeddings.create_async(
+        model="mistral-embed",
+        inputs=[behavioral_description],
+    )
+
+    embedding = response.data[0].embedding
+
+    result = {
+        "session_id": user_profile.get("session_id"),
+        "demographics": user_profile,
+        "embedding_dim": len(embedding),
+        "embedding": embedding,
+    }
+
+    if output_path:
+        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, "w") as f:
+            json.dump(result, f, indent=2)
+
+    return result
+
+
 def encode_and_save(
     behavioral_description: str,
     user_profile: dict,

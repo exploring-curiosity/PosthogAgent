@@ -20,7 +20,9 @@ Usage:
 import json
 import sys
 import pickle
+import asyncio
 import argparse
+import time
 import numpy as np
 from pathlib import Path
 from collections import Counter
@@ -38,8 +40,8 @@ from config import (
     TRAINING_DIR,
     ensure_data_dirs,
 )
-from pipeline.stage2_describe import describe_and_save
-from pipeline.stage3_encode import encode_and_save
+from pipeline.stage2_describe import describe_and_save, describe_and_save_async
+from pipeline.stage3_encode import encode_and_save, encode_and_save_async
 
 
 # ── Step 1: Synthetic adapter ──────────────────────────────────────────────
@@ -298,6 +300,114 @@ def build_training_data(cluster_data: dict, window_size: int = 5, val_split: flo
     return total_train, total_val
 
 
+# ── Async PHASE 1 orchestrator ─────────────────────────────────────────────
+
+async def _process_one_session(
+    sid: str,
+    parsed: dict,
+    profile: dict,
+    num_actions: int,
+    semaphore: asyncio.Semaphore,
+    index: int,
+    total: int,
+) -> dict | None:
+    """Describe + embed a single session, respecting the concurrency semaphore."""
+    desc_path = DESCRIPTIONS_DIR / f"description_{sid}.txt"
+    embed_path = EMBEDDINGS_DIR / f"embedding_{sid}.json"
+
+    # ── Describe ──
+    if desc_path.exists():
+        description = desc_path.read_text()
+    else:
+        async with semaphore:
+            print(f"  [{index}/{total}] {sid}: describing...")
+            try:
+                description = await describe_and_save_async(parsed, MISTRAL_API_KEY, str(desc_path))
+            except Exception as e:
+                print(f"  [{index}/{total}] {sid}: describe FAILED: {e}")
+                return None
+
+    # ── Embed ──
+    if embed_path.exists():
+        with open(embed_path) as f:
+            embed_result = json.load(f)
+    else:
+        async with semaphore:
+            print(f"  [{index}/{total}] {sid}: embedding...")
+            try:
+                embed_result = await encode_and_save_async(description, profile, MISTRAL_API_KEY, str(embed_path))
+            except Exception as e:
+                print(f"  [{index}/{total}] {sid}: embed FAILED: {e}")
+                return None
+
+    print(f"  [{index}/{total}] {sid}: done ({len(description)} chars, {embed_result.get('embedding_dim','?')}d)")
+
+    return {
+        "session_id": sid,
+        "profile": profile,
+        "num_actions": num_actions,
+        "duration_s": parsed.get("session_duration_s", 0),
+        "description_path": str(desc_path),
+        "embedding": embed_result["embedding"],
+    }
+
+
+async def _phase1_async(
+    session_files: list[Path],
+    min_actions: int,
+    concurrency: int,
+) -> list[dict]:
+    """Parse all sessions (sync), then describe+embed concurrently."""
+
+    # Step 1: Parse all sessions synchronously (fast, no API calls)
+    parsed_sessions = []
+    for i, sf in enumerate(session_files):
+        with open(sf) as f:
+            raw = json.load(f)
+        sid = raw["id"]
+
+        parsed_path = PARSED_DIR / f"parsed_{sid}.json"
+        if parsed_path.exists():
+            with open(parsed_path) as f:
+                parsed = json.load(f)
+        else:
+            try:
+                parsed = parse_synthetic_session(sf)
+                with open(parsed_path, "w") as f:
+                    json.dump(parsed, f, indent=2)
+            except Exception as e:
+                print(f"  {sid}: parse FAILED: {e}")
+                continue
+
+        num_actions = len(parsed.get("high_level_actions", []))
+        if num_actions < min_actions:
+            print(f"  {sid}: skipped ({num_actions} actions < {min_actions})")
+            continue
+
+        parsed_sessions.append((sid, parsed, parsed.get("user_profile", {}), num_actions))
+
+    print(f"\n  Parsed {len(parsed_sessions)}/{len(session_files)} sessions (passed min-actions filter)")
+
+    # Step 2: Describe + Embed concurrently
+    sem = asyncio.Semaphore(concurrency)
+    total = len(parsed_sessions)
+    t0 = time.time()
+
+    tasks = [
+        _process_one_session(sid, parsed, profile, n_act, sem, i + 1, total)
+        for i, (sid, parsed, profile, n_act) in enumerate(parsed_sessions)
+    ]
+
+    results = await asyncio.gather(*tasks)
+    elapsed = time.time() - t0
+
+    sessions = [r for r in results if r is not None]
+    print(f"\n  Completed {len(sessions)}/{total} sessions in {elapsed:.1f}s "
+          f"({elapsed / max(len(sessions), 1):.1f}s avg per session)")
+
+    return sessions
+
+
 # ── Main orchestrator ──────────────────────────────────────────────────────
 
 def main():
@@ -312,6 +422,10 @@ def main():
     parser.add_argument("--min-actions", type=int, default=3, help="Min high-level actions to include a session")
     parser.add_argument("--window-size", type=int, default=5, help="Sliding window size for training data")
     parser.add_argument("--val-split", type=float, default=0.1, help="Validation split ratio")
+    parser.add_argument(
+        "--concurrency", "-j", type=int, default=5,
+        help="Max concurrent Mistral API calls (default: 5)"
+    )
     parser.add_argument(
         "--skip-training-data", action="store_true",
         help="Skip Step 7 (training data generation). Useful if you just want clustering."
@@ -339,85 +453,17 @@ def main():
     print(f"  Sessions found: {len(session_files)}")
     print(f"  K (clusters):   {args.clusters}")
     print(f"  Min actions:    {args.min_actions}")
+    print(f"  Concurrency:    {args.concurrency}")
     print("=" * 60)
 
-    # ── PHASE 1: Parse + Describe + Embed ──
+    # ── PHASE 1: Parse (sync) + Describe + Embed (async concurrent) ──
     print(f"\n{'='*60}")
-    print("PHASE 1: Parse → Describe → Embed (per session)")
+    print(f"PHASE 1: Parse → Describe → Embed (concurrency={args.concurrency})")
     print("=" * 60)
 
-    sessions = []  # metadata for clustering
-
-    for i, sf in enumerate(session_files):
-        with open(sf) as f:
-            raw = json.load(f)
-        sid = raw["id"]
-        print(f"\n[{i+1}/{len(session_files)}] {sid} ({sf.name})")
-
-        # Step 1: Parse
-        parsed_path = PARSED_DIR / f"parsed_{sid}.json"
-        if parsed_path.exists():
-            print(f"  Step 1 (parse): cached")
-            with open(parsed_path) as f:
-                parsed = json.load(f)
-        else:
-            print(f"  Step 1 (parse): converting synthetic events...")
-            try:
-                parsed = parse_synthetic_session(sf)
-                with open(parsed_path, "w") as f:
-                    json.dump(parsed, f, indent=2)
-            except Exception as e:
-                print(f"  FAILED: {e}")
-                continue
-
-        num_actions = len(parsed.get("high_level_actions", []))
-        print(f"    {num_actions} high-level actions, {parsed.get('session_duration_s', 0):.1f}s duration")
-
-        if num_actions < args.min_actions:
-            print(f"    Skipped: only {num_actions} actions (min={args.min_actions})")
-            continue
-
-        profile = parsed.get("user_profile", {})
-
-        # Step 2: Describe
-        desc_path = DESCRIPTIONS_DIR / f"description_{sid}.txt"
-        if desc_path.exists():
-            print(f"  Step 2 (describe): cached")
-            description = desc_path.read_text()
-        else:
-            print(f"  Step 2 (describe): generating via Mistral Large...")
-            try:
-                description = describe_and_save(parsed, MISTRAL_API_KEY, str(desc_path))
-            except Exception as e:
-                print(f"  FAILED: {e}")
-                continue
-
-        print(f"    {len(description)} chars")
-
-        # Step 3: Embed
-        embed_path = EMBEDDINGS_DIR / f"embedding_{sid}.json"
-        if embed_path.exists():
-            print(f"  Step 3 (embed): cached")
-            with open(embed_path) as f:
-                embed_result = json.load(f)
-        else:
-            print(f"  Step 3 (embed): encoding via Mistral Embed...")
-            try:
-                embed_result = encode_and_save(description, profile, MISTRAL_API_KEY, str(embed_path))
-            except Exception as e:
-                print(f"  FAILED: {e}")
-                continue
-
-        print(f"    {embed_result.get('embedding_dim', '?')}d embedding")
-
-        sessions.append({
-            "session_id": sid,
-            "profile": profile,
-            "num_actions": num_actions,
-            "duration_s": parsed.get("session_duration_s", 0),
-            "description_path": str(desc_path),
-            "embedding": embed_result["embedding"],
-        })
+    sessions = asyncio.run(_phase1_async(
+        session_files, args.min_actions, args.concurrency,
+    ))
 
     if not sessions:
         print("\nERROR: No valid sessions after processing. Check your data.")
