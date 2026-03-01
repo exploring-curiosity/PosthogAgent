@@ -53,7 +53,7 @@ import uvicorn
 WEAVE_AVAILABLE = False
 try:
     import weave
-    weave.init("agentic-world")
+    weave.init("amaan784-columbia-university/agentic-world")
     WEAVE_AVAILABLE = True
 except Exception:
     pass
