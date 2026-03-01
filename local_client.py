@@ -118,9 +118,10 @@ def vm_predict(cluster_id: int, page_state: str, action_history: list,
 def observe_page(page) -> str:
     """Get rich page state using Playwright selectors.
 
-    Captures: URL, title, all links (text + href), buttons, inputs with
-    labels/placeholders, headings, and visible text blocks so the model
-    can make informed, task-directed decisions.
+    Captures: URL, title, clickable elements (links + buttons merged),
+    input fields, headings, and visible text content. Each clickable
+    element shows its exact text so the model can use it directly as
+    a click target.
     """
     try:
         url = page.url
@@ -130,58 +131,67 @@ def observe_page(page) -> str:
 
     parts = [f"URL: {url}", f"Title: {title}", ""]
 
-    # --- Links (with href so model knows where they go) ---
+    # --- Clickable elements (links + buttons merged) ---
+    clickable_items = []
+    seen_texts = set()
+
+    # Links
     try:
         links = page.locator("a:visible").all()
-        if links:
-            link_items = []
-            for el in links[:15]:
-                try:
-                    text = el.inner_text().strip().replace("\n", " ")[:40]
-                    href = el.get_attribute("href") or ""
-                    if text:
-                        link_items.append(f'  - "{text}" → {href[:60]}')
-                except Exception:
-                    pass
-            if link_items:
-                parts.append("Links:")
-                parts.extend(link_items)
+        for el in links[:20]:
+            try:
+                text = el.inner_text().strip().replace("\n", " ")[:50]
+                href = el.get_attribute("href") or ""
+                if text and text.lower() not in seen_texts:
+                    seen_texts.add(text.lower())
+                    if href:
+                        clickable_items.append(f'  - [link] "{text}" → {href[:60]}')
+                    else:
+                        clickable_items.append(f'  - [link] "{text}"')
+            except Exception:
+                pass
     except Exception:
         pass
 
-    # --- Buttons ---
+    # Buttons
     try:
         buttons = page.locator("button:visible, [role='button']:visible, input[type='submit']:visible").all()
-        if buttons:
-            btn_items = []
-            for el in buttons[:10]:
-                try:
-                    text = el.inner_text().strip().replace("\n", " ")[:40]
-                    if not text:
-                        text = el.get_attribute("aria-label") or el.get_attribute("value") or ""
-                    if text:
-                        btn_items.append(f'  - "{text}"')
-                except Exception:
-                    pass
-            if btn_items:
-                parts.append("Buttons:")
-                parts.extend(btn_items)
+        for el in buttons[:10]:
+            try:
+                text = el.inner_text().strip().replace("\n", " ")[:50]
+                if not text:
+                    text = el.get_attribute("aria-label") or el.get_attribute("value") or ""
+                if text and text.lower() not in seen_texts:
+                    seen_texts.add(text.lower())
+                    clickable_items.append(f'  - [button] "{text}"')
+            except Exception:
+                pass
     except Exception:
         pass
+
+    if clickable_items:
+        parts.append("Clickable elements (use exact text in quotes for click target):")
+        parts.extend(clickable_items[:20])
 
     # --- Input fields (with labels/placeholders) ---
     try:
-        inputs = page.locator("input:visible, textarea:visible, select:visible").all()
+        inputs = page.locator("input:visible:not([type='hidden']), textarea:visible, select:visible").all()
         if inputs:
             input_items = []
             for el in inputs[:10]:
                 try:
                     input_type = el.get_attribute("type") or "text"
+                    if input_type == "hidden":
+                        continue
                     placeholder = el.get_attribute("placeholder") or ""
                     name = el.get_attribute("name") or ""
                     aria_label = el.get_attribute("aria-label") or ""
                     label = placeholder or aria_label or name or input_type
-                    value = el.input_value()[:20] if input_type not in ("password", "hidden") else ""
+                    value = ""
+                    try:
+                        value = el.input_value()[:20] if input_type not in ("password",) else ""
+                    except Exception:
+                        pass
                     desc = f'  - [{input_type}] "{label}"'
                     if value:
                         desc += f' (current: "{value}")'
@@ -189,7 +199,7 @@ def observe_page(page) -> str:
                 except Exception:
                     pass
             if input_items:
-                parts.append("Input fields:")
+                parts.append("Input fields (use label in quotes for type target):")
                 parts.extend(input_items)
     except Exception:
         pass
@@ -287,10 +297,15 @@ def execute_action(page, action_data: dict, home_url: str) -> tuple[bool, str]:
 
 def _click(page, target: str) -> tuple[bool, str]:
     semantic = target.strip()
+    if not semantic:
+        return False, "Empty click target"
 
-    # AgentQL semantic query
+    # Clean up the target text (remove quotes, extra whitespace)
+    clean = semantic.strip('"\' ').strip()
+
+    # Strategy 1: AgentQL semantic query
     try:
-        escaped = semantic[:100].replace('"', '\\"')
+        escaped = clean[:100].replace('"', '\\"')
         query = f"""{{ target_element(description: "{escaped}") }}"""
         response = page.query_elements(query)
         if response.target_element:
@@ -300,34 +315,83 @@ def _click(page, target: str) -> tuple[bool, str]:
     except Exception:
         pass
 
-    # Playwright text fallback
+    # Strategy 2: Exact text match on clickable elements (links, buttons)
+    for selector in [
+        f'a:visible:text-is("{clean}")',
+        f'button:visible:text-is("{clean}")',
+        f'[role="button"]:visible:text-is("{clean}")',
+        f'input[type="submit"][value="{clean}"]:visible',
+    ]:
+        try:
+            loc = page.locator(selector).first
+            if loc.is_visible(timeout=1000):
+                loc.click()
+                time.sleep(0.5)
+                return True, ""
+        except Exception:
+            pass
+
+    # Strategy 3: Case-insensitive partial text match on clickable elements
+    clean_lower = clean.lower()
     try:
-        text_match = re.search(r'"([^"]+)"', semantic)
-        if text_match:
-            text = text_match.group(1)
-            loc = page.locator(f"*:has-text('{text}')").first
-            if loc.is_visible(timeout=3000):
+        for tag in ["a", "button", "[role='button']", "input[type='submit']"]:
+            elements = page.locator(f"{tag}:visible").all()
+            for el in elements:
+                try:
+                    el_text = (el.inner_text() or "").strip()
+                    el_value = el.get_attribute("value") or ""
+                    el_aria = el.get_attribute("aria-label") or ""
+                    combined = f"{el_text} {el_value} {el_aria}".lower()
+                    if clean_lower in combined or combined.strip() and clean_lower in combined:
+                        el.click()
+                        time.sleep(0.5)
+                        return True, ""
+                except Exception:
+                    pass
+    except Exception:
+        pass
+
+    # Strategy 4: get_by_role for common interactive elements
+    for role in ["link", "button", "menuitem", "tab"]:
+        try:
+            loc = page.get_by_role(role, name=re.compile(re.escape(clean), re.IGNORECASE)).first
+            if loc.is_visible(timeout=1000):
+                loc.click()
+                time.sleep(0.5)
+                return True, ""
+        except Exception:
+            pass
+
+    # Strategy 5: Broad text search across all visible elements
+    try:
+        loc = page.get_by_text(re.compile(re.escape(clean), re.IGNORECASE)).first
+        if loc.is_visible(timeout=1000):
+            loc.click()
+            time.sleep(0.5)
+            return True, ""
+    except Exception:
+        pass
+
+    # Strategy 6: If target looks like a CSS selector or contains tag hints
+    try:
+        tag_match = re.match(r'^(button|a|link|input|span|div|h[1-6])\b', clean, re.IGNORECASE)
+        if tag_match:
+            tag = tag_match.group(1).lower()
+            if tag == "link":
+                tag = "a"
+            rest = clean[len(tag_match.group(0)):].strip()
+            if rest:
+                loc = page.locator(f"{tag}:visible:has-text('{rest}')").first
+            else:
+                loc = page.locator(f"{tag}:visible").first
+            if loc.is_visible(timeout=1000):
                 loc.click()
                 time.sleep(0.5)
                 return True, ""
     except Exception:
         pass
 
-    # Tag-based fallback
-    try:
-        tag_match = re.match(r'^(\w+)', semantic)
-        if tag_match:
-            tag = tag_match.group(1).lower()
-            if tag in ("button", "a", "link", "input", "span", "div", "h1", "h2", "h3"):
-                loc = page.locator(f"{tag}:visible").first
-                if loc.is_visible(timeout=2000):
-                    loc.click()
-                    time.sleep(0.5)
-                    return True, ""
-    except Exception:
-        pass
-
-    return False, f"Could not find element: {semantic[:60]}"
+    return False, f"Could not find element: {clean[:60]}"
 
 
 def _scroll(page, target: str) -> tuple[bool, str]:
@@ -385,35 +449,73 @@ def _type(page, target: str) -> tuple[bool, str]:
         semantic = parts[0].strip()
         text_to_type = parts[1].strip()
 
-    # AgentQL
+    clean = semantic.strip('"\' ').strip()
+
+    def _do_type(el):
+        """Type text into a found element."""
+        el.click()
+        time.sleep(0.1)
+        el.fill("")  # clear first
+        txt = text_to_type if text_to_type else random.choice([
+            "Hello world", "Testing 123", "Great post!",
+            "This is interesting", "Love this place", "Check this out",
+        ])
+        el.type(txt, delay=random.randint(50, 120))
+        time.sleep(0.3)
+        return True, ""
+
+    # Strategy 1: AgentQL semantic query
     try:
-        escaped = semantic[:100].replace('"', '\\"')
+        escaped = clean[:100].replace('"', '\\"')
         query = f"""{{ input_field(description: "{escaped}") }}"""
         response = page.query_elements(query)
         if response.input_field:
-            response.input_field.click()
-            if text_to_type:
-                response.input_field.type(text_to_type, delay=random.randint(50, 120))
-            else:
-                sample_texts = [
-                    "Hello world", "Testing 123", "Great post!",
-                    "This is interesting", "Love this place", "Check this out",
-                ]
-                response.input_field.type(random.choice(sample_texts), delay=random.randint(50, 120))
-            time.sleep(0.3)
-            return True, ""
+            return _do_type(response.input_field)
     except Exception:
         pass
 
-    # Playwright fallback
+    # Strategy 2: get_by_placeholder (most reliable for labeled inputs)
+    if clean:
+        try:
+            loc = page.get_by_placeholder(re.compile(re.escape(clean), re.IGNORECASE)).first
+            if loc.is_visible(timeout=1000):
+                return _do_type(loc)
+        except Exception:
+            pass
+
+    # Strategy 3: get_by_label
+    if clean:
+        try:
+            loc = page.get_by_label(re.compile(re.escape(clean), re.IGNORECASE)).first
+            if loc.is_visible(timeout=1000):
+                return _do_type(loc)
+        except Exception:
+            pass
+
+    # Strategy 4: Match by name/placeholder/aria-label attributes
+    if clean:
+        clean_lower = clean.lower()
+        try:
+            inputs = page.locator("input:visible, textarea:visible, select:visible").all()
+            for inp in inputs:
+                try:
+                    ph = (inp.get_attribute("placeholder") or "").lower()
+                    nm = (inp.get_attribute("name") or "").lower()
+                    al = (inp.get_attribute("aria-label") or "").lower()
+                    itype = (inp.get_attribute("type") or "").lower()
+                    combined = f"{ph} {nm} {al} {itype}"
+                    if clean_lower in combined:
+                        return _do_type(inp)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+    # Strategy 5: Any visible input/textarea
     try:
-        inputs = page.locator("input:visible, textarea:visible")
+        inputs = page.locator("input:visible:not([type='hidden']):not([type='submit']), textarea:visible")
         if inputs.count() > 0:
-            inp = inputs.first
-            inp.click()
-            inp.type("Test input", delay=80)
-            time.sleep(0.3)
-            return True, ""
+            return _do_type(inputs.first)
     except Exception as e:
         return False, f"Type failed: {e}"
 
