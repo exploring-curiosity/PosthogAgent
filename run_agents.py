@@ -31,8 +31,25 @@ from config import (
 )
 from pipeline.stage5_explore import ExploratoryAgent
 from feedback.session_logger import SessionLogger
+from evaluation import run_all_evaluations
+
+# ── Weave tracing ──
+try:
+    import weave
+    weave.init("agentic-world")
+    WEAVE_AVAILABLE = True
+except Exception:
+    WEAVE_AVAILABLE = False
 
 
+def _weave_op(fn):
+    """Apply @weave.op() if Weave is available, otherwise return fn unchanged."""
+    if WEAVE_AVAILABLE:
+        return weave.op()(fn)
+    return fn
+
+
+@_weave_op
 def load_config() -> tuple[dict, dict]:
     """Load models and clusters config."""
     models_path = MODELS_DIR / "models.json"
@@ -53,6 +70,7 @@ def load_config() -> tuple[dict, dict]:
     return models, clusters
 
 
+@_weave_op
 def run_single_agent(cluster: dict, model_id: str, target_url: str,
                      max_steps: int, max_duration: int) -> tuple[dict, str, dict]:
     """Run one agent and return (summary, narrative, logger_dict)."""
@@ -87,6 +105,7 @@ def run_single_agent(cluster: dict, model_id: str, target_url: str,
     return summary, narrative, logger.to_dict()
 
 
+@_weave_op
 def generate_comparative_report(
     all_summaries: list[dict],
     all_narratives: list[str],
@@ -212,6 +231,21 @@ def main():
             summary, narrative, log_dict = run_single_agent(
                 cluster, model_id, target_url, args.max_steps, args.max_duration
             )
+
+            # Run Weave evaluations
+            try:
+                eval_results = run_all_evaluations(summary, cluster)
+                summary["evaluations"] = eval_results
+                print(f"\n  Evaluations:")
+                for scorer, scores in eval_results.items():
+                    key_score = next(
+                        (v for k, v in scores.items() if "score" in k or "rate" in k),
+                        "N/A",
+                    )
+                    print(f"    {scorer}: {key_score}")
+            except Exception as eval_err:
+                print(f"  Evaluation failed: {eval_err}")
+
             all_summaries.append(summary)
             all_narratives.append(narrative)
             all_logs.append(log_dict)

@@ -7,8 +7,24 @@ to produce a detailed behavioral profile of the user's session.
 """
 
 import json
+import os
 from pathlib import Path
 from mistralai import Mistral
+
+
+def _get_nvidia_client():
+    """Return an OpenAI-compatible client for build.nvidia.com, or None if not configured."""
+    nvidia_key = os.environ.get("NVIDIA_API_KEY", "")
+    if not nvidia_key:
+        return None
+    try:
+        from openai import OpenAI
+        return OpenAI(
+            base_url="https://integrate.api.nvidia.com/v1",
+            api_key=nvidia_key,
+        )
+    except ImportError:
+        return None
 
 
 def build_action_log(actions: list[dict]) -> str:
@@ -92,6 +108,20 @@ Be specific and quantitative. Reference actual timestamps and actions.
 Do NOT speculate beyond what the data shows.
 Output as a structured behavioral profile in plain text."""
 
+    # Try NVIDIA build.nvidia.com endpoint first (for on-device track)
+    nvidia_client = _get_nvidia_client()
+    if nvidia_client:
+        try:
+            print("  Using NVIDIA build.nvidia.com endpoint (Mistral Large 3)...")
+            response = nvidia_client.chat.completions.create(
+                model="mistralai/mistral-large-3-instruct",
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"  NVIDIA endpoint failed ({e}), falling back to Mistral API...")
+
+    # Fallback: direct Mistral API
     response = client.chat.complete(
         model="mistral-large-latest",
         messages=[{"role": "user", "content": prompt}],

@@ -189,7 +189,11 @@ def train_cluster(cluster_id: int) -> dict:
                 "lora_alpha": cli_args.lora_alpha,
                 "epochs": cli_args.epochs,
                 "learning_rate": cli_args.learning_rate,
+                "method": "LoRA (QLoRA-style, A100 optimized)",
+                "num_clusters": len(cluster_ids),
+                "training_data_source": "PostHog session recordings",
             },
+            tags=["hackathon", "mistral-worldwide", "w&b-finetuning-track", "behavioral-finetuning", "lora"],
             reinit=True,
         )
 
@@ -309,10 +313,23 @@ def train_cluster(cluster_id: int) -> dict:
             "training_time_s": train_result.metrics["train_runtime"],
             "peak_vram_gb": peak_memory,
         })
+        wandb.summary["status"] = "success"
+        wandb.summary["final_train_loss"] = train_result.training_loss
+        wandb.summary["final_eval_loss"] = eval_results["eval_loss"]
+
         adapter_artifact = wandb.Artifact(
             name=f"cluster-{cluster_id}-lora",
             type="model",
-            metadata={"cluster_id": cluster_id, "cluster_label": label},
+            description=f"LoRA adapter for {label} demographic, fine-tuned on real user behavior",
+            metadata={
+                "cluster_id": cluster_id,
+                "cluster_label": label,
+                "base_model": cli_args.model,
+                "lora_rank": cli_args.lora_rank,
+                "train_examples": len(train_dataset),
+                "final_train_loss": train_result.training_loss,
+                "final_eval_loss": eval_results["eval_loss"],
+            },
         )
         adapter_artifact.add_dir(output_dir)
         run.log_artifact(adapter_artifact)
@@ -364,5 +381,45 @@ summary_path = MODELS_DIR / "training_summary.json"
 with open(summary_path, "w") as f:
     json.dump(results, f, indent=2)
 print(f"\nSummary saved to {summary_path}")
+
+# ── Log W&B Artifacts (training data + full summary) ──
+if USE_WANDB:
+    try:
+        artifact_run = wandb.init(
+            project=os.environ.get("WANDB_PROJECT", "agentic-world"),
+            name="lora-artifact-upload",
+            job_type="artifact-logging",
+            tags=["hackathon", "mistral-worldwide", "w&b-finetuning-track"],
+            reinit=True,
+        )
+
+        # Log training data as artifact
+        data_artifact = wandb.Artifact(
+            "behavioral-training-data", type="dataset",
+            description="PostHog-derived behavioral session data, clustered into demographics",
+        )
+        for jsonl_file in TRAINING_DIR.glob("*.jsonl"):
+            data_artifact.add_file(str(jsonl_file))
+        wandb.log_artifact(data_artifact)
+        print("  W&B: Logged training data artifact")
+
+        # Log training summary as artifact
+        summary_artifact = wandb.Artifact(
+            "lora-training-summary", type="model",
+            description="Training summary for all LoRA demographic adapters",
+            metadata={
+                "base_model": cli_args.model,
+                "num_clusters": len(cluster_ids),
+                "completed": sum(1 for r in results if r["status"] == "completed"),
+            },
+        )
+        summary_artifact.add_file(str(summary_path))
+        wandb.log_artifact(summary_artifact)
+        print("  W&B: Logged training summary artifact")
+
+        wandb.finish()
+    except Exception as e:
+        print(f"  W&B artifact logging failed: {e}")
+
 print(f"\nNext step: python agentic_loop.py --url <sandbox_url> --app-description \"...\"")
 print("=" * 60)

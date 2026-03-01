@@ -16,6 +16,12 @@ load_dotenv(_env_path)
 MISTRAL_API_KEY: str = os.environ.get("MISTRAL_API_KEY", "")
 AGENTQL_API_KEY: str = os.environ.get("AGENTQL_API_KEY", "")
 WANDB_API_KEY: str = os.environ.get("WANDB_API_KEY", "")
+NVIDIA_API_KEY: str = os.environ.get("NVIDIA_API_KEY", "")
+
+# ── WhiteCircle ──
+WHITECIRCLE_API_KEY: str = os.environ.get("WHITECIRCLE_API_KEY", "")
+WHITECIRCLE_API_URL: str = os.environ.get("WHITECIRCLE_API_URL", "https://us.whitecircle.ai/api/v1")
+WHITECIRCLE_DEPLOYMENT_ID: str = os.environ.get("WHITECIRCLE_DEPLOYMENT_ID", "")
 
 # ── PostHog ──
 POSTHOG_PERSONAL_API_KEY: str = os.environ.get("POSTHOG_PERSONAL_API_KEY", "")

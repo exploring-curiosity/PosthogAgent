@@ -10,14 +10,67 @@ SAFETY: Inherits production URL blocking from config.py.
 """
 
 import json
+import os
 import random
 import time
 from pathlib import Path
 from typing import Optional
 
 import agentql
+import requests
 from playwright.sync_api import sync_playwright
 from mistralai import Mistral
+
+# ── Weave tracing (optional) ──
+WEAVE_AVAILABLE = False
+try:
+    import weave
+    WEAVE_AVAILABLE = True
+except ImportError:
+    pass
+
+
+def _weave_op(fn):
+    """Apply @weave.op() if Weave is available, otherwise return fn unchanged."""
+    if WEAVE_AVAILABLE:
+        return weave.op()(fn)
+    return fn
+
+
+# ── WhiteCircle quality guard ──
+
+def check_whitecircle(user_msg: str, model_output: str) -> dict:
+    """Check model output quality against WhiteCircle policies."""
+    api_key = os.environ.get("WHITECIRCLE_API_KEY", "")
+    api_url = os.environ.get("WHITECIRCLE_API_URL", "https://us.whitecircle.ai/api/v1")
+    deployment_id = os.environ.get("WHITECIRCLE_DEPLOYMENT_ID", "")
+
+    if not api_key or not deployment_id:
+        return {"skipped": True, "reason": "WhiteCircle not configured"}
+
+    try:
+        response = requests.post(
+            f"{api_url}/session/check-session",
+            json={
+                "deployment_id": deployment_id,
+                "messages": [
+                    {"role": "user", "content": user_msg},
+                    {"role": "assistant", "content": model_output},
+                ],
+            },
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            timeout=10,
+        )
+        return response.json()
+    except Exception as e:
+        return {"error": str(e), "skipped": True}
+
+
+# Wrap with Weave if available (connects Track 1 + Track 3)
+check_whitecircle = _weave_op(check_whitecircle)
 
 
 class ExploratoryAgent:
@@ -203,6 +256,7 @@ class ExploratoryAgent:
 
     # ─── DECISION MAKING ───
 
+    @_weave_op
     def _decide_next_action(self, page_state: dict) -> dict:
         """Ask the fine-tuned model what to do next."""
         system_prompt = self._build_system_prompt()
@@ -282,6 +336,7 @@ You are exploring a web application. Based on the current page state and your re
 
     # ─── ACTION EXECUTION ───
 
+    @_weave_op
     def _execute_action(self, decision: dict) -> dict:
         """Execute the model's decision on the page. Returns execution result."""
         action = decision.get("action", "scroll")
@@ -470,6 +525,7 @@ You are exploring a web application. Based on the current page state and your re
 
     # ─── MAIN EXECUTION LOOP ───
 
+    @_weave_op
     def run(self) -> dict:
         """Autonomous exploration loop. Returns session summary."""
         from feedback.session_logger import StuckDetector
@@ -525,6 +581,15 @@ You are exploring a web application. Based on the current page state and your re
             print(f"  Decision: {decision.get('action', '?')} -> {decision.get('target', '?')[:50]}")
             if decision.get("reasoning"):
                 print(f"  Reasoning: {decision['reasoning'][:80]}")
+
+            # 2.5. WhiteCircle quality guard
+            wc_result = check_whitecircle(
+                json.dumps(page_state)[:500],
+                json.dumps(decision),
+            )
+            if wc_result.get("policy_violations"):
+                print(f"  WhiteCircle: policy violation detected, regenerating...")
+                decision = self._decide_next_action(page_state)
 
             # 3. Execute
             result = self._execute_action(decision)
@@ -589,6 +654,7 @@ You are exploring a web application. Based on the current page state and your re
 
     # ─── NARRATIVE GENERATION ───
 
+    @_weave_op
     def generate_narrative(self, session_summary: dict) -> str:
         """Generate a first-person narrative report from this demographic's perspective."""
         label = self.demographic.get("label", "Unknown")
