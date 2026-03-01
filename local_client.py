@@ -116,60 +116,132 @@ def vm_predict(cluster_id: int, page_state: str, action_history: list,
 # ============================================================
 
 def observe_page(page) -> str:
-    """Get current page state via AgentQL."""
+    """Get rich page state using Playwright selectors.
+
+    Captures: URL, title, all links (text + href), buttons, inputs with
+    labels/placeholders, headings, and visible text blocks so the model
+    can make informed, task-directed decisions.
+    """
     try:
         url = page.url
         title = page.title()
-
-        try:
-            query = """{
-                navigation_links[]
-                buttons[]
-                input_fields[]
-                main_content_headings[]
-            }"""
-            elements = page.query_elements(query)
-
-            parts = [f"Page: {url} — {title}"]
-
-            if hasattr(elements, 'navigation_links') and elements.navigation_links:
-                nav_texts = []
-                for el in elements.navigation_links[:5]:
-                    try:
-                        nav_texts.append(el.inner_text()[:30])
-                    except Exception:
-                        pass
-                if nav_texts:
-                    parts.append(f"Nav: {', '.join(nav_texts)}")
-
-            if hasattr(elements, 'buttons') and elements.buttons:
-                btn_texts = []
-                for el in elements.buttons[:5]:
-                    try:
-                        btn_texts.append(el.inner_text()[:30])
-                    except Exception:
-                        pass
-                if btn_texts:
-                    parts.append(f"Buttons: {', '.join(btn_texts)}")
-
-            if hasattr(elements, 'input_fields') and elements.input_fields:
-                parts.append(f"Inputs: {len(elements.input_fields)} visible")
-
-            if hasattr(elements, 'main_content_headings') and elements.main_content_headings:
-                heading_texts = []
-                for el in elements.main_content_headings[:3]:
-                    try:
-                        heading_texts.append(el.inner_text()[:40])
-                    except Exception:
-                        pass
-                if heading_texts:
-                    parts.append(f"Content: {', '.join(heading_texts)}")
-
-            return "\n".join(parts)
-        except Exception:
-            return f"Page: {url} — {title}"
     except Exception:
         return "Page: unknown"
+
+    parts = [f"URL: {url}", f"Title: {title}", ""]
+
+    # --- Links (with href so model knows where they go) ---
+    try:
+        links = page.locator("a:visible").all()
+        if links:
+            link_items = []
+            for el in links[:15]:
+                try:
+                    text = el.inner_text().strip().replace("\n", " ")[:40]
+                    href = el.get_attribute("href") or ""
+                    if text:
+                        link_items.append(f'  - "{text}" → {href[:60]}')
+                except Exception:
+                    pass
+            if link_items:
+                parts.append("Links:")
+                parts.extend(link_items)
+    except Exception:
+        pass
+
+    # --- Buttons ---
+    try:
+        buttons = page.locator("button:visible, [role='button']:visible, input[type='submit']:visible").all()
+        if buttons:
+            btn_items = []
+            for el in buttons[:10]:
+                try:
+                    text = el.inner_text().strip().replace("\n", " ")[:40]
+                    if not text:
+                        text = el.get_attribute("aria-label") or el.get_attribute("value") or ""
+                    if text:
+                        btn_items.append(f'  - "{text}"')
+                except Exception:
+                    pass
+            if btn_items:
+                parts.append("Buttons:")
+                parts.extend(btn_items)
+    except Exception:
+        pass
+
+    # --- Input fields (with labels/placeholders) ---
+    try:
+        inputs = page.locator("input:visible, textarea:visible, select:visible").all()
+        if inputs:
+            input_items = []
+            for el in inputs[:10]:
+                try:
+                    input_type = el.get_attribute("type") or "text"
+                    placeholder = el.get_attribute("placeholder") or ""
+                    name = el.get_attribute("name") or ""
+                    aria_label = el.get_attribute("aria-label") or ""
+                    label = placeholder or aria_label or name or input_type
+                    value = el.input_value()[:20] if input_type not in ("password", "hidden") else ""
+                    desc = f'  - [{input_type}] "{label}"'
+                    if value:
+                        desc += f' (current: "{value}")'
+                    input_items.append(desc)
+                except Exception:
+                    pass
+            if input_items:
+                parts.append("Input fields:")
+                parts.extend(input_items)
+    except Exception:
+        pass
+
+    # --- Headings ---
+    try:
+        headings = page.locator("h1:visible, h2:visible, h3:visible").all()
+        if headings:
+            heading_items = []
+            for el in headings[:8]:
+                try:
+                    text = el.inner_text().strip().replace("\n", " ")[:60]
+                    tag = el.evaluate("el => el.tagName").lower()
+                    if text:
+                        heading_items.append(f"  - [{tag}] {text}")
+                except Exception:
+                    pass
+            if heading_items:
+                parts.append("Headings:")
+                parts.extend(heading_items)
+    except Exception:
+        pass
+
+    # --- Visible text content (paragraphs, list items) ---
+    try:
+        texts = page.locator("p:visible, li:visible, [class*='post']:visible, [class*='thread']:visible, [class*='comment']:visible").all()
+        if texts:
+            text_items = []
+            seen = set()
+            for el in texts[:10]:
+                try:
+                    text = el.inner_text().strip().replace("\n", " ")[:80]
+                    if text and text not in seen and len(text) > 5:
+                        seen.add(text)
+                        text_items.append(f"  - {text}")
+                except Exception:
+                    pass
+            if text_items:
+                parts.append("Page content:")
+                parts.extend(text_items[:8])
+    except Exception:
+        pass
+
+    # --- Forms ---
+    try:
+        forms = page.locator("form:visible").all()
+        if forms:
+            parts.append(f"Forms: {len(forms)} visible")
+    except Exception:
+        pass
+
+    return "\n".join(parts)
 
 
 # ============================================================
