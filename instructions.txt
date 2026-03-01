@@ -11,8 +11,38 @@ python build_training_data.py
 # 3. Fine-tune 5 LoRA adapters (one per cluster)
 python finetune_job.py --all-clusters --no-wandb --skip-inference
  
-# 4. Run agentic loop (auto-classifies into cluster, loads matching adapter)
-python agentic_loop.py \
-    --url http://localhost:3000 \
-    --app-description "A social platform for discovering and sharing experiences in NYC" \
-    --max-steps 20
+# 4. Start the evaluation service (persistent — runs until you stop it)
+python service.py
+# Service starts on http://0.0.0.0:8000
+
+# 5. Ping the service to evaluate a website (from another terminal or curl)
+# This runs ALL 5 cluster models against the URL sequentially
+curl -X POST http://localhost:8000/evaluate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "http://localhost:3000",
+    "app_description": "A social platform for discovering and sharing experiences in NYC",
+    "app_name": "FunCity",
+    "max_steps": 20,
+    "headless": true
+  }'
+# Returns: {"job_id": "...", "status": "queued", ...}
+
+# 6. Check job status
+curl http://localhost:8000/status/{job_id}
+
+# 7. Get full results (after completion)
+curl http://localhost:8000/results/{job_id}
+
+# 8. List available clusters
+curl http://localhost:8000/clusters
+
+# 9. Health check
+curl http://localhost:8000/health
+
+# ---
+# OLD: Run agentic loop as a one-shot script (still works)
+# python agentic_loop.py \
+#     --url http://localhost:3000 \
+#     --app-description "A social platform for discovering and sharing experiences in NYC" \
+#     --max-steps 20
