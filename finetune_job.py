@@ -55,7 +55,6 @@ parser.add_argument("--learning-rate", type=float, default=2e-4)
 parser.add_argument("--lora-rank", type=int, default=32, help="LoRA rank (higher=more capacity, A100 can handle it)")
 parser.add_argument("--lora-alpha", type=int, default=64, help="LoRA alpha (usually 2x rank)")
 parser.add_argument("--max-seq-length", type=int, default=2048)
-parser.add_argument("--no-compile", action="store_true", help="Disable torch.compile")
 parser.add_argument("--no-wandb", action="store_true", help="Disable W&B tracking")
 parser.add_argument("--skip-inference", action="store_true", help="Skip inference test after training")
 cli_args = parser.parse_args()
@@ -68,6 +67,10 @@ ensure_data_dirs()
 
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "true")
+
+# Enable TF32 for A100 tensor cores (set explicitly to avoid legacy/new API conflict)
+torch.backends.cuda.matmul.allow_tf32 = True
+torch.backends.cudnn.allow_tf32 = True
 
 USE_WANDB = not cli_args.no_wandb
 
@@ -213,11 +216,6 @@ def train_cluster(cluster_id: int) -> dict:
     model = get_peft_model(base_model, lora_config)
     model.print_trainable_parameters()
 
-    # torch.compile for faster training (A100 supports it well)
-    if not cli_args.no_compile:
-        print(f"  Compiling model with torch.compile...")
-        model = torch.compile(model)
-
     # Load dataset
     dataset = load_dataset("json", data_files={"train": train_file, "eval": val_file})
     print(f"  Train: {len(dataset['train'])} examples, Val: {len(dataset['eval'])} examples")
@@ -261,7 +259,6 @@ def train_cluster(cluster_id: int) -> dict:
             dataloader_pin_memory=True,
             gradient_checkpointing=False,
             optim="adamw_torch_fused",
-            torch_compile=False,
         ),
     )
 
