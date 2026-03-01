@@ -2,6 +2,9 @@
 
 Train AI agents on real user behavior from PostHog session recordings — not LLM persona prompts — to create persistent digital twins of user demographics. These agents learn how different people actually interact with web products, then autonomously explore and evaluate any web application from their demographic's perspective.
 
+Hugging face artifacts - 
+https://huggingface.co/amaan784/agentic-world-behavioral
+
 ## Core Differentiator
 
 Every competitor describes personas with prompts. **We clone them from real behavioral data.**
