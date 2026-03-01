@@ -257,6 +257,18 @@ python evaluation.py
 
 The local LoRA approach fine-tunes **Mistral-7B-Instruct-v0.3** with per-cluster LoRA adapters. It supports Flash Attention 2, fused AdamW, gradient checkpointing, and packing for efficient A100 training.
 
+### Experiment Tracking with Weights & Biases
+
+All fine-tuning runs are tracked in **Weights & Biases** for full experiment observability. Both `fine_tune.py` (cloud) and `finetune_job.py` (local LoRA) integrate with W&B:
+
+- **Real-time metrics** — Training loss, eval loss, and learning rate logged per step
+- **Run config** — Cluster ID, demographic label, base model, hyperparameters (LoRA rank, epochs, batch size)
+- **Artifacts** — Training JSONL data and trained LoRA adapters are logged as versioned W&B Artifacts
+- **Model registry** — Fine-tuned model IDs (cloud) or adapter paths (local) stored in run summary
+- **Run tags** — Runs tagged with `behavioral-finetuning`, `lora`, and cluster identifiers for filtering
+
+Each cluster gets its own W&B run under the `agentic-world` project, making it easy to compare training dynamics across demographics. Disable tracking with `--no-wandb` if needed.
+
 ### vLLM Multi-LoRA Serving
 
 After local fine-tuning, serve all cluster adapters via vLLM:
