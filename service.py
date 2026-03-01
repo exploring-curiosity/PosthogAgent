@@ -2,26 +2,35 @@
 ============================================================
 GPU Inference Service (FastAPI) — runs on VM with A100
 ============================================================
-Pure inference API. No browser. Models stay loaded in GPU.
+Unified service: GPU inference + online data pipeline.
 
-The local client (local_client.py) runs the browser via AgentQL
-and calls this service for action predictions.
+Models stay loaded in GPU. When new PostHog recordings arrive
+(via webhook or poller), they are processed asynchronously
+(parse → describe → embed → classify). Retraining can be
+triggered manually, and updated adapters hot-reloaded.
 
-Endpoints:
-    POST /predict         — Predict next action for a given cluster + page state
-    POST /predict/batch   — Predict for ALL clusters given the same page state
-    GET  /clusters        — List available clusters + personas
-    POST /switch/{id}     — Pre-load a specific cluster adapter
-    GET  /health          — Health check
+Inference Endpoints:
+    POST /predict              — Predict next action for a cluster + page state
+    POST /predict/batch        — Predict for ALL clusters
+    GET  /clusters             — List clusters + personas
+    POST /switch/{id}          — Pre-load a specific cluster adapter
+    GET  /health               — Health check
+
+Online Pipeline Endpoints:
+    POST /webhook/posthog      — Receive PostHog webhook (new recording)
+    POST /process/{id}         — Manually process a recording
+    GET  /process/{id}/status  — Check processing status
+    GET  /pipeline/status      — Pipeline stats (processed sessions, cluster counts)
+    GET  /retrain/check        — Check if clusters are ready for retraining
+    POST /retrain/trigger      — Trigger async retraining
+    GET  /retrain/status       — Retrain job status
+    POST /reload               — Hot-reload adapters into GPU after retraining
+    POST /poller/start         — Start PostHog recording poller
+    POST /poller/stop          — Stop poller
+    GET  /poller/status        — Poller status
 
 Usage (on VM):
-    # Basic (local only)
     python service.py
-
-    # With ngrok tunnel (accessible from anywhere)
-    NGROK_AUTH_TOKEN=<your-token> python service.py
-
-    # With API key protection
     NGROK_AUTH_TOKEN=<token> SERVICE_API_KEY=mysecret python service.py
 ============================================================
 """
@@ -35,7 +44,7 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException, Request, Depends
+from fastapi import FastAPI, BackgroundTasks, HTTPException, Request, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel, Field
 import uvicorn
@@ -45,16 +54,24 @@ sys.path.insert(0, str(Path(__file__).parent))
 from config import MODELS_DIR, CLUSTERS_DIR, ensure_data_dirs
 from build_training_data import BASE_SYSTEM_PROMPT, build_cluster_system_prompt, build_product_context
 from agent_runner import ModelManager, get_available_cluster_ids, get_cluster_meta, get_adapter_path, load_all_cluster_metas
+from online_pipeline.processor import process_recording, ProcessingResult
+from online_pipeline.store import get_status as get_pipeline_status, is_session_processed
+from online_pipeline.retrain import check_retrain_ready, trigger_retrain, get_retrain_status
+from online_pipeline.poller import start_poller, stop_poller, get_poller_status
 
 # ============================================================
 # APP + STATE
 # ============================================================
 
 app = FastAPI(
-    title="Agentic GPU Inference Service",
-    description="Predict browser actions using per-cluster fine-tuned models. Models stay loaded in GPU.",
-    version="2.0.0",
+    title="Agentic GPU Inference + Online Pipeline",
+    description="GPU inference for per-cluster models + online data pipeline (webhook → process → retrain → reload).",
+    version="3.0.0",
 )
+
+# In-flight processing tracker for online pipeline
+_processing: dict[str, ProcessingResult] = {}
+_processing_lock = threading.Lock()
 
 ensure_data_dirs()
 
@@ -389,6 +406,182 @@ def health():
         "current_cluster": _current_cluster_id,
         "available_clusters": get_available_cluster_ids(),
     }
+
+
+# ============================================================
+# ONLINE PIPELINE ENDPOINTS
+# ============================================================
+
+def _process_in_background(recording_id: str, skip_download: bool = False):
+    """Run the full pipeline for a recording in a background thread."""
+    result = process_recording(recording_id, skip_download=skip_download)
+    with _processing_lock:
+        _processing[recording_id] = result
+    if result.status == "completed":
+        print(f"  [pipeline] Processed {recording_id} → cluster {result.cluster_id} ({result.cluster_label})")
+    elif result.status == "failed":
+        print(f"  [pipeline] FAILED {recording_id} at {result.stage}: {result.error}")
+
+
+@app.post("/webhook/posthog")
+async def posthog_webhook(request: Request, background_tasks: BackgroundTasks):
+    """Receive PostHog webhook events. Extracts recording ID and processes async.
+
+    Configure in PostHog: Settings → Webhooks → URL: https://your-ngrok/webhook/posthog
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid JSON body")
+
+    recording_id = None
+
+    if isinstance(body, dict):
+        props = body.get("properties", {}) or {}
+        recording_id = (
+            props.get("$session_recording_id")
+            or props.get("$session_id")
+            or props.get("session_id")
+        )
+        if not recording_id and body.get("event") == "$recording_completed":
+            recording_id = props.get("$session_id")
+        if not recording_id and isinstance(body.get("data"), dict):
+            recording_id = body["data"].get("session_id")
+
+    if not recording_id:
+        return {"status": "ignored", "reason": "No recording ID found in webhook payload"}
+
+    if is_session_processed(recording_id):
+        return {"status": "skipped", "recording_id": recording_id, "reason": "already processed"}
+
+    background_tasks.add_task(_process_in_background, recording_id)
+    return {"status": "accepted", "recording_id": recording_id}
+
+
+@app.post("/process/{recording_id}")
+async def process_single(recording_id: str, background_tasks: BackgroundTasks,
+                         skip_download: bool = False, _auth=Depends(verify_api_key)):
+    """Manually trigger processing of a specific recording."""
+    if is_session_processed(recording_id):
+        return {"status": "skipped", "recording_id": recording_id, "reason": "already processed"}
+
+    with _processing_lock:
+        if recording_id in _processing and _processing[recording_id].status == "pending":
+            return {"status": "in_progress", "recording_id": recording_id}
+
+    background_tasks.add_task(_process_in_background, recording_id, skip_download)
+    return {"status": "accepted", "recording_id": recording_id}
+
+
+@app.get("/process/{recording_id}/status")
+async def process_status(recording_id: str, _auth=Depends(verify_api_key)):
+    """Check processing status for a specific recording."""
+    with _processing_lock:
+        if recording_id in _processing:
+            return _processing[recording_id].to_dict()
+
+    if is_session_processed(recording_id):
+        return {"session_id": recording_id, "status": "completed"}
+
+    return {"session_id": recording_id, "status": "unknown"}
+
+
+@app.get("/pipeline/status")
+async def pipeline_status(_auth=Depends(verify_api_key)):
+    """Pipeline stats: total processed, per-cluster new counts, recent sessions."""
+    return get_pipeline_status()
+
+
+@app.get("/retrain/check")
+async def retrain_check(_auth=Depends(verify_api_key)):
+    """Check if any clusters have enough new data to justify retraining."""
+    return check_retrain_ready()
+
+
+class RetrainRequest(BaseModel):
+    cluster_ids: Optional[list[int]] = None
+
+
+@app.post("/retrain/trigger")
+async def retrain_trigger(body: RetrainRequest = RetrainRequest(), _auth=Depends(verify_api_key)):
+    """Trigger async retraining. Uses real_data_pipeline.py.
+
+    After retraining completes, call POST /reload to hot-swap adapters into GPU.
+    """
+    result = trigger_retrain(cluster_ids=body.cluster_ids)
+    if result["status"] == "already_running":
+        raise HTTPException(status_code=409, detail=result["message"])
+    return result
+
+
+@app.get("/retrain/status")
+async def retrain_status(_auth=Depends(verify_api_key)):
+    """Get current retrain job status."""
+    return get_retrain_status()
+
+
+@app.post("/reload")
+async def reload_adapters(_auth=Depends(verify_api_key)):
+    """Hot-reload adapters into GPU after retraining.
+
+    Call this manually after retrain completes. It:
+      1. Re-scans data/models/ for updated real_cluster_X_lora dirs
+      2. Reloads the first available adapter
+      3. Returns the new cluster list
+
+    This does NOT interrupt in-flight predictions (waits for model_lock).
+    """
+    if model_manager is None:
+        raise HTTPException(status_code=503, detail="Model not loaded yet")
+
+    global _current_cluster_id
+
+    # Force re-discovery of available clusters (real_cluster_X_lora preferred)
+    new_clusters = get_available_cluster_ids()
+
+    if not new_clusters:
+        return {"status": "error", "message": "No adapter directories found after retrain"}
+
+    # Unload current adapter and load first available
+    with model_lock:
+        # Reset to base model
+        if model_manager._current_adapter is not None:
+            del model_manager.model
+            gc.collect()
+            import torch
+            torch.cuda.empty_cache()
+            model_manager.model = model_manager.base_model
+            model_manager._current_adapter = None
+            _current_cluster_id = None
+
+    # Load first cluster
+    meta = _switch_cluster(new_clusters[0])
+
+    return {
+        "status": "ok",
+        "message": f"Reloaded adapters. {len(new_clusters)} clusters available.",
+        "available_clusters": new_clusters,
+        "loaded_cluster": new_clusters[0],
+        "loaded_label": meta.get("label", "?"),
+    }
+
+
+@app.post("/poller/start")
+async def poller_start_endpoint(interval_s: int = 60, _auth=Depends(verify_api_key)):
+    """Start background polling for new PostHog recordings."""
+    return start_poller(interval_s=interval_s)
+
+
+@app.post("/poller/stop")
+async def poller_stop_endpoint(_auth=Depends(verify_api_key)):
+    """Stop background polling."""
+    return stop_poller()
+
+
+@app.get("/poller/status")
+async def poller_status_endpoint(_auth=Depends(verify_api_key)):
+    """Get poller status."""
+    return get_poller_status()
 
 
 # ============================================================

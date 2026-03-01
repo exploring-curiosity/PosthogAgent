@@ -94,44 +94,53 @@ def trigger_retrain(cluster_ids: list[int] | None = None) -> dict:
 
 
 def _run_retrain(cluster_ids: list[int], retrain_index: int):
-    """Background worker: rebuild training data then fine-tune."""
+    """Background worker: rebuild training data from real sessions, then fine-tune.
+
+    Uses real_data_pipeline.py which:
+      1. Identifies real sessions from export-* recordings
+      2. Re-clusters with balanced KMeans (incorporates new data)
+      3. Builds per-cluster training JSONL
+      4. Fine-tunes LoRA adapters (saved as real_cluster_X_lora)
+    """
     global _retrain_running
     python = sys.executable
 
     try:
-        # Step 1: Rebuild training data
+        # Step 1: Re-cluster + rebuild training data (no fine-tuning yet)
         update_retrain_status(retrain_index, "building_training_data")
         result = subprocess.run(
-            [python, "build_training_data.py"],
+            [python, "real_data_pipeline.py", "--skip-finetune"],
             cwd=str(PROJECT_ROOT),
             capture_output=True,
             text=True,
-            timeout=300,
+            timeout=600,
         )
         if result.returncode != 0:
             update_retrain_status(
                 retrain_index, "failed",
-                f"build_training_data failed: {result.stderr[-500:]}"
+                f"real_data_pipeline (data) failed: {result.stderr[-500:]}"
             )
             return
 
-        # Step 2: Fine-tune
+        # Step 2: Fine-tune using the rebuilt training data
         update_retrain_status(retrain_index, "fine_tuning")
         result = subprocess.run(
-            [python, "fine_tune.py"],
+            [python, "real_data_pipeline.py", "--finetune-only"],
             cwd=str(PROJECT_ROOT),
             capture_output=True,
             text=True,
-            timeout=1800,  # fine-tuning can take a while
+            timeout=3600,  # fine-tuning can take a while on GPU
         )
         if result.returncode != 0:
             update_retrain_status(
                 retrain_index, "failed",
-                f"fine_tune failed: {result.stderr[-500:]}"
+                f"real_data_pipeline (finetune) failed: {result.stderr[-500:]}"
             )
             return
 
-        update_retrain_status(retrain_index, "completed")
+        update_retrain_status(retrain_index, "completed",
+                              f"Retrained clusters: {cluster_ids}. "
+                              f"Call POST /reload to hot-swap adapters into GPU.")
 
     except subprocess.TimeoutExpired:
         update_retrain_status(retrain_index, "failed", "Timed out")

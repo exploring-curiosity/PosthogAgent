@@ -35,8 +35,14 @@ from download_recordings import download_snapshots, get_recording_person, save_r
 from online_pipeline.store import add_session, is_session_processed
 
 
-KMEANS_PATH = CLUSTERS_DIR / "kmeans_model.pkl"
-CLUSTERS_JSON = CLUSTERS_DIR / "clusters.json"
+# Prefer real-data models when available
+_real_kmeans = CLUSTERS_DIR / "real_kmeans_model.pkl"
+_real_clusters = CLUSTERS_DIR / "real_clusters.json"
+_old_kmeans = CLUSTERS_DIR / "kmeans_model.pkl"
+_old_clusters = CLUSTERS_DIR / "clusters.json"
+
+KMEANS_PATH = _real_kmeans if _real_kmeans.exists() else _old_kmeans
+CLUSTERS_JSON = _real_clusters if _real_clusters.exists() else _old_clusters
 
 
 class ProcessingResult:
