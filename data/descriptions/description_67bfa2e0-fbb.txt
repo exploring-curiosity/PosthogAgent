@@ -1,0 +1,51 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   • Highly linear and task-driven with minimal deviation
+   • 100% of interactions target 3 specific UI elements (Chart → Data Table → Export)
+   • No lateral exploration (e.g., no clicks on navigation menus, filters, or unrelated content)
+   • Scrolling is strictly vertical and segmented into 3 distinct phases (down → down → up)
+
+2. READING BEHAVIOR
+   • Skimming only; no deep reading detected
+   • Scroll velocity: 268 px/s downward, 276 px/s upward (consistent speed)
+   • Max scroll depth: 917 px (≈ 85% of viewport height), but no sustained pauses > 500 ms
+   • No text selection or copy actions observed
+
+3. ENGAGEMENT STYLE
+   • No voting, commenting, or social interactions recorded
+   • Interaction pattern: double-click on target elements (Chart: 2 clicks, Data Table: 2 clicks, Export: 2 clicks)
+   • Hover-to-click latency: 141 ms (Chart), 319 ms (Data Table), 206 ms (Export) → deliberate but not exploratory
+
+4. INTERACTION SPEED
+   • Mean action interval: 0.85 s (excluding hesitation events)
+   • Fastest interval: 0.04 s (scroll increments)
+   • Longest hesitation: 2.36 s before final Export click (7.67 s timestamp)
+   • Click execution time: < 50 ms (no drag or hold)
+
+5. CONTENT PREFERENCES
+   • Gravitated exclusively toward data-dense elements:
+     – Chart (clicked at 1.26 s and 2.05 s)
+     – Data Table (clicked at 2.67 s and 3.42 s)
+   • No engagement with textual content, images, or navigation links
+
+6. TYPING BEHAVIOR
+   • No typing detected (no input fields, search bars, or text areas interacted with)
+   • No corrections or edits observed
+
+7. FEATURE DISCOVERY
+   • Features used:
+     – Chart interaction (2 clicks)
+     – Data Table interaction (2 clicks)
+     – Export button (2 clicks)
+   • Features ignored:
+     – Navigation menus, filters, tooltips, help icons, user profile, settings
+
+8. SESSION FLOW
+   • Phase 1 (0.0–1.26 s): Rapid downward scan (4 scrolls, 536 px depth)
+   • Phase 2 (1.26–3.42 s): Targeted engagement (Chart → Data Table, 2 clicks each)
+   • Phase 3 (3.42–7.67 s): Upward scroll (5 scrolls, 858 px upward) → Export button discovery
+   • Exit: Final Export click at 7.67 s, session ends at 7.7 s
+   • Arc: Linear task completion (scan → engage → export) with no exploratory detours
+```

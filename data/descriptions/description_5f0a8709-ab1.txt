@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with minor deviations**: The user follows a top-to-bottom progression through the page, clicking sequentially on navigation elements, hero title, features, testimonials, and footer. No backtracking or lateral exploration is observed.
+- **Structured progression**: Each interaction (click) is preceded by scrolling to expose the target element, suggesting deliberate exposure before engagement.
+- **No abandonment**: All clicked elements are fully explored (e.g., "Features" section is scrolled through immediately after click).
+
+2. READING BEHAVIOR
+- **Skim-focused**: Scroll speed is consistent (≈100px/0.5s) with no pauses >1s at any depth, indicating rapid scanning rather than deep reading.
+- **Shallow engagement**: Max scroll depth (1002px) suggests limited content exposure (likely <30% of a typical landing page).
+- **No dwell time**: No instances of sustained viewing (>2s) at any scroll position.
+
+3. ENGAGEMENT STYLE
+- **Click-only interaction**: No evidence of voting, commenting, or input submission (e.g., forms, search).
+- **Double-click pattern**: Every primary interaction (navigation, hero title, features, testimonials, footer) involves:
+  - A hover-preceded click (avg hover duration: 485ms)
+  - A near-immediate follow-up click (avg delay: 620ms)
+- **No secondary actions**: No tooltips, dropdowns, or modal interactions observed.
+
+4. INTERACTION SPEED
+- **Rapid execution**: Avg time between actions: 1.1s (excluding hesitations).
+- **Hesitation outliers**:
+  - 672ms before first click (0.67s)
+  - 1978ms before third click (3.77s)
+  - 1260ms before testimonials click (10.98s)
+- **Scroll bursts**: 4-5 consecutive scrolls (0.5s each) with no pauses, suggesting automated or highly practiced behavior.
+
+5. CONTENT PREFERENCES
+- **Hierarchical engagement**: Interacted with elements in order of visual prominence:
+  1. Navigation (1.8s)
+  2. Hero title (4.96s)
+  3. Primary CTA ("Get Started", 6.89s)
+  4. Features section (8.26s)
+  5. Testimonials (9.72s)
+  6. Footer (13.19s)
+- **No content-specific focus**: All interactions are structural (nav, sections, footer) rather than content-driven (e.g., no clicks on feature descriptions, testimonial quotes, or links).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No form inputs, search queries, or text entry observed in the 13.8s session.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation menu (2 clicks)
+  - Hero title (2 clicks)
+  - Primary CTA button (2 clicks)
+  - Features section (2 clicks)
+  - Testimonials section (2 clicks)
+  - Footer (2 clicks)
+- **Ignored features**:
+  - No interaction with secondary CTAs, images, videos, or embedded content.
+  - No hover states on non-clicked elements (e.g., social icons, legal links).
+  - No mobile menu or responsive design triggers (despite desktop viewport).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–1.8s)**
+  - Loads page, hesitates (672ms), scrolls 52px in 1.1s (5 scroll steps).
+  - Clicks navigation after 588ms hover.
+- **Phase 2: Reorientation (1.8s–4.96s)**
+  - Hesitates (1978ms), re-clicks navigation, scrolls 83px in 0.6s (4 scroll steps).
+  - Clicks hero title after 365ms hover.
+- **Phase 3: Primary Engagement (4.96s–8.82s)**
+  - Clicks "Get Started" CTA after 332ms hover, scrolls 268px in 1.1s (4 scroll steps).
+  - Clicks features section after 332ms hover.
+- **Phase 4: Secondary Scan (8.82s–13.79s)**
+  - Scrolls 353px in 1.4s (5 scroll steps), clicks testimonials after 410ms hover.
+  - Hesitates (1260ms), re-clicks testimonials, scrolls 295px in 0.6s (2 scroll steps).
+  - Clicks footer after 735ms hover.
+- **Termination**: Session ends immediately after footer click (no exit action recorded).
+```
+
+**Key Observations**:
+- **Synthetic behavior**: The combination of methodical scrolling, double-clicks, and absence of typing/input suggests a non-human actor (e.g., automated test, synthetic user, or scripted demo).
+- **No organic engagement**: Lack of hesitation variability, no content-specific interactions, and perfect linear progression are atypical for human users.
+- **Efficiency focus**: All interactions serve to expose structural elements, not consume content.

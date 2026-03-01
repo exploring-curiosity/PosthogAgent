@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no linear progression through content.
+- Repeated cycles of rapid scrolling (both up/down) combined with clustered clicks on the same elements (e.g., "Testimonials" and "Hero Title").
+- 12 distinct scroll sequences (6 up, 6 down) with an average duration of 0.5s each, covering ~200px per scroll.
+- 22 total clicks, with 14 (63.6%) targeting only 3 unique elements: "Testimonials" (8 clicks), "Hero Title" (5 clicks), and "Navigation" (2 clicks).
+- No evidence of sequential content consumption (e.g., reading articles, following links).
+
+2. READING BEHAVIOR
+- Skimming only; no deep reading detected.
+- Scroll patterns show:
+  - Average scroll speed: 400px/s (e.g., 215px in 0.5s at 0.28s).
+  - Max scroll depth: 1001px (8.88s), but no pauses >0.3s at any depth to suggest reading.
+  - Immediate direction reversals (e.g., scroll down to 860px at 0.45s → scroll up to 184px at 1.43s).
+- No sustained focus on any content block; all interactions are <1s in duration.
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (voting/commenting) observed.
+- Interaction pattern suggests frustration or testing:
+  - 3 "RAGE CLICK" events (1.07s–1.32s) on "Testimonials" (3 clicks in 0.25s).
+  - 1 "HESITATION" event (11.1s) with 1864ms delay before clicking (0,0).
+- Click-to-click intervals on the same element:
+  - "Testimonials": 0.14s (0.85s–0.99s), 0.12s (2.38s–2.5s), etc.
+  - "Hero Title": 0.47s (1.57s–1.95s), 0.41s (3.01s–3.42s).
+
+4. INTERACTION SPEED
+- Extremely fast, with impulsive repetition:
+  - Average time between actions: 0.56s (excluding scrolls).
+  - Fastest click sequence: 3 "RAGE CLICKS" in 0.25s (1.07s–1.32s).
+  - Slowest deliberate action: 1.86s hesitation (11.1s).
+- No typing detected (no input fields used).
+
+5. CONTENT PREFERENCES
+- Gravitated toward 3 elements exclusively:
+  1. "Testimonials" (8 clicks, 36.4% of total): Targeted at (490,860), (1505,763), (1173,735), etc.
+  2. "Hero Title" (5 clicks, 22.7%): Targeted at (817,184), (843,128), (982,178), etc.
+  3. "Navigation" (2 clicks, 9.1%): Targeted at (1570,51) and (553,35).
+- No evidence of interest in other content (e.g., no clicks on body text, images, or links).
+
+6. TYPING BEHAVIOR
+- No typing detected. No input fields, search bars, or forms were interacted with.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Scrolling (12 sequences).
+  - Clicking on static elements ("Testimonials," "Hero Title," "Navigation," "Footer").
+- Ignored features:
+  - No links followed (despite likely presence in "Navigation").
+  - No form submissions, searches, or dynamic interactions (e.g., dropdowns, modals).
+  - No hover interactions beyond those logged (e.g., tooltips, menus).
+
+8. SESSION FLOW
+- Arc: Frustration/Testing → Repetitive Cycling → Abrupt Exit
+  - 0.0s–0.85s: Initial exploration (scrolling, hesitation click).
+  - 0.85s–1.32s: First frustration cluster (3 "RAGE CLICKS" on "Testimonials").
+  - 1.37s–3.49s: Rapid scroll reversals (up/down) with repeated clicks on "Hero Title" and "Testimonials."
+  - 3.97s–5.88s: Navigation bar interaction (2 clicks), followed by more scrolling.
+  - 6.24s–11.41s: Final frustration cluster (4 clicks on "Testimonials," 1 "HESITATION" at 11.1s).
+  - 11.41s–12.3s: Footer click and exit.
+- No progression toward a goal (e.g., no checkout, sign-up, or content consumption).
+- Session ends with a click on "Testimonials" at 12.3s, no further actions.
+```
+
+**Key Observations:**
+- The user exhibits behavior consistent with a **synthetic/automated test** or **extreme frustration** (e.g., rage clicks, repetitive patterns).
+- No organic browsing detected; all interactions are mechanical and repetitive.
+- Device label ("synthetic/impulsive_clicker") suggests this may be a **bot or scripted test session**.

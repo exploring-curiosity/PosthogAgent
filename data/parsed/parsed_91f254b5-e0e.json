@@ -1,0 +1,109 @@
+{
+  "user_profile": {
+    "session_id": "91f254b5-e0e",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 911.0,
+    "screen_width": 1920.0,
+    "screen_height": 911.0
+  },
+  "session_duration_s": 27.0,
+  "total_raw_events": 90,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/",
+      "viewport": "1920.0x911.0"
+    },
+    {
+      "time": 1.37,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2458ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 4.67,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2552ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 8.85,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 7257ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 17.76,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        166,
+        139
+      ]
+    },
+    {
+      "time": 17.86,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 6833ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 26.19,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1520,
+        25
+      ]
+    },
+    {
+      "time": 27.01,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1471,
+        110
+      ]
+    }
+  ]
+}

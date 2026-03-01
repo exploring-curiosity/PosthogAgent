@@ -1,0 +1,77 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Focused but hesitant, with exploratory detours.
+  - Linear progression through settings sections (Notifications → Privacy → Profile), but with repeated backtracking (e.g., returning to "Settings Nav" after Notifications).
+  - 3 instances of "[HESITATION]" clicks (7.57s, 17.31s, 21.28s) suggest uncertainty or decision paralysis.
+  - No random jumps; all clicks target specific settings options.
+- **Quantitative**:
+  - 6/14 actions (43%) involve scrolling (avg. 0.5s per scroll, 112–130px increments).
+  - 3/14 actions (21%) are re-clicks of the same element (e.g., "Notifications" at 9.55s and 12.47s).
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**:
+  - Rapid scrolling (avg. 112px/0.5s) suggests skimming, but hover times (1.0–1.8s) indicate brief pauses for key sections.
+  - Max scroll depth: 943px (Profile section), but only 30% of the session spent below 500px.
+  - **Scroll patterns**:
+    - Downward: 5 sequences (7.6s–7.83s, 18.48s–18.63s, 30.09s–30.21s).
+    - Upward: 1 sequence (23.93s–24.07s) to revisit "Profile" after Privacy.
+  - No evidence of reading long-form content (no pauses >2s on text).
+
+3. ENGAGEMENT STYLE
+- **N/A**: This is a settings page; no voting/commenting functionality observed.
+- **Interaction type**: Configuration-focused (toggles, form inputs implied by "Save Changes").
+- **Speed**: Deliberate but error-prone (repeated clicks on same elements).
+
+4. INTERACTION SPEED
+- **Deliberate with hesitation spikes**:
+  - Avg. time between actions: **2.4s** (excluding hesitations).
+  - **Hesitation events**:
+    - 7.57s: 7.57s pause before first click.
+    - 17.31s: 2.79s pause (longest).
+    - 21.28s: 1.17s pause.
+    - 27.18s: 1.77s pause.
+  - **Hover times**: 0.95–1.79s (avg. 1.3s) before clicks, suggesting cautious selection.
+
+5. CONTENT PREFERENCES
+- **Settings sections accessed**:
+  1. Notifications (9.55s–12.47s).
+  2. Privacy (20.11s–23.86s).
+  3. Profile (25.41s–30.02s).
+- **Order**: Follows a logical hierarchy (system → user data → personal info).
+- **Ignored**: No evidence of exploring other settings (e.g., Account, Security, Billing).
+
+6. TYPING BEHAVIOR
+- **N/A**: No text input or corrections detected in the log.
+- **Form interaction**: Only "Save Changes" button clicked (31.25s, 33.87s), implying prior input (not recorded).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Settings navigation sidebar (2 clicks: 14.52s, 18.44s).
+  - Section-specific toggles/buttons (Notifications, Privacy, Profile).
+  - "Save Changes" button (final action).
+- **Ignored**:
+  - No interaction with help links, tooltips, or secondary menus.
+  - No search functionality used (if present).
+
+8. SESSION FLOW
+- **Arc**: **Exploration → Configuration → Confirmation → Exit**
+  1. **Orientation (0–7.57s)**:
+     - Page load → 7.57s hesitation (user likely scanning layout).
+  2. **Initial Exploration (7.6–12.47s)**:
+     - Rapid scrolling (7.6–7.83s) to assess page length.
+     - Clicks "Notifications" (9.55s) after 1.5s hover.
+  3. **Navigation Test (12.47–18.44s)**:
+     - Returns to sidebar (14.52s), then hesitates (17.31s) before re-clicking sidebar (18.44s).
+  4. **Deep Dive (18.48–30.21s)**:
+     - Scrolls to Privacy (20.11s), then Profile (25.41s), with upward scroll to revisit Profile (23.93s).
+  5. **Completion (30.21–33.87s)**:
+     - Scrolls to bottom (943px), clicks "Save Changes" (31.25s), hesitates (31.92s), then confirms (33.87s).
+- **Exit**: Session ends immediately after final click (no post-save actions).
+```
+
+**Key Observations**:
+- **Cautious Explorer**: High hesitation times (28% of session) and repeated clicks suggest low confidence or unfamiliarity with the UI.
+- **Efficiency Trade-off**: Rapid scrolling (skimming) but long hover times (deliberation) indicate a balance between speed and accuracy.
+- **No Errors**: Despite hesitations, no misclicks or abandoned actions (all clicks target intended elements).

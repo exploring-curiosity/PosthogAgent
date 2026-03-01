@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SETTINGS SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated backtracking. They jump between 3 distinct settings sections (Notifications → Profile → Settings Nav → Privacy) without completing any single workflow.
+- **Quantitative evidence**:
+  - 0.85s: Clicks "Notifications" (first target)
+  - 1.45s: Abandons Notifications to click "Profile" (600ms after initial Notifications click)
+  - 1.95s: Abandons Profile to click "Settings Nav" (500ms after Profile click)
+  - 5.29s: Finally returns to "Privacy" (3.34s after last Settings Nav click)
+- **Forced linearity**: The final 3 actions (4.59s–5.58s) show a forced linear progression toward "Save Changes" and "Privacy," suggesting an attempt to complete a task after initial disorientation.
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scroll bursts**: Scroll patterns indicate minimal content absorption.
+  - **Scroll speed**: 283px–566px in 0.5s (566px/s) and 784px–918px in 0.5s (268px/s) suggest aggressive skimming.
+  - **Depth**: Max scroll depth of 918px (likely full page height) reached in 4.21s, but with no pauses >200ms, indicating no deep reading.
+  - **Backtracking**: Repeated upward scrolls (e.g., 1.04s–1.11s: 566px→116px) suggest re-scanning content without retention.
+
+3. ENGAGEMENT STYLE
+- **N/A**: This is a settings page, not a content platform. No voting, commenting, or social engagement occurred.
+- **Interaction type**: Pure navigation/editing. All clicks target UI controls (tabs, buttons) rather than content.
+
+4. INTERACTION SPEED
+- **Hyper-fast with frustration spikes**: Actions occur at an unsustainable pace with clear signs of impatience.
+  - **Median inter-action time**: 130ms (excluding scrolls).
+  - **Fastest sequence**: 0.26s–0.37s (3 clicks/scrolls in 110ms).
+  - **Frustration markers**:
+    - **Rage clicks**: 7 consecutive clicks on "Settings Nav" (2.45s–3.12s) at 120–150ms intervals.
+    - **Dead click**: 3.89s (click on non-interactive element).
+    - **Hesitation**: 256ms pause at 0.26s (first click) suggests initial uncertainty.
+
+5. CONTENT PREFERENCES
+- **N/A**: No content consumption occurred. However, **UI section preferences** can be inferred:
+  - **Most engaged sections**: Notifications (2 clicks), Profile (2 clicks), Privacy (2 clicks).
+  - **Ignored sections**: No clicks on "Account," "Security," or other typical settings tabs (not visible in log).
+  - **Final focus**: Privacy (last 2 clicks), suggesting this was the intended target.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no input fields, form submissions, or text entry. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Settings navigation tabs (Notifications, Profile, Privacy).
+  - "Save Changes" button (clicked at 4.59s–4.86s).
+- **Ignored features**:
+  - No interaction with form fields, toggles, or advanced settings (e.g., 2FA, email preferences).
+  - No help/tooltip usage (no hover >500ms on any element).
+- **Misused features**:
+  - **Rage clicks**: Repeated clicks on "Settings Nav" suggest the user expected a different response (e.g., dropdown not opening).
+  - **Dead click**: Click on a non-interactive div at 3.89s indicates confusion about clickable areas.
+
+8. SESSION FLOW
+- **Arc**: **Disorientation → Frustration → Forced Completion**
+  1. **0.0s–1.45s (Exploration)**: Rapid, aimless navigation between Notifications and Profile. Scrolls suggest searching for something not found.
+  2. **1.95s–3.12s (Frustration)**: Rage clicks on "Settings Nav" (7 clicks in 770ms) indicate a UI failure (e.g., unresponsive tab).
+  3. **3.89s–4.86s (Recovery)**: Dead click followed by aggressive scrolling to page bottom, then "Save Changes" click—likely an attempt to exit or save progress.
+  4. **5.29s–5.58s (Final Action)**: Returns to "Privacy" (last section), possibly to verify changes or as a final task.
+- **Exit**: Session ends abruptly at 5.6s, suggesting either:
+  - Task completion (unlikely, given prior behavior).
+  - User abandonment due to frustration.
+  - Technical termination (e.g., page reload, session timeout).
+
+---
+
+KEY INSIGHTS:
+- **User is a power user but unfamiliar with this UI**: The speed suggests technical proficiency, but the navigation pattern and rage clicks indicate poor UI affordance or unexpected behavior.
+- **Task failure**: The session likely represents an unsuccessful attempt to find/modify a specific setting (e.g., privacy controls), given the final focus on "Privacy."
+- **No learning curve**: No pauses >250ms suggest the user did not stop to read instructions or adapt to the UI.
+- **Viewport usage**: Clicks are clustered in the right half of the screen (x-coordinates: 555–1598), suggesting a right-aligned UI (e.g., sidebar or right panel) was the primary interaction zone.
+```

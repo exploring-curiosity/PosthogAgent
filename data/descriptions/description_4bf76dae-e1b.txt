@@ -1,0 +1,85 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly systematic and non-linear**: The user exhibits a deliberate, structured exploration pattern, cycling through distinct sections in a predictable sequence (Features → Hero Title → Navigation → Footer → Testimonials → CTA). This resembles a "checklist" approach rather than organic browsing.
+- **Vertical oscillation**: 67% of scroll actions (10/15) involve rapid up/down movements within the same section (e.g., scrolling down to 514px then immediately up to 226px in the "Features" section). This suggests targeted information retrieval rather than linear consumption.
+- **Section hopping**: Average time per section: 1.2s (Features), 0.6s (Hero Title), 0.3s (Navigation), 0.4s (Footer), 0.3s (Testimonials). No section held attention for >1.3s before interaction.
+
+2. READING BEHAVIOR
+- **Skim-only**: No evidence of deep reading. Key indicators:
+  - **Scroll speed**: 128–257px/0.5s (256–514px/s) during downward scrolls—far exceeding typical reading speeds (200–300 words/minute ≈ 50–100px/s for 12pt text).
+  - **Scroll depth**: Max depth (1017px) reached in 2.71s, implying no sustained engagement with content below the fold.
+  - **Hover times**: Brief pre-click hovers (59–188ms) suggest visual scanning rather than content absorption.
+- **Pattern**: Rapid downward scrolls (4 instances) followed by immediate upward corrections (6 instances), indicating "bounce-and-scan" behavior.
+
+3. ENGAGEMENT STYLE
+- **Click-focused, no passive engagement**: 100% of interactions are clicks (10 total). No evidence of:
+  - Form inputs (typing, selections)
+  - Passive engagement (hover-only, dwell time)
+  - Multi-modal interactions (e.g., clicks + typing)
+- **Click redundancy**: 5/10 clicks are duplicates (same element clicked twice within 200ms), suggesting either:
+  - Technical latency (user re-clicking due to perceived unresponsiveness), or
+  - Synthetic testing behavior (common in automated scripts).
+- **No social/commenting actions**: Zero votes, comments, or shares observed.
+
+4. INTERACTION SPEED
+- **Extremely rapid**: Median inter-action time: 0.31s (range: 0.07–0.83s).
+  - Fastest sequence: 0.45s (scroll) → 0.49s (scroll) → 0.55s (scroll) = 3 actions in 100ms.
+  - Slowest sequence: 3.15s (footer hover) → 3.55s (footer click) = 400ms delay (likely intentional pause).
+- **Hover-to-click latency**: Median 150ms (range: 59–188ms), consistent with automated or power-user behavior.
+- **No hesitation**: Initial "hesitation" at 0.37s is a 370ms delay before first click, but subsequent actions show no comparable pauses.
+
+5. CONTENT PREFERENCES
+- **Structural elements prioritized over content**:
+  - 60% of clicks target UI navigation elements (Features, Navigation, Footer, Testimonials, CTA).
+  - 40% target page landmarks (Hero Title, div/nav/footer sections).
+  - **No content-specific clicks**: Zero interactions with body text, images, or embedded media.
+- **Hierarchy of engagement**:
+  1. **Features section** (2 clicks, 0.91–1.17s)
+  2. **Hero Title** (2 clicks, 1.78–2.06s)
+  3. **Navigation** (2 clicks, 2.38–2.64s)
+  4. **Footer** (2 clicks, 3.15–3.55s)
+  5. **Testimonials** (2 clicks, 4.08–4.38s)
+  6. **CTA** (2 clicks, 4.76–5.09s)
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, form submissions, or input field interactions observed.
+- **Implications**:
+  - Either the session was purely navigational, or
+  - The user is a synthetic agent (supported by "power_user" device label and interaction speed).
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Core navigation**: All primary UI sections (Features, Navigation, Footer, Testimonials, CTA) were clicked.
+  - **Scrolling**: Aggressive vertical scrolling (15 scroll actions) to access off-screen content.
+  - **Hover states**: Pre-click hovers on 5/10 clicks (50%), suggesting awareness of interactive elements.
+- **Features ignored**:
+  - **Content**: No clicks on articles, blog posts, or product details.
+  - **Secondary UI**: No interactions with sidebars, modals, or dynamic elements (e.g., dropdowns, tooltips).
+  - **Social features**: No shares, likes, or comments.
+  - **Search/filters**: No evidence of use.
+
+8. SESSION FLOW
+- **Phase 1: Rapid Reconnaissance (0.0–0.91s)**
+  - Loads page, hesitates (370ms), then executes 4 downward scrolls in 0.5s intervals to scan page length.
+  - **Goal**: Assess page structure and content distribution.
+- **Phase 2: Targeted Section Sampling (0.91–2.64s)**
+  - Clicks "Features" (0.91s), scrolls up/down within section, then jumps to "Hero Title" (1.78s) and "Navigation" (2.38s).
+  - **Goal**: Validate presence and functionality of key UI components.
+- **Phase 3: Deep Scan (2.64–4.38s)**
+  - Scrolls to footer (2.71s), clicks it (3.15s), then scrolls up to "Testimonials" (4.08s).
+  - **Goal**: Confirm footer content and secondary sections.
+- **Phase 4: Exit Preparation (4.38–5.09s)**
+  - Scrolls up to CTA (4.76s), clicks "Get Started" (5.09s).
+  - **Goal**: Test primary conversion path before session end.
+- **Termination**: Session ends at 5.1s with no further actions.
+
+SUMMARY
+This user exhibits **automated or power-user behavior** characterized by:
+- **Mechanical precision**: Sub-200ms hover-to-click latencies, redundant clicks, and scroll speeds incompatible with human reading.
+- **Structural focus**: Prioritizes UI architecture over content (e.g., clicking "Features" before reading any feature details).
+- **Zero passive engagement**: No typing, no deep reading, no social interactions.
+- **Checklist-driven**: Follows a predictable sequence (top → bottom → top → CTA) with no deviations.
+- **Synthetic indicators**: "Power_user" device label, viewport size (1920x1080), and interaction speed strongly suggest a scripted session (e.g., QA testing, bot, or synthetic monitoring).
+```

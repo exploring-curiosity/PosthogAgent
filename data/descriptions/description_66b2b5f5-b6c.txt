@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Linear with Exploratory Detours**: The user follows a structured path through the dashboard's core components (Sidebar → Stats Cards → Chart → Data Table → Export) but exhibits repeated backtracking and hesitation.
+- **Quantitative Path**:
+  - 0.0s–1.61s: Initial exploration (sidebar hover/click)
+  - 1.61s–7.28s: Linear progression (Stats Cards → Chart)
+  - 7.28s–13.15s: Deep dive (Data Table) with dead click
+  - 13.15s–16.53s: Rapid exit (scroll up → Export)
+- **Scattered Elements**: 4 instances of "[HESITATION]" clicks (0.73s, 3.59s, 9.77s, 15.61s) at (0,0) suggest uncertainty or UI confusion. Dead click at 13.1s indicates misaligned expectations.
+
+2. READING BEHAVIOR
+- **Skimmer with Selective Deep Reading**:
+  - **Scroll Speed**: 58–116px/0.5s (avg. 116px/s) during initial passes (0.79s–1.0s), slowing to 34–136px/0.5s (avg. 68px/s) during re-reads (4.42s–6.27s).
+  - **Max Depth**: 896px (10.76s) but only lingers on specific elements (e.g., Data Table at 896px for 1.04s before interaction).
+  - **Backtracking**: Scrolls up 815px in 0.5s (13.2s) to return to the top, suggesting targeted navigation rather than linear reading.
+
+3. ENGAGEMENT STYLE
+- **Interaction-Only, No Content Creation**:
+  - **Actions**: 10 clicks (4 with hover delays >480ms), 1 dead click, 0 typing/comments/votes.
+  - **Hover-to-Click Ratio**: 4/10 clicks preceded by hovers (avg. 642ms delay), indicating deliberate selection.
+  - **No Expressive Engagement**: Zero comments, upvotes, or form submissions. Purely navigational/consumptive behavior.
+
+4. INTERACTION SPEED
+- **Deliberate with Punctuated Hesitation**:
+  - **Avg. Time Between Actions**: 1.65s (excluding hovers/hesitations).
+  - **Outliers**:
+    - 1.98s delay (3.59s–5.25s) between sidebar clicks.
+    - 2.49s hesitation (9.77s) before chart interaction.
+  - **Hover Delays**: 486–791ms (avg. 617ms) suggest careful targeting.
+  - **Dead Click**: 13.1s (immediate after Data Table click), likely a UI misfire.
+
+5. CONTENT PREFERENCES
+- **Dashboard-Centric, Data-Oriented**:
+  - **Prioritized Elements**:
+    1. **Sidebar** (1.61s, 4.39s): Primary navigation tool.
+    2. **Stats Cards** (5.25s–6.02s): Two clicks in 0.77s, suggesting high interest.
+    3. **Chart** (7.28s–10.56s): Longest hover (762ms) and re-click (2.49s hesitation).
+    4. **Data Table** (11.67s–12.61s): Deepest scroll (896px) and immediate interaction.
+    5. **Export** (14.24s–16.53s): Final action, likely goal-oriented.
+- **Ignored**: No evidence of engagement with non-dashboard elements (e.g., search, filters, user profile).
+
+6. TYPING BEHAVIOR
+- **N/A**: No typing, form inputs, or text entry detected in the log.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Sidebar navigation (2 clicks).
+  - Stats Cards (2 clicks, likely for details).
+  - Chart interaction (2 clicks, possibly for tooltips/zoom).
+  - Data Table (2 clicks, likely sorting/filtering).
+  - Export button (2 clicks, final action).
+- **Ignored Features**:
+  - No evidence of search, filters, or settings.
+  - No engagement with non-interactive text or images.
+  - No mobile-specific features (e.g., hamburger menu).
+
+8. SESSION FLOW
+- **Arc**: **Targeted Exploration → Data Consumption → Export Exit**
+  - **0.0s–1.61s (Orientation)**: Loads page, hesitates, explores sidebar.
+  - **1.61s–7.28s (Linear Progression)**: Moves through Stats Cards → Chart with methodical clicks/scrolls.
+  - **7.28s–13.15s (Deep Dive)**: Focuses on Data Table, dead click suggests frustration or UI issue.
+  - **13.15s–16.53s (Rapid Exit)**: Scrolls to top, clicks Export twice (hesitation at 15.61s), ends session.
+- **Key Transitions**:
+  - 1.61s: Shifts from sidebar to content.
+  - 13.15s: Abrupt pivot from Data Table to Export, skipping intermediate steps.
+- **Exit Trigger**: Likely achieved goal (export) or encountered friction (dead click).
+```
+
+**Summary**: A highly methodical, data-focused user who navigates linearly but exhibits repeated hesitation and backtracking. Prioritizes dashboard analytics (charts/tables) and exits after exporting data. No expressive engagement; purely consumptive with deliberate, slow interactions. UI confusion (dead click, hesitations) may indicate design friction.

@@ -1,0 +1,93 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly systematic and repetitive**: The user exhibits a rigid, cyclical navigation pattern:
+  *Scroll → Click → Scroll → Click* repeated 5 times (Testimonials → Navigation → Features → Get Started → Hero Title → Footer).
+- **Non-linear but predictable**: While not strictly linear (e.g., jumps between non-adjacent sections), the sequence follows a clear "scan → engage → reset" loop.
+- **No exploratory divergence**: No deviations from the 6 primary click targets; no secondary navigation (e.g., dropdowns, sidebars) or unexpected page elements engaged.
+- **Spatial consistency**: Clicks cluster in 3 vertical zones:
+  *Bottom* (Testimonials, Footer: y=742–989px),
+  *Middle* (Features, Get Started: y=282–526px),
+  *Top* (Navigation, Hero Title: y=22–108px).
+
+2. READING BEHAVIOR
+- **Aggressive skimming**: Scroll speed averages **~480px/s** (e.g., 247px in 0.5s), far exceeding typical reading speeds (200–300px/s for deep reading).
+- **No sustained pauses**: No scroll pauses >200ms; all scrolls are continuous sweeps (0.5s duration each).
+- **Bidirectional scanning**:
+  - *Downward*: 10 scrolls (total 1,742px downward).
+  - *Upward*: 8 scrolls (total 1,230px upward).
+  - Net downward movement: 512px (from 0px to 989px max depth).
+- **Depth coverage**: Reached **989px** (likely ~80–90% of page height) but no evidence of content absorption (no clicks on body text, images, or interactive elements beyond section headers/buttons).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, form submissions, or other participatory actions.
+- **Click-based engagement only**:
+  - **6 primary clicks** (all on static elements: section headers, buttons, nav).
+  - **6 "pre-click" hovers** (113–134ms hover duration before each click).
+  - **100% click redundancy**: Every click is preceded by an identical click on the same element (e.g., "Testimonials" clicked at 0.75s and 0.89s).
+- **No secondary interactions**: No text selection, tooltips, or dynamic content triggers.
+
+4. INTERACTION SPEED
+- **Extremely rapid**: Median inter-action interval: **180ms** (range: 40ms–430ms).
+- **Click latency**:
+  - Hover-to-click delay: **100–134ms** (consistent across all 6 clicks).
+  - Double-click interval: **140–330ms** (e.g., "Testimonials" clicks at 0.75s and 0.89s = 140ms apart).
+- **Scroll initiation**: Scrolls begin **40–60ms** after prior action (e.g., scroll at 0.38s follows click at 0.34s).
+- **No deliberation**: No pauses >500ms; session ends immediately after final click.
+
+5. CONTENT PREFERENCES
+- **Structural elements only**: All clicks target **layout anchors**:
+  - 2x navigation (top-right nav bar).
+  - 1x hero title (h1).
+  - 1x features section.
+  - 1x testimonials section.
+  - 1x footer.
+- **No content engagement**: No clicks on:
+  - Body text, images, videos, or embedded media.
+  - Interactive widgets (e.g., carousels, accordions).
+  - Links or CTAs beyond the 6 primary targets.
+- **No thematic preference**: All clicked elements are **generic page sections** (no product-specific, blog, or support content).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No form inputs, search queries, or text entry of any kind.
+- **No corrections**: No backspaces, deletions, or input field interactions.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Scrolling**: Used extensively (18 scroll actions).
+  - **Hover states**: Triggered for all 6 clicked elements (113–134ms hover duration).
+  - **Click targets**: Limited to 6 static elements (no dynamic features like modals, pop-ups, or tooltips).
+- **Ignored features**:
+  - **Forms**: No input fields engaged.
+  - **Dynamic content**: No carousels, tabs, or expandable sections clicked.
+  - **Social/media**: No share buttons, embedded content, or social logins.
+  - **Search**: No search bar usage.
+  - **Secondary navigation**: No dropdowns, hamburger menus, or footer links beyond the primary click.
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0–0.75s)**
+  - Loads page, hesitates (340ms click at (0,0)), then scrolls downward in 3 rapid sweeps (0.38–0.5s) to 742px.
+  - **Behavior**: Pure exploration; no engagement beyond scrolling.
+- **Phase 2: Cyclical Engagement (0.75–5.28s)**
+  - **Loop 1 (0.75–1.82s)**: Clicks Testimonials → scrolls up → clicks Navigation.
+  - **Loop 2 (1.82–3.28s)**: Scrolls down → clicks Features → scrolls up → clicks Get Started.
+  - **Loop 3 (3.28–5.28s)**: Scrolls up → clicks Hero Title → scrolls down → clicks Footer.
+  - **Pattern**: Each loop follows:
+    1. Click on a section (hover → double-click).
+    2. Scroll upward (2–5 sweeps, 120–240px per sweep).
+    3. Click on a new section (often vertically distant from prior click).
+    4. Scroll downward to next target.
+  - **Behavior**: Mechanical, non-goal-directed; no progression toward conversion or deeper content.
+- **Termination**: Session ends **immediately** after final Footer click (no exit intent, no lingering).
+- **Arc**: **No narrative arc**—repetitive cycles with no escalation, discovery, or exit behavior. Resembles automated testing or synthetic user behavior.
+```
+
+**SUMMARY**: This session exhibits **highly artificial, pattern-driven behavior** consistent with automated testing or synthetic user simulation. Key indicators:
+- **Unnaturally rapid** interactions (180ms median interval).
+- **Perfectly repetitive** scroll-click cycles.
+- **No content engagement** (only structural elements clicked).
+- **No typing, corrections, or dynamic feature usage**.
+- **No exit behavior** (abrupt termination post-final click).
+
+Likely a **bot, script, or QA test** rather than a human user.

@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no clear linear progression.
+- Repeated cycles of rapid scrolling (both up/down) followed by clustered clicks on the same UI elements.
+- 6 distinct "scroll bursts" (0.26s–1.09s, 1.88s–2.03s, 2.68s–2.74s, 3.42s–3.53s, 4.92s–5.16s, 6.52s–6.61s) covering 36px–965px in <0.5s increments.
+- 12 clicks on "Data Table" (5 unique locations), 6 clicks on "Sidebar" (3 rage clicks), 4 clicks on "Export" button, and 2 clicks on "Stats Cards" — all with near-identical coordinates, suggesting accidental or frustrated re-clicks.
+- No evidence of sequential navigation (e.g., no clicks on links, tabs, or menu items leading to new pages).
+
+2. READING BEHAVIOR
+- Skimming with no deep reading. Scroll depth maxes at 965px (viewport height: 1080px), but:
+  - 80% of scrolls are <0.5s in duration, covering 36–214px per scroll.
+  - No pauses >200ms at any scroll depth (typical for reading).
+  - 3 instances of rapid scroll reversal (e.g., 1.88s–2.03s: 965px → 73px in 150ms).
+- Hover times (80–134ms) are too brief for content absorption (typical reading hover: 500ms+).
+
+3. ENGAGEMENT STYLE
+- No evidence of voting, commenting, or content creation.
+- All interactions are clicks on static UI elements (tables, buttons, sidebar).
+- "Rage clicks" (4.73s–4.89s) indicate frustration, not engagement with content.
+- No dwell time on any element >134ms (hover) or >1.3s (click-to-click interval).
+
+4. INTERACTION SPEED
+- Extremely fast and impulsive:
+  - Median time between actions: 0.12s (excluding hesitations).
+  - 18/30 actions occur <0.2s apart (e.g., 0.68s–0.88s: two clicks on "Stats Cards" in 200ms).
+  - Hesitations: 217ms (0.22s) and 1310ms (8.2s) — likely accidental clicks or pauses to process UI.
+  - No typing detected (no input fields interacted with).
+
+5. CONTENT PREFERENCES
+- No content preferences identifiable. All clicks target UI components, not content:
+  - "Data Table" (12 clicks): Likely a table widget, not a content type.
+  - "Stats Cards" (2 clicks): Dashboard metrics, not user-generated content.
+  - "Sidebar" (6 clicks): Navigation menu, not content.
+  - "Export" (4 clicks): Functional button, not content.
+- No subreddit, topic, or content-type data visible in the log.
+
+6. TYPING BEHAVIOR
+- No typing detected. No input fields, search bars, or text areas interacted with.
+- No corrections, deletions, or input lengths measurable.
+
+7. FEATURE DISCOVERY
+- Features used:
+  - Scrolling (6 bursts, 24 scroll actions).
+  - Clicking on "Data Table" (12 clicks), "Sidebar" (6 clicks), "Export" (4 clicks), "Stats Cards" (2 clicks).
+- Features ignored:
+  - No interaction with navigation menus (beyond sidebar clicks), search, filters, or settings.
+  - No evidence of tooltips, modals, or help features being triggered.
+  - No clicks on links, images, or interactive content (e.g., expandable rows, dropdowns).
+
+8. SESSION FLOW
+- Arc: Frustrated exploration → repetitive UI testing → abrupt exit.
+  - 0.0s–0.68s: Initial load + hesitant click (217ms hesitation). Rapid scrolling to 110px.
+  - 0.68s–2.47s: First engagement cycle. Clicks "Stats Cards" (2x), scrolls to 965px, clicks "Data Table" (2x), scrolls back up, clicks "Export" (2x).
+  - 2.68s–4.49s: Second cycle. Scrolls down/up, clicks "Data Table" (2x), "Sidebar" (2x).
+  - 4.49s–5.41s: Frustration phase. 3 rage clicks on sidebar (4.73s–4.89s), rapid scrolling to 705px.
+  - 5.41s–8.45s: Final cycle. Clicks "Data Table" (4x), scrolls up, clicks "Export" (2x), 1310ms hesitation, final click.
+- Exit: Session ends at 8.5s with no confirmation of success (e.g., export triggered, navigation completed).
+- No clear goal achieved. Repetitive clicks suggest UI unresponsiveness or user confusion.
+```
+
+**SUMMARY**: This is a synthetic/impulsive session characterized by rapid, erratic interactions with no content engagement. The user exhibits signs of frustration (rage clicks, repeated clicks on the same elements) and skims the page without reading. All actions target UI components, not content, and the session ends abruptly after 8.5s with no measurable outcome. Likely a bot, automated test, or user with severe usability issues.

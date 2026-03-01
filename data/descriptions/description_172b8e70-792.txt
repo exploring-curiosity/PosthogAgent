@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and focused, with no deviations or exploratory detours.
+- Strict adherence to the left sidebar navigation menu (Settings → Profile → Notifications → Settings).
+- No evidence of backtracking, cross-linking, or content discovery outside the primary navigation path.
+- All clicks target pre-existing UI elements (no search, no dynamic content interaction).
+
+2. READING BEHAVIOR
+- No deep reading detected. Scroll patterns indicate rapid skimming:
+  - Initial scroll (0.88s–1.05s): 54px in 170ms (318px/s).
+  - Profile section scroll (2.2s–2.38s): 474px in 180ms (2,633px/s).
+  - Notifications section scroll (3.52s–3.7s): 328px in 180ms (1,822px/s).
+- Max scroll depth per section correlates with the vertical height of the visible navigation menu (no content engagement beyond menu items).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content interaction of any kind.
+- All actions are navigation clicks (100% of non-scroll actions).
+- No evidence of hesitation before navigation clicks (hover times are brief: 145ms–336ms).
+- No ratio metrics available (no votes or comments).
+
+4. INTERACTION SPEED
+- Extremely fast, with minimal deliberation:
+  - Median time between non-scroll actions: 0.63s (excluding scrolls).
+  - Fastest click interval: 0.07s (between Profile clicks at 1.49s and 2.13s).
+  - Longest hesitation: 1,402ms (at 5.35s, preceding final Settings Nav click).
+- Scroll actions are uniformly rapid (0.5s duration per scroll, 12–14px/100ms).
+
+5. CONTENT PREFERENCES
+- No content engagement detected. All interactions are with navigation elements:
+  - Settings (2 clicks: 0.8s, 6.09s)
+  - Profile (2 clicks: 1.49s, 2.13s)
+  - Notifications (2 clicks: 2.86s, 3.46s)
+- No subreddit or post-level interaction.
+
+6. TYPING BEHAVIOR
+- No typing detected. No text inputs, searches, or form submissions.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Left sidebar navigation (Settings, Profile, Notifications).
+  - Page scrolling (vertical only).
+- Ignored features:
+  - Search bar (no interaction).
+  - Content feed (no clicks, no hovers).
+  - User profile settings (no form inputs).
+  - Any dynamic or interactive elements (e.g., toggles, buttons, modals).
+
+8. SESSION FLOW
+- Arc: Linear navigation → rapid skimming → abrupt exit.
+  - 0.0s–0.8s: Page load and initial hesitation (803ms).
+  - 0.8s–2.86s: Profile section accessed (2 clicks, 4 scrolls).
+  - 2.86s–3.95s: Notifications section accessed (2 clicks, 5 scrolls).
+  - 3.95s–6.09s: Return to Settings (2 clicks, 1 hesitation).
+  - 6.1s: Session ends (no further actions).
+- No engagement phase; purely navigational with no content interaction.
+- Exit occurs immediately after final Settings click (no lingering).
+```
+
+Key Observations:
+- The session is characteristic of a **synthetic agent or scanner** (consistent with the "synthetic/scanner" device label).
+- No human-like behavior detected (e.g., no reading, no content interaction, no typing).
+- Actions are optimized for speed and linearity, with no exploratory or deliberative patterns.

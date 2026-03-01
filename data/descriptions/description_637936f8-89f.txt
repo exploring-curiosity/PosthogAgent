@@ -1,0 +1,57 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with micro-explorations**: The user follows a clear checkout flow (Cart Summary → Email → Card Number → Pay Now → Back to Shop) but exhibits repeated back-and-forth within each step.
+- **Scattered micro-interactions**: 47% of actions (9/19) are non-linear (e.g., re-clicking "Cart Summary" at 4.12s and 5.2s, or dead-clicking at 13.81s).
+- **Viewport-centric**: All clicks occur within the visible 1920x1080 area; no horizontal scrolling or off-screen exploration.
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**:
+  - **Scroll velocity**: 140–160px/s during downward scrolls (e.g., 8.9s–9.09s: 129px in 0.5s), suggesting rapid scanning.
+  - **Pause points**: Hovers (470–573ms) precede clicks on "Cart Summary" (4.12s), "Email" (6.12s), and "Pay Now" (13.03s), indicating brief content evaluation.
+  - **No sustained reading**: No scroll pauses >1s; max depth (972px) reached in 16.3s suggests no detailed review of terms/legal text.
+
+3. ENGAGEMENT STYLE
+- **N/A**: This is a checkout session; no voting/commenting features are present. All interactions are form-field or button clicks.
+
+4. INTERACTION SPEED
+- **Deliberate with hesitation spikes**:
+  - **Median action interval**: 0.7s (excluding hesitations).
+  - **Hesitation events**: 4 instances (3.39s, 8.27s, 10.92s, 15.4s) totaling 7.68s (47% of session duration). Longest hesitation: 2148ms before email input (8.27s).
+  - **Click latency**: 432–573ms hover time before primary clicks (e.g., "Pay Now" at 13.03s).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**:
+  - **Gravitated toward**: Form fields (Email, Card Number) and primary CTA ("Pay Now").
+  - **Ignored**: Secondary elements (e.g., no interaction with promo codes, shipping options, or footer links).
+  - **Exit trigger**: Clicked "Back to Shop" (14.57s) after reaching page bottom (972px), suggesting abandonment of checkout.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: All "Clicked input" actions (6.12s, 8.86s, 12.03s) show no keystrokes or corrections. Likely placeholder clicks or synthetic test behavior.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Cart Summary (expanded twice: 4.12s, 5.2s).
+  - Form fields (Email, Card Number).
+  - Primary CTA ("Pay Now").
+  - Exit link ("Back to Shop").
+- **Ignored**:
+  - Payment method selectors (e.g., PayPal, Apple Pay).
+  - Security badges/trust signals (no hovers or clicks).
+  - Help/chat widgets (no interactions).
+
+8. SESSION FLOW
+- **Arc**: **Linear progression → Hesitation → Abandonment**
+  - **0–4.12s**: Orientation (page load → scroll to Cart Summary).
+  - **4.12–13.44s**: Form engagement (Email → Card Number → Pay Now) with 3 hesitation events.
+  - **13.44–16.33s**: Post-submission confusion (dead click at 13.81s, scroll to bottom, exit via "Back to Shop").
+- **Exit state**: Abandoned checkout without completing payment or entering data.
+- **Key inflection points**:
+  - **8.27s**: 2148ms hesitation before email field (potential friction).
+  - **13.81s**: Dead click post-"Pay Now" (possible error message or loading state not captured in logs).
+```
+
+**NOTES**:
+- **Synthetic user flag**: Device labeled "synthetic/methodical_user" suggests this may be a test session, not organic behavior.
+- **No data entry**: Despite 3 form-field clicks, no typing or corrections were logged, reinforcing synthetic nature.

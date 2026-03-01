@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Non-linear, hesitant, and exploratory with repeated backtracking**
+  - Begins at checkout page (0.0s) but immediately exhibits uncertainty.
+  - First action after 4.69s is a hesitation click (4685ms delay), followed by rapid downward scrolling (4.73s–5.02s) to scan the page (980px max depth).
+  - Attempts to leave checkout twice: clicks "Back to Shop" at 6.7s (after 1521ms hover) and again at 9.51s (no hover), suggesting reluctance to proceed.
+  - Returns to checkout after 9.51s, then navigates upward (9.54s–9.59s) to re-engage with form fields.
+  - **Pattern**: Scattered focus with repeated toggling between checkout abandonment and form interaction.
+
+2. READING BEHAVIOR
+- **Skim-heavy with minimal deep reading**
+  - **Scroll speed**: 5 rapid downward scrolls (4.73s–5.02s) covering 980px in 0.3s total (avg. 3266px/s), indicating scanning rather than reading.
+  - **Scroll depth**: Reaches 980px (bottom of page) in 5.02s, then immediately scrolls back up (9.54s–9.59s) to 173px, suggesting no sustained engagement with content below the fold.
+  - **Hover times**: Long hovers (1521ms, 1128ms, 1080ms, 1246ms) on interactive elements ("Back to Shop," "Cart Summary," "Pay Now") imply deliberation but not necessarily deep reading of surrounding text.
+  - **No evidence of pausing** to read static text (e.g., terms, product details).
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting observed** (session is on a checkout page, not a social platform).
+- **Interaction metrics**:
+  - **Form field engagement**: Clicks "Email" (10.64s, 14.14s), "Card Number" (19.16s, 20.52s), and "Pay Now" (22.26s, 26.59s) twice each, with long hovers (872ms–1246ms) before clicks.
+  - **Hesitation clicks**: 4 instances (4.69s, 7.74s, 12.36s, 23.73s) totaling 8916ms of inactivity, suggesting uncertainty or distraction.
+  - **No typing observed** (no keystrokes logged), despite clicking form fields.
+
+4. INTERACTION SPEED
+- **Deliberate with bursts of rapid activity**
+  - **Average time between actions**: 1.5s (excluding hesitation clicks).
+  - **Fastest sequence**: Scrolling (4.73s–5.02s) with 0.05s intervals between scrolls.
+  - **Slowest sequences**:
+    - 4.69s–6.7s: 2.01s between hesitation click and "Back to Shop" (1521ms hover).
+    - 22.26s–26.59s: 4.33s between "Pay Now" hover and final click (1472ms hesitation).
+  - **Hover-to-click latency**: 872ms–1521ms (avg. 1169ms), indicating cautious interaction.
+
+5. CONTENT PREFERENCES
+- **Checkout page only** (no subreddit/content navigation visible).
+- **Focus areas**:
+  - **Exit paths**: "Back to Shop" (clicked twice, 6.7s and 9.51s).
+  - **Form fields**: "Email" (2 clicks), "Card Number" (2 clicks), "Pay Now" (2 clicks).
+  - **Cart Summary**: Hovered (1128ms) and clicked (17.68s), suggesting interest in order details.
+- **Ignored content**:
+  - No interaction with static text (e.g., shipping info, legal disclaimers).
+  - No clicks on non-interactive elements (e.g., product images, descriptions).
+
+6. TYPING BEHAVIOR
+- **No typing detected** in the log.
+  - Despite clicking "Email" and "Card Number" fields, no keystrokes or input lengths are recorded.
+  - Possible explanations:
+    - User clicked fields but did not type.
+    - Inputs were pre-filled (e.g., saved email).
+    - Technical limitation in logging.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Scrolling (10 instances, 4.73s–20.73s).
+  - Form field clicks ("Email," "Card Number").
+  - "Back to Shop" button (exit intent).
+  - "Cart Summary" dropdown/section.
+  - "Pay Now" button (final action).
+- **Features ignored**:
+  - No interaction with:
+    - Promotional banners (if present).
+    - Help/chat widgets.
+    - Payment method selectors (e.g., PayPal, Apple Pay).
+    - Coupon/discount fields.
+    - Shipping address fields (if separate from card input).
+
+8. SESSION FLOW
+- **Arc**: **Reluctant exploration → Abandonment attempt → Forced progression → Hesitant submission**
+  - **0.0s–5.02s (Exploration)**:
+    - Lands on checkout, hesitates (4685ms), then rapidly scrolls to bottom (980px) to scan page.
+  - **5.02s–9.51s (Abandonment Attempt)**:
+    - Hovers over "Back to Shop" (1521ms), clicks it (6.7s), hesitates again (1040ms), then clicks "Back to Shop" a second time (9.51s).
+  - **9.51s–17.68s (Re-engagement)**:
+    - Scrolls back up (9.54s–9.59s), clicks "Email" (10.64s), hesitates (1719ms), re-clicks "Email" (14.14s), then hovers/clicks "Cart Summary" (15.54s, 17.68s).
+  - **17.68s–26.59s (Forced Progression)**:
+    - Scrolls to "Card Number" (17.71s–20.73s), clicks it twice (19.16s, 20.52s), then hovers over "Pay Now" (1246ms) before hesitating (1472ms) and finally clicking it (26.59s).
+- **Exit**: Session ends after "Pay Now" click (no confirmation page logged).
+```
+
+**SUMMARY**: This user exhibits **high hesitation, low commitment, and forced progression** through the checkout process. Their behavior suggests **distrust, distraction, or decision paralysis**, with repeated attempts to abandon the page and long pauses before critical actions. No typing or deep reading occurred, and interactions were limited to essential form fields and exit paths. The session arc reflects a **struggle between intent (to purchase) and reluctance (to complete)**.

@@ -1,0 +1,56 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive validation**: The user exhibits non-linear, erratic navigation with frequent re-clicks on the same elements (e.g., "Hero Title" clicked twice at [1.03s] and [5.27s]; "Navigation" clicked twice at [6.09s] and [7.26s]; "Get Started" clicked twice at [7.79s] and [8.62s]).
+- **No clear progression**: Actions oscillate between scrolling (up/down), clicking static elements (h1, nav), and re-engaging with the same UI components. No sequential flow (e.g., landing page → sub-page → form submission).
+- **Spatial inconsistency**: Clicks on "Hero Title" occur at nearly identical coordinates ([1338,162] and [1336,160]), suggesting targeted but redundant interaction rather than exploration.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth never exceeds 368px (viewport height: 1080px), indicating no deep reading. Max scroll depth (368px) is reached only in the final 1.3 seconds of the session.
+- **Rapid scroll bursts**: Scrolling occurs in 0.5s increments (e.g., [0.63s]–[0.67s], [5.35s]–[5.53s]), with no pauses >0.5s between scrolls, suggesting scanning rather than content absorption.
+- **Directional reversal**: Scrolls down initially ([0.63s]–[1.03s]), then up ([5.35s]–[5.53s]), then down again ([7.3s]–[7.41s]), implying no sustained focus on any section.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows no votes, comments, form submissions, or dynamic interactions (e.g., dropdowns, filters). All clicks target static elements (h1, nav, button).
+- **Hesitation markers**: Two clicks labeled "[HESITATION]" ([0.57s], [3.96s]) with delays of 569ms and 2936ms, respectively, suggest uncertainty or distraction.
+- **Hover data**: Hover times (207ms, 257ms, 233ms) precede clicks but do not correlate with deeper engagement (e.g., no subsequent typing or selection).
+
+4. INTERACTION SPEED
+- **Variable pace**: Action intervals range from 60ms ([5.35s]–[5.39s]) to 2.93s ([1.03s]–[3.96s]). Median interval: ~0.6s (excluding the 2.93s outlier).
+- **Accelerating end**: Final actions ([7.26s]–[8.62s]) occur in rapid succession (avg. 0.34s between actions), possibly indicating frustration or forced completion.
+- **Synthetic traits**: The "synthetic/scanner" device label and lack of typing suggest automated or scripted behavior, despite the presence of hesitation/hover data.
+
+5. CONTENT PREFERENCES
+- **No content differentiation**: All interactions target structural elements (h1, nav, button) with no evidence of content consumption (e.g., no clicks on articles, images, or links).
+- **No subreddit/section data**: The log does not reference specific content types (e.g., "news," "forums") or sub-pages, preventing preference analysis.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, corrections, or input fields engaged. The session is entirely point-and-click.
+
+7. FEATURE DISCOVERY
+- **Limited feature set used**:
+  - **Discovered**: Hero title, navigation bar, "Get Started" button.
+  - **Ignored**: Search bars, sidebars, footers, interactive widgets (e.g., carousels, forms), or any dynamic content (e.g., accordions, tabs).
+- **No feature exploration**: No clicks on secondary elements (e.g., logos, icons, links) or attempts to access hidden menus (e.g., hamburger menus).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–1.03s)**
+  - Page load → immediate hesitation click ([0.57s]) → rapid downward scroll ([0.63s]–[0.67s]) → click on "Hero Title" ([1.03s]).
+  - **Goal**: Likely assessing page layout or testing interactivity.
+- **Phase 2: Stagnation (1.03s–6.09s)**
+  - 2.93s pause ([1.03s]–[3.96s]) → second hesitation click ([3.96s]) → re-click "Hero Title" ([5.27s]) → upward scroll ([5.35s]–[5.53s]).
+  - **Behavior**: Repetitive validation of static elements; no progress toward a goal.
+- **Phase 3: Forced Progression (6.09s–8.62s)**
+  - Click navigation ([6.09s]) → re-click navigation ([7.26s]) → rapid downward scroll ([7.3s]–[7.41s]) → click "Get Started" ([7.79s]) → re-click "Get Started" ([8.62s]).
+  - **Goal**: Attempt to exit or advance, but hindered by redundant clicks.
+- **Exit**: Session ends abruptly after second "Get Started" click. No confirmation of navigation to a new page.
+
+SUMMARY
+This session reflects **non-human or scripted behavior** with the following hallmarks:
+- **Repetitive validation**: Multiple clicks on identical elements with near-identical coordinates.
+- **No content engagement**: Zero interaction with substantive content or input fields.
+- **Synthetic traits**: "Synthetic/scanner" device label, lack of typing, and rapid scroll bursts.
+- **Hesitation artifacts**: Hover/hesitation data may be simulated to mimic human behavior.
+- **No clear intent**: Actions do not align with typical user goals (e.g., reading, purchasing, signing up).
+```

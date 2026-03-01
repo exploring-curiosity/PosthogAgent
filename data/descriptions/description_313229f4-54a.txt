@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-directed with minimal deviation.
+- Follows a strict top-to-bottom, left-to-right progression through the settings page.
+- No backtracking to previously viewed sections; each click advances to a new logical section (Notifications → Profile → Save Changes).
+- No evidence of exploratory browsing or side-menus/secondary features.
+
+2. READING BEHAVIOR
+- Skimming confirmed by rapid, incremental scrolls.
+- Scroll depth progression:
+  • 0–197 px in 0.5 s (0.84–1.34 s)
+  • 197–395 px in 0.5 s (0.88–1.38 s)
+  • 395–593 px in 0.5 s (0.91–1.41 s)
+- Average scroll speed: 396 px/s (consistent across all scrolls).
+- No pauses > 200 ms at any scroll depth, indicating no deep reading.
+- After clicking "Notifications" (1.44 s), user immediately scrolls up (2.61–2.74 s) to locate "Profile" at the top, suggesting they did not read the Notifications content in detail.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content interaction observed.
+- All interactions are administrative (settings adjustments).
+- Engagement is purely functional: two settings toggles (Notifications, Profile) followed by a save action.
+- No evidence of social engagement (e.g., upvotes, replies, or content creation).
+
+4. INTERACTION SPEED
+- Fast and deliberate with minimal hesitation.
+- Median inter-action interval: 0.57 s (excluding scrolls).
+- Notable hesitations:
+  • 760 ms before first click (0.0–0.76 s)
+  • 249 ms hover on "Notifications" (1.19–1.44 s)
+  • 267 ms hover on "Profile" (2.96–3.23 s)
+  • 106 ms hover on "Save Changes" (4.28–4.39 s)
+- After initial hesitation, actions are executed in rapid succession (e.g., 0.03 s between "Profile" hover and click).
+
+5. CONTENT PREFERENCES
+- No content consumption observed.
+- All interactions are with administrative UI elements:
+  • Notifications toggle
+  • Profile settings
+  • Save Changes button
+- No subreddit or post-level engagement detected.
+
+6. TYPING BEHAVIOR
+- No typing detected in the log.
+- No text inputs, corrections, or form fields interacted with.
+
+7. FEATURE DISCOVERY
+- Features used:
+  • Notifications toggle (1.44 s)
+  • Profile settings (3.23 s)
+  • Save Changes (4.39 s)
+- Features ignored:
+  • No interaction with sidebar, search, or other navigation elements.
+  • No evidence of feature exploration beyond the three core settings actions.
+
+8. SESSION FLOW
+- Arc: Linear administrative task completion.
+  • 0.0–0.76 s: Initial hesitation (page load → first click).
+  • 0.76–1.44 s: Rapid downward scroll to locate Notifications section.
+  • 1.44–2.56 s: Notifications toggle interaction (hover + click).
+  • 2.56–3.23 s: Immediate upward scroll to top to locate Profile section.
+  • 3.23–3.84 s: Profile toggle interaction (hover + click).
+  • 3.84–4.39 s: Rapid downward scroll to bottom to locate Save Changes.
+  • 4.39–5.65 s: Save Changes interaction (hover + click).
+- Exit: Session ends immediately after final click; no post-save browsing.
+- Total session duration: 5.6 s.
+```

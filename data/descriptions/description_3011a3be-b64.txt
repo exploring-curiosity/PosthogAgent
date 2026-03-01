@@ -1,0 +1,57 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   - Highly linear and goal-directed. The user follows a strict path through the checkout flow with no deviations, exploratory clicks, or backtracking.
+   - All interactions occur within a single page (checkout) and target only form inputs and the final "Place Order" button.
+   - Pattern: Focused → Linear progression.
+
+2. READING BEHAVIOR
+   - No scroll events are recorded, indicating the user did not scroll vertically or horizontally.
+   - The only text interaction is a 3.2-second hesitation labeled "[HESITATION 3200ms]" at (0, 0), suggesting a brief pause to read or process a single element (likely a prompt, error, or terms text) without deeper reading.
+   - Behavior: Skimming or minimal reading.
+
+3. ENGAGEMENT STYLE
+   - N/A: This is a checkout session, not a content engagement platform (e.g., Reddit). No voting, commenting, or social interactions are applicable.
+   - No engagement metrics (e.g., vote-to-comment ratio) can be derived.
+
+4. INTERACTION SPEED
+   - Fast initial engagement: First click at 1.5s after page load.
+   - Deliberate pauses:
+     - 1.5s between page load and first input click.
+     - 1.5s between first input click and hesitation (3.0s total).
+     - 3.2s hesitation (3200ms) at 3.0s.
+     - 3.2s between hesitation and next input click (6.2s total).
+     - 1.8s between second input click and "Place Order" button (8.0s total).
+   - Overall: Mixed—fast initial action, followed by deliberate pauses, especially during hesitation.
+
+5. CONTENT PREFERENCES
+   - N/A: The session is confined to a checkout page. No content or subreddit preferences are observable.
+
+6. TYPING BEHAVIOR
+   - No typing events (e.g., keystrokes, input values) are logged.
+   - Two input fields are clicked (at 1.5s and 6.2s), but no data on typing speed, corrections, or input length is available.
+   - Behavior: Input interaction detected, but no typing metrics.
+
+7. FEATURE DISCOVERY
+   - Features used:
+     - Form input fields (two distinct clicks at (400, 350) and (400, 450)).
+     - "Place Order" button (clicked at 8.0s).
+   - Features ignored:
+     - No navigation to other pages or sections.
+     - No interaction with sidebars, headers, footers, or auxiliary elements (e.g., help links, promo codes).
+     - No scroll or hover events, suggesting no exploration of off-screen content.
+
+8. SESSION FLOW
+   - Arc: Linear checkout progression with hesitation.
+     - 0.0s: Page load (entry point).
+     - 0.0–1.5s: Initial scan (no interaction).
+     - 1.5s: First input field clicked (likely name, email, or shipping field).
+     - 1.5–3.0s: Brief pause (possible field completion or reading).
+     - 3.0s: 3.2s hesitation (likely reviewing terms, payment details, or error message).
+     - 3.0–6.2s: Resumes interaction after hesitation.
+     - 6.2s: Second input field clicked (likely payment or billing field).
+     - 6.2–8.0s: Final pause (possible field completion).
+     - 8.0s: "Place Order" button clicked (session ends).
+   - Exit: Immediate after final action; no post-submission behavior observed.
+```

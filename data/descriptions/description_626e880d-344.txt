@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Linear with Targeted Exploration**: The user follows a clear, top-to-bottom progression through the dashboard, interacting with elements in a sequential order (Sidebar → Stats Cards → Chart → Data Table → Export). No backtracking or non-linear jumps are observed until the final scroll-up (11.78s–11.98s), which precedes the Export action.
+- **No Random Clicks**: All clicks target specific UI components (Sidebar, Stats Cards, Chart, Data Table, Export), suggesting goal-oriented behavior rather than exploratory browsing.
+
+2. READING BEHAVIOR
+- **Skimmer with Brief Deep Dives**: Scroll patterns indicate rapid skimming:
+  - **Initial Skim (2.22s–2.4s)**: 5 rapid scrolls (12px–61px) in 0.18s, averaging **~27px/s**.
+  - **Secondary Skim (3.88s–3.92s)**: 2 scrolls (61px–265px) in 0.04s, averaging **~510px/s**.
+  - **Tertiary Skim (5.67s–5.71s)**: 2 scrolls (265px–470px) in 0.04s, averaging **~512px/s**.
+  - **Final Skim (7.85s–8.08s)**: 5 scrolls (470px–747px) in 0.23s, averaging **~1,204px/s**.
+- **No Pauses for Reading**: No scroll stalls >0.5s; all scrolls are continuous and rapid. The only "deep" engagement is with interactive elements (e.g., hovering over Stats Cards for 311ms, Chart for 753ms).
+
+3. ENGAGEMENT STYLE
+- **No Traditional "Engagement" (e.g., voting/commenting)**: The session lacks actions like upvotes, replies, or text input. Instead, engagement is **operational**:
+  - **Clicks as Primary Interaction**: 8 total clicks (excluding hesitations), all targeting UI controls (Sidebar, Stats Cards, Chart, Data Table, Export).
+  - **Hover-to-Click Ratio**: 4/8 clicks (50%) are preceded by hovers (avg hover duration: **528ms**).
+  - **Hesitation Events**: 2 instances of "[HESITATION]" (2.18s: 2,183ms; 10.61s: 2,026ms), likely indicating decision-making or distraction.
+
+4. INTERACTION SPEED
+- **Deliberate but Efficient**:
+  - **Avg Time Between Actions**: 1.64s (excluding hesitations).
+  - **Fastest Sequence**: 0.04s between scrolls (e.g., 3.88s–3.92s).
+  - **Slowest Sequence**: 2.83s between Data Table click (8.58s) and next hesitation (10.61s).
+  - **Hover Delays**: Avg 528ms before clicking hovered elements (range: 311ms–753ms).
+  - **No Typing Detected**: Zero text input or corrections observed.
+
+5. CONTENT PREFERENCES
+- **Dashboard-Centric Focus**:
+  - **Sidebar**: First interactive element (3.38s), suggesting navigation or settings.
+  - **Stats Cards**: Clicked at 4.47s, likely for metrics or summaries.
+  - **Chart**: Clicked at 6.61s, indicating interest in data visualization.
+  - **Data Table**: Clicked twice (8.58s, 11.74s), suggesting tabular data was a key target.
+  - **Export**: Final action (12.54s), implying intent to extract data.
+- **Ignored Elements**: No interaction with headers, footers, modals, or non-dashboard UI (e.g., search bars, user profiles).
+
+6. TYPING BEHAVIOR
+- **Not Applicable**: No typing, text input, or corrections detected in the session.
+
+7. FEATURE DISCOVERY
+- **Discovered and Used**:
+  - **Sidebar Navigation**: Clicked twice (3.38s, 3.81s).
+  - **Stats Cards**: Hovered (311ms) and clicked (4.47s, 5.63s).
+  - **Chart**: Hovered (753ms) and clicked (6.61s, 7.78s).
+  - **Data Table**: Hovered (372ms) and clicked twice (8.58s, 11.74s).
+  - **Export Button**: Hovered (328ms) and clicked (12.54s, 13.11s).
+- **Ignored Features**:
+  - No interaction with filters, search, notifications, or user-specific tools.
+  - No exploration of non-dashboard pages (e.g., settings, help).
+
+8. SESSION FLOW
+- **Arc**: **Goal-Driven Data Extraction** with 3 phases:
+  1. **Orientation (0.0s–3.38s)**:
+     - Page load → initial hesitation (2.18s) → rapid skimming (2.22s–2.4s).
+     - **Goal**: Likely assessing dashboard layout.
+  2. **Targeted Interaction (3.38s–11.74s)**:
+     - Sidebar → Stats Cards → Chart → Data Table (sequential clicks with skimming between).
+     - **Goal**: Locating and interacting with data components.
+  3. **Data Export (11.74s–13.11s)**:
+     - Scrolls up (11.78s–11.98s) → Export click (12.54s).
+     - **Goal**: Finalizing data extraction before session end.
+- **Exit**: Session terminates immediately after Export click (13.11s), suggesting task completion.
+```
+
+**SUMMARY**: This user exhibits **highly methodical, task-focused behavior** typical of a synthetic/methodical user (e.g., automated test or power user). They prioritize **data extraction** (Stats Cards → Chart → Data Table → Export) with **minimal exploration**, **no reading depth**, and **efficient, deliberate interactions**. The session lacks traditional engagement (e.g., comments) and is optimized for **speed and precision**.

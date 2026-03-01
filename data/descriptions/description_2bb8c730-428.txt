@@ -1,0 +1,49 @@
+```
+BEHAVIORAL PROFILE: CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-directed with minimal deviation.
+- Progression follows a strict top-to-bottom path: Email → Cart Summary → Card Number → Pay Now → Back to Shop.
+- No lateral exploration (e.g., no clicks on navigation menus, product links, or secondary CTAs).
+- 100 % of clicks target form fields or primary checkout buttons; zero clicks on ancillary elements.
+
+2. READING BEHAVIOR
+- Skimming confirmed by rapid, shallow scroll bursts.
+- Scroll depth: 0 px → 1007 px in 6.6 s, averaging 152 px/s.
+- Each scroll burst covers ~90–100 px in 0.5 s, suggesting visual scanning rather than deep reading.
+- No pauses > 200 ms at any scroll depth; user never stops to read paragraphs.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions observed.
+- Interaction is purely transactional: form field clicks and button presses only.
+- Zero engagement with user-generated content or community features.
+
+4. INTERACTION SPEED
+- Fast and deliberate with micro-hesitations.
+- Median inter-action interval: 340 ms (excluding the 2092 ms hesitation before final Pay Now click).
+- Click-to-click latency for form fields: 240–400 ms.
+- Two explicit hesitations: 386 ms at 0.39 s and 2092 ms at 5.56 s.
+- One dead click at 2.89 s (1576, 408) with no subsequent correction.
+
+5. CONTENT PREFERENCES
+- Content type: exclusively checkout form fields and summary panels.
+- No product pages, category pages, or promotional content accessed.
+- Gravitated toward: Email input (1.12 s), Cart Summary (1.73 s), Card Number (2.52 s), Pay Now (5.8 s), Back to Shop (6.63 s).
+
+6. TYPING BEHAVIOR
+- No keystroke data captured; only click events on input fields.
+- Input fields clicked twice each (Email, Card Number), suggesting possible corrections or double-checking.
+- No measurable typing speed or input length.
+
+7. FEATURE DISCOVERY
+- Features used: Email field, Cart Summary panel, Card Number field, Pay Now button, Back to Shop link.
+- Features ignored: promo codes, shipping options, gift wrapping, customer support chat, footer links, header navigation.
+
+8. SESSION FLOW
+- Arc: Linear checkout funnel with single exit point.
+- 0.0–0.96 s: Initial page load and micro-scrolling (0–114 px).
+- 0.96–2.52 s: Form field discovery (Email → Cart Summary → Card Number).
+- 2.52–5.8 s: Dead click and rapid scrolling (315–728 px), culminating in Pay Now hover (3.47 s) and 2092 ms hesitation.
+- 5.8–6.63 s: Final Pay Now click, continued scrolling (728–1007 px), and Back to Shop exit.
+- Exit at 6.63 s via Back to Shop link; no abandonment to external site.
+```

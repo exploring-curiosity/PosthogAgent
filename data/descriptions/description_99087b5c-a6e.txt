@@ -1,0 +1,77 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly focused and goal-driven**: The user exhibits a non-linear but purposeful navigation pattern, repeatedly targeting specific UI elements (e.g., "Back to Shop", "Pay Now", "Cart Summary", "Card Number", "Email") with minimal deviation.
+- **Repetitive clicks**: 6/14 actions (43%) are duplicate clicks on the same element (e.g., "Back to Shop" at 0.6s/0.82s, "Pay Now" at 1.33s/1.51s), suggesting either UI unresponsiveness or intentional double-clicking.
+- **Vertical oscillation**: Scrolling alternates between rapid downward exploration (0.43s–0.46s) and abrupt upward corrections (e.g., 0.86s–1.77s), indicating targeted information-seeking rather than linear progression.
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**: Scroll patterns reveal:
+  - **Rapid scanning**: Initial scroll from 0px→988px (0.43s–0.46s) covers ~50% of the page in 0.5s, averaging **1,976px/s**—far exceeding typical reading speeds (~300px/s).
+  - **Targeted pauses**: Brief scroll pauses at 683px (1.33s–1.51s) and 275px (2.38s–2.5s) align with clicks on "Pay Now" and "Card Number", suggesting momentary focus on specific sections.
+  - **No sustained reading**: No scroll segment exceeds 0.5s without a click or direction change; no evidence of deep content consumption.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting observed**: The session occurs entirely on a checkout page (https://example.com/checkout). No Reddit-specific actions (votes, comments) are recorded.
+- **Interaction metrics**:
+  - **Hover-to-click latency**: Hovers precede 5/14 clicks (36%), with durations of 55ms–161ms (median: 90ms), indicating deliberate targeting.
+  - **Click frequency**: 14 clicks in 3.1s = **4.5 clicks/s** (extremely high for human users; suggests synthetic/automated behavior).
+
+4. INTERACTION SPEED
+- **Hyper-accelerated**: Median time between actions = **110ms** (excluding scrolls). Key intervals:
+  - 0.0s–0.36s: 360ms hesitation (likely page load delay).
+  - 0.36s–0.43s: 70ms between click and scroll.
+  - 0.6s–0.82s: 220ms between "Back to Shop" clicks.
+  - 1.33s–1.51s: 180ms between "Pay Now" clicks.
+- **Scroll speed**: All scrolls complete in **0.5s** (fixed duration), covering 100–108px per 0.05s segment (2,000–2,160px/s).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: All interactions target e-commerce elements:
+  - **Navigation**: "Back to Shop" (2 clicks).
+  - **Payment**: "Pay Now" (2 clicks), "Card Number" input (2 clicks).
+  - **Cart review**: "Cart Summary" (2 clicks), "Email" input (2 clicks).
+- **No exploration**: No clicks on product details, promotions, or secondary CTAs (e.g., "Apply Coupon").
+
+6. TYPING BEHAVIOR
+- **No typing detected**: All actions are clicks/scrolls. No input fields show text entry or corrections.
+- **Input field targeting**: Clicks on "Card Number" and "Email" suggest intent to type, but no keystrokes are logged.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Primary CTAs: "Back to Shop", "Pay Now".
+  - Form fields: "Card Number", "Email".
+  - Cart summary: "Cart Summary" div.
+- **Ignored features**:
+  - No interaction with:
+    - Shipping/billing address fields.
+    - Payment method selectors (e.g., PayPal, Apple Pay).
+    - Promotional elements (e.g., discounts, upsells).
+    - Help/chat widgets (if present).
+
+8. SESSION FLOW
+- **Phase 1: Initial Hesitation (0.0s–0.36s)**
+  - Page load; 360ms pause (potential rendering delay or synthetic delay).
+- **Phase 2: Rapid Exploration (0.36s–0.6s)**
+  - Click at (0,0) (likely a misclick or synthetic event).
+  - Scrolls to 988px in 0.5s (scanning for "Back to Shop").
+- **Phase 3: Targeted Navigation (0.6s–1.77s)**
+  - Clicks "Back to Shop" twice (0.6s/0.82s), then scrolls up to 70px (likely to find "Pay Now").
+  - Clicks "Pay Now" twice (1.33s/1.51s).
+- **Phase 4: Form Interaction (1.77s–3.1s)**
+  - Clicks "Cart Summary" (2.03s/2.14s), scrolls to 275px, and targets "Card Number" (2.38s/2.5s).
+  - Scrolls up to 132px, clicks "Email" (2.97s/3.1s).
+- **Exit**: Session ends at 3.1s without completion (no form submission).
+
+---
+
+KEY OBSERVATIONS:
+- **Synthetic/power-user signature**: The combination of:
+  - Sub-200ms action intervals.
+  - Fixed 0.5s scroll durations.
+  - Duplicate clicks on the same coordinates.
+  - No typing or reading behavior.
+  Strongly suggests an automated script or synthetic test user.
+- **Goal**: Appears to simulate a checkout flow (likely for testing), but abandons before submission.
+- **UI friction**: Duplicate clicks may indicate unresponsive elements or scripted retries.
+```

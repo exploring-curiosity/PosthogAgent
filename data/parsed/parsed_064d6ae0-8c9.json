@@ -1,0 +1,289 @@
+{
+  "user_profile": {
+    "session_id": "064d6ae0-8c9",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/methodical_user",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 13.2,
+  "total_raw_events": 52,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/dashboard",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 0.64,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 636ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 0.67,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 195,
+      "max_depth": 195,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.75,
+      "action": "SCROLL",
+      "scroll_from": 195,
+      "scroll_to": 390,
+      "max_depth": 390,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.82,
+      "action": "SCROLL",
+      "scroll_from": 390,
+      "scroll_to": 585,
+      "max_depth": 585,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 1.36,
+      "action": "CLICK",
+      "target_tag": "aside",
+      "target_text": "Sidebar [HOVER 327ms]",
+      "target_href": "",
+      "target_class": "aside.sidebar",
+      "coordinates": [
+        277,
+        585
+      ]
+    },
+    {
+      "time": 1.89,
+      "action": "CLICK",
+      "target_tag": "aside",
+      "target_text": "Sidebar",
+      "target_href": "",
+      "target_class": "aside.sidebar",
+      "coordinates": [
+        279,
+        580
+      ]
+    },
+    {
+      "time": 1.93,
+      "action": "SCROLL",
+      "scroll_from": 585,
+      "scroll_to": 427,
+      "max_depth": 585,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 1.97,
+      "action": "SCROLL",
+      "scroll_from": 427,
+      "scroll_to": 269,
+      "max_depth": 427,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 2.02,
+      "action": "SCROLL",
+      "scroll_from": 269,
+      "scroll_to": 111,
+      "max_depth": 269,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 2.64,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Stats Cards [HOVER 476ms]",
+      "target_href": "",
+      "target_class": "div.stats-overview",
+      "coordinates": [
+        1252,
+        111
+      ]
+    },
+    {
+      "time": 3.69,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Stats Cards",
+      "target_href": "",
+      "target_class": "div.stats-overview",
+      "coordinates": [
+        1253,
+        109
+      ]
+    },
+    {
+      "time": 3.73,
+      "action": "SCROLL",
+      "scroll_from": 111,
+      "scroll_to": 306,
+      "max_depth": 306,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.81,
+      "action": "SCROLL",
+      "scroll_from": 306,
+      "scroll_to": 501,
+      "max_depth": 501,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 4.36,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Chart [HOVER 466ms]",
+      "target_href": "",
+      "target_class": "div.chart-container",
+      "coordinates": [
+        1147,
+        501
+      ]
+    },
+    {
+      "time": 4.8,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Chart",
+      "target_href": "",
+      "target_class": "div.chart-container",
+      "coordinates": [
+        1147,
+        500
+      ]
+    },
+    {
+      "time": 4.85,
+      "action": "SCROLL",
+      "scroll_from": 501,
+      "scroll_to": 726,
+      "max_depth": 726,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 4.9,
+      "action": "SCROLL",
+      "scroll_from": 726,
+      "scroll_to": 951,
+      "max_depth": 951,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 5.64,
+      "action": "CLICK",
+      "target_tag": "table",
+      "target_text": "Data Table [HOVER 521ms]",
+      "target_href": "",
+      "target_class": "table.data-table",
+      "coordinates": [
+        1376,
+        951
+      ]
+    },
+    {
+      "time": 8.44,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2803ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 9.54,
+      "action": "CLICK",
+      "target_tag": "table",
+      "target_text": "Data Table",
+      "target_href": "",
+      "target_class": "table.data-table",
+      "coordinates": [
+        1375,
+        946
+      ]
+    },
+    {
+      "time": 9.62,
+      "action": "SCROLL",
+      "scroll_from": 951,
+      "scroll_to": 515,
+      "max_depth": 951,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 9.7,
+      "action": "SCROLL",
+      "scroll_from": 515,
+      "scroll_to": 80,
+      "max_depth": 515,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 10.56,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Export [HOVER 669ms]",
+      "target_href": "",
+      "target_class": "button.export-btn",
+      "coordinates": [
+        1545,
+        80
+      ]
+    },
+    {
+      "time": 12.45,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 1892ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 13.24,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Export",
+      "target_href": "",
+      "target_class": "button.export-btn",
+      "coordinates": [
+        1543,
+        84
+      ]
+    }
+  ]
+}

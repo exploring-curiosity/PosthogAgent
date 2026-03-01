@@ -1,0 +1,62 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation style with frequent back-and-forth interactions. They oscillate between three core elements (Charts, Data Table, Sidebar) 3–4 times each, suggesting either confusion or frustration.
+- **No clear progression**: Actions jump between unrelated UI regions (e.g., Charts → Data Table → Sidebar → Charts → Data Table) without a logical sequence. The session lacks a "discovery → refinement → exit" flow.
+- **Spatial inconsistency**: Clicks on Charts occur at two distinct X-coordinates (1211px and 484px), implying either multiple chart instances or disorientation.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth reaches 954px (max) but is achieved via rapid, incremental scrolls (7–9 scrolls in 0.5s bursts). No pauses >200ms suggest no deep reading.
+- **Scroll velocity**: ~180px/s (e.g., 0.45s to scroll 228px → 457px). This aligns with "power-browsing" rather than content absorption.
+- **No dwell time**: No single element holds attention >1s before interaction (e.g., 46ms hover on Data Table at 2.02s).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows no votes, comments, or inputs—only clicks and scrolls. Interaction is purely navigational.
+- **Frustration markers**:
+  - **Rage clicks**: 6 consecutive clicks on Data Table (4.49s–4.94s) with <100ms intervals, indicating failed expectations (e.g., unresponsive UI).
+  - **Dead clicks**: 2 clicks on non-interactive areas (6.21s, 8.43s), suggesting misaligned mental model.
+- **Hesitation**: 3 instances of prolonged pauses (302ms, 565ms, 1989ms) before clicks, likely due to decision paralysis or confusion.
+
+4. INTERACTION SPEED
+- **Bimodal speed**:
+  - **Fast**: 60% of actions occur <500ms apart (e.g., 0.3s → 0.38s scroll, 0.68s → 1.24s click).
+  - **Slow**: 3 hesitation pauses (>300ms) and 1 extended pause (1989ms at 4.01s), possibly due to cognitive load or distraction.
+- **Click frequency**: 19 clicks in 8.4s (~2.26 clicks/s), with clusters during rage-click sequences (~10 clicks/s).
+
+5. CONTENT PREFERENCES
+- **Targeted elements**: 100% of clicks focus on 3 UI components:
+  - **Charts**: 4 clicks (2 instances, likely different charts).
+  - **Data Table**: 10 clicks (primary focus, including rage clicks).
+  - **Sidebar**: 2 clicks.
+- **No content exploration**: No evidence of reading text, viewing images, or interacting with dynamic content (e.g., filters, tooltips).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no input fields, keystrokes, or corrections. All interactions are mouse-based.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Charts (used twice, possibly different charts).
+  - Data Table (primary interaction target).
+  - Sidebar (used once, late in session).
+- **Ignored features**:
+  - No interaction with headers, footers, buttons, or navigation menus.
+  - No evidence of tooltips, modals, or dropdowns being triggered.
+  - No search or filter usage.
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–2.02s)**
+  - Loads dashboard, scrolls rapidly to 890px (skim behavior).
+  - Clicks Charts and Data Table once each, with hesitation pauses.
+- **Phase 2: Frustration Spike (2.02s–5.07s)**
+  - Rage-clicks Data Table (6 clicks in 0.45s), then scrolls up abruptly (likely to reset position).
+  - Dead click at 6.21s suggests failed interaction.
+- **Phase 3: Reorientation (5.07s–8.43s)**
+  - Returns to Charts (different instance), then Sidebar, then Data Table again.
+  - Final dead click at 8.43s implies session abandonment.
+- **Arc**: **Confusion → Frustration → Abandonment**. No resolution or task completion.
+
+ADDITIONAL OBSERVATIONS
+- **Viewport misuse**: Clicks at (0, 0) (3x) and extreme coordinates (e.g., 1832x1391) suggest either UI misalignment or synthetic/automated behavior (consistent with "synthetic/impulsive_clicker" device label).
+- **No exit action**: Session ends mid-interaction (dead click), implying abrupt termination.
+```

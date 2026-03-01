@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly non-linear and erratic, with rapid directional shifts.
+- Initial focus: Checkout page (0.0s), but immediately exhibits exploratory behavior with no clear goal.
+- Scrolls vertically in bursts (0.36s–0.5s, 1.31s–1.34s, 2.81s–2.96s, 4.14s–4.39s), alternating between downward and upward movements.
+- Clicks are scattered across unrelated elements: "Pay Now" (0.86s), "Back to Shop" (1.8s), "Cart Summary" (2.61s), "Card Number" (3.39s), "Email" (4.64s).
+- No sustained engagement with any single section; average dwell time per scroll segment: 0.5s.
+
+2. READING BEHAVIOR
+- Skimming with no evidence of deep reading.
+- Scroll speed: 453px/s (0.36s–0.5s) to 298px/s (2.81s–2.96s), far exceeding typical reading speeds (200–300 words/min ≈ 100px/s).
+- Max scroll depth: 972px (1.34s), but revisits shallow depths (e.g., 142px at 4.98s) without pausing.
+- No hover pauses >200ms on static text (only on interactive elements like buttons/inputs).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions observed (session is on a checkout page, not a social platform).
+- Interaction is purely transactional: clicks on buttons/inputs (8 clicks on interactive elements, 0 on content).
+- "RAGE CLICKS" (3.61s–4.07s) indicate frustration with the "Card Number" input (5 rapid clicks in 0.46s).
+- Hover times: 137–191ms (brief, likely accidental or preparatory to click).
+
+4. INTERACTION SPEED
+- Extremely fast, with minimal deliberation.
+- Median time between actions: 0.27s (excluding scrolls).
+- Fastest sequence: 5 rage clicks on "Card Number" in 0.46s (11.9 clicks/s).
+- Slowest deliberate action: 0.34s between "Back to Shop" hover (1.8s) and click (2.16s).
+- No typing observed (inputs clicked but no keystrokes logged).
+
+5. CONTENT PREFERENCES
+- Irrelevant (session is on a checkout page, not a content platform).
+- Focused exclusively on transactional elements: payment buttons, cart summary, form fields.
+- No engagement with product descriptions, images, or ancillary content.
+
+6. TYPING BEHAVIOR
+- No typing detected in the log (no keystroke events).
+- Input fields clicked ("Card Number," "Email") but no text entry recorded.
+- Rage clicks on "Card Number" suggest attempted input failed or was blocked.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Checkout page (0.0s).
+  - "Pay Now" button (0.86s, 1.23s).
+  - "Back to Shop" link (1.8s, 2.16s).
+  - "Cart Summary" section (2.61s, 2.77s).
+  - "Card Number" input (3.39s–4.07s).
+  - "Email" input (4.64s, 4.98s).
+- Ignored features:
+  - No use of promo code fields, shipping options, or payment method selectors.
+  - No help/chat widgets or FAQ links clicked.
+  - No product recommendations or upsell sections engaged.
+
+8. SESSION FLOW
+- 0.0s–0.86s: Initial exploration
+  - Page load → immediate hesitation (288ms click at 0.29s) → rapid downward scroll (0.36s–0.5s) to 680px.
+  - First "Pay Now" click (0.86s) after 176ms hover.
+- 0.86s–2.16s: Abandonment attempt
+  - Second "Pay Now" click (1.23s) → scrolls to bottom (972px) → clicks "Back to Shop" (1.8s, 2.16s).
+- 2.16s–3.39s: Re-engagement
+  - Scrolls up to 227px → clicks "Cart Summary" (2.61s, 2.77s) → scrolls down to 321px.
+- 3.39s–4.98s: Frustration and exit
+  - Rage clicks on "Card Number" (3.61s–4.07s) → scrolls up to 142px → clicks "Email" (4.64s, 4.98s).
+  - Session ends at 5.0s with no completion of checkout.
+- Arc: Exploration → attempted checkout → abandonment → re-engagement → frustration → exit.
+```
+
+**Key Observations:**
+- **User is likely a bot or synthetic test user** (profile: "synthetic/power_user," no typing, erratic clicks).
+- **Frustration signals:** Rage clicks, rapid scroll reversals, and repeated clicks on "Pay Now" and "Back to Shop."
+- **No successful interaction:** Checkout was not completed; session ended mid-frustration.

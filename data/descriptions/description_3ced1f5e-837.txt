@@ -1,0 +1,55 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - **Scattered with repetitive validation**: The user exhibits a non-linear, erratic navigation pattern with frequent re-engagement on the same elements. They click the same UI components (e.g., "Get Started" button, "Hero Title" h1, "Features" section) twice within milliseconds (e.g., [3.62s] and [4.99s] for "Get Started"), suggesting either accidental clicks or deliberate validation of interactive elements. Scrolling is bidirectional (down then up then down again) and segmented into rapid, short bursts (0.5s per scroll), indicating a lack of sustained focus.
+
+2. READING BEHAVIOR:
+   - **Skim-only with no deep reading**: Scroll depth reaches a maximum of 539px (likely ~1.5–2 screen heights), but the user never pauses for more than 0.5s at any scroll depth. Scroll speed is consistent (176–107px per 0.5s burst), with no evidence of slowing down to read content. The rapid up/down scrolling ([5.04s–5.19s]) further suggests scanning rather than comprehension. No text selection or dwell time on paragraphs is observed.
+
+3. ENGAGEMENT STYLE:
+   - **No traditional engagement (voting/commenting)**: The session contains no evidence of user-generated content (e.g., comments, votes, form submissions). All interactions are limited to clicks on static page elements (buttons, headings, sections). The double-clicks on interactive elements ([3.62s/4.99s], [5.68s/6.34s], [7.14s/7.76s]) may indicate testing for responsiveness rather than intentional engagement.
+
+4. INTERACTION SPEED:
+   - **Extremely rapid with micro-hesitations**: Average time between actions: **0.54s** (excluding the initial 3.06s hesitation). Key speed metrics:
+     - First action delay: 3.06s (likely page load/render time or synthetic delay).
+     - Click-to-click intervals: 0.03s–1.37s (e.g., 0.03s between [3.62s] and [4.99s] "Get Started" clicks).
+     - Hover times: 210–349ms (brief but measurable).
+     - Scroll bursts: 0.5s duration, 86–107px/0.5s speed.
+   - **Pattern**: Actions are clustered in rapid sequences (e.g., 6 scrolls in 1.5s at [6.42s–6.57s]), followed by brief pauses (e.g., 0.6s before [7.14s] click).
+
+5. CONTENT PREFERENCES:
+   - **No content preference signals**: The user interacts exclusively with structural page elements (hero title, CTA button, features section) rather than specific content. No clicks on links, images, or detailed content blocks are recorded. The "Features" section is the deepest content reached (539px), but no sub-features or individual items are engaged with.
+
+6. TYPING BEHAVIOR:
+   - **No typing detected**: The session log contains no text input events (e.g., form fields, search bars, comments). All interactions are mouse-based (clicks, scrolls, hovers).
+
+7. FEATURE DISCOVERY:
+   - **Discovered features**:
+     - Primary CTA ("Get Started" button) – clicked twice ([3.62s], [4.99s]).
+     - Hero title (h1) – clicked twice ([5.68s], [6.34s]).
+     - Features section – clicked twice ([7.14s], [7.76s]).
+   - **Ignored features**:
+     - Navigation menus, footer, sidebars (no clicks/scrolls beyond 539px).
+     - Interactive elements like dropdowns, tooltips, or dynamic content (no hover pauses >349ms).
+     - Forms or input fields (no typing or focus events).
+
+8. SESSION FLOW:
+   - **Arc**: **Synthetic validation → erratic scanning → premature exit**
+     - **0.0s–3.06s**: Inactive (page load + initial hesitation).
+     - **3.06s–4.99s**: First engagement cluster – clicks on page text (likely misclick at (0,0)), scrolls down to 353px, then double-clicks "Get Started" button.
+     - **5.04s–6.34s**: Reversal and re-engagement – scrolls back up to 164px, double-clicks hero title.
+     - **6.42s–7.76s**: Second scanning cluster – scrolls down to 539px, double-clicks "Features" section.
+     - **7.8s**: Session ends abruptly (no exit action recorded).
+   - **Key observations**:
+     - No progression beyond surface-level page structure.
+     - Double-clicks suggest testing for interactivity or debugging (common in synthetic/scanner traffic).
+     - No evidence of goal-driven behavior (e.g., no form submissions, no content consumption).
+```
+
+**SUMMARY**: This session exhibits characteristics of **synthetic or automated behavior** (e.g., scanner, bot, or QA testing) rather than human browsing. Key indicators include:
+- Repetitive double-clicks on static elements.
+- Extremely rapid, segmented scrolling with no reading pauses.
+- No typing, content engagement, or goal completion.
+- Device profile: "synthetic/scanner on unknown" (corroborates non-human pattern).
+- Session duration (7.8s) is too short for meaningful human interaction.

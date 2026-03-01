@@ -1,0 +1,85 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Non-linear, hesitant, and exploratory with repeated backtracking.
+- **Evidence**:
+  - Initial 7.12s hesitation before first interaction (click at (0,0)).
+  - Repeated clicks on the same elements (e.g., "Cart Summary" at 8.63s and 10.02s; "Back to Shop" at 15.57s and 18.85s; "Pay Now" at 24.72s and 29.97s).
+  - Scrolling is fragmented: down (7.17s–14.02s), up (18.89s–18.97s), then down again (23.2s–23.31s).
+  - No clear progression through checkout steps (e.g., jumps from "Card Number" to "Back to Shop" to "Email").
+- **Quantitative**: 6/14 actions (43%) involve re-engaging with previously interacted elements.
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with shallow engagement.
+- **Evidence**:
+  - Scroll speed: 70–350px/s (e.g., 70px over 0.5s at 7.17s; 351px over 0.5s at 14.02s).
+  - Max scroll depth: 984px (viewport height: 1080px), but never pauses >1s at any depth.
+  - No sustained reading: Scrolls are rapid and sequential (e.g., 4 scrolls in 2.2s at 7.17s–7.37s).
+  - Hover times (1067ms on "Cart Summary", 1245ms on "Back to Shop") suggest brief evaluation, not deep reading.
+
+3. ENGAGEMENT STYLE
+- **N/A**: No voting, commenting, or social interactions observed. Session is limited to checkout flow.
+
+4. INTERACTION SPEED
+- **Pattern**: Deliberate with prolonged hesitations.
+- **Evidence**:
+  - **Hesitations**: 4 instances of >1.5s pauses (7.12s, 12.97s, 17.14s, 27.67s), totaling 13.7s (46% of session).
+  - **Hover times**: 624–1245ms before clicks (e.g., 1027ms on "Email" at 20.21s).
+  - **Action intervals**:
+    - Fastest: 0.05s (scrolls at 7.17s–7.37s).
+    - Slowest: 4.65s (between "Back to Shop" click at 15.57s and next hesitation at 17.14s).
+  - **Typing prep**: 1.09s between clicking "Email" (23.14s) and next action (scroll at 23.2s)—likely typing latency.
+
+5. CONTENT PREFERENCES
+- **Focus**: Checkout process (payment, cart summary, email input).
+- **Evidence**:
+  - All clicks target checkout elements:
+    - **Cart Summary**: 2 clicks (8.63s, 10.02s).
+    - **Payment fields**: "Card Number" (10.91s, 13.92s), "Email" (20.21s, 23.14s).
+    - **CTA**: "Pay Now" (24.72s, 29.97s).
+    - **Exit**: "Back to Shop" (15.57s, 18.85s).
+  - No exploration of product pages, navigation menus, or other content.
+
+6. TYPING BEHAVIOR
+- **Pattern**: Minimal typing with likely corrections.
+- **Evidence**:
+  - **Input fields clicked twice**: "Card Number" (10.91s, 13.92s) and "Email" (20.21s, 23.14s), suggesting focus shifts or corrections.
+  - **No keystroke data**: Cannot measure typing speed or input length.
+  - **Hesitation before inputs**: 2.05s before "Card Number" (12.97s) and 1.81s before "Email" (22.02s).
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Cart Summary (expanded/collapsed twice).
+  - Payment form fields ("Card Number", "Email").
+  - Primary CTA ("Pay Now").
+  - Exit link ("Back to Shop").
+- **Ignored Features**:
+  - No interaction with:
+    - Shipping/billing address fields.
+    - Promo code inputs.
+    - Payment method selectors (e.g., PayPal, Apple Pay).
+    - Help/support links.
+    - Product recommendations or upsells (if present).
+
+8. SESSION FLOW
+- **Arc**: Hesitant exploration → Aborted checkout → Re-engagement → Final hesitation.
+- **Phases**:
+  1. **Initial Hesitation (0–7.12s)**:
+     - Page load; 7.12s pause before first interaction (click at (0,0)).
+  2. **Shallow Exploration (7.12–15.57s)**:
+     - Rapid scrolling (7.17s–14.02s) to scan page.
+     - Clicks "Cart Summary" (8.63s, 10.02s) and "Card Number" (10.91s) but abandons.
+  3. **Exit Attempt (15.57–18.85s)**:
+     - Clicks "Back to Shop" (15.57s) but hesitates (17.14s) and returns to checkout.
+  4. **Re-engagement (18.85–29.97s)**:
+     - Scrolls up (18.89s–18.97s) to top of page.
+     - Clicks "Email" (20.21s, 23.14s) and "Pay Now" (24.72s, 29.97s) with final 2.95s hesitation.
+- **Exit**: Session ends after "Pay Now" click at 29.97s (no confirmation observed).
+```
+
+**Key Observations**:
+- **High friction**: 46% of session time spent hesitating; 43% of actions are repeats.
+- **No completion**: Checkout process was initiated but never finalized.
+- **Scrolling as proxy for reading**: Rapid, sequential scrolls indicate skimming, not deep engagement.
+- **Device note**: Desktop user with large viewport (1920x1080) but no evidence of multi-tab or external distractions.

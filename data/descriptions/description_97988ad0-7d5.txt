@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused but erratic**: The user exhibits a non-linear, menu-driven navigation style with clear intent but inconsistent execution.
+- **Primary method**: Direct clicks on sidebar menu items (Privacy → Notifications → Profile) with no evidence of exploratory browsing (e.g., no clicks on content, links, or sub-menus).
+- **Repetition**: Each target menu item is clicked twice in rapid succession (e.g., "Privacy" at 1.57s and 2.83s), suggesting either accidental clicks or validation behavior.
+- **Spatial pattern**: Clicks are clustered in the right sidebar (x-coordinates: 860–1329px), with no interaction with the main content area.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns indicate rapid, shallow engagement with no evidence of deep reading.
+  - **Downward scrolls**: 5 sequential scrolls (0.83s–1.05s) covering 703px in 0.22s (avg. 3,195px/s), likely a "scan to bottom" behavior.
+  - **Upward scrolls**: 3 bursts (2.89s–6.11s) covering 541px in 0.32s (avg. 1,691px/s), suggesting targeted navigation to menu items rather than content review.
+- **No dwell time**: No pauses >500ms on any scroll segment; max depth (703px) reached in 1.05s.
+
+3. ENGAGEMENT STYLE
+- **No content engagement**: Zero interactions with posts, comments, upvotes, or other content elements. All actions are confined to navigation.
+- **Menu interaction only**: 6 clicks total, all on sidebar menu items (Privacy: 2, Notifications: 2, Profile: 2).
+- **Hover behavior**: Pre-click hovers on menu items (325ms, 347ms, 179ms) suggest deliberate targeting but no content interaction.
+
+4. INTERACTION SPEED
+- **Rapid but hesitant**: Two distinct speed profiles:
+  - **Fast navigation**: Clicks on menu items occur within 1.26s–2.74s of each other (e.g., 1.57s → 3.57s for Privacy → Notifications).
+  - **Prolonged hesitation**: Three "[HESITATION]" events (757ms, 1,701ms, 2,116ms) at 0.76s, 5.27s, and 8.51s, totaling 4.57s of inactivity (50% of session duration).
+- **Scroll speed**: Extremely fast (avg. 2,443px/s), consistent with non-reading behavior.
+
+5. CONTENT PREFERENCES
+- **No content interaction**: The user did not engage with any substantive content (posts, articles, or settings panels). All actions targeted navigation elements.
+- **Menu focus**: Gravitated toward account management sections (Privacy, Notifications, Profile), suggesting administrative intent rather than content consumption.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form interactions observed in the log.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Sidebar navigation (Privacy, Notifications, Profile).
+  - Scrolling (vertical only, no horizontal or zoom).
+- **Ignored features**:
+  - Main content area (no clicks, hovers, or scroll pauses).
+  - Search, filters, or interactive elements (e.g., toggles, buttons).
+  - Any settings panels (despite clicking menu items, no evidence of panel interaction).
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–1.57s): Rapid scan**
+  - Loaded settings page, immediately scrolled to bottom (703px) in 1.05s.
+  - Hesitation (757ms) at 0.76s suggests initial disorientation.
+- **Phase 2 (1.57s–5.27s): Menu targeting**
+  - Clicked "Privacy" (1.57s), scrolled up, clicked "Notifications" (3.57s).
+  - Hesitation (1,701ms) at 5.27s indicates decision paralysis or distraction.
+- **Phase 3 (5.95s–9.11s): Final navigation**
+  - Clicked "Notifications" (5.95s), scrolled up, clicked "Profile" (6.39s).
+  - Longest hesitation (2,116ms) at 8.51s, followed by session-end click on "Profile" (9.11s).
+- **Exit**: Session terminated immediately after final click (no linger time).
+
+SUMMARY
+This session reflects a **non-human or synthetic user** with the following hallmarks:
+- **Mechanical navigation**: Repetitive clicks, ultra-fast scrolling, and spatial precision (e.g., near-identical click coordinates for repeated actions).
+- **No content engagement**: Zero interaction with substantive elements, despite visiting settings pages.
+- **Hesitation anomalies**: Prolonged "[HESITATION]" events are atypical for human users but consistent with bot behavior (e.g., script delays, CAPTCHA pauses).
+- **Viewport consistency**: Fixed 1920x1080 resolution with no resizing or device rotation.
+- **Session brevity**: 9.1s duration with no meaningful outcome.
+
+Likely explanation: **Automated scanner or synthetic test script** designed to validate UI navigation paths, not a human user.
+```

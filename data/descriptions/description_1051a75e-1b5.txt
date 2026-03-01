@@ -1,0 +1,66 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with exploratory detours**: The user follows a top-to-bottom progression through the page (landing → navigation → hero → features → testimonials → footer) but exhibits repeated clicks on the same elements (e.g., "Navigation" clicked twice at [2.98s] and [5.65s], "Hero Title" at [6.77s] and [7.55s]).
+- **Scattered hesitation points**: Three instances of "[HESITATION]" clicks at (0,0) ([2.56s], [4.51s], [14.86s], [18.82s]) suggest uncertainty or distraction, breaking the linear flow.
+- **Hover-to-click ratio**: 5/13 clicks (38%) were preceded by hovers (avg hover duration: 558ms), indicating deliberate targeting but not necessarily confidence.
+
+2. READING BEHAVIOR
+- **Skimmer with shallow engagement**: Scroll depth increases in rapid, incremental bursts (e.g., 5 scrolls in 2.1s at [5.72s–7.83s], covering 336px). Max scroll depth (1062px) suggests they reached the footer but did not pause long enough to read deeply.
+- **Scroll speed**: Avg scroll velocity = 120px/s (e.g., 44px in 0.5s at [5.72s]). No pauses >1s between scrolls, indicating no sustained reading.
+- **Content sampling**: Clicks on "Features" ([10.16s]) and "Testimonials" ([12.07s]) occurred at the *start* of those sections, not after scrolling through them, implying skimming.
+
+3. ENGAGEMENT STYLE
+- **No visible engagement actions**: The log shows no votes, comments, form submissions, or other interactive content (e.g., no text input, no checkboxes, no dropdown selections).
+- **Click redundancy**: Repeated clicks on the same elements (e.g., "Get Started" at [8.6s] and [9.39s]) suggest either accidental clicks or attempts to trigger a response (e.g., expecting a modal or navigation).
+- **Vote-to-comment ratio**: N/A (no engagement actions recorded).
+
+4. INTERACTION SPEED
+- **Deliberate but inconsistent**: Avg time between actions = 1.1s, but with high variance:
+  - Fast sequences: 0.03s–0.07s between scrolls ([5.72s–7.83s]).
+  - Long hesitations: 2.79s ([14.86s]) and 1.72s ([18.82s]) before "[HESITATION]" clicks.
+- **Hover durations**: Avg 558ms (range: 323ms–723ms), suggesting careful targeting but not urgency.
+- **Double-clicks**: 4 instances of near-identical clicks on the same element (e.g., "Hero Title" at [6.77s] and [7.55s]), with intervals of 0.78s–0.84s.
+
+5. CONTENT PREFERENCES
+- **Structural elements over content**: Clicks targeted navigation, section headers ("Features," "Testimonials"), and the footer—all layout/structural components. No clicks on specific articles, images, or interactive widgets.
+- **No content-specific engagement**: The user did not interact with any body text, media, or dynamic content (e.g., no clicks on feature descriptions, testimonial quotes, or links).
+- **Gravitation toward CTAs**: "Get Started" button ([8.6s]) was the only click on a primary call-to-action, but it was repeated ([9.39s]).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input events (e.g., no form fields, search bars, or comment boxes used). All interactions were clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Navigation menu (clicked twice).
+  - Hero section (title clicked twice).
+  - Primary CTA ("Get Started" button, clicked twice).
+  - Section headers ("Features," "Testimonials").
+  - Footer (clicked twice).
+- **Features ignored**:
+  - No interaction with body content (e.g., feature lists, testimonial text).
+  - No use of search, filters, or secondary CTAs (e.g., "Learn More" links).
+  - No engagement with interactive elements (e.g., carousels, accordions, forms).
+
+8. SESSION FLOW
+- **Phase 1: Initial exploration (0.0s–5.65s)**
+  - Loaded landing page, clicked navigation twice with hesitation ([2.56s], [4.51s]).
+  - Minimal scroll (88px max depth).
+- **Phase 2: Hero section engagement (5.65s–9.39s)**
+  - Scrolled rapidly through hero section ([5.72s–7.83s], 336px).
+  - Clicked hero title and "Get Started" button (both repeated).
+- **Phase 3: Downward scan (9.39s–16.01s)**
+  - Scrolled through features and testimonials ([9.43s–11.22s], 702px max depth).
+  - Clicked "Features" and "Testimonials" headers (repeated clicks).
+- **Phase 4: Footer and exit (16.01s–19.77s)**
+  - Scrolled to footer ([16.09s–16.29s], 1062px max depth).
+  - Clicked footer twice with hesitation ([17.09s], [19.77s]).
+  - Session ended abruptly after final click.
+- **Arc**: **Structural audit → CTA testing → rapid skimming → abrupt exit**. No deep engagement or conversion.
+```
+
+**Key Observations**:
+- The user behaved like a **quality assurance tester or bot** (consistent viewport, methodical clicks, no typing, no content engagement).
+- **No emotional or content-driven behavior** (e.g., no pauses to read, no reactions to specific content).
+- **Primary goal appeared to be testing page responsiveness** (repeated clicks, rapid scrolling, structural interactions).

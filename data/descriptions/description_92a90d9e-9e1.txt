@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - **Linear with rapid progression**: The user moves through the page in a top-to-bottom sequence with minimal backtracking or lateral exploration. Navigation follows a clear hierarchy: header (0–2.13s) → mid-page "Features" section (3.4s) → footer (4.56s). No evidence of revisiting prior sections or exploring secondary navigation paths.
+   - **Synthetic/scanner-like behavior**: The pattern resembles automated scanning rather than human browsing. Clicks are precise (e.g., repeated clicks on identical coordinates for "Navigation" and "Features"), and scrolls are uniform (4–5 rapid, evenly spaced scrolls covering ~100px each in 0.5s intervals).
+
+2. READING BEHAVIOR:
+   - **No deep reading detected**: Scroll patterns show no pauses or regressions (e.g., scrolling back up to re-read). The user scrolls continuously downward at a fixed speed (avg. 200px/s), suggesting skimming or scanning rather than content absorption.
+   - **Scroll depth**: Reached 1011px (likely near the page bottom) but spent only 0.65s between 534px and 1011px—insufficient time to read content at typical speeds (200–300 words/minute).
+   - **Hover times**: Brief hovers (270ms, 301ms, 132ms) are too short for reading; likely cursor pauses during automated movement.
+
+3. ENGAGEMENT STYLE:
+   - **No traditional engagement**: The session contains no voting, commenting, form submissions, or other interactive actions beyond clicks and scrolls.
+   - **Click behavior**:
+     - **Double-clicks**: Repeated clicks on identical elements (e.g., "Navigation" at 2.13s/2.68s, "Features" at 3.4s/4.11s, "Footer" at 4.56s/5.18s) with near-identical coordinates (e.g., (567, 20) vs. (567, 18)). This suggests either:
+       - Automated testing (e.g., link validation).
+       - Synthetic interaction (e.g., cursor replay or bot).
+     - **No qualitative input**: No typing, corrections, or text entry observed.
+
+4. INTERACTION SPEED:
+   - **Extremely fast**: Median time between actions = 0.45s (range: 0.05s–1.64s). Human reaction times for deliberate actions typically exceed 200ms; this user’s speed (e.g., 50ms between scrolls) is implausible for organic behavior.
+   - **Key intervals**:
+     - Page load → first click: 1.64s (longest delay; likely synthetic hesitation).
+     - Navigation clicks: 550ms apart.
+     - Features clicks: 710ms apart.
+     - Footer clicks: 620ms apart.
+
+5. CONTENT PREFERENCES:
+   - **No content preference signals**: The user interacted only with structural elements (navigation, features section, footer). No clicks on specific content (e.g., articles, images, buttons) or subreddit-like categories were recorded.
+   - **Gravitated toward page landmarks**: Targeted high-level UI components (navigation, footer) rather than body content.
+
+6. TYPING BEHAVIOR:
+   - **No typing detected**: Zero keystrokes, corrections, or input fields engaged. The session lacks any text entry or form interaction.
+
+7. FEATURE DISCOVERY:
+   - **Features used**:
+     - Navigation menu (clicked twice at 2.13s/2.68s).
+     - "Features" section (clicked twice at 3.4s/4.11s).
+     - Footer (clicked twice at 4.56s/5.18s).
+   - **Features ignored**:
+     - No interaction with body content (e.g., articles, CTAs, sidebars).
+     - No engagement with interactive elements (e.g., search bars, dropdowns, buttons beyond structural clicks).
+     - No social/media features (e.g., sharing, liking).
+
+8. SESSION FLOW:
+   - **Arc**: **Automated scan → structural validation → exit**.
+     - **0.0–2.13s**: Page load and initial navigation click (synthetic hesitation).
+     - **2.13–3.4s**: Rapid scrolling through top/mid-page (5 scrolls covering 534px in 0.75s).
+     - **3.4–4.56s**: Mid-page "Features" section clicks and continued scrolling (reached 1011px).
+     - **4.56–5.18s**: Footer clicks (final interactions before session end).
+   - **Exit**: Session terminated abruptly after footer clicks; no return to prior sections or additional actions.
+   - **No exploration/engagement phases**: The session lacks organic discovery, content consumption, or iterative interaction. The flow is mechanical and goal-oriented (likely testing UI functionality).
+```
+
+**SUMMARY**:
+This session exhibits **non-human behavior** consistent with automated testing or synthetic interaction replay. Key indicators:
+- Sub-200ms reaction times between actions.
+- Uniform scroll speeds and double-clicks on identical coordinates.
+- No qualitative input (typing, corrections) or content engagement.
+- Linear, top-to-bottom progression with no backtracking.
+- Device labeled as "synthetic/scanner" in the profile.
+
+**Hypothesis**: Likely a **UI test script** or **cursor replay** validating navigation, scroll behavior, and clickable elements (navigation, features, footer). No human user behavior is detectable.

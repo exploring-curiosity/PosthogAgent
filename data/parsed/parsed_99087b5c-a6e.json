@@ -1,0 +1,283 @@
+{
+  "user_profile": {
+    "session_id": "99087b5c-a6e",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/power_user",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 3.1,
+  "total_raw_events": 48,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/checkout",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 0.36,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 360ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 0.43,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 494,
+      "max_depth": 494,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.46,
+      "action": "SCROLL",
+      "scroll_from": 494,
+      "scroll_to": 988,
+      "max_depth": 988,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.6,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "Back to Shop [HOVER 55ms]",
+      "target_href": "",
+      "target_class": "a.back-to-shop",
+      "coordinates": [
+        524,
+        988
+      ]
+    },
+    {
+      "time": 0.82,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "Back to Shop",
+      "target_href": "",
+      "target_class": "a.back-to-shop",
+      "coordinates": [
+        530,
+        988
+      ]
+    },
+    {
+      "time": 0.86,
+      "action": "SCROLL",
+      "scroll_from": 988,
+      "scroll_to": 886,
+      "max_depth": 988,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 0.91,
+      "action": "SCROLL",
+      "scroll_from": 886,
+      "scroll_to": 785,
+      "max_depth": 886,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 0.95,
+      "action": "SCROLL",
+      "scroll_from": 785,
+      "scroll_to": 683,
+      "max_depth": 785,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 1.33,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Pay Now [HOVER 90ms]",
+      "target_href": "",
+      "target_class": "button.pay-now",
+      "coordinates": [
+        1311,
+        683
+      ]
+    },
+    {
+      "time": 1.51,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Pay Now",
+      "target_href": "",
+      "target_class": "button.pay-now",
+      "coordinates": [
+        1311,
+        688
+      ]
+    },
+    {
+      "time": 1.59,
+      "action": "SCROLL",
+      "scroll_from": 683,
+      "scroll_to": 530,
+      "max_depth": 683,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 1.65,
+      "action": "SCROLL",
+      "scroll_from": 530,
+      "scroll_to": 376,
+      "max_depth": 530,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 1.7,
+      "action": "SCROLL",
+      "scroll_from": 376,
+      "scroll_to": 223,
+      "max_depth": 376,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 1.77,
+      "action": "SCROLL",
+      "scroll_from": 223,
+      "scroll_to": 70,
+      "max_depth": 223,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 2.03,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Cart Summary [HOVER 130ms]",
+      "target_href": "",
+      "target_class": "div.cart-summary",
+      "coordinates": [
+        293,
+        70
+      ]
+    },
+    {
+      "time": 2.14,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Cart Summary",
+      "target_href": "",
+      "target_class": "div.cart-summary",
+      "coordinates": [
+        296,
+        75
+      ]
+    },
+    {
+      "time": 2.18,
+      "action": "SCROLL",
+      "scroll_from": 70,
+      "scroll_to": 172,
+      "max_depth": 172,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 2.23,
+      "action": "SCROLL",
+      "scroll_from": 172,
+      "scroll_to": 275,
+      "max_depth": 275,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 2.38,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Card Number [HOVER 57ms]",
+      "target_href": "",
+      "target_class": "input.card-number",
+      "coordinates": [
+        1156,
+        275
+      ]
+    },
+    {
+      "time": 2.5,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Card Number",
+      "target_href": "",
+      "target_class": "input.card-number",
+      "coordinates": [
+        1154,
+        279
+      ]
+    },
+    {
+      "time": 2.55,
+      "action": "SCROLL",
+      "scroll_from": 275,
+      "scroll_to": 227,
+      "max_depth": 275,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 2.61,
+      "action": "SCROLL",
+      "scroll_from": 227,
+      "scroll_to": 180,
+      "max_depth": 227,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 2.68,
+      "action": "SCROLL",
+      "scroll_from": 180,
+      "scroll_to": 132,
+      "max_depth": 180,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 2.97,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Email [HOVER 161ms]",
+      "target_href": "",
+      "target_class": "input.email",
+      "coordinates": [
+        1479,
+        132
+      ]
+    },
+    {
+      "time": 3.1,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Email",
+      "target_href": "",
+      "target_class": "input.email",
+      "coordinates": [
+        1480,
+        129
+      ]
+    }
+  ]
+}

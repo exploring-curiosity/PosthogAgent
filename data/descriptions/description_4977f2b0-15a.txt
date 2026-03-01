@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with frequent backtracking. They engage in rapid, repetitive interactions with the same UI elements (e.g., "Stats Cards" clicked 5 times, "Export" clicked 3 times, "Chart" clicked 3 times) across different scroll depths.
+- **No clear progression**: Actions oscillate between top (0–250px) and bottom (350–521px) of the page, with no sustained focus on any section. For example:
+  - 0.25–0.38s: Initial downward scroll to 249px.
+  - 3.07–3.22s: Immediate upward scroll back to 82px.
+  - 3.79–3.89s: Downward scroll to 521px, followed by upward scroll to 250px (6.25–6.34s).
+- **Dead clicks (2 instances)**: Suggests misaligned expectations or UI confusion (e.g., 4.99s at (1515, 1246), 6.21s at (929, 941)).
+
+2. READING BEHAVIOR:
+- **Skimmer with no deep reading**: Scroll patterns indicate rapid, shallow engagement:
+  - **Scroll speed**: ~166px/0.5s (332px/s) consistently, with no pauses >0.5s between scrolls.
+  - **Max depth**: 521px (viewport height: 1080px), suggesting they never viewed the full page content.
+  - **No sustained focus**: Repeatedly returns to the same vertical positions (e.g., 250px, 82px) without lingering.
+- **No evidence of content absorption**: Hesitations (220ms, 1128ms) occur at (0,0) coordinates (likely outside content areas), not on specific text/images.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement (voting/commenting)**: The session lacks actions like form submissions, text input, or social interactions (e.g., upvotes, replies).
+- **Repetitive clicking**: Primary engagement is rapid, redundant clicks on UI elements:
+  - **Stats Cards**: 5 clicks (0.79s, 2.14s, 6.47s, 6.7s, 7.67s).
+  - **Export**: 3 clicks (3.46s, 3.71s, 7.21s).
+  - **Chart**: 3 clicks (2.63s, 3.02s, 4.05s).
+- **Hover-to-click latency**: Short hovers (46–144ms) precede clicks, suggesting impulsive interactions rather than deliberate choices.
+
+4. INTERACTION SPEED:
+- **Extremely fast with impulsive bursts**:
+  - **Average time between actions**: 0.45s (excluding hesitations).
+  - **Fastest sequence**: 0.03s between scrolls (e.g., 3.07–3.12s).
+  - **Hesitations**: Only 2 notable pauses (220ms at 0.22s, 1128ms at 1.92s), both at (0,0) coordinates.
+- **Click frequency**: 18 clicks in 8s (~2.25 clicks/s), with 6 "dead" or redundant clicks.
+
+5. CONTENT PREFERENCES:
+- **UI elements over content**: No evidence of engagement with textual or visual content. All clicks target:
+  - **Stats Cards**: Likely dashboard widgets (5 clicks).
+  - **Charts**: Data visualizations (3 clicks).
+  - **Export button**: Functionality (3 clicks).
+  - **Sidebar**: Navigation (2 clicks).
+- **No subreddit/thread focus**: Not applicable (session is on a dashboard, not a content platform).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no keystrokes, input fields, or text entry actions.
+
+7. FEATURE DISCOVERY:
+- **Discovered features**:
+  - **Stats Cards**: Primary interaction target (5/18 clicks).
+  - **Charts**: Secondary focus (3/18 clicks).
+  - **Export**: Attempted 3 times (likely a key feature).
+  - **Sidebar**: Clicked once (5.25s), suggesting partial navigation awareness.
+- **Ignored features**:
+  - **No form submissions**: No evidence of data entry or filters.
+  - **No help/tooltips**: No hovers on question marks or info icons.
+  - **No search**: No clicks on search bars or filters.
+
+8. SESSION FLOW:
+- **Arc**: **Impulsive exploration → Repetitive frustration → Abrupt exit**
+  - **0.0–0.79s (Exploration)**: Initial page load, rapid downward scroll to 249px, first click on "Stats Cards" (0.79s).
+  - **0.79–3.46s (Frustration)**: Redundant clicks on "Stats Cards" (2.14s) and "Chart" (2.63s), followed by upward scroll and "Export" click (3.46s). Hesitation (1128ms at 1.92s) suggests confusion.
+  - **3.46–6.7s (Repetition)**: Cycles between "Export" (3.46s, 7.21s), "Chart" (4.05s), and "Stats Cards" (6.47s), with dead clicks (4.99s, 6.21s) indicating failed interactions.
+  - **6.7–8.01s (Exit)**: Final clicks on "Stats Cards" (6.7s, 7.67s) and "Export" (7.21s), ending with a click at 8.01s. No exit confirmation (e.g., tab close) recorded.
+- **Exit trigger**: Likely frustration from redundant clicks and dead interactions, with no successful feature completion.
+```
+
+**SUMMARY**: This user exhibits **synthetic, bot-like behavior** with **no human-like engagement**. The pattern aligns with an **automated clicker** or **stress test**, given the:
+- Inhumanly fast interactions (2.25 clicks/s).
+- Repetitive, redundant clicks on the same elements.
+- Lack of content engagement or typing.
+- Dead clicks and hesitations at (0,0) coordinates.
+- No session progression or goal completion.
+
+**Note**: The "synthetic/impulsive_clicker" device label in the profile corroborates this interpretation.

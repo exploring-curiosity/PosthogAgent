@@ -1,0 +1,93 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear with targeted re-engagement**: The user follows a strict top-to-bottom scroll pattern (0.33s–1.27s) covering 750px in 0.94s, then jumps to specific elements (Testimonials at 1.75s, Footer at 2.44s, Navigation at 3.19s, Get Started at 3.83s, Features at 4.64s). After each click, they resume scrolling from their last position, suggesting a methodical review of content sections.
+- **No backtracking or lateral exploration**: All interactions occur within the vertical axis; no horizontal movement or revisits to prior sections (except for a rapid scroll-up at 2.61s–2.67s to reset position).
+- **Section-hopping**: Clicks target distinct content blocks (Hero Title, Testimonials, Footer, Navigation, Get Started, Features), implying a checklist-like approach to evaluating page structure.
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scroll bursts**: Scrolls occur in 0.5s increments (e.g., 0.33s–0.61s: 193px in 0.28s; 1.09s–1.27s: 509px in 0.18s), averaging **~386px/s**. This speed exceeds typical reading rates (~200–300 words/min or ~100px/s for 12pt text), indicating skimming.
+- **No deep dives**: Max scroll depth (973px) is reached quickly (2.22s), but no pauses >200ms suggest no sustained reading. Hovers (112–176ms) are too brief for comprehension.
+- **Scroll depth correlation**: Clicks align with scroll depth (e.g., Testimonials at 750px, Features at 520px), implying visual anchoring to section headers.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement (votes/comments)**: The session lacks form submissions, text inputs, or interactive elements beyond clicks. All interactions are **structural** (clicking headers/buttons) rather than **content-driven**.
+- **Click redundancy**: Every target is clicked twice in rapid succession (e.g., Hero Title at 0.86s/1.05s, Testimonials at 1.75s/2.07s), with **~180–320ms between clicks**. This suggests either:
+  - **Testing interactivity** (e.g., verifying clickable areas).
+  - **Synthetic behavior** (e.g., automated script or power-user tool).
+- **Hover-to-click latency**: Hovers precede clicks by **59–176ms** (e.g., Navigation: 176ms hover at 3.19s), consistent with deliberate targeting but not organic browsing.
+
+4. INTERACTION SPEED
+- **Extremely fast and consistent**:
+  - **Action interval**: Average **230ms between actions** (excluding scrolls). Fastest: 40ms (1.05s–1.09s scroll). Slowest: 540ms (3.47s–3.83s).
+  - **Click timing**: Double-clicks occur within **180–320ms** (e.g., Get Started: 340ms apart at 3.83s/4.17s).
+  - **Scroll speed**: Fixed 0.5s duration for all scrolls, covering **~70–150px per scroll**.
+- **No hesitation markers**: Despite "[HESITATION 255ms]" at 0.25s, subsequent actions show no delays >200ms.
+
+5. CONTENT PREFERENCES
+- **Structural over thematic**: Clicks target **UI elements** (headers, buttons, navigation) rather than content (e.g., no clicks on testimonial text, feature descriptions, or links).
+  - **Prioritized elements**:
+    1. Hero Title (0.86s/1.05s) – Likely primary CTA or branding.
+    2. Testimonials (1.75s/2.07s) – Social proof section.
+    3. Footer (2.44s/2.55s) – Standard navigation/legal links.
+    4. Navigation (3.19s/3.42s) – Global menu.
+    5. Get Started (3.83s/4.17s) – Conversion CTA.
+    6. Features (4.64s/4.87s) – Product/service highlights.
+- **Ignored content**: No interactions with:
+  - Body text (e.g., paragraphs, lists).
+  - Images/media.
+  - Secondary CTAs (e.g., "Learn More" buttons if present).
+  - Interactive widgets (e.g., forms, sliders).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no keystrokes, input fields, or corrections. All interactions are mouse-based.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Primary navigation** (3.19s): Clicked global menu.
+  - **Conversion CTA** (3.83s): "Get Started" button.
+  - **Section headers**: Hero Title, Testimonials, Features (used as anchors for clicks).
+- **Ignored features**:
+  - **Search functionality**: No clicks on search bars (if present).
+  - **Social sharing**: No interactions with share buttons.
+  - **Dynamic content**: No engagement with carousels, tabs, or expandable sections.
+  - **Forms**: No submissions or field interactions.
+
+8. SESSION FLOW
+- **Phase 1: Rapid Reconnaissance (0.0s–1.27s)**
+  - **Goal**: Map page structure.
+  - **Actions**: Linear scroll to 750px, clicks on Hero Title (0.86s) to test interactivity.
+  - **Duration**: 1.27s.
+  - **Behavior**: Mechanical, no content engagement.
+
+- **Phase 2: Targeted Section Sampling (1.75s–2.55s)**
+  - **Goal**: Evaluate key sections.
+  - **Actions**: Jumps to Testimonials (1.75s) and Footer (2.44s), double-clicking each.
+  - **Duration**: 0.8s.
+  - **Behavior**: Section-hopping with redundant clicks.
+
+- **Phase 3: Navigation Reset (2.61s–3.42s)**
+  - **Goal**: Reorient to top of page.
+  - **Actions**: Rapid scroll-up to 32px (2.67s), clicks Navigation (3.19s).
+  - **Duration**: 0.81s.
+  - **Behavior**: Efficient repositioning, likely to access menu.
+
+- **Phase 4: Conversion Focus (3.47s–4.87s)**
+  - **Goal**: Test primary CTA.
+  - **Actions**: Scrolls to 319px (3.51s), clicks "Get Started" (3.83s), then Features (4.64s).
+  - **Duration**: 1.4s.
+  - **Behavior**: Final clicks target conversion and product sections.
+
+- **Exit**: Session ends at 4.87s with no further actions. No return to prior sections or additional clicks.
+
+---
+SUMMARY PROFILE:
+- **User Type**: Synthetic/power-user (consistent with "synthetic/power_user" device label). Behavior resembles automated testing (e.g., heatmap tool, accessibility audit) or a UX researcher evaluating page structure.
+- **Key Traits**:
+  - **Speed**: Sub-second actions with fixed scroll durations.
+  - **Precision**: Clicks target UI elements, not content.
+  - **Redundancy**: Double-clicks on all interactive elements.
+  - **No Organic Engagement**: Zero typing, reading, or content interaction.
+- **Likely Intent**: Structural analysis (e.g., "Does the page layout support conversion?") rather than content consumption.
+```

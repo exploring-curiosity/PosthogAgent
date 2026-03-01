@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no clear linear progression.
+- Repeated clicks on the same elements (e.g., "Back to Shop" 6 times, "Pay Now" 4 times, "Card Number" 4 times, "Email" 4 times).
+- 47% of clicks (9/19) are redundant (same element within <1s).
+- 21% of clicks (4/19) are "dead clicks" (no functional outcome).
+- No sustained focus on any single task; jumps between unrelated elements (e.g., Card Number → Cart Summary → Back to Shop → Pay Now → Email).
+
+2. READING BEHAVIOR
+- Skimming with no deep reading:
+  - Scrolls rapidly (avg. 148px/s) in both directions (5 down, 3 up).
+  - Max scroll depth: 990px (full page height likely ~1000px), but no pauses >0.5s to suggest content absorption.
+  - No hover durations >150ms on non-interactive text (only on clickable elements).
+- Scroll patterns:
+  - Initial scroll (0.5–3.09s): Fast downward (125px → 990px in 2.59s).
+  - Mid-session scroll (4.09–6.14s): Fast upward (990px → 182px in 2.05s).
+  - Late-session scroll (7.54–7.57s): Fast downward (182px → 985px in 0.03s).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed.
+- Interaction limited to form inputs and navigation buttons.
+- No evidence of engagement with dynamic content (e.g., dropdowns, tooltips, modals).
+- "Hesitation" annotations (0.45s, 5.72s) suggest uncertainty but no follow-through.
+
+4. INTERACTION SPEED
+- Extremely fast, with impulsive repetition:
+  - Avg. time between actions: 0.49s (median: 0.35s).
+  - Fastest sequence: 0.04s between scrolls (4.09–4.21s).
+  - Slowest pauses: 0.59s (hesitation at 5.72s) and 0.45s (initial hesitation).
+- Click intervals:
+  - <0.2s: 37% of actions (7/19).
+  - 0.2–0.5s: 42% of actions (8/19).
+  - >0.5s: 21% of actions (4/19).
+
+5. CONTENT PREFERENCES
+- No content engagement detected (e.g., no article reads, video plays, or product views).
+- Focused exclusively on checkout-related elements:
+  - Payment form: "Card Number" (4 clicks), "Email" (4 clicks).
+  - Navigation: "Back to Shop" (6 clicks), "Pay Now" (4 clicks).
+  - Cart: "Cart Summary" (2 clicks).
+- No exploration of other pages or features.
+
+6. TYPING BEHAVIOR
+- No typing detected (no keystrokes logged).
+- Input fields clicked but not populated (e.g., "Card Number," "Email").
+- No corrections or input lengths measurable.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Checkout form inputs ("Card Number," "Email").
+  - Navigation buttons ("Back to Shop," "Pay Now").
+  - Scrolling (vertical only).
+- Ignored features:
+  - No dropdowns, checkboxes, or radio buttons interacted with.
+  - No help/tooltip interactions.
+  - No form submission (despite "Pay Now" clicks).
+  - No mobile/desktop-specific features (e.g., hamburger menu, search bar).
+
+8. SESSION FLOW
+- Arc: Impulsive exploration → repetitive frustration → abrupt exit.
+  - 0.0–0.82s: Initial load + hesitation (449ms delay).
+  - 0.82–3.29s: Rapid, scattered clicks (Card Number → Cart Summary → dead click → Card Number).
+  - 3.29–4.58s: Attempt to abandon ("Back to Shop" x3).
+  - 4.58–6.43s: Return to form ("Pay Now" x3, scroll up to "Email").
+  - 6.43–9.27s: Final abandonment ("Email" x2, "Back to Shop" x3).
+- No completion: Session ends mid-action (no form submission, page exit, or error).
+- Behavioral markers of frustration:
+  - Dead clicks (2.04s).
+  - Hesitations (0.45s, 5.72s).
+  - Repetitive clicks on "Back to Shop" (6x) and "Pay Now" (4x).
+```
+
+**Summary**: This user exhibits behavior consistent with a synthetic test (e.g., automated script or bot) or an extremely frustrated human. The session is defined by rapid, repetitive, and non-productive interactions with no goal completion, deep reading, or meaningful engagement. All actions are confined to the checkout page, with no exploration of the broader site.

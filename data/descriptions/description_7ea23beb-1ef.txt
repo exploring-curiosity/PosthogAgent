@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused with minor exploratory detours**: The user follows a clear linear path through the settings menu (Privacy → Profile → Notifications → Settings Nav) with no backtracking or unrelated clicks.
+- **No exploratory behavior**: All clicks target settings-related UI elements (no off-menu clicks or unrelated page visits).
+- **Scattered hesitation**: Two "[HESITATION]" clicks at (0,0) (0.19s and 3.74s) suggest momentary pauses (187ms and 1469ms) before proceeding, but no deviation from the primary task.
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scrolling**:
+  - **Scroll speed**: 163px–815px in 1.5s (0.26s–0.5s), then 815px–966px in 0.7s (1.14s–1.25s). Average scroll rate: ~326px/s (faster than typical reading speed of 200–300px/s).
+  - **No deep reading**: No pauses >200ms on any scroll segment; max depth (966px) reached in 1.25s, then immediate upward scroll (1.87s).
+  - **Upward scrolls**: After reaching 966px, user scrolls up to 215px in 0.8s (1.87s–1.95s), likely to reorient or access menu items.
+
+3. ENGAGEMENT STYLE
+- **No content creation**: Zero instances of typing, commenting, or voting (not applicable to this settings page).
+- **Action-driven**: All interactions are clicks on UI elements (buttons/divs) with no passive viewing >1s.
+- **Hover-to-click ratio**: 4/8 clicks preceded by hovers (50%), with hover durations of 141–192ms (avg: 156ms), indicating deliberate targeting.
+
+4. INTERACTION SPEED
+- **Fast but deliberate**:
+  - **Click intervals**: 0.19s–5.07s between actions, but most clicks occur in bursts (e.g., 0.89s–1.1s for Privacy clicks; 4.32s–4.42s for Notifications).
+  - **Hover-to-click latency**: 141–192ms (avg: 159ms), suggesting familiarity with the UI.
+  - **Longest pause**: 1.469s hesitation at 3.74s (likely UI load or cognitive delay).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: All interactions target settings submenus:
+  - Privacy (0.89s–1.14s)
+  - Profile (2.27s–3.96s)
+  - Notifications (4.32s–4.48s)
+  - Settings Nav (4.87s–5.07s)
+- **No content consumption**: No evidence of reading articles, posts, or other non-settings content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes or input fields interacted with during the session.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Settings submenus (Privacy, Profile, Notifications).
+  - "Save Changes" button (1.6s–1.81s).
+  - Settings navigation (4.87s–5.07s).
+- **Ignored features**:
+  - No interaction with search bars, help menus, or account dropdowns.
+  - No evidence of exploring non-settings pages.
+
+8. SESSION FLOW
+- **Arc**: Task-driven with no exploration or exit.
+  1. **Orientation (0.0s–0.5s)**: Page load, initial scroll to assess layout.
+  2. **First Task (0.89s–1.87s)**: Privacy settings accessed → "Save Changes" clicked → upward scroll to reorient.
+  3. **Second Task (2.27s–3.96s)**: Profile settings accessed → brief scroll.
+  4. **Third Task (4.32s–5.07s)**: Notifications settings accessed → return to Settings Nav.
+- **No exit**: Session ends mid-task (no logout, page close, or navigation away).
+- **Efficiency**: 5.1s total duration with 8 clicks and 10 scrolls; no wasted actions.
+```
+
+**Key Observations**:
+- **Synthetic/power user**: Rapid, precise interactions with no errors or corrections.
+- **Goal-oriented**: No browsing; all actions serve settings configuration.
+- **UI familiarity**: Hover durations and click accuracy suggest prior experience with the interface.

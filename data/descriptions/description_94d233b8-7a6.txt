@@ -1,0 +1,117 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Scattered exploratory with repetitive validation*
+- **Non-linear progression**: The user jumps between unrelated sections (Navigation → Features → Footer → Hero Title → Testimonials → CTA) without a clear hierarchical flow. No single content area is explored in depth before moving to another.
+- **Repetitive clicks**: 6/14 non-scroll actions are duplicates (e.g., clicking "Navigation" twice at [2.81s] and [5.47s], "Features" at [7.49s] and [11.73s]). Suggests hesitation or confirmation-seeking behavior.
+- **Viewport coverage**: Explores 954px of vertical space (88% of 1080px viewport) but revisits prior scroll depths (e.g., scrolls back up to 183px at [17.6s] after reaching 1031px).
+- **Exit point**: Ends on the primary CTA ("Get Started"), but only after 3 prior interactions with it (hover + hesitation).
+
+---
+
+### 2. READING BEHAVIOR
+**Style:** *Skimmer with rapid scroll bursts*
+- **Scroll speed**: Averages **158px/s** during downward scrolls (e.g., [5.52s–5.69s]: 646px in 1.7s) and **338px/s** upward (e.g., [16.68s–16.91s]: 848px in 2.5s). Indicates scanning, not deep reading.
+- **Depth vs. time**: Reaches 954px depth in **12s** but spends only **2.5s** below 646px (where "Features" and "Testimonials" likely reside). No pauses >1s in any scroll segment.
+- **Hover time**: Pre-click hovers average **1,290ms** (range: 553ms–1,704ms), suggesting visual scanning before interaction but no prolonged engagement.
+- **No evidence of reading**: No mouse movements indicative of line-by-line reading (e.g., horizontal tracking). Scroll patterns are mechanical (consistent 0.5s intervals).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Style:** *Passive observer; no content creation*
+- **No votes/comments**: Zero actions indicate upvoting, downvoting, or commenting. All interactions are navigational clicks or scrolls.
+- **Click latency**: Average **1,460ms** hesitation before clicks (excluding scrolls). Longest hesitation: **2,744ms** at [10.23s] before clicking "Features" again.
+- **Interaction ratio**: 14 clicks (6 duplicates), 16 scrolls. No secondary actions (e.g., form inputs, drag-and-drop).
+
+---
+
+### 4. INTERACTION SPEED
+**Speed:** *Deliberate with prolonged hesitations*
+- **Action frequency**: 32 actions in 28.3s → **1.13 actions/s**, but clustered in bursts (e.g., 5 scrolls in 1.4s at [5.52s–5.69s]).
+- **Time between actions**:
+  - **Shortest**: 30ms (scrolls at [5.52s–5.55s]).
+  - **Longest**: 2,744ms (hesitation at [10.23s]).
+  - **Median**: 500ms (excluding scrolls).
+- **Hover-to-click delay**: Average **1,290ms** (e.g., 1,666ms on "Features" at [7.49s]). Suggests cautious evaluation before committing to clicks.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Gravitation:** *Functional over thematic*
+- **Prioritized sections**:
+  1. **Navigation** (2 clicks, 1 hover): Likely seeking site structure.
+  2. **Features** (2 clicks, 1 hover): Functional content over narrative.
+  3. **Footer** (2 clicks, 1 hover): May indicate search for secondary links (e.g., legal, contact).
+  4. **Hero Title** (2 clicks): Unusual—may reflect confusion or testing interactivity.
+  5. **Testimonials** (2 clicks, 1 hover): Social proof, but only after scrolling past it once.
+- **Ignored content**:
+  - No clicks on images, videos, or embedded media (if present).
+  - No interaction with sidebars, search bars, or user-generated content (e.g., comments).
+  - "Get Started" CTA clicked only at the end, despite being visible at 300px depth.
+
+---
+
+### 6. TYPING BEHAVIOR
+**No typing detected**:
+- Zero form submissions, search queries, or text inputs.
+- All clicks target static elements (text, buttons, nav items).
+
+---
+
+### 7. FEATURE DISCOVERY
+**Discovered features**:
+- **Navigation menu**: Used twice (top-right corner clicks).
+- **Scrolling**: Primary method of exploration (16/32 actions).
+- **Hover tooltips/previews**: Engaged with hover states (e.g., "HOVER 1063ms" on Navigation).
+- **CTA button**: "Get Started" clicked after 3 prior interactions (hover + hesitation).
+
+**Ignored features**:
+- **Search functionality**: No clicks on search bars (if present).
+- **Interactive elements**: No sliders, accordions, or expandable sections used.
+- **Social sharing**: No clicks on share buttons (if present).
+- **User account tools**: No login/register actions.
+
+---
+
+### 8. SESSION FLOW ARC
+**Phase 1: Orientation (0–5.47s)**
+- **Goal**: Understand site structure.
+- **Actions**: Loads landing page → hesitates (1,599ms) → explores Navigation (hover + click).
+- **Behavior**: High hesitation, minimal scroll. Focus on top-of-page elements.
+
+**Phase 2: Rapid Scanning (5.47–13.89s)**
+- **Goal**: Survey content breadth.
+- **Actions**: Scrolls 646px in 1.7s → clicks "Features" → scrolls to 1031px → clicks Footer.
+- **Behavior**: Mechanical scrolling, no pauses. Clicks are exploratory, not goal-driven.
+
+**Phase 3: Re-evaluation (13.89–20.39s)**
+- **Goal**: Revisit key sections.
+- **Actions**: Scrolls back up to 183px → clicks Hero Title twice → hesitates (1,003ms).
+- **Behavior**: Repetitive clicks on the same element suggest confusion or validation-seeking.
+
+**Phase 4: Targeted Engagement (20.39–28.28s)**
+- **Goal**: Focus on specific content.
+- **Actions**: Scrolls to 771px → clicks "Testimonials" → scrolls up → clicks "Get Started".
+- **Behavior**: Narrows focus to mid-page content (Testimonials) before returning to CTA. Hesitation decreases (1,279ms vs. 2,744ms earlier).
+
+**Exit**: Clicks "Get Started" at [28.28s] after 1,279ms hesitation. Session ends abruptly (no confirmation of conversion).
+
+---
+
+### SUMMARY
+**Behavioral Signature**:
+- **Cautious Explorer**: High hesitation, repetitive clicks, and rapid scanning suggest a user unfamiliar with the site or skeptical of its value.
+- **Functional Focus**: Prioritizes navigation, features, and CTAs over narrative content (e.g., testimonials).
+- **Low Commitment**: No deep engagement (e.g., reading, typing) or secondary actions (e.g., voting). Session ends on a primary CTA but with residual hesitation.
+- **Synthetic Traits**: The "synthetic/cautious_explorer" device label and mechanical scroll patterns may indicate a bot or automated testing tool, though human-like hesitation is present.
+
+**Key Metrics**:
+- Hesitation: 6 instances (avg. 1,683ms).
+- Scroll depth: 88% of viewport explored.
+- Click redundancy: 43% of clicks are duplicates.
+- Session efficiency: 1.13 actions/s, but only 1/14 actions drives toward conversion.
+```

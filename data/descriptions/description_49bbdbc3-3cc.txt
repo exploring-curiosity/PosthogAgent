@@ -1,0 +1,49 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and erratic**: The user exhibits no linear or exploratory progression. Instead, they repeatedly target the same UI element ("Privacy") across different screen positions (5 distinct click clusters at coordinates: (1328,850), (985,789), (1594,802), (569,851)) with no intervening actions suggesting content consumption.
+- **No feature discovery**: All clicks are confined to two settings labels ("Privacy" and "Notifications"), with no evidence of interaction with other page elements.
+- **Positional inconsistency**: Click coordinates for "Privacy" vary by up to 1,025px horizontally and 53px vertically, indicating either UI misalignment or user disorientation.
+
+2. READING BEHAVIOR
+- **No reading detected**: Scroll patterns show rapid, mechanical up/down movements (e.g., 0.4s–0.51s: 3 sequential 283px downward scrolls; 1.28s–1.53s: 5 sequential 56–66px upward scrolls) with no pauses >100ms at any scroll depth. This suggests skimming or UI testing, not content absorption.
+- **Scroll speed**: 567px/0.5s (1,134px/s) downward; 56–66px/0.5s (112–132px/s) upward. No sustained viewing at any depth.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or content interactions. All actions are UI clicks.
+- **Rage-clicking**: Final 0.44s (4.74s–5.18s) shows 5 rapid, clustered clicks (avg. 88ms apart) labeled "[RAGE CLICK]" at near-identical coordinates (Δx=22px, Δy=23px), indicating frustration or UI malfunction.
+- **Hover-to-click ratio**: 4/12 clicks (33%) are preceded by hovers (42–131ms duration), suggesting some deliberate targeting but no correlation with success.
+
+4. INTERACTION SPEED
+- **Extremely rapid**: Median inter-action time = 180ms (excluding scrolls). Fastest sequence: 4.74s–5.18s (5 clicks in 440ms, 88ms apart).
+- **Hesitation**: Initial click at 0.36s follows a 360ms pause (labeled "[HESITATION 360ms]"), but subsequent actions show no comparable delays.
+- **Click redundancy**: 8/12 non-rage clicks (67%) are duplicates (e.g., "Privacy" clicked twice at 1.24s and 3.02s with <300ms separation).
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user exclusively interacts with settings labels ("Privacy" and "Notifications"). No evidence of content consumption, subreddit navigation, or topic exploration.
+- **UI fixation**: "Privacy" is clicked 8 times (67% of non-rage clicks); "Notifications" twice (17%).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input, corrections, or form interactions.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Settings page navigation (loaded at 0.0s).
+  - "Privacy" and "Notifications" settings panels (clicked at 0.91s and 1.84s, respectively).
+- **Ignored features**:
+  - No interaction with account settings, profile, security, or other typical settings submenus.
+  - No search, help, or navigation to other pages.
+  - No evidence of reading page content (e.g., policy text, toggles, or descriptions).
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–0.91s): UI Probing**
+  - Loads settings page; immediate scroll-down (850px in 0.51s) with no pauses. First click ("Privacy") at 0.91s after 360ms hesitation.
+- **Phase 2 (0.91s–2.19s): Repetitive Targeting**
+  - Clicks "Privacy" (1.24s), scrolls up (1.28s–1.53s), then clicks "Notifications" (2.19s). No content engagement.
+- **Phase 3 (2.19s–4.74s): Erratic Re-engagement**
+  - Scrolls down (2.27s–2.39s), clicks "Privacy" 3 more times (2.71s, 3.02s, 3.39s) at disparate coordinates. Final scroll to 851px (3.82s–3.95s).
+- **Phase 4 (4.74s–5.18s): Frustration**
+  - 5 rage-clicks in 440ms at near-identical coordinates, ending session.
+- **Arc**: **Load → UI Testing → Repetitive Failure → Rage-Quit**. No exploration, engagement, or exit intent detected.
+```

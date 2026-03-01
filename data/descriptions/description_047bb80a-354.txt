@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly focused and task-driven with minimal exploration.
+- **Evidence**:
+  - No lateral navigation (e.g., no tab switching, no back/forward actions).
+  - 75% of clicks target 3 distinct UI components (Stats Cards, Data Table, Chart).
+  - 22% of session time (1.4s) spent on hesitation clicks (0.29s and 3.11s), suggesting deliberate targeting.
+  - No evidence of browsing unrelated sections (e.g., no clicks on navigation menus beyond the Sidebar at 5.26s).
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with rapid vertical scanning; no deep reading.
+- **Evidence**:
+  - Scroll speed: 176px/s (avg. across 10 scroll actions).
+  - Max scroll depth: 870px (viewport height: 1080px), covering ~80% of page content.
+  - No pauses >500ms between scrolls; all scrolls occur in <0.5s bursts.
+  - No evidence of horizontal scrolling or zooming (e.g., no text selection, no pinch-zoom).
+
+3. ENGAGEMENT STYLE
+- **Pattern**: Action-oriented with no content creation (e.g., no voting, commenting, or input).
+- **Evidence**:
+  - 100% of interactions are clicks (10 total) or scrolls (12 total).
+  - No text input, form submissions, or drag-and-drop actions.
+  - No "soft" engagement (e.g., no hovers >200ms except for 3 pre-click hovers: 97ms, 196ms, 189ms).
+  - **Vote-to-comment ratio**: N/A (no engagement of this type).
+
+4. INTERACTION SPEED
+- **Pattern**: Extremely fast with deliberate pauses only before high-value actions.
+- **Evidence**:
+  - **Median inter-action time**: 0.34s (excluding hesitations).
+  - **Hesitations**: 2 instances (295ms at 0.29s, 2341ms at 3.11s) preceding clicks on Stats Cards.
+  - **Click latency**: 38ms avg. between hover and click (3 instances: 97ms, 196ms, 189ms).
+  - **Scroll initiation**: All scrolls start within 30ms of prior action completion.
+
+5. CONTENT PREFERENCES
+- **Pattern**: Gravitated toward data-dense, interactive components.
+- **Evidence**:
+  - **Primary targets**:
+    - Stats Cards (2 clicks at 0.77s and 3.32s; 23% of session time).
+    - Data Table (2 clicks at 4.12s and 4.29s; 18% of session time).
+    - Chart (2 clicks at 4.72s and 4.86s; 15% of session time).
+  - **Secondary targets**:
+    - Sidebar (2 clicks at 5.26s and 5.37s; 11% of session time).
+    - Export button (2 clicks at 5.93s and 6.27s; 10% of session time).
+  - **Ignored**: No interactions with static text, images, or non-interactive elements.
+
+6. TYPING BEHAVIOR
+- **Pattern**: N/A (no typing detected).
+- **Evidence**:
+  - No keystrokes, form inputs, or search queries logged.
+  - No evidence of corrections or input fields being focused.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Core features**: Stats Cards, Data Table, Chart, Sidebar navigation, Export.
+  - **Interaction depth**: All features were clicked twice (primary + confirmation click).
+- **Ignored**:
+  - **Navigation**: No clicks on top-level menus (e.g., no "Home," "Settings," or user profile).
+  - **Content**: No interactions with non-data elements (e.g., no tooltips, modals, or help icons).
+  - **Social**: No sharing, bookmarking, or collaboration features.
+
+8. SESSION FLOW
+- **Arc**: Linear, goal-driven progression with 3 distinct phases:
+  1. **Orientation (0.0s–0.77s)**:
+     - Page load → hesitation (295ms) → rapid scroll (0–176px) → Stats Cards hover/click.
+     - **Duration**: 0.77s (12% of session).
+  2. **Data Exploration (0.77s–4.86s)**:
+     - Stats Cards → hesitation (2341ms) → re-click Stats Cards → scroll to Data Table (176px→870px) → Data Table clicks → scroll up to Chart (870px→509px) → Chart clicks.
+     - **Duration**: 4.09s (65% of session).
+     - **Key behavior**: Vertical scanning with 2 directional shifts (down → up).
+  3. **Action (4.86s–6.27s)**:
+     - Sidebar navigation → scroll up (509px→95px) → Export button clicks.
+     - **Duration**: 1.41s (23% of session).
+     - **Exit**: Session ends immediately after Export click (no confirmation or post-action behavior).
+```
+
+**SUMMARY**: This user exhibited a hyper-focused, task-driven session with no exploratory behavior. Their interactions were limited to data-centric UI components, suggesting a goal of extracting or exporting information. The session was characterized by rapid, precise clicks and scrolling, with hesitations only before high-value actions (Stats Cards, Export). No content creation or social engagement occurred. The 6.3s duration and lack of lateral navigation imply either a highly efficient user or a synthetic/power_user profile.

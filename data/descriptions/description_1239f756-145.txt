@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused but erratic**: The user exhibits a non-linear, repetitive navigation pattern with redundant actions. They return to the same UI elements (e.g., "Settings Nav" clicked twice at [2.06s] and [2.97s], "Save Changes" clicked twice at [3.84s] and [6.78s]) and perform micro-adjustments (e.g., 5 consecutive 10px scrolls at [3.03s–3.22s]).
+- **Depth-limited**: Max scroll depth (947px) suggests they did not explore beyond the initial viewport expansion (1920x1080), despite the page likely extending further.
+- **Spatial precision**: Clicks are tightly clustered (e.g., "Settings Nav" at (230, 896) and (234, 901)), indicating intentional targeting of specific elements.
+
+2. READING BEHAVIOR
+- **Skim-focused**: Scroll speed (avg. 896px/s during [1.5s–2.06s]) and lack of pauses suggest skimming. No dwell time >1s on any scroll segment.
+- **No deep reading**: Max scroll depth (947px) was reached in 3.22s, with no evidence of backtracking to re-read content. The 5 rapid 10px scrolls ([3.03s–3.22s]) imply scanning for a specific target (likely the "Save Changes" button).
+- **Hover hesitation**: Two hover delays (370ms on "Settings Nav" [2.06s], 393ms on "Save Changes" [3.84s]) indicate brief consideration but no prolonged engagement.
+
+3. ENGAGEMENT STYLE
+- **Action-only**: No evidence of voting, commenting, or content creation. All interactions are navigational (clicks, scrolls).
+- **Repetitive clicks**: 2/8 clicks were redundant (duplicate clicks on "Settings Nav" and "Save Changes"), suggesting either UI confusion or impatience.
+- **No ratio applicable**: No voting/commenting occurred.
+
+4. INTERACTION SPEED
+- **Fast but inconsistent**:
+  - Initial hesitation: 1.44s delay before first click ([1.44s]).
+  - Rapid bursts: 5 scrolls in 0.19s ([3.03s–3.22s]).
+  - Long pauses: 1.76s hesitation before second "Save Changes" click ([5.6s]).
+- **Median action interval**: 0.74s (excluding the 1.76s outlier).
+- **Hover-to-click latency**: 370–393ms (typical for deliberate but not expert users).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: All interactions are confined to the `/settings` page, with no exploration of other content (e.g., no subreddit visits, posts, or profiles).
+- **Privacy tab**: Final clicks ([7.16s–8.02s]) target "Privacy," suggesting late-session interest in account security or data settings.
+- **No content consumption**: No evidence of reading articles, posts, or media.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No form inputs, search queries, or text fields were engaged. All actions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation menu ("Settings Nav").
+  - Save functionality ("Save Changes").
+  - Privacy settings tab.
+- **Ignored features**:
+  - No profile interactions, content feeds, or search.
+  - No dropdown menus or advanced settings (e.g., no clicks on sub-menus or tooltips).
+  - No help/documentation links (common in settings pages).
+
+8. SESSION FLOW
+- **Phase 1 (0–2.06s): Rapid exploration**
+  - Loads settings page, hesitates (1.44s), then scrolls aggressively to 896px depth in 1s.
+  - Clicks "Settings Nav" after 370ms hover.
+- **Phase 2 (2.06–3.84s): Redundant navigation**
+  - Repeats "Settings Nav" click (2.97s), then micro-scrolls (3.03s–3.22s) to locate "Save Changes."
+  - Hovers 393ms before first "Save Changes" click (3.84s).
+- **Phase 3 (3.84–6.78s): Hesitation and repetition**
+  - 1.76s pause (5.6s), then repeats "Save Changes" click (6.78s).
+  - Scrolls up (6.84s–6.9s), possibly to verify changes or navigate away.
+- **Phase 4 (6.78–8.02s): Exit focus**
+  - Clicks "Privacy" tab twice (7.16s–8.02s), ending session.
+- **Arc**: **Exploration → Redundant interaction → Hesitation → Abrupt exit**. No clear goal achievement (e.g., no confirmation of saved changes).
+```
+
+**Key Observations**:
+- **Synthetic/scanner-like behavior**: The combination of rapid, repetitive clicks, micro-scrolls, and lack of typing suggests a bot or automated script, despite the "desktop" label. Human users rarely exhibit such precise, redundant actions without visible outcomes.
+- **No engagement**: The session lacks any content interaction, typical of a scanner or synthetic test.
+- **UI confusion**: Redundant clicks on "Save Changes" and "Settings Nav" may indicate unclear UI feedback (e.g., no visual confirmation of actions).

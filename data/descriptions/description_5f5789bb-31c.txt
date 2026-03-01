@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused but hesitant**: The user demonstrates a clear goal-oriented path through the settings menu (Settings → Privacy → Profile → Notifications) with no exploratory deviations.
+- **Linear progression**: 83% of clicks (5/6 primary actions) follow a sequential settings sub-menu path. No backtracking or revisits to prior sections.
+- **Minimal redundancy**: Only 2 repeated clicks (Settings Nav at 8.51s and 11.1s; Privacy at 12.47s and 16.07s), suggesting confirmation-seeking rather than disorientation.
+
+2. READING BEHAVIOR
+- **Skim-heavy**: Scroll depth correlates inversely with time spent:
+  - Privacy section: 941px max depth reached in 3.78s (249px/s)
+  - Profile section: 560px max depth reached in 1.13s (496px/s)
+- **No deep reading**: No pauses >1s at any scroll depth. Average scroll segment duration: 0.5s (standardized across all scrolls).
+- **Visual anchoring**: All primary clicks occur at the bottom of scroll segments (e.g., Privacy at 789px, Save Changes at 941px), indicating reliance on visual completion cues.
+
+3. ENGAGEMENT STYLE
+- **No content creation**: Zero instances of typing, commenting, or voting (session limited to settings navigation).
+- **Action pattern**: All interactions are binary (click/no-click) with no intermediate engagement (e.g., no partial form completion).
+- **Hesitation markers**: 5/11 clicks (45%) preceded by "[HESITATION]" annotations (mean: 1,952ms), suggesting deliberation before execution.
+
+4. INTERACTION SPEED
+- **Deliberate pacing**: Mean time between primary actions: 4.4s (excluding scrolls).
+  - Fastest transition: Profile → Notifications (1.0s at 26.5s)
+  - Slowest transition: Privacy → Save Changes (4.68s at 17.15s)
+- **Hover latency**: Mean hover time before clicks: 923ms (n=4). Longest hover: 2,768ms before Privacy click (15.24s).
+- **Scroll velocity**: Consistent 32-36px/0.5s across all scrolls (mechanical precision).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: 100% of interactions confined to account settings sub-menus:
+  - Privacy: 2 clicks (12.47s, 16.07s)
+  - Profile: 2 clicks (22.66s, 25.47s)
+  - Notifications: 2 clicks (26.5s, 27.98s)
+- **No content consumption**: Zero engagement with non-settings pages or dynamic content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Session contains no text input events, form submissions, or corrections.
+- **Implied caution**: Hesitation before clicks may reflect pre-input deliberation, but no direct typing metrics available.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Settings navigation (3 clicks)
+  - Privacy controls (2 clicks)
+  - Profile settings (2 clicks)
+  - Notifications (2 clicks)
+  - Save Changes button (2 clicks)
+- **Ignored features**:
+  - No engagement with non-settings UI elements (e.g., search, help, account dropdown)
+  - No exploration of advanced settings (e.g., security, connected apps)
+  - No form fields completed despite Save Changes clicks
+
+8. SESSION FLOW
+- **Phase 1 (0-8.51s): Orientation**
+  - Initial hesitation (6.79s click after 6.8s pause)
+  - Shallow scroll exploration (53px max depth)
+  - Settings nav confirmation (8.51s)
+- **Phase 2 (8.51-17.15s): Privacy Focus**
+  - Deep scroll (941px) with rapid descent (3.78s)
+  - Save Changes hover (715ms) but no submission
+- **Phase 3 (17.15-25.47s): Confirmation Loop**
+  - Save Changes click (17.15s) → immediate upward scroll (21.55s)
+  - Profile section access (22.66s) after 5.51s pause
+- **Phase 4 (25.47-27.98s): Abbreviated Exploration**
+  - Profile scroll (560px in 1.13s)
+  - Notifications click (26.5s) → immediate execution (27.98s)
+- **Termination**: Session ends at 28s with no exit action (e.g., page close, navigation away).
+
+KEY BEHAVIORAL SIGNATURES:
+- **Hesitation-Validation Loop**: 64% of primary actions (7/11) follow a "hover → hesitation → click" pattern.
+- **Scroll-Then-Click**: 100% of section clicks occur at the bottom of scroll segments.
+- **No Persistence**: Zero form completions despite 2 Save Changes clicks.
+- **Mechanical Scrolling**: Identical 0.5s duration for all 12 scroll segments (6 up, 6 down).
+```

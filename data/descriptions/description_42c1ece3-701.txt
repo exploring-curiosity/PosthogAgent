@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with frequent back-and-forth movements. They oscillate between 3-4 core UI elements (Sidebar, Stats Cards, Data Table, Chart) 2-4 times each, often returning to previously interacted areas after brief exploration.
+- **Depth variation**: Max scroll depth fluctuates wildly (219px → 913px → 168px → 702px), suggesting no consistent progression through content. 63% of scroll actions (17/27) occur in rapid bursts of 3-5 sequential movements.
+- **Element hopping**: 80% of clicks (16/20) target 4 distinct UI components, with no single element receiving sustained focus beyond 2 consecutive interactions.
+
+2. READING BEHAVIOR
+- **Skimmer with micro-depth spikes**: Scroll speed averages 240px/second (consistent across all scroll actions), indicating rapid scanning. However, 3 instances of abrupt scroll direction changes (e.g., 5.05s-5.15s: 913px→516px in 0.6s) suggest momentary pauses to examine content at specific depths.
+- **No deep reading**: No scroll position is maintained for >0.5s, and max dwell time at any depth is 0.33s (calculated from scroll intervals). The user never reaches the bottom of the page (max depth 913px vs. likely full page height >1080px).
+- **Visual anchoring**: 75% of clicks (15/20) occur immediately after scroll pauses, targeting visible elements at scroll endpoints (e.g., 3.71s click on Data Table at 789px).
+
+3. ENGAGEMENT STYLE
+- **Click-heavy, no content creation**: 20 total clicks, all targeting interactive UI elements (no text input, voting, or commenting actions detected). 100% of interactions are navigational or exploratory.
+- **Impulsive with frustration markers**:
+  - 5 "RAGE CLICK" events (7.45s-7.84s) clustered in 0.39s, targeting the same Chart element.
+  - 3 "DEAD CLICK" events (1.47s, 8.42s) on non-interactive areas.
+  - 3 "HESITATION" events (0.39s, 3.11s, 11.58s) with delays of 387ms, 1226ms, and 2637ms respectively.
+- **No sustained engagement**: Average time between clicks: 0.63s (excluding hesitations). No single element holds attention for >1.5s.
+
+4. INTERACTION SPEED
+- **Hyper-fast with deliberate pauses**:
+  - **Base speed**: 0.3-0.5s between most actions (e.g., 0.43s-0.87s for initial scroll-click sequence).
+  - **Hesitation outliers**: 3 pauses >300ms (387ms, 1226ms, 2637ms) account for 32% of total session time.
+  - **Click latency**: Average hover-to-click time: 110ms (range: 68ms-150ms), suggesting premeditated targeting.
+- **Scroll acceleration**: All scroll sequences follow a 0.5s duration pattern, indicating consistent motor control despite rapid navigation.
+
+5. CONTENT PREFERENCES
+- **UI elements over content**:
+  - **Stats Cards**: 4 clicks (18.8% of interactions), highest single-element engagement.
+  - **Chart**: 6 clicks (30%), including rage clicks, suggesting either high interest or usability issues.
+  - **Data Table**: 4 clicks (20%), all at deep scroll positions (695px-789px).
+  - **Sidebar**: 4 clicks (20%), positioned at both top (653px) and bottom (913px) of viewport.
+- **No content consumption**: No evidence of reading text, viewing images, or interacting with media. All clicks target structural UI components.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text input events, corrections, or form interactions in the 12.6s session.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Primary**: Sidebar, Stats Cards, Data Table, Chart (all clicked multiple times).
+  - **Secondary**: Scrollbar (used extensively, 27 actions).
+- **Ignored features**:
+  - **Navigation**: No clicks on header, footer, or breadcrumbs.
+  - **Content**: No interactions with text, images, or embedded media.
+  - **Controls**: No buttons, dropdowns, or form elements engaged.
+  - **Help/Feedback**: No clicks on tooltips, help icons, or support links.
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s-1.88s)**
+  - Loads dashboard, immediate hesitation (387ms).
+  - Rapid downward scroll (0-657px in 1.16s), clicks Sidebar twice (1.13s-1.47s).
+  - Dead click (1.47s) suggests confusion.
+  - Upward scroll (657px→156px in 0.73s), targets Stats Cards (1.88s).
+
+- **Phase 2: Erratic Exploration (1.88s-7.84s)**
+  - Stats Cards → Data Table → Chart cycle repeated 3x with increasing frustration:
+    - 3.11s: Hesitation (1226ms), then Stats Cards click.
+    - 3.71s-3.99s: Data Table engagement, deep scroll (789px→913px).
+    - 4.63s-6.72s: Sidebar → Chart interactions, rapid scroll reversals.
+  - **Frustration peak**: 5 rage clicks on Chart (7.45s-7.84s) in 0.39s.
+
+- **Phase 3: Disengagement (7.84s-12.57s)**
+  - Dead click (8.42s) at bottom of viewport (1035px).
+  - Aggressive upward scroll (465px→168px in 0.26s).
+  - Final hesitation (2637ms at 11.58s), then abortive Data Table click (12.57s) before session end.
+
+**OVERALL ARC**: A high-speed, frustration-driven session with no clear goal. The user cycles through UI elements in a pattern consistent with either:
+1) A synthetic test script (given "synthetic/impulsive_clicker" device label), or
+2) A real user struggling with navigation/usability, culminating in rage clicks and abrupt disengagement.
+```

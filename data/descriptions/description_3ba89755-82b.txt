@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly linear and task-driven with minimal deviation.
+- Focused on vertical progression through the settings page (scrolling only, no horizontal movement or sidebar exploration).
+- No evidence of exploratory behavior (e.g., no clicks on unrelated elements, no backtracking to other sections).
+- Navigation sequence: Settings page → Save Changes → Notifications → Privacy (strictly sequential).
+
+2. READING BEHAVIOR:
+- Skimming behavior confirmed by:
+  - Rapid, incremental scrolls (5 downward scrolls in 2.5s at 2.38–2.61s; 5 upward scrolls in 2.1s at 4.2–4.34s; 5 downward scrolls in 1.1s at 5.97–6.14s).
+  - Scroll speed: ~190px/0.5s (380px/s) during downward passes, ~130px/0.5s (260px/s) upward.
+  - No pauses >500ms between scrolls, suggesting no deep reading.
+  - Max scroll depth (972px) reached in 2.61s, indicating rapid page coverage.
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or content creation observed.
+- Interaction limited to settings adjustments:
+  - Two clicks on "Save Changes" (2.98s and 4.15s, 1.17s apart).
+  - Two clicks on "Notifications" (4.72s and 5.93s, 1.21s apart).
+  - Two clicks on "Privacy" (6.37s and 6.89s, 0.52s apart).
+- Ratio: 0 votes/comments, 6 functional clicks (3 duplicate pairs).
+
+4. INTERACTION SPEED:
+- Fast and deliberate with consistent patterns:
+  - Hesitation before first click: 2.31s (2310ms) at (0,0) — likely a misclick or synthetic artifact.
+  - Hover-to-click latency: 140ms ("Save Changes"), 199ms ("Notifications"), 139ms ("Privacy").
+  - Time between primary actions:
+    - Page load → first click: 2.98s.
+    - "Save Changes" → "Notifications": 1.74s.
+    - "Notifications" → "Privacy": 0.44s.
+  - Duplicate clicks on the same element within 0.5–1.2s (possible UI lag or confirmation behavior).
+
+5. CONTENT PREFERENCES:
+- No content consumption observed (e.g., no article views, subreddit visits, or media engagement).
+- Focused exclusively on settings sub-pages:
+  - Core settings (unspecified, implied by "Save Changes").
+  - Notifications panel (accessed at 4.72s).
+  - Privacy panel (accessed at 6.37s).
+
+6. TYPING BEHAVIOR:
+- No typing detected in the log (no input fields, corrections, or form submissions).
+- Session duration (7.6s) too short for text input.
+
+7. FEATURE DISCOVERY:
+- Used features:
+  - Settings navigation (3 sub-pages: core, Notifications, Privacy).
+  - Scrolling (vertical only, no horizontal or zoom).
+  - Click interactions (6 total, 3 duplicate pairs).
+- Ignored features:
+  - No search, help, or account dropdown usage.
+  - No sidebar or navigation menu interactions.
+  - No tooltips, modals, or secondary UI elements clicked.
+  - Dead click at (1319, 1119) at 7.64s suggests accidental exit or UI misalignment.
+
+8. SESSION FLOW:
+- Arc: Task execution → UI friction → abrupt exit.
+  - 0.0–2.98s: Initial page load and rapid skimming (scroll to 972px).
+  - 2.98–4.15s: Attempt to save changes (duplicate clicks, possible UI lag).
+  - 4.15–5.93s: Navigate to Notifications (scroll up, then duplicate clicks).
+  - 5.93–6.89s: Navigate to Privacy (rapid scroll down, duplicate clicks).
+  - 6.89–7.64s: Dead click (session termination).
+- No exploration phase; immediate focus on settings adjustments.
+- Exit likely due to task completion or UI frustration (duplicate clicks, dead click).
+```
+
+**Key Observations:**
+- **Synthetic/Scanner Traits:** Duplicate clicks, rapid scrolls, and dead click suggest non-human interaction (e.g., automated test, bot, or synthetic user).
+- **Zero Content Engagement:** No evidence of reading, voting, or commenting — purely functional settings navigation.
+- **UI Friction:** Duplicate clicks on all 3 primary buttons may indicate unresponsive UI or scripted behavior.

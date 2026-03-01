@@ -1,0 +1,82 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and impulsive**: The user exhibits non-linear, erratic navigation with rapid jumps between unrelated page sections.
+- **Pattern**: Hero section → "Get Started" (1.0s) → mid-page hesitation (2.05s) → "Features" (2.72s) → "Testimonials" (3.5s) → back to "Features" (4.63s) → footer (5.61s) → hero title (6.36s) → navigation (7.22s).
+- **Quantitative**: 14 distinct interaction zones in 7.6s (1.86 zones/sec). 66% of clicks target elements already interacted with (e.g., "Features" clicked 4x, "Get Started" 2x).
+- **Spatial inconsistency**: Click coordinates vary by 5–10px for identical elements (e.g., "Features" at (410,624) vs. (230,489)), suggesting imprecise targeting.
+
+2. READING BEHAVIOR
+- **Skim-only**: No evidence of deep reading.
+  - **Scroll velocity**: 120–240px/s (e.g., 124px in 0.5s at 0.51s; 921px to 1030px in 0.5s at 5.25s).
+  - **Depth**: Max scroll depth 1030px (5.25s), but revisits prior sections within 0.5s (e.g., scrolls up from 1030px to 259px in 0.5s at 6.04s).
+  - **Direction changes**: 4 scroll direction reversals (down→up at 3.99s, up→down at 5.04s), indicating no sustained focus.
+- **Content sampling**: Clicks on section headers ("Features," "Testimonials") suggest scanning for keywords rather than reading body text.
+
+3. ENGAGEMENT STYLE
+- **Click-heavy, no content creation**: 100% of interactions are clicks; no typing, voting, or commenting observed.
+- **Hesitation metrics**:
+  - 2 explicit "[HESITATION]" events (447ms at 0.45s; 1051ms at 2.05s).
+  - Hover times: 35–132ms (median 65ms), suggesting rapid decision-making post-hesitation.
+- **Engagement ratio**: 14 clicks in 7.6s (1.84 clicks/sec). No secondary actions (e.g., form submissions, tooltips).
+
+4. INTERACTION SPEED
+- **Hyper-fast with pauses**: Median inter-action time: 300ms (excluding hesitations).
+  - Fastest sequence: 5 scrolls in 1.5s (5.04s–5.25s; 108px/0.1s).
+  - Slowest: 1051ms hesitation (2.05s) before redundant "Get Started" click.
+- **Click latency**: 40–400ms between hover and click (e.g., 35ms hover→click at 1.0s; 132ms at 4.63s).
+
+5. CONTENT PREFERENCES
+- **Gravitated toward**:
+  - **CTA elements**: "Get Started" (2 clicks, 1.0s and 2.27s).
+  - **Section headers**: "Features" (4 clicks), "Testimonials" (2 clicks), "Hero Title" (2 clicks).
+  - **Navigation**: Footer (2 clicks at 5.61s) and nav bar (2 clicks at 7.22s).
+- **Ignored**:
+  - Body text (no clicks on paragraphs/divs with substantive content).
+  - Interactive widgets (e.g., forms, search bars, social buttons).
+  - Images/media (no clicks on non-textual elements).
+
+6. TYPING BEHAVIOR
+- **None detected**: No keystrokes, form inputs, or text selections recorded.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Primary navigation**: Top nav bar (7.22s), footer (5.61s).
+  - **Section anchors**: "Features," "Testimonials" (likely jump links).
+  - **CTA button**: "Get Started" (2x).
+- **Ignored**:
+  - Search functionality (no clicks on search bars).
+  - Social sharing (no clicks on icons/links).
+  - Dropdown menus (no hover/clicks on expandable elements).
+  - Multimedia (no clicks on videos/images).
+
+8. SESSION FLOW
+- **Phase 1: Disoriented Entry (0.0–1.0s)**
+  - Immediate hesitation (447ms at 0.45s) after page load.
+  - Rapid scroll to 372px (0.51–0.64s) without pausing.
+  - Clicks "Get Started" (1.0s) after minimal hover (35ms).
+- **Phase 2: Erratic Exploration (1.0–3.92s)**
+  - 1051ms hesitation (2.05s) followed by redundant "Get Started" click (2.27s).
+  - Scrolls to 624px (2.3–2.34s), clicks "Features" (2.72s), then "Testimonials" (3.5s).
+  - Scrolls up/down repeatedly (3.99–4.17s), suggesting confusion.
+- **Phase 3: Repetitive Re-engagement (3.92–6.75s)**
+  - Returns to "Features" (4.63s), scrolls to footer (5.13–5.25s), clicks footer (5.61s).
+  - Scrolls back to hero title (6.04–6.36s), clicks it (6.36s).
+- **Phase 4: Exit (6.75–7.62s)**
+  - Scrolls to top (6.79–6.91s), clicks nav bar (7.22s), then exits.
+- **Arc**: No clear progression. Session resembles a "bounce" with frantic, circular interactions. No sustained engagement with any single element.
+
+ADDITIONAL OBSERVATIONS
+- **Device artifacts**: Labeled "synthetic/impulsive_clicker" suggests automated or bot-like behavior. Human users rarely exhibit:
+  - Perfectly linear scroll increments (e.g., 124px→248px→372px).
+  - Sub-50ms hover times (e.g., 35ms at 1.0s).
+  - Identical click patterns on redundant elements (e.g., "Features" 4x).
+- **Viewport consistency**: No resizing or orientation changes despite desktop device.
+```
+
+**Summary**: This session is highly atypical for a human user. The behavior aligns with a **synthetic clicker** or **bot** performing rapid, shallow interactions to simulate engagement. Key red flags include:
+- Sub-100ms hover times.
+- Precise, repetitive scroll increments.
+- No typing or content creation.
+- Circular navigation with no goal-oriented flow.

@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive validation**: The user exhibits a non-linear, erratic navigation pattern with frequent back-and-forth clicks on the same elements (e.g., "Navigation" clicked twice at [1.44s] and [3.24s], "Hero Title" at [4.03s] and [4.56s], "Get Started" at [5.44s] and [8.34s]).
+- **Element redundancy**: 42% of clicks (6/14) are duplicates of prior interactions, suggesting hesitation or confirmation-seeking behavior.
+- **No clear progression**: Jumps between navigation (0–3.24s), hero section (4.03–4.74s), features (9.17–10.63s), testimonials (11.59–12.63s), and footer (13.25–15.3s) without sustained focus on any single section.
+
+2. READING BEHAVIOR
+- **Skimmer with shallow engagement**: Scroll patterns show rapid, incremental downward movement (e.g., 29px–372px in 1.45s at 3.29–4.74s) with no pauses >0.5s, indicating no deep reading.
+- **Max scroll depth**: 1056px (footer), but no sustained stops >1s at any depth. Scroll steps average 57px per 0.5s (consistent with skimming).
+- **No evidence of content absorption**: Repeated clicks on static elements (e.g., "Hero Title") suggest interaction without comprehension.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows no votes, comments, form submissions, or other participatory actions. All interactions are clicks or scrolls.
+- **Pseudo-engagement**: Clicks on non-interactive elements (e.g., "Hero Title," "Features") imply exploratory probing rather than functional engagement.
+- **Hesitation markers**: 5/14 clicks (36%) are preceded by "[HESITATION]" tags (avg delay: 1,151ms), indicating uncertainty or distraction.
+
+4. INTERACTION SPEED
+- **Variable with delays**: Action intervals range from 0.05s (scroll steps) to 2.42s (hesitation before [7.86s] click).
+- **Click frequency**: 14 clicks in 15.3s (0.92 clicks/s), but 43% of clicks occur in the first 5s (burst behavior).
+- **Hover times**: Avg hover duration = 476ms (range: 320–725ms), suggesting deliberate targeting but not deep consideration.
+
+5. CONTENT PREFERENCES
+- **No content differentiation**: All clicks target UI elements (navigation, buttons, headings) rather than specific content items. No evidence of preference for particular topics or sections.
+- **Structural focus**: Interactions cluster around:
+  - Navigation (21% of clicks)
+  - Hero section (21%)
+  - Features (14%)
+  - Testimonials (14%)
+  - Footer (14%)
+- **No sustained attention**: Longest dwell on any section = 2.42s (testimonials at 11.59–12.63s).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text inputs, corrections, or form interactions. All actions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation menu (2 clicks)
+  - Hero section (2 clicks on title, 2 on "Get Started" button)
+  - Features section (2 clicks)
+  - Testimonials section (2 clicks)
+  - Footer (2 clicks)
+- **Ignored features**:
+  - No interaction with search bars, dropdowns, forms, or dynamic content (e.g., carousels, accordions).
+  - No evidence of tooltips, modals, or secondary navigation exploration.
+
+8. SESSION FLOW
+- **Phase 1: Disoriented probing (0–5.44s)**
+  - Rapid, repetitive clicks on navigation and hero elements (6 clicks in 5.44s).
+  - Scrolls incrementally but shallowly (max 372px).
+  - **Behavior**: Confusion or testing UI responsiveness.
+- **Phase 2: Hesitant validation (5.44–10.44s)**
+  - Longest hesitation (2.42s at [7.86s]) before re-clicking "Get Started."
+  - Scrolls deeper (to 620px) but with no sustained stops.
+  - **Behavior**: Attempting to confirm prior actions or recover from perceived errors.
+- **Phase 3: Superficial exploration (10.44–15.3s)**
+  - Clicks on features, testimonials, and footer in sequence.
+  - Scrolls to bottom (1056px) but no engagement with footer content.
+  - **Behavior**: Checklist-style coverage of page sections without depth.
+- **Exit**: Session ends abruptly after footer click at [15.3s], with no return to prior sections.
+
+KEY OBSERVATIONS:
+- **Synthetic/methodical user**: The "synthetic/methodical_user" device tag and lack of typing suggest this may be a bot, automated test, or scripted interaction.
+- **No goal-oriented behavior**: No evidence of task completion (e.g., sign-up, purchase) or content consumption.
+- **UI testing focus**: Repetitive clicks on static elements imply validation of UI functionality rather than user engagement.
+```

@@ -1,0 +1,56 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with frequent back-and-forth movements between sections. They jump between "Profile," "Privacy," "Notifications," and "Settings Nav" in rapid succession, often revisiting the same elements (e.g., "Privacy" clicked 6 times across 3 distinct locations).
+- **No clear progression**: Actions lack a logical sequence (e.g., clicking "Save Changes" at 4.72s before fully exploring other options). The user returns to the "Settings Nav" twice (3.86s and 5.56s) and "Privacy" three times (1.55s, 2.29s, 6.36s).
+- **Spatial inconsistency**: Click coordinates vary widely for the same text (e.g., "Privacy" clicked at (549, 840), (1325, 839), and (1556, 698)), suggesting either UI confusion or impulsive targeting.
+
+2. READING BEHAVIOR
+- **Skim-only, no deep reading**: Scroll patterns show rapid, incremental movements (e.g., 60px jumps every 0.5s) with no pauses longer than 0.5s. The user never dwells on any section for more than 1.5s before scrolling or clicking.
+- **Bidirectional scrolling**: Frequent up/down scrolls (e.g., 2.66s–3.61s: scrolls up 700px in 1s; 4.27s–4.49s: scrolls down 830px in 0.6s) indicate scanning rather than linear reading.
+- **Max scroll depth**: Reaches 963px (4.49s) but immediately scrolls back up (4.97s–5.12s), suggesting no sustained engagement with content below the fold.
+
+3. ENGAGEMENT STYLE
+- **Click-heavy, no input**: The user clicks 14 times in 7.3s but shows no evidence of typing, commenting, or voting. All interactions are navigational (menu items, buttons).
+- **Impulsive clicks**: 50% of clicks (7/14) are preceded by hovers of <150ms (e.g., "Privacy" at 2.29s: 49ms hover), suggesting reflexive rather than deliberate actions.
+- **No content creation**: No text inputs, form submissions, or interactive engagement (e.g., toggles, sliders) are recorded.
+
+4. INTERACTION SPEED
+- **Hyper-fast, sub-second intervals**: Average time between actions: **0.52s**. Fastest sequence: 0.05s between scrolls (e.g., 3.45s–3.49s). Slowest interval: 0.67s (5.12s–5.56s).
+- **Hesitation markers**: Only one recorded hesitation (268ms at 0.27s), likely a false start. All other hovers are <150ms, indicating no cognitive processing time.
+- **Double-clicks**: 7/14 clicks are duplicates (e.g., "Profile" at 0.89s and 1.02s), suggesting either UI lag or impulsive re-triggering.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user interacts exclusively with navigation elements ("Settings Nav," "Profile," "Privacy," "Notifications") and a "Save Changes" button. No content (e.g., articles, posts, settings toggles) is viewed or modified.
+- **Section focus**: "Privacy" is the most-clicked element (6 clicks), followed by "Settings Nav" (4 clicks). However, no settings changes are confirmed (no form submissions or visual feedback).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no keystrokes, text inputs, or corrections. All actions are mouse-based.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation menu ("Settings Nav" ×4)
+  - Section tabs ("Profile," "Privacy," "Notifications")
+  - "Save Changes" button (clicked but not confirmed)
+- **Ignored features**:
+  - No interaction with form fields, toggles, or dropdowns.
+  - No help links, tooltips, or secondary menus.
+  - No search or filter functionality.
+  - No logout/exit actions.
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–0.89s): False Start**
+  - Page loads; immediate hesitation (268ms) followed by rapid scrolling (5 scrolls in 0.5s). No clear goal.
+- **Phase 2 (0.89s–3.86s): Erratic Exploration**
+  - Clicks "Profile" (0.89s), scrolls down (1.09s–1.16s), then jumps to "Privacy" (1.55s) and "Notifications" (3.12s). No sustained focus.
+- **Phase 3 (3.86s–4.9s): Premature Commitment**
+  - Returns to "Settings Nav" (3.86s), scrolls aggressively (4.27s–4.49s), and clicks "Save Changes" (4.72s) despite no visible changes.
+- **Phase 4 (4.9s–7.27s): Repetitive Loop**
+  - Scrolls up (4.97s–5.12s), re-clicks "Settings Nav" (5.56s), and cycles back to "Privacy" (6.36s, 7.12s). Session ends mid-action.
+
+KEY OBSERVATIONS:
+- **Behavioral signature**: Matches a "synthetic/impulsive_clicker" (as labeled in the device profile). Likely a bot, automated test, or user with severe ADHD/impulsivity.
+- **No productive output**: The session achieves no tangible outcome (e.g., no settings saved, no content consumed).
+- **UI confusion**: Repeated clicks on the same text at different coordinates suggest either a broken UI or a user unable to locate elements.
+```

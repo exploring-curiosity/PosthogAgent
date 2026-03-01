@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and methodical with zero exploratory detours.
+- Follows a strict top-to-bottom, left-to-right progression through the settings panel.
+- All clicks are on navigation elements (Settings Nav → Profile → Notifications → Privacy → Save Changes) with no deviation to unrelated sections.
+- No backtracking or revisits to previously viewed content.
+
+2. READING BEHAVIOR
+- Skimming only; no evidence of deep reading.
+- Scroll patterns show rapid, incremental downward movement (11–67 px per 0.5 s segment) with no pauses longer than 0.5 s.
+- Max scroll depth reached: 929 px, but no single section was viewed for more than 1.5 s before scrolling resumed.
+- No mouse hovers over body text; all hovers are on interactive elements (nav items, buttons).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed in this session.
+- Sole engagement is navigation and form interaction within the settings panel.
+- Interaction-to-hesitation ratio: 8 clicks on interactive elements vs. 5 hesitation events (62 % active clicks).
+
+4. INTERACTION SPEED
+- Deliberate but consistent pacing.
+- Median time between consecutive actions: 0.7 s (excluding hesitations).
+- Hesitations (marked in log) range from 430 ms to 2700 ms (median 885 ms).
+- Total session duration: 17.5 s; active interaction time (excluding hesitations): 10.3 s.
+
+5. CONTENT PREFERENCES
+- Session confined to the settings panel of the web application.
+- Sub-sections visited in order: Profile → Notifications → Privacy.
+- No content or subreddit browsing detected.
+
+6. TYPING BEHAVIOR
+- No typing events recorded in the log.
+- No input fields, corrections, or text entry observed.
+
+7. FEATURE DISCOVERY
+- Features used:
+  • Settings navigation panel
+  • Profile settings section
+  • Notifications settings section
+  • Privacy settings section
+  • “Save Changes” button
+- Features ignored:
+  • Any content outside the settings panel
+  • Search, help, or account dropdowns
+  • Sidebars, footers, or promotional banners
+
+8. SESSION FLOW
+- Arc: Linear configuration → validation → exit.
+  0.0–3.47 s: Initial page load and micro-scrolling to orient.
+  3.47–5.19 s: Navigate to “Profile” section.
+  5.19–7.26 s: Scroll through Profile settings.
+  7.26–11.07 s: Navigate to “Notifications” section.
+  11.07–11.75 s: Scroll through Notifications settings.
+  11.75–13.49 s: Navigate to “Privacy” section.
+  13.49–14.53 s: Scroll through Privacy settings.
+  14.53–17.53 s: Click “Save Changes” button twice (initial hover + final click).
+- Exit immediately after final save action; no post-save browsing.
+```

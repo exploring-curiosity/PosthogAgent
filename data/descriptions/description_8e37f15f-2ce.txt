@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and erratic**: The user exhibits no clear linear progression through the settings interface. Navigation is characterized by:
+  - Repeated toggling between sections (e.g., "Notifications" → "Profile" → "Settings Nav" → "Profile" in rapid succession).
+  - 7 distinct section switches in 12.3s (avg. 1.76s per switch).
+  - 40% of clicks (12/30) are on the "Profile" section, suggesting fixation but no sustained engagement.
+- **Spatial inconsistency**: Clicks occur across disparate screen coordinates (e.g., (1720, 524) for Notifications vs. (699, 294) for Profile), indicating no spatial memory of UI layout.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns reveal no deep reading:
+  - Max scroll depth: 1022px (likely full page height), but 80% of scrolls are <500px in duration.
+  - Scroll speed: 262px/s (avg. across 20 scroll actions), suggesting rapid scanning.
+  - No pauses >500ms between scrolls; all scrolls are continuous (0.5s duration each).
+- **No content absorption**: 6 "RAGE CLICK" clusters (18 total clicks) on static elements (e.g., "Profile" div) imply frustration with unchanging content.
+
+3. ENGAGEMENT STYLE
+- **No substantive engagement**: Zero evidence of voting, commenting, or form input.
+- **Interaction metrics**:
+  - 30 total clicks, but 12 (40%) are error states ("DEAD CLICK", "RAGE CLICK", "HESITATION").
+  - Only 2 functional clicks: "Save Changes" (7.47s–7.64s) and 18 redundant clicks on navigation labels.
+- **Vote-to-comment ratio**: N/A (no actions recorded).
+
+4. INTERACTION SPEED
+- **Impulsive and rapid**:
+  - Avg. time between actions: 0.41s (excluding 929ms hesitation at 11.21s).
+  - Fastest sequence: 3 "RAGE CLICKS" in 0.33s (3.53s–3.81s).
+  - 67% of clicks occur <0.5s after prior action (e.g., 0.46s hesitation → 0.54s scroll).
+- **Hesitation outliers**:
+  - 464ms (0.46s) and 929ms (11.21s) pauses at (0,0), likely misclicks or UI confusion.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: All actions target UI chrome (navigation, settings toggles).
+- **Section focus**:
+  - "Profile": 12 clicks (40% of total), 3 "RAGE CLICK" clusters.
+  - "Settings Nav": 6 clicks (20%).
+  - "Notifications": 2 clicks (7%).
+  - "Save Changes": 2 clicks (7%).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero form inputs, corrections, or text entry in 12.3s.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Settings sections: "Profile", "Notifications", "Settings Nav".
+  - "Save Changes" button (clicked at 7.47s).
+- **Ignored features**:
+  - No interaction with form fields, toggles, or advanced settings.
+  - No evidence of exploring sub-menus or tooltips.
+
+8. SESSION FLOW
+- **Arc**: Frustration-driven abandonment.
+  - **0.0s–2.12s**: Rapid exploration (scrolls + 6 clicks across 3 sections).
+  - **2.12s–7.64s**: Erratic toggling (12 clicks, 14 scrolls) with 2 "RAGE CLICK" clusters.
+  - **7.64s–12.33s**: Final attempt (6 clicks on "Profile", 1 "Save Changes") followed by 929ms hesitation and exit.
+- **Exit**: Session ends with a 929ms pause at (0,0), likely a misclick or UI dead zone.
+- **Key transitions**:
+  - 0.86s: First functional click ("Notifications").
+  - 7.47s: Only "Save Changes" attempt (suggests intent to commit changes).
+  - 11.21s: Longest hesitation (929ms) before final clicks.
+```
+
+**SUMMARY**: This user demonstrates **synthetic/impulsive behavior** with no meaningful engagement. The session is defined by rapid, erratic navigation, repeated UI misclicks, and frustration signals ("RAGE CLICKS", "DEAD CLICKS"). No content interaction or typing occurred. The 12.3s duration suggests either a bot, a user testing UI responsiveness, or an extremely frustrated human user.

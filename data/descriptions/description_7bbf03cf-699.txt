@@ -1,0 +1,66 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with rapid exploration**: The user exhibits a non-linear, erratic navigation pattern with no clear progression through the site. They jump between unrelated sections (footer → testimonials → features → footer → CTA) without sustained focus on any single area.
+- **Repetitive clicks**: Multiple clicks on the same elements (e.g., "Testimonials" 4x, "Footer" 4x, "Get Started" 5x) suggest either accidental clicks or frustration.
+- **Scroll churn**: Frequent bidirectional scrolling (e.g., down to 1068px at 0.68s, then up to 371px by 4.31s) indicates rapid scanning rather than deliberate navigation.
+
+2. READING BEHAVIOR:
+- **Skim-only**: Scroll patterns show no evidence of deep reading:
+  - **Rapid vertical scanning**: 5 downward scrolls in 0.68s (0.44s–1.06s) covering 1068px (full viewport height ~1.5x).
+  - **No pauses**: Scrolls occur in continuous 0.5s bursts with no dwell time between actions.
+  - **No horizontal movement**: All interactions are vertical; no lateral mouse movement to suggest line-by-line reading.
+- **Max scroll depth**: 1068px (likely full page height), but no section was revisited for >0.5s.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The log shows no votes, comments, form submissions, or other participatory actions.
+- **Click-based interaction only**:
+  - **Hover-to-click ratio**: 50% of clicks (6/12) were preceded by hovers (avg hover duration: 114ms), but hovers were immediately followed by clicks (no deliberation).
+  - **Rage clicks**: 4 consecutive clicks on "Get Started" (4.68s–4.98s) with <100ms intervals, indicating frustration or technical issues.
+- **No qualitative input**: No typing, corrections, or form interactions observed.
+
+4. INTERACTION SPEED:
+- **Extremely fast**: Median time between actions: **130ms** (excluding scrolls).
+  - Fastest sequence: 4 rage clicks in 300ms (4.68s–4.98s).
+  - Slowest deliberate action: 439ms hesitation before first click (0.0s–0.44s).
+- **Scroll speed**: 213px/0.5s (426px/s), consistent across all scrolls.
+
+5. CONTENT PREFERENCES:
+- **No clear preference**: Interactions spanned 3 distinct areas:
+  - **Footer**: 4 clicks (1.06s–3.89s), likely due to its static position at the bottom of the viewport.
+  - **Testimonials**: 4 clicks (1.57s–2.3s), possibly due to prominent placement or visual salience.
+  - **Features**: 2 clicks (2.8s–3.06s), mid-page.
+  - **CTA ("Get Started")**: 5 clicks (4.31s–4.98s), but only after rapid scrolling to the top.
+- **No content consumption**: No evidence of reading text, viewing images, or engaging with media.
+
+6. TYPING BEHAVIOR:
+- **None observed**: No typing, form inputs, or corrections detected in the log.
+
+7. FEATURE DISCOVERY:
+- **Discovered features**:
+  - **Footer links**: Clicked twice (1.06s, 3.63s).
+  - **Testimonials section**: Clicked 4x (1.57s–2.3s).
+  - **Features section**: Clicked 2x (2.8s–3.06s).
+  - **Primary CTA ("Get Started")**: Clicked 5x (4.31s–4.98s).
+- **Ignored features**:
+  - **Navigation menu**: No clicks on header/navigation elements.
+  - **Hero section**: No interactions despite likely prominence at the top of the page.
+  - **Forms/inputs**: No engagement with search bars, sign-up fields, or other interactive elements.
+  - **Dynamic content**: No clicks on carousels, tabs, or expandable sections.
+
+8. SESSION FLOW:
+- **Arc**: **Impulsive scanning → Frustration → Abrupt exit**
+  - **0.0s–1.06s (Exploration)**: Rapid downward scroll to page bottom, followed by footer clicks.
+  - **1.06s–3.89s (Erratic navigation)**: Upward scroll to testimonials, then features, then back to footer. No sustained focus.
+  - **3.89s–4.98s (Frustration)**: Scrolls to top, clicks CTA 5x in 670ms (rage clicks), then session ends.
+- **Exit**: Session terminates immediately after rage clicks, suggesting either:
+  - A technical issue (e.g., unresponsive button).
+  - User abandonment due to frustration.
+- **No conversion**: Despite CTA clicks, no form submission or page navigation occurred.
+```
+
+**Key Observations**:
+- The user’s behavior is **highly atypical** for a human desktop user, resembling a **synthetic/automated script** or **extreme frustration**.
+- **No evidence of human-like engagement**: Lack of reading, typing, or deliberate navigation.
+- **Device label**: "synthetic/impulsive_clicker" in the profile further suggests non-human interaction.

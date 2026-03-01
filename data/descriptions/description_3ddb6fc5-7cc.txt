@@ -1,0 +1,83 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and goal-driven**: The user follows a direct path through the checkout flow with minimal deviation. 90% of actions (18/20) are sequential interactions with checkout elements (email input → scroll → "Pay Now" button → "Back to Shop" → cart summary → card input).
+- **No exploratory behavior**: No evidence of browsing unrelated pages, side navigation, or feature discovery beyond the immediate checkout workflow.
+- **Scattered only at the end**: The final 20% of the session (3.49s–3.97s) shows a single dead click (3.49s) and a rapid shift to the "Card Number" field, suggesting either frustration or a last-minute change in intent.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns reveal no deep reading:
+  - **Rapid vertical scanning**: 12 scroll actions in 4 seconds, averaging 0.33s per scroll. Each scroll covers ~70–180px (1–3 viewport heights) with no pauses >0.2s.
+  - **No horizontal scanning**: All clicks and hovers are vertically aligned with form fields, suggesting the user is tracking a single column of content.
+  - **Max scroll depth (1014px)**: Equivalent to ~94% of the 1080px viewport, but the user never lingers—scrolls are continuous and mechanical.
+- **No evidence of content consumption**: No clicks on product details, terms, or FAQs; only form fields and buttons.
+
+3. ENGAGEMENT STYLE
+- **No traditional "engagement" (voting/commenting)**: This is a checkout session, so no social interactions (votes, comments) are applicable.
+- **Interaction metrics**:
+  - **Hover-to-click ratio**: 4 hovers (127ms–191ms) precede clicks, suggesting deliberate targeting but no hesitation in execution.
+  - **Click redundancy**: 50% of clicks (5/10) are duplicates (e.g., "Pay Now" at 1.35s and 1.58s), likely due to perceived unresponsiveness or accidental double-clicks.
+  - **Dead click (3.49s)**: A single failed interaction (no associated action), possibly indicating confusion or a UI bug.
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median time between actions = 0.18s (excluding scrolls). Key metrics:
+  - **First click (0.13s)**: Immediate after page load, suggesting the user knew the target (e.g., a cached page or muscle memory).
+  - **Form field interactions**:
+    - Email: 0.67s (hover) → 0.92s (click) = 250ms decision time.
+    - "Pay Now": 1.35s (hover) → 1.58s (click) = 230ms decision time.
+    - "Card Number": 3.81s (hover) → 3.97s (click) = 160ms decision time.
+  - **Scroll bursts**: 4–5 scrolls in rapid succession (e.g., 1.0s–1.13s), covering 567px in 0.13s (4,361px/s).
+- **No typing detected**: No keystrokes logged, so typing speed/corrections cannot be measured.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: All interactions are tied to transactional elements:
+  - **Form fields**: Email (2 clicks), Card Number (1 click).
+  - **Buttons**: "Pay Now" (2 clicks), "Back to Shop" (2 clicks).
+  - **Cart Summary**: 2 clicks (likely to review items or totals).
+- **No product/content exploration**: No clicks on product images, descriptions, or related items.
+- **No auxiliary content**: No interactions with help links, promo codes, or legal text.
+
+6. TYPING BEHAVIOR
+- **No data available**: While the user clicked input fields (Email, Card Number), no keystrokes, corrections, or input durations are logged. Typing speed and behavior cannot be inferred.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Core checkout flow**: Email input, "Pay Now" button, "Back to Shop" link, Cart Summary.
+  - **Payment form**: Card Number field (final action).
+- **Ignored features**:
+  - **Shipping/billing details**: No clicks on address fields, shipping options, or payment method selectors.
+  - **Promotions**: No interactions with promo code fields or discount links.
+  - **Trust signals**: No clicks on security badges, return policies, or customer support links.
+  - **Navigation**: No clicks on header/footer links, search, or product categories.
+
+8. SESSION FLOW
+- **Phase 1: Immediate Orientation (0.0s–0.67s)**
+  - Page loads; user clicks blank space (0.13s, possibly a misclick or page stabilization).
+  - Rapid initial scroll (0.2s–0.67s) to scan the page layout (70px → 140px).
+  - **Goal**: Assess page structure; no deep engagement.
+
+- **Phase 2: Linear Checkout Progression (0.67s–2.2s)**
+  - **0.67s–1.58s**: Focuses on email input and "Pay Now" button.
+    - Clicks email field twice (0.67s, 0.92s), likely to focus the cursor.
+    - Scrolls aggressively (1.0s–1.13s) to reach the "Pay Now" button (707px depth).
+    - Clicks "Pay Now" twice (1.35s, 1.58s), suggesting either a failed first attempt or impatience.
+  - **1.61s–2.2s**: Continues scrolling downward (707px → 1014px), possibly looking for additional checkout options or confirmation.
+  - **2.2s**: Clicks "Back to Shop" twice (2.2s, 2.31s), indicating a **hard pivot**—either abandoning checkout or seeking alternative paths.
+
+- **Phase 3: Reorientation and Dead-End (2.31s–3.97s)**
+  - **2.35s–2.49s**: Scrolls upward (1014px → 290px) to revisit the top of the page.
+  - **2.76s–2.9s**: Clicks "Cart Summary" twice (2.76s, 2.9s), likely to verify items or totals.
+  - **3.49s**: Dead click at (817, 956), possibly on a non-interactive element or a failed attempt to interact with something (e.g., a disabled button).
+  - **3.81s–3.97s**: Abruptly shifts to the "Card Number" field (hover → click), suggesting a last-minute attempt to proceed with payment.
+- **Exit**: Session ends at 4.0s with no further actions. **No confirmation of completion** (e.g., order confirmation page).
+
+---
+OVERALL SUMMARY
+This user exhibits **hyper-focused, transactional behavior** with **no exploratory or social engagement**. Their session is characterized by:
+- **Speed**: Sub-second decision-making and rapid scrolling (4,361px/s at peak).
+- **Linearity**: A single, uninterrupted path through the checkout flow until the abrupt "Back to Shop" pivot.
+- **Impatience**: Duplicate clicks (50% of interactions) and a dead click suggest frustration or UI unresponsiveness.
+- **No deep reading**: Scroll patterns indicate skimming, not content consumption.
+- **Unfinished business**: The session ends mid-checkout, with no clear resolution (abandonment vs. technical issue).
+```

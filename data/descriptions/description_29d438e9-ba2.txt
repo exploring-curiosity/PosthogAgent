@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - Highly non-linear and erratic. The user exhibits a "scattered" pattern with rapid, repetitive interactions.
+   - 6 distinct scroll sequences (3 down, 3 up) within 8.5s, covering 1,022px vertically (full page depth).
+   - 3 instances of clicking the same "Back to Shop" button (at 6.74s and 8.54s, with hesitation in between).
+   - Repeated clicks on the same form fields ("Card Number" at 1.25s/3.25s; "Email" at 3.73s/6.13s).
+   - No evidence of linear progression through checkout steps (e.g., no clicks on "Name," "Address," or "Submit").
+
+2. READING BEHAVIOR:
+   - Skimming with no deep reading. Scroll patterns show:
+     - Rapid vertical scanning: 320px in 1.25s (0.98s–2.23s), then 853px in 1.1s (6.2s–7.31s).
+     - No pauses >500ms on any scroll segment (average scroll speed: ~200px/s).
+     - Max scroll depth (1,022px) suggests full-page scan but no sustained focus on any section.
+   - No evidence of horizontal reading (e.g., no mouse tracking along text lines).
+
+3. ENGAGEMENT STYLE:
+   - No traditional engagement (e.g., no form submissions, votes, or comments).
+   - Interaction limited to:
+     - 4 clicks on form fields (2 on "Card Number," 2 on "Email").
+     - 2 clicks on "Back to Shop" (with 1.185s hesitation before the second click).
+   - "Hesitation" events (811ms, 1118ms, 1837ms, 1185ms) suggest cognitive friction but no productive output.
+
+4. INTERACTION SPEED:
+   - Fast but inconsistent. Key metrics:
+     - Average time between actions: 1.06s (excluding hesitations).
+     - Fastest action sequence: 3 scrolls up in 0.53s (3.32s–3.85s).
+     - Slowest deliberate action: 1.837s hesitation before clicking "Email" (5.56s).
+     - Click latency: 103–213ms hover before clicks (typical for human interaction).
+   - No long pauses (>2s) except hesitations, suggesting no external distractions.
+
+5. CONTENT PREFERENCES:
+   - No content engagement detected. Focused exclusively on:
+     - Checkout form fields ("Card Number," "Email").
+     - "Back to Shop" button (likely a navigation escape hatch).
+   - No interaction with product details, reviews, or other page content.
+
+6. TYPING BEHAVIOR:
+   - No typing detected. Despite clicking form fields, no keystrokes or input values were logged.
+   - Possible explanations:
+     - Synthetic session (e.g., bot, scanner, or automated test).
+     - User abandoned input after clicking.
+     - Technical issue (e.g., input blocked by script).
+
+7. FEATURE DISCOVERY:
+   - Used features:
+     - Scrolling (vertical navigation).
+     - Form field clicks ("Card Number," "Email").
+     - "Back to Shop" button (primary navigation).
+   - Ignored features:
+     - No interaction with payment methods (e.g., PayPal, Apple Pay).
+     - No clicks on "Continue," "Submit," or other checkout CTAs.
+     - No engagement with promotional banners, FAQs, or support links.
+
+8. SESSION FLOW:
+   - Arc: **Scanning → Hesitation → Abandonment**
+     - **0.0s–1.25s (Exploration):** Page load → rapid scroll to 320px → click "Card Number."
+     - **1.25s–3.73s (Friction):** Hesitation (1.118s) → re-click "Card Number" → scroll up to 169px.
+     - **3.73s–6.74s (Disengagement):** Click "Email" → hesitation (1.837s) → scroll to bottom (1,022px).
+     - **6.74s–8.54s (Exit):** Click "Back to Shop" → hesitation (1.185s) → repeat click → session ends.
+   - No progression toward conversion. Final action reverts to homepage ("Back to Shop").
+```
+
+**NOTES:**
+- The session exhibits **bot-like characteristics** (e.g., no typing, rapid repetitive clicks, synthetic device label).
+- If human, the behavior suggests **high friction** (hesitations) and **low intent** (no form completion).
+- No evidence of content consumption or social engagement (e.g., votes/comments).

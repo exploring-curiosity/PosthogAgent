@@ -1,0 +1,54 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   • Highly methodical and sequential, with clear "scan-then-act" cycles.
+   • Linear vertical traversal: user scrolls down in 3–4 rapid bursts (0.67–0.82 s, 3.73–3.81 s, 4.85–4.90 s), then returns to a specific module before interacting.
+   • No lateral jumps; every click is preceded by a scroll that positions the target at the viewport bottom (y ≈ 585 px, 501 px, 951 px).
+   • 100 % of interactions occur after the target is scrolled into view; zero off-screen clicks.
+
+2. READING BEHAVIOR
+   • Skimming: average scroll speed 390 px/s (195 px / 0.5 s), well above typical reading speed (≈ 200 px/s).
+   • No dwell time on any single module > 0.5 s before interaction; immediate hover → click.
+   • Scroll depth: 951 px max, but only 3 distinct modules (Sidebar, Stats Cards, Data Table) are clicked—suggests selective attention to high-level data containers rather than deep reading.
+
+3. ENGAGEMENT STYLE
+   • No voting, commenting, or social actions detected.
+   • Interaction is purely instrumental: clicks on data containers (Sidebar, Stats Cards, Chart, Data Table) and a final Export button.
+   • Ratio: 0 votes : 0 comments : 6 data-extraction clicks.
+
+4. INTERACTION SPEED
+   • Deliberate but efficient.
+   • Mean time between scroll bursts: 0.08 s (mechanical).
+   • Mean time between module clicks: 1.3 s (0.67 s scroll + 0.63 s hover).
+   • Hesitation events: 3 instances (636 ms, 2803 ms, 1892 ms) at timestamps 0.64 s, 8.44 s, 12.45 s—likely decision points before major actions (Sidebar, Data Table, Export).
+
+5. CONTENT PREFERENCES
+   • Gravitated toward dashboard modules in descending order of data density:
+     1. Data Table (2 clicks, 8.44–9.54 s)
+     2. Stats Cards (2 clicks, 2.64–3.69 s)
+     3. Chart (2 clicks, 4.36–4.80 s)
+     4. Sidebar (2 clicks, 1.36–1.89 s)
+   • No interest in static text, images, or navigation menus outside the sidebar.
+
+6. TYPING BEHAVIOR
+   • No typing events recorded; session is read-only.
+
+7. FEATURE DISCOVERY
+   • Used features:
+     – Sidebar navigation (2 clicks)
+     – Stats Cards (2 clicks)
+     – Chart interaction (2 clicks)
+     – Data Table (2 clicks)
+     – Export button (2 clicks)
+   • Ignored features:
+     – Search bar, user profile dropdown, notifications, help/tooltips, any inline forms.
+
+8. SESSION FLOW
+   • Arc: Scan → Extract → Export
+   • 0.0–0.82 s: Rapid initial scan (3 scroll bursts, 585 px depth).
+   • 1.36–3.69 s: Sidebar and Stats Cards clicked; likely orientation phase.
+   • 4.36–9.54 s: Deep dive into Chart and Data Table; 2.8 s hesitation before Data Table click suggests data evaluation.
+   • 10.56–13.24 s: Export phase; 1.9 s hesitation before final click, then session ends.
+   • Total session: 13.2 s; 100 % of time spent on data extraction, 0 % on social or exploratory browsing.
+```

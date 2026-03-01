@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with no clear progression through content. Actions are clustered around three distinct areas (sidebar, export button, stats cards) with abrupt shifts between them.
+- **Spatial inconsistency**: Clicks jump across the viewport (e.g., sidebar at x=162 vs. export button at x=1805), suggesting either:
+  a) A lack of familiarity with the UI layout, or
+  b) Synthetic/scripted behavior (supported by "synthetic/scanner" device label).
+- **No sustained focus**: No single element holds attention for >2.5s (excluding hesitations). The longest continuous interaction is the 2.76s hesitation before the second export click (5.66s–6.24s).
+
+2. READING BEHAVIOR
+- **No evidence of deep reading**:
+  - Scroll depth is minimal (max 192px on a 1080px viewport), covering <20% of the page.
+  - Scroll speed is rapid (96px/0.5s = 192px/s), typical of skimming or automated scrolling.
+  - **Scroll pattern**: Initial downward scroll (0s–1.52s) followed by immediate upward reversal (2.28s–2.53s), suggesting the user did not find content of interest or was "testing" scroll behavior.
+- **No text selection or dwell time**: No actions indicate reading (e.g., no hover pauses on text blocks, no clicks on content links).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or submissions. All interactions are navigational or UI-triggered.
+- **Action types**:
+  - **Clicks (10 total)**: 4 on UI elements (sidebar, export button, stats cards), 3 hesitations (undefined targets), 1 dead click (9.37s).
+  - **Hover-to-click ratio**: 3/10 clicks preceded by hovers (282ms, 194ms, 295ms), but hovers may reflect synthetic delays.
+- **No ratio metrics**: Engagement cannot be quantified (e.g., vote-to-comment) as no such actions occurred.
+
+4. INTERACTION SPEED
+- **Highly variable timing**:
+  - **Fast bursts**: 0.04s–0.5s between actions (e.g., 1.02s–1.07s scrolls, 2.22s–2.28s clicks).
+  - **Long hesitations**: 2.76s (5.66s–6.24s) and 0.69s (7.48s–8.61s) before clicks, possibly indicating:
+    a) Synthetic delays to mimic human behavior, or
+    b) Confusion/indecision (though no UI feedback is visible).
+- **Average action interval**: 1.04s (excluding hesitations), 1.88s (including hesitations).
+- **Dead click**: Final action (9.37s) is a dead click (no associated UI response), suggesting either:
+  a) A failed interaction, or
+  b) Session termination by the user/automation.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user did not interact with substantive content (e.g., articles, posts, media). All clicks targeted:
+  - **Sidebar** (2 clicks at 1.52s and 2.22s): Likely a navigation menu.
+  - **Export button** (2 clicks at 2.9s and 6.24s): A functional UI element.
+  - **Stats Cards** (2 clicks at 6.8s and 8.61s): Likely dashboard widgets.
+- **No subreddit/channel preferences**: Data does not indicate browsing of specific topics or communities.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The session contains no form submissions, search queries, or text inputs. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Sidebar navigation**: Clicked twice (1.52s, 2.22s), possibly attempting to access a menu.
+  - **Export functionality**: Clicked twice (2.9s, 6.24s), suggesting intent to download data.
+  - **Stats Cards**: Clicked twice (6.8s, 8.61s), possibly to view details or interact with widgets.
+- **Features ignored**:
+  - **Main content area**: No clicks on primary content (e.g., posts, articles).
+  - **Search/filters**: No interactions with search bars or filtering tools.
+  - **User profile/settings**: No clicks on account-related elements.
+
+8. SESSION FLOW
+- **Phase 1: Initial Exploration (0s–2.9s)**
+  - Loads dashboard (0s), hesitates (0.98s), then rapidly scrolls down (1.02s–1.52s) and up (2.28s–2.53s).
+  - Clicks sidebar twice (1.52s, 2.22s), possibly seeking navigation options.
+  - **Duration**: 2.9s | **Actions**: 7 | **Pattern**: Disoriented or exploratory.
+- **Phase 2: Functional Interaction (2.9s–6.8s)**
+  - Clicks export button (2.9s), hesitates (5.66s), then clicks export again (6.24s).
+  - **Duration**: 3.9s | **Actions**: 3 | **Pattern**: Focused on a single feature (export).
+- **Phase 3: Secondary Exploration (6.8s–9.37s)**
+  - Clicks stats cards (6.8s), hesitates (7.48s), clicks stats cards again (8.61s).
+  - Ends with a dead click (9.37s) at the bottom of the viewport (y=1080).
+  - **Duration**: 2.57s | **Actions**: 4 | **Pattern**: Abrupt shift to another UI element, then session termination.
+- **Overall Arc**:
+  - **No clear goal**: Actions suggest either:
+    a) Synthetic testing of UI elements (e.g., automated QA), or
+    b) A confused user rapidly testing features without engagement.
+  - **No progression**: The session lacks a "browsing" or "engagement" phase; it is purely navigational with no content consumption.
+  - **Exit**: Session ends with a dead click, implying either a failed interaction or forced termination.
+```
+
+**KEY OBSERVATIONS**:
+- **Synthetic indicators**: Hesitations, dead clicks, and the "synthetic/scanner" device label strongly suggest this is an automated session (e.g., a bot testing UI functionality).
+- **No human-like behavior**: Absence of reading, typing, or content engagement; all interactions are UI-focused.
+- **Short duration**: 9.4s is atypical for human sessions, further supporting automation.

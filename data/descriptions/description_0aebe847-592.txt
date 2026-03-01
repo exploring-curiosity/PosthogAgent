@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Scattered with repetitive validation
+  - Initial hesitation (1.33s click at (0,0) after 1325ms delay) suggests disorientation or synthetic input.
+  - Rapid navigation clicks (1.79s–2.36s) on the same "Navigation" element (2 clicks, 570ms apart) indicate either accidental double-clicks or failed UI response.
+  - Focused jumps between distant elements: Hero Title (147px) → Testimonials (833px) → Hero Title (147px), with no linear progression.
+  - No sequential exploration of adjacent content; all interactions target isolated elements.
+
+2. READING BEHAVIOR
+- **Skimmer with forced validation**
+  - Scroll patterns show rapid, mechanical traversal:
+    - Downward: 3 scrolls (2.41s–2.53s) covering 833px in 1.12s (744px/s).
+    - Upward: 4 scrolls (6.28s–6.43s) covering 686px in 1.13s (607px/s).
+  - No pauses >500ms at any scroll depth; max dwell time at 833px (Testimonials) was 2.54s (3.01s–5.55s).
+  - **Conclusion**: No evidence of deep reading. Scroll speed suggests content scanning or synthetic behavior.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement detected**
+  - No votes, comments, or submissions observed.
+  - Clicks are limited to:
+    - Navigation elements (2x, 1.79s–2.36s).
+    - Testimonials (2x, 3.01s and 6.22s).
+    - Hero Title (2x, 6.89s and 10.5s).
+  - **Vote-to-comment ratio**: 0:0 (no engagement actions).
+  - Hesitation clicks (3x at (0,0)) may indicate failed attempts to interact or synthetic noise.
+
+4. INTERACTION SPEED
+- **Highly variable with synthetic signatures**
+  - **Fast actions**: 4 clicks in 1.03s (1.79s–2.36s) on navigation.
+  - **Deliberate delays**:
+    - 2542ms hesitation before 5.55s click.
+    - 2458ms hesitation before 9.34s click.
+  - **Scroll speed**: 607–744px/s (consistent with automated or synthetic input).
+  - **Hover times**: 124–216ms (unusually precise for human input).
+
+5. CONTENT PREFERENCES
+- **Limited data; no clear preferences**
+  - Only 2 content elements interacted with:
+    - **Testimonials**: 2 clicks (3.01s, 6.22s), 3.21s total dwell time.
+    - **Hero Title**: 2 clicks (6.89s, 10.5s), 3.61s total dwell time.
+  - No other content (e.g., articles, forms, CTAs) was clicked or hovered.
+  - **Note**: "Navigation" clicks may reflect menu exploration, but no subpages were loaded.
+
+6. TYPING BEHAVIOR
+- **No typing detected**
+  - No text inputs, corrections, or form submissions observed.
+  - All interactions were clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Navigation menu (2 clicks, 1.79s–2.36s).
+  - Testimonials section (2 clicks, 3.01s–6.22s).
+  - Hero Title (2 clicks, 6.89s–10.5s).
+- **Features ignored**:
+  - No interaction with:
+    - Footer, sidebars, or embedded media.
+    - Forms, search bars, or CTAs (e.g., "Sign Up," "Learn More").
+    - Any dynamic content (e.g., carousels, modals).
+
+8. SESSION FLOW
+- **Arc**: Synthetic validation → Mechanical exploration → Abrupt termination
+  - **0.0s–1.33s**: Page load + initial hesitation (1325ms delay).
+  - **1.79s–2.53s**: Rapid navigation clicks + downward scroll (833px in 1.12s).
+  - **3.01s–5.55s**: Testimonials click (3.01s) + 2542ms hesitation.
+  - **6.22s–6.43s**: Testimonials re-click + upward scroll (686px in 1.13s).
+  - **6.89s–10.5s**: Hero Title click (6.89s) + 2458ms hesitation → final click at 10.5s.
+  - **Termination**: Session ends immediately after final Hero Title click.
+  - **Key observation**: No organic progression; actions appear scripted or scanner-driven.
+```
+
+**SUMMARY**: This session exhibits characteristics of a synthetic scanner or automated test, with:
+- Unnaturally precise hover times (124–216ms).
+- Mechanical scroll speeds (607–744px/s).
+- Repetitive clicks on the same elements (e.g., 2x Navigation, 2x Testimonials, 2x Hero Title).
+- No traditional engagement (votes/comments) or typing.
+- Hesitation delays (2542ms, 2458ms) inconsistent with human behavior.
+- No evidence of content consumption or feature discovery beyond surface-level elements.

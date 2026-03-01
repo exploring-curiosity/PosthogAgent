@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered and erratic** with no clear linear progression.
+- Repeatedly returns to the same elements (e.g., "Hero Title" clicked 8 times, "Navigation" clicked 6 times).
+- Clicks are often clustered (e.g., 3 rage clicks on "Hero Title" in 0.32s at 12.42–12.73s).
+- No sustained engagement with any single section; jumps between navigation, hero title, and footer.
+- **Quantitative**: 24 clicks in 12.7s (avg. 1.89s between clicks), with 50% of clicks on just 3 elements (Hero Title, Navigation, Footer).
+
+2. READING BEHAVIOR:
+- **Skimmer with no deep reading**:
+  - Rapid scroll bursts (e.g., 0.5s to scroll 150–200px) with no pauses >0.5s.
+  - Max scroll depth: 1011px (footer), but no sustained time below the fold (e.g., 3.05s to reach footer, 0.34s to click it).
+  - Repeatedly scrolls up/down in small increments (e.g., 8.12–9.09s: 5 micro-scrolls upward over 0.97s).
+  - **Quantitative**: 18 scroll actions in 12.7s (avg. 0.7s per scroll), covering 1011px total (83% of session time spent scrolling).
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement** (e.g., no voting, commenting, or form submissions).
+- **Impulsive clicking**:
+  - 4 "HESITATION" clicks (0.48s, 5.34s, 7.64s, 11.52s) with delays of 483–1504ms before clicking empty space.
+  - 2 "DEAD CLICKS" (2.38s, 10.79s) on non-interactive elements.
+  - 4 "RAGE CLICKS" (12.42–12.73s) on "Hero Title" (3+ clicks in <0.3s).
+- **No ratio metrics** (no votes/comments to measure).
+
+4. INTERACTION SPEED:
+- **Extremely fast and impulsive**:
+  - Avg. time between actions: **0.53s** (24 actions in 12.7s).
+  - Fastest sequence: 3 rage clicks in 0.19s (12.54–12.73s).
+  - Longest pauses: Hesitation clicks (1.16s max between actions at 7.64s).
+  - **Quantitative**: 67% of actions occur within 0.5s of the previous action.
+
+5. CONTENT PREFERENCES:
+- **No clear preferences** (no subreddit/content types visible in log).
+- **Gravitated toward**:
+  - **Navigation menu**: 6 clicks (0.8–11.85s).
+  - **Hero Title (h1)**: 8 clicks (1.71–12.73s), including rage clicks.
+  - **Footer**: 2 clicks (3.05–3.39s).
+  - **Features section**: 2 clicks (9.88–10.14s).
+  - **Get Started button**: 2 clicks (11.15–11.33s).
+- **Ignored**: Body content (no clicks on paragraphs, images, or interactive elements beyond dead clicks).
+
+6. TYPING BEHAVIOR:
+- **No typing detected** in the log (no input fields, search bars, or forms interacted with).
+
+7. FEATURE DISCOVERY:
+- **Discovered but misused**:
+  - **Navigation menu**: Used repeatedly but for no clear purpose (e.g., 6 clicks with no page changes).
+  - **Hero Title**: Clicked 8 times despite being non-interactive (likely a heading).
+  - **Footer**: Clicked twice (3.05–3.39s) but no follow-up.
+  - **Features section**: Clicked twice (9.88–10.14s) but scrolled away immediately.
+  - **Get Started button**: Clicked twice (11.15–11.33s) but no form submission or navigation.
+- **Ignored**:
+  - No interaction with body content, sidebars, or secondary CTAs.
+  - No hover states on interactive elements beyond navigation/footer (suggests no exploration of tooltips or dropdowns).
+
+8. SESSION FLOW:
+- **Arc**: **Frustration-driven oscillation** with no progression.
+  - **0.0–1.71s (Initial Confusion)**:
+    - Page load → hesitation click (0.48s) → rapid navigation clicks (0.8–1.14s) → shallow scroll (1.18–1.39s).
+  - **1.71–5.34s (Repetitive Clicks)**:
+    - Hero Title clicks (1.71–2.12s) → dead click (2.38s) → rapid scroll to footer (2.42–2.66s) → footer clicks (3.05–3.39s) → scroll up (3.45–3.98s) → more Hero Title clicks (3.76–3.88s).
+  - **5.34–10.79s (Erratic Exploration)**:
+    - Hesitation (5.34s) → navigation clicks (5.74–5.79s) → scroll to Features (9.52–9.6s) → Features clicks (9.88–10.14s) → dead click (10.79s).
+  - **10.79–12.73s (Rage Quit)**:
+    - Scroll up (10.86–11.52s) → Get Started clicks (11.15–11.33s) → navigation clicks (11.68–11.85s) → Hero Title rage clicks (12.42–12.73s).
+- **Exit**: Session ends mid-rage-click sequence (no page unload event recorded).
+```
+
+### KEY INSIGHTS:
+- **Behavioral Red Flags**:
+  - **Synthetic/impulsive_clicker** device tag suggests automated or bot-like behavior.
+  - **No meaningful engagement** (no form submissions, no sustained reading, no content interaction).
+  - **Rage clicks** (12.42–12.73s) indicate frustration with non-interactive elements.
+- **Likely Causes**:
+  - **Broken UI**: Hero Title/Navigation may appear clickable but aren’t.
+  - **Poor UX**: Lack of visual feedback (e.g., dead clicks, hesitation).
+  - **Bot/Automated Testing**: Device tag and erratic pattern suggest non-human interaction.

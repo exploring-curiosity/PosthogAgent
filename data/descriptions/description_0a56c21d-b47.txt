@@ -1,0 +1,168 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with hesitation*
+- **Initial exploration (0.0s–4.56s):** Linear downward scroll (0px → 739px) with two pauses for interaction (Chart clicks at 3.63s and 4.51s). Suggests scanning for visual anchors (e.g., charts).
+- **Sidebar detour (6.13s–10.86s):** Abrupt shift to sidebar (likely a navigation menu) after reaching max scroll depth (739px). Two clicks on "Sidebar" with a 2.16s hesitation (8.29s), indicating uncertainty or menu evaluation.
+- **Data table focus (12.23s–13.79s):** Rapid engagement with a data table (two clicks, 1.35s apart) followed by *immediate* upward scroll (739px → 102px in 0.15s). Suggests targeted interaction (e.g., sorting/filtering) rather than reading.
+- **Export attempt (15.23s–16.87s):** Direct jump to "Export" button (top-right) after scrolling up, with a 1.64s delay between hover and click. Likely a goal-driven action.
+- **Final engagement (18.57s–21.43s):** Return to "Stats Cards" (mid-page) with a 2.86s hover before click. Circular navigation pattern (dashboard → sidebar → table → export → stats cards).
+
+**Quantitative:**
+- 4 distinct interaction zones: Charts (3.63s), Sidebar (6.13s), Data Table (12.23s), Export (15.23s), Stats Cards (18.57s).
+- 3/5 interactions preceded by long hovers (>770ms), suggesting deliberation.
+- 2 "HESITATION" events (2.52s, 8.29s) totaling 4.69s of inaction.
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skimmer with targeted deep dives*
+- **Scroll speed:** Rapid vertical scanning (avg. 242px/0.5s = **484px/s**) during initial exploration (2.59s–4.6s). No pauses >1s in scroll sequences.
+- **Scroll depth:**
+  - First pass: 0px → 739px (4.6s total).
+  - Second pass (upward): 739px → 102px (0.15s total). *Exceptionally fast* (4,247px/s), likely skipping content.
+  - Third pass (downward): 102px → 228px (16.92s–17.03s), slower (252px/s), possibly reading.
+- **Interaction clusters:**
+  - **Charts (3.63s–4.51s):** 0.88s between clicks; no scroll during this period → *focused interaction*.
+  - **Data Table (12.23s–13.58s):** 1.35s between clicks; immediate scroll-up suggests *task completion* (e.g., sorting) rather than reading.
+  - **Stats Cards (18.57s–21.43s):** 2.86s hover before click → *deliberate engagement*, possibly reading.
+
+**Quantitative:**
+- 7 scroll events (4 down, 3 up) covering 1,358px total.
+- Only 1.6s spent at depths >500px (data table zone).
+- 66% of scroll time (3.0s) spent moving *down*; 33% (1.5s) moving *up*.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *Click-heavy, no textual input*
+- **Actions:** 10 clicks (5 unique targets), 7 scrolls, 0 typing/comments/votes.
+- **Hover-to-click ratio:** 5/10 clicks preceded by hovers (avg. hover duration: **1,122ms**).
+  - Longest hover: 1,333ms (Sidebar at 6.13s).
+  - Shortest hover: 771ms (Chart at 3.63s).
+- **Click timing:**
+  - Fastest repeat click: 0.88s (Chart at 3.63s–4.51s).
+  - Slowest repeat click: 2.16s (Sidebar at 8.29s–10.86s).
+- **No engagement with:**
+  - Forms/input fields (no typing detected).
+  - Social features (comments, votes, shares).
+  - Multimedia (images, videos).
+
+**Quantitative:**
+- **Click rate:** 0.47 clicks/s (10 clicks / 21.4s).
+- **Hover-to-click delay:** Avg. 1,122ms (range: 771ms–1,333ms).
+- **No "engagement" beyond clicks/scrolls** (e.g., no text input, no drag-and-drop).
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Deliberate with bursts of speed*
+- **Action intervals:**
+  - Avg. time between actions: **2.38s** (19 actions over 21.4s).
+  - Fastest interval: 0.05s (scrolls at 13.64s–13.79s).
+  - Slowest interval: 2.16s (hesitation at 8.29s).
+- **Click speed:**
+  - Avg. time between clicks: **1.94s** (9 intervals).
+  - Repeat clicks (same target): Avg. **1.12s** (3 instances: Chart, Data Table, Sidebar).
+- **Scroll speed:**
+  - Downward: 484px/s (initial pass), 252px/s (final pass).
+  - Upward: 4,247px/s (skimming).
+
+**Quantitative:**
+- **Peak activity:** 12.23s–13.79s (5 actions in 1.56s: 2 clicks + 3 scrolls).
+- **Slowest period:** 8.29s–10.86s (2.57s between actions; hesitation).
+- **Hover delays:** 5/10 clicks had >1s hover, indicating *cautious* interaction.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *Data-driven, tool-oriented*
+- **Interacted elements (by frequency):**
+  1. **Charts** (2 clicks, 3.63s–4.51s): Likely visual data exploration.
+  2. **Sidebar** (2 clicks, 6.13s–10.86s): Navigation or menu interaction.
+  3. **Data Table** (2 clicks, 12.23s–13.58s): Tabular data manipulation.
+  4. **Export** (2 clicks, 15.23s–16.87s): Data extraction.
+  5. **Stats Cards** (2 clicks, 18.57s–21.43s): Summary metrics.
+- **Ignored elements:**
+  - Text-heavy content (no pauses >1s in scroll zones without visual anchors).
+  - Interactive widgets (e.g., filters, search bars) beyond clicks.
+  - Non-data elements (e.g., images, videos, user profiles).
+
+**Quantitative:**
+- 100% of clicks on *data-related* or *navigation* elements.
+- 0% engagement with *social* or *media* content.
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *None detected*
+- **No typing events** recorded in the session.
+- **No input fields** interacted with (e.g., search bars, forms, comment boxes).
+- **No corrections/deletions** (as no typing occurred).
+
+**Quantitative:**
+- **Keystrokes:** 0.
+- **Input duration:** 0s.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Pattern:** *Partial, tool-focused*
+- **Used features:**
+  - **Charts:** Clicked twice (likely to expand/zoom).
+  - **Data Table:** Clicked twice (likely to sort/filter).
+  - **Export:** Clicked twice (data extraction).
+  - **Stats Cards:** Clicked twice (summary metrics).
+  - **Sidebar:** Clicked twice (navigation).
+- **Ignored features:**
+  - **Search/filters:** No interaction.
+  - **User settings/profile:** No clicks.
+  - **Help/documentation:** No clicks.
+  - **Social features:** No comments/votes/shares.
+  - **Notifications/alerts:** No interaction.
+
+**Quantitative:**
+- **Features discovered:** 5/5 interacted with were *data or navigation* tools.
+- **Features ignored:** All non-data/navigation elements.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploratory scan → Targeted interaction → Tool usage → Exit*
+1. **Initial Scan (0.0s–4.6s):**
+   - Loads dashboard, hesitates (2.52s), then scrolls rapidly downward (0px → 739px).
+   - Pauses to click "Chart" twice (3.63s–4.51s), suggesting interest in visual data.
+   - *Behavior:* Broad exploration with visual anchoring.
+
+2. **Navigation Detour (6.13s–10.86s):**
+   - Jumps to sidebar (6.13s), hovers for 1.33s, clicks, then hesitates (8.29s) before clicking again (10.86s).
+   - *Behavior:* Uncertainty or menu evaluation; no clear goal.
+
+3. **Data Table Focus (12.23s–13.79s):**
+   - Clicks "Data Table" twice (12.23s–13.58s), then *immediately* scrolls up (739px → 102px in 0.15s).
+   - *Behavior:* Task completion (e.g., sorting) rather than reading; abrupt shift.
+
+4. **Export Attempt (15.23s–16.87s):**
+   - Jumps to "Export" button (top-right), hovers for 1.1s, clicks twice (15.23s–16.87s).
+   - *Behavior:* Goal-driven action (data extraction).
+
+5. **Final Engagement (18.57s–21.43s):**
+   - Scrolls down to "Stats Cards" (16.92s–17.03s), hovers for 1.3s, clicks twice (18.57s–21.43s).
+   - *Behavior:* Re-engagement with summary metrics; no further actions before session end.
+   - **Exit:** Session terminates at 21.43s (no explicit "exit" action recorded).
+
+**Quantitative Flow Metrics:**
+- **Exploration phase (0.0s–4.6s):** 4.6s (21.5% of session).
+- **Navigation detour (6.13s–10.86s):** 4.73s (22.1% of session).
+- **Data interaction (12.23s–13.79s):** 1.56s (7.3% of session).
+- **Tool usage (15.23s–16.87s):** 1.64s (7.7% of session).
+- **Final engagement (18.57s–21.43s):** 2.86s (13.4% of session).
+- **Hesitation/idle time:** 4.69s (21.9% of session).
+```
+
+---
+**SUMMARY:**
+This user exhibits **cautious, tool-oriented exploration** with a focus on **data extraction and visualization**. Their behavior is **deliberate** (long hovers, repeat clicks) but **non-linear**, with abrupt shifts between interaction zones. They **skim content rapidly** (484px/s scrolls) but **pause for targeted interactions** (e.g., charts, tables). The session lacks **social engagement** or **textual input**, suggesting a **utilitarian** rather than **browsing** mindset. The **exit is abrupt**, with no clear "wrap-up" actions.

@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly scattered and reactive, with no clear linear progression.
+- Repeated toggling between navigation tabs (Settings → Privacy → Notifications → Profile) within 8.5s.
+- 6 distinct navigation clicks (Settings Nav x2, Privacy, Notifications, Profile) with no sustained focus on any single section.
+- 40% of clicks (4/10) were on navigation elements, suggesting a "menu-hopping" pattern rather than content engagement.
+
+2. READING BEHAVIOR:
+- Skimming confirmed: 12 scroll actions (6 up, 6 down) covering 1,067px in 4.5s of active scrolling (avg 237px/s).
+- No pauses >500ms on any scroll segment; all scrolls were continuous and rapid.
+- Max scroll depth (1,067px) suggests brief exposure to ~60-70% of page content (assuming 1,500-1,800px total height).
+- No evidence of deep reading (e.g., no hover pauses on text blocks, no text selection).
+
+3. ENGAGEMENT STYLE:
+- No traditional "engagement" (voting/commenting) observed; this appears to be a settings/configuration session.
+- Primary interaction: Attempting to save changes (2 clicks on "Save Changes" at 3.53s and 5.65s).
+- Rage clicks (5 in 0.43s at 5.78-6.14s) indicate frustration with the "Save Changes" button (likely failed submission).
+- No form input or typing detected in the log.
+
+4. INTERACTION SPEED:
+- Extremely fast: 20 actions in 8.5s (avg 2.35 actions/s).
+- Hesitations: 3 instances (437ms, 1,699ms, 1,828ms) preceding clicks, likely decision points or UI confusion.
+- Post-hesitation actions were immediate (e.g., 2.69s hesitation → click at 2.99s).
+- Rage click cluster (5 clicks in 0.43s) suggests impulsive, high-speed frustration.
+
+5. CONTENT PREFERENCES:
+- No content consumption observed; all interactions were with UI controls.
+- Navigated to 4 settings sections in this order:
+  1. Settings (default landing page)
+  2. Privacy (6.54s)
+  3. Notifications (7.46s)
+  4. Profile (8.34s)
+- No evidence of preference; sections were accessed sequentially with no return visits.
+
+6. TYPING BEHAVIOR:
+- No typing or input detected in the log.
+- No form fields, corrections, or text entry observed.
+
+7. FEATURE DISCOVERY:
+- Used features:
+  - Navigation menu (4/4 sections accessed)
+  - "Save Changes" button (attempted twice)
+  - Scrolling (extensively, both up and down)
+- Ignored features:
+  - No evidence of using search, help, or secondary controls.
+  - No interaction with sidebars, footers, or non-navigational elements.
+  - No tooltips or dropdowns expanded (despite hover events).
+
+8. SESSION FLOW:
+- 0.0-0.99s: Initial exploration
+  - Page load → hesitation (437ms) → rapid downward scroll (1,067px in 0.56s) → click on "Settings Nav" (likely accidental or redundant).
+- 0.99-3.53s: First save attempt
+  - Hesitation (1,699ms) → re-click "Settings Nav" → upward scroll (1067px→918px) → click "Save Changes".
+- 3.53-6.54s: Frustration arc
+  - Long hesitation (1,828ms) → second "Save Changes" click → 5 rage clicks (0.43s) → rapid upward scroll (918px→669px).
+- 6.54-8.47s: Menu-hopping
+  - Click "Privacy" → "Notifications" → "Profile" with intervening upward scrolls (669px→85px).
+- Session ends abruptly after "Profile" click with no confirmation or follow-up.
+
+KEY INSIGHTS:
+- This is a high-speed, low-patience session focused on settings configuration.
+- Primary goal appears to be saving changes, but the user encountered a persistent UI issue (rage clicks).
+- Navigation was exploratory but shallow; no section was engaged with for >2s.
+- Scrolling was used as a rapid scanning tool, not for reading.
+- No evidence of learning or adaptation; repeated failed actions (e.g., "Save Changes" x2) without troubleshooting.
+```

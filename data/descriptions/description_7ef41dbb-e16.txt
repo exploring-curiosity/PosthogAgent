@@ -1,0 +1,66 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered/Frustrated**: The user exhibits a non-linear, erratic navigation pattern with no clear goal progression.
+- **Repetitive clicks**: 4 "RAGE CLICK" events (5.11s–5.41s) on the sidebar, suggesting frustration or broken functionality.
+- **Dead clicks**: 3 "DEAD CLICK" events (1.55s, 4.21s, 5.88s) indicate misfired interactions or unresponsive UI elements.
+- **Feature hopping**: Rapid toggling between Export (0.84s–1.13s), Chart (2.14s–6.55s), Sidebar (3.21s–5.41s), and Data Table (7.18s–8.45s) with no sustained engagement.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scrolls rapidly in 0.5s increments (e.g., 0.3s–0.42s: 22px→66px; 1.58s–1.76s: 66px→516px).
+- **Shallow depth**: Max scroll depth of 909px (8.4% of a ~10,800px page if 1080px viewport), suggesting minimal content consumption.
+- **No dwell time**: No pauses >0.5s between scrolls; immediate jumps (e.g., 6.63s–6.85s: 598px→909px in 0.22s).
+- **Backtracking**: Upward scrolls (5.95s–6.04s: 867px→598px) indicate re-scanning, not deep reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or form submissions detected.
+- **Click-heavy**: 20 total clicks, but 7 (35%) are dead/rage clicks, suggesting low-value interactions.
+- **Hover delays**: Pre-click hovers (79ms–145ms) imply hesitation or UI uncertainty.
+- **No ratio**: N/A (no votes/comments).
+
+4. INTERACTION SPEED
+- **Hyper-fast**: Average 0.43s between actions (20 actions/8.5s).
+- **Peak speed**: 0.03s between rage clicks (5.11s–5.18s).
+- **Hesitation markers**: 262ms initial hesitation (0.26s) and 124–145ms hovers before clicks.
+- **No typing**: No text input detected.
+
+5. CONTENT PREFERENCES
+- **UI elements over content**: Targets interactive components (buttons, charts, tables) rather than static text.
+  - Export button: 2 clicks (0.84s, 1.13s)
+  - Chart: 4 clicks (2.14s, 2.54s, 6.19s, 6.55s)
+  - Sidebar: 6 clicks (3.21s–5.41s)
+  - Data Table: 4 clicks (7.18s–8.45s)
+- **No content focus**: No evidence of reading articles, posts, or other substantive content.
+
+6. TYPING BEHAVIOR
+- **None detected**: No text inputs, corrections, or form submissions in the log.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Export functionality (attempted twice, 0.84s–1.13s).
+  - Chart interactions (4 clicks, 2.14s–6.55s).
+  - Sidebar navigation (6 clicks, 3.21s–5.41s).
+  - Data Table (4 clicks, 7.18s–8.45s).
+- **Ignored features**:
+  - No search bar usage.
+  - No filter/sort controls (if present).
+  - No help/documentation links.
+  - No profile/account settings.
+
+8. SESSION FLOW
+- **0.0s–0.84s (Exploration)**:
+  - Page load → immediate hesitation (262ms) → rapid scrolling (0.3s–0.42s) to 66px.
+  - First click on "Export" (0.84s) after 79ms hover.
+- **0.84s–3.21s (Frustration)**:
+  - Failed Export interaction (double-click, 0.84s–1.13s) → dead click (1.55s).
+  - Aggressive scrolling (1.58s–2.71s) to 751px → Chart clicks (2.14s–2.54s).
+- **3.21s–5.41s (Rage Phase)**:
+  - Sidebar clicks (3.21s–3.43s) → dead click (4.21s) → rapid rage clicks (5.11s–5.41s).
+- **5.41s–8.45s (Recovery Attempt)**:
+  - Dead click (5.88s) → upward scroll (5.95s–6.04s) → Chart re-engagement (6.19s–6.55s).
+  - Data Table focus (7.18s–8.45s) with final clicks before session end.
+- **Arc**: **Chaotic → Frustrated → Abandoned**.
+  - No clear goal, no content consumption, and repeated UI failures.
+  - Session ends abruptly after Data Table clicks (8.45s), likely due to frustration or task abandonment.
+```

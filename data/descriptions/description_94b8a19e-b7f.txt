@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-driven with minimal deviation.
+- Progression follows a strict vertical path: dashboard → data table → chart → export button.
+- No lateral exploration (e.g., no sidebar/menu interactions, no tab switching).
+- 100% of interactions occur in a single page view (no navigation to other URLs).
+- Classified as "focused" with a strong terminal objective (export action).
+
+2. READING BEHAVIOR
+- Skimming confirmed by scroll velocity and depth:
+  - Initial scroll: 0px → 830px in 2.15s (avg 381px/s).
+  - Upward scroll: 830px → 79px in 1.85s (avg 406px/s).
+- No sustained pauses (>250ms) on any content block; hover times (262ms, 213ms, 115ms) suggest rapid visual targeting rather than reading.
+- Max scroll depth (830px) reached in 1.43s, indicating no deep content consumption.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions detected.
+- Interaction pattern is purely functional: click → click (duplicate clicks on same elements).
+- Duplicate clicks on "Data Table" (2.86s, 2.93s) and "Chart" (4.67s, 4.74s) suggest either UI lag or deliberate double-click behavior.
+- Export action (5.06s–6.41s) is the sole terminal interaction, implying a data-extraction objective.
+
+4. INTERACTION SPEED
+- Rapid execution with minimal hesitation:
+  - Median inter-action interval: 340ms (excluding scrolls).
+  - Fastest interval: 70ms (between duplicate clicks on "Data Table").
+  - Longest interval: 1.38s (between "Chart" click and "Export" hover).
+- Hover durations (115ms–262ms) indicate near-instantaneous targeting.
+- Session duration (6.4s) suggests a pre-planned workflow.
+
+5. CONTENT PREFERENCES
+- Gravitated exclusively toward structured data elements:
+  - Data Table (interacted at 1.97s, 2.86s).
+  - Chart (interacted at 3.29s, 4.67s).
+- No engagement with textual content, navigation menus, or auxiliary features (e.g., filters, search).
+- Export action (5.06s) confirms preference for raw data over visualizations.
+
+6. TYPING BEHAVIOR
+- No typing detected in the action log (no input fields, search queries, or form submissions).
+- No corrections or text entry of any kind.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Data Table (2 interactions).
+  - Chart (2 interactions).
+  - Export button (2 interactions).
+- Ignored features:
+  - Navigation menus (no clicks on sidebar or top bar).
+  - Filters/search (no interactions).
+  - Help/tooltips (no hovers >300ms).
+  - Any non-data elements (e.g., user profile, notifications).
+
+8. SESSION FLOW
+- Arc: Linear extraction workflow with no exploration or deviation.
+  - 0.0s–1.21s: Initial load + hesitation (1.21s pause, likely UI rendering delay).
+  - 1.21s–1.97s: Rapid downward scroll to locate Data Table (830px in 0.76s).
+  - 1.97s–3.29s: Data Table interaction → upward scroll to Chart (580px in 0.36s).
+  - 3.29s–5.06s: Chart interaction → upward scroll to Export button (79px in 1.47s).
+  - 5.06s–6.41s: Export action (terminal interaction).
+- Exit: Session ends immediately after Export click (no post-export actions).
+- No return to prior content; no re-engagement with skipped elements.
+```
+
+**SUMMARY**: This session reflects a highly efficient, non-human-like interaction pattern consistent with automated data extraction. The user exhibits zero exploratory behavior, no reading depth, and a singular focus on structured data retrieval (table → chart → export). Interaction speed and duplicate clicks suggest either a scripted bot or a user with pre-mapped objectives and no need for content consumption.

@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Task-Oriented**: The user exhibits a highly structured, linear progression through the dashboard interface with minimal deviation. Navigation follows a clear sequence: sidebar → stats cards → chart → data table → export button.
+- **No Exploration**: No evidence of lateral exploration (e.g., clicking unrelated UI elements, revisiting previous sections, or random browsing). All actions align with a single workflow.
+- **Spatial Consistency**: Clicks are concentrated in specific UI regions (sidebar: x=63-64, stats cards: x=1348-1349, chart: x=696, data table: x=559-563, export: x=1572), suggesting familiarity with the layout or a targeted goal.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scroll patterns indicate rapid, shallow engagement with content:
+  - **Scroll Speed**: 47–94px per 0.5s (avg. 94px/s) during downward navigation; 25–50px per 0.5s (avg. 50px/s) during upward navigation.
+  - **Depth**: Max scroll depth of 754px, but no sustained pauses (e.g., >1s) at any depth, suggesting no deep reading.
+  - **Revisitation**: Upward scrolling (e.g., 12.81–12.87s) covers 665px in 0.6s (1,108px/s), likely to relocate a specific UI element (export button) rather than re-read content.
+- **No Evidence of Deep Reading**: No actions (e.g., text selection, hover tooltips, or extended pauses) indicate detailed content consumption.
+
+3. ENGAGEMENT STYLE
+- **Action-Only Engagement**: The user interacts exclusively via clicks (10 total) with no evidence of:
+  - Text input (no typing, comments, or form submissions).
+  - Voting, favoriting, or other lightweight interactions.
+  - Multi-modal engagement (e.g., no combined clicks + typing).
+- **Click Patterns**:
+  - **Hesitation**: 4 instances of pre-click hesitation (avg. 1,162ms; range: 435–2,254ms), suggesting deliberation before critical actions (e.g., sidebar, stats cards, chart, export).
+  - **Double-Clicks**: 3 pairs of rapid sequential clicks (e.g., 2.13s/3.41s, 5.49s/8.57s, 9.82s/10.81s) on the same UI element, possibly due to UI lag or confirmation of interaction.
+
+4. INTERACTION SPEED
+- **Deliberate with Bursts**: Two distinct phases:
+  - **Slow Start (0–5.49s)**: Avg. 1.37s between actions (range: 0.06–2.13s). Includes initial hesitation (1.18s) and sidebar exploration.
+  - **Accelerated (5.49–14.41s)**: Avg. 1.11s between actions (range: 0.03–1.86s). Faster clicks (e.g., 10.81s–11.86s: 1.05s interval) but with lingering hesitations (e.g., 7.74s: 2,254ms pause).
+- **Scroll Efficiency**: Scroll actions are rapid and consistent (0.5s duration per 47–94px), indicating intentional navigation rather than passive browsing.
+
+5. CONTENT PREFERENCES
+- **Data-Centric Workflow**: Gravitated toward quantitative/analytical UI elements:
+  - **Stats Cards** (5.49s, 8.57s): Clicked twice, suggesting focus on high-level metrics.
+  - **Chart** (9.82s, 10.81s): Interacted with a data visualization, likely for deeper analysis.
+  - **Data Table** (11.86s, 12.75s): Engaged with tabular data, implying interest in granular details.
+  - **Export** (13.58s, 14.41s): Final action, indicating intent to extract data for external use.
+- **Ignored Content**: No interaction with:
+  - Text-heavy sections (e.g., descriptions, tooltips, or help menus).
+  - Non-data UI elements (e.g., settings, notifications, or user profile).
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**: The log contains zero instances of:
+  - Keystrokes, form inputs, or search queries.
+  - Corrections, deletions, or text selection.
+  - Input fields being focused or blurred.
+
+7. FEATURE DISCOVERY
+- **Discovered Features**:
+  - **Sidebar Navigation** (2.13s): Primary entry point for workflow initiation.
+  - **Stats Cards** (5.49s): Likely displayed key metrics (e.g., KPIs).
+  - **Chart Visualization** (9.82s): Interactive or drill-down capable.
+  - **Data Table** (11.86s): Tabular data with potential filtering/sorting.
+  - **Export Function** (13.58s): Final action, suggesting successful feature discovery.
+- **Ignored Features**:
+  - **Search/Filter**: No evidence of use.
+  - **User Controls**: No profile, settings, or account interactions.
+  - **Help/Documentation**: No clicks on tooltips, guides, or support links.
+  - **Collaborative Tools**: No sharing, commenting, or annotation features used.
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0–2.13s)**
+  - **Actions**: Page load → initial hesitation (1.18s) → shallow scrolling (1.24–1.44s) → sidebar hover (2.13s).
+  - **Behavior**: Passive reconnaissance; user assesses layout and identifies entry points.
+- **Phase 2: Workflow Initiation (2.13–5.49s)**
+  - **Actions**: Sidebar click (2.13s) → hesitation (3.41s) → sidebar re-click (4.48s) → upward scroll (4.51–4.61s) → stats cards hover (5.49s).
+  - **Behavior**: Attempts to navigate but encounters friction (hesitation, re-clicks). Upward scroll suggests misalignment between expectations and UI.
+- **Phase 3: Data Exploration (5.49–12.75s)**
+  - **Actions**: Stats cards click (8.57s) → rapid downward scroll (8.6–8.76s) → chart interaction (9.82–10.81s) → data table click (11.86–12.75s).
+  - **Behavior**: Focused, linear progression through data hierarchy (summary → visualization → details). Scroll speed indicates purposeful navigation.
+- **Phase 4: Data Extraction (12.75–14.41s)**
+  - **Actions**: Upward scroll (12.81–12.87s) → export button hover (13.58s) → export click (14.41s).
+  - **Behavior**: Concludes session by extracting data. Upward scroll suggests relocating the export button, implying it was not initially visible at max scroll depth.
+- **Exit**: Session ends immediately after export click (no post-export actions).
+
+---
+KEY INSIGHTS:
+- **Goal-Driven**: The user’s actions align with a single objective (data extraction), with no exploratory detours.
+- **UI Friction**: Hesitations and re-clicks (e.g., sidebar, stats cards) may indicate unclear affordances or lag.
+- **Efficiency Trade-offs**: Rapid scrolling and minimal pauses suggest prioritization of speed over thoroughness.
+- **No Social/Collaborative Engagement**: Purely transactional interaction with no evidence of community or communication features.
+```

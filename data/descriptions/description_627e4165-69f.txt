@@ -1,0 +1,80 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, oscillating pattern between sections (Settings → Notifications → Privacy → Notifications) rather than a focused or exploratory journey. Navigation is characterized by:
+  - 4 distinct section switches (Settings → Notifications → Privacy → Notifications)
+  - 6 total "Save Changes" button clicks across 3 sections (2 in Settings, 3 in Notifications, 1 in Privacy)
+  - No evidence of deep exploration into sub-menus or nested options
+- **Key timestamps**:
+  - 0.0s–0.86s: Initial page load and rapid scrolling (Settings)
+  - 1.51s–2.46s: First Notifications visit
+  - 3.39s–3.87s: Privacy visit
+  - 4.25s–4.74s: Return to Notifications
+
+2. READING BEHAVIOR
+- **Skim-only with no deep reading**: Scroll patterns indicate rapid, superficial engagement:
+  - **Scroll speed**: 187px/0.5s (374px/s) during downward scrolls (0.27s–0.49s, 1.83s–1.86s)
+  - **Scroll depth**: Max depth of 939px (0.49s) on a 1920px viewport suggests the user never viewed the full page content
+  - **No pauses**: No dwell time >200ms on any scroll segment; immediate direction reversals (e.g., 1.12s: up after reaching 939px)
+  - **Content coverage**: Only ~50% of the page height was viewed at any time (max depth 939px on 1080px viewport)
+
+3. ENGAGEMENT STYLE
+- **Action-focused, no content creation**: The user exclusively interacts with UI controls (buttons/divs) with no evidence of:
+  - Form input (no typing detected)
+  - Content submission (no "Submit" or "Post" actions)
+  - Toggle switches or checkboxes (despite likely presence in Settings)
+- **Click redundancy**: 6 "Save Changes" clicks (3 duplicate pairs) and 4 section navigation clicks (2 duplicate pairs) suggest:
+  - **Impulsive clicking**: 0ms–136ms hover times before clicks (e.g., 0.86s: 63ms hover)
+  - **No verification**: Immediate re-clicks (e.g., 1.09s: second "Save Changes" click 230ms after first)
+  - **No error handling**: No pauses to read confirmation messages or errors
+
+4. INTERACTION SPEED
+- **Hyper-fast with no deliberation**:
+  - **Action interval**: Average 310ms between actions (excluding scrolls)
+  - **Click latency**: 0ms–197ms hesitation before clicks (e.g., 0.2s: 197ms hesitation on text click)
+  - **Scroll initiation**: Immediate after page load (0.27s) and after clicks (e.g., 1.12s: scroll up 40ms after second "Save Changes" click)
+  - **No long pauses**: Longest gap between actions is 380ms (2.46s–2.87s)
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The session is entirely UI-focused with no interaction with:
+  - Specific settings options (e.g., no toggles for "Email Notifications")
+  - Form fields (e.g., no input in "Privacy" section)
+  - Help text or tooltips
+- **Section gravitation**:
+  - **Notifications**: 2 visits (1.51s–2.46s, 4.25s–4.74s)
+  - **Privacy**: 1 visit (3.39s–3.87s)
+  - **Settings**: Initial focus (0.0s–1.17s) but abandoned after first "Save Changes" attempt
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains zero instances of:
+  - Keystrokes or input field focus
+  - Text entry or corrections
+  - Form submission
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Section navigation (Notifications, Privacy)
+  - "Save Changes" button (6 clicks)
+  - Scrolling (12 scroll actions)
+- **Ignored features**:
+  - Form inputs (no evidence of toggles, text fields, or dropdowns)
+  - Help/FAQ links (no clicks on "?" icons or "Learn More" text)
+  - Secondary navigation (e.g., no clicks on sidebar or breadcrumbs)
+  - Confirmation dialogs (no pauses to read success/error messages)
+
+8. SESSION FLOW
+- **Arc**: **Impulsive UI cycling → Abandonment**
+  - **0.0s–0.86s (Exploration)**: Page load → rapid downward scroll (939px) → first "Save Changes" click (0.86s)
+  - **0.86s–2.46s (Frustration)**: Duplicate "Save Changes" clicks (1.09s) → scroll up → Notifications visit (1.51s) → duplicate clicks (1.79s) → scroll down → duplicate "Save Changes" (2.17s–2.46s)
+  - **2.46s–3.87s (Section Hopping)**: Duplicate "Save Changes" (2.87s–3.06s) → scroll up → Privacy visit (3.39s) → duplicate clicks (3.87s)
+  - **3.87s–4.74s (Exit)**: Scroll up → return to Notifications (4.25s) → duplicate clicks (4.74s) → session ends
+- **Exit**: Abrupt termination after 4.7s with no confirmation of saved changes or error resolution.
+```
+
+**SUMMARY**: This user exhibits **synthetic, bot-like behavior** characterized by:
+- **Zero content engagement** (no reading, typing, or form interaction)
+- **Repetitive, impulsive clicking** (6 "Save Changes" clicks, 4 section switches)
+- **Hyper-fast, non-deliberate actions** (avg 310ms between actions)
+- **No feature discovery** beyond primary navigation buttons
+- **Session arc**: Rapid UI cycling → frustration → abandonment. Likely a **test script or automated tool** given the "synthetic/impulsive_clicker" device label.

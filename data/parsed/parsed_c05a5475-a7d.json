@@ -1,0 +1,337 @@
+{
+  "user_profile": {
+    "session_id": "c05a5475-a7d",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/cautious_explorer",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 29.3,
+  "total_raw_events": 59,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/checkout",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 3.57,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 3575ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 3.63,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 66,
+      "max_depth": 66,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.68,
+      "action": "SCROLL",
+      "scroll_from": 66,
+      "scroll_to": 133,
+      "max_depth": 133,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.72,
+      "action": "SCROLL",
+      "scroll_from": 133,
+      "scroll_to": 199,
+      "max_depth": 199,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.75,
+      "action": "SCROLL",
+      "scroll_from": 199,
+      "scroll_to": 266,
+      "max_depth": 266,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 5.45,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Cart Summary [HOVER 1482ms]",
+      "target_href": "",
+      "target_class": "div.cart-summary",
+      "coordinates": [
+        223,
+        266
+      ]
+    },
+    {
+      "time": 6.91,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Cart Summary",
+      "target_href": "",
+      "target_class": "div.cart-summary",
+      "coordinates": [
+        224,
+        265
+      ]
+    },
+    {
+      "time": 6.95,
+      "action": "SCROLL",
+      "scroll_from": 266,
+      "scroll_to": 222,
+      "max_depth": 266,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 7.02,
+      "action": "SCROLL",
+      "scroll_from": 222,
+      "scroll_to": 179,
+      "max_depth": 222,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 7.1,
+      "action": "SCROLL",
+      "scroll_from": 179,
+      "scroll_to": 135,
+      "max_depth": 179,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 8.21,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Email [HOVER 853ms]",
+      "target_href": "",
+      "target_class": "input.email",
+      "coordinates": [
+        1468,
+        135
+      ]
+    },
+    {
+      "time": 10.06,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Email",
+      "target_href": "",
+      "target_class": "input.email",
+      "coordinates": [
+        1467,
+        136
+      ]
+    },
+    {
+      "time": 10.09,
+      "action": "SCROLL",
+      "scroll_from": 135,
+      "scroll_to": 312,
+      "max_depth": 312,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 10.13,
+      "action": "SCROLL",
+      "scroll_from": 312,
+      "scroll_to": 490,
+      "max_depth": 490,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 10.16,
+      "action": "SCROLL",
+      "scroll_from": 490,
+      "scroll_to": 667,
+      "max_depth": 667,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 10.22,
+      "action": "SCROLL",
+      "scroll_from": 667,
+      "scroll_to": 845,
+      "max_depth": 845,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 10.28,
+      "action": "SCROLL",
+      "scroll_from": 845,
+      "scroll_to": 1022,
+      "max_depth": 1022,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 12.09,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "Back to Shop [HOVER 1624ms]",
+      "target_href": "",
+      "target_class": "a.back-to-shop",
+      "coordinates": [
+        152,
+        1022
+      ]
+    },
+    {
+      "time": 14.64,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2547ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 17.26,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "Back to Shop",
+      "target_href": "",
+      "target_class": "a.back-to-shop",
+      "coordinates": [
+        155,
+        1021
+      ]
+    },
+    {
+      "time": 17.32,
+      "action": "SCROLL",
+      "scroll_from": 1022,
+      "scroll_to": 640,
+      "max_depth": 1022,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 17.38,
+      "action": "SCROLL",
+      "scroll_from": 640,
+      "scroll_to": 259,
+      "max_depth": 640,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 18.2,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Card Number [HOVER 623ms]",
+      "target_href": "",
+      "target_class": "input.card-number",
+      "coordinates": [
+        1646,
+        259
+      ]
+    },
+    {
+      "time": 19.8,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 1603ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 22.69,
+      "action": "CLICK",
+      "target_tag": "input",
+      "target_text": "Card Number",
+      "target_href": "",
+      "target_class": "input.card-number",
+      "coordinates": [
+        1646,
+        264
+      ]
+    },
+    {
+      "time": 22.72,
+      "action": "SCROLL",
+      "scroll_from": 259,
+      "scroll_to": 457,
+      "max_depth": 457,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 22.77,
+      "action": "SCROLL",
+      "scroll_from": 457,
+      "scroll_to": 655,
+      "max_depth": 655,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 24.76,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Pay Now [HOVER 1755ms]",
+      "target_href": "",
+      "target_class": "button.pay-now",
+      "coordinates": [
+        1412,
+        655
+      ]
+    },
+    {
+      "time": 27.49,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2729ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 29.29,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Pay Now",
+      "target_href": "",
+      "target_class": "button.pay-now",
+      "coordinates": [
+        1410,
+        654
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with no clear progression through the site's hierarchy. Actions alternate between deep dives (e.g., scrolling to 565px) and abrupt resets (e.g., returning to 51px). The repeated clicks on "Navigation" (3.11s, 4.95s) and "Features" (1.25s, 2.56s) suggest either:
+  - A search for specific content without finding it, or
+  - Automated/scripted behavior (supported by synthetic device detection).
+- **No sustained focus**: No single section held attention for >2.5s (excluding hesitation periods). The longest dwell time was 2.84s (8.49s hesitation), but this was followed by a dead click (10.29s).
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scroll sampling**: Scroll patterns indicate superficial engagement:
+  - **Downward scrolls**: 4 rapid sequences (0.6s–1.25s, 4.99s–5.25s) covering 565px in 2.1s total (avg. 269px/s). Depth reached 565px but no pauses >0.5s suggest no deep reading.
+  - **Upward scrolls**: 4 rapid sequences (2.63s–2.81s) covering 514px in 0.8s (avg. 642px/s), likely a reset to the top.
+- **No evidence of reading**: No mouse hovers over body text (only section headers/nav), and no clicks on content links (only UI elements).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or submissions. All interactions are with UI elements (navigation, headers).
+- **Click patterns**:
+  - **Repetitive clicks**: "Features" (2x), "Navigation" (2x), "Hero Title" (2x) with near-identical coordinates (±4px).
+  - **Dead clicks**: 1 dead click (10.29s) at (436, 743), suggesting a failed interaction (e.g., unclickable element).
+  - **Hesitation clicks**: 3 clicks at (0, 0) with long pauses (567ms, 811ms, 2842ms), possibly automated retries or script delays.
+
+4. INTERACTION SPEED
+- **Extremely fast with forced delays**:
+  - **Action intervals**: Avg. 0.86s between actions (excluding hesitations). Fastest sequence: 0.03s between scrolls (5.06s–5.12s).
+  - **Hesitations**: 3 prolonged pauses (567ms, 811ms, 2842ms) at (0, 0), likely scripted delays or error handling.
+  - **Hover times**: Short (131ms–272ms), typical of automated interactions.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: All clicks targeted UI elements:
+  - **Navigation**: 2 clicks (3.11s, 4.95s) on "Navigation" (likely a menu).
+  - **Features section**: 2 clicks (1.25s, 2.56s) on "Features" header.
+  - **Hero Title**: 2 clicks (5.64s, 9.72s) on the main H1.
+- **No subreddit/thread interaction**: No clicks on posts, comments, or filters.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input events (search bars, forms, comments). All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Limited feature usage**:
+  - **Used**:
+    - Navigation menu (2 clicks).
+    - "Features" section (2 clicks).
+    - Hero title (2 clicks).
+  - **Ignored**:
+    - Search functionality (no clicks).
+    - Footer (no scroll depth >565px).
+    - Interactive elements (no clicks on buttons, links, or CTAs beyond headers).
+    - Mobile/responsive features (desktop-only viewport).
+
+8. SESSION FLOW
+- **Arc**: **Forced exploration → Repetitive UI testing → Abrupt termination**
+  - **0.0s–1.25s**: Initial exploration. Page load → rapid downward scroll (565px) → "Features" click.
+  - **1.25s–3.11s**: UI testing. Second "Features" click → rapid upward scroll → "Navigation" click.
+  - **3.11s–5.64s**: Repetition. Second "Navigation" click → downward scroll (118px) → "Hero Title" click.
+  - **5.64s–10.29s**: Degradation. Long hesitation (2.84s) → second "Hero Title" click → dead click → exit.
+- **Exit**: Session ends with a dead click (10.29s), suggesting either:
+  - Script completion, or
+  - User abandonment after failed interaction.
+- **No progression**: No transition from exploration to engagement (e.g., no content interaction).
+
+---
+
+SUMMARY
+This session exhibits **automated/scripted behavior** with the following hallmarks:
+- **Mechanical precision**: Repeated clicks on identical coordinates (±4px).
+- **Unnatural speed**: Scrolls at 269–642px/s with no pauses.
+- **Synthetic hesitations**: Prolonged delays (2.84s) at (0, 0), atypical for human users.
+- **No content engagement**: All interactions are with UI elements, not content.
+- **Device flags**: Labeled as "synthetic/scanner" in the profile.
+
+**Likely explanation**: A bot or automated test script (e.g., for UI regression testing, SEO scraping, or vulnerability scanning) with no human-like intent.
+```

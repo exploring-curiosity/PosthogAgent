@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with forced exploration**: The user follows a strict top-to-bottom path on the checkout page, with no lateral movement or deviation. Scrolling is unidirectional (downward only) and segmented into rapid, consistent bursts (e.g., 36px–109px in 0.5s intervals). No revisits to prior sections.
+- **Synthetic/scanner traits**: The viewport (1920x1080) and device label ("synthetic/scanner") suggest automated or scripted behavior. Clicks at (0, 0) with "[HESITATION]" labels (699ms, 634ms) are atypical for human users and likely represent scripted pauses or synthetic delays.
+
+2. READING BEHAVIOR
+- **No evidence of reading**: Scroll speed is constant (36–40px per 0.5s) with no pauses or regressions, indicating no content absorption. Max scroll depth (1024px) is reached in 5.21s, but the user never lingers on any section (e.g., no hover >500ms on text elements).
+- **Skim pattern**: Scroll depth increases in fixed increments (36–40px), suggesting a mechanical scan rather than human reading. No engagement with specific text beyond click targets (e.g., "Email", "Cart Summary").
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session lacks votes, comments, or form submissions. All interactions are clicks or scrolls.
+- **Click behavior**:
+  - **Targeted clicks**: Focused on form fields ("Email") and UI elements ("Cart Summary", "Back to Shop").
+  - **Repetition**: Identical elements are clicked twice (e.g., "Email" at 1.49s and 3.39s; "Cart Summary" at 4.09s and 4.99s), suggesting validation or scripted retries.
+  - **Hover delays**: Synthetic hovers (206–243ms) precede clicks, a common pattern in automated testing tools.
+
+4. INTERACTION SPEED
+- **Rapid but scripted**: Actions occur in sub-second intervals (e.g., 0.07s between scrolls), but with artificial delays:
+  - **Scroll bursts**: 0.5s per 36–40px (consistent across 12 scrolls).
+  - **Click intervals**: 0.6–1.5s between primary actions (e.g., 1.49s to 2.12s = 0.63s; 3.39s to 4.09s = 0.7s).
+  - **Hesitations**: Scripted pauses (634–699ms) at (0, 0) coordinates, likely for synthetic "realism."
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user interacts exclusively with UI elements, not content. Targets include:
+  - **Form fields**: "Email" input (clicked twice).
+  - **Navigation**: "Back to Shop" link (clicked once).
+  - **UI components**: "Cart Summary" div (clicked twice).
+- **No subreddit or topic data**: The log shows no interaction with content categories, posts, or comments.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Despite clicking the "Email" input twice (1.49s, 3.39s), no keystrokes or input lengths are recorded. The field may have been focused but left empty, or the session recording omitted input events.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Checkout form**: "Email" field (interacted with but not populated).
+  - **Cart summary**: Expanded or validated (clicked twice).
+  - **Navigation**: "Back to Shop" link (final action).
+- **Features ignored**:
+  - **Payment fields**: No clicks on credit card, shipping, or other checkout inputs.
+  - **Promotions/offers**: No interaction with upsells, discounts, or CTAs.
+  - **Help/chat**: No engagement with support widgets or tooltips.
+
+8. SESSION FLOW
+- **Arc**: **Mechanical validation → Abandonment**
+  - **0.0–0.98s (Validation)**: Page load followed by rapid scrolling to 182px (likely scripted depth check).
+  - **0.98–4.09s (Form Interaction)**: Clicks on "Email" field (twice) and scrolls to 383px. Synthetic hovers suggest UI testing.
+  - **4.09–5.56s (Cart Check)**: Expands "Cart Summary" (clicked twice) and scrolls to 1024px (full page depth).
+  - **5.56–6.74s (Exit)**: Clicks "Back to Shop" (final action), terminating the session.
+- **Exit trigger**: No error messages or frustration signals; the session ends after the script completes its sequence.
+- **Duration**: 6.7s total, with no human-like pauses or deviations.
+
+SUMMARY
+This session exhibits **automated or synthetic behavior**, likely from a script, scanner, or testing tool. Key indicators:
+- Fixed scroll increments (36–40px/0.5s).
+- Repetitive clicks on identical elements.
+- Synthetic hovers and "hesitations" at (0, 0).
+- No content engagement, typing, or human-like delays.
+- Linear, unidirectional navigation with no exploration.
+```

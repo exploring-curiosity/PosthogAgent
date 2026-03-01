@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic with no clear linear progression.
+- Repeatedly toggles between 3 primary sections: Privacy (4 visits), Profile (3 visits), Notifications (3 visits).
+- 67% of clicks (14/21) target the same 3 navigation elements, suggesting inability to achieve intended outcome.
+- No evidence of exploratory behavior; all actions confined to settings sub-pages.
+
+2. READING BEHAVIOR
+- Skimming only; no deep reading detected.
+- Scroll velocity: 142-173 px/s (consistent across all scrolls).
+- Max scroll depth per section:
+  • Privacy: 980 px (4.26 s)
+  • Profile: 644 px (7.1 s)
+  • Notifications: 918 px (3.4 s)
+- No pauses >200 ms at any scroll depth, indicating no content absorption.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed.
+- All interactions are navigational clicks (21 total):
+  • 14 successful clicks (66%)
+  • 7 rage clicks (33%)
+  • 3 dead clicks (14%)
+- No ratio calculable; zero engagement with primary content.
+
+4. INTERACTION SPEED
+- Mean time between actions: 0.58 s (median 0.45 s).
+- Fastest click interval: 0.05 s (rage clicks at 7.76-7.93 s).
+- Slowest hesitation: 1.17 s (9.43 s).
+- Hover durations: 34-147 ms (mean 71 ms), indicating impulsive clicking.
+
+5. CONTENT PREFERENCES
+- No content preferences detectable; user only interacted with settings navigation.
+- All clicks confined to:
+  • Privacy (4 unique click clusters)
+  • Profile (3 unique click clusters)
+  • Notifications (3 unique click clusters)
+  • Settings Nav (3 unique click clusters)
+
+6. TYPING BEHAVIOR
+- No typing detected in 12.2 s session.
+- No input fields engaged; all clicks on static navigation elements.
+
+7. FEATURE DISCOVERY
+- Discovered features:
+  • Settings navigation (used 3×)
+  • Privacy settings (used 4×)
+  • Profile settings (used 3×)
+  • Notifications settings (used 3×)
+  • Save Changes button (used 3×)
+- Ignored features:
+  • Any content outside settings
+  • Search, help, or account dropdowns
+  • Any interactive form fields
+
+8. SESSION FLOW
+- 0.0-0.8 s: Initial load → impulsive click (hesitation 328 ms) → rapid downward scroll (4 scrolls, 0.45-0.54 s).
+- 0.8-3.7 s: Privacy → Profile → Notifications navigation (3 clicks, 2 scroll sequences).
+- 3.7-4.41 s: First Save Changes attempt (2 clicks, 0.19 s apart).
+- 4.49-6.5 s: Upward scroll → Notifications → Privacy (3 clicks, 1 dead click).
+- 6.54-7.66 s: Profile → rapid downward scroll (2 scrolls) → Save Changes (1 click).
+- 7.76-12.17 s: Rage clicks (5× on Save Changes, 5× on Privacy, 4× on Settings Nav).
+- Session terminates mid-rage click sequence at 12.2 s.
+```

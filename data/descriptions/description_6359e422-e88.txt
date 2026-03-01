@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly linear and goal-oriented with no exploratory detours.
+- Follows a strict top-to-bottom progression through the checkout page, with no lateral movement (e.g., no clicks on navigation menus, product details, or unrelated elements).
+- Two distinct linear passes:
+  a) First pass (0.0s–2.67s): Scrolls downward in rapid, uniform increments (61px every ~0.5s) to reach the bottom of the page (1016px at 2.8s).
+  b) Second pass (4.18s–4.29s): Scrolls upward in similar increments (121px every ~0.5s) to return to the payment button.
+- No evidence of revisiting earlier sections or cross-referencing content.
+
+2. READING BEHAVIOR:
+- Skimming with no deep reading:
+  - Scroll speed: 122px/s (61px every 0.5s) during both downward and upward passes.
+  - No pauses >300ms on any content block (hover times are on interactive elements, not text).
+  - Max scroll depth (1016px) suggests the user reached the page footer, but no dwell time indicates no substantive reading.
+- Hesitation (605ms at 0.6s) occurs before any scrolling begins, likely a page-load delay rather than content evaluation.
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or social interactions observed.
+- All interactions are transactional:
+  - Two form-field clicks (Card Number at 1.32s and 2.59s).
+  - Two CTA clicks (Back to Shop at 3.11s and 4.12s; Pay Now at 4.85s and 5.82s).
+- Interaction ratio: 4 clicks on 2 unique elements (2:1 redundancy per element).
+- Hover times (266ms on Card Number, 107ms on Back to Shop, 271ms on Pay Now) suggest brief pre-click evaluation but no hesitation.
+
+4. INTERACTION SPEED:
+- Fast and mechanical:
+  - Median time between actions: 0.5s (scrolls) to 0.9s (clicks).
+  - Longest delay: 1.27s (2.59s–3.11s) between Card Number click and Back to Shop hover.
+  - No typing detected (no keystrokes logged in form fields).
+- Redundant clicks (e.g., Pay Now at 4.85s and 5.82s) suggest either UI unresponsiveness or synthetic input.
+
+5. CONTENT PREFERENCES:
+- No content engagement beyond checkout flow:
+  - Only interacted with:
+    - Payment form (Card Number field).
+    - Navigation CTAs (Back to Shop, Pay Now).
+  - No product details, reviews, or ancillary content accessed.
+- Implied preference: Transactional over informational content.
+
+6. TYPING BEHAVIOR:
+- No typing detected:
+  - Card Number field was clicked twice (1.32s and 2.59s) but no input logged.
+  - No corrections, deletions, or input duration metrics available.
+
+7. FEATURE DISCOVERY:
+- Used features:
+  - Scrolling (primary navigation method).
+  - Form fields (Card Number).
+  - Primary CTAs (Back to Shop, Pay Now).
+- Ignored features:
+  - No use of:
+    - Navigation menus (header/footer).
+    - Expandable sections (e.g., order summary, shipping details).
+    - Help/chat widgets.
+    - Autofill or payment shortcuts (e.g., PayPal, Apple Pay).
+
+8. SESSION FLOW:
+- Arc: Linear transaction → Abort → Reattempt:
+  1. Load (0.0s): Immediate focus on checkout page.
+  2. Initial scan (0.6s–2.8s): Rapid downward scroll to page bottom.
+  3. Form interaction (1.32s–2.59s): Clicks Card Number field twice (no input).
+  4. Abort (3.11s–4.12s): Clicks "Back to Shop" twice.
+  5. Re-evaluation (4.18s–4.29s): Scrolls upward to payment section.
+  6. Exit attempt (4.85s–5.82s): Clicks "Pay Now" twice before session ends.
+- No exploratory or engagement phases; purely transactional with a failed conversion.
+```
+
+**Key Observations:**
+- The session exhibits **synthetic/scanner-like behavior** (per USER PROFILE) with:
+  - Uniform scroll increments (61px/0.5s).
+  - Redundant clicks on the same elements.
+  - No typing or content engagement.
+- Likely a **bot or automated test** rather than a human user, given the mechanical precision and lack of variability in interactions.

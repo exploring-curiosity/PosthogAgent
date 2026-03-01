@@ -1,0 +1,93 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and task-focused with minimal deviation
+- Proceeds through checkout flow in strict sequence: Cart Summary → Email → Card Number → Pay Now → Back to Shop
+- No exploratory clicks or detours to unrelated page elements
+- 100% of clicks target checkout-related UI components (5/5 primary actions)
+- Scrolling occurs only to reveal next required field (no evidence of content browsing)
+
+2. READING BEHAVIOR
+- Minimal reading engagement detected
+- Scroll patterns show rapid, incremental downward movement (15-85px per 0.5s) with no pauses >500ms
+- No horizontal scrolling or backtracking to re-read sections
+- Max scroll depth (987px) suggests full page traversal but with no dwell time on specific content blocks
+- 7 distinct scroll sequences, each averaging 4.3 scroll steps (SD=0.95)
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions observed (checkout-only context)
+- Primary engagement: Form field interaction (3 fields) and button clicks (2)
+- Hover-to-click ratios:
+  • Cart Summary: 750ms hover → 2 clicks (172ms apart)
+  • Email: 318ms hover → 2 clicks (60ms apart)
+  • Card Number: 439ms hover → 2 clicks (12ms apart)
+  • Pay Now: 555ms hover → 2 clicks (10ms apart)
+  • Back to Shop: 596ms hover → 2 clicks (900ms apart)
+
+4. INTERACTION SPEED
+- Deliberate but efficient pacing:
+  • Mean action interval: 1.88s (SD=2.13s)
+  • Median hesitation time: 974ms (range: 318ms-2981ms)
+  • 3 distinct hesitation clusters:
+    - Initial page load: 974ms
+    - Mid-checkout: 520ms-2848ms
+    - Post-submission: 2981ms
+- Click execution speed:
+  • Mean click-to-click latency for repeated elements: 111ms (SD=68ms)
+  • Fastest repeat click: 10ms (Pay Now button)
+
+5. CONTENT PREFERENCES
+- Exclusively interacted with checkout-specific content:
+  • Form fields: Email (2 clicks), Card Number (2 clicks)
+  • UI components: Cart Summary (2 clicks), Pay Now (2 clicks), Back to Shop (2 clicks)
+- No engagement with:
+  • Product listings
+  • Navigation menus
+  • Promotional content
+  • Footer links
+- Content type distribution: 100% transactional (0% informational/browsing)
+
+6. TYPING BEHAVIOR
+- No typing events recorded in action log
+- Input fields were clicked but no keystroke data captured
+- Field interaction times:
+  • Email: 1.09s between first click and next action
+  • Card Number: 0.86s between first click and next action
+- No evidence of corrections or input validation behaviors
+
+7. FEATURE DISCOVERY
+- Used features:
+  • Form field interaction (3/3 required fields)
+  • Primary CTA buttons (Pay Now, Back to Shop)
+  • Cart summary expansion (2 clicks)
+- Ignored features:
+  • All non-checkout navigation
+  • Help/support links
+  • Payment method selectors
+  • Promo code fields
+  • Account creation/login options
+  • Product recommendations
+
+8. SESSION FLOW
+- Arc: Linear transaction → Hesitation → Completion → Exit
+  [0.0-2.2s] Initial orientation:
+    - Page load → 974ms hesitation → rapid scroll to Cart Summary
+  [2.2-4.19s] Form initiation:
+    - Cart Summary interaction → 520ms hesitation → scroll to Email field
+  [4.19-10.87s] Data entry phase:
+    - Email field focus → 2848ms hesitation → Card Number focus → scroll to Pay Now
+  [10.87-16.87s] Submission and exit:
+    - Pay Now click → 2981ms hesitation → Back to Shop (exit)
+- Key transitions:
+  • 3.48s: Shift from orientation to data entry
+  • 10.87s: Transition from data entry to submission
+  • 12.99s: Post-submission exit behavior
+- Session termination: Immediate after "Back to Shop" click (no return to checkout)
+```
+
+Key Observations:
+- The user demonstrates methodical, goal-directed behavior with no exploratory detours
+- All hesitations occur at decision points (field transitions, submission)
+- Scrolling is purely functional (revealing next required field) with no content consumption
+- The synthetic/methodical_user device tag aligns with the observed behavior pattern

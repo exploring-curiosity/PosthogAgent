@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+----------------------------------------
+1. NAVIGATION PATTERN
+- **Pattern**: Non-linear, exploratory with repeated backtracking
+- **Evidence**:
+  - Initial linear downward scroll (4.12s–4.24s) to explore page depth (527px max).
+  - Abrupt shift to sidebar (6.5s) after 1989ms hover hesitation, suggesting discovery of navigation options.
+  - Repeated toggling between sidebar (10.02s) and main content (12.3s), indicating uncertainty or comparison.
+  - Final sequence jumps from export button (20.8s) to data table (26.44s), skipping intermediate content.
+- **Quantitative**: 4 distinct content zones visited (sidebar, stats cards, chart, data table) with 3+ revisits to prior zones.
+
+----------------------------------------
+2. READING BEHAVIOR
+- **Style**: Skimming with targeted deep dives
+- **Evidence**:
+  - **Scroll speed**: Rapid vertical scans (e.g., 4.12s–4.24s: 527px in 1.2s; 14.15s–14.21s: 461px in 0.6s).
+  - **Pause points**: Hover hesitations (1989ms, 1757ms, 1746ms) precede clicks on interactive elements (sidebar, stats cards, chart), suggesting focused attention on specific UI components.
+  - **Depth**: Max scroll depth (819px) reached only in final 2.5s, implying late-stage content prioritization.
+- **Quantitative**: 75% of scroll actions occur at >300px/s; 3/5 hover hesitations exceed 1500ms.
+
+----------------------------------------
+3. ENGAGEMENT STYLE
+- **Actions**: Clicks only (no visible typing, voting, or commenting)
+- **Timing**:
+  - **Hesitation**: 4 clicks preceded by >1300ms pauses (avg: 1820ms), indicating deliberation.
+  - **Execution**: Clicks occur in rapid pairs (e.g., 14.09s/14.15s on stats cards; 26.44s/27.51s on data table), suggesting confirmation or double-checking.
+- **Ratio**: N/A (no voting/commenting observed).
+
+----------------------------------------
+4. INTERACTION SPEED
+- **Tempo**: Deliberate with bursts of speed
+- **Evidence**:
+  - **Inter-click intervals**: Avg 2.1s between primary actions (excluding scrolls), but 3/10 intervals exceed 2.5s.
+  - **Scroll bursts**: 0.5s duration for all scroll actions, covering ~100–300px per burst.
+  - **Hesitation outliers**: 4076ms initial hesitation (4.08s) and 2393ms pause (8.89s) skew overall speed.
+- **Quantitative**: 62% of session time spent in pauses (>1s) between actions.
+
+----------------------------------------
+5. CONTENT PREFERENCES
+- **Gravitated toward**:
+  - **Navigation**: Sidebar (2 clicks, 1989ms hover).
+  - **Data visualization**: Stats cards (2 clicks, 1757ms hover) and chart (2 clicks, 1746ms hover).
+  - **Data export**: Export button (1 click, 1556ms hover).
+  - **Tabular data**: Data table (2 clicks, 1094ms hover).
+- **Ignored**: No interaction with text content, forms, or non-interactive elements.
+
+----------------------------------------
+6. TYPING BEHAVIOR
+- **Observed**: None
+- **Evidence**: No text input, corrections, or form submissions detected in log.
+
+----------------------------------------
+7. FEATURE DISCOVERY
+- **Used**:
+  - Sidebar navigation (6.5s, 10.02s).
+  - Stats cards (12.3s, 14.09s).
+  - Chart interaction (16.19s, 18.8s).
+  - Export functionality (20.8s, 25.03s).
+  - Data table (26.44s, 27.51s).
+- **Ignored**:
+  - Page text (no clicks on body content).
+  - Potential search/filters (no interaction with input fields).
+  - Non-interactive visuals (e.g., static images, non-clickable charts).
+
+----------------------------------------
+8. SESSION FLOW
+- **Arc**: Exploration → Feature Testing → Targeted Interaction → Abrupt Exit
+- **Phases**:
+  1. **Initial Scan (0–6.5s)**:
+     - Load → 4076ms hesitation → rapid scroll to 527px → sidebar discovery.
+  2. **Navigation Testing (6.5–12.3s)**:
+     - Sidebar click → 2393ms hesitation → sidebar re-click → upward scroll reset.
+  3. **Feature Sampling (12.3–20.8s)**:
+     - Stats cards (1757ms hover) → chart (1746ms hover) → export button (1556ms hover).
+  4. **Data Focus (20.8–27.5s)**:
+     - Export click → rapid scroll to data table (819px) → table interaction.
+- **Exit**: No gradual wind-down; final action is a data table click at 27.51s (session ends at 27.5s).
+- **Quantitative**: 46% of session spent in first 10s (exploration); 38% in last 7s (data focus).
+```

@@ -1,0 +1,85 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly focused and goal-driven with minimal exploration.
+- Linear progression through UI elements in a top-to-bottom, right-to-left pattern:
+  1) Export button (top-right) → 2) Chart (mid-page) → 3) Stats Cards (top-center) → 4) Sidebar (left) → 5) Data Table (bottom).
+- No backtracking or revisits to previously viewed sections.
+- 100% of clicks target interactive elements (buttons/divs/tables), zero clicks on static content.
+
+2. READING BEHAVIOR
+- Skimming behavior confirmed by:
+  - Rapid scroll velocity: 35-71px/0.5s (avg 72px/s) with no pauses >200ms between scrolls.
+  - Max scroll depth (788px) reached in 4.31s, covering ~73% of a 1080px viewport.
+  - No sustained dwell time on any section (longest hover: 171ms on "Chart").
+- Scroll patterns show "accordion" behavior:
+  - Initial deep dive (0-477px in 1.22s) → rapid retreat (477-103px in 0.3s) → secondary deep dive (103-788px in 1.38s).
+
+3. ENGAGEMENT STYLE
+- No traditional "engagement" (votes/comments) observed.
+- Interaction style: Direct manipulation of UI controls with high error rate:
+  - 6/15 clicks (40%) classified as "[RAGE CLICK]" or "[DEAD CLICK]".
+  - 5/6 rage clicks occur in 480ms window (2.61-3.09s) targeting "Stats Cards" area.
+  - 1 dead click at (1472, 734) - likely misclick on non-interactive element.
+- Click redundancy: 4/5 primary actions (Export, Chart, Stats Cards, Sidebar, Data Table) triggered twice within 100-200ms.
+
+4. INTERACTION SPEED
+- Extremely rapid with consistent acceleration:
+  - First action (click) at 0.4s post-load.
+  - Mean time between actions: 320ms (σ=210ms).
+  - Peak speed: 6 actions in 480ms (2.61-3.09s) during rage click sequence.
+- Hesitation markers:
+  - Initial 402ms hesitation before first click.
+  - Hover times: 64-171ms (median 138ms) before primary clicks.
+
+5. CONTENT PREFERENCES
+- No content consumption detected (no text selection, no dwell time on paragraphs).
+- Functional element preferences:
+  1) Data export (first interaction at 0.85s)
+  2) Data visualization ("Chart" at 1.69s)
+  3) Summary metrics ("Stats Cards" at 2.33s)
+  4) Navigation ("Sidebar" at 3.85s)
+  5) Tabular data ("Data Table" at 4.51s)
+- Ignored: Static text, images, non-interactive elements.
+
+6. TYPING BEHAVIOR
+- No typing detected in 4.9s session.
+- No input fields interacted with.
+- No corrections or text entry of any kind.
+
+7. FEATURE DISCOVERY
+- Discovered and used 5/5 primary interactive features in strict order:
+  1) Export (0.85s)
+  2) Chart interaction (1.69s)
+  3) Stats Cards (2.33s)
+  4) Sidebar navigation (3.85s)
+  5) Data Table (4.51s)
+- Ignored features:
+  - Search functionality (no search bar interactions)
+  - Filter/sort controls (no dropdowns or toggles)
+  - Help/documentation (no tooltips or info icons)
+  - User account controls (no profile/avatar clicks)
+
+8. SESSION FLOW
+- Phase 1: Orientation (0-0.85s)
+  - Page load → initial hesitation (402ms) → rapid shallow scroll (0-107px).
+  - Goal identification: Export functionality located in <1s.
+- Phase 2: Primary Task Execution (0.85-2.47s)
+  - Export attempt (double-click at 0.85-1.09s) → deep scroll to Chart → retreat to Stats Cards.
+  - 40% of total session time spent on first 3 interactions.
+- Phase 3: Frustration (2.47-3.09s)
+  - 6 rage clicks in 620ms window targeting Stats Cards area.
+  - Dead click at 3.42s suggests failed interaction.
+- Phase 4: Recovery & Exploration (3.09-4.9s)
+  - Scroll reset → deep dive to bottom → Sidebar interaction → Data Table engagement.
+  - Session ends mid-interaction with Data Table (no completion observed).
+- Exit: Abrupt termination at 4.9s during Data Table click sequence.
+```
+
+Key Quantitative Metrics:
+- Actions per second: 3.06
+- Scroll distance: 788px in 4.31s (183px/s)
+- Error rate: 40% of clicks (6/15)
+- Feature discovery rate: 1.02 features/second
+- Interaction redundancy: 80% of primary features double-clicked

@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-driven with no exploratory detours.
+- Progression follows a strict top-to-bottom path: page load → scroll → click "Cart Summary" → scroll → click "Card Number" → scroll → click "Pay Now" → rage clicks → scroll → click "Back to Shop" → scroll up → click "Email".
+- No lateral movement (e.g., no clicks on navigation menus, product links, or help icons).
+- Total unique page elements interacted with: 4 (Cart Summary, Card Number, Pay Now, Back to Shop, Email).
+
+2. READING BEHAVIOR
+- Skimming confirmed by rapid, incremental scrolls.
+- Scroll speed: 120–150 px/s (e.g., 0.39–0.88 s: 30 px → 154 px in 0.49 s).
+- No pauses > 200 ms at any scroll depth, indicating no deep reading.
+- Max scroll depth: 992 px (viewport height 1080 px), suggesting user saw ~92 % of page content but did not dwell on any section.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions observed.
+- All interactions are transactional: clicks on form fields and buttons.
+- No engagement with secondary content (e.g., promotions, upsells, FAQs).
+
+4. INTERACTION SPEED
+- Fast and accelerating.
+- Initial hesitation: 325 ms before first click (0.33 s).
+- Subsequent clicks average 240 ms hover time (159–196 ms range).
+- Time between primary actions:
+  • Page load → first click: 0.33 s
+  • Cart Summary → Card Number: 0.97 s
+  • Card Number → Pay Now: 0.73 s
+  • Pay Now → Back to Shop: 1.17 s
+- Rage clicks on "Pay Now" button: 6 clicks in 0.61 s (4.9 clicks/s), indicating frustration.
+
+5. CONTENT PREFERENCES
+- No content preferences detectable; session is purely checkout-focused.
+- Only interacted with checkout form fields and buttons (Cart Summary, Card Number, Pay Now, Back to Shop, Email).
+- No product pages, category pages, or informational content accessed.
+
+6. TYPING BEHAVIOR
+- No typing observed in the log.
+- Clicks on input fields ("Card Number", "Email") suggest intent to type, but no keystrokes or input lengths recorded.
+
+7. FEATURE DISCOVERY
+- Features used:
+  • Cart Summary (clicked twice at 0.88 s and 1.21 s)
+  • Card Number input (clicked at 1.85 s and 2.07 s)
+  • Pay Now button (clicked at 2.80 s, followed by rage clicks)
+  • Back to Shop link (clicked at 4.07 s and 4.28 s)
+  • Email input (clicked at 4.91 s and 5.29 s)
+- Features ignored:
+  • Navigation menus, search bar, product recommendations, help/chat widgets, footer links, promo codes, shipping options, guest checkout.
+
+8. SESSION FLOW
+- Arc: Goal-driven checkout → frustration → abandonment → partial recovery.
+- 0.0–0.88 s: Orientation (page load, initial scroll, Cart Summary hover).
+- 0.88–2.80 s: Form completion (Card Number input, rapid scroll to bottom).
+- 2.80–3.56 s: Frustration peak (rage clicks on Pay Now button).
+- 3.56–4.28 s: Recovery attempt (scroll down, click Back to Shop).
+- 4.28–5.29 s: Reorientation (scroll up, click Email input).
+- Session ends at 5.29 s with no further actions.
+```

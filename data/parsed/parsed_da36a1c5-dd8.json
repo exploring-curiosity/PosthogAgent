@@ -1,0 +1,103 @@
+{
+  "user_profile": {
+    "session_id": "da36a1c5-dd8",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "unknown",
+    "device_type": "desktop",
+    "viewport_width": 1440.0,
+    "viewport_height": 900.0,
+    "screen_width": 1440.0,
+    "screen_height": 900.0
+  },
+  "session_duration_s": 11.0,
+  "total_raw_events": 9,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://yoursite.com",
+      "viewport": "1440.0x900.0"
+    },
+    {
+      "time": 1.2,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "Products [HOVER 800ms]",
+      "target_href": "",
+      "target_class": "nav.menu a",
+      "coordinates": [
+        400,
+        250
+      ]
+    },
+    {
+      "time": 2.0,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "Products",
+      "target_href": "",
+      "target_class": "nav.menu a",
+      "coordinates": [
+        400,
+        250
+      ]
+    },
+    {
+      "time": 3.5,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 5.0,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2500ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 7.5,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Buy Now",
+      "target_href": "",
+      "target_class": "button.buy-now",
+      "coordinates": [
+        600,
+        400
+      ]
+    },
+    {
+      "time": 9.0,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 0,
+      "max_depth": 0,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 11.0,
+      "action": "CLICK",
+      "target_tag": "a",
+      "target_text": "Learn More",
+      "target_href": "",
+      "target_class": "a.learn-more",
+      "coordinates": [
+        350,
+        700
+      ]
+    }
+  ]
+}

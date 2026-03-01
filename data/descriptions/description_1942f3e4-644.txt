@@ -1,0 +1,73 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with frequent back-and-forth movements. They repeatedly target the same UI elements (e.g., "Cart Summary" clicked 4 times at [2.19s], [3.4s], [5.14s], [7.83s]) and input fields ("Email" at [0.7s]/[0.9s], "Card Number" at [1.42s]/[1.69s]/[4.42s]/[4.57s]).
+- **Dead clicks**: 3 instances ([2.71s], [4.09s], [8.87s]) suggest misclicks or UI confusion, particularly at non-interactive areas (e.g., (1578, 173)).
+- **Viewport coverage**: Max scroll depth (1025px) spans ~95% of a 1080px viewport, but scroll steps are small (40–50px increments) and directionally inconsistent (e.g., scrolls down to 341px at [3.05s], then up to 210px by [4.89s]).
+
+2. READING BEHAVIOR
+- **Skim-heavy with no deep reading**: Scroll speed is rapid (0.5s per 40–50px increment) and lacks pauses. No dwell time >200ms on any static content block.
+- **Scroll patterns**:
+  - **Downward skimming**: 12 downward scrolls (e.g., [0.27s]–[1.12s], [2.79s]–[3.05s]) with no pauses >300ms.
+  - **Upward retracing**: 5 upward scrolls ([1.77s]–[1.89s], [4.62s]–[4.89s]) to revisit prior sections (e.g., from 300px to 122px at [1.89s]).
+- **No evidence of reading**: No text selection, no hover pauses >200ms on non-interactive text (only on clickable elements).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: This is a checkout flow; no voting/commenting exists. Instead:
+  - **Input-focused**: 6 clicks on form fields ("Email", "Card Number"), but no typing or submission data is logged.
+  - **Repetitive clicks**: 4 clicks on "Cart Summary" (avg. 1.8s between clicks) suggest UI testing or frustration.
+  - **Dead clicks**: 3/15 total clicks (20%) are non-functional, indicating poor precision or UI expectations mismatch.
+
+4. INTERACTION SPEED
+- **Hyper-fast with hesitation spikes**:
+  - **Median action interval**: 0.3s (e.g., [0.2s] click → [0.27s] scroll).
+  - **Hesitation outliers**:
+    - 199ms pre-click pause at [0.2s].
+    - 2375ms pause at [7.51s] (longest in session, preceding final "Cart Summary" click).
+  - **Click latency**: Avg. 100ms hover before clicks (e.g., 114ms on "Email" at [0.7s], 83ms on "Card Number" at [1.42s]).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**:
+  - **Form fields**: 40% of clicks target "Email" or "Card Number" (6/15 clicks).
+  - **Cart summary**: 27% of clicks (4/15) on "Cart Summary" div, suggesting price/quantity verification.
+  - **Exit trigger**: Final action is "Back to Shop" ([8.22s]), implying abandonment of checkout.
+- **No content consumption**: No clicks on product details, images, or descriptive text.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Despite 6 clicks on input fields, no keystrokes, corrections, or input lengths are logged. Possible causes:
+  - Autofill pre-population (not interacted with).
+  - Session recording limitations (e.g., masked inputs).
+  - User hesitation/abandonment before typing.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Form inputs**: "Email" and "Card Number" fields (repeatedly clicked).
+  - **Cart summary**: Clicked 4 times, likely to expand/collapse or verify totals.
+  - **Navigation**: "Back to Shop" link ([8.22s]).
+- **Ignored features**:
+  - **Payment methods**: No clicks on radio buttons, dropdowns, or "Pay Now" buttons.
+  - **Promo codes**: No interaction with promo fields (if present).
+  - **Help/chat**: No clicks on support links or icons.
+
+8. SESSION FLOW
+- **Phase 1: Initial Skim (0.0s–1.12s)**
+  - Loads checkout page → immediate click at (0,0) ([0.2s]) → rapid downward scroll to 300px ([1.12s]).
+  - **Goal**: Quick scan of page structure (no deep reading).
+- **Phase 2: Input Field Testing (1.42s–4.57s)**
+  - Clicks "Card Number" ([1.42s]), scrolls up/down ([1.77s]–[4.89s]), re-clicks "Card Number" ([4.42s]).
+  - **Behavior**: Repetitive clicks on inputs suggest UI confusion or validation issues.
+- **Phase 3: Cart Verification (2.19s–7.83s)**
+  - 4 clicks on "Cart Summary" ([2.19s], [3.4s], [5.14s], [7.83s]) with scrolls between.
+  - **Behavior**: Likely checking order details, but no edits or confirmations.
+- **Phase 4: Abandonment (7.51s–8.87s)**
+  - 2.38s hesitation ([7.51s]) → final "Cart Summary" click ([7.83s]) → scrolls to bottom → clicks "Back to Shop" ([8.22s]).
+  - **Exit**: Session ends with a dead click ([8.87s]), no checkout completion.
+- **Arc**: **Exploration (0–1s) → Frustration (1–7s) → Abandonment (7–9s)**.
+  - No progression to payment submission; user exits to shop.
+```
+
+**Key Observations**:
+- **Synthetic/impulsive behavior**: Rapid, repetitive clicks and scrolls suggest a bot, automated test, or user with ADHD/impulsivity.
+- **UI friction**: Dead clicks and repeated input clicks imply unclear affordances or validation errors.
+- **No conversion**: Session ends with checkout abandonment; no payment data entered.

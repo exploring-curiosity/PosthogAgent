@@ -1,0 +1,80 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and reactive**: The user exhibits no clear linear progression through the settings interface. Navigation is characterized by:
+  - Rapid toggling between sections (e.g., Notifications → Privacy → Notifications → Settings Nav within 4.63s–7.13s).
+  - 6 distinct section switches in 8.7s (Notifications: 3x, Privacy: 1x, Settings Nav: 2x).
+  - 40% of clicks (8/20) are non-functional (dead/rage clicks), suggesting disorientation or frustration.
+- **Viewport-driven**: Clicks cluster near the bottom of the viewport (e.g., "Save Changes" at 926px, "Privacy" at 714px), indicating reliance on visible UI elements rather than deliberate exploration.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns reveal no deep reading:
+  - **Scroll velocity**: 114px–140px per 0.5s (consistent across 12 scroll actions), equivalent to ~228–280px/s.
+  - **Max depth**: 926px (viewport height: 1080px), but no pauses >0.3s to suggest content absorption.
+  - **Directional reversals**: 3 upward scroll sequences (e.g., 2.94s–3.03s, 4.12s–4.2s) with no re-engagement at prior depths, indicating abandonment of content.
+- **No dwell time**: Longest pause between actions is 1.69s (hesitation at 6.87s), but no evidence of reading (e.g., no cursor tracking or text selection).
+
+3. ENGAGEMENT STYLE
+- **No substantive engagement**: The session contains zero:
+  - Form submissions (despite "Save Changes" clicks).
+  - Text input (no typing detected).
+  - Toggle/checkbox interactions (despite Notifications/Privacy clicks).
+- **Click metrics**:
+  - **Functional clicks**: 12/20 (60%) target UI elements (e.g., "Notifications," "Privacy").
+  - **Non-functional clicks**: 8/20 (40%) are dead/rage clicks (e.g., 4 rage clicks on "Privacy" at 3.78s–4.08s).
+  - **Hover-to-click latency**: 46ms–133ms (median: 78ms), suggesting impulsive interactions.
+
+4. INTERACTION SPEED
+- **Hyper-fast and erratic**:
+  - **Action frequency**: 20 actions in 8.7s = 2.3 actions/s.
+  - **Inter-action latency**:
+    - Median: 0.34s (e.g., 0.34s–0.37s between page load and first click).
+    - Fastest: 0.03s (e.g., 2.01s–2.09s between dead click and scroll).
+    - Slowest: 1.69s (hesitation at 6.87s).
+  - **Scroll bursts**: 4–5 consecutive scrolls in 0.5s intervals (e.g., 0.37s–0.62s), indicating rapid scanning.
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: All interactions target the settings page (https://example.com/settings). No evidence of:
+  - Subreddit/content browsing.
+  - Search or discovery features.
+- **Section preferences**:
+  - **Notifications**: 5 clicks (3 functional, 2 rage).
+  - **Privacy**: 5 clicks (1 functional, 4 rage).
+  - **Settings Nav**: 2 clicks (both functional).
+  - **Save Changes**: 2 clicks (both functional, but no form submission).
+
+6. TYPING BEHAVIOR
+- **None detected**: No text input, corrections, or form fields interacted with. All clicks target static UI elements.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Navigation**: Settings sidebar ("Settings Nav" clicked twice).
+  - **Section tabs**: Notifications (3x), Privacy (1x).
+  - **Save button**: Clicked twice (2.49s, 2.87s) but not submitted.
+- **Ignored features**:
+  - **Form fields**: No toggles, checkboxes, or text inputs interacted with.
+  - **Help/documentation**: No clicks on tooltips, FAQs, or support links.
+  - **Account/profile settings**: No evidence of engagement (e.g., no "Profile" or "Security" clicks).
+
+8. SESSION FLOW
+- **Arc**: **Frustration-driven abandonment** with no goal completion.
+  - **0.0s–0.92s (Exploration)**:
+    - Page load → immediate hesitation (337ms) → rapid scrolling (5 scrolls in 0.25s) to scan content.
+  - **0.92s–4.12s (False Engagement)**:
+    - Clicks "Notifications" (0.92s) and "Save Changes" (2.49s), but no form submission.
+    - Rage clicks on "Privacy" (3.78s–4.08s) after failing to interact meaningfully.
+  - **4.12s–7.37s (Disengagement)**:
+    - Scrolls upward (4.12s–4.2s), then re-clicks "Notifications" (4.63s) and "Settings Nav" (5.18s).
+    - Long hesitation (1.69s at 6.87s) suggests cognitive load or confusion.
+  - **7.37s–8.75s (Abandonment)**:
+    - Final rage clicks on "Notifications" (8.37s–8.69s) with no resolution.
+    - Session ends mid-rage-click sequence (8.75s).
+- **Exit**: No logout, navigation away, or successful action. Likely closed tab/browser.
+```
+
+**KEY INSIGHTS**:
+- **Behavioral signature**: Synthetic/impulsive clicker (as labeled in device data) with **zero task completion** despite high interaction volume.
+- **Frustration markers**: 40% of clicks are dead/rage clicks; median hover-to-click latency (78ms) is abnormally fast for deliberate use.
+- **Scrolling as proxy for reading**: Velocity and lack of pauses confirm **no content absorption**—user is scanning for UI elements, not information.
+- **Session outcome**: **Failure**. No settings were saved, no forms submitted, and no clear goal achieved. Likely a bot, synthetic test, or severely frustrated human user.

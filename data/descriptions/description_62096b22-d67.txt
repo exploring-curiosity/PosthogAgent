@@ -1,0 +1,92 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern Type**: Scattered with forced linearity
+- **Evidence**:
+  - Initial hesitation (740ms) suggests uncertainty or distraction at [0.74s].
+  - Rapid, sequential scrolling (4 scrolls in 0.5s intervals, [0.77s–0.95s]) indicates skimming, not exploration.
+  - Repeated clicks on "Settings Nav" ([1.44s], [2.93s]) and "Profile" ([3.55s], [5.04s]) show forced re-engagement with core navigation.
+  - Dead click at [5.35s] (651, 717) suggests misaligned expectations or accidental interaction.
+  - Final clicks on "Notifications" ([5.98s], [9.02s]) follow a similar hesitation pattern (341ms hover, 1560ms hesitation).
+- **Quantitative**: 6/14 actions (43%) are repeated clicks on the same UI elements, indicating navigation friction.
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with no deep reading
+- **Evidence**:
+  - Scroll speed: 140px/0.5s (280px/s) during initial descent ([0.77s–0.95s]), far exceeding typical reading speed (200–300 words/min ≈ 50–100px/s for dense text).
+  - Max scroll depth (563px) reached in 1.7s, then immediate upward scroll ([2.97s–3.03s]) suggests no content absorption.
+  - No pauses >500ms on any scroll segment; longest dwell time is 221ms hover on "Settings Nav" ([1.44s]).
+- **Quantitative**: 0% of scroll segments show reading-compatible speeds (<100px/s).
+
+3. ENGAGEMENT STYLE
+- **Pattern**: Non-engaged; no substantive interactions
+- **Evidence**:
+  - No votes, comments, or form submissions detected.
+  - All clicks target navigation elements ("Settings Nav", "Profile", "Notifications") or dead space.
+  - Hover times (221–341ms) are below typical decision-making thresholds (500ms+).
+- **Quantitative**: 0/14 actions (0%) involve content creation or feedback.
+
+4. INTERACTION SPEED
+- **Pattern**: Rapid but erratic
+- **Evidence**:
+  - Median inter-action time: 0.57s (excluding scrolls).
+  - Fastest sequence: 3 scrolls in 1.1s ([0.77s–0.95s]).
+  - Longest pauses: 1.56s hesitation at [7.54s] (likely distraction or confusion).
+  - Click intervals:
+    - "Settings Nav" → "Profile": 0.62s ([2.93s–3.55s]).
+    - "Profile" → "Notifications": 0.93s ([5.04s–5.98s]).
+- **Quantitative**: 64% of actions occur within 1s of the previous action.
+
+5. CONTENT PREFERENCES
+- **Pattern**: No content engagement; only navigation tabs
+- **Evidence**:
+  - All clicks target top-level navigation:
+    - "Settings Nav" (2 clicks).
+    - "Profile" (2 clicks).
+    - "Notifications" (2 clicks).
+  - No clicks on content cards, buttons, or interactive elements.
+  - Scroll depth (563px) suggests exposure to ~3–4 screenfuls of content, but no engagement.
+- **Quantitative**: 0% of actions target content; 100% target navigation.
+
+6. TYPING BEHAVIOR
+- **Pattern**: No typing detected
+- **Evidence**:
+  - No form fields, search bars, or text inputs interacted with.
+  - No keystroke logs or input events recorded.
+- **Quantitative**: 0/14 actions (0%) involve typing.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Navigation tabs ("Settings", "Profile", "Notifications").
+  - Scrolling (vertical only).
+- **Ignored Features**:
+  - No interaction with:
+    - Form fields (e.g., profile settings, notification toggles).
+    - Buttons (e.g., "Save", "Cancel").
+    - Content cards or lists.
+    - Search or filter tools.
+- **Quantitative**: 3/3 discovered features are navigation-only; 0/10+ potential features engaged.
+
+8. SESSION FLOW
+- **Arc**: Forced navigation → Dead-end exploration → Abrupt exit
+- **Phases**:
+  1. **Entry (0.0s–0.74s)**: Page load; 740ms hesitation (distraction/confusion).
+  2. **Skimming (0.77s–0.95s)**: Rapid downward scroll (4 scrolls in 1.1s) to max depth (563px).
+  3. **Navigation Attempt (1.44s–2.93s)**: Clicks "Settings Nav" twice with 221ms hover; no follow-through.
+  4. **Backtracking (2.97s–3.03s)**: Upward scroll (246px in 0.6s) suggests retreat.
+  5. **Profile Focus (3.55s–5.35s)**: Clicks "Profile" twice; dead click at [5.35s] (possible misclick or broken UI).
+  6. **Notifications (5.98s–9.02s)**: Clicks "Notifications" twice with 341ms hover; 1.56s hesitation at [7.54s].
+  7. **Exit (9.02s)**: Final click on "Notifications" with no subsequent actions.
+- **Quantitative**:
+  - 3 distinct navigation targets ("Settings", "Profile", "Notifications").
+  - 0% of session spent on content; 100% on navigation.
+  - 2 dead clicks (14% of actions).
+  - Session ends with no resolution (no settings saved, no profile updated).
+```
+
+**SUMMARY**: This session reflects a **non-human or synthetic interaction** (consistent with the "synthetic/scanner" device label). Key indicators:
+- Inhumanly fast scroll speeds (280px/s).
+- Repeated clicks on navigation elements with no follow-through.
+- No typing, reading, or content engagement.
+- Dead clicks and (0,0) coordinate interactions suggest automated probing or broken instrumentation.

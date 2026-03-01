@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with 5 distinct "scroll-and-click" cycles (0-2.7s, 2.7-6.6s, 6.6-11.5s, 11.5-13.7s, 13.7-16.4s). Each cycle follows a predictable sequence:
+  1) Rapid downward scroll (avg 7 scrolls/cycle, 0.5s duration each)
+  2) Click on primary CTA ("Pay Now" or "Back to Shop")
+  3) Immediate upward scroll (avg 5 scrolls/cycle)
+  4) Re-engagement with form fields (Email/Card Number)
+- **No exploration**: Zero navigation to other pages/sections beyond checkout. All actions confined to a single URL.
+
+2. READING BEHAVIOR
+- **Skimming with zero dwell time**: Scroll speed averages 150px/0.5s (300px/s), with no pauses >200ms between scrolls. Max scroll depth (1024px) suggests they saw ~95% of the page content, but:
+  - No sustained viewing of any section (scrolls past "Cart Summary" 3x without stopping)
+  - 100% of clicks occur during/immediately after scrolling (no evidence of reading)
+- **Hesitation markers**: Two explicit "[HESITATION]" events (1.25s, 11.44s) totaling 4.2s of inaction, but no correlation with specific content.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: Zero form submissions, comments, or votes (not applicable to checkout context).
+- **Frustration-driven interactions**:
+  - **Rage clicks**: 10 total (3 on "Cart Summary", 7 on form fields), clustered in 3 bursts (3.55-3.88s, 12.83-13.26s, 14.7-15.1s)
+  - **Dead clicks**: 4 total (5.37s, 11.84s, 13.46s, 16.37s), all on non-interactive elements
+  - **Hover-to-click ratio**: 1.0 (every hover precedes a click within 30-150ms)
+- **CTA abandonment**: Attempted "Pay Now" 3x (4.42s, 7.62s, 15.54s) but never completed submission.
+
+4. INTERACTION SPEED
+- **Hyper-fast with forced delays**:
+  - **Action frequency**: 1.8 actions/second (29 actions in 16.4s)
+  - **Click latency**: 240ms median between hover and click (range: 30-147ms)
+  - **Scroll cadence**: 0.5s per scroll (120ms between scroll events)
+  - **Forced pauses**: Two hesitation events (1.25s, 11.44s) account for 25% of session duration
+- **No typing**: Zero keystrokes detected despite clicking on "Email" and "Card Number" fields.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: All interactions target UI elements, not informational content.
+- **Element focus**:
+  - **Form fields**: 12 clicks on "Email" (66% of field interactions) vs. 2 on "Card Number"
+  - **CTAs**: 6 clicks on "Back to Shop" (46% of CTA interactions) vs. 3 on "Pay Now"
+  - **Cart Summary**: 6 clicks (2 rage clusters) suggest confusion about order details
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Despite 12 clicks on "Email" and 2 on "Card Number" fields:
+  - Zero keystrokes logged
+  - Zero input length recorded
+  - No corrections or deletions
+- **Field abandonment**: All form field clicks followed by immediate scrolling/rage clicks within 1.5s.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Primary CTAs: "Pay Now" (3 attempts), "Back to Shop" (3 attempts)
+  - Form fields: "Email" (6 attempts), "Card Number" (2 attempts)
+  - Cart Summary section (6 clicks)
+- **Ignored features**:
+  - No interaction with: promo codes, shipping options, product details, or help links
+  - No mouse movement toward non-clicked elements (e.g., "Remember me" checkbox)
+  - No tooltips or dropdowns expanded
+
+8. SESSION FLOW
+- **Phase 1: Initial Confusion (0-2.7s)**
+  - Loads page → 1.25s hesitation → rapid scroll to bottom → clicks "Back to Shop" (abandons)
+- **Phase 2: False Start (2.7-6.6s)**
+  - Scrolls back up → clicks "Cart Summary" (rage clicks) → attempts "Email" field → scrolls down → clicks "Pay Now" (abandons)
+- **Phase 3: Repetition (6.6-11.5s)**
+  - Scrolls up → re-clicks "Email" → scrolls down → clicks "Pay Now" (abandons) → 2.96s hesitation
+- **Phase 4: Escalation (11.5-13.7s)**
+  - Clicks "Back to Shop" → scrolls up → rage clicks "Email" (5x) → scrolls down → clicks "Back to Shop"
+- **Phase 5: Final Attempt (13.7-16.4s)**
+  - Scrolls up → clicks "Email" (rage clicks) → scrolls down → clicks "Back to Shop" → dead click (exit)
+
+**OVERALL ARC**:
+A **frustration-driven loop** with no progression toward completion. The user cycles through the same 4-5 actions (scroll down → click CTA → scroll up → click form field → rage click) 5 times, with increasing aggression (rage clicks escalate from 3→5→4 per cycle). Zero evidence of problem-solving or help-seeking behavior. Session ends mid-cycle with a dead click, suggesting abrupt abandonment.
+```

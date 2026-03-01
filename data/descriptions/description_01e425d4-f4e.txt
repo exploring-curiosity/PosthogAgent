@@ -1,0 +1,60 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Linear with Targeted Exploration**: The user follows a clear, sequential path through the dashboard's primary components (Sidebar → Stats Cards → Chart → Data Table → Export). No random jumps or backtracking to unrelated elements.
+- **Sidebar-Centric Navigation**: 3/8 clicks (37.5%) target the sidebar (4.79s, 8.19s), suggesting it was used as a primary navigation hub.
+- **No Dead-Ends**: Every interaction leads to further engagement (e.g., clicking a chart triggers deeper scroll into the data table).
+
+2. READING BEHAVIOR
+- **Skimmer with Selective Deep Dives**:
+  - **Scroll Speed**: Average scroll duration = 0.5s per 200–250px segment (12 segments total). Rapid, consistent speed (400–500px/s) indicates skimming.
+  - **Depth**: Max scroll depth = 793px (11.3s), but only 2 components (Chart, Data Table) received >1s of hover time (409ms and 485ms respectively), suggesting targeted reading.
+  - **Directional Shifts**: 3 upward scrolls (8.25s–15.14s) totaling 736px, likely to revisit prior content (e.g., returning to Export button after reviewing data).
+
+3. ENGAGEMENT STYLE
+- **No Traditional "Engagement" Actions**: The log shows no votes, comments, or form submissions. All interactions are navigational/functional (clicks, scrolls).
+- **Hover-Driven Decision Making**:
+  - 4/8 clicks (50%) preceded by hovers (avg duration = 506ms).
+  - Hover-to-click latency: 409–701ms, indicating deliberate evaluation before action.
+- **Hesitation Markers**: 3 instances of "[HESITATION Xms]" (3.8s, 7.36s, 14.16s, 17.91s) totaling 10.57s (56.5% of session duration), suggesting cognitive load or uncertainty.
+
+4. INTERACTION SPEED
+- **Deliberate with Bursts of Speed**:
+  - **Action Intervals**: Avg time between clicks = 2.34s (excluding hesitations). Fastest interval = 0.65s (9.64s–10.48s), slowest = 3.57s (11.96s–14.16s).
+  - **Scroll Clusters**: 12 scrolls grouped into 4 bursts (3.84s–3.96s, 8.25s–8.3s, 9.71s–9.92s, 11.19s–11.3s), each covering ~200–300px in <1s.
+  - **Click Latency**: Avg hover-to-click = 506ms; avg hesitation-to-click = 2.14s.
+
+5. CONTENT PREFERENCES
+- **Data-Driven Components**:
+  - **Stats Cards**: 2 clicks (8.99s, 9.64s) with 430ms hover.
+  - **Chart**: 2 clicks (10.48s, 11.12s) with 409ms hover.
+  - **Data Table**: 2 clicks (11.96s, 14.89s) with 485ms hover.
+- **Functional Priority**: Final action = Export (15.91s–18.73s), indicating goal-oriented behavior (data extraction).
+- **Ignored Content**: No interactions with headers, footers, or non-data elements.
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**: The log contains no text inputs, corrections, or form submissions. All interactions are point-and-click.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - **Navigation**: Sidebar (3 clicks), Stats Cards (2), Chart (2), Data Table (2).
+  - **Export**: Final action (1 click), suggesting discovery of this feature late in the session.
+- **Ignored Features**:
+  - **Search/Filter**: No interactions with search bars or filters.
+  - **Settings/Help**: No clicks on user menus, help icons, or configuration options.
+  - **Social/Sharing**: No engagement with share buttons or collaborative features.
+
+8. SESSION FLOW
+- **Arc**: **Targeted Exploration → Data Review → Export**
+  - **0.0s–4.79s (25.6%)**: Initial orientation (page load, hesitation, sidebar hover).
+  - **4.79s–11.96s (38.3%)**: Linear exploration (Stats Cards → Chart → Data Table).
+  - **11.96s–15.91s (21.1%)**: Re-evaluation (upward scrolls, hesitation, return to top).
+  - **15.91s–18.73s (15.0%)**: Goal completion (Export click).
+- **Exit**: Session ends immediately after Export click (no post-action browsing).
+
+KEY INSIGHTS:
+- **Goal-Oriented**: The user’s path suggests a clear objective (likely data extraction), with minimal exploratory detours.
+- **Efficiency Trade-Offs**: Rapid scrolling but prolonged hesitations indicate prioritization of speed over thoroughness, balanced by careful click validation (hovers).
+- **Desktop Optimization**: Precise clicks (e.g., (1554, 176)) and large scroll ranges align with desktop usage patterns.
+```

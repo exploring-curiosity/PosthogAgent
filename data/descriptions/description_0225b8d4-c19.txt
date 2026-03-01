@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Linear with Exploratory Detours**: The user follows a structured, top-to-bottom progression through the dashboard but with clear deviations to interact with specific elements. Navigation is not purely linear (e.g., they scroll down, then up, then down again) but is anchored to distinct UI components (sidebar → stats cards → chart → data table → export button).
+- **Component-Focused**: Actions cluster around discrete UI elements (e.g., 4 clicks on 2 components: "Stats Cards" and "Chart"). The user does not appear to browse aimlessly; each interaction targets a specific feature.
+- **No Backtracking**: No evidence of revisiting previously loaded pages or using browser back/forward buttons.
+
+2. READING BEHAVIOR
+- **Skimmer with Selective Deep Dives**: Scroll patterns suggest rapid skimming with brief pauses for interaction:
+  - **Initial Skim (0–1.39s)**: Scrolls from 0px to 838px in 4 discrete jumps (167px increments) over 1.39s, averaging **~600px/s**. No pauses >200ms, indicating no deep reading.
+  - **Targeted Engagement (2.05–8.59s)**: After clicking the sidebar (2.05s), scrolls up/down in smaller increments (e.g., 312px–456px at 4.96s) with **hover delays (311–790ms)** before clicks, suggesting focused attention on specific content.
+  - **No Static Reading**: No periods >500ms without scrolling or clicking, implying no prolonged reading of text blocks.
+
+3. ENGAGEMENT STYLE
+- **Interaction-Only, No Content Creation**: The user **does not vote, comment, or input text**. All actions are clicks or scrolls.
+- **Click Timing**:
+  - **Hover-to-Click Latency**: Ranges from **311ms** (sidebar) to **790ms** (chart/export), averaging **~500ms**. This suggests deliberate targeting, not impulsive clicks.
+  - **Double-Clicks**: 4 instances of rapid sequential clicks on the same element (e.g., "Stats Cards" at 3.64s/4.82s), possibly indicating UI responsiveness issues or confirmation behavior.
+- **No Social Engagement**: No evidence of upvotes, replies, or sharing.
+
+4. INTERACTION SPEED
+- **Deliberate but Efficient**:
+  - **Action Intervals**: Average **1.3s between major actions** (e.g., 2.05s → 3.64s = 1.59s; 4.82s → 5.99s = 1.17s). Longest pause: **1.12s** (8.59s–9.62s).
+  - **Scroll Speed**: Consistent **~330px/s** during both up/down scrolls (e.g., 167px in 0.5s).
+  - **Hesitation**: Single instance of **1165ms hesitation** at (0,0) (1.17s), likely a false start or UI lag.
+
+5. CONTENT PREFERENCES
+- **Dashboard-Centric**: All interactions occur on a single page (`/dashboard`), focusing on:
+  - **Sidebar Navigation** (2.05s–2.84s): Likely a menu or filter panel.
+  - **Stats Cards** (3.64s–4.82s): High-level metrics or summaries (top-right of viewport).
+  - **Chart** (5.99s–6.63s): Data visualization (center of viewport).
+  - **Data Table** (7.52s–8.39s): Tabular data (bottom of viewport).
+  - **Export Button** (9.62s–10.42s): Likely a CTA for data extraction.
+- **No Content Diversion**: No clicks on links, images, or non-dashboard elements.
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**: Zero text inputs, corrections, or form submissions. The session is purely navigational.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Sidebar navigation (2 clicks).
+  - Stats cards (2 clicks).
+  - Chart (2 clicks).
+  - Data table (2 clicks).
+  - Export button (2 clicks).
+- **Ignored Features**:
+  - No interaction with headers, footers, or non-clickable text.
+  - No evidence of tooltips, modals, or dropdowns.
+  - No search or filter inputs.
+  - No social/share buttons.
+
+8. SESSION FLOW
+- **Arc**: **Targeted Exploration → Feature Testing → Data Extraction**
+  - **0.0–2.05s (Orientation)**: Page load → initial skim (838px scroll) → sidebar hover (311ms).
+  - **2.05–4.82s (Navigation)**: Sidebar click → scroll up → stats cards hover/click.
+  - **4.82–6.63s (Data Review)**: Scroll down → chart hover/click (longest hover: 790ms).
+  - **6.63–8.39s (Deep Dive)**: Scroll to data table → hover/click.
+  - **8.39–10.42s (Exit)**: Scroll up → export button hover/click → session ends.
+- **Exit**: Abrupt termination after export click (no confirmation or follow-up actions).
+- **Session Goal**: Likely **data extraction** (export button as final action), with prior interactions serving to locate or verify data.
+
+SUMMARY
+This user exhibits **highly methodical, task-driven behavior** with no exploratory detours. Their actions suggest a **goal-oriented workflow** (e.g., "find data → verify → export") rather than casual browsing. Scroll patterns and hover delays indicate **selective attention** to specific UI components, while the lack of typing or social engagement implies a **consumer-only** role. The session’s brevity (10.4s) and linear progression point to **familiarity with the dashboard layout**, though the synthetic/methodical user label hints this may be an automated or QA test.
+```

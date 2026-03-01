@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly linear and goal-directed with minimal deviation.
+- Moves sequentially through the settings interface (Privacy → Profile) without backtracking or exploratory detours.
+- No evidence of menu exploration, search usage, or cross-page navigation.
+- 100% of clicks target primary navigation elements (Privacy/Profile tabs) or the "Save Changes" button.
+
+2. READING BEHAVIOR:
+- Skimming pattern confirmed by:
+  a) Rapid scroll bursts (4 scroll actions in 0.5s intervals at 2.4s-2.55s, covering 134px total)
+  b) No sustained pauses at any scroll depth (max dwell time at any position: 0.5s)
+  c) Scroll depth never exceeds 970px (viewport height: 1080px), suggesting no full-page reading.
+- No evidence of deep reading (no pauses >1s at any scroll position).
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or content creation observed.
+- Interaction limited to:
+  a) Settings configuration (Privacy/Profile tabs)
+  b) Form submission ("Save Changes")
+- 2:0 ratio of tab clicks to save attempts (both tabs clicked twice).
+- No secondary engagement (e.g., no toggles, dropdowns, or text input detected).
+
+4. INTERACTION SPEED:
+- Fast but deliberate:
+  a) Initial hesitation: 912ms before first click (0.91s)
+  b) Subsequent actions: 0.5s-1.5s intervals between primary interactions
+  c) Hover times: 277ms-333ms (consistent with UI scanning)
+- Total session: 6.7s with 13 discrete actions (1.9 actions/second).
+- Click redundancy: 4/6 primary actions (66%) repeated within 1s (e.g., Privacy clicked at 1.57s and 2.35s).
+
+5. CONTENT PREFERENCES:
+- No content consumption observed.
+- Interaction limited to:
+  a) Privacy settings (clicked at 1.57s/2.35s)
+  b) Profile settings (clicked at 5.13s/6.18s)
+- No subreddit, post, or media engagement detected.
+
+6. TYPING BEHAVIOR:
+- No typing or text input detected in the log.
+- No corrections, deletions, or form field interactions observed.
+
+7. FEATURE DISCOVERY:
+- Used features:
+  a) Settings navigation (Privacy/Profile tabs)
+  b) "Save Changes" button
+  c) Vertical scrolling (10 scroll actions)
+- Ignored features:
+  a) No search functionality used
+  b) No account dropdown/menu interactions
+  c) No help/support links clicked
+  d) No secondary settings (e.g., notifications, security)
+  e) No mobile/desktop toggle (despite desktop viewport)
+
+8. SESSION FLOW:
+- Linear three-phase arc:
+  1. INITIALIZATION (0.0s-0.91s):
+     - Page load (0.0s)
+     - 912ms hesitation (no interaction)
+  2. PRIVACY CONFIGURATION (0.91s-4.36s):
+     - Rapid scroll to bottom (0.98s-2.55s, 970px depth)
+     - Privacy tab clicked (1.57s, 2.35s)
+     - "Save Changes" clicked (2.94s, 4.36s)
+     - Scroll up to mid-page (4.39s-4.6s)
+  3. PROFILE NAVIGATION (4.6s-6.75s):
+     - Profile tab clicked (5.13s, 6.18s)
+     - Dead click at 6.75s (session termination)
+- No exploratory phase; immediate focus on settings.
+- Exit via dead click (suggests either UI confusion or session abandonment).
+```
+
+**Key Observations:**
+- **Synthetic/Scanner Behavior:** The combination of:
+  - Perfectly timed scroll intervals (0.5s increments)
+  - Repeated clicks on identical elements
+  - Dead click at session end
+  - No typing/form interaction
+  suggests this is likely an automated session (bot, scanner, or synthetic test) rather than human behavior. The "HESITATION" and "HOVER" labels may be artifacts of the recording tool rather than genuine user behavior.

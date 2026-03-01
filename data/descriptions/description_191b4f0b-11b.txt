@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused but hesitant**: The user exhibits a linear, goal-directed path through the checkout flow (Cart Summary → Email → Card Number → Pay Now → Back to Shop) with no exploratory detours.
+- **Repetitive clicks**: 3 instances of clicking the same UI element twice (Cart Summary at 2.04s/4.71s, Email at 5.36s/6.41s, Pay Now at 10.27s/13.19s), suggesting validation or accidental clicks.
+- **No backtracking**: No use of browser back button or navigation to other pages (e.g., product pages, FAQs).
+
+2. READING BEHAVIOR
+- **Skim-focused**: Scroll patterns show rapid, incremental downward movements (e.g., 60px→118px→177px in 0.4s at 4.75–4.79s) with no pauses >0.5s, indicating minimal deep reading.
+- **Shallow engagement**: Max scroll depth (1015px) covers ~94% of a 1080px viewport, but 80% of scrolls occur in <0.5s bursts, suggesting scanning rather than reading.
+- **No hover-to-read**: Hover times (e.g., 487ms on Cart Summary, 344ms on Email) are too brief for substantive reading; likely used for target acquisition.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting**: The session is purely transactional; no interactions with social features (e.g., upvotes, comments, reviews) are recorded.
+- **Form-focused**: All clicks target form fields (Email, Card Number) or checkout buttons (Pay Now, Back to Shop).
+- **Hesitation markers**: 4 instances of "[HESITATION Xms]" clicks (1.16s, 4.14s, 8.79s, 12.7s) totaling 7.14s (48% of session duration), indicating decision pauses.
+
+4. INTERACTION SPEED
+- **Deliberate with bursts**: Average time between actions: 1.15s (excluding hesitations). Fastest sequence: 5 scrolls in 0.3s (6.55–6.62s). Slowest: 2.42s hesitation before final Pay Now click.
+- **Hover-to-click latency**: Median hover time before click: 472ms (range: 344–708ms), suggesting cautious targeting.
+- **Scroll speed**: Average scroll rate: 120px/s (e.g., 60px→118px in 0.4s), consistent with skimming.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific**: All interactions are confined to checkout elements:
+  - Cart Summary (2 clicks)
+  - Email field (2 clicks)
+  - Card Number field (2 clicks)
+  - Pay Now button (2 clicks)
+  - Back to Shop link (1 click)
+- **No product/content exploration**: No clicks on product images, descriptions, or related items.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Despite clicking Email and Card Number fields, no keystrokes or input lengths are recorded. Possible explanations:
+  - Autofill used (no manual entry).
+  - Session recording limitations (keystrokes not captured).
+  - Abandoned input after clicking.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Cart Summary (expanded/inspected).
+  - Form fields (Email, Card Number).
+  - Primary CTA (Pay Now).
+  - Exit link (Back to Shop).
+- **Ignored features**:
+  - No interactions with:
+    - Promo codes/fields.
+    - Shipping options.
+    - Payment method selectors (e.g., PayPal, Apple Pay).
+    - Help/support links.
+    - Product recommendations.
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0–2.04s)**
+  - Loads checkout page, hesitates (1.16s), scrolls minimally (60px), clicks Cart Summary after 487ms hover.
+- **Phase 2: Form Engagement (2.04–10.27s)**
+  - Hesitates (2.1s), re-clicks Cart Summary, scrolls to Email field (177px), clicks Email (344ms hover), scrolls to Card Number (272px), clicks Card Number (545ms hover).
+  - **Pattern**: Click → scroll → click next field.
+- **Phase 3: Submission Attempt (10.27–14.89s)**
+  - Clicks Pay Now (351ms hover), hesitates (2.42s), re-clicks Pay Now, scrolls to bottom (1015px), clicks Back to Shop (708ms hover).
+- **Exit**: Session ends after Back to Shop click.
+
+KEY OBSERVATIONS:
+- **Hesitation-dominated**: 48% of session time spent in recorded hesitations.
+- **Repetitive validation**: Double-clicks on 3/5 interactive elements.
+- **No completion**: Checkout abandoned (no form submission recorded).
+- **Scrolling as proxy for reading**: Rapid, incremental scrolls suggest skimming for form fields.
+```

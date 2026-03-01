@@ -1,0 +1,136 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with repetitive validation*
+- **Initial hesitation (0.0–4.79s):** 4.79s pause after page load before first interaction (text click at (0,0)), suggesting uncertainty or evaluation.
+- **Circular exploration:** User repeatedly returns to previously interacted elements (e.g., "Hero Title" clicked twice at 5.57s and 6.79s; "Navigation" at 8.78s and 10.93s; "Get Started" at 12.2s and 16.7s; "Testimonials" at 18.79s and 21.72s).
+- **Depth progression:** Scrolls incrementally deeper into the page (max depth: 1076px) but frequently backtracks (e.g., scrolls up from 720px to 477px at 21.78–21.82s).
+- **Dead click (24.33s):** Attempted interaction with a non-interactive element at (254, 1493), indicating either misidentification of clickable content or frustration.
+
+**Quantitative summary:**
+- 13 scroll actions (6 up, 7 down) over 26.8s.
+- 11 clicks, 4 of which are duplicates of prior clicks (36% redundancy).
+- 3 "HESITATION" events (4.79s, 14.97s, 20.32s) totaling 9.08s (34% of session duration).
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skim-heavy with shallow engagement*
+- **Scroll speed:** Rapid vertical movement (e.g., 0px → 200px in 1s at 4.84–4.9s; 294px → 720px in 0.5s at 16.77–16.82s). Average scroll speed: ~200px/s.
+- **Depth coverage:** Reaches 1076px (likely near page bottom) but does not linger. Max depth per section:
+  - Hero: 200px (5.57s)
+  - Navigation: 202px (11.05s)
+  - Features: 477px (23.12s)
+  - Testimonials: 720px (18.79s)
+  - Footer: 1076px (25.58s)
+- **Backtracking:** Repeatedly scrolls up after reaching new depths (e.g., from 720px to 477px at 21.78–21.82s), suggesting re-evaluation or confirmation of prior content.
+- **Hover times:** Long hovers (e.g., 1609ms on "Navigation," 1791ms on "Testimonials") indicate visual scanning but no deep reading.
+
+**Quantitative summary:**
+- 0 instances of sustained dwell (>2s) on any scroll depth.
+- 100% of scrolls are <1s in duration.
+- 4/11 clicks (36%) preceded by hovers >500ms, suggesting deliberate but superficial engagement.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *Observational with no visible output*
+- **No voting/commenting:** No actions indicate voting, commenting, or content creation (e.g., no text input, upvote/downvote clicks, or form submissions).
+- **Passive interaction:** All clicks target static elements (headings, buttons, navigation) with no evidence of dynamic engagement (e.g., no replies, no "save" actions).
+- **Hesitation clicks:** 3/11 clicks (27%) are labeled "[HESITATION]" with delays (4789ms, 2764ms, 1529ms), suggesting uncertainty or distraction.
+
+**Quantitative summary:**
+- Vote-to-comment ratio: **0:0** (no engagement actions).
+- 100% of interactions are navigational or exploratory.
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Deliberate with bursts of rapid activity*
+- **Initial delay:** 4.79s before first action.
+- **Action intervals:**
+  - Fast bursts: 0.5s between scrolls (e.g., 4.84–4.9s), 0.07s between duplicate clicks (e.g., 6.79–6.86s).
+  - Slow deliberation: 2.76s between "Get Started" hover and click (12.2s–14.97s), 1.53s between "Testimonials" hover and click (18.79s–20.32s).
+- **Hover-to-click latency:**
+  - Median: 966ms (range: 577ms–1791ms).
+  - Longest: 1791ms ("Testimonials" at 18.79s).
+
+**Quantitative summary:**
+- Average time between actions: **2.44s** (excluding initial 4.79s delay).
+- 6/11 clicks (55%) occur within 1s of prior action; 5/11 (45%) have delays >1.5s.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *Broad but shallow interest in structural elements*
+- **Gravitated toward:**
+  - **Hero section:** Clicked "Hero Title" twice (5.57s, 6.79s).
+  - **Navigation:** Clicked "Navigation" twice (8.78s, 10.93s).
+  - **CTA:** Clicked "Get Started" twice (12.2s, 16.7s).
+  - **Social proof:** Clicked "Testimonials" twice (18.79s, 21.72s).
+  - **Features:** Clicked "Features" twice (23.12s, 24.0s).
+  - **Footer:** Clicked "Footer" twice (25.58s, 26.75s).
+- **Ignored:**
+  - No clicks on images, links, or interactive widgets (e.g., forms, carousels).
+  - No evidence of reading body text (e.g., no clicks on paragraphs, no sustained scroll pauses).
+
+**Quantitative summary:**
+- 100% of clicks target **headings, navigation, or buttons**.
+- 0% of clicks target **content-rich elements** (e.g., articles, product details).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *No visible typing*
+- **No text input:** No keystrokes, form submissions, or search queries detected.
+- **No corrections:** No evidence of typing errors or edits.
+
+**Quantitative summary:**
+- Words typed: **0**.
+- Input fields interacted with: **0**.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Pattern:** *Limited to surface-level UI elements*
+- **Used features:**
+  - **Navigation:** Clicked top-level nav item (8.78s, 10.93s).
+  - **CTA buttons:** Clicked "Get Started" (12.2s, 16.7s).
+  - **Scrolling:** Vertical navigation (13 scrolls).
+- **Ignored features:**
+  - **Search:** No clicks on search bars or filters.
+  - **Forms:** No interaction with input fields.
+  - **Dynamic content:** No clicks on carousels, tabs, or expandable sections.
+  - **Social sharing:** No clicks on share buttons or social media icons.
+  - **Micro-interactions:** No hovers on tooltips, dropdowns, or animations.
+
+**Quantitative summary:**
+- 100% of interactions are **static UI elements** (headings, buttons, nav).
+- 0% of interactions are **dynamic or input-based**.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploratory validation → Repetitive confirmation → Abrupt exit*
+1. **Orientation (0.0–4.79s):**
+   - Page load → 4.79s hesitation (evaluating layout?).
+2. **Initial exploration (4.79–12.2s):**
+   - Clicks hero title, scrolls down, backtracks, clicks navigation and CTA.
+   - **Behavior:** Rapid but shallow; testing clickability of core elements.
+3. **Repetitive validation (12.2–24.33s):**
+   - Re-clicks "Get Started," explores testimonials and features, scrolls to footer.
+   - **Behavior:** Circular pattern; confirms prior interactions (e.g., 4 duplicate clicks).
+   - **Dead click (24.33s):** Possible frustration or misclick.
+4. **Exit (24.33–26.75s):**
+   - Final footer click → session ends.
+   - **Behavior:** No deep engagement; abrupt termination.
+
+**Quantitative summary:**
+- **Exploration phase:** 4.79–12.2s (7.41s, 28% of session).
+- **Validation phase:** 12.2–24.33s (12.13s, 45% of session).
+- **Exit phase:** 24.33–26.75s (2.42s, 9% of session).
+- **Redundancy:** 36% of clicks are duplicates of prior actions.
+```

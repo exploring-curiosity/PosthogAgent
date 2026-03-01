@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly focused, task-driven, with signs of frustration**
+  - Linear progression through checkout flow with no detours (no product browsing, no navigation to other pages except "Back to Shop" as a late-stage action).
+  - 80% of actions target form fields (card number, email) or checkout buttons ("Pay Now").
+  - Single exploratory deviation: "Back to Shop" click at 3.02s (likely an attempt to abandon checkout).
+  - No evidence of exploratory browsing or content discovery.
+
+2. READING BEHAVIOR
+- **Skim-only, no deep reading**
+  - Scroll patterns show rapid, incremental downward movement (5–6 scrolls in 0.5s intervals) covering 984px in 2.74s (360px/s).
+  - No pauses >200ms between scrolls, indicating no sustained reading.
+  - Max scroll depth (984px) suggests the user reached the bottom of the page but did not dwell on any section.
+  - Upward scrolls at 3.43–4.05s are equally rapid (558px in 0.58s), likely to revisit form fields.
+
+3. ENGAGEMENT STYLE
+- **N/A (Not applicable to this context)**
+  - Session is a checkout flow, not a social/commenting platform. No voting, commenting, or content creation observed.
+
+4. INTERACTION SPEED
+- **Extremely fast, with escalating urgency**
+  - Median time between actions: **130ms** (excluding scrolls).
+  - Key timings:
+    - 697ms hesitation before first click (0.0–0.7s).
+    - 57ms hover before "Card Number" field (1.18s), followed by **5 rage clicks in 370ms** (1.58–1.96s).
+    - 173ms hover before "Cart Summary" (2.3s), then immediate click.
+    - 145ms hover before "Back to Shop" (3.02s), suggesting premeditated exit attempt.
+  - Rage clicks (5 in 370ms) indicate frustration with the "Card Number" field.
+
+5. CONTENT PREFERENCES
+- **N/A (Checkout-only session)**
+  - No content consumption observed. All interactions are with form fields and checkout buttons.
+  - Sole non-checkout action: "Back to Shop" (3.02s), likely an attempt to abandon the process.
+
+6. TYPING BEHAVIOR
+- **No typing observed**
+  - Despite clicking form fields ("Card Number," "Email"), no keystrokes or input values are recorded.
+  - Clicks on fields may indicate intent to type, but no actual input occurred.
+
+7. FEATURE DISCOVERY
+- **Used features:**
+  - Checkout form fields ("Card Number," "Email").
+  - Checkout buttons ("Pay Now").
+  - "Back to Shop" link (likely an exit attempt).
+- **Ignored features:**
+  - No interaction with navigation menus, product recommendations, or help/support options.
+  - No use of payment method selectors (e.g., PayPal, Apple Pay) or promo code fields.
+
+8. SESSION FLOW
+- **Arc: Hesitation → Frustration → Abandonment Attempt → Forced Completion**
+  - **0.0–0.7s (Hesitation):** Page load followed by 697ms pause before first click (likely evaluating page).
+  - **0.7–2.74s (Rapid Scanning):** Incremental scrolls to bottom of page (984px) in 2s, no engagement.
+  - **1.18–1.96s (Frustration):** 5 rage clicks on "Card Number" field (1.58–1.96s), suggesting input failure.
+  - **2.3–3.36s (Abandonment Attempt):** Clicks "Cart Summary" (2.3s) and "Back to Shop" (3.02s), likely to exit checkout.
+  - **3.43–4.46s (Forced Completion):** Scrolls back up to top (4.05s) and clicks "Pay Now" (3.84s) and "Email" (4.34s), possibly to retry or confirm order.
+- **Exit:** Session ends at 4.5s with no further actions. Likely abandoned or completed checkout off-screen.
+```
+
+### Key Observations:
+- **Frustration Indicators:** Rage clicks (5 in 370ms), rapid scrolls, and "Back to Shop" attempt suggest usability issues with the "Card Number" field.
+- **Task Failure:** No evidence of successful form completion (no typing, no payment submission).
+- **Synthetic User Profile:** "Power user" label and lack of hesitation in scrolling/clicking may indicate a bot or automated test, but rage clicks suggest human-like frustration.

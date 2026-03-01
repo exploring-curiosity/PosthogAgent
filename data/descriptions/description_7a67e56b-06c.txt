@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with rapid pivots**: The user exhibits non-linear, erratic navigation with abrupt shifts in focus. No sustained engagement with any single element.
+- **Sidebar-centric exploration**: 3/9 clicks (33%) target the sidebar (218-219px horizontal range), suggesting initial reliance on navigation aids.
+- **Vertical oscillation**: Scrolls down to 997px (2.04s), then up to 98px (5.78s), then down again to 351px (7.42s) – a "bounce" pattern covering 90% of the page height twice in 5.4s.
+- **No sequential content consumption**: Jumps between unrelated UI regions (sidebar → export button → chart) without intermediate steps.
+
+2. READING BEHAVIOR
+- **Skimming with zero deep reading**: Scroll speed averages **663px/s** (332px/0.5s) during downward scrolls and **400px/s** upward, far exceeding typical reading speeds (200-300px/s).
+- **No dwell time**: No pauses >500ms on any content block. Max scroll depth (997px) reached in **1.51s** from page load, then abandoned.
+- **Visual scanning**: Two "HESITATION" clicks (1.36s, 3.72s) at (0,0) suggest mouse stalls during visual scanning, but no content engagement follows.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or form submissions detected.
+- **Tool-driven interaction**: 2/9 clicks (22%) target the "Export" button (5.78s, 6.79s), suggesting a focus on data extraction over content creation.
+- **Hover-to-click ratio**: 3/9 clicks (33%) preceded by hovers (avg **207ms** hover time), indicating deliberate targeting but no content interaction.
+- **No ratio calculable**: Zero votes/comments recorded.
+
+4. INTERACTION SPEED
+- **Accelerating pace**: Initial actions spaced **1.36s** apart, compressing to **0.03s** between scrolls (5.17s-5.4s) and **0.07s** between export clicks (6.79s-6.86s).
+- **Hesitation spikes**: Two pauses >1s (1.36s: **1358ms**, 3.72s: **1679ms**) account for 38% of total session time.
+- **Action bursts**: 7 scrolls in **2.3s** (5.17s-5.4s) and 3 scrolls in **1.0s** (6.86s-6.97s) suggest rapid UI sampling.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: Zero clicks on text, images, or links within the main content area.
+- **Tool preference**: Only interacted with:
+  - Sidebar (2 clicks)
+  - Export button (2 clicks)
+  - Chart (2 clicks)
+- **No subreddit/thread data**: Unable to determine content types due to lack of engagement with actual content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero form inputs, search queries, or text entry events in the log.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Sidebar navigation (used 2x)
+  - Export functionality (used 2x)
+  - Chart interaction (used 2x)
+- **Ignored features**:
+  - Main content area (0 clicks)
+  - Search/filters (0 interactions)
+  - User profile/settings (0 interactions)
+  - Any form of content creation (comments, posts, etc.)
+
+8. SESSION FLOW
+- **Phase 1 (0.0s-2.04s): Rapid Reconnaissance**
+  - Loads dashboard, immediately scrolls to bottom (997px) in **1.51s**.
+  - Clicks sidebar at **2.04s** after **254ms** hover – first intentional action.
+- **Phase 2 (2.04s-5.78s): Aborted Engagement**
+  - Hesitates (**1679ms**) at **3.72s**, then clicks sidebar again at **5.14s**.
+  - Scrolls back to top in **2.3s** (5.17s-5.4s) – likely searching for a specific tool.
+- **Phase 3 (5.78s-7.97s): Tool Execution**
+  - Clicks "Export" twice (**5.78s**, **6.79s**) with **240ms** hover.
+  - Scrolls down to chart, clicks it twice (**7.42s**, **7.97s**) with **128ms** hover.
+- **Termination**: Session ends at **8.0s** with no exit action (e.g., page close) recorded.
+
+ADDITIONAL OBSERVATIONS
+- **Viewport utilization**: Only **354px** of vertical space (chart click) used for content interaction; 997px scrolled but never engaged.
+- **Synthetic indicators**: "Synthetic/scanner" device label and lack of organic hesitation patterns suggest possible bot activity or automated testing.
+- **No exit intent**: Session ends mid-action (last click at **7.97s**), implying forced termination or recording cutoff.
+```

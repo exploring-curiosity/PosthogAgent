@@ -1,0 +1,96 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly methodical and linear with repetitive validation behavior
+- Follows a strict top-to-bottom progression through the page hierarchy:
+  Landing → Navigation → Hero → Features → Testimonials → Footer
+- 100% of clicks are duplicated (hover + click on same element), suggesting either:
+  a) Synthetic testing (confirmed by "synthetic/methodical_user" device label)
+  b) Extreme caution/validation behavior
+- No lateral exploration; all interactions occur within the vertical scroll path
+- 14/18 actions (78%) involve scrolling or clicking elements in direct vertical alignment
+
+2. READING BEHAVIOR
+- Systematic skimming with mechanical scroll patterns:
+  - Scroll increments: 52px ± 1px (consistent across 16 scroll actions)
+  - Scroll duration: 0.5s ± 0.02s per increment (machine-like precision)
+  - Scroll velocity: 104px/s (constant)
+  - No evidence of deep reading:
+    * No pauses >1s on any content block
+    * No backtracking to re-read sections
+    * Max scroll depth (1046px) reached in 14.85s with no content dwell time
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (voting/commenting) observed
+- Interaction pattern consists exclusively of:
+  - Element validation (hover + click pairs): 6 instances
+  - Hesitation markers: 4 instances (all at [0,0] coordinates)
+  - Scrolling: 16 instances
+- Engagement ratio: 0% content creation, 100% navigation validation
+- All interactions are mechanical rather than content-driven
+
+4. INTERACTION SPEED
+- Deliberate with programmed consistency:
+  - Average action interval: 0.95s (excluding hesitations)
+  - Hover durations: 407-763ms (mean: 530ms)
+  - Hesitation durations: 735-2802ms (mean: 1478ms)
+  - Click-to-click latency: 0.5-1.8s (excluding hesitations)
+- Two distinct speed modes:
+  1) Rapid validation (0.5-1.0s intervals)
+  2) Prolonged hesitations (1.3-2.8s at [0,0])
+
+5. CONTENT PREFERENCES
+- No content preference signals detected:
+  - All page sections clicked (Hero, Features, Testimonials, Footer)
+  - No section received preferential treatment (equal hover/click pairs)
+  - No content blocks were skipped
+  - Navigation elements received same attention as content elements
+- Synthetic nature precludes genuine preference inference
+
+6. TYPING BEHAVIOR
+- No typing activity detected in 16.1s session
+- No input fields interacted with
+- No corrections or text entry of any kind
+
+7. FEATURE DISCOVERY
+- Features used:
+  - Navigation menu (2 interactions)
+  - Hero section (2 interactions)
+  - Primary CTA ("Get Started") (2 interactions)
+  - Features section (2 interactions)
+  - Testimonials section (2 interactions)
+  - Footer (2 interactions)
+- Features ignored:
+  - Any non-vertical navigation
+  - Form inputs
+  - Interactive elements beyond basic clicks
+  - Sidebars/secondary navigation
+  - Multimedia content (if present)
+- Discovery pattern: 100% of visible features in scroll path were "discovered" and validated
+
+8. SESSION FLOW
+- Strict linear progression with validation loops:
+  0.0-1.8s: Initialization (page load + navigation validation)
+  1.8-3.87s: Hero section validation (click + scroll)
+  3.87-8.16s: CTA validation (repeated clicks + scroll)
+  8.16-12.88s: Features section validation
+  12.88-15.51s: Testimonials validation
+  15.51-16.07s: Footer validation
+- Session arc:
+  1) Mechanical initialization (0-1.8s)
+  2) Systematic top-to-bottom validation (1.8-16.07s)
+  3) Immediate termination after footer validation
+- No exploration phase: 100% of actions serve validation purposes
+- No engagement phase: No content interaction beyond structural validation
+- Exit: Abrupt termination after final footer click (no return to top, no re-engagement)
+```
+
+Key Observations:
+- The session exhibits all characteristics of automated testing:
+  * Perfectly consistent scroll increments
+  * Identical hover/click pairs on every interactive element
+  * No human-like variability in timing or interaction patterns
+  * "Hesitation" markers at [0,0] coordinates (likely test script artifacts)
+- No human behavioral traits detected in 16.1s of activity
+- All actions serve structural validation rather than content consumption

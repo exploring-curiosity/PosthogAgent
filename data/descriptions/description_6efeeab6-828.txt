@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated clicks on the same UI elements (e.g., "Save Changes" clicked twice at 0.85s and 1.16s; "Privacy" clicked twice at 1.71s and 2.08s). However, their movement between sections ("Settings Nav" → "Profile" → "Notifications") suggests an attempt to follow a logical flow, though interrupted by frustration (rage clicks).
+- **No exploratory behavior**: All actions are confined to the settings page (no URL changes or new page loads). Navigation is limited to vertical scrolling and clicking pre-existing UI elements.
+
+2. READING BEHAVIOR
+- **Skim-only, no deep reading**: Scroll patterns show rapid, consistent movement with no pauses:
+  - **Downward skimming**: 3 scrolls (0.35s–0.48s) covering 952px in 1.3s (avg. 732px/s).
+  - **Upward skimming**: 6 scrolls (1.23s–2.38s) covering 756px in 1.15s (avg. 657px/s).
+  - **No dwell time**: No pauses >200ms between scrolls, indicating no content absorption.
+- **No evidence of reading**: The user never stops to hover over text (except for UI elements like buttons/divs) or interact with form fields.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement** (e.g., voting, commenting, or content creation):
+  - All interactions are with UI controls (buttons, nav items, divs).
+  - **Rage clicks** (5 instances at 3.88s–4.55s) suggest frustration with a non-responsive or broken UI element (likely the "Notifications" toggle/button).
+- **No ratio applicable**: Zero votes, comments, or inputs.
+
+4. INTERACTION SPEED
+- **Extremely fast, with forced delays**:
+  - **Initial hesitation**: 296ms delay before first click (0.3s), likely due to page load or decision-making.
+  - **Subsequent actions**: Avg. 240ms between non-scroll actions (e.g., 1.16s–0.85s = 310ms; 2.08s–1.71s = 370ms).
+  - **Rage clicks**: 5 clicks in 0.71s (4.55s–3.84s), averaging **142ms between clicks**—far below typical human reaction time (indicating automated testing or extreme frustration).
+- **Scroll speed**: Consistent 0.5s per scroll action (120px–150px per scroll).
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user only interacted with settings sections:
+  - **Settings sub-pages accessed**: "Profile" (3.07s), "Privacy" (1.71s), "Notifications" (3.67s).
+  - **No evidence of content consumption** (e.g., articles, posts, or media).
+- **No subreddit/forum preferences**: Irrelevant to this session (settings page only).
+
+6. TYPING BEHAVIOR
+- **No typing detected**:
+  - No form fields, text inputs, or corrections observed in the log.
+  - All clicks target static UI elements (buttons, divs, nav items).
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Settings navigation**: "Settings Nav" (2.68s), "Profile" (3.07s), "Privacy" (1.71s), "Notifications" (3.67s).
+  - **Save functionality**: "Save Changes" button (0.85s).
+- **Features ignored**:
+  - No interaction with account settings, security, billing, or other potential settings tabs.
+  - No help/support links, tooltips, or secondary UI elements (e.g., dropdowns, toggles beyond "Notifications").
+
+8. SESSION FLOW
+- **Arc**: **Frustration-driven navigation → Failed interaction → Abrupt exit**
+  - **0.0s–0.85s (Exploration)**: Page load → rapid downward scroll (likely scanning for a specific setting) → attempt to "Save Changes" (prematurely, before making edits).
+  - **0.85s–2.68s (Correction)**: Scrolls back up (possibly to find a missing setting) → clicks "Privacy" (may have expected a relevant option there).
+  - **2.68s–3.82s (Reorientation)**: Returns to "Settings Nav" → clicks "Profile" → scrolls down (possibly to find a profile-related setting) → clicks "Notifications".
+  - **3.82s–4.55s (Frustration)**: **Rage clicks** on "Notifications" (5 clicks in 0.71s), suggesting the UI failed to respond to the first click. Session ends abruptly.
+- **Exit**: No confirmation of success/failure; session terminates mid-rage-click sequence.
+```
+
+### KEY OBSERVATIONS:
+- **Likely a synthetic user (automated test)**: The combination of:
+  - Sub-200ms reaction times (rage clicks).
+  - Perfectly consistent scroll durations (0.5s).
+  - No typing or form interaction.
+  - "Power_user" device label.
+- **UI/UX issues flagged**:
+  - "Save Changes" button clicked twice (may have appeared unresponsive).
+  - "Notifications" section triggered rage clicks (broken or slow response).
+  - No visual feedback for actions (e.g., loading states).

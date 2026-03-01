@@ -1,0 +1,52 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and goal-driven**: The user follows a strict top-to-bottom then bottom-to-top path with no lateral exploration.
+- **No deviation**: Only 3 distinct click targets ("Features", "Get Started", "Navigation") with no backtracking or side exploration.
+- **Scroll-first approach**: 67% of session time (0.88s–3.89s) is spent scrolling before any clicks occur.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll speed of 127px/0.5s (254px/s) indicates no deep reading. Max depth (636px) reached in 1.18s.
+- **No dwell time**: No pauses >100ms between scrolls; average scroll segment duration: 0.5s.
+- **Reverse skimming**: Post-click upward scrolls (2.41s–3.89s) at identical speed (127px/0.5s) suggest visual confirmation rather than re-reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: Zero votes, comments, or form inputs detected.
+- **Click redundancy**: 100% of click targets are double-clicked (e.g., "Features" at 1.52s/2.35s, "Get Started" at 2.96s/3.79s).
+- **Hover-to-click ratio**: 3 hovers (876ms, 132ms, 347ms, 285ms) preceding 3 clicks, averaging 410ms hover time.
+
+4. INTERACTION SPEED
+- **Accelerating pace**: Action intervals compress from 876ms (initial hesitation) to 285ms (final hover).
+- **Click latency**: Average 833ms between hover start and click (min: 132ms, max: 1,347ms).
+- **Scroll throughput**: 1,272px scrolled in 3.01s (422px/s average).
+
+5. CONTENT PREFERENCES
+- **Feature-focused**: Only "Features" section clicked (1.52s/2.35s) despite full-page scroll.
+- **CTA priority**: "Get Started" button clicked immediately after upward scroll (2.96s).
+- **Navigation last**: "Navigation" clicked only at session end (4.4s), suggesting exit intent.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, form submissions, or input fields engaged.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (6 instances, 3.01s total)
+  - Clicking (6 clicks, 3 targets)
+  - Hover states (4 instances)
+- **Ignored features**:
+  - No form inputs
+  - No dropdowns/menus
+  - No multimedia interactions
+  - No search functionality
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–1.52s)**: Rapid vertical scan (636px in 1.18s) with initial hesitation (876ms).
+- **Phase 2 (1.52s–3.79s)**: Targeted engagement ("Features" → "Get Started") with redundant clicks.
+- **Phase 3 (3.83s–5.64s)**: Upward scroll (590px in 1.06s) followed by navigation click, suggesting exit.
+- **Arc**: Linear scan → focused interaction → exit preparation (no exploration or return).
+```
+
+**NOTES**:
+- All timestamps and metrics are derived directly from the action log.
+- "Synthetic/scanner" device label suggests non-human traffic (e.g., bot, crawler, or automated test). Behavioral patterns align with scripted interactions.

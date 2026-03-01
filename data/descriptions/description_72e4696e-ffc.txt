@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Linear with Micro-Exploration**: The user follows a clear, sequential path through the dashboard's primary components (Sidebar → Stats Cards → Chart → Data Table → Export), but with frequent "hesitation" pauses (4 instances) and rapid scroll adjustments (12 scroll actions in 15.5s). Navigation is *not* exploratory (no random clicks) or scattered (no backtracking to unrelated elements), but *focused* on a single workflow.
+- **Spatial Consistency**: Clicks on interactive elements (e.g., Sidebar, Stats Cards) occur at nearly identical coordinates (e.g., Sidebar: (276,657) → (281,661)), suggesting deliberate targeting of the same UI regions.
+- **Depth Progression**: Scroll depth increases monotonically during initial exploration (0px → 954px) and decreases monotonically during exit (954px → 103px), indicating a "top-to-bottom" then "bottom-to-top" flow.
+
+2. READING BEHAVIOR
+- **Skimmer with Selective Deep Dives**: Scroll speed (avg. 219px/0.5s = 438px/s) and lack of pauses >1s on any content block suggest skimming. However:
+  - **Hover Times**: Prolonged hovers (333ms–796ms) on interactive elements (Sidebar, Stats Cards, Chart, Data Table) imply *momentary* deep engagement with *functionality* (not content).
+  - **Scroll Clusters**: 4 distinct scroll "bursts" (e.g., 0.81s–0.92s: 0px→657px; 10.01s–10.12s: 333px→954px) with no pauses >0.5s between scrolls indicate rapid visual scanning.
+- **No Evidence of Reading**: No text selection, no pauses on static text, and no clicks on non-interactive content.
+
+3. ENGAGEMENT STYLE
+- **Action-Only, No Creation**: The user *interacts* with pre-existing UI elements (clicks, scrolls) but does *not*:
+  - Vote (no upvote/downvote actions).
+  - Comment (no text input, no "Reply" clicks).
+  - Create content (no "Post" or "Submit" clicks).
+- **Interaction Ratio**: 100% clicks (10 total) to 0% creation (0 comments/votes).
+- **Speed**: First interaction (Sidebar click) at 1.43s; last interaction (Export click) at 15.51s. Avg. 1.72s between *successful* clicks (excluding hesitations).
+
+4. INTERACTION SPEED
+- **Deliberate with Hesitations**: Two distinct speed profiles:
+  - **Fast Execution**: Clicks on interactive elements occur within 40–60ms of hover end (e.g., 9.5s hover → 9.95s click). Scrolls are rapid (0.5s duration) and contiguous.
+  - **Hesitation Pauses**: 4 instances of 773ms–2729ms (avg. 1.88s) where the user pauses at (0,0) (likely cursor resting at top-left corner). These pauses *precede* all major navigation changes (e.g., 3.92s pause before Sidebar re-click; 13.45s pause before Data Table re-click).
+- **Click Latency**: Time from hover end to click:
+  - Sidebar: 333ms hover → 1.43s click (1.1s latency).
+  - Stats Cards: 493ms hover → 5.54s click (5.05s latency, but includes scroll up).
+  - Chart: 796ms hover → 9.95s click (9.15s latency, includes scroll down).
+  - Data Table: 404ms hover → 10.72s click (10.32s latency, includes scroll down).
+
+5. CONTENT PREFERENCES
+- **No Content Consumption**: The user does *not* engage with *content* (e.g., no clicks on posts, articles, or media). All interactions are with *UI components*:
+  - **Sidebar**: Clicked twice (1.43s, 4.62s).
+  - **Stats Cards**: Clicked twice (5.54s, 8.2s).
+  - **Chart**: Clicked twice (9.5s, 9.95s).
+  - **Data Table**: Clicked twice (10.72s, 14.22s).
+  - **Export Button**: Clicked twice (15.08s, 15.51s).
+- **No Subreddit/Topic Data**: The log does not reference specific content categories (e.g., subreddits, topics).
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**: Zero text input events (no search queries, no form submissions, no comments). All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered Features**:
+  - Sidebar navigation (used twice).
+  - Stats Cards (interactive dashboard cards).
+  - Chart visualization (interactive).
+  - Data Table (interactive).
+  - Export functionality (final action).
+- **Ignored Features**:
+  - No evidence of using:
+    - Search/filters (no clicks on search bars).
+    - User profile/settings (no clicks on avatar/menu).
+    - Notifications (no clicks on bell icons).
+    - Help/documentation (no clicks on "?" or tooltips).
+    - Any non-interactive content (e.g., static text, images).
+
+8. SESSION FLOW
+- **Arc**: **Linear Workflow with Hesitation-Driven Validation**
+  1. **Initial Scan (0.0s–1.43s)**:
+     - Page load → 773ms hesitation → rapid scroll to 657px (full viewport depth).
+     - *Goal*: Visual inventory of dashboard layout.
+  2. **Primary Navigation (1.43s–5.54s)**:
+     - Sidebar click (1.43s) → 2.49s hesitation → Sidebar re-click (4.62s) → scroll up to top (4.69s–4.92s).
+     - *Goal*: Likely testing sidebar functionality (e.g., expanding/collapsing menus).
+  3. **Data Exploration (5.54s–10.72s)**:
+     - Stats Cards click (5.54s) → 1.53s hesitation → Stats Cards re-click (8.2s) → scroll down to Chart (8.24s–8.45s) → Chart click (9.5s) → Data Table click (10.72s).
+     - *Goal*: Sequential interaction with data visualizations (cards → chart → table).
+  4. **Validation & Export (10.72s–15.51s)**:
+     - Data Table click (10.72s) → 2.73s hesitation → Data Table re-click (14.22s) → scroll up to top (14.28s–14.44s) → Export click (15.08s) → Export re-click (15.51s).
+     - *Goal*: Confirm data table contents → export data (final action).
+- **Exit**: Session ends immediately after Export click (no further actions).
+- **Key Observations**:
+  - **Hesitations as Decision Points**: All major navigation changes are preceded by a hesitation pause (avg. 1.88s), suggesting these are moments of cognitive processing or UI evaluation.
+  - **Re-Clicks as Validation**: Every interactive element is clicked twice (Sidebar, Stats Cards, Chart, Data Table, Export), implying a "test-confirm" pattern.
+  - **Scroll as Context Switching**: Scrolls are used to *navigate* between UI components (e.g., scroll up to Stats Cards, scroll down to Chart), not to read content.
+```
+
+**SUMMARY**: This is a *highly methodical, task-driven* user with a clear goal (likely data export). They exhibit *no exploratory behavior*, *no content consumption*, and *no creative input*. Their workflow is linear, with hesitations marking decision points and re-clicks serving as validation. Interaction speed is fast during execution but punctuated by deliberate pauses. The session is *not* a browsing experience but a *functional audit* of the dashboard's data export capabilities.

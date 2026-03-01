@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused but hesitant**: The user exhibits a linear, goal-oriented path through the checkout flow (Cart Summary → Email → Card Number → Pay Now → Back to Shop) with no exploratory detours.
+- **Repetitive clicks**: 4/14 actions (29%) are duplicate clicks on the same element (e.g., "Cart Summary" at 1.69s/3.48s, "Email" at 4.48s/7.27s, "Pay Now" at 10.06s/10.9s), suggesting validation or UI responsiveness issues.
+- **No backtracking**: After scrolling to a section, they proceed forward without revisiting prior areas (e.g., no return to top after reaching 976px).
+
+2. READING BEHAVIOR
+- **Skimmer with targeted depth**: Scroll patterns show rapid, incremental movement (e.g., 112px → 225px in 0.5s) with no prolonged pauses, indicating skimming. However, they scroll deeply into payment details (max 976px) before exiting, suggesting selective focus on critical sections.
+- **Hover cues**: 4/14 actions (29%) include hover delays (751ms–1788ms) before clicks, implying visual scanning before interaction.
+- **No evidence of deep reading**: No pauses >2s on any scroll segment; all scrolls are <0.5s per 100px.
+
+3. ENGAGEMENT STYLE
+- **N/A**: This session is a checkout flow, not a social platform. No voting, commenting, or content creation occurred.
+- **Interaction metrics**:
+  - **Hesitation rate**: 3/14 actions (21%) labeled "[HESITATION]" with delays of 535ms–1788ms.
+  - **Click latency**: Average 1.2s between primary actions (e.g., 2.88s → 3.48s for "Cart Summary" clicks).
+
+4. INTERACTION SPEED
+- **Deliberate with bursts**: Actions cluster in 2–3s intervals (e.g., 0.54s–1.69s, 3.48s–4.48s) followed by pauses (e.g., 6.27s–7.27s hesitation).
+- **Quantitative metrics**:
+  - **Median action interval**: 0.57s (excluding hesitations).
+  - **Slowest interval**: 1.79s (6.27s–7.27s, hesitation).
+  - **Fastest interval**: 0.04s (scrolls at 3.54s–3.64s).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: All interactions target transactional elements:
+  - **Cart Summary** (2 clicks, 1 hover).
+  - **Email field** (2 clicks, 1 hover).
+  - **Card Number field** (2 clicks, 1 hover).
+  - **Pay Now button** (2 clicks, 1 hover).
+  - **Back to Shop link** (1 click, 1 hover).
+- **No engagement with**: Promotional content, navigation menus, or non-checkout UI (e.g., headers, footers).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: All clicks target input fields (Email/Card Number) but no keystrokes or input lengths are logged. Likely abandoned before entering data.
+- **Field focus**: Clicked "Email" and "Card Number" fields but no evidence of corrections or input duration.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (10/14 actions, 71%).
+  - Click interactions with checkout form elements (4/14 actions, 29%).
+- **Ignored features**:
+  - No use of autocomplete, tooltips, or help links.
+  - No interaction with non-checkout UI (e.g., product recommendations, chat widgets).
+  - No mobile-specific features (e.g., payment shortcuts).
+
+8. SESSION FLOW
+- **Arc**: **Validation → Abandonment**
+  - **0.0s–3.5s**: Initial exploration (scrolls to 225px, clicks "Cart Summary" twice).
+  - **3.5s–7.5s**: Form engagement (scrolls to 244px, clicks "Email" twice).
+  - **7.5s–10.9s**: Payment focus (scrolls to 726px, clicks "Card Number" and "Pay Now").
+  - **10.9s–12.4s**: Exit (scrolls to 976px, clicks "Back to Shop").
+- **Key transitions**:
+  - **3.48s**: Shift from cart summary to email field (abrupt, no intermediate steps).
+  - **10.9s**: Abrupt exit after reaching payment button (no confirmation or error handling).
+- **Exit trigger**: Clicked "Back to Shop" at 12.36s, ending session without completion.
+```
+
+**Summary**: A methodical but hesitant user who followed a linear checkout path with repetitive clicks, rapid skimming, and no data entry. Abandoned after reaching the payment step, likely due to friction (e.g., hesitation delays, UI responsiveness). No exploratory behavior or feature discovery beyond core checkout elements.

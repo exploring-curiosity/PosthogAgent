@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated clicks on the same UI elements (e.g., "Profile" clicked twice at 0.65s and 0.91s, "Notifications" at 2.08s and 2.34s). However, their movement through settings tabs ("Profile" → "Notifications" → "Settings Nav" → "Privacy") suggests an attempt to follow a structured flow, likely dictated by the UI's design.
+- **Backtracking**: Frequent scroll reversals (e.g., up/down between 1.62s–3.68s) indicate indecision or frustration, not exploratory behavior.
+- **No deep dives**: No evidence of drilling into sub-menus or nested features beyond top-level tabs.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll speeds (0.5s per ~100px) and shallow max depths (e.g., 946px on a 1080p viewport) suggest no deep reading. For context:
+  - Scrolls cover ~50–100px in 0.5s (equivalent to ~1–2 lines of text per 0.1s).
+  - No pauses >0.3s between scrolls, indicating no sustained reading.
+- **No content engagement**: No text selection, highlighting, or dwell time on specific sections.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: This is a settings page; no voting, commenting, or content creation occurred.
+- **Interaction metrics**:
+  - **Double-clicks**: 4 instances of rapid duplicate clicks (e.g., "Save Changes" at 1.36s/1.57s, "Notifications" at 2.08s/2.34s).
+  - **Rage clicks**: 3 consecutive clicks on "Notifications" (2.46s–2.64s) with <0.1s intervals, signaling frustration.
+  - **Hover delays**: Pre-click hovers (139–186ms) suggest deliberate targeting but not hesitation.
+
+4. INTERACTION SPEED
+- **Hyper-fast with anomalies**:
+  - **Median action interval**: 0.27s (excluding rage clicks).
+  - **Outliers**:
+    - 0.0s–0.1s: Initial hesitation click (likely accidental or synthetic).
+    - 0.65s–0.91s: 260ms gap between "Profile" clicks (possible misfire).
+    - 2.34s–2.46s: 120ms gap before rage clicks (frustration trigger).
+  - **Scroll speed**: Consistent 0.5s per ~100px (120px/s), faster than average human reading speed (~200–300 words/min or ~50px/s for dense text).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: All interactions are confined to the settings UI. No evidence of content consumption (e.g., no subreddit visits, posts, or media).
+- **Tab sequence**: "Profile" → "Notifications" → "Privacy" suggests prioritization of identity/visibility controls over other settings (e.g., "Account," "Security").
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No input fields, text areas, or form submissions were interacted with. All actions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Top-level settings tabs: "Profile," "Notifications," "Privacy."
+  - "Save Changes" button (clicked twice at 1.36s/1.57s).
+- **Ignored features**:
+  - No interaction with sidebars, help links, or advanced settings (e.g., "Connected Apps," "Email Preferences").
+  - No evidence of feature exploration beyond the immediate UI.
+
+8. SESSION FLOW
+- **Arc**: **Frustration-driven abandonment**
+  - **0.0s–0.65s (Onboarding)**: Page load → initial scrolls (exploratory) → first "Profile" click (intent to edit).
+  - **0.65s–2.34s (Engagement Attempt)**: "Profile" tab interaction → "Save Changes" clicks (failed submission?) → scroll to "Notifications."
+  - **2.34s–2.64s (Frustration Peak)**: Rage clicks on "Notifications" (UI unresponsiveness or error).
+  - **2.64s–4.38s (Disengagement)**: Rapid tab switching ("Settings Nav" → "Privacy") with no sustained interaction.
+  - **4.38s (Exit)**: Final "Privacy" click; session ends abruptly (no further actions in 4.4s log).
+- **Key observations**:
+  - **No completion**: No settings were visibly saved or confirmed.
+  - **No exit intent**: No "Back" button, tab closure, or navigation away from settings.
+  - **Synthetic traits**: The user’s "power_user" label and sub-0.1s action intervals suggest a bot, script, or automated test (e.g., synthetic monitoring).
+```
+
+**SUMMARY**: This session reflects a **high-speed, low-engagement interaction** with the settings UI, characterized by **repetitive clicks, rage behavior, and no meaningful content interaction**. The pattern is consistent with **automated testing or a frustrated user attempting to complete a task (e.g., saving changes) but encountering UI friction**. No organic browsing or reading behavior is observed.

@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear with forced repetition**: The user follows a strict top-to-bottom navigation pattern through the settings menu, but with redundant clicks (e.g., "Save Changes" clicked twice at 0.93s and 3.03s; "Settings Nav" clicked twice at 3.5s and 3.73s). No lateral exploration observed.
+- **No backtracking**: After scrolling down, the user only scrolls up to access higher menu items, never revisiting previously viewed content.
+- **Menu-driven**: 100% of clicks target navigation elements (Settings Nav, Notifications, Profile, Privacy) or form submission (Save Changes).
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scroll bursts**: Scrolls occur in 0.5s increments (e.g., 0.45s–0.64s: 4 scrolls covering 965px in 1.9s). Average scroll speed: ~500px/s.
+- **No deep reading**: No pauses >500ms between scrolls. Longest hesitation (1985ms at 2.92s) precedes a redundant "Save Changes" click, suggesting confusion rather than content absorption.
+- **Viewport coverage**: Max scroll depth (1049px) suggests the user saw ~97% of the page (assuming 1080px viewport), but no single section was viewed for >1s.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session involves no voting, commenting, or content creation. All interactions are navigational or form-related.
+- **Form submission behavior**:
+  - First "Save Changes" click at 0.93s (after 386ms hesitation) with 111ms hover.
+  - Second identical click at 3.03s (after 1985ms hesitation), suggesting either a failed first attempt or uncertainty.
+- **Hover-to-click ratio**: 4/12 clicks (33%) preceded by hovers (avg hover duration: 96ms), indicating deliberate targeting but no prolonged consideration.
+
+4. INTERACTION SPEED
+- **Extremely rapid**: Median time between actions: 0.47s. 75% of actions occur within 0.5s of the previous action.
+- **Outliers**:
+  - 1985ms hesitation before second "Save Changes" click (2.92s–3.03s).
+  - 173ms hover on "Settings Nav" (3.5s) is the longest hover.
+- **Click timing**: Buttons clicked immediately after scrolling stops (e.g., "Notifications" at 4.13s, 180ms after scroll ends).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: 100% of clicks target settings submenus:
+  - Notifications (4.13s–4.32s)
+  - Profile (4.86s–4.99s)
+  - Privacy (5.57s–5.86s)
+- **No content consumption**: No clicks on actual content (e.g., posts, articles, or media). All interactions are structural (navigation, form submission).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form fields filled. The "Save Changes" button suggests a form was present, but no keystrokes or input events are logged.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Vertical scrolling (14 scroll actions, 100% of session).
+  - Settings navigation menu (4 unique submenus accessed).
+  - Form submission ("Save Changes" button).
+- **Ignored features**:
+  - No horizontal scrolling or zoom.
+  - No search, filters, or advanced settings.
+  - No help/tooltips or secondary navigation (e.g., breadcrumbs, footer links).
+  - No tab switching or multi-window interactions.
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–0.93s)**
+  - Page load → immediate scroll to bottom (965px in 1.9s) → "Save Changes" click (0.93s).
+  - **Behavior**: Rapid assessment of page length, likely to locate the submit button.
+- **Phase 2: Confusion/Redundancy (2.92s–3.03s)**
+  - 1985ms hesitation → second "Save Changes" click.
+  - **Behavior**: Possible failed submission or uncertainty about action completion.
+- **Phase 3: Systematic Menu Exploration (3.5s–5.86s)**
+  - Top-to-bottom navigation of settings submenus:
+    1. Settings Nav (3.5s–3.73s)
+    2. Notifications (4.13s–4.32s)
+    3. Profile (4.86s–4.99s)
+    4. Privacy (5.57s–5.86s)
+  - **Behavior**: Linear, exhaustive review of all menu options. No skipping or reordering.
+- **Termination**: Session ends abruptly after "Privacy" click (5.86s), with no confirmation of action or further navigation.
+
+SUMMARY PROFILE
+- **User Type**: Task-driven power user with a synthetic/automated interaction pattern.
+- **Goal**: Likely a scripted test or automated audit of the settings menu, given:
+  - Inhumanly consistent scroll timing (0.5s increments).
+  - Redundant clicks with no functional outcome.
+  - No typing or content engagement.
+- **Anomalies**:
+  - 1985ms hesitation suggests a potential bug or unexpected UI state.
+  - No form inputs despite "Save Changes" clicks imply either a read-only test or broken form.
+- **Efficiency**: High (5.9s to cover 4 settings submenus), but lacks human-like variability in timing or behavior.
+```

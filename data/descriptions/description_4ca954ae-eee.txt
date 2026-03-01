@@ -1,0 +1,56 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly non-linear, erratic, and scattered with rapid directional shifts.
+- Begins with micro-interactions (0.29s hesitation click) before any meaningful engagement.
+- Scrolls downward in rapid 25px increments (0.35s–0.53s) then abruptly reverses direction (1.84s–2.03s).
+- Repeatedly targets the same UI elements (e.g., "Hero Title" clicked twice at 0.96s and 1.32s; "Testimonials" at 1.67s and 1.8s).
+- Final navigation arc: top → bottom → top → bottom (13px → 1016px → 13px → 1016px) in <8s.
+
+2. READING BEHAVIOR:
+- No evidence of deep reading. Scroll depth maxes at 1016px but never pauses >200ms on any content block.
+- Scroll velocity: 50px/s downward (0.35s–0.53s), 240px/s upward (4.84s–4.9s), 670px/s downward (6.95s–7.02s).
+- Skimming pattern: rapid scroll bursts (e.g., 364px in 0.5s at 1.38s) with no dwell time on text-heavy sections.
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or social interactions detected.
+- Interaction ratio: 100% clicks (18 total), 0% text input or form submission.
+- Click latency: 293ms hesitation (0.29s), 981ms hesitation (4.17s), 1623ms hesitation (6.66s).
+- Rage-click cluster: 5 rapid clicks on "Features" section (4.4s–4.78s) with <100ms intervals.
+
+4. INTERACTION SPEED:
+- Hyper-fast with deliberate pauses. Median action interval: 320ms (excluding hesitations).
+- Fastest sequence: 5 rage clicks in 380ms (4.4s–4.78s).
+- Slowest deliberate pause: 1623ms hesitation (6.66s) before nav click.
+- Hover times: 53ms–181ms (avg 127ms) before clicks.
+
+5. CONTENT PREFERENCES:
+- Targeted elements: Hero section (0.96s), Testimonials (1.67s), Features (3.19s), Navigation (5.04s), Footer (7.53s).
+- Ignored: No clicks on images, sidebars, CTAs beyond "Get Started" (2.33s), or interactive widgets.
+- Content type preference: Structural UI elements (headers, nav, footer) over body content.
+
+6. TYPING BEHAVIOR:
+- No typing, text input, or form interactions detected.
+- No corrections, deletions, or input fields engaged.
+
+7. FEATURE DISCOVERY:
+- Used features: Scrolling, clicking (headers, buttons, nav, footer).
+- Ignored features: Search, filters, forms, social sharing, expandable content, or multimedia.
+- Feature adoption: 100% of interactions limited to static UI elements.
+
+8. SESSION FLOW:
+- 0.0s–0.53s: Micro-engagement (hesitation click, rapid scroll).
+- 0.96s–2.63s: Erratic exploration (hero → testimonials → CTA with directional reversals).
+- 3.19s–4.78s: Frustration spike (rage clicks on "Features").
+- 4.84s–7.91s: Abrupt exit sequence (top → bottom → footer click).
+- Arc: Synthetic/automated scan → frustration → abandonment (no conversion or retention).
+- Exit: Session terminates immediately after footer click (7.91s) with no return or follow-up.
+
+QUANTITATIVE SUMMARY:
+- Total actions: 28 (18 clicks, 10 scrolls).
+- Scroll distance: 2,270px (1,580px down, 690px up).
+- Click redundancy: 44% of clicks duplicated (8/18).
+- Rage-click rate: 28% of clicks (5/18) in final frustration phase.
+- Session efficiency: 0% conversion (no form submission, no deep engagement).
+```

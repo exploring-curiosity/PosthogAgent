@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN
+- **Pattern**: Cyclical, hesitant, and feature-focused with repeated validation attempts.
+- **Evidence**:
+  - Linear progression through UI elements (Export → Stats Cards → Chart → Sidebar → Data Table) but with **two clicks per feature** (hover + hesitation → execution).
+  - **6/10 actions** (60%) are repeated clicks on the same element after hesitation (e.g., "Export" at 9.08s and 12.45s).
+  - **No backtracking** to previously visited sections; moves forward only after confirming interaction.
+  - **Scattered spatial interaction**: Clicks span full viewport width (x-coordinates: 198px–1708px), suggesting broad but shallow exploration.
+
+2. READING BEHAVIOR
+- **Skimmer with targeted depth**:
+  - **Scroll speed**: 120–150px/s (e.g., 83px to 268px in 2.6s at 12.52s–12.76s).
+  - **Max scroll depth**: 798px (83% of 1080px viewport), but **no sustained pauses**—scrolls are rapid and segmented (5–7 steps per burst).
+  - **No evidence of deep reading**: No scroll reversals or pauses >1s within content blocks. All scrolls are unidirectional until feature interaction.
+  - **Content engagement**: Only interacts with **visual affordances** (buttons, cards, tables) at scroll endpoints (e.g., "Chart" at 618px, "Data Table" at 798px).
+
+3. ENGAGEMENT STYLE
+- **No traditional "engagement" (votes/comments)** observed. Instead:
+  - **Feature testing**: Repeated clicks on UI elements (e.g., "Export" twice, "Stats Cards" twice) suggest **validation behavior** (confirming functionality).
+  - **Hover-to-click ratio**: 4/10 clicks (40%) preceded by hovers (772ms–1999ms), indicating **deliberate selection** over impulsive interaction.
+  - **No text input**: No typing, corrections, or form submissions detected.
+
+4. INTERACTION SPEED
+- **Deliberate with hesitation spikes**:
+  - **Median action interval**: 2.3s (excluding scrolls).
+  - **Hesitation outliers**: 4 instances of **>1s pauses** before clicks (max: 2861ms at 23.23s).
+  - **Click latency**: 772ms–1999ms hover time before 4/10 clicks (40% of interactions).
+  - **Scroll bursts**: 0.5s per 40–120px scroll segment (consistent across session).
+
+5. CONTENT PREFERENCES
+- **Gravitated toward structured data elements**:
+  - **Export functionality**: First interaction (9.08s), repeated at 12.45s.
+  - **Stats Cards**: Clicked at 13.92s and 18.08s (likely a dashboard summary).
+  - **Chart**: Clicked at 20.37s and 24.52s (data visualization).
+  - **Data Table**: Final interaction (30.9s and 36.01s), suggesting **highest priority**.
+- **Ignored**: Unstructured text, navigation menus (except "Sidebar"), images, or multimedia.
+
+6. TYPING BEHAVIOR
+- **No typing detected**:
+  - No keystrokes, form inputs, or text selections logged.
+  - **Implication**: Session focused on **read-only** or **export-oriented** tasks.
+
+7. FEATURE DISCOVERY
+- **Discovered and used**:
+  - **Export**: Primary focus (first and second interactions).
+  - **Stats Cards/Chart**: Secondary focus (mid-session).
+  - **Data Table**: Tertiary focus (late-session).
+  - **Sidebar**: Minimal interaction (29.04s), likely for navigation.
+- **Ignored**:
+  - **Search/filters**: No clicks on search bars or filter buttons.
+  - **Help/documentation**: No clicks on tooltips or "?" icons.
+  - **Social features**: No sharing, commenting, or collaboration tools used.
+
+8. SESSION FLOW
+- **Arc**: **Validation → Exploration → Feature Testing → Exit**
+  1. **0–9s (Validation)**:
+     - Loads dashboard, hesitates (8.03s), scrolls minimally (83px), tests "Export" (9.08s).
+  2. **9–18s (Exploration)**:
+     - Repeats "Export" (12.45s), scrolls deeper (268px), discovers "Stats Cards" (13.92s).
+  3. **18–30s (Feature Testing)**:
+     - Tests "Stats Cards" (18.08s), "Chart" (20.37s), and "Sidebar" (26.1s), scrolls to bottom (798px).
+  4. **30–36s (Exit)**:
+     - Final interaction with "Data Table" (30.9s and 36.01s), no further actions.
+- **Exit trigger**: No clear abandonment signal; session ends after final "Data Table" click.
+- **Session shape**: **Triangular** (broad early exploration → narrow focus on data table → abrupt end).
+```
+
+**Key Behavioral Signatures**:
+- **Hesitation-driven**: 40% of clicks preceded by >1s pauses; median hover time = 1.2s.
+- **Feature-confirmation loop**: Every UI element clicked twice (hover + execution).
+- **Data-centric**: All interactions tied to structured data (export, tables, charts).
+- **No impulsivity**: No rapid clicks or erratic scrolling; all actions are measured.

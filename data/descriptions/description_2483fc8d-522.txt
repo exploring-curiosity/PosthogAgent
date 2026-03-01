@@ -1,0 +1,83 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Scattered with forced linearity
+  - The user exhibits a non-linear, erratic navigation path with repeated clicks on the same elements (e.g., "Profile" clicked twice at [1.58s] and [2.54s]; "Notifications" clicked twice at [3.25s] and [5.12s]; "Settings Nav" clicked twice at [5.78s] and [7.69s]).
+  - **Quantitative evidence**:
+    - 3 instances of duplicate clicks on the same UI element within 1–2 seconds (e.g., "Profile" clicks at 1.58s and 2.54s).
+    - 4 "HESITATION" events (1.03s, 4.6s, 6.87s, and implicit in hover delays) suggesting forced pauses or scripted delays.
+    - No organic exploration of other settings sub-pages (e.g., "Account," "Privacy," "Billing").
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with no deep reading
+  - Scroll behavior is rapid and segmented, with no sustained pauses or upward scrolls (indicative of re-reading).
+  - **Quantitative evidence**:
+    - 7 scroll events in 2.14 seconds ([1.1s]–[2.75s]), covering 455px total (avg. 65px per scroll).
+    - Scroll speed: ~118px/s (455px / 3.85s total scroll time).
+    - No scroll events after 2.75s despite continued interaction, suggesting no further content review.
+    - Max scroll depth (455px) reached in 2.75s, implying no attempt to read beyond visible content.
+
+3. ENGAGEMENT STYLE
+- **Pattern**: No substantive engagement (no voting, commenting, or input)
+  - **Quantitative evidence**:
+    - Zero text inputs, form submissions, or interactive actions (e.g., toggles, sliders, buttons beyond navigation).
+    - All clicks target navigation elements ("Profile," "Notifications," "Settings Nav") with no functional outcome (e.g., no profile edits, no notification settings changes).
+    - Hover times (275ms–390ms) are artificially precise and likely scripted (human hovers typically vary ±200ms).
+
+4. INTERACTION SPEED
+- **Pattern**: Hyper-fast with scripted delays
+  - **Quantitative evidence**:
+    - **Action intervals**:
+      - 1.03s: First click after page load (likely scripted delay).
+      - 0.5s–1.5s between subsequent actions (e.g., 1.58s → 2.54s = 0.96s; 3.25s → 5.12s = 1.87s).
+    - **Hover durations**: 275ms–390ms (unrealistically consistent for human behavior).
+    - **Hesitation events**: 1027ms–1342ms (likely synthetic pauses to mimic human behavior).
+    - **Scroll speed**: 118px/s (far exceeds typical human scroll speed of 20–50px/s).
+
+5. CONTENT PREFERENCES
+- **Pattern**: No content preferences demonstrated
+  - **Quantitative evidence**:
+    - All interactions are with **navigation elements** ("Profile," "Notifications," "Settings Nav").
+    - No clicks on content-specific UI (e.g., "Edit Profile," "Notification Preferences," "Save Changes").
+    - No evidence of sub-page visits (e.g., no URL changes beyond initial `/settings` load).
+
+6. TYPING BEHAVIOR
+- **Pattern**: No typing detected
+  - **Quantitative evidence**:
+    - Zero keystrokes, text inputs, or form interactions.
+    - No corrections, deletions, or input fields focused.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Navigation**: "Profile," "Notifications," and "Settings Nav" tabs (clicked 2–3 times each).
+  - **Scrolling**: Used to traverse the page vertically (455px max depth).
+- **Features ignored**:
+  - **Functional UI**: No clicks on buttons (e.g., "Save," "Cancel," "Edit"), toggles, or form fields.
+  - **Sub-pages**: No navigation to "Account," "Privacy," "Billing," or other settings sub-sections.
+  - **Interactive elements**: No dropdowns, sliders, or checkboxes engaged.
+
+8. SESSION FLOW
+- **Arc**: Scripted navigation with no progression
+  - **Phase 1 (0.0s–1.58s)**: Initial load + forced hesitation
+    - Page load at 0.0s; 1.03s delay before first click (likely synthetic).
+    - Rapid scrolling (1.1s–2.75s) to reach max depth (455px).
+  - **Phase 2 (1.58s–5.78s)**: Repetitive navigation clicks
+    - Clicks on "Profile" (1.58s, 2.54s), "Notifications" (3.25s, 5.12s) with no functional outcome.
+    - Hover times (275ms–390ms) suggest scripted behavior.
+  - **Phase 3 (5.78s–7.69s)**: Final navigation + exit
+    - Clicks on "Settings Nav" (5.78s, 7.69s) with no sub-page load.
+    - Session ends at 7.7s with no further actions.
+- **Key observations**:
+  - No progression beyond surface-level navigation.
+  - All actions are **non-functional** (no settings changes, no form submissions).
+  - Session duration (7.7s) is abnormally short for a human user in a settings menu.
+  - **Likely synthetic**: Combination of hyper-fast interactions, scripted delays ("HESITATION"), and no substantive engagement strongly suggests a bot, scanner, or automated test.
+```
+
+**SUMMARY**: This session exhibits **non-human behavior** characterized by:
+- **Scripted navigation** (repetitive clicks, synthetic delays).
+- **No substantive engagement** (no typing, no functional UI use).
+- **Hyper-fast interactions** (scroll speed, hover consistency).
+- **No content exploration** (only navigation elements targeted).
+- **Abnormal session duration** (7.7s with no progression).

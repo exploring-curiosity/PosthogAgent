@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Linear with Redundancy**: The user follows a clear, sequential path through the settings menu (Settings Nav → Profile → Notifications → Privacy → Save Changes). However, they exhibit redundant clicks (e.g., clicking "Settings Nav" twice at [4.59s] and [4.99s], "Profile" twice at [5.81s] and [6.32s]), suggesting either validation behavior or UI uncertainty.
+- **No Exploration**: No deviation from the settings hierarchy; all actions are confined to the settings page and its subsections.
+
+2. READING BEHAVIOR
+- **Skimmer with Selective Depth**: Scroll patterns indicate rapid scanning:
+  - **Fast Scrolls**: Average scroll speed = ~150px/0.5s (e.g., [3.74s–3.91s] covers 611px in 0.17s).
+  - **No Pauses**: No prolonged stops between scrolls; each scroll segment is immediately followed by another (e.g., [3.74s–3.91s] has 4 scrolls with 0.05s gaps).
+  - **Limited Depth**: Max scroll depth per section aligns with the end of visible content (e.g., "Notifications" ends at 667px, "Privacy" at 943px), suggesting they scrolled just enough to see all options before clicking.
+- **No Evidence of Deep Reading**: No timestamps indicate lingering on specific content (e.g., no hover >1s on non-interactive elements).
+
+3. ENGAGEMENT STYLE
+- **Action-Oriented, No Passive Engagement**: The user exclusively performs navigational clicks (no voting, commenting, or content creation).
+- **No Vote/Comment Activity**: Zero instances of upvotes, downvotes, or text input.
+- **Interaction Speed**:
+  - **Hover-to-Click Latency**: Average hover duration before click = 512ms (478ms–789ms range).
+  - **Hesitation Events**: Three distinct "[HESITATION]" actions ([3.7s], [10.16s], [13.32s]) with durations of 3.7s, 2.8s, and 1.8s respectively, likely indicating decision points or distraction.
+
+4. INTERACTION SPEED
+- **Deliberate with Bursts of Speed**:
+  - **Average Action Interval**: 1.36s between non-scroll actions (excluding scrolls).
+  - **Fast Clicks**: Some actions occur in rapid succession (e.g., [4.99s] and [5.06s] are 70ms apart).
+  - **Slow Decisions**: Hesitation events add significant delay (e.g., 3.7s pause at [3.7s]).
+- **Scroll Speed**: Consistent 0.5s per scroll segment (150px/0.5s), suggesting automated or highly practiced behavior.
+
+5. CONTENT PREFERENCES
+- **Settings-Specific Focus**: All interactions are confined to the settings page and its subsections:
+  - **Profile**: Clicked at [5.81s] (hovered 534ms).
+  - **Notifications**: Clicked at [7.34s] (hovered 789ms), then again at [10.6s].
+  - **Privacy**: Clicked at [14.34s] (hovered 448ms).
+- **No Content Consumption**: No evidence of browsing posts, subreddits, or other content types.
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**: Zero text inputs, corrections, or form submissions observed in the log.
+
+7. FEATURE DISCOVERY
+- **Features Used**:
+  - **Settings Navigation**: Primary navigation menu (clicked at [4.59s]).
+  - **Subsection Tabs**: Profile, Notifications, Privacy (all clicked).
+  - **Save Changes**: Final action at [16.35s].
+- **Features Ignored**:
+  - **No Search**: No use of search bars or filters.
+  - **No Account Actions**: No password changes, email updates, or other profile edits.
+  - **No Help/FAQ**: No clicks on help icons or documentation links.
+
+8. SESSION FLOW
+- **Arc**: **Linear Task Completion with Validation Loops**
+  1. **Initial Hesitation (0–3.7s)**: Page load followed by a 3.7s pause (likely orienting to the UI).
+  2. **Rapid Scanning (3.7s–4.59s)**: Scrolls through settings options without clicking.
+  3. **Redundant Navigation (4.59s–6.32s)**: Clicks "Settings Nav" twice, then "Profile" twice, with upward scrolls (possible backtracking).
+  4. **Methodical Progression (6.32s–16.35s)**:
+     - **Profile Section**: Brief scroll (6.35s–6.39s).
+     - **Notifications Section**: Longer hover (789ms) and hesitation (2.8s at [10.16s]), followed by scroll to bottom.
+     - **Privacy Section**: Hesitation (1.8s at [13.32s]), then scroll to bottom.
+  5. **Final Action (15.17s–16.35s)**: Hovers and clicks "Save Changes" after 344ms.
+- **Exit**: Session ends immediately after "Save Changes" click (no confirmation screen observed).
+```
+
+**Key Observations**:
+- **Synthetic/User Testing Behavior**: The methodical, redundant clicks and consistent scroll speeds suggest this may be a scripted test or a user following a checklist (e.g., "check all settings options").
+- **No Organic Exploration**: Zero deviation from the settings hierarchy or unexpected actions.
+- **Efficiency Trade-offs**: Fast scrolls but long hesitations indicate a focus on task completion over speed.

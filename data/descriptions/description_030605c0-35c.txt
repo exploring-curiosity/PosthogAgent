@@ -1,0 +1,50 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly focused and linear with minimal deviation.
+- Proceeds through checkout steps in strict sequence: Cart Summary → Email → Card Number → Pay Now → Back to Shop.
+- No exploratory detours or backtracking to earlier sections (e.g., no return to product details or shipping options).
+- Scrolling is strictly vertical, no horizontal movement detected.
+
+2. READING BEHAVIOR
+- Skimming behavior confirmed by rapid, incremental scrolls.
+- Scrolls occur in 50–60px bursts over 0.5s intervals (e.g., 0.95s–1.14s, 4.66s–4.73s, 6.31s–6.44s).
+- Max scroll depth reached: 1004px, but no single pause >0.5s suggests deep reading.
+- Hover times (470ms–771ms) indicate brief visual confirmation rather than detailed reading.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions detected.
+- Primary engagement: form field clicks (Email, Card Number) and button clicks (Pay Now, Back to Shop).
+- Click-to-click ratio: 100% functional (no content engagement).
+- Hesitation events (871ms, 2107ms, 1862ms, 1743ms) suggest decision points, not content interaction.
+
+4. INTERACTION SPEED
+- Deliberate with controlled pacing.
+- Median inter-action interval: 0.7s (excluding hesitations).
+- Hesitations inflate intervals: 2.1s (3.87s–1.76s), 1.9s (9.2s–7.34s), 1.7s (12.75s–11.01s).
+- Scroll speed: 110–120px/s (consistent across all scrolls).
+
+5. CONTENT PREFERENCES
+- No content preferences detectable; session confined to checkout flow.
+- Only interacted elements: Cart Summary, Email field, Card Number field, Pay Now button, Back to Shop link.
+- No product pages, reviews, or category pages accessed.
+
+6. TYPING BEHAVIOR
+- No typing detected (no keystroke events logged).
+- Input fields clicked but no text entry recorded.
+- Hover times (486ms–771ms) suggest field selection, not typing.
+
+7. FEATURE DISCOVERY
+- Used features: Cart Summary toggle, Email input, Card Number input, Pay Now button, Back to Shop link.
+- Ignored features: Shipping options, promo code fields, payment method selectors, order notes, help/chat widgets.
+- No feature discovery attempts (e.g., no clicks on non-checkout elements).
+
+8. SESSION FLOW
+- Arc: Linear progression through checkout steps with four distinct hesitation pauses.
+  - 0.0s–1.76s: Initial load → Cart Summary review (scroll + click).
+  - 1.76s–5.55s: Hesitation → Email field selection (scroll + click).
+  - 5.55s–11.01s: Card Number entry (scroll + click) → Pay Now button hover.
+  - 11.01s–15.46s: Final hesitation → Pay Now click → immediate Back to Shop exit.
+- Exit: Abrupt; no confirmation page or post-purchase engagement.
+```

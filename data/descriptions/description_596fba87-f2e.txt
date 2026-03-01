@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced focus**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in attention. Initial hesitation (3.19s) suggests disorientation or synthetic behavior. Subsequent rapid scrolling (3.26s–4.52s) covers 1,020px in 1.26s (avg. 809px/s) with no pauses, indicating no sustained reading. Clicks on "Testimonials" (3.68s, 4.27s) and "Footer" (5.2s, 9.0s) are duplicated with near-identical coordinates, suggesting either UI testing or synthetic interaction. The final upward scroll (9.04s–9.19s) and clicks on "Hero Title" (9.54s, 10.08s) reverse the flow abruptly.
+- **Key evidence**: 4/12 actions are duplicate clicks on the same elements (Testimonials, Footer, Hero Title), with no intermediate engagement.
+
+2. READING BEHAVIOR
+- **Skimming with no deep reading**: Scroll speed (avg. 809px/s) and lack of pauses (>0.5s) between scrolls indicate no content absorption. Max scroll depth (1,020px) is reached in 1.26s, with no return to prior sections. The upward scroll (9.04s–9.19s) is equally rapid (avg. 1,656px/s), suggesting no re-reading.
+- **Key evidence**:
+  - No scroll pauses >0.5s.
+  - 100% of scrolls are continuous (no "stop-and-read" segments).
+  - No clicks on paragraph text or images (only structural elements: h1, div, footer).
+
+3. ENGAGEMENT STYLE
+- **No substantive engagement**: Zero votes, comments, or form inputs. All interactions are structural (clicks on layout elements, not content). The only "hover" events (Testimonials: 137ms, Footer: 384ms, Hero Title: 121ms) are too brief for genuine consideration.
+- **Key evidence**:
+  - 0/12 actions involve content creation (comments, replies).
+  - 0/12 actions involve content evaluation (votes, reactions).
+  - Hover durations <400ms (below human reaction thresholds for decision-making).
+
+4. INTERACTION SPEED
+- **Hyper-fast with synthetic pauses**: Actions occur in bursts with unnaturally consistent timing:
+  - Scrolls: 0.5s duration ±0.02s (6/6 scrolls).
+  - Clicks: 2/6 clicks have "HESITATION" labels (3,192ms and 2,701ms), but these are likely synthetic delays (no human hesitates for >2.7s on a static page).
+  - Post-hesitation clicks: <100ms between duplicate clicks (e.g., Testimonials at 3.68s and 4.27s).
+- **Key evidence**:
+  - Avg. time between non-hesitation actions: 0.34s.
+  - 100% of scrolls are 0.5s ±0.02s (mechanical precision).
+
+5. CONTENT PREFERENCES
+- **No content preferences demonstrated**: All clicks target structural elements (h1, div, footer) with no thematic pattern. The user does not interact with:
+  - Body text (no clicks on paragraphs, lists, or articles).
+  - Media (no clicks on images, videos, or embedded content).
+  - Navigation (no clicks on menus, links, or CTAs).
+- **Key evidence**:
+  - 100% of clicks are on generic selectors (div, footer, h1) with no semantic targeting.
+  - No subreddit/section-specific interactions (irrelevant to this site, but noted for context).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero form inputs, search queries, or text entry. The session contains no evidence of keyboard interaction.
+- **Key evidence**:
+  - 0/12 actions involve text input.
+  - No "input" or "keypress" events in the log.
+
+7. FEATURE DISCOVERY
+- **Discovered features**: Only structural elements:
+  - Hero section (h1 title).
+  - Testimonials section (div).
+  - Footer.
+- **Ignored features**:
+  - Navigation menus (no clicks on headers, sidebars, or breadcrumbs).
+  - Interactive elements (no clicks on buttons, forms, or CTAs).
+  - Content (no clicks on articles, images, or links).
+- **Key evidence**:
+  - 100% of clicks target non-interactive layout components.
+  - No exploration of dynamic features (e.g., dropdowns, modals, tooltips).
+
+8. SESSION FLOW
+- **Arc**: Synthetic scan → forced interaction → abrupt exit.
+  - **0.0s–3.19s**: Page load + hesitation (synthetic delay).
+  - **3.26s–4.52s**: Rapid downward scan (1,020px in 1.26s) with no pauses.
+  - **4.52s–5.2s**: Click on footer (likely UI test).
+  - **5.2s–9.0s**: Second hesitation (2,701ms) followed by duplicate footer click.
+  - **9.04s–10.08s**: Rapid upward scroll (837px in 0.15s) + duplicate hero title clicks.
+  - **10.1s**: Session ends.
+- **Key evidence**:
+  - No progression from exploration to engagement.
+  - 3/6 non-scroll actions are duplicates of prior clicks.
+  - Session duration (10.1s) is too short for human content consumption.
+```
+
+**SUMMARY**: This session is **highly likely synthetic** (e.g., automated scanner, bot, or UI test). Key indicators:
+- Unnaturally consistent scroll timing (0.5s ±0.02s).
+- Duplicate clicks on identical coordinates.
+- Hover durations <400ms (below human thresholds).
+- No content interaction (only structural elements).
+- "HESITATION" labels with implausible delays (>2.7s).

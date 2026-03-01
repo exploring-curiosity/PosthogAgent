@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused with minor exploratory detours**: The user exhibits a goal-directed navigation pattern with clear intent to modify settings, but with brief deviations.
+  - **Primary path**: Settings → Notifications → Settings (return) → Profile → Privacy (linear progression through settings subsections).
+  - **Secondary detours**: Two rapid clicks on "Notifications" (0.72s–0.98s) and "Settings Nav" (1.36s–1.71s) suggest either accidental clicks or UI confusion (e.g., dropdown menus, hover delays).
+  - **No backtracking**: All navigation is forward-moving except for scroll adjustments (e.g., scrolling up after overshooting a target).
+  - **No dead ends**: No abandoned paths or failed interactions (e.g., no clicks on non-interactive elements).
+
+2. READING BEHAVIOR
+- **Skim-heavy with targeted deep dives**:
+  - **Scroll speed**: Average scroll rate of **~120px/0.5s** (240px/s), with no pauses >0.1s between scrolls. This suggests rapid scanning rather than line-by-line reading.
+  - **Scroll depth**: Max depth reached in each subsection:
+    - Notifications: 538px (0.32s–0.72s)
+    - Settings (general): 924px (1.79s–2.41s)
+    - Profile: 789px (3.6s–4.15s)
+  - **Hover times**: Pre-click hovers (88ms–192ms) indicate brief visual confirmation before action, not deep reading.
+  - **No evidence of deep reading**: No scroll pauses >0.5s; all scrolls are continuous or near-continuous.
+
+3. ENGAGEMENT STYLE
+- **Action-only, no content creation**:
+  - **No voting/commenting**: The session involves only navigation and settings adjustments. No evidence of upvotes, downvotes, or text input.
+  - **Settings-focused**: All clicks target UI controls (e.g., "Save Changes," "Profile," "Privacy").
+  - **No passive engagement**: No evidence of lingering on content (e.g., no dwell time >1s on any non-interactive element).
+
+4. INTERACTION SPEED
+- **High-speed, deliberate execution**:
+  - **Action frequency**: **10 clicks in 4.3s** (2.3 clicks/s), with **14 scroll actions** (3.3 scrolls/s).
+  - **Click latency**:
+    - **Fastest**: 0.06s between "Notifications" clicks (0.98s–1.01s).
+    - **Slowest**: 0.42s between "Save Changes" and scroll up (2.62s–2.69s).
+    - **Median**: ~0.2s between primary actions (e.g., 0.72s–0.98s for Notifications).
+  - **Hover-to-click ratio**: 5/10 clicks preceded by hovers (50%), with hover durations of **58ms–192ms** (median: 88ms).
+  - **No hesitation markers**: No long pauses (>0.5s) between actions except for the initial 0.14s "hesitation" click (likely a UI artifact).
+
+5. CONTENT PREFERENCES
+- **Settings subsections only**:
+  - **Primary focus**: Account settings (Notifications, Profile, Privacy).
+  - **No content consumption**: The session is entirely administrative; no evidence of browsing posts, subreddits, or other content.
+  - **No search or discovery**: No use of search bars, trending tabs, or recommendation feeds.
+
+6. TYPING BEHAVIOR
+- **No typing detected**:
+  - **No text inputs**: No evidence of form fields, comments, or search queries being populated.
+  - **No corrections**: No backspaces, deletions, or cursor movements in text fields.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Navigation**: Left sidebar ("Settings Nav") and top tabs ("Profile," "Privacy").
+  - **Settings controls**: "Save Changes" button (clicked at 2.41s–2.62s).
+  - **Scrolling**: Used extensively to navigate long settings pages.
+- **Ignored features**:
+  - **No social features**: No upvotes, comments, or shares.
+  - **No advanced settings**: No clicks on toggles, dropdowns, or secondary controls (e.g., "Advanced" tabs).
+  - **No help/documentation**: No clicks on tooltips, FAQs, or support links.
+  - **No account management**: No clicks on "Log Out," "Delete Account," or "Billing."
+
+8. SESSION FLOW
+- **Arc**: **Rapid settings audit → targeted adjustments → abrupt exit**.
+  - **0.0s–0.72s (Exploration)**:
+    - Page load → initial scroll to scan Notifications settings (0–538px).
+    - Hesitation click (0.14s) suggests UI confusion or accidental click.
+  - **0.72s–2.62s (Engagement)**:
+    - Clicks "Notifications" (0.72s–0.98s), then immediately returns to Settings nav (1.36s–1.71s).
+    - Scrolls to bottom of Settings page (924px) and clicks "Save Changes" (2.41s–2.62s).
+  - **2.62s–4.28s (Browsing)**:
+    - Scrolls up to top (2.69s–2.73s), clicks "Profile" (3.19s–3.57s), and scrolls to 789px.
+    - Clicks "Privacy" (4.15s–4.28s) as final action.
+  - **Exit**: Session ends at 4.3s with no further actions. Likely closed tab or navigated away.
+- **Key observations**:
+  - **No completion confirmation**: No evidence of success/failure messages (e.g., "Changes saved") being read.
+  - **No return to home**: Session ends in Privacy settings; no navigation to feed or other sections.
+  - **Efficiency over thoroughness**: User prioritized speed (e.g., scrolling past content) over verifying changes.
+```
+
+---
+**SUMMARY**: This is a **high-speed, task-focused session** by a power user performing administrative actions (settings adjustments) with minimal exploration or content engagement. The user relies on **muscle memory and visual scanning** (rapid scrolling, short hovers) to navigate, with **no evidence of reading, typing, or social interaction**. The session arc suggests a **specific goal** (e.g., updating notifications or privacy) with **no intent to linger**. The abrupt exit implies either task completion or abandonment.

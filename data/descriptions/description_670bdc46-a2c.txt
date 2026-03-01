@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Non-linear, hesitant, and exploratory with repeated backtracking**
+  - The user exhibits a **scattered** navigation pattern, frequently revisiting the same elements (e.g., "Cart Summary" clicked twice at [7.37s] and [10.68s]; "Back to Shop" clicked twice at [12.52s] and [14.76s]; "Pay Now" clicked twice at [16.27s] and [19.13s]).
+  - **No clear progression**: Actions oscillate between checkout steps (e.g., scrolling to payment fields, then returning to "Back to Shop").
+  - **Hover hesitation**: 4/10 clicks preceded by long hovers (910ms–1379ms), indicating uncertainty or deliberation.
+
+2. READING BEHAVIOR
+- **Skimmer with rapid, shallow scrolls**
+  - **Scroll depth**: Max depth of 1011px (likely ~2–3 screen heights), but most scrolls are **short bursts** (e.g., 58px–117px over 0.5s).
+  - **No deep reading**: Scrolls are **mechanical and rapid** (e.g., 653px→832px→1011px in 0.13s total at [10.83s–10.93s]), suggesting scanning rather than reading.
+  - **Direction reversals**: Frequent up/down scrolls (e.g., [14.83s–14.9s] scrolls up from 1011px to 680px; [19.17s–19.28s] scrolls up from 680px to 290px) indicate **re-evaluation** of content.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting observed** (irrelevant to checkout context)
+  - **Primary interactions**: Clicks on checkout elements ("Cart Summary," "Pay Now," form fields).
+  - **Hesitation-driven**: 5/10 clicks preceded by "[HESITATION]" events (6085ms–2596ms delays), suggesting **indecision** or distraction.
+  - **No multi-tasking**: No parallel actions (e.g., no typing while scrolling).
+
+4. INTERACTION SPEED
+- **Slow and deliberate with long pauses**
+  - **Average time between actions**: 2.84s (excluding hesitations).
+  - **Hesitation delays**: 5 instances of >600ms pauses (max: 2596ms at [23.56s] before clicking "Card Number").
+  - **Click latency**: Hover-to-click delays (e.g., 1303ms on "Back to Shop" at [12.52s]) suggest **cautious interaction**.
+  - **Scroll speed**: Consistent 0.5s per scroll segment (e.g., 117px→295px at [10.73s]), indicating **controlled movement**.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus with no exploration of other content**
+  - **Gravitated toward**:
+    - **Cart Summary** (2 clicks, 1 hover).
+    - **Payment fields** ("Card Number" and "Email" inputs, 2 clicks each).
+    - **Navigation** ("Back to Shop" clicked twice, likely to abandon checkout).
+  - **Ignored**:
+    - No clicks on product details, promotions, or help links (if present).
+    - No interaction with non-checkout elements (e.g., headers, footers).
+
+6. TYPING BEHAVIOR
+- **No typing observed**
+  - **Form fields clicked but not populated**: "Card Number" and "Email" inputs were clicked (e.g., [20.97s], [26.66s]) but no keystrokes recorded.
+  - **No corrections**: No backspacing or re-clicks on fields.
+
+7. FEATURE DISCOVERY
+- **Limited feature usage with repeated engagement on core checkout elements**
+  - **Used**:
+    - **Cart Summary** (expanded twice).
+    - **Payment fields** ("Card Number," "Email").
+    - **Navigation** ("Back to Shop").
+  - **Ignored**:
+    - No use of promo code fields, guest checkout, or payment method toggles (if available).
+    - No help/chat widgets or FAQ links clicked.
+
+8. SESSION FLOW
+- **Arc: Hesitant exploration → Aborted checkout → Form avoidance**
+  - **[0.0s–7.37s] Initial hesitation**:
+    - Page load → 6.09s pause → rapid shallow scrolls (0px→117px) → click "Cart Summary" after 910ms hover.
+  - **[7.37s–14.76s] Checkout abandonment attempt**:
+    - 1.28s hesitation → re-click "Cart Summary" → rapid scroll to bottom (1011px) → hover 1303ms on "Back to Shop" → click twice.
+  - **[14.76s–28.39s] Payment field avoidance**:
+    - Scroll up to "Pay Now" → 1084ms hover → click → scroll to "Card Number" → 2596ms hesitation → click field but no typing → scroll to "Email" → click field but no typing.
+  - **Exit**: Session ends at 28.4s with no completion of checkout.
+- **Key themes**:
+  - **No progression**: User never advanced past initial checkout steps.
+  - **Form avoidance**: Clicked fields but did not input data.
+  - **Indecision**: Repeated clicks on the same elements (e.g., "Back to Shop," "Pay Now").
+```
+
+**SUMMARY**: This user exhibits **cautious, hesitant behavior** typical of a **synthetic/cautious_explorer** (as labeled in the device profile). Their session is marked by **long pauses, repeated actions, and avoidance of data entry**, suggesting **distrust, distraction, or technical barriers** (e.g., unclear UI, unexpected costs). The **lack of typing** and **rapid scrolls** indicate **low intent to complete the purchase**.

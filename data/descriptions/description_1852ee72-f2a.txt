@@ -1,0 +1,80 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and task-focused**: The user follows a strict top-to-bottom progression through the checkout page, with no backtracking, lateral exploration, or deviation from the primary flow (Cart Summary → Email → Card Number → Pay Now → Back to Shop).
+- **No exploratory behavior**: Zero clicks on non-checkout elements (e.g., navigation menus, product links, help/support).
+- **Minimal hesitation points**: Only two explicit hesitation markers (3.05s and 10.86s), both preceding critical actions (initial scroll and card number input).
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scroll bursts**: Scrolls occur in 0.5s increments (e.g., 3.1s–3.25s: 4 scrolls covering 135px total), suggesting cursory scanning rather than deep reading.
+- **No prolonged pauses**: Max scroll depth (982px) is reached in 13.68s, with no single scroll exceeding 161px (e.g., 13.6s–13.68s: 161px over 0.5s).
+- **Content skipped**: Scrolls past 660px (likely payment details/legal text) in 0.5s (13.6s–13.68s), indicating no engagement with fine print.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting**: Irrelevant to this checkout context; all interactions are form-field or button clicks.
+- **Action ratio**: 100% of clicks target functional UI elements (7 clicks on inputs/buttons, 2 on page text [hesitations]).
+- **Hover-to-click latency**:
+  - Cart Summary: 725ms hover → click (4.1s–4.95s)
+  - Email: 687ms hover → click (5.91s–6.97s)
+  - Card Number: 707ms hover → click (8.14s–11.42s)
+  - Pay Now: 554ms hover → click (12.38s–13.52s)
+  - Back to Shop: 571ms hover → click (14.37s–15.28s)
+
+4. INTERACTION SPEED
+- **Deliberate but efficient**: Average 1.5s between non-scroll actions (excluding hesitations).
+  - Fastest: 0.08s between scrolls (e.g., 3.1s–3.14s).
+  - Slowest: 2.72s hesitation before card number input (10.86s–11.42s).
+- **Input latency**:
+  - Email: 1.06s between click and next action (6.97s–7.03s).
+  - Card Number: 3.28s between click and next action (11.42s–11.47s), likely due to typing (not logged).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: All interactions are tied to e-commerce checkout elements:
+  - Cart Summary (2 clicks)
+  - Email field (2 clicks)
+  - Card Number field (2 clicks)
+  - Pay Now button (2 clicks)
+  - Back to Shop link (2 clicks)
+- **No content engagement**: Zero interaction with product listings, reviews, or promotional content.
+
+6. TYPING BEHAVIOR
+- **No direct typing data**: Clicks on input fields (Email, Card Number) suggest typing occurred, but:
+  - No keystroke logs or input durations are recorded.
+  - No corrections (e.g., backspace/delete) are visible.
+- **Field dwell time**:
+  - Email: 1.06s (6.97s–7.03s) before scrolling away.
+  - Card Number: 3.28s (11.42s–11.47s) before scrolling away.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (12 instances, 0.5s each).
+  - Form fields (Email, Card Number).
+  - Primary CTA (Pay Now).
+  - Exit link (Back to Shop).
+- **Ignored features**:
+  - Navigation menus (no clicks).
+  - Help/support links (no clicks).
+  - Promotional banners (no clicks).
+  - Autofill/saved payment options (no clicks logged).
+  - Legal/terms links (scrolled past rapidly).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–3.05s)**
+  - Page load → 3.05s hesitation (likely assessing page layout).
+- **Phase 2: Initial Scan (3.1s–4.1s)**
+  - Rapid scrolls (135px in 0.15s) to locate Cart Summary.
+- **Phase 3: Form Engagement (4.1s–13.52s)**
+  - Linear progression through form fields:
+    - Cart Summary (4.1s–4.95s).
+    - Email (5.91s–6.97s).
+    - Card Number (8.14s–11.42s, with 2.72s hesitation).
+    - Pay Now (12.38s–13.52s).
+- **Phase 4: Exit (13.6s–15.28s)**
+  - Scrolls to bottom (982px) → clicks "Back to Shop" (14.37s–15.28s).
+- **Arc**: **Task-driven → Form completion → Immediate exit**. No exploration, no secondary actions.
+```
+
+**Summary**: This user exhibits **highly methodical, goal-oriented behavior** with no distractions. Their interactions are **linear, rapid, and functional**, prioritizing checkout completion over exploration or content engagement. The session is **abnormally short (15.3s)** for a checkout flow, suggesting either:
+- A synthetic test (consistent with "synthetic/methodical_user" device label), or
+- A real user with pre-filled data (e.g., autofill) who only needed to confirm/submit.

@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with focused bursts**: The user exhibits a non-linear, erratic navigation pattern with rapid shifts between UI elements. They jump between:
+  - Dashboard overview (0.0s)
+  - Data table (1.51s)
+  - Sidebar (2.42s)
+  - Export button (3.23s)
+  - Stats cards (4.02s)
+  - Chart (4.97s)
+- **No clear path**: Actions lack sequential logic (e.g., scrolling to the bottom [2.02s] then immediately jumping to the top [2.81s]).
+- **Repetitive clicks**: 50% of clicks (10/20) are duplicates or "rage clicks" (rapid, frustrated clicks on the same element).
+
+2. READING BEHAVIOR:
+- **Skimmer with forced deep dives**: Scroll patterns suggest skimming, but with abrupt pauses:
+  - **Initial skim**: Rapid downward scrolls (0.5s intervals) covering 734px in 1.1s (1.07s–2.02s), likely scanning content.
+  - **Forced engagement**: Sudden stops at specific elements (e.g., 1.51s on "Data Table," 4.97s on "Chart") with hover delays (178ms, 167ms) indicating attempted interaction.
+  - **No sustained reading**: No scroll pauses >1s; max depth (951px) reached in 2.02s, then abandoned.
+- **Scroll speed**: 720px/s (367px/0.5s) during skimming; 176px/s during "focused" phases.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The session lacks votes, comments, or form submissions. All interactions are clicks or scrolls.
+- **Frustration signals**:
+  - **Rage clicks**: 7 instances (4.19s–7.39s), clustered on "Stats Cards" (3x) and "Chart" (4x).
+  - **Hesitation**: 2 instances (1.01s, 6.83s) with delays of 1011ms and 1855ms, respectively—likely pauses to locate or process UI elements.
+- **No ratio**: N/A (no voting/commenting).
+
+4. INTERACTION SPEED:
+- **Hyper-fast with outliers**:
+  - **Median action interval**: 0.5s (e.g., 1.07s→1.14s, 1.88s→1.95s).
+  - **Outliers**: Hesitations (1.01s, 6.83s) and rage-click clusters (e.g., 4.19s–4.34s: 3 clicks in 150ms).
+  - **Click frequency**: 2.7 clicks/s during rage-click bursts.
+- **Deliberate only when stuck**: Hover delays (127ms–191ms) precede 4/20 clicks, suggesting targeted interaction after hesitation.
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward data-centric UI elements**:
+  - **Data Table**: 2 clicks (1.51s, 1.81s) with hover (178ms).
+  - **Chart**: 5 clicks (4.97s–7.39s), including 4 rage clicks.
+  - **Stats Cards**: 5 clicks (4.02s–4.38s), including 3 rage clicks.
+- **Ignored**: No interaction with text content, images, or navigation menus beyond the sidebar (2 clicks at 2.42s–2.76s).
+- **Export feature**: 2 clicks (3.23s–3.46s), suggesting intent to extract data.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no text input, corrections, or form submissions.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - **Data Table**: 2 clicks (1.51s, 1.81s).
+  - **Sidebar**: 2 clicks (2.42s, 2.76s).
+  - **Export button**: 2 clicks (3.23s, 3.46s).
+  - **Chart**: 5 clicks (4.97s–7.39s).
+  - **Stats Cards**: 5 clicks (4.02s–4.38s).
+- **Ignored features**:
+  - No interaction with search bars, filters, help menus, or non-data UI elements.
+  - No page navigation (e.g., links, tabs) beyond the initial dashboard load.
+
+8. SESSION FLOW:
+- **Arc**: **Frustrated data extraction attempt → Abandonment**
+  - **0.0s–2.02s (Exploration)**: Rapid scrolling to scan dashboard content (max depth: 951px).
+  - **2.02s–4.38s (Targeted Interaction)**: Clicks on Data Table, Sidebar, and Export button, with increasing frustration (rage clicks on Stats Cards at 4.19s–4.34s).
+  - **4.38s–7.39s (Escalation)**: Shift to Chart element with 4 rage clicks (7.04s–7.39s), culminating in a 1855ms hesitation (6.83s) before final clicks.
+  - **Exit**: Session ends abruptly after 7.39s, likely due to frustration or task failure.
+- **Key transitions**:
+  - **1.51s**: Shift from skimming to targeted interaction (Data Table).
+  - **4.02s**: Onset of rage clicks (Stats Cards).
+  - **6.83s**: Longest hesitation (1855ms) before final rage-click burst.
+```
+
+**SUMMARY**: This user is a **frustrated power user** attempting to extract or interact with data. Their behavior is **scattered, fast, and error-prone**, with **no sustained engagement** beyond rapid clicks and scrolls. The session suggests a **failed task** (e.g., exporting data, interpreting a chart) leading to **rage clicks and abandonment**. No traditional "reading" or "browsing" occurred; the user treated the UI as a **functional tool**, not a content platform.

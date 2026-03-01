@@ -1,0 +1,54 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Linear with minor redundancy (repeated clicks on same elements).
+- **Trajectory**: Settings page → Profile section → Notifications section → Save Changes (no detours).
+- **Redundancy**: Clicked "Profile" twice (2.11s and 6.16s) and "Notifications" twice (6.89s and 7.78s), suggesting either hesitation or UI responsiveness issues.
+- **Efficiency**: 80% of actions (8/10 clicks) targeted 3 distinct UI elements (Profile, Notifications, Save Changes).
+
+2. READING BEHAVIOR
+- **Depth**: Skimmed content; max scroll depth = 970px (likely <50% of page if viewport is 1080px).
+- **Scroll Speed**: Rapid, consistent 0.5s intervals between scrolls (e.g., 6.24s–6.37s: 4 scrolls in 0.13s total).
+- **Dwell Time**: Minimal; no pauses >1s between scrolls. No evidence of deep reading.
+- **Scroll Pattern**: Incremental (50–100px jumps) with no backtracking, indicating linear skimming.
+
+3. ENGAGEMENT STYLE
+- **Actions**: No voting, commenting, or content creation observed. Pure navigation/setting adjustment.
+- **Interaction Type**: UI-focused (clicks on settings elements only). No content engagement.
+- **Ratio**: N/A (no content interactions).
+
+4. INTERACTION SPEED
+- **Pacing**: Fast but hesitant.
+  - **Hesitation Events**: 2 instances (1.41s: 1406ms; 4.69s: 2580ms) totaling 3986ms (43.8% of session).
+  - **Post-Hesitation Clicks**: Immediate (e.g., 4.69s hesitation → 6.16s click).
+  - **Scroll Speed**: 100px/0.5s (consistent across session).
+- **Action Intervals**: Median 0.57s between non-hesitation actions (e.g., 6.16s–6.24s: 0.08s).
+
+5. CONTENT PREFERENCES
+- **No content engagement**: Session limited to settings page (Profile, Notifications). No subreddit/content interaction.
+- **Settings Focus**: Prioritized Profile (2 clicks) and Notifications (2 clicks) over other potential settings (e.g., Privacy, Account).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form submissions observed.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Profile settings (2.11s, 6.16s).
+  - Notifications settings (6.89s, 7.78s).
+  - Save Changes button (8.44s, 9.07s).
+- **Ignored Features**:
+  - No interaction with other settings tabs (e.g., Account, Privacy).
+  - No search, help, or navigation to other pages.
+
+8. SESSION FLOW
+- **Arc**: Linear progression with 3 phases:
+  1. **Initial Hesitation** (0.0s–1.41s): Page load → 1406ms pause → first click (likely UI exploration).
+  2. **Targeted Navigation** (1.41s–6.89s): Profile section accessed (2.11s), skimmed (scrolls 6.24s–6.37s), redundant click (6.16s).
+  3. **Final Adjustments** (6.89s–9.07s): Notifications section accessed (6.89s), skimmed (scrolls 7.84s–8.02s), Save Changes clicked (8.44s, 9.07s).
+- **Exit**: Session ends immediately after final Save Changes click (no confirmation observed).
+- **Anomalies**: Two redundant clicks (Profile, Notifications) may indicate UI confusion or accidental double-clicks.
+
+SUMMARY
+User exhibited **fast, linear navigation** with **minimal engagement depth**, focusing solely on settings adjustments. **Hesitation periods** (3986ms total) suggest uncertainty or UI friction, while **rapid scrolling** and **no typing** indicate a goal-oriented, non-exploratory session. No content interaction occurred; behavior aligns with a **task-driven user** (e.g., updating profile/notifications) rather than a browser.
+```

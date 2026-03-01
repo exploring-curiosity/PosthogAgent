@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and goal-oriented**: The user follows a strict checkout flow with no deviations (Cart Summary → Email → Card Number → Pay Now → Back to Shop).
+- **No exploratory behavior**: Zero clicks on unrelated elements, navigation links, or product pages. All actions align with a single transactional path.
+- **Repetitive clicks**: 4 instances of double-clicking (same element clicked twice in quick succession: Cart Summary, Email, Card Number, Pay Now), suggesting either UI unresponsiveness or user impatience.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth maxes at 973px (likely full page height), but scrolls occur in rapid, incremental bursts (4–6px/ms) with no pauses >1s, indicating no deep reading.
+- **No content absorption**: Hover times (549ms–747ms) are too brief for reading detailed text (e.g., T&Cs, product descriptions). Likely only scanning labels (e.g., "Card Number").
+- **Scroll pattern**: 12 scroll actions in 4 distinct bursts (1.57s–1.77s, 7.74s–7.87s, 9.51s–9.66s, 11.16s–11.31s), each covering ~40–120px in 0.5s. Consistent with scanning for form fields.
+
+3. ENGAGEMENT STYLE
+- **No social engagement**: Zero votes, comments, or interactions with user-generated content (e.g., reviews, ratings). Session is purely transactional.
+- **Form-focused**: 100% of clicks target form inputs (Email, Card Number) or checkout buttons (Pay Now, Back to Shop).
+- **Hover hesitation**: 4 elements hovered before clicking (Cart Summary: 549ms, Email: 583ms, Card Number: 342ms, Pay Now: 747ms, Back to Shop: 727ms). Longest hesitation (2759ms) precedes a non-action (click on page background).
+
+4. INTERACTION SPEED
+- **Fast but deliberate**: Median time between actions: 0.7s (excluding hesitations). Peaks:
+  - 2.76s between "Card Number" click and "Pay Now" hover (likely filling out the form).
+  - 1.17s between "Pay Now" click and "Back to Shop" hover (post-submission).
+- **Hesitation outliers**:
+  - 2759ms before a non-action (6.68s–7.69s).
+  - 1538ms before first scroll (1.54s–1.57s).
+- **Click latency**: Average 600ms between hover start and click (range: 342ms–747ms).
+
+5. CONTENT PREFERENCES
+- **No content engagement**: Only interacted with checkout-specific elements:
+  - Form fields: Email, Card Number.
+  - Buttons: Pay Now, Back to Shop.
+  - Section: Cart Summary (expanded/collapsed twice).
+- **Ignored**: Product details, promotions, navigation menus, footer links, or any non-checkout content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No keystrokes logged in the action log. Possible explanations:
+  - User abandoned form after clicking (no input).
+  - Inputs were pre-filled or autofilled (no manual typing).
+  - Technical limitation (PostHog may not capture keystrokes in this session).
+- **No corrections**: No backspace/delete actions or repeated clicks on input fields.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Cart Summary (expanded/collapsed).
+  - Email and Card Number fields (clicked but not filled).
+  - Pay Now button (clicked twice).
+  - Back to Shop link (final action).
+- **Ignored**:
+  - Navigation (header/footer menus).
+  - Promotional banners or upsell offers.
+  - Payment method selectors (e.g., PayPal, Apple Pay).
+  - Shipping address fields (if present).
+  - Help/chat widgets (no clicks on support elements).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–2.43s)**
+  - Loads checkout page, hesitates 1538ms, then scrolls 151px in 0.2s to locate Cart Summary.
+  - Clicks Cart Summary twice (likely to expand it).
+- **Phase 2: Form Interaction (2.43s–10.52s)**
+  - Clicks Email field (hover 583ms), hesitates 2759ms, then clicks again.
+  - Scrolls 163px in 0.13s to find Card Number field, clicks it (hover 342ms).
+  - Scrolls 355px in 0.15s to locate Pay Now button.
+- **Phase 3: Submission Attempt (10.52s–13.48s)**
+  - Hovers Pay Now for 747ms, clicks twice.
+  - Scrolls 306px in 0.15s to bottom of page.
+  - Hovers Back to Shop for 727ms, clicks once to exit.
+- **Exit**: Session ends immediately after "Back to Shop" click.
+
+SUMMARY
+This user exhibits **highly methodical, transactional behavior** with no exploration or content engagement. Their actions are **linear, fast (median 0.7s between actions), and form-focused**, with repetitive clicks suggesting either UI friction or impatience. Scrolling is **rapid and incremental**, indicating skimming rather than reading. The session arc is **purely functional**: locate form fields → attempt submission → exit. No typing or social interactions were recorded.
+```

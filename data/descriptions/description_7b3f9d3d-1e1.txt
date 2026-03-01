@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. Initial hesitation (3.79s) suggests disorientation or scripted behavior. Subsequent actions (e.g., rapid scrolling, repeated clicks on "Export" and "Data Table") indicate a task-driven but inefficient workflow. The final shift to the sidebar (9.57s–10.18s) breaks the prior pattern, suggesting either a new objective or abandonment of the initial task.
+- **Key evidence**:
+  - 3 distinct "focus zones": Export button (4.6s–6.61s), Data Table (7.31s–8.76s), Sidebar (9.57s–10.18s).
+  - No sustained engagement with any single element (>2s without interruption).
+
+2. READING BEHAVIOR:
+- **Skim-only with no deep reading**: Scroll patterns reveal rapid, shallow engagement:
+  - **Downward skims**: 4 sequential scrolls (3.87s–3.98s, 6.68s–6.85s) covering 70px–786px in 0.5s increments, averaging ~137px/s. No pauses >0.5s suggest no content absorption.
+  - **Upward skims**: 5 scrolls (8.82s–9.03s) covering 786px→495px in 0.5s increments, averaging ~117px/s. Likely backtracking to reorient, not re-reading.
+- **No evidence of deep reading**: No scroll stutters, pauses, or revisits to specific content blocks.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement** (e.g., voting/commenting). Instead:
+  - **Repetitive clicking**: 2 clicks on "Export" (4.6s, 6.61s), 2 on "Data Table" (7.31s, 8.76s), 2 on "Sidebar" (9.57s, 10.18s). All clicks are preceded by hovers (309ms–385ms), indicating hesitation or UI lag.
+  - **No input creation**: No typing, form submissions, or dynamic interactions observed.
+
+4. INTERACTION SPEED:
+- **Variable with forced delays**:
+  - **Fast actions**: Scrolls (0.5s duration), clicks (e.g., 6.61s–6.68s = 70ms between actions).
+  - **Deliberate hesitations**:
+    - 3.79s: 3793ms hesitation before first click.
+    - 5.72s: 1120ms hesitation before second "Export" attempt.
+    - Hover times (237ms–385ms) suggest UI latency or scripted delays.
+- **Average action interval**: 1.13s (excluding hesitations).
+
+5. CONTENT PREFERENCES:
+- **No content engagement detected**. Interactions are limited to UI elements:
+  - **Primary targets**: "Export" button (2 clicks), "Data Table" (2 clicks), "Sidebar" (2 clicks).
+  - **Ignored elements**: No clicks on links, images, or interactive content (e.g., filters, dropdowns).
+  - **Assumed goal**: Data extraction (export + table interactions) and navigation (sidebar).
+
+6. TYPING BEHAVIOR:
+- **No typing observed**: No keystrokes, form inputs, or text selections recorded.
+
+7. FEATURE DISCOVERY:
+- **Discovered features**:
+  - Export functionality (used twice, 4.6s–6.61s).
+  - Data Table (interacted with twice, 7.31s–8.76s).
+  - Sidebar (clicked twice, 9.57s–10.18s).
+- **Ignored features**:
+  - No interaction with page content (e.g., text, images, cards).
+  - No use of navigation menus (beyond sidebar), search bars, or filters.
+  - No engagement with dynamic elements (e.g., tooltips, modals).
+
+8. SESSION FLOW:
+- **Arc**: **Scripted task execution → Abandonment**
+  - **0.0s–3.79s (Orientation)**: Page load + 3.8s hesitation (likely script initialization or UI rendering delay).
+  - **3.87s–6.61s (Task Initiation)**: Rapid scrolling (3.87s–3.98s) followed by 2 "Export" clicks (4.6s, 6.61s). Hesitation (5.72s) suggests failed first attempt or UI unresponsiveness.
+  - **6.68s–8.76s (Data Exploration)**: Aggressive downward scroll (6.68s–6.85s) to Data Table, followed by 2 clicks (7.31s, 8.76s). Upward scroll (8.82s–9.03s) may indicate backtracking or error recovery.
+  - **9.57s–10.18s (Exit Attempt)**: Shift to sidebar (9.57s) with 2 clicks (10.18s), possibly to navigate away or access settings. Session ends abruptly at 10.2s.
+- **Key observations**:
+  - No natural user behaviors (e.g., reading, typing, sustained engagement).
+  - All actions are binary (click/scroll) with no qualitative interaction.
+  - Session resembles a **synthetic script** (e.g., automated test, bot, or scanner) due to:
+    - Precise viewport (1920x1080).
+    - Repeated clicks on identical coordinates (±4px).
+    - Unnaturally consistent scroll speeds (0.5s increments).
+    - Lack of human-like variability (e.g., no mouse drift, no accidental clicks).
+```
+
+**SUMMARY**: This session is **highly likely synthetic** (automated script/scanner). Human-like behaviors (hesitations, hovers) are artificially inserted, while interaction patterns (repetitive clicks, linear scrolling) lack organic variability. No genuine user engagement or content consumption occurred.

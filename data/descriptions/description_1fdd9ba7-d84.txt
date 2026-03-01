@@ -1,0 +1,73 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive loops**: The user exhibits a non-linear, erratic navigation style with frequent revisits to the same UI elements (e.g., "Export" button clicked 4 times, "Stats Cards" 3 times, "Chart" 3 times). No clear progression through content.
+- **Feature-hopping**: Jumps between distinct UI components (Export → Stats Cards → Chart → Data Table → Sidebar) without sustained engagement with any single element.
+- **Spatial inconsistency**: Clicks are distributed across the viewport (e.g., Export at x=1642, Chart at x=521, Sidebar at x=97), suggesting no spatial anchoring.
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scrolling**: Scrolls continuously at ~120px/0.5s (e.g., 0.5s–2.24s: 0px → 632px; 3.74s–3.94s: 371px → 882px). No pauses >0.5s to suggest deep reading.
+- **No content absorption**: Scrolls past 882px (max depth) in 4.15s, then immediately rage-clicks the Data Table without dwelling. Upward scrolls (e.g., 5.2s–5.25s: 882px → 77px) suggest abandonment of content.
+- **Hesitation markers**: Initial 377ms hesitation (0.38s) and hover times (e.g., 139ms on Export, 127ms on Chart) indicate uncertainty, not reading.
+
+3. ENGAGEMENT STYLE
+- **No productive engagement**: Zero evidence of voting, commenting, or data input. All interactions are clicks on UI elements (buttons, divs, tables).
+- **Frustration-driven actions**:
+  - **Rage clicks**: 11 total (3 on Chart, 5 on Data Table, 3 on Export button).
+  - **Dead click**: 1 at 7.31s (click on non-interactive area).
+- **Click redundancy**: Repeated clicks on the same element within <0.5s (e.g., Export at 0.99s and 1.36s; Stats Cards at 1.76s and 2.02s).
+
+4. INTERACTION SPEED
+- **Hyper-fast with bursts**: Median inter-action time = 0.23s (e.g., 0.38s–0.43s: 0.05s between click and scroll).
+- **Action clusters**:
+  - 0.38s–1.36s: 6 actions in 0.98s (6.1 actions/s).
+  - 3.28s–3.68s: 5 rage clicks in 0.4s (12.5 actions/s).
+- **Hover times**: Short (37ms–139ms), suggesting no deliberation.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: All interactions target UI controls, not content. Gravitated toward:
+  - **Export functionality**: 4 clicks (0.99s–6.67s).
+  - **Data visualization**: 5 clicks on "Chart" (2.44s–3.57s).
+  - **Tabular data**: 6 clicks on "Data Table" (4.15s–5.16s).
+  - **Dashboard metrics**: 5 clicks on "Stats Cards" (1.76s–9.09s).
+- **Ignored**: No evidence of reading text, images, or other content types.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, input fields, or corrections logged. Session is entirely mouse-driven.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Export (primary focus, 4 clicks).
+  - Stats Cards (3 clicks).
+  - Chart (3 clicks).
+  - Data Table (6 clicks).
+  - Sidebar (2 clicks).
+- **Ignored features**:
+  - No interaction with navigation menus, search bars, or help/documentation.
+  - No evidence of exploring secondary pages or modals.
+
+8. SESSION FLOW
+- **0.0s–0.99s (Exploration Phase)**:
+  - Loads dashboard, hesitates (377ms), then scrolls rapidly (0px → 101px in 0.6s).
+  - First click on Export (0.99s), suggesting immediate interest in data extraction.
+- **1.0s–3.57s (Frustration Escalation)**:
+  - Repeated clicks on Export (1.36s), then shifts to Stats Cards (1.76s) and Chart (2.44s).
+  - First rage clicks on Chart (3.35s–3.57s), indicating failure to achieve desired outcome.
+- **3.58s–5.25s (Abandonment Attempt)**:
+  - Scrolls to Data Table (3.74s–3.94s), rage-clicks it (4.61s–5.16s).
+  - Scrolls upward (5.2s–5.25s: 882px → 77px), signaling intent to leave or restart.
+- **5.26s–9.09s (Repetitive Loop)**:
+  - Re-clicks Export (5.59s–6.67s), then Sidebar (7.62s), and Stats Cards (8.43s).
+  - Final rage clicks on Stats Cards (8.89s–9.09s) before session ends.
+- **Arc**: **Exploration → Frustration → Abandonment → Repetitive Loop** with no resolution. Session terminates abruptly after 9.1s.
+
+SUMMARY
+This user exhibits **synthetic/impulsive behavior** (as labeled in the device profile) with no evidence of human-like engagement. Key traits:
+- **Zero content consumption**: Only UI interactions.
+- **Extreme speed**: Median 0.23s between actions.
+- **Frustration markers**: 11 rage clicks, 1 dead click.
+- **Repetitive loops**: Revisits the same 5 UI elements 20+ times.
+- **No typing or input**: Entirely mouse-driven.
+Likely a **bot, automated test, or user with severe usability issues** (e.g., broken UI, unclear affordances).
+```

@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical but non-linear**: The user exhibits a structured yet exploratory pattern, cycling between sidebar navigation, content scanning, and targeted interactions. Navigation is not strictly linear (e.g., they revisit the sidebar twice at [1.67s] and [4.37s] after initial exploration).
+- **Depth-first engagement**: After initial broad scans (e.g., scrolling to 763px by [0.78s]), they dive into specific UI elements (Stats Cards, Chart, Data Table) in sequence, suggesting a goal-oriented approach.
+- **Revisitation rate**: 3/10 clicks (30%) are repeats of the same UI element (Sidebar ×2, Stats Cards ×2, Chart ×2, Data Table ×2), indicating either confirmation clicks or iterative refinement of intent.
+
+2. READING BEHAVIOR
+- **Skim-dominant with targeted deep dives**: Scroll patterns show rapid vertical scanning (e.g., 0–763px in 1.5s at [0.78s]) followed by abrupt stops at specific components (e.g., pausing at 243px for Stats Cards at [5.17s]).
+- **Scroll velocity**: Average scroll speed = 763px/1.5s ≈ 509px/s (initial scan) vs. 243px/1.5s ≈ 162px/s (later scans), suggesting slower, more deliberate reading during engagement phases.
+- **No evidence of deep reading**: No sustained pauses (>2s) on any single scroll position; max dwell time on a UI element is 2.49s (Chart hesitation at [9.68s]).
+
+3. ENGAGEMENT STYLE
+- **Interaction-only, no content creation**: The user exclusively clicks UI elements (10 clicks total) with no evidence of typing, voting, or commenting.
+- **Hover-to-click latency**:
+  - Fast: Stats Cards (387ms hover → click at [5.17s])
+  - Slow: Data Table (715ms hover → click at [11.91s])
+  - Extreme hesitation: 3 instances of "[HESITATION Xms]" clicks (671ms, 1563ms, 2490ms, 2980ms), totaling 7.7s (44% of session) spent in pre-click deliberation.
+- **No vote/comment ratio**: N/A (no voting or commenting observed).
+
+4. INTERACTION SPEED
+- **Bimodal pacing**:
+  - **Exploratory phase (0–4.37s)**: 5 actions in 4.37s (avg. 874ms between actions).
+  - **Engagement phase (4.37–17.32s)**: 15 actions in 12.95s (avg. 863ms between actions), but with 4 hesitation pauses >1.5s.
+- **Click timing**: Median time between non-hesitation clicks = 643ms (IQR: 387–715ms).
+- **Scroll bursts**: All scrolls occur in 0.5s increments, suggesting deliberate but rapid navigation between content blocks.
+
+5. CONTENT PREFERENCES
+- **UI component focus**:
+  - **Sidebar**: 2 clicks ([1.67s], [4.37s]) – likely primary navigation.
+  - **Stats Cards**: 2 clicks ([5.17s], [6.07s]) – high engagement with summary data.
+  - **Chart**: 2 clicks ([7.19s], [10.79s]) – visual data interaction.
+  - **Data Table**: 2 clicks ([11.91s], [15.78s]) – tabular data focus.
+  - **Export button**: 2 clicks ([16.51s], [17.32s]) – final action suggests intent to extract data.
+- **No content/subreddit preferences observable**: Session is UI-component-driven, not content-driven.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form interactions observed in the 17.3s session.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Sidebar navigation (2×)
+  - Stats Cards (2×)
+  - Chart interaction (2×)
+  - Data Table (2×)
+  - Export functionality (2×)
+- **Ignored features**:
+  - No evidence of search, filters, or advanced UI controls.
+  - No interaction with headers, footers, or non-data UI elements.
+  - No mobile-specific features (consistent with desktop viewport).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0–1.67s)**
+  - Loads dashboard → immediate hesitation (671ms) → rapid full-page scroll (0–763px in 1.5s).
+  - **Goal**: Initial layout assessment.
+- **Phase 2: Navigation Testing (1.67–4.37s)**
+  - Sidebar click ([1.67s]) → hesitation (1563ms) → sidebar re-click ([4.37s]).
+  - **Goal**: Validate navigation options; indecision evident.
+- **Phase 3: Data Exploration (4.37–11.91s)**
+  - Scrolls up to Stats Cards → 2 clicks ([5.17s], [6.07s]) → scrolls down to Chart → 2 clicks ([7.19s], [10.79s]).
+  - **Goal**: Sequential deep dive into data visualizations.
+- **Phase 4: Data Table Interaction (11.91–15.78s)**
+  - Data Table click ([11.91s]) → hesitation (2980ms) → re-click ([15.78s]).
+  - **Goal**: Tabular data inspection; prolonged deliberation.
+- **Phase 5: Exit Preparation (15.78–17.32s)**
+  - Rapid scroll up (791px → 91px in 1.5s) → Export button hover (358ms) → click ([16.51s]) → re-click ([17.32s]).
+  - **Goal**: Data extraction; session concludes with export action.
+
+OVERALL ARC:
+**Methodical data auditor** – The user follows a clear progression from broad layout assessment → navigation validation → sequential data component inspection → data extraction. Hesitation pauses suggest either (1) decision fatigue, (2) UI confusion, or (3) synthetic/methodical testing (per user profile). No exploratory browsing or content creation; purely functional interaction with data-centric UI elements.
+```

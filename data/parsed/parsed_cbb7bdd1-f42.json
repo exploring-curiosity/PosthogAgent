@@ -1,0 +1,214 @@
+{
+  "user_profile": {
+    "session_id": "cbb7bdd1-f42",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/scanner",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 14.3,
+  "total_raw_events": 36,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/dashboard",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 4.45,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 4448ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 4.49,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 133,
+      "max_depth": 133,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 4.54,
+      "action": "SCROLL",
+      "scroll_from": 133,
+      "scroll_to": 267,
+      "max_depth": 267,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 5.05,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Stats Cards [HOVER 303ms]",
+      "target_href": "",
+      "target_class": "div.stats-overview",
+      "coordinates": [
+        511,
+        267
+      ]
+    },
+    {
+      "time": 6.16,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Stats Cards",
+      "target_href": "",
+      "target_class": "div.stats-overview",
+      "coordinates": [
+        516,
+        270
+      ]
+    },
+    {
+      "time": 6.23,
+      "action": "SCROLL",
+      "scroll_from": 267,
+      "scroll_to": 354,
+      "max_depth": 354,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.29,
+      "action": "SCROLL",
+      "scroll_from": 354,
+      "scroll_to": 441,
+      "max_depth": 441,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.34,
+      "action": "SCROLL",
+      "scroll_from": 441,
+      "scroll_to": 528,
+      "max_depth": 528,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.38,
+      "action": "SCROLL",
+      "scroll_from": 528,
+      "scroll_to": 615,
+      "max_depth": 615,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.44,
+      "action": "SCROLL",
+      "scroll_from": 615,
+      "scroll_to": 702,
+      "max_depth": 702,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 7.09,
+      "action": "CLICK",
+      "target_tag": "aside",
+      "target_text": "Sidebar [HOVER 378ms]",
+      "target_href": "",
+      "target_class": "aside.sidebar",
+      "coordinates": [
+        243,
+        702
+      ]
+    },
+    {
+      "time": 9.92,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2828ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 10.82,
+      "action": "CLICK",
+      "target_tag": "aside",
+      "target_text": "Sidebar",
+      "target_href": "",
+      "target_class": "aside.sidebar",
+      "coordinates": [
+        245,
+        696
+      ]
+    },
+    {
+      "time": 10.86,
+      "action": "SCROLL",
+      "scroll_from": 702,
+      "scroll_to": 404,
+      "max_depth": 702,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 10.92,
+      "action": "SCROLL",
+      "scroll_from": 404,
+      "scroll_to": 106,
+      "max_depth": 404,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 11.21,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Export [HOVER 115ms]",
+      "target_href": "",
+      "target_class": "button.export-btn",
+      "coordinates": [
+        1765,
+        106
+      ]
+    },
+    {
+      "time": 13.54,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2326ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 14.29,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Export",
+      "target_href": "",
+      "target_class": "button.export-btn",
+      "coordinates": [
+        1769,
+        108
+      ]
+    }
+  ]
+}

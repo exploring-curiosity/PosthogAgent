@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear with targeted jumps**: The user follows a clear vertical progression through the page (scrolling down 726px in 1.62s, then back up to 248px by 3.1s) but makes deliberate lateral jumps to specific UI elements (e.g., "Export" button at 0.69s, "Chart" at 1.36s, "Sidebar" at 2.68s).
+- **No exploratory detours**: All clicks target pre-identified elements (hover times suggest premeditation). No evidence of browsing unrelated sections or random clicks.
+- **Scattered focus**: While linear, the user rapidly shifts attention between disparate components (e.g., "Export" → "Chart" → "Data Table" → "Sidebar" → "Stats Cards" in 3.54s).
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**:
+  - **Scroll speed**: 120–140px/s (e.g., 65px to 244px in 0.5s at 0.94s), far exceeding typical reading speeds (~20px/s for deep reading).
+  - **Max depth**: Reached 726px in 1.88s but only paused briefly (hover times: 62–177ms) on interactive elements ("Chart," "Data Table").
+  - **Backtracking**: Scrolled up from 726px to 248px in 1.26s (478px in 0.82s), suggesting no sustained reading of content below the fold.
+- **No evidence of deep reading**: No scroll pauses >200ms outside of hover interactions.
+
+3. ENGAGEMENT STYLE
+- **Action-only engagement**: No evidence of voting, commenting, or text input. All interactions are clicks on UI controls.
+- **Rapid sequential clicks**: 7 double-clicks (e.g., "Export" at 0.69s/0.87s, "Chart" at 1.36s/1.51s) with 120–150ms between clicks, likely due to:
+  - UI latency (e.g., "Export" hover 95ms before first click).
+  - Confirmation clicks (e.g., "DEAD CLICK" at 4.18s suggests a failed interaction).
+- **No passive engagement**: No hovers >200ms on non-interactive content.
+
+4. INTERACTION SPEED
+- **Extremely fast with micro-deliberation**:
+  - **Median time between actions**: 180ms (excluding scrolls).
+  - **Fastest sequence**: 3 clicks in 420ms (0.69s–1.11s: "Export" → "Export" → scroll).
+  - **Slowest pauses**: 422ms hesitation at 0.42s (initial click) and 240ms before "Stats Cards" click (3.54s–3.73s).
+- **Hover times**: 62–177ms (median 95ms), indicating rapid target acquisition.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward functional UI elements** (not content):
+  - **Export controls** (0.69s–0.87s): Likely data extraction.
+  - **Chart** (1.36s–1.51s): Visual data interaction.
+  - **Data Table** (1.88s–2.09s): Tabular data.
+  - **Sidebar** (2.68s–2.82s): Navigation or settings.
+  - **Stats Cards** (3.54s–3.73s): Summary metrics.
+- **Ignored**: Static text, images, or non-interactive content (no hovers/scroll pauses).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Session contains zero text inputs, corrections, or form interactions.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Export functionality** (0.69s–0.87s): Double-click suggests either a failed first attempt or confirmation.
+  - **Chart interaction** (1.36s–1.51s): Likely zooming, filtering, or tooltips.
+  - **Data Table** (1.88s–2.09s): Sorting, selection, or pagination.
+  - **Sidebar navigation** (2.68s–2.82s): Menu or tool access.
+  - **Stats Cards** (3.54s–3.73s): Click may trigger details or actions.
+- **Ignored features**:
+  - Search bars, filters, or advanced controls (no hovers).
+  - Help/documentation (no clicks on "?" or info icons).
+  - Social features (sharing, comments, etc.).
+
+8. SESSION FLOW
+- **Arc**: **Targeted extraction → rapid validation → premature exit**
+  1. **0.0s–0.42s (Orientation)**: Page load + 422ms hesitation (likely identifying targets).
+  2. **0.42s–1.88s (Data Extraction)**:
+     - Clicks "Export" (0.69s), scrolls to "Chart" (1.36s) and "Data Table" (1.88s).
+     - **Goal**: Likely bulk data export or validation of data availability.
+  3. **1.88s–3.1s (Navigation Check)**:
+     - Scrolls up to "Sidebar" (2.68s), possibly verifying navigation options or settings.
+  4. **3.1s–4.18s (Validation)**:
+     - Clicks "Stats Cards" (3.54s), likely confirming summary metrics.
+  5. **4.18s (Exit)**:
+     - "DEAD CLICK" at (560, 818) (off-screen or non-interactive element), followed by session end.
+- **Exit trigger**: Failed interaction (DEAD CLICK) suggests either:
+  - UI bug (element not responding).
+  - User frustration (e.g., export failed silently).
+  - Session timeout (4.2s duration).
+```
+
+**Key Observations**:
+- **Power user behavior**: High-speed, goal-driven interactions with no exploratory detours.
+- **Data-centric**: Focused on extraction/validation (export, charts, tables) over content consumption.
+- **UI friction**: Double-clicks and DEAD CLICK hint at possible latency or unresponsive elements.
+- **No engagement with "content"**: Treated the dashboard as a tool, not a destination.

@@ -1,0 +1,66 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with rapid jumps between UI elements. No clear path is followed—actions alternate between sidebar clicks (2x), chart interactions (2x), and undefined page clicks (3x at (0,0)). The final export action suggests a forced linear endpoint after chaotic exploration.
+- **Spatial inconsistency**: Clicks occur at disparate coordinates (e.g., (0,0) vs. (1642,63)), indicating no spatial memory or intentional targeting of adjacent elements.
+- **Repetition without progression**: Identical actions are repeated (e.g., two sidebar clicks at ~(230,453), two chart clicks at (792,399)) without observable outcome or refinement.
+
+2. READING BEHAVIOR
+- **Skim-only, no deep reading**: Scroll patterns reveal rapid, shallow engagement:
+  - **Downward skims**: Two 0.5s scrolls (1.21s–1.28s) covering 455px total (227px/0.5s = 454px/s).
+  - **Upward skims**: Four 0.5s scrolls (6.98s–7.18s) covering 334px total (668px/s), suggesting frantic backtracking.
+- **No dwell time**: No pauses >1s between scrolls; max depth (455px) is reached in 1.28s, then abandoned.
+- **Hover data**: Two hovers (269ms, 187ms) on sidebar/chart suggest cursory inspection, not reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows no votes, comments, or text inputs. All interactions are clicks or scrolls.
+- **Action types**:
+  - **Clicks**: 8 total (3 undefined at (0,0), 2 sidebar, 2 chart, 1 export).
+  - **Hesitations**: 3 undefined clicks labeled "[HESITATION]" with delays (821ms, 1149ms, 2068ms), possibly misclicks or UI confusion.
+- **Ratio**: N/A (no votes/comments).
+
+4. INTERACTION SPEED
+- **High-speed with forced delays**:
+  - **Median interval**: 0.67s between actions (excluding hesitations).
+  - **Fastest interval**: 0.04s (3.68s–3.72s: sidebar click → scroll up).
+  - **Slowest interval**: 2.07s (4.1s–6.17s: chart click → hesitation).
+- **Hesitation outliers**: 3 clicks with pre-action delays >800ms (1.15s, 2.65s, 6.17s), suggesting UI friction or indecision.
+
+5. CONTENT PREFERENCES
+- **No content differentiation**: The log lacks subreddit/page identifiers. Interactions target:
+  - **Sidebar**: 2 clicks (likely navigation menu).
+  - **Chart**: 2 clicks (data visualization or interactive element).
+  - **Export button**: 1 click (final action, possibly goal-oriented).
+- **No textual content engagement**: No evidence of reading articles, posts, or comments.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form interactions in the log.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Sidebar navigation**: Used twice (1.83s, 3.68s).
+  - **Chart interaction**: Used twice (4.1s, 6.94s).
+  - **Export functionality**: Discovered and used once (7.52s–8.8s).
+- **Ignored features**:
+  - **No search/filters**: No clicks on search bars or filter buttons.
+  - **No profile/account actions**: No clicks on user avatars, settings, or notifications.
+  - **No social features**: No votes, comments, or shares.
+
+8. SESSION FLOW
+- **Arc**: **Chaotic exploration → forced exit**
+  - **0.0s–1.83s (Exploration)**: Page load → hesitation → rapid scrolling (455px in 1.28s) → sidebar click.
+  - **1.83s–4.1s (Repetition)**: Sidebar re-click → hesitation → chart interaction (hover + click).
+  - **4.1s–7.52s (Frustration)**: Long hesitation (2.07s) → chart re-click → frantic upward scrolling (334px in 0.2s).
+  - **7.52s–8.8s (Exit)**: Export button discovery → click (session end).
+- **Key observations**:
+  - **No goal establishment**: Actions lack progression toward a clear objective until the final export.
+  - **Scroll whiplash**: Downward scrolls (1.21s–1.28s) immediately followed by upward scrolls (6.98s–7.18s) suggest disorientation.
+  - **Hesitations cluster**: 3/8 clicks are preceded by long delays, indicating UI confusion or misaligned expectations.
+```
+
+**SUMMARY**: This session reflects a **non-human or synthetic user** (per "synthetic/scanner" device label) exhibiting **mechanical, erratic behavior** with no human-like engagement. Key red flags:
+- **Inhuman speed**: 454px/s scrolls, 0.04s reaction times.
+- **Spatial anomalies**: Clicks at (0,0) (likely dead space) and repeated identical coordinates.
+- **No content interaction**: Zero reading, typing, or social actions.
+- **Forced linearity**: Chaotic exploration abruptly ends with an export click, suggesting a scripted endpoint.

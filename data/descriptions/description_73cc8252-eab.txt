@@ -1,0 +1,56 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with frustration indicators**: The user exhibits non-linear, erratic navigation with repeated backtracking and hesitation. Initial movement is exploratory (scrolling full page depth twice within 1.5s at 7.27-8.06s), followed by abrupt abandonment attempts (two "Back to Shop" clicks at 8.06s and 10.05s). Post-frustration, navigation becomes more targeted (direct clicks on form fields at 12.16s and 21.83s) but remains inefficient (repeated clicks on "Cart Summary" at 15.53s and 19.94s).
+- **Key metric**: 4/18 actions (22%) are redundant clicks on the same UI element ("Back to Shop" and "Cart Summary").
+
+2. READING BEHAVIOR
+- **Skim-heavy with rapid depth sampling**: Scroll patterns show aggressive vertical scanning:
+  - First scroll (7.27-7.34s): Covers 985px (full viewport) in 0.6s (1,642px/s).
+  - Second scroll (10.65-10.73s): Reverses direction at 3x speed (1,350px/s upward).
+  - Third scroll (13.35-13.43s): Micro-adjustments (246px in 0.3s) near form fields.
+- **No deep reading**: No pauses >1s on any scroll segment; max dwell time on any content block is 1.86s ("Pay Now" hover at 26.49s).
+
+3. ENGAGEMENT STYLE
+- **N/A**: No voting, commenting, or social engagement features were used. All interactions are navigational or form-related.
+- **Frustration markers**: 6 "RAGE CLICK" events (10.15-10.6s) on the "Back to Shop" button, clustered within 0.5s (12 clicks/s peak intensity).
+
+4. INTERACTION SPEED
+- **Bimodal speed profile**:
+  - **Fast/impulsive**: 72% of actions occur <1s apart (e.g., 0.07s between scroll segments at 7.27-7.34s).
+  - **Deliberate pauses**: 4 hesitation events (7.21s, 8.78s, 18.24s, 2706ms max) totaling 10.68s (37% of session duration).
+- **Input latency**: 1.13s between "Card Number" click and next action (13.29-13.35s); 2.51s for "Email" (21.83-24.35s).
+
+5. CONTENT PREFERENCES
+- **Checkout-focused**: All interactions target checkout-specific elements:
+  - Form fields: "Card Number" (2 clicks), "Email" (2 clicks).
+  - Navigation: "Back to Shop" (3 clicks), "Cart Summary" (2 clicks).
+  - Action: "Pay Now" (2 clicks).
+- **No content consumption**: Zero engagement with product listings, descriptions, or non-checkout UI.
+
+6. TYPING BEHAVIOR
+- **No observable typing**: All form field interactions are clicks (no input events logged). Cannot assess typing speed, corrections, or input length.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Primary: Checkout form (card/email fields), "Pay Now" button.
+  - Secondary: "Back to Shop" link, "Cart Summary" section.
+- **Ignored features**:
+  - No use of: Promo code fields, guest checkout, payment method selectors, or help/chat widgets (assuming standard checkout UI).
+  - No mouse movement toward non-visible elements (e.g., footer links, header navigation).
+
+8. SESSION FLOW
+- **Arc**: **Frustration → Abandonment Attempt → Reluctant Re-engagement → Forced Completion**
+  - **0-8.06s (Exploration)**: Loads checkout, scrolls aggressively, attempts to exit.
+  - **8.06-10.6s (Frustration)**: 6 rage clicks on "Back to Shop" (10.15-10.6s), rapid upward scroll.
+  - **10.6-24.4s (Re-engagement)**: Targeted clicks on form fields ("Card Number" at 12.16s, "Email" at 21.83s), micro-scrolls to adjust viewport.
+  - **24.4-28.52s (Completion)**: Final scroll to "Pay Now" (24.4s), 1.85s hover, then click (26.49s) and immediate re-click (28.52s).
+- **Exit**: Session ends on "Pay Now" click; no confirmation page load recorded.
+```
+
+**Quantitative Summary**:
+- **Hesitation time**: 10.68s (37% of session).
+- **Rage clicks**: 6 events in 0.5s (12 clicks/s).
+- **Scroll speed**: 1,350-1,642px/s (3x faster than typical reading speed).
+- **Redundant clicks**: 44% of non-scroll actions (8/18).

@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a highly non-linear, erratic navigation pattern. They repeatedly return to the same sections (e.g., "Features" clicked 5 times, "Testimonials" 3 times, "Footer" 8+ times) with no clear progression.
+- **Vertical oscillation**: Scrolling is bidirectional (up/down) within short timeframes, often reversing direction within seconds (e.g., 0.22s–0.34s: scrolls down 846px; 0.94s–0.99s: scrolls up 282px).
+- **No sustained focus**: No section holds attention for >2.5s before switching. The longest dwell time is 1.85s (hesitation at 5.05s).
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll speed (avg. 423px/s) and depth (max 1056px on a 1080px viewport) suggest rapid scanning without deep reading.
+  - **Evidence**:
+    - Scrolls cover 211–423px increments in 0.5s (e.g., 0.22s–0.34s: 846px in 1.2s).
+    - No pauses >0.5s between scrolls; immediate direction reversals (e.g., 5.43s–5.58s: down 582px; 6.88s–7.05s: up 188px).
+- **No content absorption**: Clicks target UI elements (e.g., "Testimonials," "Footer") rather than content links, implying navigation over consumption.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or form submissions.
+- **Frustration signals**:
+  - **Rage clicks**: 5 consecutive clicks on "Footer" (6.41s–6.82s) with <100ms intervals.
+  - **Dead clicks**: 2 clicks on non-interactive elements (10.21s, 13.34s).
+  - **Hesitations**: 4 instances (0.17s, 2.42s, 5.05s, 8.96s) totaling 3.3s of inactivity before clicks.
+- **Hover times**: Short (avg. 86ms) but variable (30ms–1845ms), indicating impulsive interactions with occasional deliberation.
+
+4. INTERACTION SPEED
+- **Hyper-fast with bursts of delay**:
+  - **Median action interval**: 0.35s (excluding hesitations).
+  - **Fastest sequence**: 5 rage clicks in 0.44s (6.41s–6.85s).
+  - **Slowest intervals**: Hesitations (1.15s–1.85s) before clicks at 2.42s, 5.05s, and 8.96s.
+- **Click latency**: Avg. 120ms between hover and click (range: 30ms–166ms).
+
+5. CONTENT PREFERENCES
+- **Targeted UI elements over content**:
+  - **Most-clicked**: "Features" (5 clicks), "Footer" (8+ clicks), "Testimonials" (3 clicks).
+  - **Ignored**: No clicks on primary CTAs (e.g., buttons, links) or body content.
+  - **Spatial bias**: Clicks cluster at viewport edges (e.g., "Footer" at Y=1033px; "Navigation" at Y=41px).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input, corrections, or form interactions.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Navigation**: Clicked once at 11.61s (top-right, likely a menu).
+  - **Hero section**: Clicked "Hero Title" at 12.57s (late in session).
+  - **Footer**: Repeatedly targeted (likely links/sitemap).
+- **Ignored features**:
+  - **Primary CTAs**: No clicks on buttons (e.g., "Sign Up," "Learn More").
+  - **Forms**: No engagement with input fields.
+  - **Dynamic content**: No interactions with carousels, modals, or tooltips.
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–0.7s): Rapid Scanning**
+  - Loads page, immediately scrolls down 846px in 1.2s, clicks "Testimonials" (0.7s).
+- **Phase 2 (0.89s–3.2s): Erratic Exploration**
+  - Clicks "Testimonials" again, scrolls up/down, targets "Features" twice (1.26s, 2.73s).
+  - Hesitation (2.42s) suggests confusion or distraction.
+- **Phase 3 (5.05s–6.88s): Frustration Peak**
+  - Long hesitation (1.85s at 5.05s), then rage-clicks "Footer" 5x (6.41s–6.82s).
+  - Scrolls up 188px, likely attempting to escape footer.
+- **Phase 4 (7.24s–10.21s): Repetitive Cycles**
+  - Returns to "Testimonials" (7.24s), "Features" (7.77s), and "Footer" (9.79s).
+  - Dead click at 10.21s (non-interactive element).
+- **Phase 5 (11.61s–13.34s): Late Navigation**
+  - Clicks "Navigation" (11.61s) and "Hero Title" (12.57s), then dead click (13.34s) before session end.
+
+KEY INSIGHTS:
+- **Behavioral signature**: Matches a "synthetic/impulsive clicker" (as labeled in device profile), likely a bot or automated test script with erratic human-like noise.
+- **Frustration triggers**: Footer and repetitive UI elements (e.g., "Features") provoked rage clicks.
+- **No conversion intent**: Zero engagement with core content or CTAs; session terminated abruptly.
+```

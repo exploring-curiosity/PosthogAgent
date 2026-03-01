@@ -1,0 +1,112 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Scattered with exploratory bursts*
+- **Non-linear and hesitant**: The user exhibits a fragmented navigation style, frequently returning to the same elements (e.g., "Stats Cards" clicked twice at [5.12s] and [7.66s], "Sidebar" clicked twice at [9.75s] and [11.53s]).
+- **Dead clicks**: Two instances of dead clicks ([11.79s], [17.25s]) suggest misaligned expectations or accidental interactions.
+- **Max scroll depth**: 783px (out of an unknown total page height), indicating partial exploration of content. Scrolling is clustered in rapid bursts (e.g., [17.28s–17.48s], [23.06s–23.32s]).
+- **Feature toggling**: Repeated clicks on the same elements (e.g., "Export" at [12.74s] and [16.82s]) imply either verification of action or delayed decision-making.
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skim-heavy with shallow engagement*
+- **Scroll speed**: Rapid, multi-step scrolls (e.g., 5 scrolls in 0.24s at [17.28s–17.48s], covering 478px) suggest skimming rather than deep reading.
+- **Scroll depth vs. time**: Max depth (783px) reached in 23.32s, but pauses are brief (e.g., 0.5s per scroll step). No sustained dwell time on any section.
+- **Hover durations**:
+  - Long hovers on interactive elements (e.g., "Sidebar [HOVER 1825ms]" at [9.75s], "Chart [HOVER 1932ms]" at [19.6s]) indicate deliberation, not content absorption.
+  - Short hovers (e.g., "Stats Cards [HOVER 543ms]" at [5.12s]) suggest cursory inspection.
+- **No evidence of deep reading**: No pauses >2s on non-interactive content; all long hesitations ([HESITATION 4241ms] at [4.24s], [HESITATION 2346ms] at [15.08s]) occur on blank areas (coordinates (0,0)).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *Low-commitment, action-oriented*
+- **No social engagement**: No votes, comments, or replies observed (data suggests a dashboard, not a social platform like Reddit).
+- **Primary actions**: Clicks on functional elements ("Export," "Stats Cards," "Data Table") with no evidence of content creation or curation.
+- **Interaction ratio**: 100% clicks (14 total), 0% input (typing, forms). All interactions are navigational or feature-triggering.
+- **Hesitation before action**: 6 instances of "[HESITATION]" (totaling 10.78s of inaction), often preceding clicks (e.g., 2165ms before "Chart" at [23.02s]).
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Deliberate with sporadic impulsivity*
+- **Average time between actions**: 1.91s (excluding hesitations).
+  - Fastest sequence: 0.05s between scrolls ([7.71s–7.79s]).
+  - Slowest sequence: 4.24s before first click ([4.24s]).
+- **Hover-to-click latency**:
+  - Short: 517ms ("Data Table" at [24.04s]).
+  - Long: 1932ms ("Chart" at [19.6s]).
+- **Dead clicks**: Occur after rapid sequences (e.g., [11.79s] follows a 0.26s scroll up), suggesting impulsivity or misclicks.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *Functional over informational*
+- **Gravitated toward**:
+  - **Data visualization**: "Stats Cards" (2 clicks), "Chart" (2 clicks), "Data Table" (2 clicks).
+  - **Export functionality**: "Export" (2 clicks), suggesting intent to extract data.
+  - **Navigation aids**: "Sidebar" (2 clicks), likely for structural orientation.
+- **Ignored**:
+  - Static content (no clicks on text, images, or non-interactive elements).
+  - Upper page sections (max scroll depth 783px; no evidence of full-page exploration).
+- **No thematic preferences**: Data does not indicate content categories (e.g., subreddits, topics).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *Nonexistent*
+- **No typing detected**: No form inputs, search queries, or text entry observed.
+- **No corrections**: N/A (no typing).
+- **Input length**: N/A.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Pattern:** *Partial, with trial-and-error*
+- **Discovered and used**:
+  - **Stats Cards**: Clicked twice ([5.12s], [7.66s]).
+  - **Sidebar**: Clicked twice ([9.75s], [11.53s]).
+  - **Export**: Clicked twice ([12.74s], [16.82s]).
+  - **Chart**: Clicked twice ([19.6s], [23.02s]).
+  - **Data Table**: Clicked twice ([24.04s], [26.84s]).
+- **Ignored**:
+  - **Unknown features**: No clicks on other page elements (e.g., headers, footers, non-interactive text).
+  - **Advanced functionality**: No evidence of filters, settings, or customization tools.
+- **Dead clicks**: Suggest accidental discovery or misaligned expectations (e.g., [11.79s] on a div at (366, 80)).
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploration → Hesitation → Functional Testing → Abrupt Exit*
+1. **Initial Load (0.0s–4.24s)**:
+   - Passive observation (4.24s hesitation before first click).
+   - Minimal scroll (86px) suggests quick assessment of above-the-fold content.
+2. **Exploratory Phase (4.24s–9.75s)**:
+   - Clicks on "Stats Cards" ([5.12s]) and "Sidebar" ([9.75s]), interspersed with hesitations.
+   - Scrolling is shallow (max 172px) and erratic (up/down).
+3. **Functional Testing (9.75s–17.48s)**:
+   - Repeated clicks on "Export" ([12.74s], [16.82s]) and "Sidebar" ([11.53s]).
+   - Dead clicks ([11.79s], [17.25s]) indicate frustration or confusion.
+   - Rapid scroll to 547px ([17.48s]) suggests search for specific content.
+4. **Targeted Interaction (19.6s–26.84s)**:
+   - Focus on "Chart" ([19.6s], [23.02s]) and "Data Table" ([24.04s], [26.84s]).
+   - Deep scroll to 783px ([23.32s]) implies interest in tabular data.
+5. **Exit (26.84s)**:
+   - Session ends immediately after final "Data Table" click. No return to prior elements or additional actions.
+
+---
+
+### SUMMARY
+This user exhibits **cautious, functional exploration** with a focus on data extraction and visualization tools. Their behavior is **deliberate but scattered**, marked by:
+- **High hesitation** (6 instances, 10.78s total).
+- **Repetitive clicks** on the same elements (5/14 actions are duplicates).
+- **Rapid skimming** (scroll bursts covering 400+px in <1s).
+- **No deep engagement** (no typing, no social actions, no sustained reading).
+- **Abrupt exit** after interacting with the "Data Table," suggesting either task completion or abandonment.
+
+**Likely intent**: Data retrieval or dashboard assessment, not content consumption or social interaction.
+```

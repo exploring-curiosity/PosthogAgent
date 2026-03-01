@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   - Highly focused and linear with minimal deviation.
+   - Moves sequentially through checkout form fields (Card Number → Email) and cart summary.
+   - No exploratory detours (e.g., no clicks on navigation menus, product links, or unrelated UI elements).
+   - 100% of interactions target form inputs or cart summary (2/2 input fields, 1 cart summary section).
+
+2. READING BEHAVIOR
+   - Skimming confirmed by rapid, incremental scrolls:
+     * Downward scrolls: 5 discrete jumps (151px → 378px) in 1.6s (avg 0.32s per 15px).
+     * Upward scrolls: 4 discrete jumps (378px → 128px) in 0.55s (avg 0.14s per 63px).
+   - No sustained pauses (>1s) at any scroll depth.
+   - Max scroll depth (378px) covers ~35% of a 1080p viewport (assuming 1080px height).
+
+3. ENGAGEMENT STYLE
+   - N/A (No voting, commenting, or social interactions observed).
+   - All interactions are functional (form field clicks, cart summary review).
+
+4. INTERACTION SPEED
+   - Fast but deliberate:
+     * Median inter-action time: 0.57s (excluding initial hesitation).
+     * Initial hesitation: 2.47s pause before first click (likely page load/render delay).
+     * Hover times: 372ms (Card Number), 236ms (Cart Summary), 230ms (Email).
+     * Click-to-click latency: 0.63s–2.43s (avg 1.23s).
+
+5. CONTENT PREFERENCES
+   - Checkout-specific content only:
+     * 66% of clicks target payment form fields (Card Number, Email).
+     * 33% target cart summary (likely to verify order details).
+   - No engagement with non-checkout content (e.g., product recommendations, footer links).
+
+6. TYPING BEHAVIOR
+   - No typing detected (no input values logged).
+   - Clicks on input fields suggest preparation to type, but no keystrokes recorded.
+
+7. FEATURE DISCOVERY
+   - Used features:
+     * Form inputs (Card Number, Email).
+     * Cart summary (scrolled to and clicked).
+   - Ignored features:
+     * Navigation menus, promotional banners, footer links, help/chat widgets.
+     * No evidence of feature exploration beyond checkout workflow.
+
+8. SESSION FLOW
+   - Arc: Linear progression through checkout steps with minor backtracking.
+     * 0.0s–2.47s: Page load + initial hesitation (potential distraction or render delay).
+     * 2.47s–4.65s: Downward scroll to explore form (Card Number field reached at 3.12s).
+     * 4.65s–6.32s: Upward scroll to review cart summary (clicked at 4.65s and 6.08s).
+     * 6.78s–7.33s: Return to form (Email field clicked).
+   - Exit: Session ends abruptly after Email field click (no submission or further actions).
+   - No clear "exploration" or "browsing" phases—strictly task-oriented.
+```
+
+**NOTES:**
+- Device flags ("synthetic/scanner") suggest this may be a bot or automated test, which could explain the mechanical interaction pattern.
+- Lack of typing data limits analysis of input behavior.
+- All timestamps are relative to page load (0.0s).

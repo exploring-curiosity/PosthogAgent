@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN:
+- **Exploratory with focused bursts**: The user exhibits a non-linear, scanning-heavy pattern with intermittent deep dives into specific UI elements. Navigation is neither purely linear nor scattered, but rather "clustered" around 3-4 distinct interaction zones (table, export button, sidebar, stats cards, chart).
+- **Spatial consistency**: Clicks on the same elements (e.g., "Export" at (1810, 94), "Sidebar" at ~(281, 303)) occur in tight coordinate ranges, suggesting intentional targeting of specific UI regions.
+- **Backtracking**: Repeated scroll reversals (e.g., 5.42s–5.52s: scrolls up from 766px to 94px; 14.54s–14.7s: scrolls up from 306px to 127px) indicate reassessment of previously viewed content.
+
+2. READING BEHAVIOR:
+- **Skim-dominant with shallow dives**: Scroll speed (avg. 153px/0.5s = 306px/s) and rapid direction changes suggest skimming. No sustained pauses >1s on any scroll segment.
+- **Depth sampling**: Max scroll depth (766px) is reached early (2.9s) but revisited only briefly (e.g., 4.42s–5.37s on "Data Table"). No evidence of deep reading; content below 600px is scanned but not engaged with for >2s.
+- **Scroll patterns**:
+  - **Downward sweeps**: 5 consecutive downward scrolls (2.68s–2.9s) cover 766px in 220ms, indicating a rapid initial scan.
+  - **Upward corrections**: 3 upward scroll sequences (e.g., 5.42s–5.52s) suggest reorientation after overshooting.
+
+3. ENGAGEMENT STYLE:
+- **No voting/commenting**: The log contains no actions resembling votes, comments, or text input. Engagement is limited to clicks and hovers.
+- **Hover-to-click latency**: High hesitation (avg. hover time = 1,193ms) precedes clicks on interactive elements (e.g., "Export [HOVER 1374ms]", "Sidebar [HOVER 925ms]"). Suggests cautious interaction rather than impulsive engagement.
+- **Duplicate clicks**: Repeated clicks on the same element (e.g., "Data Table" at 4.42s and 5.37s; "Export" at 7.01s and 9.48s) may indicate:
+  - UI unresponsiveness (no confirmation in log).
+  - User uncertainty (reinforced by [HESITATION] tags).
+
+4. INTERACTION SPEED:
+- **Deliberate with bursts**: Median inter-action time = 1.45s (excluding scrolls), but with high variance:
+  - Fast sequences: 0.05s between scroll steps (2.68s–2.9s).
+  - Slow sequences: 2.15s hesitation before "Sidebar" click (13.05s).
+- **Action clusters**: 60% of non-scroll actions occur in <1s intervals (e.g., 5.37s–5.52s: 3 scrolls + 1 click in 150ms), followed by 2–3s pauses.
+- **Hover duration**: Avg. hover = 1,193ms (n=4), exceeding typical "intentional click" thresholds (>500ms).
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward**:
+  - **Data Table**: First substantive click (4.42s) and revisited (5.37s). Hover time (1,319ms) suggests high interest.
+  - **Export functionality**: Two clicks (7.01s, 9.48s) with 1,374ms hover, indicating intent to extract data.
+  - **Sidebar**: Two clicks (10.9s, 14.48s) with 925ms hover, likely for navigation or filtering.
+  - **Stats Cards/Chart**: Late-session focus (15.47s–24.53s), with 636ms and 615ms hovers respectively.
+- **Ignored**:
+  - No interaction with top-of-page content (0–94px) except for "Export" button.
+  - No clicks on static text, images, or non-interactive elements.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no text input events, corrections, or form submissions. All clicks target pre-existing UI elements.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - **Data Table**: Clicked twice (4.42s, 5.37s).
+  - **Export**: Clicked twice (7.01s, 9.48s).
+  - **Sidebar**: Clicked twice (10.9s, 14.48s).
+  - **Stats Cards**: Clicked twice (15.47s, 20.33s).
+  - **Chart**: Clicked twice (21.36s, 24.53s).
+- **Ignored features**:
+  - No interaction with:
+    - Top navigation (if present).
+    - Search bars, filters, or dropdowns (no evidence in log).
+    - Help/tooltips (no hover >1s on non-clickable elements).
+    - Mobile-specific features (viewport = 1920x1080).
+
+8. SESSION FLOW:
+- **Phase 1: Rapid Scan (0.0s–2.9s)**
+  - Loads dashboard, immediately scrolls downward (766px in 220ms). No clicks; pure visual reconnaissance.
+- **Phase 2: Targeted Engagement (4.42s–7.01s)**
+  - Clicks "Data Table" (4.42s), scrolls up (5.42s–5.52s), then clicks "Export" (7.01s). High hesitation (1,319ms hover on table; 1,374ms on export).
+- **Phase 3: Reassessment (8.09s–14.7s)**
+  - Hesitates (1,078ms at 8.09s), clicks "Export" again (9.48s), then explores "Sidebar" (10.9s, 14.48s). Scrolls up/down repeatedly, suggesting disorientation.
+- **Phase 4: Late Exploration (15.47s–24.53s)**
+  - Focuses on "Stats Cards" (15.47s) and "Chart" (21.36s). High hesitation (2,334ms at 17.81s) precedes final chart click (24.53s). Session ends abruptly.
+- **Exit**: No logout/navigate-away event; session terminates at 24.53s after final chart click.
+
+KEY INSIGHTS:
+- **Cautious explorer**: High hover times, duplicate clicks, and scroll reversals indicate a user testing UI responsiveness or unsure of functionality.
+- **Data-centric**: Prioritizes tabular data and export features, suggesting a task-oriented goal (e.g., data extraction).
+- **No deep engagement**: Skims content, avoids typing, and exits without completing a clear workflow.
+- **Potential friction points**:
+  - Duplicate clicks on "Export" and "Data Table" may signal UI lag or unclear feedback.
+  - Hesitation tags ([HESITATION 2635ms]) suggest cognitive load or decision paralysis.
+```

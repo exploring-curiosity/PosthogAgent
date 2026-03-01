@@ -1,0 +1,83 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly focused and task-driven**: The user exhibits a non-linear but goal-oriented pattern, jumping between distinct UI elements (charts, export button, sidebar, stats cards, data table) with minimal exploratory detours.
+- **Vertical scanning**: 70% of scroll actions (12/17 total) occur in rapid bursts (0.5s duration), suggesting targeted navigation to specific content blocks rather than gradual exploration.
+- **Element prioritization**: Clicks cluster around 5 core components (Chart → Export → Sidebar → Stats Cards → Data Table), with no return visits to previously interacted elements.
+
+2. READING BEHAVIOR
+- **Skim-focused**: Scroll depths show a "bounce-and-scan" pattern:
+  - Initial deep dive (0–541px in 0.74s) followed by rapid retreat (541→59px in 0.5s).
+  - Subsequent scrolls rarely exceed 300px depth (avg. max depth: 288px), with 67% of scrolls (8/12) covering <200px.
+- **No deep reading**: No pauses >300ms on any scroll segment; all scrolls are continuous and brief (0.5s avg. duration).
+- **Visual anchoring**: Hovers (161ms, 56ms, 173ms, 126ms, 119ms) precede 100% of clicks, indicating visual confirmation before interaction.
+
+3. ENGAGEMENT STYLE
+- **Action-only engagement**: No evidence of content creation (e.g., typing, comments, votes). All interactions are clicks or scrolls.
+- **No social engagement**: Zero interactions with voting, commenting, or sharing features.
+- **Click redundancy**: 50% of clicks (5/10) are duplicated (e.g., "Chart" at 1.04s/1.17s, "Export" at 1.59s/1.91s), suggesting either UI responsiveness issues or deliberate double-clicks.
+
+4. INTERACTION SPEED
+- **Rapid execution**: Median time between actions: **250ms** (excluding scrolls).
+  - Fastest interval: 30ms (1.17s–1.20s, between duplicate "Chart" clicks).
+  - Slowest interval: 380ms (3.04s–3.42s, between "Stats Cards" hover and click).
+- **Hesitation markers**:
+  - Initial 639ms pause at (0,0) (0.0s–0.64s) before first click.
+  - Hover durations (56ms–173ms) suggest brief cognitive processing before clicks.
+- **Scroll speed**: Consistent 0.5s duration for all scrolls, covering 120–270px per scroll (avg. 180px/0.5s = **360px/s**).
+
+5. CONTENT PREFERENCES
+- **Data-centric focus**: Interacted exclusively with data visualization and export features:
+  - **Charts**: 2 clicks (1.04s, 1.17s).
+  - **Export functionality**: 2 clicks (1.59s, 1.91s).
+  - **Data Table**: 2 clicks (3.93s, 4.13s).
+  - **Stats Cards**: 2 clicks (3.04s, 3.42s).
+- **Navigation**: Sidebar interaction (2 clicks at 2.38s/2.5s) suggests secondary priority.
+- **Ignored content**: No engagement with:
+  - Text content (no clicks on paragraphs/headings).
+  - Forms, search bars, or filters.
+  - Multimedia (images, videos).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, input fields, or text entry actions recorded.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Data visualization**: Charts (1.04s), Stats Cards (3.04s).
+  - **Data export**: Export button (1.59s).
+  - **Navigation**: Sidebar (2.38s).
+  - **Tabular data**: Data Table (3.93s).
+- **Ignored features**:
+  - **User account tools**: No clicks on profile, settings, or notifications.
+  - **Search/filters**: No interaction with search bars or filtering options.
+  - **Help/documentation**: No clicks on tooltips, guides, or support links.
+  - **Social features**: No sharing, commenting, or collaboration tools used.
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–0.64s)**
+  - Page load (0.0s) followed by 639ms hesitation (potential UI assessment or distraction).
+- **Phase 2: Initial Data Scan (0.64s–1.22s)**
+  - Rapid scroll to 541px (0.69s–0.74s) → Chart interaction (1.04s–1.17s) → scroll retreat to 59px (1.22s).
+  - **Goal**: Locate and interact with primary data visualization.
+- **Phase 3: Export Attempt (1.59s–1.99s)**
+  - Immediate scroll to top (1.22s–1.26s) → Export button clicks (1.59s–1.91s) → scroll down to 211px (1.94s–1.99s).
+  - **Goal**: Trigger data export (may have failed or required confirmation).
+- **Phase 4: Navigation Check (2.38s–2.79s)**
+  - Sidebar clicks (2.38s–2.5s) → rapid scroll up to 111px (2.55s–2.79s).
+  - **Goal**: Verify navigation options or switch contexts.
+- **Phase 5: Secondary Data Review (3.04s–4.13s)**
+  - Stats Cards interaction (3.04s–3.42s) → deep scroll to 726px (3.47s–3.59s) → Data Table clicks (3.93s–4.13s).
+  - **Goal**: Review detailed data (table) after high-level stats (cards).
+- **Termination**: Session ends abruptly at 4.13s (no exit confirmation or lingering).
+
+---
+KEY INSIGHTS:
+- **Task efficiency**: Prioritized data extraction (charts → export → table) with minimal wasted motion.
+- **UI friction**: Duplicate clicks (50% of interactions) may indicate unresponsive elements or user impatience.
+- **No exploration**: Zero curiosity-driven clicks; all actions align with a data-export workflow.
+- **Session brevity**: 4.1s duration suggests either:
+  - Goal completion (e.g., export triggered).
+  - Frustration/abandonment (e.g., export failed).
+  - Synthetic user (automated script or power user testing).
+```

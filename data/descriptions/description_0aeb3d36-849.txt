@@ -1,0 +1,73 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly scattered and non-linear with repetitive, redundant interactions.
+- Exhibits "click thrashing" (rapid, near-duplicate clicks on the same element within 200ms intervals):
+  * Profile tab: 4 clicks (0.58s, 0.82s, 2.88s, 3.18s, 4.23s, 4.61s)
+  * Save Changes button: 2 clicks (1.36s, 1.68s)
+  * Privacy tab: 2 clicks (2.19s, 2.37s)
+  * Settings Nav: 2 clicks (3.74s, 3.88s)
+- No clear progression through content; jumps between sections (Profile → Privacy → Profile → Settings Nav → Profile).
+- Scrolling is erratic: 14 scroll actions in 4.6s (7 down, 7 up), with no sustained direction.
+
+2. READING BEHAVIOR:
+- Skimming with zero evidence of deep reading:
+  * Scroll speed: 186px/s (average across all scrolls; max 194px/s).
+  * No pauses >200ms between scrolls (suggests no content absorption).
+  * Max scroll depth (947px) reached in 1.04s, then immediately scrolled up (1.74s).
+  * Revisits same scroll ranges (e.g., 63px–637px covered 3 times in 3.2s).
+- No mouse hovers >120ms (hover times: 66ms–120ms) indicate no intentional content inspection.
+
+3. ENGAGEMENT STYLE:
+- N/A (No voting, commenting, or content creation observed).
+- All interactions are navigational (clicks on UI elements, scrolling).
+- No evidence of form input, text entry, or data submission beyond redundant clicks.
+
+4. INTERACTION SPEED:
+- Hyper-fast with no deliberation:
+  * Average time between actions: 280ms (excluding scrolls: 320ms).
+  * Fastest click-to-click interval: 80ms (Profile tab at 0.58s → 0.82s).
+  * Hesitation only at session start (243ms pause at 0.24s).
+  * No pauses >500ms after 0.58s.
+- Click accuracy: Low (click coordinates vary by 2–4px for same element, e.g., Profile tab at (1490,192) vs (1489,190)).
+
+5. CONTENT PREFERENCES:
+- No content engagement detected. All clicks target:
+  * Navigation tabs (Profile, Privacy, Settings Nav).
+  * A single button ("Save Changes").
+- No evidence of content consumption (e.g., no clicks on posts, links, or media).
+
+6. TYPING BEHAVIOR:
+- N/A (No keyboard input detected in 4.6s session).
+- No form fields interacted with beyond redundant clicks on "Save Changes."
+
+7. FEATURE DISCOVERY:
+- Used features:
+  * Navigation tabs (Profile, Privacy, Settings Nav).
+  * Scrollbar (aggressively).
+  * "Save Changes" button (clicked but no submission confirmed).
+- Ignored features:
+  * No interaction with form fields, dropdowns, toggles, or other UI controls.
+  * No help/tooltips, search, or account settings beyond top-level tabs.
+  * No mobile/desktop-specific features (e.g., hamburger menu, if present).
+
+8. SESSION FLOW:
+- Arc: Synthetic/erratic → Repetitive thrashing → Abrupt termination.
+  * 0.0s–0.58s: Initial hesitation (243ms pause) followed by rapid scrolling (4 scrolls in 0.7s).
+  * 0.58s–2.37s: First click thrash (Profile → Save Changes → Privacy; 6 clicks, 4 scrolls).
+  * 2.37s–4.61s: Second click thrash (Profile → Settings Nav → Profile; 6 clicks, 6 scrolls).
+  * 4.61s: Session ends mid-click (no completion or exit action recorded).
+- No clear goal or progression. Behavior suggests:
+  * Automated script (e.g., synthetic testing) or
+  * User with severe cognitive load/confusion (e.g., non-native UI, accessibility barriers) or
+  * Bot-like interaction (e.g., rapid, redundant clicks without purpose).
+- Exit: Abrupt (session terminates during a click at 4.61s; no "back" button or tab closure recorded).
+```
+
+**Key Quantitative Metrics:**
+- Total actions: 26 (14 scrolls, 12 clicks).
+- Actions per second: 5.65.
+- Scroll distance: 4,500px (2,250px down, 2,250px up).
+- Unique elements clicked: 4 (Profile, Privacy, Save Changes, Settings Nav).
+- Redundant clicks: 10/12 (83% of clicks).

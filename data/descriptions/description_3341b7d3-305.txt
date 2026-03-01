@@ -1,0 +1,62 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with rapid pivots**: The user exhibits a non-linear, erratic navigation style with abrupt shifts in focus. They jump between 6 distinct content zones (Testimonials, Features, Footer, Navigation, Get Started, Hero Title) in 5.7s, with no sustained engagement in any single area.
+- **Vertical oscillation**: Scroll patterns show extreme volatility—4 downward scroll bursts (0.32–0.46s) followed by 4 upward bursts (1.2–1.36s), then another downward/upward cycle (2.36–3.36s). This suggests scanning rather than linear progression.
+- **No sequential discovery**: Ignores potential hierarchical flow (e.g., never visits "About" or "Pricing" sections between Testimonials and Features).
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll speed (avg. 200px/0.5s = 400px/s) exceeds typical reading speed (300px/s for skimming, 100px/s for deep reading). Max scroll depth (1041px) suggests they saw ~50% of a 2000px page but never paused >0.5s on any section.
+- **No deep dives**: Scroll stops are brief (0.04–0.47s between actions) and coincide with clicks, indicating zero dwell time for content absorption.
+- **Visual anchoring**: Clicks cluster around section headers (Testimonials, Features, Hero Title), implying reliance on structural cues over body text.
+
+3. ENGAGEMENT STYLE
+- **Click-heavy, no production**: 14 clicks (11 unique targets) but zero form submissions, text inputs, or content creation (e.g., no votes, comments, or shares).
+- **Frustration signals**:
+  - **Rage clicks**: 4 rapid clicks (2.03–2.29s) on "Features" with <80ms intervals, suggesting unresponsive UI or confusion.
+  - **Double-clicks**: 5 instances of near-identical clicks (e.g., Testimonials at 0.76s/1.14s, Features at 1.6s/1.95s) with 380–400ms gaps—likely accidental or testing interactivity.
+- **Hover-to-click latency**: Avg. 98ms hover before clicks (range: 57–151ms), indicating deliberate targeting but no hesitation for content engagement.
+
+4. INTERACTION SPEED
+- **Hyper-accelerated**: Avg. 0.41s between actions (excluding scrolls), with 12 actions occurring in <0.1s intervals (e.g., 0.27–0.32s, 2.03–2.29s).
+- **Peak frenzy**: 5 actions in 0.36s during rage-click sequence (2.03–2.29s).
+- **No deliberation**: Shortest click interval: 70ms (rage clicks); longest pause: 0.47s (2.87–3.18s before Footer click).
+
+5. CONTENT PREFERENCES
+- **Structural over substantive**:
+  - Clicked **section headers** (Testimonials, Features, Hero Title) 6x vs. **interactive elements** (Get Started button, Navigation) 4x.
+  - Ignored potential value-driven content (e.g., no clicks on testimonial cards, feature lists, or pricing tables).
+- **No thematic focus**: Engaged with disparate elements (footer, nav, hero) with no topical continuity.
+- **Synthetic behavior**: "Power user" device profile and lack of organic pauses suggest automated/scripted interaction or extreme impatience.
+
+6. TYPING BEHAVIOR
+- **N/A**: Zero text inputs, searches, or form interactions detected. No typing speed, corrections, or input length data available.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Navigation**: Clicked nav bar (3.69s) but no submenu exploration.
+  - **CTA**: "Get Started" button (4.43s) but no subsequent conversion.
+  - **Structural elements**: Footer (2.87s), section headers (0.76s, 1.6s).
+- **Ignored**:
+  - **Primary content**: No clicks on body text, images, or embedded media.
+  - **Interactive widgets**: No engagement with forms, filters, or dynamic elements.
+  - **Social proof**: Testimonials section clicked but no interaction with individual testimonials.
+
+8. SESSION FLOW
+- **0.0–0.76s (Exploratory Scan)**:
+  - Loads page, hesitates (268ms click at 0.27s), then rapid downward scroll (4x 200px bursts). No engagement with content.
+- **0.76–2.29s (Frustrated Targeting)**:
+  - Clicks Testimonials (0.76s), then Features (1.6s) with rage-click sequence (2.03–2.29s). Scrolls down (2.36s) but no sustained focus.
+- **2.87–4.74s (Peripheral Engagement)**:
+  - Clicks Footer (2.87s), scrolls up to Navigation (3.69s), then down to "Get Started" (4.43s). No follow-through.
+- **4.74–5.72s (Abandonment)**:
+  - Scrolls up to Hero Title (5.42s), clicks twice, then session ends. No exit action (e.g., tab close) recorded.
+
+KEY INSIGHTS:
+- **Behavioral signature**: Matches synthetic testing (e.g., automated QA, heatmap validation) or an extremely impatient user with no intent to engage.
+- **Critical UX issues**:
+  - Rage clicks on "Features" indicate broken interactivity or unclear affordances.
+  - Double-clicks suggest UI elements may not respond on first click.
+- **Content failure**: Despite 1041px scroll depth, no substantive content was consumed or acted upon.
+```

@@ -1,0 +1,385 @@
+{
+  "user_profile": {
+    "session_id": "5a9a3833-3f8",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/power_user",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 8.4,
+  "total_raw_events": 74,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/landing",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 0.24,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 240ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 0.27,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 141,
+      "max_depth": 141,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.31,
+      "action": "SCROLL",
+      "scroll_from": 141,
+      "scroll_to": 282,
+      "max_depth": 282,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.64,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Get Started [HOVER 197ms]",
+      "target_href": "",
+      "target_class": "button.cta-primary",
+      "coordinates": [
+        787,
+        282
+      ]
+    },
+    {
+      "time": 3.27,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2633ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 3.6,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Get Started",
+      "target_href": "",
+      "target_class": "button.cta-primary",
+      "coordinates": [
+        790,
+        287
+      ]
+    },
+    {
+      "time": 3.64,
+      "action": "SCROLL",
+      "scroll_from": 282,
+      "scroll_to": 442,
+      "max_depth": 442,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.67,
+      "action": "SCROLL",
+      "scroll_from": 442,
+      "scroll_to": 603,
+      "max_depth": 603,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.7,
+      "action": "SCROLL",
+      "scroll_from": 603,
+      "scroll_to": 763,
+      "max_depth": 763,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 4.12,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Testimonials [HOVER 149ms]",
+      "target_href": "",
+      "target_class": "div.testimonials",
+      "coordinates": [
+        1765,
+        763
+      ]
+    },
+    {
+      "time": 4.67,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 551ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 5.01,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Testimonials",
+      "target_href": "",
+      "target_class": "div.testimonials",
+      "coordinates": [
+        1773,
+        765
+      ]
+    },
+    {
+      "time": 5.06,
+      "action": "SCROLL",
+      "scroll_from": 763,
+      "scroll_to": 581,
+      "max_depth": 763,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 5.12,
+      "action": "SCROLL",
+      "scroll_from": 581,
+      "scroll_to": 399,
+      "max_depth": 581,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 5.18,
+      "action": "SCROLL",
+      "scroll_from": 399,
+      "scroll_to": 216,
+      "max_depth": 399,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 5.26,
+      "action": "SCROLL",
+      "scroll_from": 216,
+      "scroll_to": 34,
+      "max_depth": 216,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 5.55,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation [HOVER 80ms]",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        2,
+        34
+      ]
+    },
+    {
+      "time": 5.73,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        2,
+        35
+      ]
+    },
+    {
+      "time": 5.76,
+      "action": "SCROLL",
+      "scroll_from": 34,
+      "scroll_to": 187,
+      "max_depth": 187,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 5.84,
+      "action": "SCROLL",
+      "scroll_from": 187,
+      "scroll_to": 339,
+      "max_depth": 339,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 5.9,
+      "action": "SCROLL",
+      "scroll_from": 339,
+      "scroll_to": 491,
+      "max_depth": 491,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.19,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features [HOVER 127ms]",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        233,
+        491
+      ]
+    },
+    {
+      "time": 6.44,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        231,
+        492
+      ]
+    },
+    {
+      "time": 6.52,
+      "action": "SCROLL",
+      "scroll_from": 491,
+      "scroll_to": 620,
+      "max_depth": 620,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.58,
+      "action": "SCROLL",
+      "scroll_from": 620,
+      "scroll_to": 749,
+      "max_depth": 749,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.63,
+      "action": "SCROLL",
+      "scroll_from": 749,
+      "scroll_to": 878,
+      "max_depth": 878,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.69,
+      "action": "SCROLL",
+      "scroll_from": 878,
+      "scroll_to": 1006,
+      "max_depth": 1006,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 7.07,
+      "action": "CLICK",
+      "target_tag": "footer",
+      "target_text": "Footer [HOVER 100ms]",
+      "target_href": "",
+      "target_class": "footer",
+      "coordinates": [
+        626,
+        1006
+      ]
+    },
+    {
+      "time": 7.41,
+      "action": "CLICK",
+      "target_tag": "footer",
+      "target_text": "Footer",
+      "target_href": "",
+      "target_class": "footer",
+      "coordinates": [
+        627,
+        1010
+      ]
+    },
+    {
+      "time": 7.49,
+      "action": "SCROLL",
+      "scroll_from": 1006,
+      "scroll_to": 818,
+      "max_depth": 1006,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 7.55,
+      "action": "SCROLL",
+      "scroll_from": 818,
+      "scroll_to": 629,
+      "max_depth": 818,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 7.59,
+      "action": "SCROLL",
+      "scroll_from": 629,
+      "scroll_to": 441,
+      "max_depth": 629,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 7.66,
+      "action": "SCROLL",
+      "scroll_from": 441,
+      "scroll_to": 253,
+      "max_depth": 441,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 8.01,
+      "action": "CLICK",
+      "target_tag": "h1",
+      "target_text": "Hero Title [HOVER 110ms]",
+      "target_href": "",
+      "target_class": "h1.hero-title",
+      "coordinates": [
+        660,
+        253
+      ]
+    },
+    {
+      "time": 8.37,
+      "action": "CLICK",
+      "target_tag": "h1",
+      "target_text": "Hero Title",
+      "target_href": "",
+      "target_class": "h1.hero-title",
+      "coordinates": [
+        663,
+        252
+      ]
+    }
+  ]
+}

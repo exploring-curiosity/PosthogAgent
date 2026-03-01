@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with rapid re-engagement attempts**: The user exhibits a non-linear, erratic navigation pattern with frequent back-and-forth scrolling (12 scroll actions in 5.5s) and repeated clicks on the same elements. Movement is not exploratory (no new pages loaded) but rather a series of rapid, frustrated re-engagements with static elements.
+- **Key evidence**:
+  - 4 distinct "zones" of interaction: Hero Title (0.79–2.49s), Testimonials (0.79–1.23s), Features (4.5–4.88s), and Navigation (5.29–5.47s).
+  - 6 rage clicks on the Hero Title (2.04–2.43s) suggest failed interaction attempts.
+  - No page transitions despite 14 click actions.
+
+2. READING BEHAVIOR:
+- **Skimmer with no deep reading**: Scroll patterns show rapid, incremental downward movement (4–7 scrolls per second) with no pauses >200ms, indicating no sustained reading. Upward scrolls are equally rapid, suggesting scanning rather than content absorption.
+- **Quantitative metrics**:
+  - Average scroll speed: ~400px/s (e.g., 0–204px in 0.5s at 0.22s).
+  - Max scroll depth: 1020px (3.27s), but no dwell time >300ms at any depth.
+  - 3 upward scroll sequences (1.23–1.29s, 3.35–3.5s, 4.81–4.88s) with no re-reading of content.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement (votes/comments)**: The session contains no text input, upvotes, or comments. All interactions are clicks or scrolls.
+- **Interaction patterns**:
+  - **Hover-then-click**: 5/14 clicks preceded by hovers (avg hover duration: 136ms).
+  - **Repetitive clicks**: 6 rage clicks on Hero Title (2.04–2.43s) and 2 clicks each on Testimonials (0.79–1.18s), Footer (3.17–3.27s), and Features (4.5–4.73s).
+  - **No sustained engagement**: All clicks are singular (no double-clicks or drags).
+
+4. INTERACTION SPEED:
+- **Extremely fast with decreasing patience**:
+  - Initial hesitation: 155ms delay before first click (0.15s).
+  - Avg time between actions: 390ms (excluding scrolls).
+  - **Acceleration**: Time between clicks drops from 390ms (0.79–1.18s) to 80ms during rage clicks (2.04–2.43s).
+  - **Scroll intervals**: 70–80ms between scroll steps (e.g., 0.22–0.27s).
+
+5. CONTENT PREFERENCES:
+- **No clear preferences**: All interactions target UI elements, not content. Clicked elements:
+  - **Hero Title** (1470–1475px range): 7 clicks (including 6 rage clicks).
+  - **Testimonials** (400–405px range): 2 clicks.
+  - **Features** (1003–1004px range): 2 clicks.
+  - **Navigation** (1712–1716px range): 2 clicks.
+  - **Footer** (1551–1552px range): 2 clicks.
+  - **Get Started button** (866–871px range): 2 clicks.
+- **Ignored**: No clicks on images, links, or secondary CTAs.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: Zero text inputs, corrections, or form interactions in the 5.5s session.
+
+7. FEATURE DISCOVERY:
+- **Discovered features**:
+  - **Scrolling**: Used extensively (12 scroll actions).
+  - **Hover tooltips**: Triggered 5 times (avg 136ms hover).
+  - **Primary CTAs**: "Get Started" button clicked (3.79–4.02s).
+- **Ignored features**:
+  - No dropdowns, modals, or interactive widgets used.
+  - No social sharing, search, or filter tools engaged.
+  - No multimedia (videos/images) interactions.
+
+8. SESSION FLOW:
+- **Arc**: Frustration-driven rapid scanning → failed interaction attempts → abandonment.
+  - **0.0–0.79s (Exploration)**: Page load → initial scroll (0–819px) to scan layout.
+  - **0.79–2.49s (Frustration)**: Testimonials click → Hero Title rage clicks (6 attempts).
+  - **2.49–4.88s (Re-scanning)**: Down/up scrolls (110–1020px) to re-evaluate page.
+  - **4.88–5.47s (Exit Attempt)**: Navigation click (likely menu or logo) → session ends.
+- **Key transitions**:
+  - 0.79s: First click (Testimonials) suggests intent to engage.
+  - 2.04s: Rage clicks begin, indicating interaction failure.
+  - 5.29s: Final action (Navigation click) suggests exit attempt.
+- **Abandonment**: Session ends without conversion or page transition.
+```
+
+**SUMMARY**: This user exhibited behavior consistent with a **technical issue or broken UI element** (e.g., unclickable Hero Title). Their actions were **fast, repetitive, and frustration-driven**, with no evidence of content consumption or deliberate navigation. The session terminated abruptly after failed interaction attempts.

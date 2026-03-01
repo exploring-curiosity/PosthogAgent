@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated clicks on the same elements (e.g., "Sidebar" clicked twice at 1.31s and 2.91s, "Stats Cards" at 4.43s and 5.57s, "Data Table" at 6.38s and 7.75s). However, the scroll behavior is mechanically linear (consistent 20-25px increments over 0.5s intervals), suggesting automated or synthetic interaction.
+- **Dead clicks and hesitation markers**: 2/10 clicks are labeled "[DEAD CLICK]" or "[HESITATION]", indicating misfires or scripted delays (e.g., 0.58s and 1.96s).
+- **No backtracking**: No evidence of revisiting prior sections or using browser navigation (e.g., back button).
+
+2. READING BEHAVIOR
+- **Skim-only with no deep reading**: Scroll depth increases in uniform 20-25px increments (e.g., 0.63s–0.81s: 0px→104px; 3.79s–5.81s: 104px→923px) with no pauses >0.5s, suggesting no content absorption. Max scroll depth (923px) is reached in 5.81s, implying rapid traversal of ~85% of the page.
+- **No hover-to-read correlation**: Hover durations (221ms–400ms) precede clicks but do not align with typical reading patterns (e.g., no extended hovers on text blocks).
+
+3. ENGAGEMENT STYLE
+- **Click-only engagement**: No evidence of voting, commenting, or input submission. All interactions are clicks (10 total) with no form submissions or text entry.
+- **No ratio metrics**: Unable to calculate vote-to-comment ratios due to absence of such actions.
+- **Repetitive clicks**: 3/10 clicks are duplicates (Sidebar ×2, Stats Cards ×2, Data Table ×2), suggesting either scripted retries or UI unresponsiveness.
+
+4. INTERACTION SPEED
+- **Extremely fast with scripted delays**: Median inter-action time: **0.5s** (range: 0.03s–1.6s). Exceptions:
+  - 1.31s–1.96s: 650ms gap (labeled "[HESITATION 652ms]").
+  - 5.57s–6.38s: 810ms gap (hover on Data Table).
+- **Click latency**: Average click-to-click time: **0.78s** (excluding hovers).
+
+5. CONTENT PREFERENCES
+- **UI elements over content**: All clicks target structural components:
+  - **Sidebar** (2 clicks, 1.31s–2.91s).
+  - **Stats Cards** (2 clicks, 4.43s–5.57s).
+  - **Data Table** (2 clicks, 6.38s–7.75s).
+- **No content engagement**: No clicks on links, articles, or user-generated content. Focus is exclusively on dashboard widgets.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form interactions observed.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Sidebar navigation (used twice).
+  - Stats Cards (interacted with twice).
+  - Data Table (interacted with twice).
+- **Ignored features**:
+  - No interaction with primary content (e.g., no clicks on dashboard metrics, charts, or action buttons).
+  - No use of search, filters, or settings (if present).
+  - No mobile/desktop-specific features (e.g., hamburger menu, tooltips).
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–1.31s): Initial Scan**
+  - Page load → immediate scroll (0px→104px) with no content engagement.
+  - First click on Sidebar after 1.31s (post-221ms hover).
+- **Phase 2 (1.31s–5.57s): Erratic Exploration**
+  - Repeated clicks on Sidebar (2.91s) and Stats Cards (4.43s–5.57s).
+  - Dead click at 3.71s (coordinates: 1799, 712) suggests misaligned UI element.
+- **Phase 3 (5.57s–7.75s): Rapid Descent**
+  - Aggressive scroll (104px→923px in 0.26s) to Data Table.
+  - Final clicks on Data Table (6.38s–7.75s) before session end.
+- **Exit**: Session terminates abruptly at 7.8s with no logout or navigation away.
+
+---
+
+SUMMARY
+This session exhibits **automated or synthetic behavior** with:
+- **Mechanical scroll patterns** (uniform 20-25px increments).
+- **Repetitive clicks** on UI elements (no content engagement).
+- **Scripted delays** (e.g., "[HESITATION]" labels).
+- **No human-like reading or typing** (zero text input, no pauses for content).
+- **High-speed interactions** (median 0.5s between actions).
+
+Likely a **bot, scanner, or synthetic test** designed to map UI elements rather than engage with content.
+```

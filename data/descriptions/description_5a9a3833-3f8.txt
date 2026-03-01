@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, exploratory pattern with frequent backtracking. They jump between distinct sections (Hero → Testimonials → Navigation → Features → Footer → Hero) rather than following a hierarchical or linear flow.
+- **Section-hopping**: 6 distinct content zones were targeted (Hero: 2x, Testimonials: 2x, Navigation: 1x, Features: 1x, Footer: 1x), with no zone visited more than twice.
+- **Scroll oscillation**: 7 scroll direction changes (down→up→down→up→down→up→down) within 8.4s, indicating rapid reassessment of content relevance.
+
+2. READING BEHAVIOR
+- **Skim-focused**: No sustained reading periods detected. Scroll speeds averaged **282px/s** (e.g., 0-141px in 0.5s, 141-282px in 0.5s), far exceeding typical reading speeds (200-300 words/min ≈ 50-100px/s for 1920x1080 layouts).
+- **Depth avoidance**: Max scroll depth (1006px) was reached at 6.69s, but the user immediately scrolled up (7.49s), suggesting superficial engagement with deeper content.
+- **Visual anchoring**: Clicks clustered around section headers (e.g., "Testimonials," "Features") rather than body text, implying headline-driven scanning.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains **zero** votes, comments, or form submissions. All interactions are navigational (clicks/scrolls).
+- **False starts**: Two "Get Started" button clicks (0.64s and 3.6s) with a **2.63s hesitation** between them, suggesting indecision or UI confusion.
+- **Hover-to-click ratio**: 6/14 clicks (43%) were preceded by hovers (avg **128ms hover time**), indicating deliberate targeting but no deeper interaction.
+
+4. INTERACTION SPEED
+- **Accelerating pace**: Action intervals decreased over time:
+  - First 4s: Avg **0.82s** between actions (e.g., 0.24s→0.27s, 0.64s→3.27s).
+  - Last 4s: Avg **0.36s** between actions (e.g., 7.41s→7.49s, 8.01s→8.37s).
+- **Hesitation spikes**: Two prolonged pauses:
+  - **2.63s** (3.27s click after 0.64s "Get Started" click).
+  - **0.55s** (4.67s click after 4.12s "Testimonials" click).
+- **Scroll speed**: Consistent **282px/0.5s** (564px/s) across all scroll actions, suggesting automated or muscle-memory behavior.
+
+5. CONTENT PREFERENCES
+- **Section prioritization**:
+  1. **Hero (2 clicks)**: Immediate focus (0.64s) but abandoned after hesitation.
+  2. **Testimonials (2 clicks)**: Deepest scroll engagement (763px) but no sustained reading.
+  3. **Features (1 click)**: Targeted after navigation menu use, suggesting secondary interest.
+  4. **Footer (1 click)**: Late-session (7.07s), possibly seeking contact/info links.
+- **Ignored content**: No clicks on images, sidebars, or embedded media (if present). No form fields or search bars engaged.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, input fields, or corrections recorded in the 8.4s session.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Primary navigation**: Clicked once (5.55s) after scrolling to top.
+  - **Section anchors**: Direct clicks on "Testimonials" (4.12s) and "Features" (6.19s) headers.
+  - **CTA buttons**: "Get Started" clicked twice (0.64s, 3.6s).
+- **Ignored features**:
+  - No dropdown menus, modals, or tooltips engaged.
+  - No social sharing, search, or filter tools used.
+  - No hover tooltips or dynamic content interactions beyond initial hovers.
+
+8. SESSION FLOW
+- **Phase 1 (0-3.6s): False Start**
+  - Load → Immediate scroll (0-282px) → "Get Started" click (0.64s) → **2.63s hesitation** → Repeat "Get Started" (3.6s).
+  - *Behavior*: High intent but aborted, possibly due to UI friction or content mismatch.
+- **Phase 2 (3.6-5.55s): Exploratory Skim**
+  - Rapid scroll to bottom (603px by 3.7s) → "Testimonials" click (4.12s) → Scroll up (5.06s).
+  - *Behavior*: Seeking social proof but disengaging quickly.
+- **Phase 3 (5.55-8.37s): Systematic Sampling**
+  - Navigation menu → "Features" → Footer → Hero title.
+  - *Behavior*: Methodical but shallow; no section explored for >1.5s.
+- **Exit**: Session ends abruptly after Hero title click (8.37s), with no exit intent (e.g., no tab closure or URL change recorded).
+
+KEY OBSERVATIONS:
+- **Synthetic/power-user traits**: Unnaturally consistent scroll speeds (564px/s), zero typing, and rapid section-hopping suggest a bot, automated test, or highly trained user.
+- **No conversion**: Despite two "Get Started" clicks, no form progression or deeper engagement occurred.
+- **UI friction signals**: Hesitations (2.63s, 0.55s) and repeated clicks on identical elements ("Get Started," "Testimonials") imply unclear affordances or unmet expectations.
+```

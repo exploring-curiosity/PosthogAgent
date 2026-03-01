@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Highly focused and task-driven** with minimal exploratory behavior.
+- **Linear progression** through UI elements in a top-to-bottom, left-to-right sequence:
+  1. Dashboard overview (0.0s–0.57s)
+  2. Chart interaction (0.57s–1.09s)
+  3. Export function (1.09s–3.72s)
+  4. Stats cards (4.11s–4.42s)
+  5. Data table (4.88s–5.02s)
+  6. Sidebar (5.24s–5.63s)
+- **No backtracking** to previously viewed content (e.g., no return to charts after scrolling down).
+- **Zero navigation to new pages**—all actions occur on the single dashboard page.
+
+2. READING BEHAVIOR:
+- **Skimmer with rapid vertical scanning**:
+  - **Scroll speed**: 127–137px/s (e.g., 0.18s–0.23s: 197px in 0.5s; 4.48s–4.69s: 715px in 0.21s).
+  - **No deep reading**: Max scroll depth (853px) reached in 4.69s, with no pauses >0.5s at any depth.
+  - **No horizontal scanning**: All scrolls are vertical; no lateral mouse movements detected.
+- **Content sampling**: Clicks on UI elements (charts, stats cards, tables) suggest **selective engagement** with visual summaries rather than text-heavy content.
+
+3. ENGAGEMENT STYLE:
+- **No traditional "engagement" actions** (e.g., voting, commenting, sharing) observed.
+- **Primary interactions**: Clicks on interactive dashboard components (charts, export buttons, tables).
+- **Hover-to-click ratio**: 4/10 clicks preceded by hovers (40%), with hover durations of 68–183ms (avg: 104ms).
+  - Suggests **visual targeting** before interaction but **no prolonged deliberation**.
+- **Double-click pattern**: 4/5 interactive elements (charts, stats cards, data table, sidebar) were clicked twice in rapid succession (e.g., 0.57s/0.74s for charts; 4.88s/5.02s for data table).
+  - Possible **confirmation clicks** or **UI responsiveness testing**.
+
+4. INTERACTION SPEED:
+- **Extremely fast** with **minimal hesitation**:
+  - **Median inter-action time**: 0.27s (excluding the 2.32s hesitation at 3.41s).
+  - **Outlier**: 2.32s hesitation before the second "Export" click (3.41s–3.72s)—only pause >1s in the session.
+  - **Click latency**: 0.14s–0.33s between hover and click (avg: 0.21s).
+- **Scroll bursts**: 3–5 rapid scrolls in sequence (e.g., 4.48s–4.69s: 5 scrolls in 0.21s), indicating **intentional navigation** to specific content.
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward data-dense, interactive components**:
+  1. **Charts** (0.57s–0.74s): First interactive element clicked.
+  2. **Export functionality** (1.09s–3.72s): Longest engagement (2.63s total), including a 2.32s hesitation.
+  3. **Stats cards** (4.11s–4.42s): Clicked after scrolling past initial content.
+  4. **Data table** (4.88s–5.02s): Deepest scroll depth (853px) before interaction.
+  5. **Sidebar** (5.24s–5.63s): Final interaction before session end.
+- **Ignored**: Static text, navigation menus (if present), or non-data elements (e.g., no clicks on headers, footers, or non-interactive divs).
+
+6. TYPING BEHAVIOR:
+- **No typing detected** in the action log. All interactions are clicks, hovers, or scrolls.
+- **No input fields** (e.g., search bars, forms) were engaged with.
+
+7. FEATURE DISCOVERY:
+- **Discovered and used**:
+  - **Charts**: Clicked twice (0.57s, 0.74s).
+  - **Export button**: Clicked twice (1.09s, 3.72s), with a 2.32s hesitation suggesting **possible confusion or confirmation**.
+  - **Stats cards**: Clicked twice (4.11s, 4.42s).
+  - **Data table**: Clicked twice (4.88s, 5.02s).
+  - **Sidebar**: Clicked twice (5.24s, 5.63s).
+- **Ignored**:
+  - **Non-interactive text**: No clicks on page text outside of "[HESITATION]" placeholders.
+  - **Potential features**: No evidence of tooltips, dropdowns, filters, or other UI elements being triggered.
+
+8. SESSION FLOW:
+- **Arc**: **Targeted data extraction → rapid validation → abrupt exit**.
+  1. **0.0s–1.09s (Exploration/Targeting)**:
+     - Loads dashboard, scrolls to assess content (0.18s–0.85s).
+     - Clicks chart (0.57s) and export button (1.09s) within 1.1s of page load.
+  2. **1.09s–3.72s (Primary Task Execution)**:
+     - Focuses on export functionality (2.63s total), including a 2.32s hesitation (3.41s).
+     - May indicate **confirmation of export action** or **UI uncertainty**.
+  3. **3.72s–5.63s (Secondary Validation)**:
+     - Scrolls rapidly to stats cards (4.11s), data table (4.88s), and sidebar (5.24s).
+     - **No deep engagement**—each component is clicked twice and abandoned.
+  4. **5.63s (Exit)**:
+     - Session ends immediately after sidebar click. No return to prior content or additional actions.
+- **Hypothesis**: User may have been **exporting data for external analysis** and verified dashboard components post-export before leaving.
+- **Anomalies**:
+  - **Hesitations**: Two "[HESITATION]" clicks (0.14s, 3.41s) with no associated UI elements—likely **logging artifacts** or **invisible UI interactions** (e.g., right-clicks, drags).
+  - **Double-clicks**: Suggest **UI testing** or **confirmation behavior** rather than functional use.
+```
+
+**SUMMARY**: This user exhibits **highly efficient, task-driven behavior** characteristic of a **power user or automated script**. Their actions are **linear, rapid, and focused on data extraction** (charts, export, tables), with **no exploratory browsing or deep reading**. The session lacks traditional engagement (e.g., typing, sharing) and ends abruptly after interacting with core dashboard components. The 2.32s hesitation at 3.41s is the only deviation from a **sub-second interaction cadence**, hinting at a possible **UI friction point** or **decision moment**.

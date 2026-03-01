@@ -1,0 +1,52 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated clicks on the same elements (e.g., "Navigation" and "Hero Title" clicked twice each) and abrupt jumps between page regions (header → hero → footer). No clear progression through content hierarchy is observed.
+- **Synthetic/scanner behavior**: The (0, 0) click at 3.47s and rapid, repetitive interactions suggest automated or scripted activity rather than organic browsing. No evidence of exploratory or focused navigation.
+
+2. READING BEHAVIOR
+- **No reading detected**: Scrolling occurs in rapid, uniform bursts (0.5s per 180px increment) with no pauses or variable speeds that would indicate content consumption. Max scroll depth (1077px) is reached in 2.3s (6.82s–6.99s), implying skimming or automated scrolling rather than reading.
+- **Hover durations**: Brief hovers (284–305ms) on "Navigation" and "Hero Title" are too short for meaningful engagement with text.
+
+3. ENGAGEMENT STYLE
+- **No substantive engagement**: The session contains no voting, commenting, or input actions. All interactions are clicks or scrolls with no evidence of content creation or reaction.
+- **Vote-to-comment ratio**: N/A (no votes or comments recorded).
+
+4. INTERACTION SPEED
+- **Extremely rapid and uniform**: Actions occur in quick succession with minimal delays:
+  - 3.47s–4.07s: 600ms between (0, 0) click and "Navigation" hover.
+  - 4.07s–4.65s: 580ms between "Navigation" hover and click.
+  - 4.65s–6.78s: 2.13s gap (longest in session), likely due to automated scrolling.
+  - 6.78s–9.0s: 2.22s between "Hero Title" click and final "Footer" click.
+- **Hesitation markers**: The 3469ms delay at 3.47s is the only outlier, possibly indicating script initialization or synthetic delay.
+
+5. CONTENT PREFERENCES
+- **No content preferences identifiable**: The user interacted only with structural elements (navigation, hero title, footer) with no evidence of engagement with specific content types, topics, or subreddits. All clicks targeted generic UI components.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The session log contains no input fields, keystrokes, or text entry actions. Typing speed, corrections, and input length cannot be assessed.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Navigation menu (clicked twice at 4.07s and 4.65s).
+  - Hero title (clicked twice at 5.33s and 6.78s).
+  - Footer (clicked twice at 7.53s and 9.0s).
+  - Scrolling (automated, 6 discrete scroll actions).
+- **Features ignored**:
+  - No interaction with sidebars, content cards, forms, or interactive elements (e.g., buttons, links beyond navigation).
+  - No evidence of feature exploration beyond surface-level UI elements.
+
+8. SESSION FLOW
+- **Arc**: **Synthetic interaction → forced navigation → abrupt exit**
+  - **0.0s–3.47s**: Initialization (page load + 3.47s delay, possibly script warm-up).
+  - **3.47s–6.78s**: Rapid, repetitive clicks on navigation and hero title, interspersed with automated scrolling (4.69s–6.99s).
+  - **6.78s–9.0s**: Final clicks on footer, followed by session termination.
+- **No organic phases**: The session lacks exploration, engagement, or exit intent typical of human users. The flow is mechanical, with no progression toward a goal or content consumption.
+```
+
+**SUMMARY**: This session is highly indicative of **automated or synthetic activity** (e.g., a bot, scanner, or script). Key red flags include:
+- Uniform interaction timing (0.5s scrolls, 284–305ms hovers).
+- Repeated clicks on identical elements with no functional outcome.
+- No evidence of reading, typing, or content engagement.
+- Device profile ("synthetic/scanner") and lack of human-like hesitation patterns.

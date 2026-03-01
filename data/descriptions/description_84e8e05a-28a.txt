@@ -1,0 +1,62 @@
+```
+BEHAVIORAL PROFILE
+
+1. NAVIGATION PATTERN:
+- Highly linear and focused, with no exploratory behavior.
+- Zero lateral movement (no navigation to other pages/sections).
+- All actions confined to a single page (https://yoursite.com) with no evidence of menu usage or link following.
+- Spatial focus: 80% of clicks clustered in two distinct regions (rage clicks at ~(500,300) and sign-up at (700,500)).
+
+2. READING BEHAVIOR:
+- No reading occurred. Scroll depth remained at 0px throughout (two scroll attempts at 0.8s and 1.5s, both with 0px displacement).
+- Scroll duration (0.5s) suggests immediate abandonment of scroll attempts, indicating no content consumption.
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or content interaction observed.
+- Interaction ratio: 0 votes, 0 comments, 4 clicks (2 rage clicks, 1 sign-up, 1 dead click).
+- Engagement timeline:
+  - 2.2s: First rage click (frustration signal)
+  - 2.4s: Second rage click (escalated frustration)
+  - 4.0s: Sign-up attempt (possible goal shift)
+  - 5.5s: Dead click (final disengagement)
+
+4. INTERACTION SPEED:
+- Extremely rapid with decreasing intervals:
+  - Page load → First action: 2.2s
+  - First → Second action: 0.2s (rage click repetition)
+  - Second → Third action: 1.6s (sign-up attempt)
+  - Third → Fourth action: 1.5s (dead click)
+- Average action interval: 1.1s (excluding page load).
+
+5. CONTENT PREFERENCES:
+- No content preferences identifiable. Zero content was viewed or interacted with.
+- All clicks targeted UI elements (divs, button, paragraph text), not content items.
+
+6. TYPING BEHAVIOR:
+- No typing detected. No form fields, search boxes, or text inputs were engaged.
+
+7. FEATURE DISCOVERY:
+- Used features:
+  - Clickable UI elements (divs, button)
+  - Scroll bar (attempted but unused)
+- Ignored features:
+  - Navigation menus (no clicks outside main viewport)
+  - Content sections (no scrolling)
+  - Any interactive content (no voting/commenting)
+  - Search or filter tools (no evidence of usage)
+
+8. SESSION FLOW:
+- Arc: Immediate frustration → Failed recovery attempt → Abandonment
+  - 0.0-2.2s: Passive observation (no interaction despite 2.2s dwell time)
+  - 2.2-2.4s: Frustration spike (rage clicks on non-functional element)
+  - 4.0s: Goal pivot (sign-up attempt, possibly as alternative to failed interaction)
+  - 5.5s: Final disengagement (dead click on static text)
+- Exit: Session terminated immediately after dead click (no further actions).
+- Session duration: 5.5s (extremely short, 99th percentile for bounce rate).
+```
+
+Key Quantitative Metrics:
+- Scroll-to-click ratio: 2:4 (50% of actions were scroll attempts, all ineffective)
+- Rage click density: 2 clicks in 0.2s (10 clicks/second)
+- Click accuracy: ±2px variance in rage clicks (high precision despite rapid repetition)
+- Viewport utilization: 0% (no content below fold was viewed)

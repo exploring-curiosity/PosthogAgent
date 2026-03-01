@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-directed with minimal deviation.
+- Sequential tab navigation: Profile (0.61s) → Settings Nav (1.56s) → Notifications (2.45s) → Privacy (4.95s).
+- No backtracking or exploratory clicks outside the settings menu structure.
+- 100% of clicks target settings-related UI elements (no off-path exploration).
+- Dead click at 3.49s suggests either a UI misalignment (target outside viewport) or accidental interaction.
+
+2. READING BEHAVIOR
+- Skimming pattern with rapid, shallow scrolls:
+  - 17 scroll actions in 5.1s (3.3 scrolls/second).
+  - Average scroll distance: 70px per action (consistent 70-80px increments).
+  - No pauses >200ms between scrolls (no deep reading).
+  - Max scroll depth: 944px (viewport height 1080px), suggesting full-page coverage but no content dwell time.
+- Hover times (71-199ms) indicate visual scanning, not detailed reading.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed.
+- Interaction limited to settings configuration:
+  - 6 primary clicks (Profile, Settings Nav, Notifications, Save Changes, Privacy).
+  - 2 redundant clicks (Profile and Settings Nav clicked twice within 400ms each).
+  - 1 dead click (3.49s) with no follow-up action.
+- No engagement with user-generated content or community features.
+
+4. INTERACTION SPEED
+- Rapid and mechanical:
+  - Average time between primary actions: 0.85s (excluding scrolls).
+  - Click latency: 40-400ms between hover and click (median: 100ms).
+  - Scroll speed: 140px/second (consistent across all scrolls).
+  - Hesitation only at session start (157ms at 0.16s) and before "Save Changes" (199ms hover at 4.22s).
+- No typing observed (no input fields engaged).
+
+5. CONTENT PREFERENCES
+- Exclusively interacted with account settings:
+  - Profile (0.61s)
+  - Settings navigation (1.56s)
+  - Notifications (2.45s)
+  - Privacy (4.95s)
+- No content consumption (e.g., posts, comments, subreddit browsing) detected.
+
+6. TYPING BEHAVIOR
+- No typing or input observed in the log.
+- No corrections, deletions, or form submissions detected.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Settings menu navigation (Profile, Notifications, Privacy tabs).
+  - "Save Changes" button (4.22s).
+- Ignored features:
+  - No interaction with search, help, or account dropdowns.
+  - No engagement with sidebars, footers, or non-settings UI elements.
+  - No mobile/desktop toggle or accessibility options.
+
+8. SESSION FLOW
+- Phase 1 (0.0-0.61s): Orientation
+  - Page load → initial hesitation (157ms) → rapid downward scroll (45-135px).
+- Phase 2 (0.61-2.45s): Profile Configuration
+  - Clicks "Profile" (0.61s) → scrolls to 295px → clicks "Settings Nav" (1.56s).
+- Phase 3 (2.45-4.42s): Notifications Setup
+  - Clicks "Notifications" (2.45s) → scrolls to 944px → clicks "Save Changes" (4.22s).
+- Phase 4 (4.42-5.09s): Privacy Review
+  - Scrolls up to 708px → clicks "Privacy" (4.95s).
+- Exit: Session ends at 5.1s with no further actions.
+- Arc: Linear progression through settings tabs with no exploration or abandonment.
+```
+
+**Key Observations:**
+- **Synthetic/Power User Signature**: Mechanical precision, no errors, and rapid execution suggest automated/scripted behavior or an expert user.
+- **No Content Engagement**: Entire session focused on account management, not content consumption.
+- **UI Friction**: Dead click (3.49s) and redundant clicks (e.g., "Profile" at 0.61s and 1.01s) may indicate UI responsiveness issues.

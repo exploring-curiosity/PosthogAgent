@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with targeted re-engagement**: The user exhibits a non-linear, oscillating pattern. They rapidly scroll through the entire page (0.36s–0.56s: 0px→978px in 4 sequential scrolls) before immediately backtracking to specific sections (1.17s–2.06s: 978px→317px). This suggests a "scan-then-focus" approach rather than linear exploration.
+- **Element-specific targeting**: After initial scanning, they return to 3 distinct UI regions (footer, features section, hero title) with precise clicks, indicating deliberate re-engagement with previously noted elements.
+- **No page transitions**: All interactions occur on a single page (landing), with no navigation to other URLs.
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**: The initial scroll (0.36s–0.56s) covers 978px in 200ms (4.9px/ms), far exceeding typical reading speeds (500–1000 words/minute ≈ 0.5–1px/ms). This indicates skimming.
+- **Micro-reading at interaction points**: Hover times (125ms–176ms) before clicks suggest brief content evaluation at targeted elements (e.g., "Features [HOVER 176ms]"). No sustained reading is detectable.
+- **Scroll depth volatility**: Max scroll depth (978px) is revisited 3 times, but the user never stabilizes at a single depth for >0.5s, reinforcing skimming behavior.
+
+3. ENGAGEMENT STYLE
+- **Click-only engagement**: The user exclusively interacts via clicks (10 total clicks across 5 distinct elements). No typing, form submissions, or other input methods are recorded.
+- **Double-click pattern**: Every targeted element receives two rapid clicks (e.g., "Get Started" at 2.43s and 2.65s), separated by 120–220ms. This may indicate:
+  - Testing interactivity (e.g., button responsiveness)
+  - Accidental double-clicks (though hover times suggest intentionality)
+- **No content creation**: Zero comments, votes, or other participatory actions are logged.
+
+4. INTERACTION SPEED
+- **Hyper-fast with micro-deliberation**: Average time between actions: 480ms (excluding scrolls). Key metrics:
+  - First click latency: 310ms (0.31s) after page load.
+  - Hover-to-click intervals: 51ms–176ms (median: 125ms).
+  - Scroll-to-click transitions: <100ms (e.g., 2.43s click follows 2.06s scroll).
+- **Scroll speed**: 480px/s during initial scan (0.36s–0.56s), slowing to 250px/s during re-engagement (e.g., 3.59s–3.82s).
+
+5. CONTENT PREFERENCES
+- **Structural elements over content**: All clicks target UI components, not substantive content:
+  - **Footer** (1.0s, 1.11s): Likely testing navigation links or legal pages.
+  - **Features section** (1.53s, 1.86s): May indicate interest in product capabilities.
+  - **Hero title** (3.18s, 3.53s): Unusual click target; possibly testing interactivity or selecting text.
+  - **Testimonials** (4.11s, 4.21s): Brief engagement with social proof.
+  - **Navigation** (4.64s, 4.82s): Final action suggests intent to leave or explore further.
+- **No content consumption**: Zero clicks on articles, images, or other media.
+
+6. TYPING BEHAVIOR
+- **N/A**: No typing, form inputs, or text selections are recorded in the session.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Scrolling**: Used extensively (14 scroll actions) to traverse the page.
+  - **Clickable UI elements**: Footer, features section, hero title, testimonials, and navigation were all clicked.
+  - **Hover states**: Detected for 5 elements (hover times: 51ms–176ms), suggesting awareness of interactive affordances.
+- **Ignored features**:
+  - **Forms/inputs**: No engagement with search bars, login fields, or other input elements.
+  - **Media**: No clicks on images, videos, or embedded content.
+  - **Dynamic elements**: No interactions with dropdowns, modals, or tooltips (if present).
+  - **CTA buttons beyond "Get Started"**: Only one button ("Get Started") was clicked; others (if any) were ignored.
+
+8. SESSION FLOW
+- **Phase 1: Rapid Scan (0.0s–1.0s)**
+  - Page load → immediate scroll to bottom (978px) in 4 sequential scrolls (0.36s–0.56s).
+  - First click on footer at 1.0s (312ms hesitation), suggesting initial interest in bottom-of-page elements.
+- **Phase 2: Targeted Re-engagement (1.11s–2.65s)**
+  - Scrolls upward to features section (1.17s–2.06s), clicks "Features" (1.53s, 1.86s).
+  - Continues upward to "Get Started" button (2.43s, 2.65s), the only primary CTA clicked.
+- **Phase 3: Anomalous Clicks (3.18s–4.21s)**
+  - Returns to hero title (3.18s, 3.53s), an atypical target for clicks.
+  - Scrolls downward again (3.59s–3.82s) to testimonials, clicks (4.11s, 4.21s).
+- **Phase 4: Exit Intent (4.24s–4.82s)**
+  - Rapid scroll to top (4.24s–4.3s), clicks navigation (4.64s, 4.82s), likely to leave the page.
+- **Session Arc**: **Scan → Test Interactivity → Re-engage with CTAs → Anomalous Clicks → Exit**.
+  - No traditional "browsing" or "engagement" phases; the session resembles a UI audit or automated test.
+  - Total duration: 4.82s, with no single action exceeding 220ms of deliberation.
+
+ADDITIONAL OBSERVATIONS
+- **Synthetic user traits**: The combination of hyper-fast interactions, double-clicks, and structural element targeting strongly suggests a **bot, automated test, or power user conducting a UI audit**. Human users rarely exhibit this level of speed and precision.
+- **Viewport consistency**: No resizing or orientation changes, reinforcing the synthetic user hypothesis.
+- **No errors**: No rage clicks, backtracking, or other frustration signals.
+```

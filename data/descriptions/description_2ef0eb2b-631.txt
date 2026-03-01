@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Linear with exploratory detours and repeated validation
+- **Evidence**:
+  - Sequential navigation through settings tabs: Profile (4.76s) → Privacy (8.86s) → Notifications (14.53s) → Save (18.49s)
+  - Repeated clicks on the same elements (e.g., "Profile" clicked twice at 4.76s and 7.01s; "Privacy" at 8.86s and 12.63s)
+  - 4/12 non-scroll actions were hesitations (2662ms, 511ms, 1071ms, 2016ms) or dead clicks (7.25s)
+  - Final return to "Settings Nav" (22.75s) suggests circular validation
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with targeted deep dives
+- **Evidence**:
+  - Rapid scroll bursts (avg 112px/s) with no pauses >0.5s between scroll steps
+  - Max scroll depth per tab:
+    - Profile: 286px (2.86s)
+    - Privacy: 845px (8.86s) → 382px (12.9s) [scrolled back up]
+    - Notifications: 920px (16.48s)
+  - Hover times (1600ms, 1074ms, 1482ms) suggest focused attention on specific UI elements before clicking
+
+3. ENGAGEMENT STYLE
+- **N/A**: No voting, commenting, or content interaction observed
+- **Data Limitation**: Session confined to settings page (no content feed visible in log)
+
+4. INTERACTION SPEED
+- **Pattern**: Deliberate with hesitation spikes
+- **Metrics**:
+  - Avg time between actions: 2.27s (excluding scrolls)
+  - Median hesitation duration: 1071ms (range: 511ms–2662ms)
+  - Fastest click sequence: 40ms between "Notifications" click (16.27s) and scroll initiation (16.31s)
+  - Slowest decision: 2016ms hesitation before final "Settings Nav" click (24.77s)
+
+5. CONTENT PREFERENCES
+- **N/A**: No content/subreddit interactions recorded
+- **Settings Focus**:
+  - Prioritized: Profile → Privacy → Notifications (chronological order)
+  - Final action: Return to Settings Nav (potential exit intent)
+
+6. TYPING BEHAVIOR
+- **N/A**: No text input or corrections detected in log
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Settings tabs (Profile, Privacy, Notifications)
+  - "Save Changes" button (clicked at 21.22s)
+  - Navigation menu ("Settings Nav")
+- **Ignored Features**:
+  - No evidence of:
+    - Account deletion
+    - Connected apps
+    - Email preferences
+    - Two-factor authentication
+    - Any form fields (no typing detected)
+
+8. SESSION FLOW
+- **Arc**: Validation-Oriented Configuration
+  - **0–4.76s (Orientation)**: Initial hesitation (2662ms), rapid scrolling to survey page layout
+  - **4.76–18.49s (Exploration)**: Linear tab progression with hover validation (avg 1385ms hover time)
+  - **18.49–21.22s (Action)**: Save attempt (1725ms hover) followed by immediate execution
+  - **21.22–27.17s (Verification)**: Scroll back up, return to nav menu (2016ms hesitation), final click
+- **Exit**: Abrupt termination after final "Settings Nav" click (no confirmation of save success/failure)
+
+QUANTITATIVE SUMMARY
+- Total actions: 27 (12 clicks, 15 scrolls)
+- Scroll distance: 1735px down, 1163px up
+- Hover-to-click ratio: 3:1 (3 hovers preceded clicks)
+- Dead click rate: 8.3% (1/12 clicks)
+- Hesitation rate: 33.3% (4/12 clicks)
+```

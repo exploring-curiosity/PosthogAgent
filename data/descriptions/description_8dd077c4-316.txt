@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic pattern with repeated clicks on the same elements (e.g., "Hero Title" clicked twice at [1.23s] and [2.47s]; "Features" clicked twice at [3.07s] and [6.65s]; "Get Started" clicked twice at [7.26s] and [9.1s]). Scrolling is segmented into rapid bursts (e.g., 5 consecutive scrolls down at [0.58s–0.74s], 5 more at [2.52s–2.77s]), suggesting forced interaction rather than organic exploration.
+- **No lateral movement**: All interactions occur vertically (scrolling) or on static elements (h1, sections, buttons). No horizontal navigation (e.g., tabs, menus) or cross-page links are engaged.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth reaches 599px (max) but is achieved via rapid, incremental jumps (5–75px per 0.5s). No pauses >1s between scrolls, indicating no deep reading. The longest dwell time on a scroll segment is 0.5s (e.g., [0.58s–0.62s]), insufficient for reading more than 1–2 lines of text.
+- **No content absorption**: Repeated clicks on "Hero Title" and "Features" without subsequent engagement (e.g., no clicks on sub-features or links within sections) suggest the user is not processing content.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, form submissions, or other participatory actions. All interactions are clicks or scrolls.
+- **Hesitation markers**: Three instances of "[HESITATION]" clicks at (0, 0) ([0.52s], [5.81s], [8.58s]) with delays of 518ms, 2745ms, and 1323ms respectively. These are likely synthetic pauses (e.g., scripted delays) rather than human indecision.
+- **Vote-to-comment ratio**: N/A (no engagement actions recorded).
+
+4. INTERACTION SPEED
+- **Hyper-fast with scripted delays**: Base interaction speed is <0.5s between actions (e.g., scrolls at [0.58s–0.74s] average 0.04s between steps). However, three "[HESITATION]" pauses ([5.81s], [8.58s]) artificially inflate the session duration.
+- **Click latency**: Hover times (234ms, 171ms, 372ms) precede clicks but are too brief for human deliberation. Post-click delays are minimal (e.g., 0.04s between [2.47s] and [2.52s] actions).
+
+5. CONTENT PREFERENCES
+- **No discernible preferences**: The user interacts with three generic elements:
+  - **Hero Title** (h1): Clicked twice ([1.23s], [2.47s]).
+  - **Features section**: Clicked twice ([3.07s], [6.65s]).
+  - **Get Started button**: Clicked twice ([7.26s], [9.1s]).
+- **No subreddit/content type engagement**: The log does not reference specific content categories, subreddits, or topics.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The session contains no text input, corrections, or form interactions. All actions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Hero Title** (h1): Engaged at [1.23s] and [2.47s].
+  - **Features section**: Engaged at [3.07s] and [6.65s].
+  - **Get Started button**: Engaged at [7.26s] and [9.1s].
+- **Ignored features**:
+  - No interaction with navigation menus, sidebars, footers, or other UI elements.
+  - No engagement with dynamic content (e.g., carousels, modals, tooltips).
+  - No form fields, search bars, or filters used.
+
+8. SESSION FLOW
+- **Phase 1: Forced Initial Scan (0.0s–1.23s)**
+  - Page loads ([0.0s]).
+  - Immediate "[HESITATION]" click at (0, 0) ([0.52s]).
+  - Rapid downward scrolls ([0.58s–0.74s]) to 224px depth.
+  - Click on "Hero Title" ([1.23s]).
+- **Phase 2: Repetitive Clicks (1.23s–3.07s)**
+  - Second click on "Hero Title" ([2.47s]).
+  - Another rapid scroll burst ([2.52s–2.77s]) to 599px depth.
+  - Click on "Features" ([3.07s]).
+- **Phase 3: Synthetic Pauses (3.07s–9.1s)**
+  - Long "[HESITATION]" pause ([5.81s], 2745ms).
+  - Second click on "Features" ([6.65s]).
+  - Upward scrolls ([6.69s–6.75s]) to 298px.
+  - Click on "Get Started" ([7.26s]).
+  - Final "[HESITATION]" pause ([8.58s], 1323ms).
+  - Second click on "Get Started" ([9.1s]).
+- **Exit**: Session ends at 9.1s.
+
+SUMMARY
+This session is **highly atypical for human behavior** and exhibits characteristics of a **synthetic scanner or automated script**:
+- **Navigation**: Scattered, repetitive clicks on the same elements with no progression.
+- **Reading**: No evidence of content absorption; scrolls are too rapid and segmented.
+- **Engagement**: No participatory actions; "[HESITATION]" markers suggest scripted delays.
+- **Speed**: Sub-0.5s interactions punctuated by artificial pauses.
+- **Content**: No preferences; only generic UI elements engaged.
+- **Typing**: None detected.
+- **Features**: Limited to 3 static elements, ignored all other UI.
+- **Flow**: Linear in structure but lacks human-like exploration or intent.
+
+The user profile (desktop, synthetic/scanner) and session duration (9.1s) further support the conclusion that this is **not a human user**.
+```

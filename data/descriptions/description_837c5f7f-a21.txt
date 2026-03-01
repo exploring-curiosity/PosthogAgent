@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN
+   - **Exploratory with focused bursts**: The user exhibits a non-linear, scanning-heavy pattern with 4 distinct "focus phases" (Export, Chart, Sidebar, Data Table, Stats Cards). Movement is spatially scattered (e.g., jumping from right-side Export button to left-side Chart, then to far-left Sidebar).
+   - **Vertical prioritization**: 80% of scroll actions (12/15) are downward, with only 5 upward scrolls (all clustered at 18.29–18.52s). No horizontal scrolling detected.
+   - **Depth coverage**: Explored 704px of vertical content (65% of 1080px viewport) but never reached page bottom.
+
+2. READING BEHAVIOR
+   - **Skimmer with selective deep dives**: Scroll speed averages 140px/s (21–63px per 0.5s increment), far exceeding typical reading speeds (200–300 words/min ≈ 50px/s). No pauses >1s on any content block.
+   - **Micro-engagement**: 3 instances of hover delays (1502ms, 837ms, 1883ms) suggest brief visual processing of UI elements before interaction, but no evidence of sustained reading.
+   - **Scroll clusters**: 5 rapid scroll sequences (2.62–2.82s, 5.77–5.83s, 10.93–11.07s, 14.61–14.66s, 18.29–18.52s) indicate "scan → pause → scan" cycles.
+
+3. ENGAGEMENT STYLE
+   - **No traditional engagement**: No votes, comments, or form submissions detected. All interactions are navigational (clicks) or exploratory (scrolls).
+   - **Interaction ratio**: 100% clicks (10 total), 0% content creation/modification.
+   - **Hesitation markers**: 3 "[HESITATION]" events (2.54s, 8.12s, 22.52s) averaging 2288ms, suggesting cognitive load or decision paralysis.
+
+4. INTERACTION SPEED
+   - **Deliberate with acceleration**: Initial hesitation (2542ms) followed by faster interactions (mean 1.8s between actions post-4.47s). Peak speed: 0.06s between scrolls (10.93–11.07s).
+   - **Hover-to-click latency**: Average 1429ms (range 837–1883ms) before primary clicks.
+   - **Action density**: 10 clicks in 23.6s (0.42 clicks/s), with 60% of clicks occurring in the first 10s.
+
+5. CONTENT PREFERENCES
+   - **UI element focus**: Interacted exclusively with structural components:
+     - **Export functionality** (2 clicks, 4.47–5.72s)
+     - **Chart visualization** (2 clicks, 6.79–10.87s)
+     - **Sidebar navigation** (2 clicks, 13.18–14.54s)
+     - **Data Table** (2 clicks, 16.25–18.21s)
+     - **Stats Cards** (2 clicks, 19.53–23.58s)
+   - **No content consumption**: Zero interactions with text blocks, images, or embedded media.
+
+6. TYPING BEHAVIOR
+   - **No typing detected**: No keystrokes, form inputs, or search queries logged. All interactions are mouse-based.
+
+7. FEATURE DISCOVERY
+   - **Discovered features**:
+     - Export tool (used at 4.47s)
+     - Chart interaction (6.79s)
+     - Sidebar navigation (13.18s)
+     - Data Table (16.25s)
+     - Stats Cards (19.53s)
+   - **Ignored features**:
+     - No interactions with:
+       - Top navigation bars (if present)
+       - Filter/sort controls
+       - Help/documentation links
+       - User account menus
+       - Any content below 704px
+
+8. SESSION FLOW
+   - **Phase 1: Orientation (0–4.47s)**
+     - Loaded dashboard, hesitated (2542ms), then rapidly scrolled (2.62–2.82s) to assess layout.
+     - Minimal vertical exploration (105px max depth).
+   - **Phase 2: Targeted Exploration (4.47–10.87s)**
+     - Focused on Export (4.47–5.77s) and Chart (6.79–10.87s) with hover delays.
+     - Expanded scroll depth to 407px.
+   - **Phase 3: Lateral Expansion (10.87–18.21s)**
+     - Shifted to Sidebar (13.18s) and Data Table (16.25s), reaching max depth (704px).
+     - First upward scrolls (18.29s) to revisit content.
+   - **Phase 4: Reassessment (18.21–23.58s)**
+     - Rapid upward scroll (18.29–18.52s) to Stats Cards (19.53s).
+     - Longest hesitation (2988ms at 22.52s) before final click.
+   - **Exit**: Session ended abruptly after Stats Cards click (no confirmation of action completion).
+```
+
+**Key Behavioral Signatures**:
+- **Synthetic traits**: Perfectly timed scroll increments (0.5s intervals), no erratic mouse movements, and absence of typing suggest automated or scripted behavior.
+- **Cautious explorer**: High hesitation times, hover delays, and lack of content engagement indicate a user prioritizing UI discovery over consumption.
+- **Depth avoidance**: Never scrolled beyond 704px despite 1080px viewport, suggesting either disinterest in deeper content or a task-focused approach.

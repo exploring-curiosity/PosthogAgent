@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+----------------------------------------
+
+1. NAVIGATION PATTERN
+- **Scattered and erratic**: The user exhibits no clear linear progression through the site. Navigation is characterized by rapid jumps between unrelated elements (e.g., clicking "Get Started" at 1.02s, then "Testimonials" at 1.49s, then "Navigation" at 3.99s).
+- **Repetitive clicks**: Multiple clicks on the same element within milliseconds (e.g., "Get Started" at 1.02s and 1.18s; "Navigation" at 3.99s and 4.12s). 67% of clicks (12/18) are duplicates of the same target.
+- **Dead/rage clicks**: Explicitly labeled "[DEAD CLICK]" at 5.91s and "[RAGE CLICK]" at 10.12s–10.34s, indicating frustration or misfires.
+- **Viewport coverage**: Explored full vertical range (0px–1063px) but with no sustained focus on any section.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scrolls rapidly (avg. 120px/s) with no pauses >0.5s. Max depth (1063px) reached in 10.43s, but no section held for >1.5s.
+- **Scroll patterns**:
+  - **Downward**: 12 scroll actions (avg. 140px per scroll) with no reading plateaus.
+  - **Upward**: 7 scroll actions (avg. 200px per scroll), often immediately after clicking a section (e.g., scrolled up from 805px to 47px at 3.62s–3.69s after clicking "Testimonials").
+- **No deep reading**: No evidence of sustained engagement with text (e.g., no hover pauses >200ms on content blocks).
+
+3. ENGAGEMENT STYLE
+- **No substantive engagement**: Zero votes, comments, or form submissions. All interactions are clicks on static elements (buttons, nav, sections).
+- **Impulsive**: 18 clicks in 12.4s (1.45 clicks/s), with 44% (8/18) occurring within 100ms of hover (suggesting no deliberation).
+- **Hesitation markers**: 3 instances of "[HESITATION]" (393ms, 1888ms, 1261ms, 552ms) at 0.39s, 3.38s, 9.8s, and 12.01s, but followed by immediate clicks on unrelated elements.
+
+4. INTERACTION SPEED
+- **Hyper-fast**: Median time between actions: 0.3s (IQR: 0.18s–0.5s). Fastest sequence: 3 rage clicks in 210ms (10.12s–10.34s).
+- **Hover-to-click latency**:
+  - Avg. hover duration: 101ms (min: 43ms, max: 1888ms).
+  - 61% of clicks (11/18) occur within 150ms of hover (suggesting premeditated clicks, not reading).
+- **No typing**: Zero keystrokes or input fields engaged.
+
+5. CONTENT PREFERENCES
+- **No clear preferences**: Clicked 6 distinct element types (button, nav, section, div, h1, footer) with no repetition of the same content block.
+- **Gravitated toward interactive elements**:
+  - Buttons: "Get Started" (3 clicks).
+  - Navigation: 5 clicks on nav elements (39% of total clicks).
+  - Footer: 4 clicks (22% of total).
+- **Ignored static content**: No clicks on images, paragraphs, or non-interactive divs.
+
+6. TYPING BEHAVIOR
+- **N/A**: No typing detected. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Primary CTA: "Get Started" button (3 clicks).
+  - Navigation menu (5 clicks).
+  - Testimonials section (2 clicks).
+  - Features section (2 clicks).
+  - Footer (4 clicks).
+- **Ignored features**:
+  - No engagement with forms, search, dropdowns, or dynamic content (e.g., carousels, modals).
+  - No social sharing, bookmarking, or account creation.
+
+8. SESSION FLOW
+- **Phase 1 (0.0s–1.49s): False Start**
+  - Loads page, hesitates (393ms), then rapidly scrolls down (0px→299px in 0.56s).
+  - Clicks "Get Started" twice (1.02s–1.18s) but continues scrolling.
+- **Phase 2 (1.49s–5.54s): Erratic Exploration**
+  - Jumps to "Testimonials" (1.49s), hesitates (1888ms), then clicks nav (3.99s).
+  - Scrolls up/down repeatedly (47px→543px→210px) with no pattern.
+  - Clicks "Hero Title" (5.29s–5.54s) but follows with a dead click (5.91s).
+- **Phase 3 (5.91s–10.4s): Frustration Loop**
+  - Dead click (5.91s), then rapid scrolling (126px→1000px in 1.0s).
+  - Clicks "Features" (6.21s) and footer (6.91s), then scrolls up (1000px→52px in 0.77s).
+  - Rage clicks on nav (10.12s–10.34s).
+- **Phase 4 (10.4s–12.37s): Abandonment**
+  - Scrolls to footer (1063px at 10.43s), clicks footer twice (10.8s–11.1s).
+  - Final hesitation (552ms at 12.01s) before last footer click (12.37s).
+- **Exit**: Session ends abruptly at 12.4s with no conversion or engagement.
+
+---
+KEY INSIGHTS:
+- **Behavioral signature**: Matches a "synthetic/impulsive_clicker" (as labeled in device data), likely an automated test or bot with human-like noise.
+- **No human-like patterns**: Zero sustained attention, no typing, no goal-oriented actions.
+- **Frustration indicators**: Rage/dead clicks and rapid scroll reversals suggest UI/UX friction or scripted failure.
+```

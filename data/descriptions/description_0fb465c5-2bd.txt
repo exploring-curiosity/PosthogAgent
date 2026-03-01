@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-oriented with minimal deviation.
+- Focused exclusively on the checkout page (no cross-page navigation until final exit).
+- 100% of interactions occur within the checkout flow (payment form + "Back to Shop" CTA).
+- No exploratory clicks, side navigation, or feature discovery beyond core checkout elements.
+- Sequence: Page load → Card input → Pay button (x2) → Exit.
+
+2. READING BEHAVIOR
+- Skimming behavior confirmed by rapid, incremental scrolls:
+  * 7 discrete scroll actions (1.42s–7.07s), each covering ~120px in 0.5s intervals.
+  * Total scroll depth: 988px (82% of 1080px viewport) in 5.65s of cumulative scroll time.
+  * No pauses >500ms at any scroll depth (suggests no deep reading).
+  * Max scroll speed: 240px/s (consistent across all scrolls).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions (not applicable to checkout context).
+- Primary engagement: Form input (card number) and transactional CTAs ("Pay Now", "Back to Shop").
+- Hesitation metrics:
+  * 3 instances of "[HESITATION]" clicks (1.34s, 5.68s, 8.42s) totaling 4.8s (50% of session duration).
+  * Longest hesitation: 2.56s before second "Pay Now" click (6.76s).
+- No corrections or re-engagement with prior fields after initial input.
+
+4. INTERACTION SPEED
+- Fast initial engagement: First click at 1.34s (page load → hesitation).
+- Form interaction latency:
+  * Card number field: 1.78s to first hover (151ms hover), 2.71s to click (930ms after hover).
+  * "Pay Now" button: 3.12s to first click (175ms hover), 6.76s to second click (3.64s later).
+- Exit latency: 7.52s to "Back to Shop" hover (254ms), 9.59s to click (2.07s later).
+- Median action interval: 0.58s (excluding hesitations).
+
+5. CONTENT PREFERENCES
+- Context-limited to checkout page elements:
+  * Focused on payment form (card number field) and transactional CTAs.
+  * No engagement with:
+    - Product details (no clicks/scrolls in upper 300px where product info typically resides).
+    - Promotions, upsells, or cross-sells (no clicks outside core checkout flow).
+    - Help/support links (no hovers/clicks on FAQ, chat, or policy links).
+
+6. TYPING BEHAVIOR
+- No typing data recorded (no input values captured in log).
+- Input field interaction:
+  * Card number field clicked twice (2.71s, 2.78s) with 70ms between clicks (possible correction or focus adjustment).
+  * No other form fields engaged (e.g., expiry, CVV, name).
+
+7. FEATURE DISCOVERY
+- Used features:
+  * Payment form (card number field).
+  * Primary CTA ("Pay Now").
+  * Exit CTA ("Back to Shop").
+- Ignored features:
+  * All non-core checkout elements (e.g., guest checkout, login, shipping options).
+  * Secondary CTAs (e.g., "Save for later", "Apply promo code").
+  * Interactive elements outside the vertical scroll path (no horizontal or off-axis clicks).
+
+8. SESSION FLOW
+- Phase 1 (0.0s–3.12s): Rapid assessment
+  * Immediate scroll to 313px (1.46s) to locate card field.
+  * First "Pay Now" click at 3.12s (3.12s after load).
+- Phase 2 (3.12s–6.76s): Hesitation and re-evaluation
+  * 2.56s hesitation (5.68s) before second "Pay Now" click.
+  * No form corrections; likely decisional pause.
+- Phase 3 (6.76s–9.59s): Exit preparation
+  * Aggressive scroll to bottom (6.81s–7.07s) at 120px/s.
+  * "Back to Shop" hover at 7.52s, click at 9.59s (2.07s delay).
+- Arc: Linear progression → Decisional stall → Abrupt exit (no confirmation or error handling observed).
+```
+
+**Key Observations:**
+- Synthetic/scanner-like behavior suggested by:
+  * Perfectly vertical scroll increments (120px/0.5s).
+  * No mouse movement noise (all clicks at precise coordinates).
+  * Hesitations concentrated at (0,0) coordinates (non-user-like).
+- Likely a bot or automated test script, given:
+  * No typing data.
+  * No viewport adjustments (fixed 1920x1080).
+  * No organic hesitation patterns (e.g., mouse drift).

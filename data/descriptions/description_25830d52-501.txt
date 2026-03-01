@@ -1,0 +1,129 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with hesitation, and cyclical*
+- **Initial focus:** User lands on `/settings` (0.0s) and immediately exhibits **hesitation** (3.85s click at (0,0) after 3.85s of inactivity).
+- **Cyclical revisits:** Returns to the same sections multiple times:
+  - **Notifications:** Clicked at 9.72s (after scrolling up), then again at 14.28s (with rage clicks).
+  - **Profile:** Clicked at 16.18s, then again at 19.7s.
+  - **Settings Nav:** Clicked at 21.92s, then again at 25.97s.
+  - **Privacy:** Clicked at 28.11s, then again at 31.7s.
+- **Scattered exploration:** Jumps between sections (Notifications → Profile → Settings Nav → Privacy) without a clear linear progression.
+- **Scroll-driven navigation:** Uses scrolling as a primary method to explore content before clicking (e.g., scrolls down 989px before first click at 5.32s).
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skimmer with rapid scrolling; no deep reading*
+- **Scroll speed:** Extremely fast (0.5s per scroll increment), covering ~250px per 0.5s (e.g., 0–989px in ~4s at start).
+- **Scroll depth:**
+  - **Initial scan:** Scrolls to 989px (max depth) in 4.08s, suggesting a quick overview of the page.
+  - **Revisits:** Scrolls up/down repeatedly in the same sections (e.g., 556px → 189px → 512px), indicating skimming rather than deep reading.
+- **No pauses:** No extended dwell time on any section (e.g., no >2s pauses between scrolls).
+- **Hover time:** Long hovers (e.g., 1721ms on "Notifications," 1744ms on "Settings Nav") suggest deliberation but not necessarily reading.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *No traditional "engagement" (voting/commenting); purely navigational*
+- **Actions:** Only clicks on navigation elements (buttons, divs, nav items). No evidence of:
+  - Voting (upvote/downvote).
+  - Commenting (no text input or submission).
+  - Form submissions (e.g., "Save Changes" clicks at 5.32s and 7.49s appear to be tests, not successful saves).
+- **Rage clicks:** 3 consecutive clicks on "Notifications" (14.38s–14.58s) suggest frustration or a broken UI element.
+- **Hover-to-click ratio:** High (e.g., 951ms hover before "Save Changes" at 5.32s), indicating caution.
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Deliberate but erratic; long hesitations between actions*
+- **Hesitation events:**
+  - 3.85s: 3847ms hesitation before first click.
+  - 12.07s: 2347ms hesitation before page click.
+  - 17.65s: 1468ms hesitation before page click.
+  - 23.68s: 1767ms hesitation before page click.
+  - 30.76s: 2649ms hesitation before final click.
+- **Action intervals:**
+  - **Fast bursts:** Scrolls occur in rapid 0.5s increments (e.g., 3.88s–4.08s).
+  - **Slow decisions:** Average time between clicks: **~3.5s** (excluding hesitations).
+  - **Longest delay:** 2.65s between "Save Changes" clicks (5.32s–7.49s), possibly testing functionality.
+- **Rage click speed:** 3 clicks in 250ms (14.38s–14.58s), indicating frustration.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *Settings-focused; no content consumption*
+- **Sections visited:**
+  1. **Notifications** (9.72s, 14.28s): Primary focus, with rage clicks.
+  2. **Profile** (16.18s, 19.7s): Brief exploration.
+  3. **Settings Nav** (21.92s, 25.97s): Revisited twice.
+  4. **Privacy** (28.11s, 31.7s): Final focus.
+- **No content engagement:** No evidence of interacting with:
+  - Posts, articles, or media.
+  - Subreddits, forums, or discussion threads.
+  - User-generated content (e.g., comments, reviews).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *No typing detected*
+- **No text inputs:** No keystrokes, form fields, or corrections logged.
+- **No chat/messaging:** No evidence of typing in search bars or comment boxes.
+- **Possible explanation:** Session may be a synthetic test or focused on UI navigation only.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Features used:**
+- **Navigation:**
+  - Top-level settings sections (Notifications, Profile, Privacy).
+  - "Settings Nav" (likely a sidebar or menu).
+- **Buttons:**
+  - "Save Changes" (clicked twice, possibly testing functionality).
+- **Scrolling:**
+  - Used extensively to explore page content.
+
+**Features ignored:**
+- **Content consumption:** No clicks on posts, articles, or media.
+- **Social features:** No voting, commenting, or sharing.
+- **Search/filters:** No evidence of using search bars or filters.
+- **Account settings:** No clicks on advanced settings (e.g., security, billing).
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploration → Frustration → Cyclical Revisits → Abrupt Exit*
+1. **Landing (0.0s–3.85s):**
+   - Arrives on `/settings`, hesitates for 3.85s.
+2. **Initial Scan (3.88s–5.32s):**
+   - Scrolls rapidly to 989px (max depth), skims entire page.
+   - Clicks "Save Changes" (5.32s) after 951ms hover.
+3. **First Revisit (7.49s–9.72s):**
+   - Clicks "Save Changes" again (7.49s), scrolls up to 556px.
+   - Clicks "Notifications" (9.72s) after 1721ms hover.
+4. **Frustration (12.07s–14.63s):**
+   - Hesitates (2347ms), clicks "Notifications" again (14.28s).
+   - **Rage clicks** (3 clicks in 250ms) on "Notifications" (14.38s–14.58s).
+   - Scrolls up rapidly to 189px.
+5. **Profile Exploration (16.18s–20.01s):**
+   - Clicks "Profile" (16.18s) after 1214ms hover, hesitates (1468ms).
+   - Clicks "Profile" again (19.7s), scrolls down to 512px.
+6. **Settings Revisit (21.92s–26.15s):**
+   - Clicks "Settings Nav" (21.92s) after 1744ms hover, hesitates (1767ms).
+   - Clicks "Settings Nav" again (25.97s), scrolls down to 746px.
+7. **Final Focus (28.11s–31.7s):**
+   - Clicks "Privacy" (28.11s) after 1721ms hover, hesitates (2649ms).
+   - Clicks "Privacy" again (31.7s), session ends.
+
+**Exit:** Abrupt; no confirmation of task completion (e.g., no "Saved" toast or redirect).
+**Possible triggers for exit:**
+- Frustration (rage clicks).
+- Synthetic session timeout.
+- Task completion (though no evidence of saved changes).
+```
+
+---
+**Summary:** This user exhibits **cautious, exploratory navigation** with **high hesitation**, **rapid skimming**, and **frustration signals** (rage clicks). The session is **purely navigational**, with no content engagement or typing. The cyclical revisits and long hovers suggest **deliberation without action**, possibly due to UI confusion or a synthetic test scenario.

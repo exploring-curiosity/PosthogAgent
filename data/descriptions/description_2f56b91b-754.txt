@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-driven with minimal deviation.
+- Follows a strict vertical progression (scrolling) before horizontal navigation (clicking).
+- No evidence of exploratory behavior; all actions align with a single workflow (settings adjustment).
+- 100% of clicks target UI elements directly related to settings configuration (Save Changes, Settings Nav, Notifications).
+- No backtracking or revisits to previously viewed content.
+
+2. READING BEHAVIOR
+- Skimming confirmed by scroll patterns:
+  * Average scroll speed: 368px/0.5s (736px/s) during downward traversal (1.03s–1.25s).
+  * Upward scroll speed: 126px/0.5s (252px/s) (2.61s–2.84s), suggesting re-scanning rather than deep reading.
+  * Max scroll depth (929px) reached in 1.25s, indicating rapid page coverage.
+  * No pauses >200ms between scroll actions, ruling out content absorption.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed.
+- Interaction limited to UI control activation:
+  * 6 clicks total, all targeting functional elements (Save Changes: 2, Settings Nav: 2, Notifications: 2).
+  * No engagement with dynamic content (e.g., posts, comments, or media).
+  * Vote-to-comment ratio: 0:0 (undefined).
+
+4. INTERACTION SPEED
+- Rapid execution with deliberate pauses:
+  * Median inter-action time: 545ms (excluding hovers).
+  * Fastest sequence: 30ms between scrolls (1.14s–1.22s).
+  * Slowest deliberate action: 985ms hesitation before first click (0.98s).
+  * Hover durations: 204–268ms (mean: 231ms), suggesting UI familiarity.
+  * Dead click at 4.54s (760ms after last action) indicates potential UI confusion.
+
+5. CONTENT PREFERENCES
+- No content consumption detected.
+- All interactions confined to settings-related UI:
+  * Settings page (100% of session).
+  * Sub-sections: Notifications (targeted at 5.09s).
+  * No evidence of subreddit or post engagement.
+
+6. TYPING BEHAVIOR
+- No typing or text input observed.
+- No corrections, deletions, or form field interactions detected.
+
+7. FEATURE DISCOVERY
+- Features used:
+  * Settings navigation (2 clicks: 3.25s, 4.18s).
+  * Save Changes button (2 clicks: 1.63s, 2.54s).
+  * Notifications toggle (2 clicks: 5.09s, 5.79s).
+- Features ignored:
+  * All non-settings UI elements (e.g., search, user profile, content feeds).
+  * Interactive content (posts, comments, upvote/downvote buttons).
+  * Help/documentation links (no clicks outside primary workflow).
+
+8. SESSION FLOW
+- Arc: Linear configuration → UI validation → abrupt termination.
+  * 0.0s–1.25s: Rapid page scan (scroll to 929px).
+  * 1.63s–2.54s: Primary action (Save Changes, 2 attempts).
+  * 2.61s–3.25s: Upward re-scan (scroll to 548px).
+  * 3.25s–4.18s: Navigation to Settings (2 clicks).
+  * 4.54s–5.79s: Notifications interaction (dead click + 2 clicks).
+  * 5.8s: Session ends without confirmation of changes or exit action.
+- No exploration phase; immediate focus on settings.
+- No exit intent detected (e.g., no tab closure or navigation away).
+- Synthetic/scanner device flag suggests potential automated testing or bot activity.
+```
+
+**Key Observations:**
+- **Automation Indicators:** Perfectly timed scrolls (0.5s intervals), dead click, and synthetic device tag strongly suggest non-human interaction.
+- **Error Patterns:** Duplicate clicks (Save Changes, Settings Nav, Notifications) may indicate UI responsiveness issues or scripted retries.
+- **No Human Traits:** Absence of reading pauses, content engagement, or typing rules out organic user behavior.

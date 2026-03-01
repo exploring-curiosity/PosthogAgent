@@ -1,0 +1,47 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   • Highly linear and goal-oriented with no exploratory detours.
+   • Moves directly from checkout page → card input → back-to-shop → pay-now.
+   • No revisits, no side navigation, no menu clicks.
+
+2. READING BEHAVIOR
+   • Skimming only; no deep reading.
+   • Scroll depth: 0 px → 986 px in 1.38 s (4.21–5.59 s), then back up to 683 px in 0.56 s (5.77–6.33 s).
+   • Average scroll speed: 680 px/s downward, 530 px/s upward.
+   • No pauses > 200 ms at any scroll depth, indicating no content absorption.
+
+3. ENGAGEMENT STYLE
+   • N/A – session is on a checkout page, not a voting/commenting platform.
+   • No votes, comments, or social interactions recorded.
+
+4. INTERACTION SPEED
+   • Fast and deliberate; median inter-action interval: 0.55 s.
+   • Hesitation only at start: 2.84 s pause before first click.
+   • Subsequent clicks occur within 0.05–0.87 s of prior action.
+
+5. CONTENT PREFERENCES
+   • Irrelevant – session confined to checkout page.
+   • No subreddit or content-type data available.
+
+6. TYPING BEHAVIOR
+   • No typing detected.
+   • Two clicks on “Card Number” input (3.34 s & 4.17 s) but no keystrokes logged.
+
+7. FEATURE DISCOVERY
+   • Used:
+     – Card Number input (clicked twice)
+     – Back to Shop link (clicked twice)
+     – Pay Now button (clicked twice)
+   • Ignored:
+     – Expiry, CVV, Name on Card, promo fields, help links, footer.
+
+8. SESSION FLOW
+   • 0.0–2.84 s: Initial hesitation after page load.
+   • 2.84–4.26 s: Rapid downward scroll to bottom of page (986 px).
+   • 4.85–5.72 s: Click “Back to Shop” (two attempts).
+   • 5.77–6.35 s: Scroll back up to “Pay Now” button.
+   • 6.35–7.72 s: Click “Pay Now” (two attempts).
+   • Exit at 7.7 s.
+```

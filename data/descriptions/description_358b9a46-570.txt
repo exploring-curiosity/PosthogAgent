@@ -1,0 +1,50 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-directed with minimal deviation.
+- Progression follows a strict top-to-bottom path: Cart Summary → Email → Card Number → Pay Now → Back to Shop.
+- No lateral exploration (e.g., no clicks on navigation menus, product links, or secondary CTAs).
+- 100 % of clicks target primary checkout form elements; zero off-path interactions.
+
+2. READING BEHAVIOR
+- Skimming confirmed by scroll velocity and depth.
+- Scrolls occur in rapid 0.5 s bursts, covering ~50 px per burst (31→62 px, 62→120 px, etc.).
+- Max scroll depth (1023 px) reached in 15.31 s, indicating no deep reading of fine print or terms.
+- No pauses > 1 s at any scroll depth; user moves past content without lingering.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions observed.
+- Entire session is transactional: form field entry and button clicks only.
+- Interaction-to-hesitation ratio: 8 clicks / 4 hesitation events = 2:1.
+
+4. INTERACTION SPEED
+- Mean time between consecutive actions: 1.8 s (excluding hesitations).
+- Mean hesitation duration: 1.6 s (1284 ms, 889 ms, 2753 ms, 2856 ms).
+- Fastest click-to-click interval: 40 ms (3.29 s → 3.33 s scroll).
+- Slowest interval: 2.86 s (14.29 s → 15.19 s hesitation before final Pay Now click).
+
+5. CONTENT PREFERENCES
+- Content type: exclusively checkout form fields (Email, Card Number) and primary CTAs (Pay Now, Back to Shop).
+- No engagement with product listings, reviews, upsells, or footer links.
+- Synthetic/methodical_user label suggests automated or scripted interaction; no organic content preference detectable.
+
+6. TYPING BEHAVIOR
+- No keystrokes logged; only click-and-focus events on input fields.
+- No corrections or backspacing observed.
+- Input length unknown; fields may have been pre-filled or left blank.
+
+7. FEATURE DISCOVERY
+- Features used: Cart Summary accordion, Email field, Card Number field, Pay Now button, Back to Shop link.
+- Features ignored: navigation bar, product recommendations, promo codes, shipping options, help/chat widgets, footer links.
+- Hover durations (602 ms, 327 ms, 726 ms, 774 ms, 485 ms) indicate brief pre-click evaluation but no deeper feature exploration.
+
+8. SESSION FLOW
+- Arc: Linear progression through checkout funnel with four distinct hesitation points.
+- 0.0–1.3 s: Initial load and micro-scroll (exploratory phase).
+- 1.3–6.6 s: Form field discovery and first input (Email).
+- 6.6–11.4 s: Second input (Card Number) with longer hesitation.
+- 11.4–15.9 s: Final CTA (Pay Now) with longest hesitation (2.86 s).
+- 15.9–16.3 s: Immediate exit via Back to Shop after submission attempt.
+- Total session duration: 16.3 s; no return or re-engagement.
+```

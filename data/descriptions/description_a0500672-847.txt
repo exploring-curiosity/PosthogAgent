@@ -1,0 +1,84 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly linear and task-focused with minimal deviation.
+- Proceeded through checkout fields in sequential order (Cart Summary → Email → Card Number → Pay Now → Back to Shop).
+- No exploratory detours or backtracking to unrelated sections.
+- 100% of clicks targeted checkout-specific elements (no navigation to product pages, help sections, or account settings).
+
+2. READING BEHAVIOR:
+- Skimming behavior with rapid, incremental scrolling:
+  * Initial scroll (1.23-1.35s): 4 scroll actions covering 230px in 1.12s (205px/s)
+  * Mid-session scroll (8.22-8.44s): 5 scroll actions covering 448px in 0.22s (2036px/s)
+  * Late-session scroll (11.24-11.42s): 4 scroll actions covering 317px in 0.18s (1761px/s)
+- No prolonged pauses (>500ms) at any scroll depth, suggesting no deep reading.
+- Max scroll depth (1014px) reached at 11.42s, covering ~94% of viewport height (1080px).
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or social interactions (not applicable to checkout context).
+- Primary engagement: Form field completion with the following pattern:
+  * Email: 2 clicks (6.35s, 6.79s) with 440ms between clicks
+  * Card Number: 2 clicks (7.62s, 8.19s) with 570ms between clicks
+  * Pay Now: 2 clicks (9.26s, 11.2s) with 1940ms between clicks (longest hesitation)
+- 3 instances of "HESITATION" clicks (1.18s, 4.56s, 10.54s) totaling 4918ms of pre-action delay.
+- 1 "DEAD CLICK" at session end (13.0s), suggesting frustration or misclick.
+
+4. INTERACTION SPEED:
+- Rapid initial engagement: First click at 1.18s (1179ms hesitation).
+- Average time between primary actions: 1.43s (excluding scrolls).
+- Field interaction times:
+  * Cart Summary: 664ms hover → 670ms to next action
+  * Email: 623ms hover → 440ms to next click
+  * Card Number: 503ms hover → 570ms to next click
+  * Pay Now: 695ms hover → 1940ms to next click (slowest)
+- Scroll bursts: 4-5 rapid scrolls in <0.5s clusters (e.g., 8.22-8.44s).
+
+5. CONTENT PREFERENCES:
+- Context-limited to checkout page only. No content consumption observed.
+- Gravitated toward:
+  * Cart Summary (2 clicks at 2.1s and 5.23s)
+  * Form fields (Email, Card Number)
+  * Primary CTA ("Pay Now" - 2 clicks)
+  * Exit CTA ("Back to Shop" - 2 clicks)
+- Ignored: Promotional banners, help links, footer content, and any non-checkout elements.
+
+6. TYPING BEHAVIOR:
+- No typing data captured (no input values recorded).
+- Field focus times:
+  * Email: 1.56s (6.79s-8.19s, including scroll)
+  * Card Number: 1.03s (8.19s-9.26s)
+- No evidence of corrections or backspacing (no "input" events logged).
+
+7. FEATURE DISCOVERY:
+- Used core checkout features:
+  * Cart Summary (expanded/inspected)
+  * Form fields (Email, Card Number)
+  * Primary CTA ("Pay Now")
+  * Exit CTA ("Back to Shop")
+- Ignored features:
+  * Payment method selectors (no clicks on radio buttons/alternative payment options)
+  * Promo code fields (no interaction)
+  * Shipping address fields (no clicks)
+  * Help/support links (no interaction)
+  * Account login/signup options (no interaction)
+
+8. SESSION FLOW:
+- Arc: Task initiation → Form inspection → Field completion → Payment attempt → Abandonment
+  * 0.0-2.1s: Page load and initial scan (1179ms hesitation before first click)
+  * 2.1-5.23s: Cart Summary inspection (2 clicks, 3.13s duration)
+  * 5.23-9.26s: Form field navigation (Email → Card Number, 4.03s duration)
+  * 9.26-12.45s: Payment attempt (2 "Pay Now" clicks with 1940ms hesitation, then scroll to exit)
+  * 12.45-13.0s: Abandonment (click "Back to Shop" followed by dead click)
+- Key transitions:
+  * 5.23s: Shift from inspection to form interaction
+  * 9.26s: Shift from form completion to payment attempt
+  * 12.45s: Shift from payment to exit (session termination)
+- No return to earlier steps or exploratory behavior.
+```
+
+Key Observations:
+- The user exhibited methodical, goal-directed behavior with no distractions.
+- Longest hesitation (2461ms) occurred at 4.56s, suggesting uncertainty about Cart Summary.
+- The 1940ms hesitation before the second "Pay Now" click (11.2s) indicates final hesitation before abandonment.
+- Dead click at session end suggests either a UI misfire or frustration with the payment process.

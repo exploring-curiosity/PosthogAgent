@@ -1,0 +1,58 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN
+- **Non-linear, exploratory with hesitation loops**: The user demonstrates a cyclical navigation pattern, repeatedly returning to the same UI elements (e.g., "Settings Nav" clicked twice at [21.38s] and [26.61s]). Movement is not linear—after visiting "Notifications" ([8.97s]), they return to "Profile" ([15.94s]), then "Privacy" ([19.09s]), before circling back to "Settings Nav".
+- **High revisitation rate**: 4/10 clicks target previously interacted elements (e.g., "Save Changes" clicked twice at [4.61s] and [6.95s]).
+- **Spatial consistency**: Clicks cluster in the right-side UI (x-coordinates: 1221–1293px) and lower viewport (y-coordinates: 532–919px), suggesting a focus on sidebar/panel navigation.
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow dives**: Scroll patterns show rapid vertical traversal (e.g., [2.44s–2.5s]: 0px→918px in 1s; [17.46s–17.57s]: 235px→708px in 1.1s). No sustained pauses >1s at any scroll depth.
+- **No deep reading**: Max scroll depth (918px) is reached quickly but abandoned immediately (scrolls up at [6.99s] after reaching 918px at [2.5s]).
+- **Reverse scrolling**: 6/10 scroll actions are upward (e.g., [14.52s–14.7s]: 532px→235px in 0.18s), indicating re-scanning rather than linear consumption.
+
+3. ENGAGEMENT STYLE
+- **No content creation**: Zero instances of typing, voting, or commenting. All interactions are navigational (clicks on UI elements).
+- **Action type**: 100% of clicks target structural elements ("Notifications", "Profile", "Privacy") or system buttons ("Save Changes").
+- **Hesitation markers**: 4/10 clicks are preceded by "[HESITATION]" annotations (total hesitation time: 7.19s), with delays ranging from 579ms to 2776ms.
+
+4. INTERACTION SPEED
+- **Deliberate with bursts**: Average time between actions: 2.96s. However, 3/10 actions occur <0.5s apart (e.g., [6.95s–7.1s]: 3 scrolls in 0.2s), suggesting micro-bursts of activity.
+- **Hover latency**: 3/10 clicks include "[HOVER]" annotations (total hover time: 4.3s), with durations of 975ms–1853ms, indicating pre-click evaluation.
+- **Slowest decision**: 2.78s hesitation before clicking "Notifications" ([11.74s]).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: All interactions occur within the `/settings` page. No evidence of content consumption (e.g., no subreddit visits, posts, or comments).
+- **Feature prioritization**: Gravitated toward:
+  - **Account management**: "Profile" (2 clicks), "Privacy" (2 clicks), "Notifications" (2 clicks).
+  - **System actions**: "Save Changes" (2 clicks).
+- **Ignored**: No evidence of engagement with content feeds, search, or community features.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, input fields, or text submissions observed in the log.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Settings sub-panels**: "Profile", "Notifications", "Privacy" (all clicked).
+  - **Save functionality**: "Save Changes" button (clicked twice).
+  - **Navigation**: "Settings Nav" (clicked twice).
+- **Ignored features**:
+  - **Content creation**: No clicks on "Post", "Comment", or "Reply".
+  - **Search**: No interaction with search bars or filters.
+  - **Social features**: No upvotes, downvotes, or user profiles visited.
+
+8. SESSION FLOW
+- **Phase 1 (0–4.61s): Initial exploration**
+  - Loads settings page, scrolls rapidly to bottom ([2.44s–2.5s]), hesitates (2.38s), attempts "Save Changes" ([4.61s]).
+- **Phase 2 (4.61–14.7s): Feature scanning**
+  - Revisits "Save Changes" ([6.95s]), scrolls up, discovers "Notifications" ([8.97s]), hesitates (2.78s), clicks again ([14.46s]).
+- **Phase 3 (14.7–21.38s): Cyclical navigation**
+  - Jumps to "Profile" ([15.94s]), scrolls down, finds "Privacy" ([19.09s]), clicks "Settings Nav" ([21.38s]).
+- **Phase 4 (21.38–26.61s): Exit hesitation**
+  - Long hesitation (2.46s, [23.84s]), final click on "Settings Nav" ([26.61s]), session ends.
+
+KEY OBSERVATIONS:
+- **Cautious explorer**: High hesitation time (27% of session duration), repeated clicks on the same elements, and no content engagement suggest a user unfamiliar with the interface or risk-averse.
+- **No content interaction**: Entire session confined to settings navigation; no evidence of primary app functionality (e.g., browsing, posting).
+- **Synthetic behavior**: The "synthetic/cautious_explorer" device label and lack of typing/reading depth may indicate a bot, automated test, or highly constrained user (e.g., accessibility tool).
+```

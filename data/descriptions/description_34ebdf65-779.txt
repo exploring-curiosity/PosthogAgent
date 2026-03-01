@@ -1,0 +1,112 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with hesitation*
+- **Scattered focus:** The user jumps between distinct UI elements (charts, sidebar, data table, export button, stats cards) without a clear linear progression. No single feature is explored in depth before moving to another.
+- **Repetitive clicks:** Identical elements are clicked multiple times (e.g., "Chart" at 6.04s and 9.74s; "Sidebar" at 11.31s and 16.63s; "Data Table" at 18.85s and 23.16s; "Export" at 25.25s and 30.52s; "Stats Cards" at 31.51s and 36.41s).
+- **Backtracking:** Scrolls up abruptly at 23.23s–23.29s (from 793px to 68px) after engaging with the data table, suggesting reconsideration or disorientation.
+- **Hesitation markers:** 5 instances of "[HESITATION]" clicks (4.12s, 8.24s, 14.29s, 20.75s, 27.69s, 33.84s), totaling **15.97s of hesitation** (44% of session duration).
+
+---
+
+### 2. READING BEHAVIOR
+**Style:** *Skimmer with shallow engagement*
+- **Scroll depth:** Max depth of 793px (out of 1080px viewport), but no sustained reading. Scrolls occur in rapid bursts (e.g., 16.69s–16.82s: 382px → 793px in 1.3s; 30.56s–30.59s: 68px → 264px in 0.8s).
+- **Scroll direction:** Alternates between down (exploration) and up (revisiting). Upward scrolls (23.23s–23.29s) suggest skimming back to prior content rather than deep reading.
+- **Dwell time:** Hovers on elements (e.g., "Chart [HOVER 1632ms]", "Data Table [HOVER 1730ms]") but no evidence of reading static text (e.g., no pauses on paragraphs or tooltips).
+- **Content interaction:** Clicks on interactive elements (charts, tables, buttons) rather than static text, implying a focus on functionality over content consumption.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Style:** *Low-commitment, functional interaction*
+- **No "voting" or "commenting":** The log shows no actions resembling upvotes, downvotes, or text input (e.g., comments, searches). All interactions are clicks on UI elements.
+- **Action types:**
+  - **Primary:** Clicks on charts, sidebar, data table, export button, stats cards (10/12 non-hesitation clicks).
+  - **Secondary:** Scrolling (6 instances) and hesitation clicks (6 instances).
+- **Speed:** Deliberate but inconsistent. Time between non-hesitation clicks ranges from **1.5s (9.74s → 11.31s)** to **6.8s (23.16s → 25.25s)**.
+- **Ratio:** N/A (no voting/commenting observed).
+
+---
+
+### 4. INTERACTION SPEED
+**Style:** *Deliberate with prolonged hesitation*
+- **Action frequency:**
+  - **Non-hesitation clicks:** 12 actions in 36.4s → **1 action every 3.03s**.
+  - **Hesitation clicks:** 6 actions → **1 hesitation every 6.07s**.
+- **Hesitation duration:** Average **2.66s per hesitation** (range: 1.91s–4.12s).
+- **Hover time:** Average **1.42s per hover** (range: 0.69s–1.77s), suggesting cautious evaluation before clicking.
+- **Scroll speed:** Rapid (e.g., 120px/s during 16.69s–16.82s), indicating skimming rather than reading.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Gravitation:** *Functional UI elements over content*
+- **Prioritized elements:**
+  1. **Charts** (2 clicks, 1 hover): Primary focus (first interaction at 6.04s).
+  2. **Sidebar** (2 clicks, 1 hover): Secondary navigation tool.
+  3. **Data Table** (2 clicks, 1 hover): Likely data-driven interest.
+  4. **Export Button** (2 clicks, 1 hover): Suggests intent to extract data.
+  5. **Stats Cards** (2 clicks, 1 hover): Late-session engagement (31.51s–36.41s).
+- **Ignored elements:**
+  - No clicks on static text, images, or non-interactive content.
+  - No evidence of filtering, sorting, or searching (e.g., no search bar usage).
+  - No engagement with potential subreddit-like features (e.g., communities, posts).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Observations:** *No typing detected*
+- **Inputs:** Zero text entries, corrections, or form submissions.
+- **Implications:** Either the session was truncated, or the user avoided text input entirely (e.g., due to synthetic nature or caution).
+
+---
+
+### 7. FEATURE DISCOVERY
+**Discovered features:**
+- **Used:**
+  - Charts (interactive visualization).
+  - Sidebar (navigation).
+  - Data Table (tabular data).
+  - Export Button (data extraction).
+  - Stats Cards (summary metrics).
+- **Ignored:**
+  - Search/filters (no evidence of usage).
+  - Help/tooltips (no hovers on "?" icons or help text).
+  - User profile/settings (no clicks on avatar or menu items).
+  - Notifications (no badge clicks).
+  - Static content (e.g., blog posts, articles).
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploratory → Functional Testing → Abrupt Exit*
+1. **Initial Hesitation (0s–4.12s):**
+   - Page load → 4.12s hesitation click (no action taken).
+   - Minimal scroll (0px → 382px) suggests scanning for entry points.
+2. **Exploratory Clicks (4.12s–16.63s):**
+   - Tests charts (6.04s), sidebar (11.31s), and data table (18.85s).
+   - Repetitive clicks (e.g., chart at 6.04s and 9.74s) imply uncertainty or validation.
+   - Scrolls deeply (793px) but no sustained engagement.
+3. **Functional Testing (16.63s–30.52s):**
+   - Focus shifts to export button (25.25s), suggesting intent to extract data.
+   - Backtracks to scroll up (23.23s), possibly to locate export button.
+   - Hesitation increases (2.44s at 27.69s).
+4. **Late Engagement (30.52s–36.41s):**
+   - Clicks stats cards (31.51s), a secondary feature.
+   - Final hesitation (2.33s at 33.84s) before last click.
+5. **Exit:**
+   - Session ends abruptly after stats cards click (36.41s). No logout or navigation away.
+
+**Key Themes:**
+- **No clear goal:** Actions are reactive (e.g., clicking what’s visible) rather than goal-driven.
+- **Validation behavior:** Repeated clicks on the same elements suggest testing functionality or seeking confirmation.
+- **Avoidance of complexity:** No deep dives into data or settings; sticks to surface-level UI.
+- **Synthetic traits:** Hesitation clicks at (0,0) coordinates are atypical for human users, supporting the "synthetic" device label.
+```
+
+---
+**Summary:** This user exhibits **cautious, exploratory behavior** with a focus on **functional UI elements** (charts, tables, export) over content. Their **high hesitation rate (44% of session time)**, **repetitive clicks**, and **lack of typing** suggest either a synthetic agent, a novice user, or a deliberate tester. The session lacks a narrative arc, ending without resolution.

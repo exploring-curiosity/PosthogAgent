@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with hesitation loops**: The user exhibits non-linear, erratic navigation with repeated backtracking. They jump between unrelated elements (e.g., "Card Number" → "Back to Shop" → "Pay Now" → "Cart Summary" → "Email") without completing any single workflow.
+- **Key evidence**:
+  - 4.1s–9.17s: Focused on checkout form (scrolling to 1007px depth), then abruptly clicks "Back to Shop" twice (9.17s–10.14s).
+  - 12.19s–16.06s: Returns to "Pay Now" after abandoning checkout, then scrolls *up* to "Cart Summary" (17.37s).
+  - No sequential task completion (e.g., never filled "Card Number" or "Email" fields).
+
+2. READING BEHAVIOR:
+- **Skimmer with shallow engagement**: Scrolls rapidly through content but rarely pauses. Max scroll depth (1007px) suggests they viewed ~60–80% of the page (assuming 1200–1600px total height), but:
+  - **Scroll speed**: 313px–1007px in 0.5s increments (8.35s–8.45s) = ~1400px/s (extremely fast).
+  - **No dwell time**: No pauses >1s on any section except hover hesitations (e.g., 1676ms on "Pay Now").
+  - **Directional shifts**: Reverses scroll direction 3 times (down → up → down), indicating disorientation.
+
+3. ENGAGEMENT STYLE:
+- **N/A**: This is a checkout flow, not a social platform. No voting, commenting, or content creation occurred.
+- **Substitute metrics**:
+  - **Hover-to-click ratio**: 4/10 clicks were preceded by hovers (40%), suggesting cautious interaction.
+  - **Hesitation clicks**: 4 "page text" clicks (4.14s, 6.95s, 14.34s, 18.34s) with no associated action, likely accidental or frustration-induced.
+
+4. INTERACTION SPEED:
+- **Deliberate but inconsistent**:
+  - **Median action interval**: 1.1s (excluding hesitations).
+  - **Outliers**:
+    - 4.1s hesitation (4135ms) before first scroll.
+    - 1.7s (1731ms) hesitation before "Card Number" re-click (6.95s).
+    - 2.2s (2154ms) hesitation before "Pay Now" re-click (14.34s).
+  - **Fastest interval**: 0.07s (8.27s–8.35s: click → scroll).
+
+5. CONTENT PREFERENCES:
+- **Checkout-specific elements only**:
+  - **Primary targets**: Form fields ("Card Number", "Email") and CTA buttons ("Pay Now", "Back to Shop").
+  - **Ignored**: No interaction with product details, shipping options, or legal text (despite scrolling past them).
+  - **Cart Summary**: Clicked twice (17.37s, 19.81s) but no further action, suggesting curiosity without intent.
+
+6. TYPING BEHAVIOR:
+- **No observable typing**: All clicks on input fields ("Card Number", "Email") were selection clicks—no keystrokes or corrections recorded.
+- **Field focus**: Spent 819ms hovering "Card Number" (5.22s) and 984ms hovering "Email" (20.91s), but never entered data.
+
+7. FEATURE DISCOVERY:
+- **Used**:
+  - Checkout form fields ("Card Number", "Email").
+  - Primary CTAs ("Pay Now", "Back to Shop").
+  - Cart Summary (minimal interaction).
+- **Ignored**:
+  - Secondary actions (e.g., promo code fields, shipping address, payment method toggles).
+  - Help/tooltip icons (no hovers or clicks).
+  - Footer links (despite scrolling to 1007px).
+
+8. SESSION FLOW:
+- **Arc**: **Disoriented exploration → Aborted checkout → Re-engagement → Exit**
+  - **0.0s–4.1s**: Initial load; hesitation (4135ms) suggests confusion or distraction.
+  - **4.2s–9.17s**: Rapid scrolling (to 1007px) and form field clicks ("Card Number"), but no data entry.
+  - **9.17s–10.14s**: Abrupt exit attempt ("Back to Shop" x2), then scrolls up (likely reconsidering).
+  - **12.19s–16.21s**: Re-engages with "Pay Now" (1676ms hover), then scrolls up to "Cart Summary".
+  - **17.37s–22.36s**: Final clicks on "Cart Summary" and "Email" before session ends (no completion).
+- **Exit**: Session terminates mid-interaction with "Email" field (22.36s), suggesting abandonment.
+
+SUMMARY:
+This user exhibited **highly hesitant, non-linear behavior** with **no task completion**. Their actions suggest **caution (hover hesitations), disorientation (scroll reversals), and indecision (repeated clicks on CTAs without follow-through)**. The session resembles a **synthetic or bot-like pattern** (e.g., automated testing, fraudulent probing, or a user unfamiliar with the interface) due to:
+- Unnaturally fast scrolls (1400px/s).
+- No typing despite field clicks.
+- Repeated "page text" clicks with no action.
+- No engagement with non-checkout elements.
+```

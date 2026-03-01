@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated returns to the same UI elements. They jump between 4 distinct settings sections (Notifications → Settings Nav → Privacy → Profile) in a circular fashion, suggesting either:
+  - Confusion about the interface structure
+  - Testing of navigation pathways
+  - Synthetic/automated behavior (given the "synthetic/cautious_explorer" device label)
+- **Key evidence**:
+  - 3 separate clicks on "Settings Nav" (11.64s, 13.76s, 13.84-14.17s rage clicks)
+  - 2 clicks each on "Notifications" (4.94s, 9.78s) and "Privacy" (19.89s, 23.54s)
+  - No direct progression between sections (e.g., Notifications → Privacy skips intermediate sections)
+
+2. READING BEHAVIOR
+- **Skim-heavy with rapid scroll bursts**: Scroll patterns indicate minimal deep reading:
+  - **Scroll speed**: 132-169px/s (e.g., 196px in 0.5s at 3.32s)
+  - **Depth coverage**: 937px max depth (86.8% of 1080px viewport) but only 2 sustained pauses:
+    - 1.8s at 393px (Notifications section)
+    - 2.5s at 937px (Save Changes button)
+  - **Direction reversals**: 3 abrupt scroll-up sequences (e.g., 18.9s-19.09s: 246px up in 0.19s)
+- **No evidence of line-by-line reading**: Scroll increments (97-169px) exceed typical line heights (~20-30px).
+
+3. ENGAGEMENT STYLE
+- **No content creation**: Zero instances of typing, commenting, or voting.
+- **Interaction metrics**:
+  - **Click-to-hover ratio**: 1.0 (100% of hovered elements were clicked)
+  - **Repeated clicks**: 4 rage clicks on "Settings Nav" (13.84-14.17s) with <100ms intervals
+  - **Hesitation markers**: 4 instances of "[HESITATION Xms]" (3.25s, 7.19s, 22.22s, 27.87s) totaling 10.24s (35.5% of session duration)
+- **No passive engagement**: No dwell time on content beyond hover thresholds.
+
+4. INTERACTION SPEED
+- **Bimodal distribution**:
+  - **Fast actions**: 10 clicks/scrolls with <200ms between actions (e.g., 13.84-14.17s rage clicks)
+  - **Slow actions**: 4 hesitations >2s (max: 3.25s at start)
+- **Median inter-action time**: 1.1s (excluding hesitations)
+- **Hover durations**: 586-1886ms (mean: 1381ms) before clicks, suggesting deliberate targeting.
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: 100% of interactions target settings sub-pages:
+  - Notifications: 2 clicks (4.94s, 9.78s)
+  - Privacy: 2 clicks (19.89s, 23.54s)
+  - Profile: 2 clicks (25.46s, 28.79s)
+  - Settings Nav: 6 clicks (11.64-14.17s)
+- **No content consumption**: Zero engagement with non-settings pages or dynamic content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form submissions observed in the 28.8s session.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Settings navigation (used repeatedly)
+  - Notifications toggle (2 clicks)
+  - Privacy controls (2 clicks)
+  - Profile settings (2 clicks)
+  - Save Changes button (2 clicks at 16.35s, 18.83s)
+- **Ignored features**:
+  - No use of search, help, or account dropdowns
+  - No interaction with sidebars, footers, or non-settings links
+  - No form fields beyond navigation clicks
+
+8. SESSION FLOW
+- **Phase 1: Initial Hesitation (0-3.25s)**
+  - 3.25s pause post-load (no interaction)
+  - Minimal scroll (196px) suggests visual scan of top content
+- **Phase 2: False Starts (3.25-14.34s)**
+  - 2 clicks on Notifications (4.94s, 9.78s) with 4.84s gap
+  - 6 clicks on Settings Nav (11.64-14.17s), including rage clicks
+  - Rapid scroll to 937px (14.22-14.34s) but no sustained engagement
+- **Phase 3: Attempted Completion (14.34-28.79s)**
+  - 2 clicks on Save Changes (16.35s, 18.83s) with 2.48s hover
+  - Immediate scroll-up (18.9-19.09s) to Privacy section
+  - Circular return to Profile (25.46s) via scroll-up
+- **Exit**: Session ends mid-click on Profile (28.79s), no confirmation of changes saved.
+
+KEY OBSERVATIONS:
+- **Synthetic indicators**: Rage clicks, uniform scroll speeds, and "synthetic/cautious_explorer" device label suggest automated or scripted behavior.
+- **No goal achievement**: Despite 28.8s of activity, no settings were visibly changed or saved.
+- **Navigation loops**: 42% of clicks (8/19) targeted the same 2 elements (Settings Nav, Notifications).
+```

@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with targeted focus**: The user exhibits a non-linear, erratic navigation pattern with rapid shifts between content areas. They jump between 6 distinct sections (Testimonials, Get Started, Footer, Hero Title, Features, Navigation) in under 5 seconds, with no sustained engagement in any single area.
+- **Vertical oscillation**: 67% of scroll actions (10/15) alternate direction within 0.5s of the previous scroll, creating a "yo-yo" pattern (e.g., scroll down to 715px at 0.48s → scroll up to 34px by 4.26s).
+- **Section-hopping**: 8 unique click targets identified, with 3 instances of repeated clicks on the same element (Testimonials, Get Started, Features) within <0.2s intervals.
+
+2. READING BEHAVIOR:
+- **Skimmer with rapid depth sampling**: Scroll speed averages 357px/s (178px/0.5s increments), suggesting superficial scanning rather than deep reading.
+- **Depth probing**: Max scroll depth (1022px) reached at 1.96s, but only 0.48s spent at depths >700px before scrolling up. No pauses >0.3s at any scroll position.
+- **No content absorption**: Zero instances of sustained scroll pauses or "dwell time" at any vertical position. All scrolls are continuous with no breaks.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: No votes, comments, or form submissions detected. All interactions are clicks or scrolls.
+- **Frustration signals**:
+  - **Rage clicks**: 3 consecutive clicks on "Features" section (3.91s–4.07s) with <0.1s intervals, indicating failed interaction expectations.
+  - **Double-clicks**: 5 instances of duplicate clicks on the same element within <0.2s (e.g., "Testimonials" at 0.92s/1.05s, "Get Started" at 1.47s/1.86s).
+- **Hover-to-click latency**: Average hover duration = 127ms (n=4), suggesting deliberate targeting but rapid execution.
+
+4. INTERACTION SPEED:
+- **Hyper-accelerated**: Average action interval = 0.21s (24 actions in 4.94s). 75% of actions occur within <0.3s of the previous action.
+- **Peak speed**: 10 actions in 1.0s (3.91s–4.94s), including 3 rage clicks and 3 scrolls.
+- **Hesitation markers**:
+  - Initial hesitation: 293ms delay before first click (0.29s).
+  - Longest pause: 0.71s between "Get Started" click (1.86s) and subsequent scroll (1.9s).
+
+5. CONTENT PREFERENCES:
+- **Section-specific targeting**:
+  - **Testimonials**: First substantive click (0.92s), suggesting early interest in social proof.
+  - **Features**: Final focus (3.58s–4.07s) with rage clicks, indicating high priority but failed interaction.
+  - **Navigation**: Last click (4.94s), possibly an exit attempt.
+- **Ignored content**:
+  - No interaction with primary content areas between sections (e.g., no clicks on body text, images, or CTAs outside labeled sections).
+  - No engagement with dynamic elements (e.g., carousels, modals, or forms).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: Zero keystrokes, form inputs, or text selections recorded. Session limited to mouse interactions.
+
+7. FEATURE DISCOVERY:
+- **Discovered features**:
+  - **Testimonials section**: Clicked twice (0.92s, 1.05s).
+  - **Primary CTA ("Get Started")**: Clicked twice (1.47s, 1.86s).
+  - **Features section**: Clicked 5 times (3.58s–4.07s), including rage clicks.
+  - **Navigation menu**: Final click (4.94s).
+- **Ignored features**:
+  - No interaction with search bars, filters, or interactive widgets.
+  - No engagement with secondary CTAs (e.g., "Learn More," "Contact").
+  - No exploration of sub-navigation or dropdown menus.
+
+8. SESSION FLOW:
+- **Phase 1: Initial Scan (0.0s–0.48s)**
+  - Loads page, hesitates (293ms), then scrolls rapidly to 715px depth. No clicks; likely assessing page structure.
+- **Phase 2: Targeted Probing (0.92s–2.39s)**
+  - Clicks Testimonials (0.92s), scrolls to footer (1.96s), then clicks footer (2.24s). Attempts to engage with high-value sections but no sustained interaction.
+- **Phase 3: Reorientation (2.42s–3.79s)**
+  - Scrolls back to top (2.42s–2.55s), clicks Hero Title (2.99s), then scrolls to Features (3.58s). Suggests reassessment of page hierarchy.
+- **Phase 4: Frustration (3.91s–4.94s)**
+  - Rage clicks on Features (3.91s–4.07s), rapid scrolls to top (4.12s–4.26s), and final click on Navigation (4.94s). Session ends abruptly, likely due to interaction failure or abandonment.
+
+KEY OBSERVATIONS:
+- **Synthetic user profile**: The combination of hyper-accelerated interactions, rage clicks, and lack of typing suggests this may be a bot, automated test, or power user with scripted behavior.
+- **No conversion**: Despite targeting CTAs ("Get Started"), no form submission or page transition occurred.
+- **Critical UX issues**: Rage clicks on Features section indicate a likely bug or unmet expectation in a high-priority area.
+```

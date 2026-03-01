@@ -1,0 +1,73 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with targeted re-engagement**: The user exhibits non-linear, rapid navigation with repeated clicks on the same elements (e.g., "Testimonials" and "Footer" clicked twice each). Initial exploration is broad (scrolling full page depth in 1.45s) but later refocuses on specific sections ("Features" at 7.73s). No clear linear progression through content.
+- **Revisitation rate**: 40% of clicks (4/10) target previously interacted elements (Testimonials ×2, Footer ×2).
+
+2. READING BEHAVIOR
+- **Skimmer with brief deep dives**: Scroll speed (avg. 574px/s) and lack of pauses suggest skimming. However:
+  - **Testimonials section**: Hovered for 359ms (2.01s) before clicking, indicating potential interest.
+  - **Footer**: Hovered for 300ms (3.56s) and scrolled upward afterward (7.13s–7.26s), suggesting a search for specific information.
+- **Max scroll depth**: 1029px (full page likely ~1200px), but no sustained pauses below 861px.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows no voting, commenting, or form submissions. All interactions are navigational (clicks/scrolls).
+- **Click redundancy**: 60% of clicks (6/10) are duplicates (e.g., "Testimonials" at 2.01s and 3.02s; "Footer" at 3.56s and 7.09s). Suggests either:
+  - Confirmation-seeking behavior (clicking to verify action).
+  - Potential UI responsiveness issues (user retries clicks).
+- **Hesitation markers**: Two "[HESITATION]" events (1.28s, 6.03s) totaling 3751ms (42% of session duration), indicating decision paralysis or distraction.
+
+4. INTERACTION SPEED
+- **Fast but erratic**:
+  - **Initial burst**: First 3.15s includes 7 actions (4 scrolls, 1 click, 2 hesitations) at ~2.2 actions/second.
+  - **Mid-session lull**: 3.56s–6.03s (2.47s gap) with only 1 click.
+  - **Late acceleration**: 7.09s–9.04s (1.95s) includes 6 actions (4 scrolls, 2 clicks) at ~3.1 actions/second.
+- **Hover-to-click latency**:
+  - Testimonials: 359ms hover → click.
+  - Footer: 300ms hover → click.
+  - Features: 284ms hover → click.
+  - Suggests deliberate targeting after brief evaluation.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward**:
+  - **Testimonials**: First targeted click (2.01s) after full-page scroll, hovered 359ms.
+  - **Footer**: Clicked twice (3.56s, 7.09s), likely seeking navigation links or legal info.
+  - **Features**: Final interaction (7.73s), hovered 284ms before click.
+- **Ignored**:
+  - No clicks on primary CTAs (e.g., "Sign Up," "Learn More") if present.
+  - No interaction with dynamic content (e.g., carousels, videos) visible in the log.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input events (e.g., search bars, forms, comments). All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Scrolling**: Primary navigation method (8 scroll events, 4 up/4 down).
+  - **Section links**: Testimonials, Footer, Features (all clicked).
+  - **Hover states**: Used to preview click targets (3 hover events).
+- **Ignored**:
+  - **Navigation menu**: No clicks on header/menu items (if present).
+  - **Interactive elements**: No engagement with buttons, dropdowns, or filters.
+  - **Media**: No clicks on images/videos.
+
+8. SESSION FLOW
+- **Phase 1: Rapid Exploration (0.0s–3.15s)**
+  - Loads landing page → hesitates (1.28s) → scrolls full page depth (1.32s–1.45s) → clicks Testimonials (2.01s).
+  - **Goal**: Broad content assessment.
+- **Phase 2: Targeted Re-engagement (3.15s–6.03s)**
+  - Re-clicks Testimonials (3.02s) → scrolls deeper (3.05s–3.15s) → clicks Footer (3.56s).
+  - **Goal**: Verify Testimonials content or find specific info in Footer.
+- **Phase 3: Hesitation & Reorientation (6.03s–7.73s)**
+  - Long hesitation (6.03s, 2468ms) → re-clicks Footer (7.09s) → scrolls upward (7.13s–7.26s).
+  - **Goal**: Re-evaluate page structure or recover from distraction.
+- **Phase 4: Final Focus (7.73s–9.04s)**
+  - Clicks Features (7.73s) → ends session.
+  - **Goal**: Last-ditch effort to find relevant content before exit.
+- **Exit**: Session ends abruptly after Features click (no further actions in 9.0s log).
+
+ADDITIONAL OBSERVATIONS
+- **Device anomalies**: Labeled as "synthetic/scanner," suggesting non-human traffic (e.g., bot, crawler, or automated test). Behavioral patterns (e.g., rapid scrolls, duplicate clicks) align with scripted interactions.
+- **Viewport consistency**: No resizing or orientation changes (fixed 1920×1080).
+- **No error events**: No rage clicks, back-button usage, or abandoned forms.
+```

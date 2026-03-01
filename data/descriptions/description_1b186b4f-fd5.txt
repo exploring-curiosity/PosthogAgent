@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. They jump between sidebar (0.99s), export buttons (3.67s), and chart elements (4.6s) without clear progression. However, their repeated returns to the "Export" button (4.05s, 9.09s) and "Chart" (4.6s, 7.82s) suggest forced attempts to complete specific tasks.
+- **Vertical oscillation**: Scroll patterns show rapid up/down movements (e.g., 3.17s–3.27s: 980px → 84px; 7.87s–8.04s: 477px → 112px), indicating disorientation or frustration.
+- **No lateral exploration**: All clicks are confined to vertical scrolling and single-axis interactions (e.g., sidebar at x=169–171, export at x=1590–1794).
+
+2. READING BEHAVIOR
+- **Skimmer with no deep reading**: Scroll speeds (avg. 490px/0.5s) and lack of pauses suggest skimming. No dwell time >1s on any content block.
+  - **Scroll depth**: Max depth (980px) reached in 0.65s, but no sustained engagement at any depth.
+  - **Revisits**: Returned to chart (4.6s, 7.82s) and stats cards (8.24s) but with no evidence of reading (no hover pauses >100ms except for clicks).
+- **No content absorption**: The user scrolls past 980px of content in 2.91s (0.46s–3.13s) but only interacts with UI elements, not textual content.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session lacks votes, comments, or submissions. All interactions are with UI controls (export, sidebar, charts).
+- **Frustration indicators**:
+  - **Rage clicks**: 3 consecutive clicks on "Chart" (5.0s–5.2s) with <100ms intervals.
+  - **Dead click**: Final action (9.74s) is a click on a non-interactive element (div at (730, 930)).
+  - **Hesitation**: 3 instances of prolonged pauses before clicks (408ms, 1926ms, 2151ms).
+- **Task-focused**: Attempts to use "Export" (2x) and "Chart" (4x) suggest goal-oriented behavior, but execution is impaired.
+
+4. INTERACTION SPEED
+- **Erratic timing**: Action intervals range from 40ms (rage clicks) to 2.15s (hesitation).
+  - **Fast actions**: 12/24 actions occur <200ms apart (e.g., scrolls, rage clicks).
+  - **Slow actions**: 3 hesitations (408ms, 1926ms, 2151ms) account for 4.48s of the 9.7s session.
+- **Click latency**: Avg. time between click intent (hover) and execution:
+  - Sidebar: 56ms
+  - Export: 31ms–116ms
+  - Chart: 76ms–91ms
+- **Scroll speed**: Consistent 0.5s duration for 245px increments (avg. 490px/s).
+
+5. CONTENT PREFERENCES
+- **UI elements over content**: All interactions target functional components:
+  - **Export button**: 2 clicks (3.67s, 9.09s)
+  - **Sidebar**: 2 clicks (0.99s, 3.13s)
+  - **Chart**: 6 clicks (4.6s–7.82s)
+  - **Stats Cards**: 2 clicks (8.24s–8.48s)
+- **No textual/content engagement**: Zero interactions with body text, images, or data tables. Only div/buttons with labels like "Chart" or "Export."
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no input fields, keystrokes, or form submissions. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Sidebar navigation (0.99s)
+  - Export functionality (3.67s)
+  - Chart interactions (4.6s)
+  - Stats cards (8.24s)
+- **Ignored features**:
+  - Dashboard content (no clicks on data visualizations, tables, or text).
+  - Top navigation (no clicks on header elements).
+  - Any mobile-responsive elements (viewport is desktop-only).
+- **Misused features**:
+  - "Chart" clicks (4.6s–7.82s) may indicate confusion (e.g., expecting a tooltip or menu).
+  - "Export" clicks (3.67s, 9.09s) suggest repeated attempts to trigger an action.
+
+8. SESSION FLOW
+- **Phase 1: Disoriented Exploration (0.0s–2.91s)**
+  - Loads dashboard, immediately clicks randomly (0.41s), then scrolls aggressively to bottom (980px by 0.65s).
+  - Clicks sidebar (0.99s) but abandons it after 1.92s of hesitation.
+- **Phase 2: Task Initiation (2.91s–5.46s)**
+  - Attempts to use "Export" (3.67s) but fails (no confirmation in log).
+  - Scrolls back up (3.17s–3.27s) and interacts with "Chart" (4.6s), triggering rage clicks (5.0s–5.2s).
+- **Phase 3: Reattempts (5.46s–9.74s)**
+  - Returns to "Chart" (7.82s) after 2.15s hesitation, then scrolls up to "Stats Cards" (8.24s).
+  - Final "Export" attempt (9.09s) followed by dead click (9.74s), ending session.
+- **Exit**: Session terminates abruptly after dead click, with no confirmation of task completion.
+
+KEY OBSERVATIONS:
+- **Task failure**: User repeatedly attempts to export data or interact with charts but achieves no visible outcome.
+- **Frustration markers**: Rage clicks, dead clicks, and hesitations dominate the latter half of the session.
+- **No content engagement**: Entire session is UI-focused, with zero interaction with actual dashboard data.
+- **Synthetic behavior**: The "synthetic/impulsive_clicker" device label and lack of organic patterns suggest this may be a bot, automated test, or user with accessibility tools.
+```

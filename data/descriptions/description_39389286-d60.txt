@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN:
+- **Non-linear, exploratory with hesitation loops**
+  - Initial linear descent (0-5.02s): Rapid sequential scrolling (62px → 311px in 0.32s) suggests initial skimming.
+  - Repeated backtracking (15.95-16.02s): Scrolls from 995px → 51px in 0.07s, then re-engages with navigation (18.16s).
+  - **Pattern**: 67% of clicks (8/12) are preceded by a "[HESITATION]" event (avg delay: 1,794ms), indicating deliberation before interaction. Navigation is **scattered**—user jumps between footer (12.4s), nav (18.16s), and hero (22.93s) without clear progression.
+
+2. READING BEHAVIOR:
+- **Skim-heavy with shallow engagement**
+  - **Scroll speed**: 124px/s (avg across 14 scroll events), with 0.5s pauses between scrolls—too fast for deep reading (typical reading speed: ~20px/s).
+  - **Depth**: Max scroll depth (995px) covers ~92% of a 1080px viewport, but only 3/14 scrolls exceed 500px (suggesting most content was skimmed).
+  - **Hover focus**: 5/12 clicks (42%) target elements with prior hover (avg hover duration: 1,467ms), indicating visual scanning before interaction.
+
+3. ENGAGEMENT STYLE:
+- **No voting/commenting detected**
+  - **Actions**: 100% of clicks target structural elements (buttons, nav, footer, sections) or page text placeholders. No evidence of:
+    - Form submissions (e.g., no typing detected).
+    - Social interactions (e.g., upvotes, comments).
+  - **Ratio**: N/A (no engagement actions observed).
+
+4. INTERACTION SPEED:
+- **Deliberate with hesitation spikes**
+  - **Avg time between actions**: 3.2s (excluding scrolls), but **75% of clicks (9/12) follow a "[HESITATION]" event** (avg delay: 1,794ms).
+  - **Fastest interaction**: 0.06s (scrolls at 4.8-5.02s).
+  - **Slowest interaction**: 2,226ms hesitation before final click (34.35s).
+  - **Hover-to-click latency**: 1,467ms (avg across 5 hovered elements).
+
+5. CONTENT PREFERENCES:
+- **Structural elements over content**
+  - **Top targets**:
+    1. **Buttons**: "Get Started" (2 clicks, 6.21s/10.19s).
+    2. **Navigation**: "Navigation" (2 clicks, 18.16s/21.04s).
+    3. **Sections**: "Features" (2 clicks, 28.96s/31.35s), "Testimonials" (2 clicks, 32.12s/35.54s).
+    4. **Footer**: 2 clicks (12.4s/15.87s).
+    5. **Hero Title**: 2 clicks (22.93s/26.88s).
+  - **Ignored**: No clicks on images, links, or dynamic content (e.g., carousels, forms).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**
+  - No input fields, search bars, or text areas interacted with. All actions are clicks/scrolls.
+
+7. FEATURE DISCOVERY:
+- **Discovered but underutilized features**:
+  - **Used**:
+    - Primary CTA ("Get Started").
+    - Navigation menu.
+    - Footer links.
+    - Section headers ("Features", "Testimonials").
+  - **Ignored**:
+    - Forms (no submissions).
+    - Interactive elements (e.g., no clicks on dropdowns, tabs, or filters).
+    - Multimedia (no video/audio interactions).
+    - Social sharing (no clicks on share buttons).
+
+8. SESSION FLOW:
+- **Arc**: **Hesitant exploration → Aborted conversion → Structural scanning → Exit**
+  1. **0-6.21s (Initial Skim)**: Rapid scroll to 311px, then clicks "Get Started" after 1,082ms hover (aborted).
+  2. **6.21-15.87s (Backtracking)**: Clicks footer, scrolls up to nav, then re-engages with "Get Started" (10.19s) but abandons.
+  3. **15.87-26.88s (Navigation Focus)**: Scrolls to top, interacts with nav (18.16s) and hero title (22.93s).
+  4. **26.88-35.54s (Section Scanning)**: Scrolls to "Features" (28.96s) and "Testimonials" (32.12s), but no deep engagement.
+  - **Exit**: Final click on "Testimonials" (35.54s) with no further action.
+- **Key observations**:
+  - **No conversion**: "Get Started" clicked twice but not followed through.
+  - **No deep dives**: Max scroll depth (995px) suggests full-page scan, but no sustained engagement with content.
+  - **Hesitation dominance**: 7/12 clicks (58%) occur after >1.5s of inaction.
+```
+
+**SUMMARY**: This user exhibits **cautious, exploratory behavior** with **high hesitation** and **low commitment**. They scan structural elements (nav, footer, sections) but avoid deep content interaction or conversion actions. The session is **scattered**, with frequent backtracking and no clear goal beyond surface-level exploration. Likely a **synthetic user or bot** given the lack of typing, uniform scroll speed, and placeholder hesitation events.

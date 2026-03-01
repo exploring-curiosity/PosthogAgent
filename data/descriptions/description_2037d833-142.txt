@@ -1,0 +1,110 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with hesitation*
+- **Initial focus:** User lands on `/settings` and immediately begins scrolling (7.74s–7.85s) to explore content depth (max 947px).
+- **Backtracking:** After attempting to "Save Changes" (8.6s–10.58s), they scroll *up* (10.61s–10.66s) to revisit earlier sections, suggesting uncertainty or reconsideration.
+- **Tab-switching behavior:** Clicks "Settings Nav" twice (12.73s, 15.9s) with a 3.17s gap, indicating either distraction or deliberation between navigation attempts.
+- **Feature hopping:** Jumps between "Notifications" (16.98s), "Privacy" (22.22s), and "Profile" (26.01s) in a *scattered* sequence, with no clear linear progression.
+- **Quantitative:** 3 distinct feature sections visited in 28.9s; 40% of time spent scrolling (10.3s total).
+
+---
+
+### 2. READING BEHAVIOR
+**Style:** *Skimmer with rapid scroll bursts*
+- **Scroll speed:** 614px/s (e.g., 315px in 0.5s at 7.74s). Consistent across all scroll actions (6–7 scroll events, all ~0.5s duration).
+- **Depth:** Max scroll depth varies by section:
+  - Settings: 947px (7.85s)
+  - Notifications: 756px (20.0s)
+  - Privacy: 756px (22.22s)
+  - Profile: 295px (26.01s, truncated by session end).
+- **No deep reading:** No pauses >1s between scrolls; no evidence of lingering on specific content.
+- **Revisitation:** Scrolls *up* after reaching bottom (e.g., Privacy: 756px → 295px in 0.14s at 24.38s–24.52s), suggesting skimming to confirm layout rather than reading.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Actions:** *Click-heavy, no input or corrections*
+- **No typing:** Zero text input or form submissions detected.
+- **Clicks only:** 10 clicks total (50% on buttons/divs, 50% on navigation or hesitations).
+  - **Primary clicks:**
+    - "Save Changes" (2 attempts: 8.6s, 10.58s)
+    - "Notifications" (16.98s, 19.83s)
+    - "Privacy" (22.22s, 24.33s)
+    - "Profile" (26.01s, 28.86s)
+- **Hover delays:** 3 clicks preceded by hovers (avg 1,150ms delay):
+  - "Save Changes" (556ms hover)
+  - "Notifications" (629ms)
+  - "Privacy" (1,966ms, longest hesitation).
+- **No "voting/commenting":** No interactions with content beyond navigation (e.g., no toggles, checkboxes, or text fields used).
+
+---
+
+### 4. INTERACTION SPEED
+**Tempo:** *Deliberate with bursts of speed*
+- **Action intervals:**
+  - Avg time between actions: **2.89s** (excluding scrolls).
+  - Fastest: 0.03s (10.58s–10.61s: double-click "Save Changes" → scroll up).
+  - Slowest: 3.17s (12.73s–15.9s: gap between "Settings Nav" clicks).
+- **Hesitation markers:**
+  - 3 explicit "[HESITATION]" events (7.7s, 13.87s, 23.19s), totaling **9,799ms** (34% of session).
+  - Longest hesitation: 7,696ms (7.7s) before first scroll.
+- **Scroll speed:** 614px/s (consistent across all scrolls).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Focus:** *Settings sub-sections, no content consumption*
+- **Visited sections (in order):**
+  1. Settings (general) → "Save Changes" (failed/aborted).
+  2. Notifications (16.98s–20.0s).
+  3. Privacy (22.22s–24.52s).
+  4. Profile (26.01s–28.86s).
+- **No content engagement:** No clicks on toggles, sliders, or text fields within sections.
+- **No subreddit/forum content:** Entire session confined to settings UI; no evidence of browsing posts, comments, or external links.
+
+---
+
+### 6. TYPING BEHAVIOR
+**Observations:** *None detected*
+- Zero keystrokes, text inputs, or form submissions.
+- No corrections or deletions (e.g., no backspaces, no input fields focused).
+
+---
+
+### 7. FEATURE DISCOVERY
+**Used features:**
+- **Navigation:** "Settings Nav" (2 clicks), section tabs ("Notifications," "Privacy," "Profile").
+- **Actions:** "Save Changes" button (2 clicks, likely failed or aborted).
+- **Scrolling:** Used to explore all sections (614px/s speed).
+
+**Ignored features:**
+- **Form inputs:** No toggles, checkboxes, or text fields interacted with.
+- **Help/FAQ:** No clicks on tooltips, "?" icons, or support links.
+- **Account settings:** No clicks on "Account," "Billing," or "Security" (if present).
+- **Advanced options:** No evidence of expanding collapsible menus or dropdowns.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploration → Hesitation → Aborted Action → Scattered Browsing → Exit*
+1. **Landing (0.0s–7.7s):**
+   - Page load; 7.7s hesitation before first scroll.
+2. **Initial Exploration (7.7s–10.66s):**
+   - Rapid scroll to bottom (947px), attempt "Save Changes" (8.6s), then scroll up to reconsider.
+3. **Navigation Confusion (10.66s–15.9s):**
+   - Clicks "Settings Nav" twice (12.73s, 15.9s) with 3.17s gap; no clear goal.
+4. **Feature Hopping (15.9s–28.86s):**
+   - Jumps between "Notifications" (16.98s), "Privacy" (22.22s), and "Profile" (26.01s) with no deep engagement.
+   - Each section: rapid scroll to bottom → scroll up → exit.
+5. **Exit (28.86s):**
+   - Final click on "Profile" (28.86s); session ends abruptly (no logout or navigation away).
+
+**Key anomalies:**
+- "Save Changes" clicked twice (8.6s, 10.58s) with no confirmation or error message visible in logs.
+- No return to homepage or other pages; entire session confined to `/settings`.
+- 34% of session spent in explicit hesitation (9,799ms total).
+```

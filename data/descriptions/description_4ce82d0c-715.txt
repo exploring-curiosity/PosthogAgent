@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly systematic and repetitive**: The user follows a rigid, cyclical pattern of:
+  (1) Rapid downward scrolling (4-5 sequential scrolls, ~90-100px increments, 0.5s each)
+  (2) Clicking a section header (Testimonials → Navigation → Features → Footer → Hero Title → Get Started)
+  (3) Immediate upward scrolling (3-4 sequential scrolls, ~140-240px increments, 0.5s each)
+- **No linear progression**: Jumps between unrelated sections (e.g., Testimonials → Navigation → Features) without returning to prior content.
+- **No exploratory deviation**: Every click is preceded by a hover (88ms–192ms), suggesting premeditated targeting rather than discovery.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll speed (~180–200px/s) and lack of pauses (>0.5s) indicate no deep reading.
+  - Max scroll depth per section: 996px (Footer), but no dwell time beyond 0.5s.
+  - No re-reading: Upward scrolls are immediate and uninterrupted (e.g., 760px → 32px in 1.2s).
+- **Visual sampling**: Clicks occur at consistent vertical positions (e.g., Testimonials at 760px, Features at 628px), implying reliance on spatial memory rather than content absorption.
+
+3. ENGAGEMENT STYLE
+- **Click-only interaction**: No text input, voting, or commenting detected.
+- **Click redundancy**: Every target is clicked twice in rapid succession (e.g., "Testimonials" at 0.86s and 1.1s, "Navigation" at 1.52s and 1.75s).
+  - Average delay between duplicate clicks: 240ms (range: 190–340ms).
+- **No secondary actions**: No form submissions, dropdown expansions, or tooltips triggered.
+
+4. INTERACTION SPEED
+- **Extremely rapid**: Median time between actions: 0.34s (excluding scrolls).
+  - Fastest click sequence: 0.86s (Testimonials hover) → 1.1s (click) → 1.15s (scroll up).
+  - Slowest deliberate pause: 0.54s (between scroll end and next hover).
+- **Hesitation markers**: Initial 333ms delay before first click (0.0s–0.33s), then no pauses >200ms until session end.
+
+5. CONTENT PREFERENCES
+- **No content preference**: Targets are structural (navigation, footer) or generic (hero title, CTA button).
+- **Section prioritization**:
+  1. Testimonials (0.86s)
+  2. Navigation (1.52s)
+  3. Features (2.42s)
+  4. Footer (3.06s)
+  5. Hero Title (3.84s)
+  6. CTA Button (4.51s)
+- **No thematic focus**: Clicks span unrelated UI elements (e.g., footer links → hero title).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Session contains zero text inputs, corrections, or form interactions.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Scrolling (16 instances, 100% of scrollable sections).
+  - Clicking (12 clicks, 6 unique targets).
+  - Hovering (6 instances, always preceding clicks).
+- **Features ignored**:
+  - Search bars, dropdown menus, modals, or interactive widgets (none triggered).
+  - Links within sections (only section headers clicked).
+  - Multimedia (no video/audio plays or image interactions).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–0.86s)**
+  - Loads page, hesitates 333ms, then scrolls downward in 4 rapid increments (0–760px).
+  - Clicks "Testimonials" at max scroll depth (760px).
+- **Phase 2: Cyclical Pattern (0.86s–4.67s)**
+  - Repeats 5x: Scroll down → click section → scroll up → scroll down → click next section.
+  - Sections targeted in order: Navigation → Features → Footer → Hero Title → CTA.
+  - Each cycle lasts ~1.5s (e.g., 1.1s–2.69s for Navigation → Features).
+- **Phase 3: Termination (4.51s–4.67s)**
+  - Clicks "Get Started" CTA twice (4.51s, 4.67s), then session ends.
+- **No exit intent**: Session terminates abruptly post-CTA click (no back button, tab closure, or error logs).
+
+ADDITIONAL OBSERVATIONS
+- **Viewport consistency**: All clicks occur within a 1920x1080 canvas; no window resizing or device rotation.
+- **Synthetic behavior**: Pattern resembles automated testing (e.g., fixed scroll increments, duplicate clicks, no organic pauses).
+- **No fatigue**: Interaction speed remains constant (e.g., scrolls at 0.5s intervals throughout).
+```

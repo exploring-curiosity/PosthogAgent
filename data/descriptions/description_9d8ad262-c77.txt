@@ -1,0 +1,111 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with focused bursts*
+- **Initial hesitation (0.0–4.43s):** After page load, the user exhibits a 2.44s pause before clicking (marked as "[HESITATION 2439ms]"), followed by rapid downward scrolling (4 scroll actions in 0.34s, covering 703px). This suggests initial orientation rather than linear reading.
+- **Sidebar-driven navigation (4.43–9.0s):** Two sidebar clicks (4.43s and 7.07s) with long hovers (1639ms) indicate deliberate feature discovery. The user scrolls *up* after the second sidebar click (7.12–7.16s), likely to access a top-menu feature ("Export").
+- **Feature-focused exploration (9.0–25.62s):** The user cycles through 3 distinct UI components in sequence:
+  1. **Export** (9.0s, 11.79s) → 2. **Data Table** (14.98s, 17.41s) → 3. **Stats Cards** (19.73s, 21.68s) → 4. **Chart** (22.86s, 25.62s).
+  Each interaction is preceded by a hover (1601–1971ms) and followed by rapid scrolling to reposition the target element.
+- **Scattered returns:** Repeated clicks on the same elements (e.g., "Export" twice, "Data Table" twice) suggest either accidental clicks or validation of functionality.
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skimmer with targeted deep dives*
+- **Scroll speed:** Average scroll velocity = **~350px/s** (e.g., 175px in 0.5s). This is faster than typical "reading" speeds (~100–200px/s) but slower than pure skimming (>500px/s).
+- **Scroll depth:**
+  - **Initial pass (2.48–2.65s):** Covers 703px in 0.17s (skimming).
+  - **Subsequent passes (12.6–12.89s, 21.73–21.94s):** Shorter ranges (e.g., 801px → 87px, 450px → 87px) with pauses at specific elements (e.g., "Data Table" at 801px, "Chart" at 450px). This implies *selective* deep reading of specific sections.
+- **No sustained pauses:** No single scroll position is held for >1s, ruling out deep reading of static content.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *Low-commitment interaction with validation clicks*
+- **No traditional "engagement" (votes/comments):** The log shows no text input, upvotes, or comments. All interactions are clicks or scrolls.
+- **Click behavior:**
+  - **Primary clicks:** 10 total clicks on UI elements (sidebar, export, data table, stats cards, chart).
+  - **Dead clicks:** 1 (12.53s, "DEAD CLICK" at (1610, 912)), suggesting misaligned expectations (e.g., clicking a non-interactive area).
+  - **Hesitation clicks:** 3 (2.44s, 9.83s, 24.03s), all labeled "[HESITATION]" with delays (830–2439ms). These occur at (0,0), likely outside the viewport or on non-interactive page text.
+- **Hover-to-click ratio:** 5/10 clicks are preceded by hovers (1601–1971ms), indicating cautious interaction.
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Deliberate with bursts of speed*
+- **Action intervals:**
+  - **Median time between actions:** **2.1s** (excluding scrolls).
+  - **Longest pauses:** 2.44s (initial hesitation), 1.97s (stats cards hover), 1.86s (data table hover). These precede high-value interactions.
+  - **Fastest sequence:** 0.04s between clicks (e.g., 7.07s → 7.12s sidebar click → scroll up).
+- **Scroll timing:** Scrolls occur in **0.5s bursts** (consistent duration), suggesting automated or muscle-memory behavior.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *Feature-driven, not content-driven*
+- **Gravitated toward:**
+  - **Data tools:** "Export" (2 clicks), "Data Table" (2 clicks).
+  - **Visualization:** "Chart" (2 clicks), "Stats Cards" (2 clicks).
+  - **Navigation:** "Sidebar" (2 clicks).
+- **Ignored:**
+  - **Static content:** No clicks on text blocks, images, or non-interactive elements.
+  - **Forms/input fields:** No typing or form submissions.
+- **No subreddit/category data:** The log does not reveal content topics (e.g., no URLs or subreddit names).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *None detected*
+- **No typing events:** The log contains no `input`, `keypress`, or `submit` actions.
+- **No corrections:** N/A.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Used features:**
+1. **Sidebar navigation** (4.43s, 7.07s).
+2. **Export functionality** (9.0s, 11.79s).
+3. **Data Table** (14.98s, 17.41s).
+4. **Stats Cards** (19.73s, 21.68s).
+5. **Chart** (22.86s, 25.62s).
+
+**Ignored features:**
+- **Search/filters:** No clicks on search bars or filter buttons.
+- **User account tools:** No profile, settings, or notification interactions.
+- **Social features:** No sharing, commenting, or voting.
+- **Help/documentation:** No clicks on tooltips, FAQs, or support links.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Orient → Explore → Validate → Exit*
+1. **Orientation (0.0–4.43s):**
+   - Page load → 2.44s hesitation → rapid skimming (703px scroll).
+   - *Goal:* Assess page layout and available features.
+2. **Exploration (4.43–9.0s):**
+   - Sidebar clicks (2x) → scroll up → "Export" hover/click.
+   - *Goal:* Discover primary navigation and top-level tools.
+3. **Validation (9.0–25.62s):**
+   - **Cycle 1 (9.0–12.89s):** Export (2x) → dead click → scroll down.
+   - **Cycle 2 (14.98–17.5s):** Data Table (2x) → scroll up.
+   - **Cycle 3 (19.73–21.94s):** Stats Cards (2x) → scroll down.
+   - **Cycle 4 (22.86–25.62s):** Chart (2x) → hesitation click.
+   - *Goal:* Test functionality of key features in sequence. Each cycle includes:
+     - Hover (1.6–1.9s) → click → scroll to reposition → second click.
+4. **Exit (25.62s):**
+   - Final "Chart" click at 25.62s (no further actions).
+   - *Likely:* Session ended post-click (e.g., page reload, tab close, or navigation away).
+
+---
+
+### KEY INSIGHTS:
+- **Cautious explorer:** Long hovers (1.6–2.0s) and repeated clicks on the same elements suggest a user validating functionality rather than consuming content.
+- **Feature-centric:** Interactions are tied to UI components (export, tables, charts), not content.
+- **No deep engagement:** Absence of typing, voting, or comments implies either a synthetic user (e.g., bot, QA tester) or a real user in "discovery mode."
+- **Scroll as navigation:** Scrolling is used to reposition elements (e.g., bringing "Export" into view) rather than to read content.
+- **Dead click:** The single dead click (12.53s) may indicate a UI expectation mismatch (e.g., clicking a static label expecting interaction).
+```

@@ -1,0 +1,47 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. Scrolling is rapid and segmented (4 downward scrolls in 0.24s total, 4 upward scrolls in 0.22s total), suggesting skimming rather than linear progression. However, interactions are constrained to a single checkout page, indicating a forced linear flow (e.g., form completion) despite the scattered behavior.
+   - **Dead clicks and hesitation**: Two instances of "[HESITATION]" (1.28s, 8.1s) and one "[DEAD CLICK]" (9.18s) suggest disorientation or frustration. The user repeatedly clicks the same elements (e.g., "Pay Now" twice at 2.23s/2.85s, "Cart Summary" twice at 3.64s/4.75s), implying either UI confusion or validation errors.
+
+2. READING BEHAVIOR:
+   - **Skim-only, no deep reading**: Scroll depth reaches 729px (max) but is achieved in 4 rapid downward scrolls (1.34s–1.51s), each covering ~182px in 0.5s. This suggests the user is not reading content but scanning for visual anchors (e.g., buttons, form fields).
+   - **Immediate upward scroll**: After reaching the bottom (729px at 1.51s), the user scrolls up to 316px by 3.05s, likely to revisit the "Cart Summary" section (clicked at 3.64s). This indicates targeted skimming, not comprehensive reading.
+
+3. ENGAGEMENT STYLE:
+   - **N/A**: This session is a checkout flow, not a social/commenting platform. No voting, commenting, or content creation occurred. All interactions are functional (clicking buttons/inputs).
+
+4. INTERACTION SPEED:
+   - **Fast but inconsistent**: Average time between actions: **1.15s** (excluding the 2.74s hesitation at 8.1s). However, variability is high:
+     - **Fast actions**: 0.06s between scrolls (1.34s–1.51s), 0.6s between "Pay Now" clicks (2.23s–2.85s).
+     - **Slow actions**: 2.74s hesitation before clicking "Card Number" (5.35s–8.1s), 3.45s between "Cart Summary" clicks (3.64s–4.75s).
+   - **Hover delays**: Hovers precede clicks (391ms for "Pay Now," 295ms for "Cart Summary," 398ms for "Card Number"), suggesting deliberation or UI lag.
+
+5. CONTENT PREFERENCES:
+   - **N/A**: The session is confined to a single checkout page. No content/subreddit preferences are observable. The user’s focus is on:
+     - **Payment flow**: "Pay Now" button (clicked twice).
+     - **Cart validation**: "Cart Summary" (clicked twice).
+     - **Form completion**: "Card Number" input (clicked twice).
+
+6. TYPING BEHAVIOR:
+   - **No typing detected**: Despite clicking the "Card Number" input twice (5.35s, 8.69s), no keystrokes or input lengths are recorded. The 2.74s hesitation at 8.1s may indicate manual input, but no data confirms this.
+
+7. FEATURE DISCOVERY:
+   - **Used features**:
+     - Scrolling (8 total scrolls, 4 down/4 up).
+     - Clicking buttons ("Pay Now," "Cart Summary").
+     - Clicking form inputs ("Card Number").
+   - **Ignored features**:
+     - No interaction with other form fields (e.g., CVV, expiration date, name).
+     - No help/tooltip links or error messages (if present).
+     - No navigation to other pages (e.g., product details, cart edits).
+
+8. SESSION FLOW:
+   - **Arc**: **Frustrated form completion → Abandonment**
+     - **0.0s–1.51s (Exploration)**: Rapid downward scroll to scan the page, likely assessing checkout length.
+     - **1.51s–3.64s (Attempted Submission)**: Clicks "Pay Now" twice (2.23s/2.85s), then scrolls up to "Cart Summary" (3.64s), possibly to verify items or totals.
+     - **3.64s–8.1s (Form Engagement)**: Clicks "Cart Summary" again (4.75s), then focuses on "Card Number" input (5.35s). The 2.74s hesitation at 8.1s suggests manual input or confusion.
+     - **8.1s–9.18s (Abandonment)**: Final clicks on "Card Number" (8.69s) and a dead click (9.18s) indicate the user either completed the form (no data) or gave up. Session ends abruptly.
+   - **Exit**: No confirmation page or error message is recorded. The dead click at 9.18s suggests the user may have left the page or encountered a UI blocker.
+```

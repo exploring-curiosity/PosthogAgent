@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and task-focused**: The user follows a strict checkout flow with no deviations (Cart Summary → Email → Card Number → Pay Now → Back to Shop).
+- **No exploratory behavior**: Zero clicks on unrelated elements (e.g., navigation menus, product recommendations, or help links).
+- **Repetitive clicks**: 4 instances of double-clicking (same element within 1s), suggesting either UI unresponsiveness or deliberate confirmation (e.g., "Cart Summary" at 2.18s/3.34s, "Email" at 4.13s/4.86s).
+- **Scroll directionality**: 75% of scrolls are downward (12/16), with only 2 upward scrolls (3.4s–3.48s) to revisit the "Email" field.
+
+2. READING BEHAVIOR
+- **Skim-focused**: Scroll speed averages **180px/s** (e.g., 102px in 0.5s at 0.98s), far exceeding typical reading speeds (200–300 words/min ≈ 50px/s for dense text).
+- **No deep engagement**: No pauses >1s on any scroll segment; max depth (973px) reached in 9.75s with no evidence of reading (e.g., no hover on static text).
+- **Visual anchoring**: Hovers on interactive elements only (e.g., "Cart Summary" [776ms], "Pay Now" [498ms]), suggesting reliance on UI affordances over content.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting**: Irrelevant to this checkout flow (no Reddit-like interactions observed).
+- **Interaction type**: Exclusively form-field and button clicks (6 total: 2x Cart Summary, 2x Email, 2x Card Number, 2x Pay Now, 2x Back to Shop).
+- **Hover-to-click ratio**: 1:1 (5 hovers → 5 clicks), with hovers averaging **581ms** (range: 372ms–902ms), indicating deliberate targeting.
+
+4. INTERACTION SPEED
+- **Deliberate but methodical**: Average **1.2s between actions** (excluding scrolls), but with high variance:
+  - Fastest: 60ms (scrolls at 3.4s–3.48s).
+  - Slowest: 1.11s (hesitation at 6.37s before "Card Number").
+- **Hesitation markers**: 2 explicit "[HESITATION]" events (902ms at 0.9s, 715ms at 6.37s), totaling **1.6s of hesitation** (14% of session).
+- **Click latency**: Average **700ms** between hover start and click (e.g., "Pay Now" hover at 8.51s → click at 9.45s).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: Only interacted with:
+  - Cart Summary (2 clicks).
+  - Email field (2 clicks).
+  - Card Number field (2 clicks).
+  - Pay Now button (2 clicks).
+  - Back to Shop link (2 clicks).
+- **Ignored**: Shipping options, promo codes, product details, or any non-checkout content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: All clicks on input fields (e.g., "Email" at 4.86s) show no subsequent keystrokes or corrections.
+- **Input focus**: Clicks on fields suggest intent to type, but session ended before input occurred.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (16 scroll actions, 100% of viewport height covered).
+  - Form fields (Email, Card Number).
+  - Primary CTA ("Pay Now").
+  - Exit link ("Back to Shop").
+- **Ignored features**:
+  - Navigation menus (no clicks on headers/footers).
+  - Secondary CTAs (e.g., "Save for Later," "Apply Coupon").
+  - Help/support links (no hovers or clicks).
+  - Product recommendations (no interaction below the fold).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–2.18s)**
+  - Loads checkout page → immediate hesitation (902ms) → rapid downward scroll (306px in 1.11s) to scan layout.
+  - **Goal**: Assess page structure (no deep reading).
+- **Phase 2: Form Interaction (2.18s–9.45s)**
+  - **Cart Summary**: Double-click (2.18s/3.34s) → scroll up to revisit (3.4s–3.48s).
+  - **Email Field**: Double-click (4.13s/4.86s) → scroll down (4.93s–5.06s).
+  - **Card Number**: Hesitation (715ms at 6.37s) → double-click (7.47s/7.53s) → rapid scroll to bottom (7.53s–7.77s).
+  - **Pay Now**: Hover (498ms) → double-click (8.51s/9.45s).
+  - **Behavior**: Linear progression through form fields with no backtracking (except to "Email").
+- **Phase 3: Exit (9.45s–11.18s)**
+  - Scrolls to bottom (9.5s–9.75s) → hovers "Back to Shop" (706ms) → double-click (10.76s/11.18s).
+  - **Goal**: Abandon checkout (no payment submission detected).
+- **Arc**: **Task-driven → Form completion → Immediate exit** (no exploration, no payment, no errors).
+```
+
+**Key Observations**:
+- **Synthetic/methodical user**: The "synthetic/methodical_user" device tag, repetitive clicks, and lack of typing suggest this may be a **test script or bot** (e.g., automated checkout flow validation).
+- **No human-like behavior**: Absence of typos, corrections, or exploratory clicks; all interactions are precise and repetitive.
+- **Session purpose**: Likely **UI testing** (e.g., verifying form field accessibility) or **abandonment analysis** (e.g., tracking exit points).

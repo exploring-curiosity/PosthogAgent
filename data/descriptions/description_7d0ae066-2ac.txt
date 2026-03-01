@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Non-linear, hesitant, and exploratory with repeated validation loops**
+  - Initial linear descent (4.4s–4.51s) to bottom of page (654px) suggests rapid scan for primary CTA ("Pay Now").
+  - Immediate backtracking (8.39s–8.49s) to top (116px) indicates re-checking of email field, breaking linear flow.
+  - Two distinct scroll cycles (15.02s–15.27s and 19.2s–19.25s) to extreme depths (1025px) and back, suggesting deliberate exploration of cart summary and exit options.
+  - **Quantitative**: 43% of session time spent scrolling (9.4s total), 37% in hesitation pauses, 20% in clicks.
+
+2. READING BEHAVIOR
+- **Skim-heavy with selective deep dives**
+  - Initial scroll speed: 436px/s (4.4s–4.51s) – too fast for deep reading (typical reading speed ~200px/s).
+  - Second scroll cycle (15.02s–15.27s) slows to 338px/s, suggesting closer inspection of cart summary.
+  - **Max scroll depth**: 1025px (15.27s), but only 1.5s spent below 687px (15.21s–15.27s), indicating minimal engagement with footer content.
+  - **Hesitation clusters**: 4.34s (4338ms), 5.71s (592ms), 12.68s (603ms) – likely re-reading sections before/after critical actions.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting detected** (irrelevant to checkout context)
+  - **Primary interactions**: Clicks on CTAs ("Pay Now", "Back to Shop") and form fields ("Email", "Card Number").
+  - **Hover-to-click ratio**: 3/7 clicks preceded by hovers (57%), with hover durations of 533ms–1449ms (avg 870ms).
+  - **Repeated clicks**: "Pay Now" (5.12s, 8.31s), "Cart Summary" (12.08s, 14.97s), "Email" (9.45s, 10.84s) – suggests validation or correction attempts.
+
+4. INTERACTION SPEED
+- **Deliberate with bursts of speed**
+  - **Median inter-action time**: 1.3s (excluding hesitations).
+  - **Fastest sequence**: 4.4s–5.12s (720ms between scroll end and "Pay Now" click).
+  - **Slowest sequence**: 16.84s–19.14s (2300ms between hover and "Back to Shop" click).
+  - **Hesitation outliers**: 4.34s (4338ms), 16.84s (1385ms hover) – likely cognitive load or distraction.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific elements only**
+  - **Gravitated toward**:
+    - Payment CTAs ("Pay Now" – 2 clicks).
+    - Form fields ("Email" – 2 clicks, "Card Number" – 2 clicks).
+    - Cart validation ("Cart Summary" – 2 clicks).
+    - Exit option ("Back to Shop" – 2 clicks).
+  - **Ignored**:
+    - Shipping/billing details (no clicks on address fields).
+    - Promo code fields (no interactions).
+    - Footer links (no clicks below 687px).
+
+6. TYPING BEHAVIOR
+- **No typing detected** (no `input` events logged beyond clicks).
+  - **Field selection**: "Email" and "Card Number" clicked but no keystrokes recorded.
+  - **Implications**: Either (a) fields were pre-filled, (b) user abandoned before typing, or (c) technical issue with event capture.
+
+7. FEATURE DISCOVERY
+- **Discovered and used**:
+  - Primary CTA ("Pay Now").
+  - Form fields ("Email", "Card Number").
+  - Cart summary toggle ("Cart Summary").
+  - Exit path ("Back to Shop").
+- **Ignored**:
+  - Secondary CTAs (e.g., "Save for Later").
+  - Help/support links (no clicks on "?" or chat icons).
+  - Payment method selectors (no clicks on card icons).
+
+8. SESSION FLOW
+- **Arc**: **Validation → Hesitation → Exploration → Abandonment**
+  1. **0.0s–5.12s (Validation)**: Rapid scan to "Pay Now" (4.4s–4.51s scroll), immediate click (5.12s).
+  2. **5.12s–12.08s (Hesitation)**: 592ms pause (5.71s), backtrack to top (8.39s–8.49s), re-check email (9.45s–10.84s).
+  3. **12.08s–16.84s (Exploration)**: Deep dive into cart summary (15.02s–15.27s scroll), hover on exit (16.84s).
+  4. **16.84s–21.77s (Abandonment)**: Click "Back to Shop" (19.14s), final attempt at "Card Number" (20.96s–21.77s).
+- **Exit trigger**: Likely cart summary review (15.02s–15.27s) or discovery of "Back to Shop" (16.84s).
+- **Quantitative**: 47% of time spent post-initial "Pay Now" click (5.12s–21.77s) in hesitation/exploration.
+```

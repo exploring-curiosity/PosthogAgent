@@ -1,0 +1,73 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - Highly non-linear, erratic, and scattered. The user exhibits rapid, abrupt shifts in focus with no clear progression through the checkout flow.
+   - Begins with a 481ms hesitation (0.48s) before any interaction, followed by immediate, aggressive scrolling (0.55s–0.75s) to the bottom of the page (996px) in 200px increments over 0.2s intervals.
+   - After reaching the bottom, they immediately click "Back to Shop" (1.0s–1.38s), then reverse direction with rapid upward scrolling (1.44s–2.38s) to the top of the page (181px).
+   - Jumps between disparate elements: "Pay Now" (1.96s–2.18s), "Email" input (2.63s–2.95s), "Card Number" input (3.57s–3.96s), and "Cart Summary" (4.36s–4.71s) with no logical sequence.
+   - No sustained engagement with any single section; actions are fragmented and exploratory.
+
+2. READING BEHAVIOR:
+   - Skimming with extreme speed. Scroll patterns indicate no deep reading:
+     - Downward scroll: 996px covered in 0.2s (0.55s–0.75s), averaging ~4,980px/s.
+     - Upward scroll: 815px covered in 0.94s (1.44s–2.38s), averaging ~867px/s.
+   - No pauses or sustained focus on any section. Scroll depth suggests the user is scanning for specific elements rather than reading content.
+   - Hover times (64ms–198ms) are too brief for meaningful content absorption.
+
+3. ENGAGEMENT STYLE:
+   - N/A (No voting, commenting, or social interactions observed in this checkout-focused session).
+   - Interaction is limited to clicks and scrolling, with no text input or form completion.
+
+4. INTERACTION SPEED:
+   - Extremely fast and impulsive. Median time between actions: **0.05s** (excluding scrolls).
+   - Key intervals:
+     - 0.48s: Hesitation before first click.
+     - 0.07s: Between scroll increments (0.55s–0.75s).
+     - 0.38s: Between "Back to Shop" hover and click (1.0s–1.38s).
+     - 0.22s: Between "Pay Now" hover and click (1.96s–2.18s).
+     - 0.32s: Between "Email" hover and click (2.63s–2.95s).
+   - No deliberate pauses; actions are triggered immediately after hovers.
+
+5. CONTENT PREFERENCES:
+   - No content preferences identifiable. The session is confined to a checkout page with no subreddit or content-type variation.
+   - Gravitated toward:
+     - "Back to Shop" link (clicked twice, 1.0s–1.38s).
+     - "Pay Now" button (clicked twice, 1.96s–2.18s).
+     - Form inputs: "Email" (2.63s–2.95s) and "Card Number" (3.57s–3.96s).
+     - "Cart Summary" section (clicked twice, 4.36s–4.71s).
+   - Ignored: No interaction with other potential elements (e.g., shipping details, promo codes, payment methods).
+
+6. TYPING BEHAVIOR:
+   - No typing observed. All clicks on inputs ("Email," "Card Number") were likely focus events, but no keystrokes or corrections were recorded.
+
+7. FEATURE DISCOVERY:
+   - Discovered and interacted with:
+     - "Back to Shop" link (used twice).
+     - "Pay Now" button (used twice).
+     - Form inputs ("Email," "Card Number").
+     - "Cart Summary" section (clicked twice).
+   - Ignored:
+     - Likely other checkout fields (e.g., shipping address, phone number).
+     - Any secondary UI elements (e.g., help links, legal disclaimers).
+     - No evidence of feature exploration beyond the above.
+
+8. SESSION FLOW:
+   - **Phase 1: Hesitation and Rapid Scanning (0.0s–0.75s)**
+     - Loads page, hesitates (481ms), then scrolls aggressively to the bottom (996px) in 0.2s.
+   - **Phase 2: Impulsive Navigation (1.0s–2.38s)**
+     - Clicks "Back to Shop" (twice), then scrolls upward to the top (181px) in 0.94s.
+   - **Phase 3: Erratic Form Interaction (2.63s–4.71s)**
+     - Jumps between "Email" input, "Card Number" input, and "Cart Summary" with no logical order.
+     - No completion of any field; clicks are likely focus events.
+   - **Exit:**
+     - Session ends abruptly at 4.71s with a click on "Cart Summary." No confirmation of checkout completion or abandonment.
+
+SUMMARY:
+This user exhibits behavior consistent with a **bot, automated script, or synthetic test**, not a human. Key indicators:
+- Inhumanly fast scroll speeds (up to 4,980px/s).
+- Sub-100ms hover-to-click intervals.
+- No typing, no sustained engagement, and no logical progression through the checkout flow.
+- Repeated double-clicks on elements (e.g., "Back to Shop," "Pay Now") suggest scripted interactions.
+- Session duration (4.7s) is too short for meaningful human activity on a checkout page.
+```

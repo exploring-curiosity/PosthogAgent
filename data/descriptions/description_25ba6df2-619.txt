@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and methodical, with clear progression through settings subsections.
+- Follows a strict top-to-bottom navigation path: Settings Nav → Profile → Notifications → Privacy → Save Changes.
+- No backtracking or exploratory deviations; each subsection is visited exactly once in sequence.
+- Navigation is spatially consistent: all clicks occur within a narrow vertical band (x-coordinates: 225–1526px), suggesting deliberate targeting of UI elements.
+
+2. READING BEHAVIOR
+- Skimming behavior confirmed by rapid, incremental scroll patterns.
+- Scrolls occur in 5–6 discrete bursts per subsection, each covering ~90–100px over 0.5s (180–200px/s).
+- No pauses >0.5s between scrolls, indicating no deep reading or content absorption.
+- Max scroll depth per subsection:
+  • Profile: 383px (4 scroll bursts)
+  • Notifications: 842px (5 bursts)
+  • Privacy: 934px (5 bursts)
+- Scroll direction reversals (up/down) only occur after clicking a subsection header, suggesting reorientation rather than rereading.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or interactive content engagement observed (session is purely navigational).
+- All interactions are UI-driven: clicks on navigation elements and a final "Save Changes" button.
+- Hover durations (711–787ms) precede all primary clicks, indicating deliberate selection rather than impulsive action.
+- Hesitation clicks (0.63s, 6.66s) at (0,0) suggest UI misfires or uncertainty, but no follow-up corrections.
+
+4. INTERACTION SPEED
+- Deliberate but efficient: average 1.1s between primary actions (clicks on subsection headers).
+- Key timing metrics:
+  • Page load → first click: 630ms (hesitation)
+  • Subsection-to-subsection transition: 1.0–1.8s (e.g., Profile → Notifications: 1.72s)
+  • Hover-to-click latency: 347–787ms (mean: 639ms)
+- Scroll actions are tightly clustered (0.5s duration, 0.05s intervals), suggesting automated or highly practiced behavior.
+
+5. CONTENT PREFERENCES
+- No content consumption observed; session is limited to settings navigation.
+- Subsections visited in order: Profile → Notifications → Privacy, suggesting prioritization of personalization and communication controls.
+- No evidence of interest in other settings (e.g., Account, Security, Billing) based on ignored UI elements.
+
+6. TYPING BEHAVIOR
+- No typing or input fields engaged. All interactions are clicks/scrolls.
+- No corrections, deletions, or input pauses detected.
+
+7. FEATURE DISCOVERY
+- Used features:
+  • Top-level settings navigation (2 clicks: 1.85s, 2.6s)
+  • Subsection headers (Profile, Notifications, Privacy)
+  • "Save Changes" button (final action)
+- Ignored features:
+  • No interaction with form fields, toggles, or dropdowns in any subsection.
+  • No help/tooltips, search, or secondary navigation elements clicked.
+  • No evidence of exploring settings beyond the three visited subsections.
+
+8. SESSION FLOW
+- Arc: Linear progression through settings with no deviation.
+  1. Orientation (0–2.6s): Hesitation, initial scroll, and redundant clicks on "Settings Nav."
+  2. Subsection Exploration (2.6–11.1s):
+     • Profile (2.6–5.56s): 3 scroll bursts, 1 click.
+     • Notifications (5.56–8.0s): 5 scroll bursts, 2 clicks (hesitation + primary).
+     • Privacy (8.0–10.41s): 5 scroll bursts, 1 click.
+  3. Commitment (10.41–11.1s): Hover + click on "Save Changes" to exit.
+- No exploratory phase; session ends immediately after final action.
+- Total time per subsection:
+  • Profile: 2.96s
+  • Notifications: 2.44s
+  • Privacy: 2.41s
+- Exit: Immediate after "Save Changes" click (no post-action browsing).
+```
+
+**Summary**: This is a synthetic/methodical user demonstrating highly efficient, linear navigation through settings with no content engagement. Behavior suggests a scripted or automated interaction (e.g., QA testing, bot) rather than organic human browsing, given the precise timing, lack of input, and absence of exploratory actions.

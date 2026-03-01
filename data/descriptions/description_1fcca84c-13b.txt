@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly exploratory with repeated hesitation loops, but ultimately linear progression through UI hierarchy.
+- **Evidence**:
+  - Begins at dashboard (0.0s), then sequentially engages with 5 distinct UI components: Export (7.55s), Sidebar (13.01s), Stats Cards (18.08s), Chart (22.51s), Data Table (25.94s).
+  - Each major interaction is preceded by a "HESITATION" click (6.0s, 8.52s, 14.79s, 19.35s, 23.72s) — suggesting uncertainty or evaluation before proceeding.
+  - No backtracking to previously visited components; moves forward through UI layers.
+- **Quantitative**: 5/6 major clicks (83%) are preceded by hesitation clicks at (0,0), indicating a "test-then-commit" pattern.
+
+2. READING BEHAVIOR
+- **Behavior**: Skimming with rapid, shallow scrolls; no evidence of deep reading.
+- **Evidence**:
+  - Scrolls occur in 16px increments (6.07s–6.28s) and 146px jumps (11.14s–11.18s), suggesting scanning rather than line-by-line reading.
+  - Max scroll depth: 897px (25.05s), but no pauses >0.5s at any depth — consistent with visual scanning.
+  - Scroll speed: 32px/s (6.07s–6.28s) and 294px/s (11.14s–11.18s), far exceeding typical reading speed (200–300 words/min ≈ 10–15px/s).
+- **Quantitative**: 100% of scrolls are <0.5s duration; no dwell time >0.5s at any scroll depth.
+
+3. ENGAGEMENT STYLE
+- **Behavior**: No voting, commenting, or social engagement observed. Purely functional interaction with UI elements.
+- **Evidence**:
+  - All clicks target structural UI components (buttons, divs, tables, asides) — no evidence of social actions.
+  - No text input, upvotes, or replies detected.
+  - Engagement is tool-oriented: Export (7.55s, 11.07s), Sidebar navigation (13.01s, 15.8s), data inspection (25.94s).
+- **Quantitative**: 0/12 clicks (0%) are social; 100% are functional UI interactions.
+
+4. INTERACTION SPEED
+- **Behavior**: Deliberate with long pre-action hesitation; rapid execution once committed.
+- **Evidence**:
+  - Mean hesitation duration: 1,287ms (6004ms, 968ms, 1777ms, 1271ms, 1215ms).
+  - Mean hover duration before click: 1,291ms (900ms, 1592ms, 1855ms, 1428ms, 683ms).
+  - Post-hesitation clicks occur within 1s of hover end (e.g., 7.55s click follows 900ms hover at 6.65s).
+  - Time between major actions: 3.52s (Export→Sidebar), 5.06s (Sidebar→Stats Cards), 4.43s (Stats Cards→Chart), 3.43s (Chart→Data Table).
+- **Quantitative**: 83% of major clicks preceded by >900ms hover; mean action interval: 4.11s.
+
+5. CONTENT PREFERENCES
+- **Behavior**: Gravitates toward data-dense, functional UI components; no evidence of content consumption.
+- **Evidence**:
+  - Targets: Export (data export), Sidebar (navigation), Stats Cards (metrics), Chart (visualization), Data Table (tabular data).
+  - No clicks on textual content, images, or multimedia.
+  - Final interaction (27.2s) is with Data Table — suggests primary interest in raw data.
+- **Quantitative**: 100% of clicks target data-oriented UI; 0% target narrative or media content.
+
+6. TYPING BEHAVIOR
+- **Behavior**: No typing detected.
+- **Evidence**:
+  - No text input events, corrections, or form submissions observed.
+  - All interactions are point-and-click.
+- **Quantitative**: 0 keystrokes; 0 input fields engaged.
+
+7. FEATURE DISCOVERY
+- **Discovered Features**:
+  - Export (7.55s, 11.07s)
+  - Sidebar navigation (13.01s, 15.8s)
+  - Stats Cards (18.08s, 20.79s)
+  - Chart visualization (22.51s, 24.88s)
+  - Data Table (25.94s, 27.2s)
+- **Ignored Features**:
+  - No evidence of search, filters, settings, help, or account actions.
+  - No interaction with headers, footers, or non-data UI chrome.
+- **Quantitative**: 5/5 discovered features are data-centric; 0/5 are utility or social.
+
+8. SESSION FLOW
+- **Arc**: Structured exploration → functional engagement → data inspection → abrupt exit.
+- **Phases**:
+  1. **Orientation (0.0s–6.0s)**: Page load; 6s hesitation before first scroll.
+  2. **Initial Scan (6.0s–7.55s)**: Rapid 80px scroll; identifies Export button.
+  3. **First Engagement (7.55s–11.07s)**: Hover→click Export; hesitation loop; re-click.
+  4. **Navigation (11.07s–15.8s)**: Scrolls to Sidebar; hover→click; scrolls up.
+  5. **Metrics Inspection (15.8s–20.79s)**: Hover→click Stats Cards; scrolls down.
+  6. **Visualization (20.79s–24.88s)**: Hover→click Chart; rapid 434px scroll.
+  7. **Data Table (24.88s–27.2s)**: Hover→click Data Table; session ends.
+- **Exit**: Abrupt; no logout, back navigation, or session closure event.
+- **Quantitative**: 7 distinct phases; mean phase duration: 3.89s; final action at 27.2s with no follow-up.
+```

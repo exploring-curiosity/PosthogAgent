@@ -1,0 +1,83 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly focused and task-driven, with no exploratory detours.
+- Linear progression through checkout flow: Cart Summary → Email → Card Number → Pay Now → Back to Shop.
+- 100% of clicks target checkout-related elements (no off-task interactions).
+- 3 instances of re-clicking the same element (Cart Summary, Email, Pay Now) after hesitation, suggesting validation behavior.
+
+2. READING BEHAVIOR:
+- Skimming confirmed by:
+  - Rapid scroll bursts (avg 0.5s per 90-110px scroll segment).
+  - 7 scroll actions covering 976px in 4.3s total scroll time (227px/s).
+  - No pauses >1s on any scroll segment (deep reading typically requires 2-3s pauses).
+- Max scroll depth (976px) suggests full-page coverage, but speed indicates content scanning rather than reading.
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or social interactions observed (session is purely transactional).
+- Interaction pattern:
+  - 6 hesitation events (avg 883ms, range 606-1607ms) before primary actions.
+  - 2 rage-click clusters (5 clicks in 0.4s at 14.15-14.65s) on "Back to Shop" link, indicating frustration.
+- Vote-to-comment ratio: N/A (no social features used).
+
+4. INTERACTION SPEED:
+- Deliberate with forced urgency:
+  - Avg time between actions: 1.1s (excluding hesitations).
+  - Avg time including hesitations: 2.45s.
+  - Hover times (437-784ms) suggest premeditation before 3/6 primary clicks.
+- Typing behavior cannot be measured (no keystroke data), but input field interactions show:
+  - 2 clicks on "Email" field (5.86s and 7.93s) with 672ms hesitation.
+  - 2 clicks on "Card Number" field (6.73s and 7.93s) with 542ms hover.
+
+5. CONTENT PREFERENCES:
+- Sole focus: Checkout process (no content consumption observed).
+- Targeted elements:
+  - Form fields (Email, Card Number).
+  - Action buttons (Pay Now, Back to Shop).
+  - Cart Summary (clicked twice).
+- No engagement with product listings, recommendations, or non-checkout UI.
+
+6. TYPING BEHAVIOR:
+- No typing data available (no keystroke logs or input durations).
+- Input field interactions:
+  - 2 clicks on "Email" field (5.86s and 5.89s) with 30ms between clicks (possible double-click or correction attempt).
+  - 2 clicks on "Card Number" field (7.93s and 7.98s) with 50ms between clicks.
+
+7. FEATURE DISCOVERY:
+- Used features:
+  - Cart Summary (2 clicks).
+  - Email input (2 clicks).
+  - Card Number input (2 clicks).
+  - Pay Now button (2 clicks).
+  - Back to Shop link (2 clicks + 5 rage clicks).
+- Ignored features:
+  - No navigation menu interactions.
+  - No product search or filters.
+  - No help/chat widgets.
+  - No promotional banners or upsells.
+
+8. SESSION FLOW:
+- 0.0-1.29s: Orientation
+  - Page load → immediate scroll to 427px (skimming checkout steps).
+  - Cart Summary hover (452ms) suggests validation of cart contents.
+- 1.29-4.39s: First Attempt
+  - Cart Summary click → hesitation (1607ms) → re-click (possible confusion).
+  - Scroll up to top (427px→129px) to locate Email field.
+- 4.39-9.11s: Form Completion
+  - Email field hover (437ms) → click → hesitation (672ms) → re-click.
+  - Scroll to Card Number field (129px→256px) → hover (542ms) → click.
+  - Scroll to Pay Now button (256px→695px).
+- 9.11-14.05s: Submission Attempt
+  - Pay Now hover (784ms) → click → hesitation (1086ms) → re-click.
+  - Scroll to bottom (695px→976px) to locate Back to Shop.
+- 14.05-14.7s: Exit with Frustration
+  - Back to Shop click → 5 rage clicks in 0.5s (abandonment signal).
+
+KEY OBSERVATIONS:
+- 100% of interactions are checkout-related (no browsing).
+- 6 hesitation events (avg 883ms) suggest uncertainty or distraction.
+- 5 rage clicks on exit indicate high frustration (likely due to failed payment submission).
+- Scroll patterns show systematic coverage of checkout form, but speed suggests skimming.
+- No errors or corrections observed in form fields (despite multiple clicks).
+```

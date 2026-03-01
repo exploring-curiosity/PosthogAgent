@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly focused and task-driven**: The user exhibits a non-linear but goal-oriented pattern, jumping between specific UI elements (table → export → chart → stats cards → sidebar) with minimal exploratory detours.
+- **Rapid targeting**: 75% of clicks (6/8) are preceded by hover states (avg 123ms hover time), suggesting premeditated targeting of known UI elements.
+- **No backtracking**: No evidence of revisiting previously viewed content or using browser navigation (e.g., back button).
+
+2. READING BEHAVIOR
+- **Skimmer**: Scroll patterns show rapid vertical movement with no sustained pauses:
+  - Initial scroll: 0px → 804px in 0.73s (avg 1,101px/s)
+  - Mid-session scroll: 97px → 425px in 0.32s (avg 1,025px/s)
+  - Final scroll: 210px → 1,042px in 0.12s (avg 6,933px/s)
+- **No deep reading**: Max scroll depth (1,042px) suggests content was scanned, not read in detail. No scroll pauses >200ms.
+
+3. ENGAGEMENT STYLE
+- **Action-only engagement**: No evidence of voting, commenting, or content creation. All interactions are clicks on UI elements (tables, buttons, charts, sidebar).
+- **No social engagement**: Zero interactions with user-generated content (e.g., posts, comments).
+- **Double-click behavior**: 3 instances of rapid sequential clicks on the same element (table, export button, chart), possibly indicating:
+  - Confirmation clicks (user verifying action registration)
+  - UI responsiveness issues (user retrying failed interactions)
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median time between actions: 340ms (excluding hesitations).
+  - Fastest interval: 30ms (between two chart clicks at 4.09s–4.46s)
+  - Slowest interval: 1,776ms (hesitation at 4.09s)
+- **Hesitation events**:
+  - 274ms at 0.27s (initial page load)
+  - 1,776ms at 4.09s (mid-session pause)
+- **Hover-to-click latency**: Avg 124ms (range: 68ms–157ms), indicating rapid decision-making.
+
+5. CONTENT PREFERENCES
+- **Data-centric elements prioritized**:
+  - **Data Table**: First substantive interaction (0.73s), clicked twice.
+  - **Export**: Targeted immediately after table (1.54s), suggesting intent to extract data.
+  - **Chart**: Engaged at 2.32s, with prolonged hesitation (1,776ms) before second click.
+  - **Stats Cards**: Final content interaction (5.21s), clicked twice.
+- **Navigation ignored**: No clicks on primary navigation menus, search bars, or filters.
+- **Sidebar**: Only engaged at session end (6.08s), possibly as an exit pathway.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text input events (no searches, form fills, or comments). All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Data table (export functionality)
+  - Chart visualization
+  - Stats cards
+  - Sidebar navigation
+- **Features ignored**:
+  - Search/filter tools (no evidence of use)
+  - User account dropdowns (no clicks on profile/avatar)
+  - Help/documentation (no clicks on "?" or help icons)
+  - Social features (no sharing, bookmarking, or reactions)
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–0.73s)**
+  - Page load → initial hesitation (274ms) → rapid downward scroll (0px→804px) to assess content.
+- **Phase 2: Data Extraction (0.73s–2.32s)**
+  - Focused on table (0.73s) → export button (1.54s). Scrolls up (804px→97px) to locate export, then down (97px→425px) to chart.
+- **Phase 3: Visual Analysis (2.32s–5.54s)**
+  - Prolonged hesitation (1,776ms) before engaging chart (2.32s). Scrolls up (425px→210px) to stats cards (5.21s).
+- **Phase 4: Exit (5.54s–6.26s)**
+  - Rapid downward scroll (210px→1,042px) → sidebar click (6.08s), likely to navigate away. Session ends at 6.3s.
+
+KEY OBSERVATIONS:
+- **Task efficiency**: User achieved 4 distinct interactions (table → export → chart → stats) in 6.3s, suggesting familiarity with the UI.
+- **No exploratory behavior**: Zero clicks on non-target elements (e.g., ads, unrelated content).
+- **Potential UI friction**: Double-clicks on 3 elements may indicate perceived unresponsiveness.
+- **Session termination**: Sidebar click at 6.08s is the last action, implying intent to leave the page.
+```

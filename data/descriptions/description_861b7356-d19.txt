@@ -1,0 +1,109 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory, with repetitive validation*
+- **Initial linearity (0.0s–3.69s):** User scrolls downward in small, consistent increments (66px every ~0.5s) after landing, suggesting initial content scanning.
+- **Repetitive validation (3.69s–33.6s):** User repeatedly clicks the same UI elements (e.g., "Get Started" twice at 3.69s and 4.86s; "Features" twice at 6.72s and 11.3s) with long hovers (1500–2600ms) and hesitations (e.g., 2582ms at 9.3s). This indicates *cautious interaction*—testing affordances or seeking confirmation before proceeding.
+- **Scattered focus:** Jumps between distant sections (e.g., "Features" at 519px → "Footer" at 999px → "Testimonials" at 852px → "Hero Title" at 183px) without clear thematic progression. No evidence of goal-driven navigation (e.g., no form submissions, no deep dives into a single section).
+- **Exit:** Ends session on navigation bar (31.91s–33.62s), suggesting either abandonment or a reset to reorient.
+
+---
+
+### 2. READING BEHAVIOR
+**Style:** *Skimmer with shallow engagement*
+- **Scroll depth:** Max depth of 999px (likely ~1–2 full viewports of content), but no evidence of reading below the fold. Scrolls are *rapid and incremental* (66px/0.5s), implying scanning rather than deep reading.
+- **Scroll direction:**
+  - *Downward (1.44s–11.61s):* Linear scanning of content (e.g., 330px → 999px over 10s).
+  - *Upward (17.94s–30.87s):* Rapid backtracking (e.g., 999px → 3px in 13s), likely to revisit earlier sections or confirm layout.
+- **Dwell time:** No section holds attention for >3s (e.g., "Features" hovered for 1565ms, clicked at 6.72s, then abandoned). No pauses >1s on any scroll segment.
+- **Content interaction:** Clicks on headings ("Hero Title"), sections ("Features"), and structural elements ("Footer," "Navigation")—not on body text or interactive widgets (e.g., no links, forms, or media).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Style:** *Passive observer; no active participation*
+- **No voting/commenting:** Zero instances of upvotes, downvotes, or text input. Session is purely navigational.
+- **Interaction ratio:** 100% clicks (14 total), 0% content creation/modification.
+- **Speed:** Clicks occur after *prolonged hovers* (mean hover time: **1800ms**; range: 907ms–2986ms) and *hesitations* (mean: **2475ms**; range: 1406ms–2986ms). This suggests *deliberation without commitment*—user evaluates but does not act.
+
+---
+
+### 4. INTERACTION SPEED
+**Tempo:** *Slow and deliberate with bursts of rapid activity*
+- **Action intervals:**
+  - *Initial hesitation:* 1406ms before first click (1.41s).
+  - *Peak activity:* 1.44s–1.72s (5 scrolls in 0.28s) and 11.38s–11.61s (4 scrolls in 0.23s)—likely automated or muscle-memory scrolling.
+  - *Mean time between actions:* **2.4s** (excluding scrolls; **1.2s** including scrolls).
+  - *Longest pauses:* 2582ms (9.3s), 2661ms (15.9s), 2986ms (22.94s)—all labeled as "[HESITATION]".
+- **Click timing:**
+  - *First click:* 1.41s (page text, likely accidental or exploratory).
+  - *Primary CTA ("Get Started")*: 3.69s (after 1660ms hover).
+  - *Last click:* 33.62s (navigation bar, after 907ms hover).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Gravitation toward:** *Structural and high-level elements*
+- **Clicked elements (by type):**
+  1. **Navigation/Global UI:** "Navigation" (2 clicks), "Footer" (2 clicks).
+  2. **Section Headers:** "Features" (2 clicks), "Testimonials" (2 clicks), "Hero Title" (2 clicks).
+  3. **CTA Buttons:** "Get Started" (2 clicks).
+  4. **Ambiguous:** "[HESITATION]" (4 clicks at (0,0)—likely misclicks or placeholder interactions).
+- **Ignored content:**
+  - No clicks on body text, images, videos, forms, or interactive widgets (e.g., search bars, dropdowns).
+  - No evidence of interest in specific features (e.g., pricing, blog, contact).
+- **Thematic focus:** None. User interacts with *layout* (headers, footers, navigation) rather than *content*.
+
+---
+
+### 6. TYPING BEHAVIOR
+**Observations:** *No typing detected*
+- Zero instances of text input, corrections, or form interactions.
+- No search queries, comments, or field entries.
+- Hesitations labeled "[HESITATION]" are clicks, not typing pauses.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Discovered and Used:**
+- **Primary CTA:** "Get Started" (clicked twice, 3.69s and 4.86s).
+- **Section Navigation:** "Features," "Testimonials," "Hero Title" (each clicked twice).
+- **Global UI:** "Navigation" (2 clicks), "Footer" (2 clicks).
+- **Scrolling:** Used extensively (18 scroll actions) to traverse content.
+
+**Ignored Features:**
+- **Forms/Input:** No engagement with search bars, login/signup forms, or contact fields.
+- **Media:** No clicks on images, videos, or carousels.
+- **Social/Sharing:** No clicks on social media icons or share buttons.
+- **Dynamic Content:** No interaction with tabs, accordions, or expandable sections.
+- **Personalization:** No clicks on user profiles, settings, or account-related elements.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Superficial exploration → Repetitive validation → Abrupt exit*
+1. **Landing (0.0s–1.41s):**
+   - Immediate scroll (1.44s) suggests scanning for relevance.
+   - No dwell time on hero section (max depth: 330px by 1.72s).
+2. **Initial Engagement (1.72s–6.72s):**
+   - Clicks "Get Started" after 1660ms hover (3.69s), then repeats click (4.86s)—possible confusion or testing.
+   - Continues scrolling downward (330px → 519px).
+3. **Exploratory Phase (6.72s–17.91s):**
+   - Jumps to "Features" (6.72s), scrolls to 999px, then clicks "Footer" (13.24s).
+   - Hesitations (9.3s, 15.9s) interrupt flow; no deep engagement.
+4. **Backtracking (17.91s–30.87s):**
+   - Scrolls upward rapidly (999px → 3px in 13s), revisiting "Testimonials" (19.95s) and "Hero Title" (26.17s).
+   - Hesitations (22.94s, 28.91s) suggest disorientation or dissatisfaction.
+5. **Exit (30.87s–33.62s):**
+   - Final clicks on "Navigation" (31.91s, 33.62s)—likely attempting to reset or leave.
+   - Session ends without conversion or clear intent.
+
+**Key Themes:**
+- **No goal orientation:** User does not progress toward a task (e.g., signup, purchase, learning).
+- **Repetitive validation:** Double-clicks on 7/14 actions (50%), indicating uncertainty or UI ambiguity.
+- **Shallow interaction:** No content consumption beyond section headers.
+- **Abrupt termination:** No gradual disengagement; exits via navigation bar.
+```

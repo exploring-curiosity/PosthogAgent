@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly focused and task-driven with minimal exploration.
+- **Evidence**:
+  - Linear progression through settings tabs (Notifications → Profile → Privacy → Settings Nav) with no detours.
+  - 83% of clicks (10/12) target settings subsections; only 2 clicks (17%) are "hesitation" or "rage clicks."
+  - No evidence of browsing unrelated content or backtracking to prior pages.
+- **Quantitative**: 3 distinct settings sections accessed in 4.9s (avg 1.63s per section).
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with rapid scroll bursts; no deep reading.
+- **Evidence**:
+  - Scroll speed: 101–202px/0.5s (avg 202px/s) across all scroll actions.
+  - Max scroll depth: 939px (viewport height: 1080px), suggesting ~87% of page content was visible but not necessarily read.
+  - No pauses >200ms between scrolls; 12 scroll actions in 3.5s (avg 292ms between scrolls).
+  - "Rage clicks" (4 in 0.4s) at 3.62–4.01s indicate frustration with unread/unresponsive content.
+
+3. ENGAGEMENT STYLE
+- **Pattern**: Action-oriented with no content creation or passive engagement.
+- **Evidence**:
+  - **Voting/Commenting**: None observed. All interactions are navigational or settings-related.
+  - **Settings Changes**: Attempted to save changes (1.38–1.75s) but no confirmation of success.
+  - **Speed**: Clicks occur within 100–300ms of hover (avg 158ms hover-to-click delay), suggesting premeditated actions.
+
+4. INTERACTION SPEED
+- **Pattern**: Extremely fast with deliberate precision; no accidental clicks.
+- **Evidence**:
+  - **Click Timing**: 12 clicks in 4.9s (avg 408ms between clicks).
+  - **Hover-to-Click**: 119–190ms (avg 150ms) hover duration before clicks.
+  - **Scroll-to-Click**: Clicks follow scrolls within 100–300ms (e.g., 0.82s click after 0.42s scroll).
+  - **Rage Clicks**: 4 clicks in 0.4s (avg 100ms between clicks) at 3.62–4.01s, indicating frustration.
+
+5. CONTENT PREFERENCES
+- **Pattern**: Settings-focused; no content consumption observed.
+- **Evidence**:
+  - **Sections Accessed**:
+    - Notifications (0.82–1.75s)
+    - Profile (2.36–2.79s)
+    - Privacy (3.09–4.52s)
+  - **Ignored**: No evidence of browsing posts, subreddits, or other content types.
+
+6. TYPING BEHAVIOR
+- **Pattern**: No typing observed.
+- **Evidence**:
+  - No text inputs, corrections, or form fields interacted with in the log.
+  - All clicks target static elements (buttons, divs, nav items).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Settings navigation (Notifications, Profile, Privacy tabs).
+  - "Save Changes" button (1.38–1.75s).
+  - Settings Nav (4.52–4.86s).
+- **Ignored**:
+  - No interaction with search, help, account dropdown, or other UI elements.
+  - No evidence of exploring advanced settings or tooltips.
+
+8. SESSION FLOW
+- **Arc**: Task-driven frustration loop with no resolution.
+- **Phases**:
+  1. **Entry (0.0–0.12s)**: Immediate hesitation (119ms click at (0,0))—likely misclick or UI confusion.
+  2. **Exploration (0.16–1.75s)**:
+     - Rapid scrolling (5 scrolls in 1.2s) to scan Notifications settings.
+     - Attempts to save changes (1.38–1.75s) but no confirmation of success.
+  3. **Navigation (1.79–4.52s)**:
+     - Scrolls up (1.79–1.89s) to access Profile tab (2.36s).
+     - Scrolls down (2.72–2.79s) in Profile, then switches to Privacy (3.09s).
+     - **Frustration Peak (3.62–4.01s)**: 4 rage clicks in Privacy tab, suggesting unresponsive UI or unclear options.
+  4. **Exit (4.52–4.86s)**:
+     - Returns to Settings Nav (4.52s) and clicks it (4.86s)—likely an attempt to reset or exit.
+- **Outcome**: Session ends abruptly at 4.9s with no task completion confirmed.
+```
+
+**Key Observations**:
+- **Task Failure**: User attempted to modify settings (Notifications/Profile/Privacy) but encountered UI friction (rage clicks, no save confirmation).
+- **Efficiency vs. Frustration**: High-speed interactions (avg 408ms between actions) suggest a power user, but rage clicks indicate poor UX feedback.
+- **No Content Engagement**: Entire session confined to settings; no browsing or passive consumption.

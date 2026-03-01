@@ -1,0 +1,89 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Highly focused and goal-driven** with minimal exploratory behavior.
+- **Linear progression** through UI elements in a top-to-bottom, right-to-left pattern:
+  1. Top-right "Export" button (0.91s–1.17s)
+  2. Mid-right "Stats Cards" (1.53s–1.65s)
+  3. Left sidebar (2.04s–2.37s)
+  4. Bottom-center "Data Table" (2.93s–3.05s)
+  5. Mid-center "Chart" (3.74s–3.95s)
+- **No backtracking** or revisits to previously clicked elements.
+- **No evidence of menu navigation** (e.g., dropdowns, tabs) or lateral movement.
+
+2. READING BEHAVIOR:
+- **Skimmer with rapid vertical scanning**:
+  - **Scroll speed**: 45–229px/s (avg. ~150px/s across 7 scroll actions).
+  - **Max depth**: 850px (viewport height: 1080px), suggesting partial page coverage.
+  - **No prolonged pauses** (>500ms) at any scroll depth; all scrolls are continuous.
+  - **No horizontal scrolling** or zooming.
+- **No evidence of deep reading**:
+  - No clicks on text content (only UI elements).
+  - No hover durations >200ms on non-interactive content.
+
+3. ENGAGEMENT STYLE:
+- **Action-only engagement** (no passive consumption):
+  - **100% of clicks** target interactive UI elements (buttons, divs, tables, charts).
+  - **No text selection, highlighting, or form input** (e.g., no typing, voting, or commenting).
+  - **No social interactions** (e.g., upvotes, shares, replies).
+- **Click redundancy**:
+  - 5/10 clicks are **duplicate actions** (e.g., "Export" clicked twice at 0.91s and 1.17s).
+  - **Hover-to-click latency**: 67–189ms (avg. 126ms), suggesting deliberate targeting.
+
+4. INTERACTION SPEED:
+- **Extremely fast and deliberate**:
+  - **Action interval**: 0.14–0.53s between clicks (avg. 0.33s).
+  - **First click latency**: 0.44s (after page load), indicating immediate intent.
+  - **No hesitation markers** beyond the initial 442ms "HESITATION" label (likely a tool artifact).
+- **Scroll acceleration**:
+  - Initial scrolls (0.5s–0.58s) cover 45px; later scrolls (1.68s–2.46s) cover 230–250px in the same duration.
+
+5. CONTENT PREFERENCES:
+- **UI functionality over content**:
+  - All interactions target **structural elements** (export, stats, sidebar, table, chart).
+  - **No clicks on**:
+    - Text content (e.g., articles, descriptions).
+    - Images/media.
+    - User-generated content (e.g., comments, posts).
+- **Gravitated toward**:
+  - **Data export** (first interaction at 0.91s).
+  - **Data visualization** ("Chart" at 3.74s, last interaction).
+  - **Tabular data** ("Data Table" at 2.93s).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**:
+  - No form inputs, search queries, or text entry.
+  - No corrections or deletions.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - **Export functionality** (top-right button).
+  - **Stats cards** (mid-right).
+  - **Sidebar navigation** (left).
+  - **Data table** (bottom-center).
+  - **Chart visualization** (mid-center).
+- **Ignored features**:
+  - **Search/filters**: No clicks on search bars or filter dropdowns.
+  - **User account tools**: No clicks on profile, settings, or notifications.
+  - **Help/documentation**: No clicks on tooltips, FAQs, or support links.
+  - **Social features**: No sharing, commenting, or reactions.
+
+8. SESSION FLOW:
+- **Arc**: **Targeted extraction → rapid audit → abrupt exit**.
+  1. **0.0s–0.91s (Orientation)**:
+     - Page load → initial hesitation (442ms) → minimal scroll (90px).
+  2. **0.91s–1.68s (Primary Goal)**:
+     - Immediate focus on **export functionality** (2 clicks, 0.91s–1.17s).
+     - Secondary check of **stats cards** (1.53s–1.65s).
+  3. **1.68s–3.05s (Secondary Audit)**:
+     - Rapid scroll to **sidebar** (2.04s–2.37s) and **data table** (2.93s–3.05s).
+     - Scroll depth peaks at 850px (79% of viewport).
+  4. **3.05s–3.95s (Tertiary Check)**:
+     - Scrolls up to **chart** (3.74s–3.95s), final interaction.
+     - **No exit action** (session ends at 3.9s; likely tool cutoff).
+- **Exit**: Abrupt termination after chart interaction (no logout, no page change).
+```
+
+**SUMMARY**:
+This user exhibits **power-user behavior**—highly efficient, goal-oriented, and non-exploratory. Their session is **data-extraction focused**, prioritizing export, tables, and charts over content consumption. The **lack of typing, social engagement, or deep reading** suggests a **synthetic or automated interaction** (e.g., script, bot, or QA tester), reinforced by the "synthetic/power_user" device label. **No speculative actions** (e.g., curiosity-driven clicks) were observed.

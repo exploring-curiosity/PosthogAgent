@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Linear with Targeted Exploration**: The user follows a clear, sequential path through the dashboard's core components (Sidebar → Stats Cards → Chart → Data Table → Export). While not strictly linear (e.g., revisiting the Sidebar twice), their navigation is purposeful, with minimal backtracking or random clicks.
+- **Component-Focused**: Actions cluster around distinct UI elements (e.g., 3 interactions with "Stats Cards" across 4.34s–7.58s). No evidence of lateral exploration (e.g., clicking unrelated links).
+- **Vertical Dominance**: 100% of scroll actions are vertical (no horizontal movement), suggesting a focus on content depth over breadth.
+
+2. READING BEHAVIOR
+- **Skimmer with Selective Deep Dives**:
+  - **Scroll Speed**: Average scroll rate = **~222px/0.5s** (consistent across 12 scroll actions). This rapid pace (444px/s) indicates skimming, not deep reading.
+  - **Depth Coverage**: Max scroll depth = **880px** (viewport height = 1080px), suggesting they viewed ~81% of the page’s vertical content but likely only read key sections.
+  - **Revisits**: Scrolled back up to specific areas (e.g., 12.87s–13.06s) to re-engage with "Stats Cards" and "Export" button, implying targeted review of high-value content.
+- **No Evidence of Text Consumption**: No text selection, highlighting, or pauses >1s on static text (e.g., no dwell time on paragraphs).
+
+3. ENGAGEMENT STYLE
+- **Action-Oriented, No Passive Engagement**:
+  - **No Voting/Commenting**: Zero interactions with voting buttons, comment fields, or social features.
+  - **Click-Only Engagement**: All interactions are clicks (10 total) or hovers (4 total), with no form submissions, typing, or drag-and-drop actions.
+  - **Hover-Before-Click Pattern**: 4/10 clicks preceded by hovers (avg hover duration = **565ms**), suggesting deliberate targeting of UI elements.
+- **Ratio**: N/A (no voting/commenting).
+
+4. INTERACTION SPEED
+- **Deliberate with Hesitations**:
+  - **Action Intervals**: Avg time between clicks = **1.6s** (excluding hesitations). Fastest interval = **0.04s** (3.27s–3.31s, Sidebar clicks), slowest = **3.46s** (6.8s–10.12s, between Stats Cards and Chart).
+  - **Hesitations**: 3 instances of "[HESITATION Xms]" (avg = **1,336ms**), all preceding clicks on the page (not UI elements). These pauses (24% of session duration) suggest cognitive processing or distraction.
+  - **Scroll Latency**: Scrolls initiated **immediately** after clicks (e.g., 7.58s click → 7.64s scroll), indicating pre-planned navigation.
+
+5. CONTENT PREFERENCES
+- **Data-Centric Components**:
+  - **Primary Focus**: Dashboard analytics tools:
+    - **Stats Cards**: 3 interactions (4.34s–7.58s).
+    - **Chart**: 2 interactions (8.21s–10.63s).
+    - **Data Table**: 2 interactions (11.63s–12.8s).
+  - **Secondary Focus**: Sidebar (2 interactions, 1.77s–3.27s) and Export (2 interactions, 13.84s–14.5s).
+- **Ignored Content**: No clicks on:
+  - Navigation menus (beyond Sidebar).
+  - Help/tooltips, user profile, or settings.
+  - Images/media (if present).
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**:
+  - Zero keystrokes, form inputs, or search queries.
+  - No evidence of corrections, deletions, or pauses for typing.
+
+7. FEATURE DISCOVERY
+- **Discovered and Used**:
+  - **Sidebar Navigation**: Used twice (1.77s, 3.27s).
+  - **Stats Cards**: Hovered and clicked (4.34s, 7.58s).
+  - **Chart Visualization**: Hovered and clicked (8.21s, 10.63s).
+  - **Data Table**: Hovered and clicked (11.63s, 12.8s).
+  - **Export Function**: Hovered and clicked (13.84s, 14.5s).
+- **Ignored Features**:
+  - **Search/Filter**: No interactions.
+  - **User Customization**: No clicks on settings, themes, or profile.
+  - **Notifications/Alerts**: No engagement.
+  - **Collaborative Tools**: No sharing, tagging, or comments.
+
+8. SESSION FLOW
+- **Arc**: **Targeted Data Extraction → Abrupt Exit**
+  1. **Orientation (0.0s–1.77s)**:
+     - Loads dashboard, hesitates (799ms), scrolls rapidly to assess layout (0.87s–0.96s).
+     - First click on Sidebar (1.77s) after 568ms hover.
+  2. **Component Sampling (1.77s–4.34s)**:
+     - Clicks Sidebar twice (1.77s, 3.27s), scrolls up/down to explore vertical space.
+     - Hesitates (631ms) before next action.
+  3. **Data Engagement (4.34s–12.8s)**:
+     - Focuses on **Stats Cards** (4.34s–7.58s), **Chart** (8.21s–10.63s), and **Data Table** (11.63s–12.8s).
+     - Longest hesitation (2,464ms at 6.8s) precedes Chart interaction.
+     - Scrolls to max depth (880px) for Data Table, then scrolls back up.
+  4. **Exit Preparation (12.8s–14.5s)**:
+     - Scrolls to top (12.87s–13.06s), hovers over Export button (638ms), clicks twice (13.84s–14.5s).
+     - Session ends immediately after Export click (no confirmation or follow-up).
+- **Exit Trigger**: Likely completed primary goal (data extraction via Export). No evidence of frustration or abandonment.
+
+SUMMARY
+This user exhibits **highly methodical, goal-driven behavior** with a focus on **data extraction**. Their navigation is **linear and component-specific**, prioritizing analytics tools (Stats Cards, Chart, Data Table) over exploratory browsing. **Rapid scrolling** and **hover-before-click** patterns suggest familiarity with dashboards but not necessarily the specific UI. **Hesitations** indicate cognitive processing, possibly due to unfamiliarity with the layout or decision-making. The session concludes **abruptly after achieving the Export goal**, with no lingering or secondary tasks.
+```

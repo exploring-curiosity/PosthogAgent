@@ -1,0 +1,60 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-directed with minimal deviation.
+- Proceeds sequentially through checkout form fields (Cart Summary → Email → Card Number → Pay Now → Back to Shop).
+- No exploratory detours, backtracking, or revisits to prior sections.
+- Scrolling is strictly vertical (no horizontal movement) and tightly coupled to form progression.
+
+2. READING BEHAVIOR
+- Skimming dominant; no evidence of deep reading.
+- Scroll velocity: 122–124 px/s (consistent across all scroll bursts).
+- Max scroll depth (976 px) reached in 7.67 s, covering ~81% of viewport height (1080 px) in under 8 s.
+- No pauses >500 ms at any scroll depth, suggesting no sustained content absorption.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social interactions observed (session is checkout-only).
+- Interaction limited to form field clicks and button presses.
+- Click-to-hover ratio: 1.0 (every hover precedes a click within 338–688 ms).
+- Dead click at 2.85 s (1402, 834) indicates misaligned expectation or UI lag.
+
+4. INTERACTION SPEED
+- Deliberate but methodical; median inter-action interval: 540 ms (IQR: 338–688 ms).
+- Hesitation markers:
+  • 623 ms pre-first click (0.62 s).
+  • 688 ms hover before Cart Summary (1.69 s).
+  • 549 ms hover before Card Number (5.16 s).
+- No rapid-fire clicks; all interactions spaced >300 ms apart.
+
+5. CONTENT PREFERENCES
+- Checkout-specific content only:
+  • Cart Summary (2 clicks, 1.69–2.54 s).
+  • Email field (2 clicks, 3.54–4.13 s).
+  • Card Number field (2 clicks, 5.16–6.33 s).
+  • Pay Now button (2 clicks, 7.05–7.45 s).
+  • Back to Shop link (2 clicks, 8.54–9.7 s).
+- No product pages, reviews, or ancillary content accessed.
+
+6. TYPING BEHAVIOR
+- No keystrokes logged; session ends before any text input occurs.
+- Input fields clicked but not populated.
+
+7. FEATURE DISCOVERY
+- Used features:
+  • Cart Summary toggle (2 clicks).
+  • Form fields (Email, Card Number).
+  • Primary CTA (Pay Now).
+  • Exit link (Back to Shop).
+- Ignored features:
+  • No promo code field, shipping options, or upsells.
+  • No help/chat widgets or secondary navigation.
+
+8. SESSION FLOW
+- Arc: Linear progression → form friction → premature exit.
+  • 0.0–1.69 s: Initial scan (scroll to 309 px).
+  • 1.69–7.45 s: Form navigation (Cart → Email → Card → Pay).
+  • 7.45–9.7 s: Abrupt exit (scroll to 976 px, click Back to Shop).
+- Exit velocity: 1.25 s from final scroll to exit click (8.54–9.7 s).
+- No confirmation page or post-purchase actions observed.
+```

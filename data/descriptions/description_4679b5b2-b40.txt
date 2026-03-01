@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. Initial exploration appears methodical (scrolling down systematically) but devolves into rapid, repetitive interactions (rage clicks) in the final 1.5 seconds.
+- **Key evidence**:
+  - 4 distinct scroll "bursts" (2.22s–2.42s, 4.31s–4.43s, 5.83s–6.03s) with consistent 0.5s intervals between scroll steps.
+  - 7 rage clicks on the sidebar in the last 0.45s (7.37s–7.82s), suggesting frustration or a broken UI element.
+  - No return to previously viewed content; all interactions are forward-moving or repetitive.
+
+2. READING BEHAVIOR
+- **Skimmer with superficial engagement**: Scroll patterns indicate rapid scanning rather than deep reading.
+- **Key evidence**:
+  - Scroll speed: ~218px/0.5s (436px/s) during downward scrolls (2.22s–2.42s, 5.83s–6.03s).
+  - Max scroll depth: 753px (6.03s), but no pauses >0.5s to suggest content absorption.
+  - Immediate upward scroll (4.31s–4.43s) after chart interaction, implying no intent to read below the fold.
+  - No text selection, highlighting, or dwell time on specific elements.
+
+3. ENGAGEMENT STYLE
+- **Action-oriented, no content creation**: The user interacts with UI elements (charts, export buttons, sidebar) but shows no evidence of voting, commenting, or inputting text.
+- **Key evidence**:
+  - 100% of clicks target interactive controls (charts, export, sidebar).
+  - No text input, upvotes, or comment submissions detected.
+  - Hover times (101ms–218ms) suggest cursory evaluation before clicking.
+
+4. INTERACTION SPEED
+- **Accelerating impulsivity**: Initial actions are deliberate (2.18s hesitation), but speed increases over time, culminating in rage clicks.
+- **Key evidence**:
+  - **Early session**: 2.18s hesitation before first click; 1.51s between first and second chart clicks (2.78s–4.27s).
+  - **Mid-session**: 0.98s between export hover and click (4.67s–5.79s).
+  - **Late session**: 0.1s intervals between rage clicks (7.37s–7.82s).
+  - Average time between actions: 0.87s (excluding rage clicks).
+
+5. CONTENT PREFERENCES
+- **Data/visualization focus**: The user prioritizes chart interactions and export functionality, suggesting interest in data analysis or reporting.
+- **Key evidence**:
+  - 40% of non-scroll actions target charts (2.78s, 4.27s).
+  - 20% target export functionality (4.67s, 5.79s).
+  - No engagement with textual content, navigation menus, or other UI elements beyond the sidebar (which triggered rage clicks).
+
+6. TYPING BEHAVIOR
+- **N/A**: No typing, text input, or form submissions detected in the session.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Charts (clicked twice, 2.78s and 4.27s).
+  - Export button (hovered and clicked, 4.67s–5.79s).
+  - Sidebar (triggered rage clicks, 7.37s–7.82s).
+- **Ignored features**:
+  - Navigation menus (no clicks on headers/footers).
+  - Search bars (no interactions).
+  - Textual content (no dwell time or selection).
+  - Any elements below 753px (max scroll depth).
+
+8. SESSION FLOW
+- **Arc**: **Mechanical exploration → Targeted interaction → Frustration loop → Abrupt exit**
+  - **0.0s–2.18s (Load & Hesitation)**: Page load followed by 2.18s pause (potential confusion or distraction).
+  - **2.18s–4.67s (Exploration)**: Systematic downward scroll (2.22s–2.42s), chart interaction (2.78s), upward scroll (4.31s–4.43s), and export hover (4.67s).
+  - **4.67s–6.23s (Targeted Action)**: Export click (5.79s), rapid downward scroll (5.83s–6.03s), sidebar hover (6.23s).
+  - **6.23s–7.82s (Frustration)**: Sidebar clicks escalate to 7 rage clicks in 0.45s, ending with no further actions.
+- **Exit**: Session terminates immediately after rage clicks, suggesting abandonment due to frustration or task completion failure.
+```
+
+**Summary**: This user exhibited behavior consistent with a **task-driven scanner** (likely a synthetic bot or automated script) attempting to extract data (charts/exports) but failing to complete the workflow, leading to rapid, repetitive interactions (rage clicks) on a non-responsive UI element. No human-like reading, typing, or content engagement was observed.

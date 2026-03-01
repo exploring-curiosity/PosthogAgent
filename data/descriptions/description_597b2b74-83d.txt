@@ -1,0 +1,89 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with focused bursts**: The user exhibits a non-linear, exploratory pattern with repeated returns to hesitation points (0s, 5.46s, 11.43s, 19.15s, 26.5s). They jump between sidebar (3.62s, 7.9s), data table (9.69s, 14.35s), stats cards (16.54s, 21.15s), and chart (23.6s) elements, suggesting trial-and-error navigation.
+- **Revisitation rate**: 4/9 primary interactions (44%) were repeat clicks on the same UI elements (sidebar, data table, stats cards, chart), indicating either confirmation-seeking behavior or difficulty locating functionality.
+- **Spatial consistency**: Clicks cluster in three vertical zones:
+  - Left sidebar (x=287px)
+  - Central data table (x=395px)
+  - Right-side stats/cards (x=618px)
+  No horizontal exploration beyond these zones.
+
+2. READING BEHAVIOR:
+- **Skim-heavy with shallow dives**: Scroll patterns show rapid vertical movement with minimal dwell time:
+  - **Initial scan**: 0-2.17s: 286px in 0.66s (433px/s)
+  - **Secondary scan**: 7.95-8.14s: 504px in 0.24s (2100px/s)
+  - **Tertiary scan**: 21.81-21.98s: 203px in 0.17s (1194px/s)
+- **Max depth**: 790px (41% of 1920px viewport height), suggesting content was either truncated or user lost interest beyond this point.
+- **No deep reading**: No scroll pauses >1s; all scrolls are continuous with 0.5s duration per 90-100px segment.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement** (e.g., voting/commenting) observed. All interactions are navigational clicks.
+- **Interaction types**:
+  - **Exploratory clicks**: 6/14 (43%) with hover hesitation (avg 1400ms hover before click)
+  - **Confirmatory clicks**: 4/14 (29%) without hesitation
+  - **Frustration clicks**: 6/14 (43%) rage clicks on stats cards (21.26-21.77s)
+- **Click latency**: Avg 2.2s between primary actions (excluding rage clicks).
+
+4. INTERACTION SPEED:
+- **Deliberate with frustration spikes**:
+  - **Hesitation clusters**: 5 instances of 1215-2899ms pauses (avg 1920ms) before clicks, suggesting decision paralysis or UI confusion.
+  - **Execution speed**:
+    - Scrolls: 90-100px/0.5s (consistent 180-200px/s)
+    - Clicks: 100-300ms between rage clicks (21.26-21.77s)
+- **Session pacing**: 14 primary actions in 31.2s (0.45 actions/s), with 63% of time spent in hesitation/hover.
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward data-dense elements**:
+  - **Data Table**: 2 clicks (9.69s, 14.35s) with hover hesitation
+  - **Stats Cards**: 2 clicks (16.54s, 21.15s) + 6 rage clicks
+  - **Chart**: 2 clicks (23.6s, 27.9s) with hover hesitation
+- **Ignored**:
+  - Top navigation (no clicks)
+  - Page body text (all "[HESITATION]" clicks at (0,0) suggest accidental or placeholder clicks)
+  - Footer (no scroll depth beyond 790px)
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: All actions are clicks/scrolls. No text input, corrections, or form interactions observed.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - Sidebar navigation (2 clicks)
+  - Data table interaction (2 clicks)
+  - Stats cards (8 total interactions)
+  - Chart visualization (2 clicks)
+  - Export functionality (2 clicks at 29.67s, 31.2s)
+- **Ignored features**:
+  - Search (no clicks)
+  - Filters/sorting (no table header interactions)
+  - Help/documentation (no clicks)
+  - User account menu (no clicks)
+
+8. SESSION FLOW:
+- **Phase 1: Orientation (0-3.62s)**
+  - Loads dashboard, immediate scroll to 286px (2.17s)
+  - Hesitation click (2.01s) suggests UI unfamiliarity
+  - Sidebar hover (3.62s) indicates initial navigation attempt
+
+- **Phase 2: Exploration (3.62-16.54s)**
+  - Tests sidebar (3.62s, 7.9s) and data table (9.69s, 14.35s)
+  - Scrolls rapidly (7.95-8.14s) to 790px max depth
+  - Returns to top (14.4-14.56s) via rapid scroll-up (644px in 0.16s)
+
+- **Phase 3: Frustration (16.54-21.77s)**
+  - Stats cards hover (16.54s) followed by 6 rage clicks (21.26-21.77s)
+  - Hesitation spike (2609ms at 19.15s) precedes rage behavior
+  - Attempts to scroll away (21.81-21.98s) but returns to cards
+
+- **Phase 4: Exit (23.6-31.2s)**
+  - Final chart interaction (23.6s, 27.9s)
+  - Scrolls to top (27.98-28.01s) for export button
+  - Exports data (29.67s, 31.2s) and exits
+
+KEY OBSERVATIONS:
+- **Frustration markers**: 6 rage clicks on stats cards (21.26-21.77s) with 100-300ms intervals.
+- **Hesitation hotspots**: 5/14 primary actions (36%) preceded by >1200ms hover.
+- **Export as goal**: Only feature used twice in succession (29.67s, 31.2s) with no hesitation.
+- **No content creation**: Purely consumptive/extractive behavior.
+```

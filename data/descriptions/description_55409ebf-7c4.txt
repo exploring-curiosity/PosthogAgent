@@ -1,0 +1,89 @@
+```
+BEHAVIORAL PROFILE: CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly erratic and non-linear, with repeated cycles of focused interaction followed by abrupt shifts.
+- Initial approach: Linear progression (email input → cart summary → pay button) but immediately disrupted by repeated clicks on the same elements.
+- Later phases: Scattered, with rapid toggling between "Pay Now" and "Back to Shop" (5+ clicks on each in under 3s).
+- No sustained engagement with any single element; 67% of clicks (24/36) occurred on just 3 elements (Pay Now, Back to Shop, Cart Summary).
+- Scrolling behavior: Aggressive vertical scanning (max depth 994px in 14.6s) with no horizontal movement detected.
+
+2. READING BEHAVIOR
+- Skimming confirmed:
+  - Average scroll speed: 1,120px/second (e.g., 0-682px in 1.3s at [2.04-2.28s]).
+  - No pauses >500ms at any scroll depth (typical for deep reading).
+  - Max depth (994px) suggests full-page scan, but achieved in 4.97s from initial load.
+- Content engagement metrics:
+  - 0 instances of text selection or copy actions.
+  - 87% of scrolls (13/15) occurred in <0.5s bursts, with no sustained viewing at any depth.
+
+3. ENGAGEMENT STYLE
+- No traditional "engagement" (voting/commenting) detected - this is a checkout flow.
+- Interaction patterns reveal:
+  - Frustration-driven clicks: 11 rage clicks (30% of total clicks) on "Pay Now" ([3.58-4.11s]) and "Back to Shop" ([14.02-14.56s]).
+  - Hesitation markers: 3 instances of [HESITATION] tags (877ms, 2156ms, 1746ms) at [0.88s], [7.48s], and [10.88s].
+  - Click redundancy: 62% of elements were clicked 2+ times (e.g., "Email" clicked 4x, "Pay Now" 8x).
+- No form completion detected beyond initial email field focus.
+
+4. INTERACTION SPEED
+- Hyper-accelerated with erratic pacing:
+  - Average action interval: 406ms (excluding hesitations).
+  - Peak speed: 5 clicks in 1.3s on "Pay Now" ([3.58-4.11s]).
+  - Slowest deliberate action: 2156ms hesitation at [7.48s].
+- Mouse movement:
+  - Hover times: 42-147ms (median 70ms) - below typical human reaction thresholds.
+  - Coordinates show ±5px jitter on repeated clicks (e.g., "Pay Now" at y=725±2px).
+
+5. CONTENT PREFERENCES
+- Checkout-specific elements only:
+  - Primary targets: "Pay Now" button (13 clicks), "Back to Shop" link (10 clicks), "Cart Summary" (4 clicks).
+  - Secondary: Email input field (4 clicks).
+  - Ignored elements:
+    - No interaction with payment fields (credit card, shipping address).
+    - No clicks on product listings, promo codes, or help links.
+    - No engagement with static text (e.g., terms, policies).
+
+6. TYPING BEHAVIOR
+- No typing detected:
+  - Email field clicked 4x but no keystrokes recorded.
+  - No backspaces, corrections, or input validation actions.
+  - All form fields remained blank throughout session.
+
+7. FEATURE DISCOVERY
+- Discovered features (used):
+  - Primary checkout flow: Email input → Cart Summary → Pay Now.
+  - Escape route: "Back to Shop" link (discovered at [5.33s]).
+- Ignored features:
+  - Payment methods (no clicks on card fields or payment buttons).
+  - Shipping options (no scroll pauses in shipping section).
+  - Promotional elements (no hovers on discounts/offers).
+  - Support/chat widgets (no interactions).
+
+8. SESSION FLOW ARC
+[0.0-2.55s] False Start (Linear Progression)
+- Loads checkout page → immediate hesitation (877ms) → scrolls to bottom → attempts email input → clicks "Pay Now" once.
+- Duration: 2.55s | Actions: 8 | Click redundancy: 2x on email.
+
+[2.55-4.77s] First Frustration Spike
+- 5 rage clicks on "Pay Now" in 1.3s → scrolls back to top → clicks "Cart Summary" twice.
+- Duration: 2.22s | Actions: 10 | Rage clicks: 5 | Scroll direction: Reversed (down→up).
+
+[4.77-7.75s] Exploratory Detour
+- Discovers "Back to Shop" → hesitation (2156ms) → clicks link once.
+- Duration: 2.98s | Actions: 7 | New feature discovered: 1.
+
+[7.75-11.01s] Repetition Loop
+- Returns to email field → scrolls to "Pay Now" → hesitation (1746ms) → clicks "Pay Now" once.
+- Duration: 3.26s | Actions: 11 | Hesitation: 1 | Scroll distance: 804px.
+
+[11.01-14.56s] Terminal Frustration
+- 6 rage clicks on "Back to Shop" in 3.55s → session ends.
+- Duration: 3.55s | Actions: 12 | Rage clicks: 6 | Click redundancy: 4x on "Back to Shop".
+
+KEY METRICS SUMMARY
+- Session efficiency: 0% (no conversion, no form completion).
+- Frustration indicators: 11 rage clicks (30% of total clicks), 3 hesitations >800ms.
+- Scroll distance: 994px in 14.6s (68px/s average).
+- Click density: 2.47 clicks/second (peak: 3.85 clicks/s).
+- Feature usage: 2/10+ available features (20% discovery rate).
+```

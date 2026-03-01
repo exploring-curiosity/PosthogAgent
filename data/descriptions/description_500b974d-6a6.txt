@@ -1,0 +1,130 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Cyclical, deliberate, and exploratory with hesitation*
+- **Non-linear but structured**: The user oscillates between sections (Settings → Profile → Privacy → Notifications) rather than following a linear path. Each section is revisited after initial exploration (e.g., "Settings Nav" clicked twice at [3.26s] and [5.77s]).
+- **Hover-heavy**: 4/10 clicks are preceded by prolonged hovers (avg. **1,056ms**), indicating uncertainty or evaluation before committing to an action.
+- **Scattered focus**: Jumps between unrelated settings (e.g., Profile [7.58s] → Privacy [12.14s] → Notifications [21.6s]) without clear progression.
+- **Revisitation rate**: 3/5 sections are clicked twice (Settings, Profile, Notifications), suggesting either:
+  - Confirmation-seeking behavior (e.g., double-clicking "Profile" at [7.58s] and [11.14s]).
+  - Navigation errors (e.g., clicking "Settings Nav" twice within 2.5s).
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skimmer with rapid vertical scanning; no deep reading*
+- **Scroll speed**: Avg. **1,000px/s** (e.g., 150px → 751px in **2.23s** at [2.18s–2.41s]), far exceeding typical reading speeds (~200–300px/s for deep reading).
+- **Scroll depth**:
+  - **Max depth per section**:
+    - Settings: 751px (full page).
+    - Profile: 721px (partial).
+    - Privacy: 990px (full).
+    - Notifications: 475px (partial).
+  - **No sustained pauses**: Scrolls are continuous (0.5s intervals) with no >1s pauses to suggest reading.
+- **Bidirectional scrolling**: Repeatedly scrolls up/down within sections (e.g., Privacy: down to 990px [14.51s], then up to 475px [20.67s]), likely scanning for visual anchors (e.g., buttons, headers).
+- **No horizontal scrolling**: Suggests reliance on vertical layout cues.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *No content creation; passive interaction with UI controls*
+- **No voting/commenting**: The session involves **only navigation and settings adjustments**—no evidence of content consumption (e.g., posts, comments) or creation (e.g., typing, upvotes).
+- **Primary actions**:
+  - **Clicks on UI elements**: 10 clicks total, all on navigation/div buttons (e.g., "Profile," "Save Changes").
+  - **No form inputs**: Despite visiting "Profile" and "Privacy," no text entry or checkbox toggles are recorded.
+- **Hesitation markers**: 4/10 clicks are labeled with "[HESITATION Xms]" (avg. **1,621ms**), suggesting:
+  - Uncertainty about button functionality.
+  - Possible synthetic behavior (e.g., automated testing with simulated delays).
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Slow and deliberate with artificial delays*
+- **Time between actions**:
+  - **Avg. 2.8s** between non-scroll actions (e.g., 2.15s → 3.26s = 1.11s; 11.14s → 12.14s = 1.0s).
+  - **Hover delays**: Avg. **1,056ms** before clicks (e.g., "Save Changes" hover = 1,997ms).
+  - **Hesitation delays**: Avg. **1,621ms** (e.g., 2,158ms before clicking "Profile" at [9.74s]).
+- **Scroll intervals**: Fixed at **0.5s** between scroll steps, likely automated (human scrolls are rarely this precise).
+- **Outliers**:
+  - Fastest click interval: **0.04s** (double-click on "Profile" at [11.14s]).
+  - Longest pause: **2.16s** (hesitation before "Profile" at [9.74s]).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *Settings-focused; no content consumption*
+- **Sections visited**:
+  1. **Settings** (default landing page).
+  2. **Profile** (clicked at [7.58s], [11.14s]).
+  3. **Privacy** (clicked at [12.14s], [14.36s]).
+  4. **Notifications** (clicked at [21.6s], [25.72s]).
+- **No content engagement**: No evidence of:
+  - Post/comment viewing.
+  - Subreddit/subscription interactions.
+  - Media consumption (e.g., images, videos).
+- **Assumed priority**: Privacy and Notifications (spent **11.5s** combined) may indicate higher interest in account control.
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *No typing detected*
+- **Zero text inputs**: No keystrokes, corrections, or form submissions recorded.
+- **Implications**:
+  - Either the user only navigated without editing settings.
+  - Or the recording omitted typing events (unlikely given the granularity of other actions).
+
+---
+
+### 7. FEATURE DISCOVERY
+**Features used**:
+- **Navigation menu**: "Settings Nav," "Profile," "Privacy," "Notifications."
+- **Save button**: "Save Changes" (clicked twice at [16.82s], [20.49s]).
+- **Scrolling**: Vertical only, no horizontal or zoom gestures.
+
+**Features ignored**:
+- **Content feed**: No interaction with posts, comments, or subreddits.
+- **Search/filters**: No evidence of search bar usage.
+- **User profile edits**: Despite visiting "Profile," no form fields were modified.
+- **Advanced settings**: No clicks on sub-menus (e.g., "Account," "Security").
+
+---
+
+### 8. SESSION FLOW
+**Arc**: *Mechanical exploration → Hesitant interaction → Abrupt exit*
+1. **Initial landing (0–2.15s)**:
+   - Page load at `/settings`.
+   - **2.15s hesitation** before first click (likely synthetic delay).
+2. **Rapid scanning (2.18–3.26s)**:
+   - Scrolls full page (0px → 751px) in **2.23s**.
+   - Clicks "Settings Nav" after **585ms hover**.
+3. **Cyclical navigation (3.26–14.51s)**:
+   - Jumps between Settings → Profile → Privacy.
+   - **610ms hesitation** before clicking "Profile" ([3.87s]).
+   - Scrolls Privacy section to **990px** ([14.51s]).
+4. **Attempted action (14.51–20.67s)**:
+   - Hovers over "Save Changes" for **1,997ms** ([16.82s]).
+   - Clicks "Save Changes" after **1,558ms hesitation** ([20.49s]).
+   - Scrolls up to **475px** ([20.67s]).
+5. **Final exploration (21.6–25.72s)**:
+   - Clicks "Notifications" after **600ms hover** ([21.6s]).
+   - **1,570ms hesitation** before final click ([23.17s]).
+   - Session ends at **25.72s** with no confirmation of saved changes.
+
+**Key observations**:
+- **No clear goal**: Actions suggest exploration rather than task completion (e.g., no settings saved despite clicking "Save Changes").
+- **Artificial delays**: Hover/hesitation times are suspiciously uniform (e.g., 600ms, 610ms, 622ms), implying synthetic behavior.
+- **Abrupt exit**: Session ends mid-interaction with "Notifications," with no logout or navigation away.
+
+---
+### SUMMARY
+This user exhibits **highly synthetic, cautious-exploratory behavior** with:
+- **Mechanical navigation** (fixed scroll intervals, uniform hesitation times).
+- **No content engagement** (only UI controls clicked).
+- **No typing or form submissions**.
+- **Likely automated or scripted** (e.g., QA testing, bot with simulated human delays).
+- **No deep reading** (rapid scrolling, no pauses).
+- **No clear intent** (actions are exploratory, not goal-driven).
+```

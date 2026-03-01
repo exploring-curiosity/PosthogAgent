@@ -1,0 +1,55 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated clicks on the same elements (e.g., "Features" and "Testimonials" clicked twice each within milliseconds). However, the session is artificially constrained by the synthetic/scanner nature of the device, which may override natural browsing behavior.
+   - **Vertical dominance**: Movement is primarily vertical (scrolling) with no horizontal exploration or lateral content discovery.
+   - **Revisitation**: Returns to the "Hero Title" twice (5.0s and 8.35s), suggesting either forced interaction or an attempt to trigger a response.
+
+2. READING BEHAVIOR:
+   - **Skimmer with rapid scanning**: Scrolls at a consistent speed (≈380px/0.5s) through 772px of content in 2.5s (1.11s–3.61s), indicating no deep reading. Max scroll depth (772px) suggests they reached the bottom of the page but did not pause to absorb content.
+   - **No dwell time**: No pauses >500ms between scrolls or clicks, implying no sustained engagement with text or visuals.
+   - **Backtracking**: Scrolls upward abruptly (4.38s–4.45s) from 772px to 180px, possibly to re-examine the "Hero Title" or reset position.
+
+3. ENGAGEMENT STYLE:
+   - **No traditional engagement**: No votes, comments, or submissions detected. All interactions are clicks or scrolls.
+   - **Hover delays**: Pre-click hovers (234ms for "Features," 165ms for "Testimonials," 362ms for "Hero Title") suggest either synthetic delay injection or deliberate targeting, but no follow-through (e.g., form submission, navigation).
+   - **Click redundancy**: Clicks the same elements twice in quick succession (e.g., "Features" at 1.64s and 2.49s), which may indicate a scripted retry or failed interaction.
+
+4. INTERACTION SPEED:
+   - **Rapid but inconsistent**: Average time between actions: **1.04s** (excluding the 2.07s hesitation at 7.07s).
+     - Fastest interval: 0.03s (1.19s–1.22s, between scrolls).
+     - Longest interval: 2.07s (7.07s–8.35s, labeled as "[HESITATION]").
+   - **Synthetic pacing**: Scrolls occur in fixed 0.5s durations (1.11s–2.61s), suggesting automated or scripted behavior rather than human variability.
+
+5. CONTENT PREFERENCES:
+   - **Gravitated toward structural elements**:
+     - "Features" section (clicked twice at 1.64s and 2.49s).
+     - "Testimonials" div (clicked twice at 2.91s and 4.35s).
+     - "Hero Title" (clicked twice at 5.0s and 8.35s).
+   - **No content-specific focus**: Interactions target generic page sections (likely buttons/links) rather than specific articles, products, or text blocks. No evidence of reading or evaluating content.
+
+6. TYPING BEHAVIOR:
+   - **No typing detected**: No text inputs, corrections, or form submissions observed in the log.
+
+7. FEATURE DISCOVERY:
+   - **Used features**:
+     - Scrolling (vertical navigation).
+     - Clicking on "Features," "Testimonials," and "Hero Title" (likely links/buttons).
+   - **Ignored features**:
+     - No navigation to other pages (e.g., no menu clicks, footer links, or external redirects).
+     - No search, filters, or interactive widgets (e.g., sliders, dropdowns).
+     - No social sharing, bookmarking, or account-related actions.
+
+8. SESSION FLOW:
+   - **0.0s–1.07s (Load → Hesitation)**: Page loads; 1.07s delay before first click at (0,0), possibly a synthetic "warm-up" or script initialization.
+   - **1.11s–2.91s (Rapid Scanning)**: Scrolls through 772px of content in 1.8s, clicks "Features" twice (1.64s, 2.49s) with no navigation.
+   - **2.91s–4.35s (Targeted Clicks)**: Clicks "Testimonials" twice (2.91s, 4.35s), then scrolls upward abruptly.
+   - **4.38s–8.35s (Re-engagement → Exit)**: Returns to "Hero Title" (5.0s), hesitates for 2.07s (7.07s), clicks "Hero Title" again (8.35s), then session ends.
+   - **Arc**: **Forced interaction → Scripted scanning → Redundant clicks → Abrupt exit**. No organic exploration, engagement, or conversion. Likely a synthetic test or scanner rather than a human user.
+```
+
+**Key Observations**:
+- **Synthetic signatures**: Fixed scroll durations, repeated clicks on the same coordinates, and (0,0) clicks suggest automated testing or a scanner.
+- **No human traits**: Lack of typing, no content engagement, and mechanical pacing rule out typical user behavior.
+- **Purpose unclear**: Could be a health check, accessibility audit, or bot testing UI responsiveness. No evidence of intent to consume or interact with content.

@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and erratic**: The user exhibits no clear linear or exploratory path. Movement is characterized by rapid, repetitive interactions with the same UI elements (e.g., 10 rage clicks on the "Sidebar" and "Chart" in <1s intervals).
+- **Element fixation**: 63% of clicks (17/27) target just 4 UI components ("Data Table," "Sidebar," "Chart," "Stats Cards"), with no evidence of broader exploration.
+- **Dead clicks**: 2 instances (3.31s, 7.7s) at coordinates (569,1301) and (368,1293) suggest clicks on non-interactive or invisible elements.
+
+2. READING BEHAVIOR
+- **Skim-only**: No evidence of deep reading.
+  - Scroll depth: Max 766px (38% of 1920px viewport height) in first 0.85s, followed by rapid upward scrolling (5.22s–5.3s: 366px→99px in 0.3s).
+  - Scroll speed: 150–300px/s (e.g., 0.57s–0.62s: 383px in 0.05s), consistent with visual scanning rather than content absorption.
+  - No pauses >200ms between scrolls; average scroll duration = 0.5s.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or submissions detected.
+- **Frustration-driven interactions**:
+  - Rage clicks: 13 instances (3.82s–9.82s), clustered on "Sidebar" (5x), "Chart" (6x), and "Stats Cards" (4x).
+  - Hover-to-click latency: 49–121ms (median 80ms), suggesting impulsive rather than deliberate actions.
+- **Repetitive clicking**: 42% of clicks (11/26) are duplicates (e.g., "Data Table" clicked 4x in 1.1s at 0.85s–1.97s).
+
+4. INTERACTION SPEED
+- **Hyper-fast**: Median inter-action time = 0.34s (excluding scrolls).
+  - Fastest sequence: 5 rage clicks on "Sidebar" in 0.28s (3.82s–4.1s).
+  - Slowest deliberate action: 0.49s hesitation before first click (0.0s–0.49s).
+- **Scroll acceleration**: Initial scrolls (0.57s–0.85s) cover 766px in 0.28s; later scrolls (e.g., 5.22s–5.3s) cover 267px in 0.3s.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: All interactions target UI controls, not content.
+  - Clicked elements: "Data Table" (4x), "Sidebar" (6x), "Chart" (5x), "Export" (3x), "Stats Cards" (2x).
+  - No clicks on textual content, images, or links.
+- **Spatial bias**: 70% of clicks occur in the right half of the viewport (x > 960px), suggesting focus on peripheral UI (e.g., "Export" button at x=1812).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No input fields, search bars, or text areas interacted with.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (14 instances, 52% of actions).
+  - Clickable UI elements: "Export" (3x), "Data Table" (4x), "Chart" (5x), "Sidebar" (6x), "Stats Cards" (2x).
+- **Ignored features**:
+  - Navigation menus (no clicks on headers/footers).
+  - Search/filters (no interactions).
+  - Help/tooltips (no hovers >200ms).
+  - Mobile-specific elements (e.g., hamburger menus).
+
+8. SESSION FLOW
+- **Phase 1: Disoriented Exploration (0.0s–2.37s)**
+  - Loads dashboard, hesitates (495ms), then rapidly scrolls down (766px in 0.28s) and up.
+  - Clicks "Data Table" 4x in 1.12s (0.85s–1.97s), suggesting confusion over functionality.
+- **Phase 2: Frustration Escalation (2.37s–5.54s)**
+  - Shifts to "Sidebar" (6 clicks in 1.34s, including 5 rage clicks at 3.82s–4.1s).
+  - Attempts "Chart" (5 clicks in 0.81s, 4 rage clicks at 4.64s–5.15s).
+  - Scrolls erratically (366px→99px in 0.3s at 5.22s–5.3s).
+- **Phase 3: Desperate Feature Testing (5.54s–9.82s)**
+  - Clicks "Export" 3x in 0.83s (5.54s–6.37s), then returns to "Chart" (2x at 6.78s–6.98s).
+  - Final rage clicks on "Stats Cards" (4x in 0.32s at 9.59s–9.82s).
+- **Exit**: Session ends abruptly after rage clicks; no logout or navigation away.
+
+SUMMARY
+This is a **synthetic/impulsive user** exhibiting **frustration-driven, non-goal-oriented behavior**. Key traits:
+- **Zero content engagement**: All interactions are with UI controls.
+- **Extreme speed**: Median 0.34s between actions; 13 rage clicks in 6s.
+- **Repetitive patterns**: 42% of clicks are duplicates on the same element.
+- **No reading**: Scrolls at 150–300px/s with no pauses.
+- **Session arc**: Confusion → frustration → rage clicking → abrupt exit.
+```

@@ -1,0 +1,62 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Linear with repetitive validation
+- **Evidence**:
+  - Proceeds top-to-bottom in a single column: Hero Title (3.29s) → Get Started (8.12s) → Features (12.03s) → Testimonials (13.33s) → Footer (17.48s).
+  - Each primary section is clicked twice: once with hover hesitation, once immediately after (e.g., "Hero Title" at 3.29s and 7.05s).
+  - Navigation clicks at 1.58s and 2.07s suggest initial orientation, but no lateral exploration occurs.
+
+2. READING BEHAVIOR
+- **Behavior**: Skimming with rapid scroll bursts
+- **Evidence**:
+  - Scrolls occur in 46px–58px increments over 0.5s intervals (e.g., 2.12s–2.30s: 0px→184px in 0.18s total).
+  - Max scroll depth (988px) reached in 16.72s, indicating no deep reading—average scroll speed: ~59px/s.
+  - No pauses >1s between scrolls; no clicks on body text or images.
+
+3. ENGAGEMENT STYLE
+- **Style**: Validation-driven interaction (no creation)
+- **Evidence**:
+  - **Actions**: 100% clicks (14 total); zero form submissions, typing, or content creation.
+  - **Hesitation**: 4 instances of "[HESITATION]" clicks (0.99s, 6.13s, 9.83s, 15.37s) totaling 7.58s (40.5% of session).
+  - **Ratio**: N/A (no voting/commenting occurred).
+
+4. INTERACTION SPEED
+- **Speed**: Deliberate with micro-bursts
+- **Evidence**:
+  - **Median interval**: 0.97s between actions (excluding hesitations).
+  - **Hover delays**: 423ms–793ms before 4 primary clicks (e.g., "Get Started" at 8.12s with 676ms hover).
+  - **Hesitation outliers**: 2.84s (6.13s) and 2.04s (15.37s) account for 25.5% of session duration.
+
+5. CONTENT PREFERENCES
+- **Preferences**: Hierarchical UI elements
+- **Evidence**:
+  - **Clicked elements**: Navigation (2x), Hero Title (2x), CTA button (2x), Features section (2x), Testimonials (2x), Footer (2x).
+  - **Ignored**: Body text, images, secondary CTAs, interactive widgets (no clicks outside primary sections).
+  - **Depth**: Focused on above-the-fold (Hero Title at 184px) and key conversion points (Get Started at 350px).
+
+6. TYPING BEHAVIOR
+- **Behavior**: None detected
+- **Evidence**:
+  - Zero keystrokes, form inputs, or text selections logged.
+
+7. FEATURE DISCOVERY
+- **Discovered**:
+  - Navigation menu (1.58s)
+  - Hero section (3.29s)
+  - Primary CTA ("Get Started", 8.12s)
+  - Features/Testimonials sections (12.03s–13.33s)
+  - Footer (17.48s)
+- **Ignored**:
+  - Search bars, dropdowns, social media links, secondary buttons, or dynamic content (no hovers/clicks).
+
+8. SESSION FLOW
+- **Arc**: Validation loop → Linear descent → Abrupt exit
+- **Phases**:
+  1. **Orientation (0.0s–2.07s)**: Page load → Navigation clicks → Initial scroll (0px→184px).
+  2. **Primary Validation (2.07s–8.12s)**: Repeated clicks on Hero Title (3.29s/7.05s) and CTA (8.12s/10.84s) with hesitations.
+  3. **Secondary Exploration (8.12s–17.48s)**: Linear scroll to Features (12.03s), Testimonials (13.33s), Footer (17.48s).
+  4. **Exit (18.66s)**: Final footer click with no subsequent actions (session ends at 18.7s).
+- **Key Observation**: 64% of clicks (9/14) occur on elements previously hovered/clicked, suggesting a "confirmation" behavior.
+```

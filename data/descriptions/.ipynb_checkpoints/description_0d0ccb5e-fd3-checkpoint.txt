@@ -1,0 +1,46 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with repetitive validation**: The user follows a strict top-to-bottom progression through the page (landing → navigation → hero → features → testimonials → footer). However, every major interaction is preceded by a "hesitation" click (893ms–2418ms) at (0,0) and followed by a near-identical re-click on the same element (e.g., "Hero Title" at 3.01s and 5.58s). This suggests a deliberate, step-by-step approach with redundant confirmation clicks.
+- **No backtracking or lateral exploration**: No clicks deviate from the vertical scroll path; no revisits to prior sections.
+
+2. READING BEHAVIOR
+- **Skimmer with micro-depth verification**: Scrolls occur in rapid, uniform 36–60px bursts (0.5s duration each), covering 1,060px in 18.1s (avg. 58.6px/s). However, each scroll sequence is interrupted by a hover (472ms–767ms) and click on a section header ("Features," "Testimonials"), indicating brief pauses to validate content alignment with expectations.
+- **No deep reading**: No scroll pauses >1s; no clicks on body text or images.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains zero votes, comments, form submissions, or text inputs. All interactions are navigational (clicks on headers/buttons) or scroll-based.
+- **Hover-to-click ratio**: 5 hovers (586ms–767ms) precede 5 clicks (100% conversion), suggesting high intent but no content creation or feedback.
+
+4. INTERACTION SPEED
+- **Deliberate with hesitation spikes**: Median time between actions: 0.5s (scrolls) to 1.1s (clicks). However, 5 "hesitation" clicks at (0,0) introduce delays of 893ms–2418ms (avg. 1,518ms), accounting for 42% of total session time.
+- **Click latency**: Hover durations (303ms–767ms) + hesitation clicks suggest methodical validation before proceeding.
+
+5. CONTENT PREFERENCES
+- **Structural over substantive**: Clicks target UI landmarks (navigation, hero title, section headers, footer) rather than content. No clicks on links, images, or interactive elements (e.g., forms, videos).
+- **No content-specific focus**: Despite scrolling through features/testimonials, no clicks on individual feature cards or testimonial quotes.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form interactions in the log.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Navigation menu (2 clicks at 1.56s/2.02s)
+  - Hero section (2 clicks on title at 3.01s/5.58s)
+  - "Get Started" CTA (2 clicks at 6.58s/8.38s)
+  - Features section (2 clicks at 9.67s/10.84s)
+  - Testimonials section (2 clicks at 11.96s/14.8s)
+  - Footer (2 clicks at 15.51s/18.13s)
+- **Ignored**:
+  - All body text, images, links, forms, and interactive widgets (e.g., no clicks on feature descriptions, testimonial quotes, or social media icons).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0–3.01s)**
+  - Loads landing page; immediate hesitation (893ms) followed by navigation menu exploration (hover + click). Scrolls 179px to hero section.
+- **Phase 2: Hero Validation (3.01–6.58s)**
+  - Clicks hero title twice (3.01s/5.58s) with 1,482ms hesitation; scrolls to "Get Started" CTA.
+- **Phase 3: Linear Descent (6.58–18.1s)**
+  - Proceeds downward in lockstep: clicks CTA (6.58s), features (9.67s), testimonials (11.96s), and footer (15.51s), each preceded by hesitation clicks (1,166ms–2,418ms) and followed by scroll bursts. Session ends with footer click at 18.13s.
+- **Arc**: **Mechanical audit** → No exploration, engagement, or exit intent beyond structural validation. The user appears to be mapping the page layout rather than consuming content.
+```

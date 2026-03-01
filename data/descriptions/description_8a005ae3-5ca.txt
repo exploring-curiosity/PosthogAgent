@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with targeted jumps**: The user follows a top-to-bottom progression through the page (landing → hero → features → testimonials → footer) but makes deliberate horizontal detours to navigation elements (nav bar at 1.41s/2.11s, footer at 12.62s/13.4s).
+- **No backtracking**: All scrolls are downward; no upward scrolls or revisits to prior sections.
+- **Navigation redundancy**: Repeated clicks on identical elements (e.g., "Navigation" at 1.41s and 2.11s, "Hero Title" at 3.21s and 5.7s) suggest either accidental double-clicks or confirmation-seeking behavior.
+
+2. READING BEHAVIOR
+- **Skim-heavy**: Scroll speed is consistent (≈100px/0.5s) with no pauses >0.5s, indicating rapid visual scanning rather than deep reading.
+- **Shallow engagement**: Max scroll depth (1017px) covers ~53% of a typical 1920x1080 landing page (assuming ~1900px total height), suggesting cursory review of above-the-fold and mid-page content only.
+- **Section hopping**: Clicks on section headers ("Features" at 9.08s, "Testimonials" at 10.7s) occur immediately after reaching their scroll positions, implying the user is "bookmarking" sections for later rather than reading in-place.
+
+3. ENGAGEMENT STYLE
+- **No content creation**: Zero instances of typing, voting, or commenting. All interactions are navigational or exploratory clicks.
+- **Call-to-action focus**: The only non-navigational clicks are on "Get Started" (6.71s/8.12s), suggesting primary interest in conversion points over content consumption.
+- **Hover-driven**: 5/14 clicks are preceded by hovers (avg duration: 533ms), indicating deliberate targeting but hesitation before commitment.
+
+4. INTERACTION SPEED
+- **Deliberate with bursts**: Average time between actions: 1.03s, but with high variance:
+  - Fast sequences: Scroll bursts (e.g., 2.17s–2.34s: 4 scrolls in 0.17s).
+  - Slow hesitations: 3 instances of >900ms pauses before clicks (0.93s, 5.3s, 7.65s), labeled "[HESITATION]" in the log.
+- **Click latency**: Median hover-to-click time: 533ms (range: 363ms–753ms).
+
+5. CONTENT PREFERENCES
+- **Structural over substantive**: Clicks target UI elements (nav, buttons, section headers) rather than content (e.g., no clicks on testimonial text or feature descriptions).
+- **Hierarchy-driven**: Engagement follows visual prominence:
+  1. Hero section (3.21s–5.7s)
+  2. Primary CTA ("Get Started" at 6.71s/8.12s)
+  3. Secondary sections ("Features" at 9.08s, "Testimonials" at 10.7s)
+- **No niche focus**: No evidence of interest in specific content types (e.g., no clicks on blog links, product details, or social proof items).
+
+6. TYPING BEHAVIOR
+- **None detected**: Zero keystrokes, input fields, or form interactions in the 13.4s session.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Navigation menu (1.41s/2.11s)
+  - Hero section (3.21s/5.7s)
+  - Primary CTA ("Get Started" at 6.71s/8.12s)
+  - Section headers ("Features" at 9.08s, "Testimonials" at 10.7s)
+  - Footer (12.62s/13.4s)
+- **Ignored**:
+  - Any interactive content (e.g., carousels, accordions, forms)
+  - Social proof elements (e.g., testimonial text, logos)
+  - Secondary CTAs (e.g., "Learn More" buttons)
+  - Multimedia (no clicks on images/videos)
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–2.11s)**
+  - Loads page, hesitates (931ms), then explores navigation (hover + click at 1.41s/2.11s).
+  - **Goal**: Assess site structure.
+- **Phase 2: Hero Engagement (2.17s–6.71s)**
+  - Scrolls through hero section (2.17s–2.34s), clicks title twice (3.21s/5.7s), hesitates (2089ms at 5.3s).
+  - **Goal**: Evaluate primary value proposition.
+- **Phase 3: Conversion Attempt (6.71s–8.18s)**
+  - Hovers (643ms) and clicks "Get Started" twice (6.71s/8.12s), followed by rapid scrolling (8.18s–8.29s).
+  - **Goal**: Initiate conversion, but may have encountered friction (e.g., no form load).
+- **Phase 4: Secondary Exploration (8.29s–13.4s)**
+  - Scrolls through features (8.29s–9.08s), testimonials (10.7s–11.58s), and footer (12.62s–13.4s).
+  - **Goal**: Validate site credibility before exit.
+- **Exit**: Session ends at 13.4s with a footer click (no further actions).
+
+KEY OBSERVATIONS:
+- **Methodical but shallow**: The user systematically covers the page but engages only with structural elements, not content.
+- **Hesitation markers**: 3 explicit hesitation pauses (>900ms) suggest uncertainty or distraction.
+- **No deep engagement**: Scroll speed and lack of content clicks imply a "tire-kicker" rather than a committed user.
+- **Synthetic behavior**: The "synthetic/methodical_user" device tag and lack of typing may indicate an automated test or scripted session.
+```

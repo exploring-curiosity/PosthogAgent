@@ -1,0 +1,82 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly **scattered and repetitive** with **mechanical precision**.
+- **Evidence**:
+  - **Clicks cluster around 3 core elements** (Chart, Export, Data Table) but with **redundant interactions** (e.g., Chart clicked twice at 1.69s and 5.61s; Export clicked twice at 6.28s and 7.88s).
+  - **No linear progression**—user jumps between unrelated UI regions (e.g., Chart → Export → Data Table → dead click at bottom of page).
+  - **Scrolling is segmented and abrupt**: 4 distinct scroll bursts (down/up/down) with **no smooth exploration** (e.g., 1.25s–1.33s: 240px → 480px; 5.64s–5.81s: 480px → 77px).
+  - **Dead click at 12.51s** (209, 1102) suggests **no intentional exit path**—likely a misclick or session termination.
+
+2. READING BEHAVIOR
+- **Skim-only**: **No deep reading** inferred from scroll patterns.
+- **Evidence**:
+  - **Scroll speed**: 240px/0.5s (480px/s) in all bursts—**far above human reading speed** (typical: 100–200px/s for skimming; 50–100px/s for reading).
+  - **Max scroll depth**: 718px (8.07s), but **no pauses** to suggest content absorption (e.g., no hover >1s on text/table cells).
+  - **No horizontal scrolling** or zooming, ruling out detailed inspection of charts/tables.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement** (e.g., voting, commenting, sharing).
+- **Evidence**:
+  - **Only 3 functional interactions**: Chart (2x), Export (2x), Data Table (2x).
+  - **No text input, no form submissions, no social actions** (e.g., likes, replies).
+  - **Hover times** (203ms, 271ms, 389ms) are **too brief for deliberate engagement**—likely incidental cursor rests.
+  - **Hesitation clicks** (1.18s, 4.34s, 7.13s, 10.57s) are **non-functional** (at (0,0)) and **not tied to UI elements**.
+
+4. INTERACTION SPEED
+- **Extremely fast but erratic**.
+- **Evidence**:
+  - **Median action interval**: 0.73s (excluding hesitations).
+  - **Peak speed**: 0.03s between scroll steps (e.g., 5.64s–5.81s: 4 scrolls in 0.17s).
+  - **Hesitations**: 4 instances (1.18s, 4.34s, 7.13s, 10.57s) with **durations 850ms–2651ms**—likely **automated delays** (e.g., scripted pauses) rather than human deliberation.
+  - **Click timing**: **Sub-100ms between redundant clicks** (e.g., Export at 6.28s and 7.88s; Chart at 1.69s and 5.61s).
+
+5. CONTENT PREFERENCES
+- **Gravitated toward 3 UI components**:
+  1. **Chart** (2 clicks: 1.69s, 5.61s) – **Top-right quadrant** (1040, 480).
+  2. **Export button** (2 clicks: 6.28s, 7.88s) – **Top-right corner** (1690, 77).
+  3. **Data Table** (2 clicks: 8.71s, 11.83s) – **Bottom-right** (1443, 718).
+- **Ignored**:
+  - Left/middle content (no clicks/scrolls in x=0–1000px region except dead click).
+  - Navigation menus, filters, or interactive elements outside the 3 targets.
+  - Text content (no clicks on paragraphs/headings).
+
+6. TYPING BEHAVIOR
+- **No typing detected**.
+- **Evidence**:
+  - **No input fields interacted with** (e.g., search bars, forms, comment boxes).
+  - **No keystroke logs** or text selection events.
+
+7. FEATURE DISCOVERY
+- **Discovered and used**:
+  - **Chart interaction** (2 clicks).
+  - **Export functionality** (2 clicks).
+  - **Data Table** (2 clicks).
+- **Ignored**:
+  - **Navigation**: No clicks on sidebar, header, or footer links.
+  - **Filters/Sorting**: No interactions with dropdowns, toggles, or sliders.
+  - **Help/Documentation**: No clicks on tooltips, "?" icons, or support links.
+  - **Social Features**: No sharing, bookmarking, or collaboration tools used.
+
+8. SESSION FLOW
+- **Arc**: **Mechanical scan → Redundant interactions → Abrupt termination**.
+  - **0.0s–1.69s (Exploration Phase)**:
+    - Page load → **hesitation click (1.18s)** → **rapid scroll down (1.25s–1.33s)** → **Chart click (1.69s)**.
+    - **Goal**: Locate and interact with Chart (top-right).
+  - **1.69s–6.28s (Repetition Phase)**:
+    - **Hesitation (4.34s)** → **Chart re-click (5.61s)** → **rapid scroll up (5.64s–5.81s)** → **Export click (6.28s)**.
+    - **Pattern**: Re-engage with Chart, then shift to Export (top-right).
+  - **6.28s–12.51s (Scatter Phase)**:
+    - **Hesitation (7.13s)** → **Export re-click (7.88s)** → **rapid scroll down (7.92s–8.07s)** → **Data Table click (8.71s)** → **hesitation (10.57s)** → **Data Table re-click (11.83s)** → **dead click (12.51s)**.
+    - **Goal**: Interact with Data Table (bottom-right), but **no follow-through** (e.g., no table sorting/filtering).
+- **Exit**: **No intentional logout/close**—session ends with a dead click at (209, 1102), likely **off-screen or terminated by script**.
+```
+
+---
+**SUMMARY**: This session exhibits **automated or synthetic behavior** (e.g., bot, scanner, or scripted test). Key indicators:
+- **Sub-100ms reaction times** between redundant actions.
+- **Scroll speeds** (480px/s) **exceed human capability**.
+- **Hesitation clicks** at (0,0) with **no UI correlation**.
+- **No deep engagement** (e.g., reading, typing, social actions).
+- **Mechanical focus** on 3 UI elements (Chart, Export, Data Table) with **no exploratory deviation**.

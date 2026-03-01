@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and task-focused with minimal deviation.
+- Follows a strict top-to-bottom progression through the settings menu:
+  Settings Nav → Profile → Notifications → Privacy → Save Changes.
+- No backtracking, revisits, or exploratory clicks outside the primary navigation path.
+- 100% of clicks target navigation elements (nav items, divs, buttons) with no content interaction.
+
+2. READING BEHAVIOR
+- Skimming behavior confirmed by rapid, incremental scrolling:
+  - 12 scroll actions total, averaging 40px per scroll (range: 39–129px).
+  - Scroll speed: 80–100px/second (consistent across all scrolls).
+  - No pauses >500ms between scrolls, suggesting no deep reading.
+  - Max scroll depth: 985px (82% of viewport height), but no evidence of reading below 437px (Notifications section).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed.
+- Interaction limited to settings navigation:
+  - 6 primary clicks (3 nav items, 3 buttons).
+  - 3 hesitation clicks (unlabeled page clicks at 2.2s, 5.55s, 12.24s) with long pauses (904–2446ms).
+- Vote-to-comment ratio: N/A (no engagement with content).
+
+4. INTERACTION SPEED
+- Deliberate but methodical:
+  - Average time between primary actions: 1.6s (excluding hesitations).
+  - Hover times: 331–676ms (median 400ms) before clicks.
+  - Hesitation delays: 2203ms, 904ms, 2446ms (likely decision points or distractions).
+  - Click execution: 2–3 clicks per target (e.g., "Settings Nav" clicked twice at 3.15s and 3.76s).
+
+5. CONTENT PREFERENCES
+- No content interaction; session confined to settings pages:
+  - Profile (4.64s–6.37s)
+  - Notifications (7.16s–7.74s)
+  - Privacy (8.32s–9.22s)
+- No subreddit or post engagement.
+
+6. TYPING BEHAVIOR
+- No typing or input observed in the log.
+- No form fields, search bars, or text areas interacted with.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Settings navigation (3/3 sections: Profile, Notifications, Privacy).
+  - Save Changes button (clicked twice at 9.8s and 13.18s).
+- Ignored features:
+  - No interaction with account settings, security, or connected apps.
+  - No help/support links, tooltips, or secondary navigation.
+  - No search or filtering tools.
+
+8. SESSION FLOW
+- Arc: Linear task completion with minimal exploration.
+  - 0.0–3.15s: Initial load + hesitation (2.2s click likely accidental).
+  - 3.15–4.64s: Navigate to Settings (hover + double-click).
+  - 4.64–7.16s: Profile section (scroll + hesitation).
+  - 7.16–8.32s: Notifications section (scroll + click).
+  - 8.32–9.8s: Privacy section (scroll + hover).
+  - 9.8–13.18s: Save Changes (hesitation + double-click).
+- Exit: Session ends immediately after final "Save Changes" click (no confirmation or follow-up).
+- No evidence of browsing, content consumption, or secondary tasks.
+```
+
+**Key Observations:**
+- **Task-driven**: User appears to be completing a specific settings workflow (Profile → Notifications → Privacy → Save).
+- **Hesitation points**: Three long pauses (2.2s, 5.55s, 12.24s) suggest either decision-making, distractions, or UI confusion.
+- **Double-clicking**: Repeated clicks on the same target (e.g., "Settings Nav," "Save Changes") may indicate UI responsiveness issues or user impatience.
+- **No content engagement**: Entire session is administrative, with no interaction with primary app content.

@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive loops**: The user exhibits non-linear, erratic navigation with frequent back-and-forth movements. Key patterns:
+  - Initial rapid downward scroll (0.42s–0.61s) covering 604px in 4 discrete jumps (151px increments).
+  - Immediate return to top via upward scroll (2.49s–2.59s) in 3 jumps (122px increments).
+  - Repeated cycles of scrolling down (4.78s–4.9s, 8.53s–9.22s) and clicking on the same elements (e.g., "Features" clicked 4 times at different coordinates).
+- **Element fixation**: 62% of clicks (13/21) target 3 elements: "Hero Title" (7 clicks), "Features" (4 clicks), and "Get Started" (2 clicks).
+- **No progression**: No sequential navigation to new pages/sections; all actions confined to the landing page.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns indicate no deep reading:
+  - Average scroll speed: **302px/second** (e.g., 151px in 0.5s), far exceeding typical reading speeds (200–300 words/minute ≈ 50–100px/second).
+  - Max scroll depth: 976px (9.22s), but no pauses >0.3s at any depth (suggesting no content absorption).
+  - **No sustained focus**: 8 scroll events in 9.9s, with direction changes (up/down) 4 times.
+- **Visual scanning**: Clicks on "Hero Title" and "Features" at disparate coordinates (e.g., "Hero Title" at (304,237) and (1200,235)) imply scanning for interactive elements, not reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or form submissions detected.
+- **Frustration signals**:
+  - **Rage clicks**: 4 consecutive clicks on "Hero Title" (4.42s–4.72s) with <0.1s intervals, clustered within a 17px radius.
+  - **Dead click**: Click on non-interactive `div` (8.49s) after 2.67s hesitation.
+  - **Hesitation**: 3 instances of prolonged inactivity (339ms, 1298ms, 2666ms) before clicks at (0,0), likely misclicks or UI confusion.
+- **Interaction ratio**: 0% productive actions (e.g., form completion, navigation to new pages).
+
+4. INTERACTION SPEED
+- **Hyper-fast with anomalies**:
+  - **Median action interval**: 0.34s (excluding hesitations).
+  - **Peak speed**: 11 actions in 1.75s (2.45s–4.2s), including 7 clicks on "Hero Title".
+  - **Hesitation outliers**: 3 pauses >300ms (max: 2666ms at 7.87s), accounting for 40% of session duration.
+- **Click frequency**: 2.12 clicks/second during active periods (e.g., 4.42s–4.72s rage-click cluster).
+
+5. CONTENT PREFERENCES
+- **No content engagement**: All interactions target UI elements, not informational content:
+  - **Primary targets**:
+    - "Hero Title" (33% of clicks): Likely a heading or call-to-action.
+    - "Features" (19% of clicks): Section header or link.
+    - "Get Started" (9.5% of clicks): Button.
+  - **Ignored content**: No clicks on body text, images, or secondary CTAs (e.g., "Footer" clicked only at session end, possibly accidental).
+- **No thematic preference**: All actions occur on a single landing page; no navigation to subpages or content categories.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form interactions in the log.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Scrolling**: Used extensively (14 scroll events) to navigate vertically.
+  - **Clickable elements**: Identified "Hero Title," "Features," and "Get Started" as interactive (repeated clicks).
+  - **Hover states**: Detected via hover timers (e.g., "Features [HOVER 114ms]"), but no sustained engagement.
+- **Ignored features**:
+  - **Navigation menus**: No clicks on header/footer links (except final "Footer" click, likely accidental).
+  - **Forms/inputs**: No interaction with search bars, login fields, or other input elements.
+  - **Dynamic content**: No engagement with carousels, modals, or tooltips (if present).
+
+8. SESSION FLOW
+- **Arc**: **Frustration-driven abandonment** with 4 distinct phases:
+  1. **Initial scan (0.0s–0.88s)**:
+     - Page load → rapid downward scroll (604px in 0.6s) → click on "Features" (0.88s).
+     - **Goal**: Likely seeking key information or CTAs.
+  2. **Confusion loop (0.88s–4.72s)**:
+     - Repeated clicks on "Hero Title" (7 clicks) and "Features" (2 clicks) with upward/downward scrolls.
+     - **Signals**: Hesitations (1298ms), rage clicks (4.42s–4.72s), and dead clicks suggest UI expectations mismatch.
+  3. **False exit attempt (4.72s–8.49s)**:
+     - Click on "Get Started" (5.2s) → 2.67s hesitation (7.87s) → second "Get Started" click (8.22s).
+     - **Interpretation**: User may have expected navigation but remained on the same page.
+  4. **Final abandonment (8.49s–9.88s)**:
+     - Dead click (8.49s) → rapid scroll to footer (9.22s) → footer clicks (9.46s–9.88s).
+     - **Exit**: Session ends without conversion or navigation.
+- **Key metrics**:
+  - **Bounce rate**: 100% (no secondary pages visited).
+  - **Time to frustration**: 4.42s (first rage click).
+  - **Session efficiency**: 0% of actions led to intended outcomes (e.g., navigation, conversion).
+```
+
+**SUMMARY**: This user exhibited **synthetic, frustration-driven behavior** characteristic of a bot, automated test, or severely confused human. The session is marked by **hyper-fast, repetitive interactions**, **no content engagement**, and **clear signals of UI dissatisfaction** (rage clicks, dead clicks, hesitations). No productive actions were taken, and the session ended in abandonment.

@@ -1,0 +1,85 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Highly focused and task-driven** with minimal exploratory behavior.
+- **Linear progression** through UI elements in a top-to-bottom, right-to-left pattern:
+  1. Top-right "Export" button (0.63s–0.91s)
+  2. Bottom-center "Chart" (1.48s–1.73s)
+  3. Mid-page "Stats Cards" (2.11s–2.23s)
+  4. Bottom-left "Sidebar" (2.68s–2.84s)
+  5. Top-right "Data Table" (3.22s–3.43s)
+- **No backtracking** to previously viewed content; each interaction targets a new element.
+- **Spatial clustering**: All clicks occur in distinct quadrants (top-right, bottom-center, mid-page, bottom-left, top-right), suggesting deliberate targeting of specific UI zones.
+
+2. READING BEHAVIOR:
+- **Skimmer with rapid vertical scanning**:
+  - **Scroll velocity**: 132–181px/s (e.g., 0.24s–0.31s: 39px in 0.07s = 557px/s; 1.08s–1.12s: 132px in 0.04s = 3,300px/s).
+  - **Max depth**: 1,010px (2.44s), but **no sustained pauses** at any depth (scrolls continuously).
+  - **No horizontal scrolling** or lateral movement, indicating **no deep reading** of content.
+- **Scroll patterns**:
+  - **Downward sweeps**: 5 rapid downward scrolls (0.24s–1.12s, 2.27s–2.44s) covering 606px and 904px respectively.
+  - **Upward corrections**: 3 upward scrolls (1.8s–1.87s, 2.88s–2.97s) after overshooting targets (e.g., from 606px to 106px in 0.7s).
+
+3. ENGAGEMENT STYLE:
+- **No traditional "engagement" actions** (e.g., voting, commenting, sharing).
+- **Interaction pattern**: **Double-clicks** on all targets (e.g., "Export" at 0.63s/0.91s, "Chart" at 1.48s/1.73s), suggesting:
+  - **Confirmation-seeking behavior** (first click may be exploratory, second is intentional).
+  - **Potential UI responsiveness issues** (user may be compensating for perceived lag).
+- **Hover times**:
+  - **Short but variable**: 79ms–182ms (avg: 124ms) before clicks, indicating **rapid decision-making** but **not impulsive** (hover suggests pre-validation).
+- **No passive engagement**: No dwell time >500ms on any element.
+
+4. INTERACTION SPEED:
+- **Extremely fast and deliberate**:
+  - **Action interval**: 0.07s–0.35s between actions (avg: 0.18s).
+  - **Click latency**: 0.28s–0.35s between hover and click (e.g., "Export" hover at 0.63s, click at 0.91s).
+  - **Scroll-to-click transitions**: <0.1s (e.g., scroll ends at 1.12s, click at 1.48s).
+- **No hesitation markers** beyond initial 182ms "page text" click (0.18s), which may be a false start or placeholder.
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward functional UI elements**, not content:
+  - **Export controls** (0.63s–0.91s): Likely data extraction.
+  - **Chart interactions** (1.48s–1.73s): Visual data manipulation.
+  - **Stats Cards** (2.11s–2.23s): Summary metrics.
+  - **Sidebar** (2.68s–2.84s): Navigation or settings.
+  - **Data Table** (3.22s–3.43s): Tabular data.
+- **No engagement with textual content** (e.g., articles, descriptions, labels).
+- **Prioritized right-side UI** (Export, Data Table) over left-side (Sidebar).
+
+6. TYPING BEHAVIOR:
+- **No typing detected** in the action log. All interactions are clicks or scrolls.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - **Export functionality** (top-right).
+  - **Chart interactions** (bottom-center).
+  - **Stats Cards** (mid-page).
+  - **Sidebar navigation** (bottom-left).
+  - **Data Table** (top-right).
+- **Ignored features**:
+  - **No search bar usage**.
+  - **No filter/sort controls** (if present).
+  - **No help/tooltips** (no hovers >200ms).
+  - **No form inputs** (no typing or dropdowns).
+  - **No social features** (sharing, comments, etc.).
+
+8. SESSION FLOW:
+- **Arc**: **Targeted extraction → rapid validation → abrupt exit**.
+  1. **0.0s–0.63s (Orientation)**:
+     - Page load → false-start click (0.18s) → rapid downward scroll (0–78px) to survey layout.
+  2. **0.63s–1.73s (Primary Task)**:
+     - **Export data** (0.63s–0.91s) → scroll to bottom (606px) → **interact with Chart** (1.48s–1.73s).
+     - Likely goal: Extract or analyze data.
+  3. **1.8s–2.84s (Secondary Validation)**:
+     - Scroll up to **Stats Cards** (2.11s–2.23s) → scroll to bottom (1,010px) → **Sidebar** (2.68s–2.84s).
+     - May be checking data consistency or navigation options.
+  4. **2.88s–3.43s (Final Action)**:
+     - Scroll up to **Data Table** (3.22s–3.43s) → session ends.
+     - Possible abrupt exit or technical termination.
+- **No exploratory phase**: User arrived with a clear goal (data extraction/analysis).
+- **No exit confirmation**: Session ends mid-interaction with Data Table (no "back" or "close" actions).
+- **Efficiency**: 5 distinct UI elements engaged in 3.4s (1.47s per interaction).
+```
+
+**SUMMARY**: This is a **power-user session** characterized by **ultra-rapid, task-focused interactions** with **no exploratory behavior**. The user prioritized **data extraction and validation** (Export, Chart, Data Table) over content consumption, with **double-clicks suggesting UI responsiveness issues or confirmation bias**. Scroll patterns indicate **skimming for layout cues**, not reading. The session arc is **linear and goal-driven**, ending abruptly after the final action.

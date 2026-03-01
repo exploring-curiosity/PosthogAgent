@@ -1,0 +1,45 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with rapid reorientation**: The user exhibits a non-linear, zigzagging pattern through the page. They scroll aggressively (both up and down) between discrete content blocks rather than following a top-to-bottom flow.
+- **Hotspot targeting**: 80 % of clicks (8/10) land on three distinct vertical zones: footer (y≈1023 px), navigation bar (y≈28 px), and hero title (y≈121 px). These zones are revisited multiple times, suggesting the user is “bookmarking” them for quick access.
+- **Revisitation rate**: 60 % of clicked elements (footer, nav, hero title) are clicked twice within <1 s, indicating rapid validation or accidental double-clicks.
+
+2. READING BEHAVIOR
+- **Skim-only**: No dwell time >500 ms on any content block. Scroll speed averages 500 px/s (1023 px in 2.1 s total scroll time), which is 3–5× faster than typical reading speed (200–300 px/s).
+- **Scroll depth sampling**: The user scrolls to 1023 px (≈full page) in 0.96 s, then immediately jumps back to the top (28 px) in 3.34 s, never lingering below the fold. This suggests a quick “scan for landmarks” rather than deep reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows zero votes, comments, or form submissions. All interactions are navigational clicks (footer, nav, buttons, headings).
+- **Hover-to-click latency**: Hover durations average 126 ms (min 54 ms, max 1976 ms), indicating rapid decision-making except for one outlier hesitation (1976 ms at 2.93 s).
+- **Click-to-click interval**: Mean 0.43 s between consecutive clicks (excluding the 1976 ms hesitation), suggesting a fast, almost reflexive interaction style.
+
+4. INTERACTION SPEED
+- **Ultra-fast**: Median inter-action time is 0.23 s (excluding the 1976 ms outlier). 85 % of actions occur within <0.5 s of the previous action.
+- **Scroll bursts**: Four consecutive 0.5 s scroll bursts (0.4 s–0.56 s) cover 1023 px in 1.6 s, then a second burst (3.27 s–4.06 s) covers 753 px in 0.79 s. These bursts are consistent with a power-user or synthetic script.
+
+5. CONTENT PREFERENCES
+- **Structural over substantive**: The user clicks only on structural elements—footer, navigation, hero title, testimonials, features, and a CTA button. No clicks on body text, images, or embedded media.
+- **Vertical distribution**: 70 % of clicks occur in the bottom 25 % of the viewport (y >750 px) or top 5 % (y <50 px), reinforcing a focus on page boundaries rather than mid-content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains zero keystrokes, form inputs, or text corrections. All interactions are mouse-based.
+
+7. FEATURE DISCOVERY
+- **Discovered & used**:
+  • Footer (clicked twice at 0.96 s & 3.2 s)
+  • Navigation bar (clicked twice at 3.5 s & 3.81 s)
+  • Hero title (clicked twice at 6.36 s & 6.56 s)
+  • Testimonials section (clicked twice at 4.27 s & 4.47 s)
+  • Features section (clicked twice at 5.54 s & 5.83 s)
+  • “Get Started” CTA button (clicked twice at 5.03 s & 5.26 s)
+- **Ignored**:
+  • Body text, images, sidebars, search bars, social icons, and any interactive widgets beyond the above.
+
+8. SESSION FLOW
+- **Phase 1 (0.0 s–0.96 s)**: Rapid full-page scan—load, scroll to 1023 px, click footer.
+- **Phase 2 (0.96 s–3.2 s)**: Reorientation—hesitation (1976 ms), re-click footer, scroll back to top.
+- **Phase 3 (3.2 s–6.56 s)**: Micro-exploration—click nav, scroll mid-page, click testimonials, scroll up, click features, scroll up, click hero title.
+- **Exit**: Session ends abruptly after hero-title click at 6.56 s (total duration 6.6 s), suggesting either a script termination or user abandonment.
+```

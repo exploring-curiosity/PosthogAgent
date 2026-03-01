@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and methodical, with clear sequential progression through settings sub-pages.
+- Navigated in strict order: Settings (root) → Profile → Notifications → Privacy → Save Changes.
+- No backtracking, detours, or exploratory clicks outside the settings hierarchy.
+- All navigation occurred via dedicated nav elements (no URL bar, search, or breadcrumbs used).
+
+2. READING BEHAVIOR
+- Skimming pattern confirmed by rapid, incremental scrolls with no pauses >500ms at any depth.
+- Scroll velocity: ~90-100px/0.5s (180-200px/s) during both downward and upward traversals.
+- Max scroll depth per sub-page:
+  • Profile: 480px (2 scroll bursts)
+  • Notifications: 738px (5 scroll bursts)
+  • Privacy: 954px (4 scroll bursts)
+- No evidence of deep reading; all scrolls were continuous with no stationary periods >300ms.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed (session limited to settings configuration).
+- Interaction exclusively involved navigation and form-like controls (clicks on nav items/buttons).
+- Click-to-hover ratio: 1.0 (every hover preceded a click, no abandoned hovers).
+- Hesitation metrics:
+  • 4 instances of "[HESITATION]" clicks (timestamps: 0.59s, 4.3s, 7.77s, 12.83s, 17.35s)
+  • Average hesitation duration: 1,596ms (range: 587ms–2,882ms)
+  • Hesitations preceded 80% of primary navigation actions.
+
+4. INTERACTION SPEED
+- Average time between actions: 1.1s (excluding hesitations).
+- Fastest action sequence: 50ms (between scrolls at 2.72s–2.76s).
+- Slowest deliberate action: 2.88s (hesitation before Privacy click at 12.83s).
+- Click latency after hover:
+  • Profile: 508ms hover → 766ms to click
+  • Notifications: 334ms hover → 1,922ms to click (hesitation)
+  • Privacy: 788ms hover → 2,882ms to click (hesitation)
+  • Save Changes: 630ms hover → 2,837ms to click (hesitation)
+
+5. CONTENT PREFERENCES
+- No content consumption observed (session limited to settings).
+- Settings sub-pages accessed in order: Profile → Notifications → Privacy.
+- No evidence of preference; all sub-pages were visited with equal scroll depth relative to their length.
+
+6. TYPING BEHAVIOR
+- No typing, text input, or form field interactions detected in the log.
+- No corrections, deletions, or input fields engaged.
+
+7. FEATURE DISCOVERY
+- Used features:
+  • Settings navigation menu (3 distinct clicks)
+  • Profile settings panel (1 click)
+  • Notifications settings panel (1 click)
+  • Privacy settings panel (1 click)
+  • Save Changes button (1 click)
+- Ignored features:
+  • No search functionality used
+  • No help/tooltips accessed
+  • No account/profile dropdowns
+  • No sidebar or non-settings navigation
+
+8. SESSION FLOW
+- Arc: Configuration-focused with 4 distinct phases:
+  1. INITIAL ORIENTATION (0.0s–1.57s)
+     • Page load → hesitation (587ms) → rapid downward scroll (5 bursts, 473px total)
+     • Clicked Settings nav (likely to confirm location)
+  2. PROFILE CONFIGURATION (1.57s–5.85s)
+     • Navigated to Profile → hesitation (757ms) → re-clicked Profile → scrolled 480px
+  3. NOTIFICATIONS CONFIGURATION (5.85s–9.95s)
+     • Clicked Notifications → hesitation (1,922ms) → re-clicked → scrolled 738px
+  4. PRIVACY CONFIGURATION (9.95s–17.97s)
+     • Clicked Privacy → hesitation (2,882ms) → re-clicked → scrolled 954px → Save Changes
+- Exit: Session ended immediately after final Save Changes click (no confirmation observed).
+- No exploratory behavior; all actions aligned with sequential settings configuration.
+```
+
+Key Observations:
+- Synthetic/methodical user label corroborated by robotic scroll patterns (consistent 0.5s bursts) and linear navigation.
+- Hesitations suggest either decision-making or synthetic delay injection (average 1.6s).
+- No errors, misclicks, or abandoned actions detected.

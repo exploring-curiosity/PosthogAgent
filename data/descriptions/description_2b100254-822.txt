@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and repetitive with compulsive re-engagement**
+  - The user exhibits a **non-linear, oscillatory** pattern, repeatedly returning to the "Cart Summary" section (clicked 8 times at timestamps: 2.05s, 2.92s, 4.13s, 4.52s, 5.07s, 8.26s, 10.94s, 12.17s, 12.75s, 13.04s).
+  - **Scroll depth volatility**: Max scroll depth fluctuates between 20px and 972px, with 12 distinct scroll sequences (6 down, 6 up) in 14.4s. No stable viewing window >1s.
+  - **Element fixation**: 62% of clicks (13/21) target "Cart Summary" or "Pay Now" buttons, suggesting **compulsive re-validation** of checkout state.
+
+2. READING BEHAVIOR
+- **Skim-only with zero deep reading**
+  - **Scroll speed**: 120–150px/s (e.g., 101px→230px in 0.5s at 2.98s), far exceeding typical reading speed (20–30px/s for 12pt text).
+  - **No dwell time**: No pauses >500ms on any scroll segment. Longest hesitation (2.795s at 7.87s) occurs on blank page area, not content.
+  - **Scroll depth mismatch**: Max depth (972px) exceeds typical checkout page height (≈800px), implying **overscroll into footer** without engagement.
+
+3. ENGAGEMENT STYLE
+- **No content creation; transactional only**
+  - **Zero comments/votes**: No interaction with user-generated content (e.g., reviews, ratings).
+  - **Form abandonment**: Clicks "Card Number" field twice (9.28s, 14.3s) but **no keystrokes recorded**—suggests hesitation or synthetic input.
+  - **Rage clicks**: 4 consecutive clicks on "Back to Shop" (10.26s–10.54s) with <100ms intervals, indicating **frustration or bot-like behavior**.
+
+4. INTERACTION SPEED
+- **Hyper-fast with artificial delays**
+  - **Click interval**: Mean 0.68s between actions (min 0.04s, max 2.795s). 71% of actions occur <1s apart.
+  - **Hesitation spikes**: 3 long pauses (1.475s, 0.616s, 2.795s) at timestamps 1.48s, 2.67s, 7.87s—all on blank page areas, suggesting **synthetic delay injection**.
+  - **Scroll acceleration**: All scrolls are **uniform 0.5s duration** (e.g., 20px→40px at 1.58s), implying scripted motion.
+
+5. CONTENT PREFERENCES
+- **Checkout tunnel vision**
+  - **Exclusive focus on transactional elements**:
+    - "Cart Summary" (8 clicks)
+    - "Pay Now" (3 clicks)
+    - "Card Number" field (2 clicks)
+    - "Back to Shop" (5 clicks, including rage clicks)
+  - **No exploration**: Zero clicks on product details, shipping options, or promotional content.
+
+6. TYPING BEHAVIOR
+- **No observable typing**
+  - Despite clicking "Card Number" field twice (9.28s, 14.3s), **no keystrokes or input events** are logged.
+  - **Field dwell time**: <200ms per click—insufficient for manual input.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (12 sequences)
+  - "Cart Summary" accordion (expanded/collapsed 8x)
+  - "Pay Now" button (3 clicks)
+  - "Back to Shop" link (5 clicks)
+- **Ignored features**:
+  - Payment method selection (no clicks on radio buttons/options)
+  - Promo code field (no interaction)
+  - Shipping address fields (no clicks)
+  - Product list (no clicks on items)
+
+8. SESSION FLOW
+- **Arc: Synthetic validation → Frustration → Abandonment**
+  1. **0.0s–3.55s (Scripted validation)**:
+     - Loads page, scrolls linearly to "Pay Now" button (745px depth), clicks twice in 130ms.
+     - **Behavior**: Bot-like scroll/click pattern with uniform timing.
+  2. **3.55s–10.14s (Compulsive re-engagement)**:
+     - Scrolls up/down 6x, re-clicks "Cart Summary" 5x, attempts "Pay Now" again.
+     - **Behavior**: Repetitive, non-progressive actions with **no forward progress**.
+  3. **10.14s–14.45s (Frustration → Exit)**:
+     - Rage-clicks "Back to Shop" 4x, scrolls up, re-clicks "Cart Summary" 3x, then "Card Number" field.
+     - **Behavior**: Escalating frustration (rage clicks) followed by **session termination without completion**.
+- **Exit**: No confirmation page load; session ends mid-action at 14.45s.
+```
+
+**SUMMARY**: This session exhibits **synthetic, bot-like behavior** with scripted scrolls, compulsive re-clicking of UI elements, and no human-like reading or typing. The user (or script) appears to **validate checkout flow functionality** rather than complete a purchase, with **frustration signals** (rage clicks) suggesting a failed test case or automated stress test. No organic user traits (e.g., reading, typing, exploration) are present.

@@ -1,0 +1,66 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and repetitive with no clear linear progression.
+- Cycles through the same 3-4 settings tabs (Notifications, Privacy, Profile) 3-4 times each.
+- 67% of clicks (20/30) target the same 3 navigation elements (Settings Nav, Notifications, Profile).
+- 0% of navigation follows a logical workflow (e.g., no sequential completion of a settings form).
+- 100% of tab switches involve full-page reloads (no tab persistence).
+
+2. READING BEHAVIOR
+- Extreme skimming: 14 rapid scroll bursts (avg 0.5s duration) covering 120-190px per burst.
+- No sustained reading: max scroll depth held for <0.3s before reversal.
+- 0% of scrolls pause at form fields or instructions.
+- 100% of scrolls are vertical sweeps (no horizontal or targeted reading).
+
+3. ENGAGEMENT STYLE
+- No content creation: 0 votes, 0 comments, 0 text inputs.
+- Interaction limited to navigation clicks and "Save Changes" buttons (4 clicks total).
+- 100% of "Save Changes" clicks occur at the bottom of the page (971px, 957px) after rapid scrolling.
+- 0% of clicks target interactive content (e.g., toggles, checkboxes, text fields).
+
+4. INTERACTION SPEED
+- Hyper-fast: avg 0.47s between actions (excluding hesitations).
+- 6 rage-click clusters (28 clicks total) with 0.07-0.12s intervals.
+- 3 hesitation events (227ms, 1057ms, 2106ms) preceding non-functional clicks.
+- Click accuracy: 43% of clicks are dead/rage clicks (13/30).
+
+5. CONTENT PREFERENCES
+- No content consumption: 100% of activity is settings navigation.
+- Gravitated toward 3 settings tabs:
+  - Notifications: 6 clicks (38% of tab clicks)
+  - Profile: 4 clicks (25%)
+  - Privacy: 2 clicks (13%)
+- 0% engagement with actual settings controls (e.g., no toggles adjusted).
+
+6. TYPING BEHAVIOR
+- No typing detected: 0 keystrokes, 0 text inputs, 0 corrections.
+- 100% of interactions are mouse-based.
+
+7. FEATURE DISCOVERY
+- Discovered features:
+  - Settings navigation (used repeatedly)
+  - "Save Changes" button (clicked 4x)
+- Ignored features:
+  - All form controls (toggles, checkboxes, text fields)
+  - Help/documentation links (0 clicks)
+  - Account/profile customization options (0 interactions beyond tab clicks)
+
+8. SESSION FLOW
+- 0.0-0.8s: Initial exploration (rapid scrolling, hesitation click)
+- 0.8-5.3s: First navigation cycle (Settings → Notifications → Privacy → Settings)
+- 5.3-7.1s: Second cycle (Profile → Save Changes [dead click])
+- 7.1-10.5s: Third cycle (Profile → Notifications [rage clicks] → Settings)
+- 10.5-14.9s: Final cycle (Save Changes → Notifications [hesitation])
+- Arc: Repetitive cycling with escalating frustration (rage clicks increase in frequency: 0→5→6→3 per cycle).
+- Exit: Session ends mid-hesitation (2106ms pause) after failed Notifications tab click.
+```
+
+Key Quantitative Metrics:
+- Rage clicks: 28 (47% of all clicks)
+- Dead clicks: 1 (3%)
+- Hesitations: 3 (avg 1130ms)
+- Tab switches: 12 (avg 1.24s between switches)
+- Scroll bursts: 28 (avg 180px per burst)
+- Session efficiency: 0% (no settings changed despite 14.9s activity)

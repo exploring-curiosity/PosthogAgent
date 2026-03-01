@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with repetitive loops**: The user exhibits non-linear, erratic navigation with frequent backtracking. They repeatedly return to the "Back to Shop" link (clicked 4 times at [1.85s], [2.07s], [3.21s], [3.34s]) and "Cart Summary" (clicked twice at [2.45s], [2.66s]), suggesting confusion or indecision.
+- **No clear progression**: Actions oscillate between scrolling, clicking redundant elements, and revisiting the same UI regions (e.g., "Back to Shop" appears at both the top and bottom of the page).
+- **Viewport coverage**: Explored 91% of the page height (max depth: 1008px of 1080px viewport) but in a fragmented manner.
+
+2. READING BEHAVIOR:
+- **Skimmer with rapid scroll bursts**: Scrolls occur in 0.5s intervals (e.g., [1.58s]–[1.62s], [2.14s]–[2.24s]), covering 200–500px per burst—too fast for deep reading (typical reading speed: ~200–300 words/minute; 500px ≈ 100–150 words).
+- **No sustained focus**: No pauses >1s on any scroll segment; max hover time is 1540ms ("[HESITATION 1540ms]" at [1.54s]), likely a misclick or accidental hover.
+- **Directional inconsistency**: Scrolls down ([1.58s]–[1.85s]), then up ([2.14s]–[2.24s]), then down again ([2.74s]–[2.87s]), indicating lack of content engagement.
+
+3. ENGAGEMENT STYLE:
+- **No substantive engagement**: The session contains no votes, comments, form submissions, or product interactions. All clicks target navigational elements ("Back to Shop," "Cart Summary") or placeholders (email input).
+- **Impulsive clicks**: 8/12 clicks are duplicates (e.g., "Back to Shop" clicked twice in 220ms at [1.85s]/[2.07s]; "Pay Now" clicked twice in 350ms at [4.73s]/[5.08s]).
+- **Hover times**: Brief (53–96ms), suggesting no deliberate evaluation of UI elements.
+
+4. INTERACTION SPEED:
+- **Extremely fast**: Average time between actions: **370ms** (excluding the initial 1.54s hesitation).
+  - Fastest interval: 40ms ([2.14s]–[2.19s] between scrolls).
+  - Slowest interval: 1.54s ([0.0s]–[1.54s] initial hesitation).
+- **Click latency**: Median time from hover to click: **60ms** (range: 53–96ms), indicating reflexive rather than deliberate interactions.
+
+5. CONTENT PREFERENCES:
+- **No content engagement**: The user interacted exclusively with:
+  - Navigational links ("Back to Shop" ×4).
+  - Placeholder elements ("Cart Summary" ×2, "Email" input ×2).
+  - Checkout button ("Pay Now" ×2).
+- **No product or category exploration**: No clicks on product listings, filters, or informational content.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The email input was clicked ([3.9s], [4.25s]) but no keystrokes or input length were recorded. No corrections or pauses indicative of typing.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - Scrolling (10 scroll actions, covering 91% of page height).
+  - Navigational links ("Back to Shop," "Cart Summary").
+  - Checkout button ("Pay Now").
+- **Ignored features**:
+  - Product listings (no clicks on items or images).
+  - Form fields (email input clicked but not populated).
+  - Promotional banners, sidebars, or footer links (no interactions).
+  - Payment/shipping options (no clicks beyond "Pay Now").
+
+8. SESSION FLOW:
+- **Arc**: **Impulsive exploration → Repetitive backtracking → Abandoned checkout**
+  - **0.0s–1.54s**: Initial hesitation (1.54s pause post-load).
+  - **1.54s–2.07s**: Rapid downward scroll ([1.58s]–[1.62s]) followed by immediate "Back to Shop" clicks ([1.85s], [2.07s]).
+  - **2.14s–3.34s**: Upward scroll ([2.14s]–[2.24s]), "Cart Summary" clicks ([2.45s], [2.66s]), downward scroll ([2.74s]–[2.87s]), and another "Back to Shop" ([3.21s], [3.34s]).
+  - **3.42s–5.08s**: Upward scroll to top ([3.42s]–[3.5s]), email input clicks ([3.9s], [4.25s]), downward scroll to "Pay Now" ([4.3s]–[4.5s]), and final button clicks ([4.73s], [5.08s]).
+- **Exit**: Session ends at 5.1s with no confirmation of checkout completion or navigation away from the page.
+
+SUMMARY:
+This user exhibits **synthetic/impulsive behavior** consistent with a bot, automated test, or user with severe cognitive load. Key indicators:
+- Sub-400ms action intervals.
+- Duplicate clicks on identical elements within milliseconds.
+- No substantive engagement (no typing, no product interaction).
+- Repetitive, non-progressive navigation loops.
+- No evidence of reading or content evaluation.
+```

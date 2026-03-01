@@ -1,0 +1,83 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly focused and goal-directed with minimal exploration
+- Linear progression through checkout flow (Cart Summary → Payment → Email → Pay Now → Exit)
+- No evidence of detours, side navigation, or content discovery
+- 100% of clicks target checkout-specific elements (0/14 clicks unrelated to checkout)
+- Single exit point: "Back to Shop" (likely post-payment or error state)
+
+2. READING BEHAVIOR
+- Skimming pattern confirmed by:
+  * Rapid scroll bursts (avg 25-30px/0.5s) with no sustained pauses
+  * Max scroll depth: 1008px (full page height) reached in 4.66s
+  * No scroll reversals until 2.45s (suggests initial top-to-bottom scan)
+  * 7 distinct scroll events covering 944px in 4.21s (avg 224px/s)
+- No evidence of deep reading (no pauses >500ms on any element)
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social engagement (not applicable to checkout context)
+- Interaction limited to form field clicks and button presses
+- Frustration indicators:
+  * 1 dead click (2.39s)
+  * 3 rage clicks (3.42-3.65s) on "Email" field
+  * 1 hesitation (398ms) on initial page load (0.4s)
+
+4. INTERACTION SPEED
+- Rapid action tempo:
+  * Avg 0.36s between primary actions (clicks/scrolls)
+  * Fastest sequence: 3 rage clicks in 230ms (3.42-3.65s)
+  * Slowest deliberate action: 630ms hover on "Pay Now" (4.19s)
+- Form field engagement:
+  * "Card Number": 190ms between hover and click (1.57-1.76s)
+  * "Email": 370ms between hover and first click (2.96-3.33s)
+
+5. CONTENT PREFERENCES
+- Checkout-specific content only:
+  * Cart Summary (2 clicks)
+  * Payment fields (Card Number: 2 clicks, Email: 4 clicks)
+  * Primary CTA ("Pay Now": 2 clicks)
+  * Exit link ("Back to Shop": 2 clicks)
+- No product browsing, category navigation, or non-checkout content
+
+6. TYPING BEHAVIOR
+- No typing data captured (session recording shows clicks only)
+- Indirect typing indicators:
+  * Rage clicks on "Email" field suggest input frustration
+  * No evidence of field completion (no blur events or form submission)
+
+7. FEATURE DISCOVERY
+- Used features:
+  * Cart Summary expansion (2 clicks)
+  * Payment form fields (Card Number, Email)
+  * Primary CTA ("Pay Now")
+  * Exit navigation ("Back to Shop")
+- Ignored features:
+  * No address/shipping fields engaged
+  * No promo code fields
+  * No payment method selection
+  * No help/chat widgets
+  * No footer links
+
+8. SESSION FLOW
+- 0.0-0.79s: Orientation Phase
+  * Page load → initial hesitation (398ms) → rapid scroll to assess page length
+- 0.79-2.39s: Cart Verification
+  * Cart Summary interaction (2 clicks) → scroll to payment section
+- 2.39-3.7s: Payment Struggle
+  * Dead click → scroll up/down → rage clicks on Email field
+- 3.7-4.98s: Completion Attempt
+  * Rapid scroll to bottom → "Pay Now" click → immediate exit via "Back to Shop"
+- Arc: Goal-directed → Frustration → Abandonment
+  * 0% exploration, 100% transactional focus
+  * 5.0s total duration with no successful form completion
+  * Exit likely due to payment friction (rage clicks) or post-payment redirect
+```
+
+Key Quantitative Metrics:
+- Clicks: 14 total (42.9% on form fields, 28.6% on CTAs)
+- Scroll events: 16 (47% downward, 25% upward)
+- Frustration events: 5 (35.7% of clicks)
+- Time to first frustration: 2.39s
+- Scroll coverage: 100% of page height in 4.66s

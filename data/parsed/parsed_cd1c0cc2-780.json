@@ -1,0 +1,193 @@
+{
+  "user_profile": {
+    "session_id": "cd1c0cc2-780",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/scanner",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 6.5,
+  "total_raw_events": 36,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/landing",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 1.08,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 1080ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 1.7,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation [HOVER 336ms]",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        292,
+        32
+      ]
+    },
+    {
+      "time": 3.07,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        290,
+        29
+      ]
+    },
+    {
+      "time": 3.14,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 198,
+      "max_depth": 198,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.19,
+      "action": "SCROLL",
+      "scroll_from": 198,
+      "scroll_to": 396,
+      "max_depth": 396,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.22,
+      "action": "SCROLL",
+      "scroll_from": 396,
+      "scroll_to": 594,
+      "max_depth": 594,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.27,
+      "action": "SCROLL",
+      "scroll_from": 594,
+      "scroll_to": 792,
+      "max_depth": 792,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.67,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Testimonials [HOVER 100ms]",
+      "target_href": "",
+      "target_class": "div.testimonials",
+      "coordinates": [
+        1555,
+        792
+      ]
+    },
+    {
+      "time": 4.41,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Testimonials",
+      "target_href": "",
+      "target_class": "div.testimonials",
+      "coordinates": [
+        1552,
+        786
+      ]
+    },
+    {
+      "time": 4.82,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "[DEAD CLICK]",
+      "target_href": "",
+      "target_class": "div.empty-space",
+      "coordinates": [
+        842,
+        1579
+      ]
+    },
+    {
+      "time": 4.89,
+      "action": "SCROLL",
+      "scroll_from": 792,
+      "scroll_to": 705,
+      "max_depth": 792,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 4.96,
+      "action": "SCROLL",
+      "scroll_from": 705,
+      "scroll_to": 618,
+      "max_depth": 705,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 5.02,
+      "action": "SCROLL",
+      "scroll_from": 618,
+      "scroll_to": 531,
+      "max_depth": 618,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 5.08,
+      "action": "SCROLL",
+      "scroll_from": 531,
+      "scroll_to": 444,
+      "max_depth": 531,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 5.38,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features [HOVER 164ms]",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        678,
+        444
+      ]
+    },
+    {
+      "time": 6.48,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        678,
+        443
+      ]
+    }
+  ]
+}

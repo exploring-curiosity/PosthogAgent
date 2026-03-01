@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with frustration loops**: The user exhibits a non-linear, erratic navigation pattern with repeated returns to the same UI elements. They jump between sections (Privacy → Settings Nav → Profile → Notifications) without completing actions in a single section.
+- **Backtracking frequency**: 3 instances of returning to the "Settings Nav" (4.5s, 10.2s, 13.59s) and 2 instances of returning to "Privacy" (6.43s, 8.45s) suggest disorientation or dissatisfaction.
+- **Section abandonment**: No section is fully explored; max scroll depth varies per section (Privacy: 724px, Profile: 385px, Notifications: 385px) but is never revisited after leaving.
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow engagement**: Scroll speeds (0.5s per 300–400px) indicate rapid scanning rather than deep reading. No pauses >1s on any scroll segment.
+- **No content absorption**: The user never lingers on text; all clicks target UI elements (buttons, nav items), not content. Scroll patterns show no "dwell zones" (e.g., no segment where scroll speed slows).
+- **Max scroll depth**: 933px (Settings), but this is achieved via 3 rapid scrolls (13.67s–13.82s) with no subsequent interaction at depth.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session lacks votes, comments, or form submissions. All interactions are navigational or UI-related.
+- **Frustration signals**:
+  - **Rage clicks**: 6 consecutive clicks on "Privacy" (8.53s–9.09s) within 0.53s, clustered in a 40x24px area.
+  - **Hesitation markers**: 5 instances of "[HESITATION Xms]" (4.46s–31.36s), with delays ranging from 1.8s to 4.4s before clicking empty space (0,0).
+- **No completion**: The "Save Changes" button is clicked twice (15.2s, 20.73s) but no confirmation of submission is recorded.
+
+4. INTERACTION SPEED
+- **Variable speed with frustration spikes**:
+  - **Deliberate early phase**: 4.46s hesitation before first click; 1.5s hover on "Privacy" (6.43s).
+  - **Accelerated frustration**: 6 rage clicks in 0.53s (8.53s–9.09s).
+  - **Slow re-engagement**: 2.8s hesitation before second "Save Changes" click (18.04s–20.73s).
+- **Hover times**: Average hover duration = 1.3s (1536ms, 753ms, 1160ms, 924ms, 1926ms), suggesting uncertainty.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user interacts exclusively with UI elements (settings tabs, buttons). No evidence of reading or interacting with substantive content (e.g., privacy policies, profile fields).
+- **Section focus**: Gravitated toward:
+  - **Privacy** (6.43s–9.16s): 2 clicks + rage clicks.
+  - **Profile** (22.01s–26.27s): 2 clicks + shallow scroll.
+  - **Notifications** (28.4s–32.25s): 2 clicks.
+  - **Settings Nav** (10.2s–13.82s): 3 clicks + deep scroll.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input events, corrections, or form interactions. All clicks target static UI elements.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation tabs ("Settings Nav", "Profile", "Notifications", "Privacy").
+  - "Save Changes" button (2 clicks).
+  - Scrolling (vertical, rapid).
+- **Ignored features**:
+  - No form fields, toggles, or dropdowns interacted with.
+  - No help links, tooltips, or secondary UI elements (e.g., sidebars, footers).
+  - No search or filter functionality used.
+
+8. SESSION FLOW
+- **Phase 1: Disoriented Exploration (0s–9.16s)**
+  - Loads settings page, hesitates (4.46s), scrolls rapidly (4.5s–4.54s).
+  - Clicks "Privacy" (6.43s), then rage-clicks (8.53s–9.09s), scrolls up (9.11s–9.19s).
+  - **Frustration peak**: 6 rage clicks in 0.53s.
+- **Phase 2: Attempted Recovery (9.19s–20.82s)**
+  - Returns to "Settings Nav" (10.2s), hesitates (12.61s), re-clicks nav (13.59s).
+  - Scrolls deeply (13.67s–13.82s), clicks "Save Changes" (15.2s), hesitates (18.04s), re-clicks (20.73s).
+  - **Pattern**: Repeated clicks on the same element after delays.
+- **Phase 3: Abandonment (20.82s–32.25s)**
+  - Jumps to "Profile" (22.01s), shallow scrolls (26.04s–26.27s).
+  - Moves to "Notifications" (28.4s), hesitates (31.36s), clicks (32.25s).
+  - **Exit**: Session ends without completion or confirmation.
+- **Arc**: Exploration → Frustration → Attempted Recovery → Abandonment.
+  - No engagement with core functionality (e.g., saving settings).
+  - No exit confirmation (e.g., "Saved" toast, page reload).
+```
+
+**SUMMARY**: This user demonstrates a **frustrated, non-linear navigation pattern** with no substantive engagement. Their behavior is characterized by **rapid skimming, repeated UI clicks, rage clicks, and hesitation**, suggesting confusion or dissatisfaction with the interface. The session ends without completing any primary task (e.g., saving settings).

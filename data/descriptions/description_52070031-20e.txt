@@ -1,0 +1,77 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Scattered with repetitive cycles
+- **Evidence**:
+  - Initial linear descent (0.87s–0.99s: 0px→360px) followed by abrupt upward scroll (3.24s–3.43s: 360px→50px)
+  - Repeated "down-up-down" cycle (5.45s–5.62s: 50px→463px, then 10.4s–10.89s: dead click at bottom)
+  - 4/12 clicks (33%) are dead clicks or hesitations at (0,0) or viewport edges
+  - No sequential navigation through logical content sections (e.g., skipped from "Get Started" to "Navigation" without intermediate steps)
+
+2. READING BEHAVIOR
+- **Behavior**: Skimming with rapid scroll bursts
+- **Evidence**:
+  - Scroll speed: 240px/s (consistent across all scroll actions)
+  - Max depth: 463px (viewport height: 1080px → 43% of page explored)
+  - No pauses >500ms between scrolls (suggests no deep reading)
+  - 3 upward scrolls (3.24s–3.43s) indicate backtracking, likely to re-scan content
+
+3. ENGAGEMENT STYLE
+- **Actions**: Clicks only (no typing, voting, or commenting)
+- **Timing**:
+  - First engagement: 1.31s (button click after 838ms hesitation)
+  - Last engagement: 10.89s (dead click)
+  - 6/12 actions (50%) are clicks on interactive elements (buttons/nav/sections)
+  - 0/6 interactive clicks led to visible outcomes (all either dead clicks or repeated clicks on same elements)
+- **Ratio**: N/A (no voting/commenting observed)
+
+4. INTERACTION SPEED
+- **Speed**: Fast but erratic
+- **Metrics**:
+  - Median time between actions: 0.57s (excluding hesitations)
+  - Fastest sequence: 0.03s (0.95s→0.99s scrolls)
+  - Slowest sequence: 2.76s (8.91s hesitation before 10.4s click)
+  - Hover durations: 206ms–340ms (below average human reaction time for deliberate interaction)
+
+5. CONTENT PREFERENCES
+- **Gravitated toward**:
+  - Primary CTA: "Get Started" (clicked twice at 1.31s and 2.62s)
+  - Navigation menu (clicked at 3.95s and 5.4s)
+  - "Features" section (clicked at 6.15s and 10.4s)
+- **Ignored**:
+  - No interaction with text content, images, or secondary CTAs
+  - No evidence of subreddit/category exploration (data not applicable to this site)
+
+6. TYPING BEHAVIOR
+- **Observed**: None
+- **Evidence**:
+  - 0 text inputs, corrections, or form interactions
+  - All actions are clicks/scrolls
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Primary CTA ("Get Started")
+  - Navigation menu
+  - "Features" section
+- **Ignored**:
+  - No evidence of tooltips, dropdowns, search, or footer interactions
+  - No engagement with dynamic content (e.g., carousels, accordions)
+
+8. SESSION FLOW
+- **Arc**: Exploration → False Engagement → Repetition → Abrupt Exit
+- **Phases**:
+  1. **Initial Scan** (0.0s–1.31s):
+     - Load → hesitation (838ms) → rapid scroll to 360px → "Get Started" click
+  2. **False Engagement** (1.31s–3.95s):
+     - Repeated "Get Started" clicks (2.62s) → dead click (3.18s) → upward scroll
+  3. **Navigation Attempt** (3.95s–6.15s):
+     - Navigation clicks (3.95s, 5.4s) → scroll to 463px → "Features" hover (6.15s)
+  4. **Repetition** (6.15s–10.89s):
+     - Long hesitation (2756ms) → "Features" click (10.4s) → dead click (10.89s)
+- **Exit**: No further actions after 10.89s (session ends at 10.9s)
+```
+
+**NOTES**:
+- **Synthetic/Scanner Flag**: The "synthetic/scanner" device label, rapid scroll speed (240px/s), and dead clicks suggest this may be a bot or automated tool rather than a human user. Human-like behaviors (hesitations, hovers) are likely simulated.
+- **Quantitative Limits**: No typing, voting, or commenting data available. Content preferences inferred solely from click targets.

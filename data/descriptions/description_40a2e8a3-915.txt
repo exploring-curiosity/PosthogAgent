@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered/Frustrated**: The user exhibits a highly erratic navigation pattern with no clear linear progression. They repeatedly return to the same elements (e.g., "Export" button clicked 3 times, "Data Table" clicked 4 times, "Sidebar" clicked 6 times) without apparent progress.
+- **Repetitive Cycles**: Actions cluster around 3 core elements (Export button, Data Table, Sidebar) in loops, suggesting either confusion or technical issues. For example:
+  - 0.79s–2.68s: Focus on Export button
+  - 1.54s–10.14s: Repeated Data Table interactions
+  - 3.25s–9.25s: Sidebar obsession
+- **No Deep Exploration**: No navigation to new pages or sub-features beyond the initial dashboard.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scroll patterns show rapid, shallow engagement:
+  - Scrolls are short (avg. 200–300px per 0.5s segment) and bidirectional (up/down within seconds).
+  - Max scroll depth (948px) reached at 2.89s, but user immediately scrolls back up (6.84s–6.99s), indicating no deep reading.
+  - No pauses >1s on any scroll segment (suggests no content absorption).
+- **No Content Focus**: Scrolls cover the entire page repeatedly but never linger on specific sections.
+
+3. ENGAGEMENT STYLE
+- **No Traditional Engagement**: No evidence of voting, commenting, or content creation. All interactions are clicks (no text input detected).
+- **Frustration Markers**:
+  - **Rage Clicks**: 8 instances (8.35s–11.39s) on Sidebar and Stats Cards, indicating repeated failed interactions.
+  - **Dead Clicks**: 2 instances (2.0s, 6.78s) where clicks register on non-interactive elements.
+  - **Hesitations**: 2 long pauses (400ms at 0.4s, 1786ms at 5.04s) before clicking empty space.
+- **Click Redundancy**: 100% of clicks on interactive elements are duplicated (e.g., "Export" clicked twice in rapid succession 3 times).
+
+4. INTERACTION SPEED
+- **Hyper-Fast with Delays**: Two distinct modes:
+  - **Rapid-Fire Clicks**: 0.2–0.5s between actions (e.g., 1.01s–1.09s: 0.08s between Export clicks).
+  - **Long Hesitations**: 1.79s (5.04s–6.84s) and 1.29s (6.09s–7.34s) gaps with no action.
+- **Hover Times**: Short (avg. 96ms) before clicks, suggesting impulsive rather than deliberate interactions.
+
+5. CONTENT PREFERENCES
+- **No Content Engagement**: The user interacts exclusively with UI elements, not content:
+  - **Primary Targets**:
+    - Export button (3 attempts)
+    - Data Table (4 attempts)
+    - Sidebar (6 attempts)
+    - Stats Cards (1 attempt)
+  - **Ignored**: No clicks on actual data, links, or navigation to other pages.
+
+6. TYPING BEHAVIOR
+- **None Detected**: No text input, corrections, or form submissions observed in the 11.4s session.
+
+7. FEATURE DISCOVERY
+- **Discovered Features**:
+  - Export functionality (used repeatedly but unsuccessfully).
+  - Data Table (clicked but no visible outcome).
+  - Sidebar (clicked but triggered rage clicks).
+  - Stats Cards (clicked once, then rage-clicked).
+- **Ignored Features**:
+  - No interaction with navigation menus, filters, or other dashboard tools.
+  - No exploration of page sections beyond initial viewport.
+
+8. SESSION FLOW
+- **Phase 1: Initial Confusion (0.0s–2.0s)**
+  - Loads dashboard, hesitates (400ms), scrolls shallowly, attempts Export (fails).
+- **Phase 2: Desperate Exploration (2.0s–5.0s)**
+  - Dead click, scrolls up/down, re-attempts Export, interacts with Data Table.
+- **Phase 3: Sidebar Obsession (5.0s–9.25s)**
+  - Long hesitation (1786ms), clicks Sidebar 6 times, triggers rage clicks.
+- **Phase 4: Final Frustration (9.25s–11.4s)**
+  - Returns to Data Table, Stats Cards, ends with 5 rage clicks on Stats Cards.
+- **Exit**: Session terminates abruptly after rage clicks (no logout or navigation).
+
+KEY INSIGHTS:
+- **Technical Failure**: The user’s behavior is consistent with a broken UI (e.g., Export button not responding, Sidebar links not working).
+- **No Content Engagement**: Zero interaction with actual data or features beyond UI elements.
+- **Synthetic User**: The "synthetic/impulsive_clicker" device label suggests this may be a bot or automated test, not a human user.
+- **Session Goal**: Likely attempted to export data but failed, leading to escalating frustration.
+```

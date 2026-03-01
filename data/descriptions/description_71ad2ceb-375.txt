@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - Highly linear and goal-oriented with no exploratory detours.
+   - Progression follows a strict sequence: page load → form fields → submit button → exit link.
+   - No evidence of lateral navigation (e.g., menu clicks, product browsing, or tab switching).
+   - Scrolling is strictly vertical and unidirectional (downward only), with no upward corrections.
+
+2. READING BEHAVIOR:
+   - Skimming behavior confirmed by rapid, incremental scrolls (4–6 scroll events in 0.5s bursts).
+   - Scroll depth increases in small increments (62px → 125px → 187px → 250px), suggesting brief visual sampling rather than deep reading.
+   - No dwell time on any section >1.3s (excluding form interactions), indicating minimal content absorption.
+   - Max scroll depth (1017px) reached in 5.12s, covering ~53% of a typical 1920x1080 checkout page.
+
+3. ENGAGEMENT STYLE:
+   - No voting, commenting, or social interactions observed.
+   - Engagement is purely transactional: form input and button clicks only.
+   - Interaction ratio: 2 form clicks (card number, pay now) + 1 exit link click.
+   - No secondary actions (e.g., tooltips, help links, or form validation checks).
+
+4. INTERACTION SPEED:
+   - Fast and deliberate with minimal hesitation:
+     - First click (0,0) at 1.25s (likely a misclick or synthetic artifact).
+     - Card number field clicked at 1.7s (131ms hover), second click at 2.8s (1.1s gap).
+     - "Pay Now" button clicked at 3.54s (380ms hover), second click at 4.98s (1.44s gap).
+     - "Back to Shop" clicked at 5.53s (307ms hover), second click at 6.59s (1.06s gap).
+   - Average time between primary actions: 1.89s.
+   - Scroll actions occur in 0.5s bursts with 0.04–0.07s intervals between increments.
+
+5. CONTENT PREFERENCES:
+   - No content preferences identifiable (no subreddit/page visits logged).
+   - Sole focus: checkout form fields (card number) and payment button.
+   - No product, category, or informational content engagement.
+
+6. TYPING BEHAVIOR:
+   - No typing detected in the log (no `input` or `keypress` events).
+   - Card number field clicked twice (1.7s and 2.8s) but no text entry recorded.
+   - Possible explanations:
+     - Synthetic session (no actual typing occurred).
+     - Input blocked by autofill or script.
+     - Logging gap (PostHog may not have captured keystrokes).
+
+7. FEATURE DISCOVERY:
+   - Used features:
+     - Checkout form (card number field).
+     - Payment button ("Pay Now").
+     - Exit link ("Back to Shop").
+   - Ignored features:
+     - No navigation menus, search bars, or product grids.
+     - No help/support links, tooltips, or form validation messages.
+     - No promotional banners, upsell sections, or footer links.
+
+8. SESSION FLOW:
+   - **Phase 1 (0.0–1.7s): Orientation**
+     - Page load → immediate scroll (0–250px) to locate form fields.
+     - Hesitation click at (0,0) (1.25s) suggests initial disorientation.
+   - **Phase 2 (1.7–3.54s): Form Interaction**
+     - Card number field clicked (1.7s), likely to focus input.
+     - Rapid scroll to payment button (250px → 746px in 1.14s).
+   - **Phase 3 (3.54–5.53s): Submission Attempt**
+     - "Pay Now" button clicked (3.54s), second click (4.98s) suggests failed submission or validation.
+     - Scroll to bottom (746px → 1017px) to locate exit link.
+   - **Phase 4 (5.53–6.6s): Exit**
+     - "Back to Shop" clicked (5.53s), second click (6.59s) confirms intent to leave.
+     - Session ends at 6.6s with no further actions.
+
+SUMMARY:
+This session exhibits behavior consistent with a **synthetic bot or automated scanner**:
+- Unnaturally linear navigation with no exploratory deviations.
+- Rapid, incremental scrolling without reading pauses.
+- Repeated clicks on the same elements (card field, buttons) with no typing.
+- No engagement with content beyond transactional elements.
+- Device profile ("synthetic/scanner") and lack of typing further support this interpretation.
+```

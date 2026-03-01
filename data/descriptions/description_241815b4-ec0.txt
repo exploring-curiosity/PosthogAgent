@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with targeted bursts**: The user exhibits a non-linear, erratic navigation style with rapid shifts between UI elements. Initial exploration (0.0s–0.66s) is followed by repeated returns to the same components (e.g., "Data Table" clicked 3x at 0.66s, 3.31s, and implied via hesitation at 3.2s). Later actions (3.97s–7.46s) show a pattern of "probe-and-retreat," where the user engages with a feature (e.g., "Sidebar," "Export," "Chart") then immediately abandons it.
+- **No clear path**: No sequential progression through the dashboard’s logical hierarchy (e.g., no evidence of moving from overview → details → actions). Instead, jumps between spatially distant elements (e.g., from bottom "Data Table" at 765px to top-right "Export" at 64px).
+
+2. READING BEHAVIOR:
+- **Skim-heavy with minimal deep reading**:
+  - **Scroll speed**: Average scroll velocity = **~100px/0.5s** (e.g., 255px→510px in 0.5s at 0.44s). This exceeds typical "reading" speeds (~200–300px/s for skimming vs. 50–100px/s for deep reading).
+  - **Scroll depth**: Max depth = **993px** (3.97s), but no sustained pauses >1s at any depth. Rapid up/down reversals (e.g., 993px→64px in 1.5s at 4.28s–4.78s) suggest scanning for visual anchors, not content absorption.
+  - **Hesitation markers**: Two long pauses (299ms at 0.3s, 2544ms at 3.2s) occur at (0,0)—likely UI confusion (e.g., blank space or loading state), not content engagement.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement** (e.g., no voting, commenting, or form submissions). Instead:
+  - **Repetitive clicking**: 14 clicks in 7.5s, with 5 "RAGE CLICK" events (7.09s–7.46s) on "Stats Cards"—defined as ≥3 rapid clicks on the same element, indicating frustration or broken functionality.
+  - **Hover-to-click ratio**: 4/14 clicks (29%) preceded by hovers (avg hover duration = **102ms**), suggesting impulsive interactions rather than deliberate selection.
+  - **No input creation**: No typing, text entry, or form submissions detected.
+
+4. INTERACTION SPEED:
+- **Hyper-fast with outliers**:
+  - **Median inter-action time**: **190ms** (excluding the 2.54s hesitation at 3.2s).
+  - **Peak speed**: 5 clicks in **450ms** (7.09s–7.46s) during rage-clicking.
+  - **Deliberate pauses**: Only two pauses >1s (299ms at 0.3s, 2544ms at 3.2s), both at (0,0)—likely UI friction, not content consideration.
+  - **Scroll-to-click latency**: Avg **200ms** between scroll completion and next click (e.g., 3.53s scroll ends → 3.97s click), indicating minimal processing time.
+
+5. CONTENT PREFERENCES:
+- **No content preferences inferred**: All interactions target UI elements, not content. Specific targets:
+  - **Data Table**: 3 clicks (0.66s, 3.31s), suggesting interest in tabular data but no evidence of data manipulation.
+  - **Sidebar**: 2 clicks (3.97s, 4.22s), possibly for navigation but abandoned.
+  - **Export**: 2 clicks (4.78s, 5.15s), indicating intent to extract data.
+  - **Chart/Stats Cards**: 2 clicks each (5.65s–6.98s), followed by rage-clicks—suggests these features may have failed to meet expectations.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: Zero keystrokes, corrections, or input fields engaged. All interactions are clicks or scrolls.
+
+7. FEATURE DISCOVERY:
+- **Discovered features (used)**:
+  - **Data Table** (3 clicks)
+  - **Sidebar** (2 clicks)
+  - **Export** (2 clicks)
+  - **Chart** (2 clicks)
+  - **Stats Cards** (5 clicks, including rage-clicks)
+- **Ignored features**:
+  - No evidence of using filters, search, settings, help, or other common dashboard tools.
+  - No interaction with headers, footers, or non-interactive content (e.g., text blocks, images).
+  - No tooltips, modals, or dropdowns triggered.
+
+8. SESSION FLOW:
+- **Phase 1: Disoriented Exploration (0.0s–0.66s)**
+  - Loads dashboard → immediate hesitation (299ms) → rapid scrolling (0–765px in 0.51s) → first click on "Data Table" (0.66s). Suggests confusion or impatience with initial layout.
+- **Phase 2: Repeated Engagement (0.66s–3.97s)**
+  - Returns to "Data Table" twice (3.2s, 3.31s) with long hesitation (2544ms), then scrolls deeper (765px→993px). Indicates failed attempt to extract value from the table.
+- **Phase 3: Feature Probing (3.97s–6.98s)**
+  - Tests "Sidebar" (3.97s), "Export" (4.78s), and "Chart" (5.65s) in rapid succession, each followed by immediate scroll reversals. Suggests each feature was deemed unsatisfactory.
+- **Phase 4: Frustration Escalation (6.98s–7.46s)**
+  - Rage-clicks on "Stats Cards" (5 clicks in 450ms), signaling abandonment or error state. Session ends abruptly.
+
+OVERALL ARC:
+**Failed task completion → feature abandonment → frustration**. The user appears to have a specific goal (likely data extraction or analysis) but encounters repeated friction, leading to rapid disengagement. The session lacks any exploratory curiosity or content engagement, instead focusing on UI mechanics.
+```

@@ -1,0 +1,62 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-driven with minimal deviation.
+- Focused on the "Settings" page exclusively (no cross-page navigation detected).
+- 80% of clicks target either the "Save Changes" button (2x) or "Settings Nav" (2x), suggesting a narrow interaction scope.
+- No exploratory behavior: all actions align with a single workflow (settings adjustment → save → privacy submenu).
+- Scattered only in the final 1.5s (rapid scroll up + privacy click), likely due to time pressure or frustration.
+
+2. READING BEHAVIOR
+- Skimming confirmed by scroll patterns:
+  - 4 rapid downward scrolls (0.5s each) covering 969px in 2.1s (avg. 461px/s).
+  - No pauses >1s between scrolls; no upward re-reading until 6.5s.
+  - Max scroll depth (969px) suggests full-page scan, but speed implies no deep reading.
+- Hesitation markers ("[HESITATION 1279ms]" at 1.28s, "[HESITATION 2229ms]" at 5.39s) indicate brief cognitive load, but no evidence of content absorption.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation detected.
+- Interaction limited to UI controls (buttons, nav, divs).
+- "Save Changes" clicked twice (1.73s and 2.58s) with 850ms gap—likely a failed first attempt (no confirmation in log).
+- No engagement metrics (e.g., upvotes, replies) present in the session.
+
+4. INTERACTION SPEED
+- Fast but erratic:
+  - Avg. time between actions: 0.94s (excluding hesitations).
+  - Peak speed: 0.03s between scrolls (1.31s–1.49s).
+  - Deliberate pauses: 1.28s (initial hesitation), 2.22s (post-"Save Changes" delay), 5.39s (2.23s hesitation).
+- Hover times (133ms–292ms) suggest rapid decision-making but no prolonged consideration.
+
+5. CONTENT PREFERENCES
+- No content consumption detected.
+- Sole focus: Settings workflow (general settings → privacy submenu).
+- No subreddit, post, or topic engagement visible in the log.
+
+6. TYPING BEHAVIOR
+- No typing or input fields interacted with.
+- No corrections, deletions, or form submissions logged.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - "Settings" page navigation (2x clicks on "Settings Nav").
+  - "Save Changes" button (2x clicks).
+  - "Privacy" submenu (final action at 7.52s).
+- Ignored features:
+  - No account/profile links, search, or other nav elements clicked.
+  - No evidence of tooltips, help menus, or advanced settings explored.
+
+8. SESSION FLOW
+- Arc: Linear workflow → Failed action → Repetition → Late pivot → Abrupt exit.
+  - 0.0s–1.73s: Page load → rapid scan (scrolls) → first "Save Changes" attempt.
+  - 1.73s–3.17s: Failed save (repeated click at 2.58s) → nav re-click (3.17s).
+  - 3.17s–5.39s: 2.22s pause (possible error message unseen or ignored).
+  - 5.39s–7.52s: Hesitation → nav re-click → scroll up → privacy submenu click.
+- Exit: Session ends immediately after "Privacy" click (no confirmation of success/failure).
+- Hypothesis: User may have been testing UI functionality (e.g., synthetic session) or encountered a persistent error.
+```
+
+**NOTES:**
+- Device flagged as "synthetic/scanner" suggests non-human interaction (e.g., bot, automated test).
+- No organic user behaviors (e.g., reading, typing) observed.
+- All actions align with a scripted or repetitive task.

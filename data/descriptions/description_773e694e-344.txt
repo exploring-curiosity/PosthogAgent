@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts between settings sections. They jump between:
+  - Notifications (0.72s–1.01s)
+  - Privacy (1.47s–1.82s)
+  - Settings Nav (2.37s–2.51s)
+  - Profile (2.94s–5.85s)
+- **No clear hierarchy**: They revisit the top of the page (scrolling up to 269px at 2.66s) before returning to Profile, suggesting disorientation or frustration.
+- **Rapid section abandonment**: Each section is engaged for <1.5s before moving on (e.g., Privacy: 1.47s–1.86s).
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll speed (111px–223px in 0.5s) indicates no deep reading. Key evidence:
+  - Downward scrolls average **222px/s** (e.g., 0.35s–0.6s: 558px in 0.25s).
+  - Upward scrolls are equally rapid (e.g., 1.86s–1.92s: 245px in 0.5s).
+- **No pauses**: No >200ms dwell time on any scroll segment, suggesting no content absorption.
+- **Max depth**: 985px (5.36s), but only 5.8s total session time implies no meaningful engagement with content below the fold.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session lacks votes, comments, or text input.
+- **Frustration indicators**:
+  - **Rage clicks**: 4 consecutive clicks on "Profile" (4.66s–5.05s) with <100ms intervals, suggesting a broken or unresponsive UI element.
+  - **Hesitation**: 273ms (0.27s) and 1248ms (4.19s) pauses before clicks, likely due to confusion or technical issues.
+- **Hover times**: Short (58ms–195ms) but inconsistent, indicating rapid but uncertain targeting.
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median time between actions: **180ms** (excluding hesitations).
+  - Fastest sequence: 4 rage clicks in **320ms** (4.66s–5.05s).
+  - Slowest deliberate action: 1248ms hesitation (4.19s).
+- **Click redundancy**: 2–3 clicks on the same element (e.g., "Notifications" at 0.72s and 1.01s), suggesting either double-click habit or UI lag.
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: Only interacted with settings sections (Notifications, Privacy, Profile).
+- **No content exploration**: No evidence of browsing posts, subreddits, or other non-settings pages.
+- **Gravitated toward**: Profile settings (longest engagement: 2.94s–5.85s), possibly due to frustration.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form submissions logged.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Settings navigation (Notifications, Privacy, Profile).
+  - "Save Changes" button (5.71s–5.85s).
+- **Ignored features**:
+  - No interaction with account settings, security, or connected apps (if present).
+  - No search, help, or support features used.
+  - No evidence of reading tooltips or help text (no hovers >200ms).
+
+8. SESSION FLOW
+- **0.0s–0.72s (Exploration Phase)**:
+  - Page load → immediate hesitation (273ms) → rapid downward scrolling (558px in 0.25s).
+  - **Goal**: Likely scanning for a specific setting.
+- **0.72s–2.94s (Disjointed Navigation)**:
+  - Clicks Notifications (0.72s) → Privacy (1.47s) → Settings Nav (2.37s).
+  - **Behavior**: Abrupt jumps between sections, no sustained engagement.
+- **2.94s–5.85s (Frustration Phase)**:
+  - Focuses on Profile (2.94s) → rage clicks (4.66s–5.05s) → rapid scrolling (5.13s–5.36s) → "Save Changes" (5.71s).
+  - **Key events**:
+    - 1248ms hesitation (4.19s) before rage clicks.
+    - 4 rage clicks in 320ms (4.66s–5.05s).
+    - Final action: "Save Changes" (5.85s) with no confirmation of success.
+- **Exit**: Session ends at 5.85s, likely due to frustration or technical failure.
+
+SUMMARY
+This user exhibited **high-speed, low-engagement behavior** with clear signs of **frustration** (rage clicks, hesitations). Their navigation was **scattered and non-linear**, with no evidence of reading or content absorption. The session arc suggests a failed attempt to locate or interact with a specific setting (likely Profile), culminating in an abrupt exit. No traditional engagement (votes, comments) occurred.
+```

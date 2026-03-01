@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and hierarchical**: The user follows a clear top-to-bottom, left-to-right progression through the dashboard's structural components.
+- **Component-focused**: Interacts with distinct UI sections sequentially (Sidebar → Stats Cards → Chart → Data Table → Export button).
+- **Non-linear refinement**: After initial exploration of a section, they return to earlier elements (e.g., scrolling back up to Stats Cards after reaching the Data Table).
+- **No backtracking**: No evidence of revisiting previously abandoned sections or random jumps.
+
+2. READING BEHAVIOR
+- **Skim-dominant**: Rapid scroll sequences (0.5s per 240px increment) suggest cursory scanning rather than deep reading.
+- **Depth sampling**: Scrolls to 964px (max depth) within 1.27s, then immediately returns upward, indicating a "peek-and-retreat" pattern.
+- **No dwell time**: No pauses >1s on any scroll segment; average scroll speed = 480px/s (consistent across all scrolls).
+- **Visual anchoring**: Hovers over interactive elements (Sidebar, Stats Cards, Chart, Data Table) for 327–798ms before clicking, suggesting visual confirmation rather than textual analysis.
+
+3. ENGAGEMENT STYLE
+- **Action-only**: No evidence of voting, commenting, or content creation. All interactions are navigational or data-oriented (export).
+- **Click latency**: Average hesitation before clicks = 860ms (range: 327–2914ms). Longest hesitation (2914ms) precedes the second Stats Cards click, suggesting deliberation.
+- **No social engagement**: No interactions with user-generated content, profiles, or discussion features.
+
+4. INTERACTION SPEED
+- **Rapid execution**: Average time between actions = 1.03s (excluding hesitations). Fastest sequence: 4 scrolls in 2.22s (7.19–9.41s).
+- **Deliberate initiation**: Hesitations (1065ms, 2914ms, 591ms, 653ms, 1001ms) cluster before major interactions (Stats Cards, Chart, Data Table, Export).
+- **Consistent rhythm**: Scrolls occur in 0.5s bursts with 0.05–0.07s intervals between them.
+
+5. CONTENT PREFERENCES
+- **Data-centric**: Focused on structured data elements:
+  - Stats Cards (clicked at 3.25s and 7.15s)
+  - Chart (clicked at 8.45s and 9.5s)
+  - Data Table (clicked at 10.49s and 12.1s)
+  - Export (clicked at 12.92s and 14.44s)
+- **No content consumption**: No evidence of reading articles, posts, or multimedia.
+- **Sidebar interaction**: Only functional (clicked at 2.18s and 2.68s), likely for navigation rather than content discovery.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, search queries, or form submissions observed in the log.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Sidebar navigation (2 clicks)
+  - Stats Cards (2 clicks)
+  - Chart interaction (2 clicks)
+  - Data Table (2 clicks)
+  - Export button (2 clicks)
+- **Ignored features**:
+  - No evidence of using filters, settings, or help menus.
+  - No interactions with notifications, user profiles, or collaborative tools.
+  - No mobile-specific features (e.g., hamburger menus) despite desktop viewport.
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0–2.18s)**
+  - Loads dashboard, hesitates (1065ms), then rapidly scrolls to 964px to assess layout.
+  - Duration: 2.18s | Actions: 5 (1 click, 4 scrolls)
+- **Phase 2: Navigation (2.18–3.25s)**
+  - Clicks Sidebar twice (likely expanding/collapsing), then scrolls back to top.
+  - Duration: 1.07s | Actions: 5 (2 clicks, 3 scrolls)
+- **Phase 3: Data Exploration (3.25–12.92s)**
+  - Systematically interacts with Stats Cards, Chart, and Data Table, with hesitations before each major click.
+  - Scrolls deeply into each section before moving to the next.
+  - Duration: 9.67s | Actions: 17 (6 clicks, 11 scrolls)
+- **Phase 4: Export (12.92–14.44s)**
+  - Scrolls to top, hesitates (1001ms), then clicks Export twice.
+  - Duration: 1.52s | Actions: 3 (2 clicks, 1 hesitation)
+- **Exit**: Session ends immediately after final Export click.
+
+SUMMARY
+This user exhibits **highly methodical, data-driven behavior** with no social or content-creation engagement. Their interaction pattern suggests a **task-oriented workflow** (e.g., data extraction or dashboard audit) rather than casual browsing. Scroll speeds and hesitation durations indicate **confident but deliberate** navigation, with no signs of confusion or exploration. The session arc reflects a **linear progression through dashboard components**, culminating in an export action.
+```

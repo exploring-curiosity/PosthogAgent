@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and goal-oriented**: The user follows a strict sequence with no deviations or backtracking (checkout → cart summary → payment → exit). No exploratory clicks or detours.
+- **Minimal interaction diversity**: Only 3 distinct interactive elements engaged (Cart Summary, Pay Now, Back to Shop).
+- **Spatial consistency**: Clicks on identical elements (e.g., "Pay Now" at (1389,701) and (1384,705)) suggest deliberate targeting of specific UI regions.
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scroll bursts**: Scrolls occur in 0.5s increments (e.g., 69px→385px in 0.5s), covering ~316px/s—far exceeding typical reading speeds (200-300 words/min ≈ 100-150px/s).
+- **No deep reading**: Max scroll depth (1007px) suggests engagement with ~1-2 screen heights of content. No pauses >500ms to indicate reading.
+- **Scroll pattern**: 4 distinct scroll bursts (1.52s–2.73s, 4.34s–4.45s) with no upward movement, implying unidirectional content consumption.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement (votes/comments)**: The session occurs entirely within a checkout flow; no social interactions (votes, comments) are applicable.
+- **Interaction metrics**:
+  - **Hover-to-click ratio**: 3/7 clicks preceded by hovers (43%), with hover durations of 156ms–311ms.
+  - **Double-clicks**: 2 instances (Cart Summary at 2.12s/2.63s; Pay Now at 3.34s/4.27s), suggesting either UI confusion or synthetic input.
+  - **Hesitation clicks**: 2 clicks at (0,0) with 1455ms and 1703ms delays (1.45s, 6.68s), likely misfires or placeholder actions.
+
+4. INTERACTION SPEED
+- **Rapid but erratic**:
+  - **Median action interval**: 570ms (excluding scrolls).
+  - **Fastest interval**: 50ms (2.63s–2.67s: Cart Summary click → scroll).
+  - **Slowest interval**: 1703ms (6.68s–8.04s: hesitation → Back to Shop click).
+- **Scroll speed**: 624px/s average (e.g., 701px→803px in 0.5s), consistent with non-reading behavior.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**:
+  - **Primary content**: Cart Summary (engaged at 2.12s–2.63s) and payment flow (Pay Now at 3.34s–4.27s).
+  - **Exit trigger**: "Back to Shop" (clicked at 4.98s and 8.04s), suggesting abandonment of checkout.
+- **No content exploration**: No product pages, search, or category browsing.
+
+6. TYPING BEHAVIOR
+- **No visible typing**: No form inputs, search queries, or text entry detected in the log.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Cart Summary (expanded/collapsed twice).
+  - Payment button ("Pay Now").
+  - Exit link ("Back to Shop").
+- **Ignored features**:
+  - No engagement with navigation menus, product recommendations, or help/chat widgets.
+  - No coupon/promo code fields (if present).
+  - No account/login interactions.
+
+8. SESSION FLOW
+- **Arc**: Linear progression with early abandonment.
+  - **0.0s–2.12s (Exploration)**: Page load → hesitation → rapid scroll to Cart Summary.
+  - **2.12s–4.27s (Engagement)**: Cart Summary interaction → scroll to payment button → double-click "Pay Now".
+  - **4.27s–8.04s (Abandonment)**: Scroll to bottom → click "Back to Shop" → hesitation → final exit click.
+- **Exit pattern**: Two clicks on "Back to Shop" (4.98s, 8.04s) with a 1703ms hesitation, indicating reluctance or UI friction.
+- **Session termination**: No further actions after 8.04s (hard cutoff at 8.0s duration).
+
+ADDITIONAL OBSERVATIONS
+- **Synthetic indicators**:
+  - Device labeled "synthetic/scanner".
+  - Precise click coordinates (e.g., (528,69) vs. (525,69)) and rapid double-clicks suggest automated or scripted behavior.
+  - No mouse movement data (only hover durations), atypical for human users.
+- **UI friction points**:
+  - Double-clicks on Cart Summary and Pay Now may indicate unresponsive buttons or unclear affordances.
+  - Hesitation clicks at (0,0) could reflect misaligned UI elements or placeholder actions.
+```
+
+**Summary**: This session exhibits characteristics of a **synthetic or automated user** (e.g., bot, scanner, or test script) navigating a checkout flow with linear, rapid interactions and no human-like reading behavior. The pattern is goal-driven but lacks exploratory or social engagement, with clear signs of UI friction (double-clicks, hesitations).

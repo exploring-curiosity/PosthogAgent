@@ -1,0 +1,113 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/IMPULSIVE CLICKER SESSION
+
+---
+
+### 1. NAVIGATION PATTERN
+**Scattered and erratic with repetitive cycles**
+- **Non-linear and chaotic**: The user jumps between unrelated elements (e.g., Testimonials → Get Started → Hero Title → Footer → Navigation) without a clear goal. No sequential progression through content.
+- **Repetitive loops**: Multiple clicks on the same elements (e.g., "Testimonials" at 0.61s, 3.13s, 10.98s; "Get Started" at 4.12s, 4.41s, 7.1s, 7.49s, 8.04s, 8.19s; "Hero Title" at 6.18s, 6.63s, 8.73s, 9.11s, 9.34s, 9.57s).
+- **Scroll whiplash**: Rapid scroll direction changes (e.g., down to 1067px at 9.89s, then up to 27px by 11.62s) suggest disorientation or frustration.
+- **No sustained focus**: No single element held attention for >3s (except during rage clicks at 3.24s–3.67s).
+
+---
+
+### 2. READING BEHAVIOR
+**Skimmer with no deep reading**
+- **Scroll speed**: Average scroll duration = **0.5s per 130–170px** (e.g., 403px → 807px in 0.5s at 0.32s). This is **~2x faster** than typical human reading speed (200–300px/s), indicating skimming.
+- **Max depth**: Reached **1067px** (footer) but never paused >1s at any depth, suggesting no close reading.
+- **No hover pauses**: Hover times (57–146ms) are too brief for reading; likely incidental cursor placement.
+- **Scroll patterns**:
+  - **Downward skims**: 0.25s–0.61s (403px → 807px), 9.61s–9.89s (197px → 1067px).
+  - **Upward retreats**: 3.72s–4.56s (807px → 2px), 11.51s–11.62s (852px → 27px).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**No traditional engagement (votes/comments); impulsive clicking**
+- **No votes/comments**: Zero evidence of substantive interaction (e.g., upvotes, replies, form submissions).
+- **Click metrics**:
+  - **Total clicks**: 28 (excluding scrolls).
+  - **Rage clicks**: **5** (3.24s–3.67s) on "Testimonials" (17% of all clicks).
+  - **Dead clicks**: **2** (5.56s, 11.47s) on non-interactive elements.
+  - **Hesitation clicks**: **2** (0.18s, 2.98s) with delays (178ms, 2371ms).
+- **Click frequency**: **2.3 clicks/second** during peak activity (3.24s–3.67s).
+- **No deliberate input**: No typing, form fills, or sustained engagement with interactive elements.
+
+---
+
+### 4. INTERACTION SPEED
+**Hyper-fast with bursts of impulsivity**
+- **Average time between actions**: **0.43s** (excluding scrolls).
+- **Fastest burst**: **5 rage clicks in 0.43s** (3.24s–3.67s; **11.6 clicks/second**).
+- **Slowest pauses**:
+  - **2.37s** hesitation before second "Testimonials" click (2.98s).
+  - **0.55s** between "Get Started" clicks (4.12s–4.41s).
+- **Hover times**: 45–146ms (too short for deliberate interaction).
+- **Scroll speed**: **~260px/s** (consistent across all scrolls).
+
+---
+
+### 5. CONTENT PREFERENCES
+**No clear preferences; random targeting**
+- **Clicked elements (frequency)**:
+  1. "Testimonials" (3 clicks + 5 rage clicks).
+  2. "Get Started" (5 clicks).
+  3. "Hero Title" (4 clicks).
+  4. "Navigation" (3 clicks).
+  5. "Footer" (2 clicks).
+- **No thematic focus**: Clicks span headers, CTAs, navigation, and footers without pattern.
+- **No content consumption**: Zero evidence of reading text (e.g., no pauses on body copy, no clicks on articles/links).
+
+---
+
+### 6. TYPING BEHAVIOR
+**No typing detected**
+- **Zero keystrokes**: No text input, search queries, or form submissions.
+- **No corrections**: N/A (no typing occurred).
+
+---
+
+### 7. FEATURE DISCOVERY
+**Superficial and incomplete**
+- **Used features**:
+  - **Navigation**: Clicked 3x (4.72s, 4.98s, 11.93s, 12.08s).
+  - **CTA buttons**: "Get Started" clicked 5x.
+  - **Testimonials section**: Clicked 3x + rage clicks.
+  - **Footer**: Clicked 2x (10.12s, 10.3s).
+- **Ignored features**:
+  - **Search bars**: No clicks or typing.
+  - **Forms**: No submissions or field interactions.
+  - **Dropdowns/menus**: No expansion clicks.
+  - **Media**: No clicks on images/videos.
+  - **Social sharing**: No clicks on share buttons.
+- **Dead clicks**: 2x on non-interactive elements (5.56s, 11.47s), suggesting confusion.
+
+---
+
+### 8. SESSION FLOW
+**Erratic arc with no progression**
+1. **Initial skimming (0.0s–0.61s)**:
+   - Page load → immediate scroll down (403px → 807px) → click "Testimonials" (0.61s).
+2. **Frustration spike (2.98s–3.67s)**:
+   - 2.37s hesitation → repeat "Testimonials" click → **5 rage clicks** in 0.43s.
+3. **Retreat and CTA spam (3.72s–4.98s)**:
+   - Scroll up to top → click "Get Started" 2x → click "Navigation" 2x.
+4. **Random exploration (5.56s–9.89s)**:
+   - Dead click → scroll down → click "Hero Title" 2x → scroll to footer → click "Footer" 2x.
+5. **Final chaos (10.35s–12.08s)**:
+   - Scroll up → click "Testimonials" → dead click → scroll to top → click "Navigation" 2x.
+- **Exit**: Session ends abruptly after 12.1s with no clear outcome.
+
+---
+
+### SUMMARY
+This session exhibits **synthetic or bot-like behavior** characterized by:
+- **Hyper-fast, repetitive clicks** (rage/dead clicks, 2.3 clicks/s avg).
+- **No reading** (scroll speed ~260px/s, no pauses).
+- **No goal-oriented actions** (no form submissions, no content engagement).
+- **Erratic navigation** (scroll whiplash, random element targeting).
+- **No typing or corrections** (zero input detected).
+
+**Likely explanation**: Automated testing, synthetic user simulation, or a bot (given the "synthetic/impulsive_clicker" device label). Human users do not exhibit this combination of speed, repetition, and lack of engagement.
+```

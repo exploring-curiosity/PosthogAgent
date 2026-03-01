@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly scattered and erratic. The user exhibits no linear progression through the dashboard.
+- Actions cluster around 3 distinct UI elements ("Export" button, "Data Table", and "Chart" div) with rapid toggling between them.
+- No evidence of exploratory navigation (e.g., no clicks on navigation menus, filters, or other page sections).
+- 67% of clicks (10/15) occur on the same 3 elements, suggesting fixation rather than exploration.
+
+2. READING BEHAVIOR:
+- Skimming with extreme brevity. Scroll patterns show:
+  - Initial rapid descent (0-719px in 1.54s) with no pauses >0.5s.
+  - No sustained viewing at any scroll depth (max time at any position: 0.37s at 844px).
+  - Upward scrolls (3.61s-4.57s) cover 382px in 0.96s, indicating no re-reading.
+- No evidence of deep reading (e.g., no hover pauses on text content, no text selection).
+
+3. ENGAGEMENT STYLE:
+- No traditional engagement (voting/commenting) observed. All interactions are with:
+  - Export functionality (6 clicks on "Export" button, 0.48s-1.43s)
+  - Data table (9 clicks, 1.85s-3.55s)
+  - Chart elements (3 clicks, 4.17s-5.04s)
+- Interaction style is impulsive and repetitive:
+  - 5 "RAGE CLICK" events on Data Table (3.0s-3.55s) with <0.13s between clicks.
+  - 3 duplicate clicks on "Export" (0.9s, 1.08s, 1.32s) with identical coordinates (±3px).
+
+4. INTERACTION SPEED:
+- Extremely rapid with decreasing latency:
+  - First action: 475ms hesitation (0.48s)
+  - Median inter-action time: 0.18s (excluding scrolls)
+  - Final 5 actions (4.17s-5.04s) average 0.22s apart.
+- Scroll speed: 120-150px/s (consistent across all scrolls).
+
+5. CONTENT PREFERENCES:
+- No content preferences identifiable. All interactions are with:
+  - Export functionality (likely a button in the top-right corner)
+  - Tabular data (bottom of page)
+  - Chart visualization (mid-page)
+- No engagement with textual content, navigation, or other UI elements.
+
+6. TYPING BEHAVIOR:
+- No typing events recorded in the action log.
+- No input fields, search bars, or text areas interacted with.
+
+7. FEATURE DISCOVERY:
+- Discovered and repeatedly interacted with:
+  - Export functionality (6 clicks)
+  - Data table (9 clicks, including rage clicks)
+  - Chart visualization (3 clicks)
+- Ignored:
+  - Navigation menus (no clicks on header/footer)
+  - Filters/sorting options (no interactions)
+  - Help/documentation (no clicks)
+  - Any other page elements outside the 3 targeted areas.
+
+8. SESSION FLOW:
+- 0.0s-0.52s: Initial hesitation (475ms) followed by minimal scroll (31px).
+- 0.52s-1.51s: Rapid export attempts (4 clicks in 0.99s) with brief scrolls.
+- 1.51s-3.55s: Deep scroll to table (719px) followed by:
+  - 2 normal clicks (1.85s-2.21s)
+  - 5 rage clicks (3.0s-3.55s) with increasing frequency (0.12s->0.07s intervals)
+- 3.55s-4.57s: Rapid upward scroll (382px in 0.96s) to chart area.
+- 4.17s-5.04s: 3 clicks on chart (2 with hovers <103ms) in final 0.87s.
+- Session ends abruptly at 5.04s with no exit action (e.g., no page close recorded).
+
+ADDITIONAL OBSERVATIONS:
+- Coordinate precision: Clicks on identical elements vary by ±3px, suggesting mouse jitter rather than intentional targeting.
+- Hover durations: All <126ms (median: 72ms), indicating no meaningful engagement with hover states.
+- Viewport coverage: Interacted with elements spanning 844px of vertical space (78% of 1080px viewport) despite session lasting only 5s.
+```
+
+**Summary**: This session represents a synthetic or automated interaction pattern characterized by rapid, repetitive clicks on a limited set of UI elements with no evidence of human-like engagement. The behavior aligns with the labeled "synthetic/impulsive_clicker" device profile.

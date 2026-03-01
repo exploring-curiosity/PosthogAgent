@@ -1,0 +1,91 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Scattered with focused micro-explorations
+- **Evidence**:
+  - Non-linear jumps between 4 distinct UI zones (Data Table → Chart → Sidebar → Export button → Stats Cards)
+  - 6/14 actions (43%) involve re-clicking the same element after hesitation (e.g., Data Table at 6.74s and 10.89s)
+  - 36% of session time spent in "hesitation" pauses (5.48s-9.1s, 14.13s-16.99s, etc.)
+  - No sequential navigation through menus or content blocks
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with rapid depth sampling
+- **Evidence**:
+  - Scroll velocity: 838px in 1.0s (5.53s-6.53s) → 838px/s (skimming)
+  - Max scroll depth: 838px (43.6% of 1920px viewport height)
+  - Reversed scroll direction 4 times (e.g., 10.92s-10.96s: up from 838px to 520px)
+  - No sustained pauses >1s at any scroll position (no deep reading)
+  - Hover times (962ms-1223ms) suggest visual scanning, not content absorption
+
+3. ENGAGEMENT STYLE
+- **Pattern**: Click-only interaction with no visible input
+- **Evidence**:
+  - 0/14 actions involve typing, voting, or commenting
+  - 100% of interactions are clicks (14/14) or scrolls (6/14)
+  - No form submissions, text inputs, or multi-step interactions
+  - Hover durations (551ms-1223ms) indicate pre-click evaluation but no follow-through to input
+
+4. INTERACTION SPEED
+- **Pattern**: Deliberate with intermittent acceleration
+- **Evidence**:
+  - Median action interval: 1.73s (excluding hesitations)
+  - 3 distinct speed modes:
+    1. **Hesitation clusters**: 2.35s-5.48s pauses (5.48s, 9.1s, 14.13s, 19.57s)
+    2. **Rapid sequences**: 0.03s-0.06s between scrolls (e.g., 10.92s-10.96s)
+    3. **Targeted clicks**: 1.15s-1.83s hover-to-click (e.g., 22.68s Export button)
+  - 64% of actions occur within 1s of prior action (excluding hesitations)
+
+5. CONTENT PREFERENCES
+- **Pattern**: Functional UI elements over content
+- **Evidence**:
+  - 71% of clicks target interactive controls (Data Table: 2, Chart: 2, Sidebar: 2, Export: 2)
+  - 0 clicks on static content (text, images, or non-interactive elements)
+  - Final 3 actions (25.57s-27.78s) focus on Stats Cards (potential late-session interest)
+  - No engagement with navigation menus, search bars, or user-generated content
+
+6. TYPING BEHAVIOR
+- **Pattern**: None detected
+- **Evidence**:
+  - 0 keystrokes logged
+  - 0 text inputs or form interactions
+  - 0 corrections or deletions
+  - All hesitations occur on blank page areas (0,0 coordinates)
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Data Table (2 clicks, 962ms hover)
+  - Chart visualization (2 clicks, 1223ms hover)
+  - Sidebar navigation (2 clicks, 551ms hover)
+  - Export functionality (2 clicks, 1150ms hover)
+  - Stats Cards (2 clicks, 956ms hover)
+- **Ignored Features**:
+  - Search/filters (no clicks)
+  - User account dropdown (no clicks)
+  - Help/documentation (no clicks)
+  - Any content below 838px scroll depth
+
+8. SESSION FLOW
+- **Arc**: Functional exploration → Hesitation loops → Abrupt exit
+- **Phases**:
+  1. **Initial Scan (0.0s-6.74s)**:
+     - 6.74s to reach first meaningful click (Data Table)
+     - Rapid scroll to 838px depth (5.53s-6.03s)
+  2. **Micro-Engagement (6.74s-12.41s)**:
+     - 2 Data Table interactions (6.74s, 10.89s)
+     - 1 Chart interaction (12.41s)
+     - 3 hesitation pauses (5.48s, 9.1s, 14.13s)
+  3. **Feature Sampling (12.41s-22.68s)**:
+     - Sidebar (17.74s), Export (22.68s)
+     - 4 upward scroll sequences (17.05s-21.32s)
+  4. **Late Abandonment (22.68s-27.78s)**:
+     - Stats Cards engagement (26.77s-27.78s)
+     - No exit confirmation (session ends mid-interaction)
+- **Exit Pattern**: Incomplete final action (Stats Cards click at 27.78s with no follow-up)
+```
+
+**Key Behavioral Signatures**:
+- **Hesitation-to-Click Ratio**: 6 hesitations / 14 total actions (43%)
+- **Scroll Reversal Rate**: 4 direction changes in 6 scroll actions (67%)
+- **Element Re-engagement**: 5/7 clicked elements were interacted with twice
+- **Viewport Utilization**: 43.6% vertical coverage (838px/1920px) with no horizontal exploration

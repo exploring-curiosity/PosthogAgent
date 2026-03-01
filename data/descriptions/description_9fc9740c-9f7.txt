@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered/Non-linear with high hesitation**: The user exhibits no clear progression through the site. All clicks occur at (0,0) or near the viewport edges (e.g., (1520,25), (1471,110)), suggesting:
+  - Clicks on non-interactive elements (e.g., whitespace, page margins) or UI chrome (e.g., browser controls).
+  - No evidence of scrolling or targeted interaction with page content.
+- **No exploratory behavior**: Zero navigation to new pages, subpages, or content sections. All actions occur on the initial loaded page.
+
+2. READING BEHAVIOR
+- **No reading detected**: The action log shows:
+  - No scroll events (implied by static viewport coordinates).
+  - No clicks on text links, headlines, or content areas.
+  - Hesitation clicks at (0,0) may indicate accidental clicks or UI confusion, not reading engagement.
+
+3. ENGAGEMENT STYLE
+- **No engagement**: The session contains:
+  - Zero votes, comments, or submissions.
+  - Zero interactions with interactive elements (e.g., buttons, forms, dropdowns).
+- **Vote-to-comment ratio**: Undefined (0:0).
+
+4. INTERACTION SPEED
+- **Highly variable with extreme hesitation**:
+  - **First 3 actions**: 1.37s → 4.67s (3.3s gap), 4.67s → 8.85s (4.18s gap).
+  - **Longest hesitation**: 7.257s before the 8.85s click (72% of the session’s first 17.76s).
+  - **Final 3 clicks**: 17.76s → 17.86s (0.1s gap), 17.86s → 26.19s (8.33s gap), 26.19s → 27.01s (0.82s gap).
+- **Median inter-action time**: 3.74s (excluding the 0.1s outlier).
+
+5. CONTENT PREFERENCES
+- **No content interaction**: The user did not:
+  - Click on any content (posts, links, images).
+  - Navigate to any subreddit or topic page.
+  - Search or filter content.
+- **Inferred disinterest**: The lack of engagement with any on-page content suggests either:
+  - The page failed to load/render correctly.
+  - The user was not the intended audience (e.g., bot, accidental visit).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero form submissions, search queries, or text inputs.
+
+7. FEATURE DISCOVERY
+- **Features used**: None. The user did not interact with:
+  - Navigation menus, search bars, or content feeds.
+  - Interactive elements (e.g., upvote/downvote buttons, comment fields).
+- **Features ignored**: All core functionality of the site.
+- **Possible edge-case interactions**:
+  - Clicks at (166,139) and (1520,25)/(1471,110) may target:
+    - Browser UI (e.g., back button, extensions).
+    - Page UI (e.g., close buttons, ads, or non-functional elements).
+
+8. SESSION FLOW
+- **Arc**: **Immediate confusion → Abandonment**
+  - **0.0–8.85s (Exploration/Confusion)**:
+    - Page loads; user hesitates for 2.458s before first click at (0,0).
+    - Repeats hesitation clicks at (0,0) with increasing delays (2.552s → 7.257s).
+    - No evidence of intentional interaction with page content.
+  - **8.85–17.76s (Disengagement)**:
+    - 7.257s hesitation suggests growing frustration or distraction.
+    - First non-(0,0) click at (166,139) (possibly a misclick or browser control).
+  - **17.76–27.01s (Exit)**:
+    - Rapid clicks at viewport edges (1520,25 and 1471,110) likely target browser UI (e.g., close tab, back button).
+    - Session ends abruptly at 27.01s with no further activity.
+
+KEY OBSERVATIONS:
+- **Technical issues suspected**: The combination of (0,0) clicks, extreme hesitation, and lack of content interaction suggests:
+  - Broken page rendering (e.g., JavaScript failure, ad-blocker interference).
+  - Bot-like behavior (though user agent is a Chrome desktop).
+- **No user intent detected**: The session lacks any goal-directed actions (e.g., searching, reading, voting).
+- **Exit triggers**: Clicks at viewport edges in the final 10s strongly imply an attempt to leave the page.
+```

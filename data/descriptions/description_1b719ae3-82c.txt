@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly erratic and non-linear, with no clear progression through checkout steps.
+- Repeated cycles of scrolling (both down and up) interspersed with rapid, redundant clicks on the same elements (e.g., "Cart Summary" clicked 4 times in 1.4s at 5.26-5.55s, "Pay Now" clicked 3 times in 0.48s at 1.62-2.03s).
+- No evidence of sequential form completion (e.g., no clicks on "Expiry Date" or "CVV" fields despite scrolling past them).
+- 67% of actions (18/27) involve scrolling, suggesting frantic spatial exploration rather than focused navigation.
+
+2. READING BEHAVIOR
+- Skimming with extreme impatience:
+  - Average scroll speed: 176px/s (e.g., 98px in 0.5s at 0.46s).
+  - Max scroll depth: 999px (viewport height: 1080px), but no sustained pauses >100ms at any depth.
+  - No evidence of reading: 0ms dwell time on any content block; all clicks target interactive elements, not text.
+- Scroll patterns show "bounce" behavior: 3 distinct scroll-up sequences (e.g., 2.99-3.09s, 4.58-4.73s) after reaching max depth, indicating rejection of content.
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (voting/commenting) observed—this is a checkout page, not a social platform.
+- Interaction metrics reveal:
+  - Rage clicks: 3 consecutive clicks on "Cart Summary" (5.34-5.55s) with <100ms between clicks.
+  - Redundant clicks: 12/27 actions (44%) are duplicate clicks on the same element (e.g., "Pay Now" clicked 3 times, "Cart Summary" 4 times).
+  - Hover times: Extremely short (30-118ms), suggesting no deliberation.
+
+4. INTERACTION SPEED
+- Hyper-fast with no deliberation:
+  - Average time between actions: 240ms (median: 180ms).
+  - Fastest sequence: 3 rage clicks in 210ms (5.34-5.55s).
+  - Hesitation only at session start (410ms pause at 0.41s) and before "Back to Shop" (118ms hover at 2.56s).
+- No typing detected (no keystrokes logged), despite clicking on "Card Number" field.
+
+5. CONTENT PREFERENCES
+- Irrelevant to this session (checkout page only).
+- Interaction focus:
+  - 67% of non-scroll actions target 3 elements: "Pay Now" (4 clicks), "Cart Summary" (6 clicks), "Back to Shop" (2 clicks).
+  - No engagement with product details, shipping options, or legal text.
+
+6. TYPING BEHAVIOR
+- No typing observed despite:
+  - 2 clicks on "Card Number" field (0.92-1.18s).
+  - No input length, corrections, or dwell time on form fields.
+- Suggests either:
+  - Synthetic session (bot/automation), or
+  - User abandoned input immediately after clicking.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Scrolling (18 actions).
+  - Primary CTA buttons ("Pay Now", "Back to Shop").
+  - Cart summary toggle (clicked but not expanded—no state change logged).
+- Ignored features:
+  - Form fields (no input beyond clicks).
+  - Secondary CTAs (e.g., "Apply Coupon", "Shipping Options").
+  - Help/support links (no hovers or clicks).
+
+8. SESSION FLOW
+- Arc: Frustration -> Abandonment -> Erratic Recovery Attempts
+  0.0-0.41s: Initial hesitation (410ms pause).
+  0.41-2.56s: Rapid scrolling (9 scrolls) + redundant clicks ("Pay Now" x3) → Failed checkout attempt.
+  2.56-2.93s: Escape behavior ("Back to Shop" clicked).
+  2.99-5.55s: Re-engagement with cart (scrolling + 4 clicks on "Cart Summary", including rage clicks).
+  5.58-6.48s: Final scroll-up + 2 more "Cart Summary" clicks → Session ends.
+- No successful completion of any workflow.
+- Exit likely due to frustration (rage clicks) or technical failure (no form input).
+```
+
+**Key Anomalies:**
+- Device labeled "synthetic/impulsive_clicker" suggests automated or bot-like behavior.
+- No mouse movement between clicks (all coordinates are static), atypical for human users.
+- 100% of clicks are on interactive elements, with no exploratory hovers over static content.

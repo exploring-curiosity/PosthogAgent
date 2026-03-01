@@ -1,0 +1,31 @@
+{
+  "user_profile": {
+    "session_id": "f73cea5a-2d7",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "unknown",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 0.0,
+  "total_raw_events": 1,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        500,
+        300
+      ]
+    }
+  ]
+}

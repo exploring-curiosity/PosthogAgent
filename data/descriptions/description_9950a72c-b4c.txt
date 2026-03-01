@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly exploratory with rapid, non-linear movement**
+  - Begins with a 216ms hesitation (0.22s) before any interaction, suggesting initial uncertainty or distraction.
+  - Clicks the hero title twice (0.56s, 0.67s) with near-identical coordinates (Δ1-2px), indicating accidental or impatient double-clicking.
+  - Scrolls downward in rapid, uniform increments (0.29s–0.95s: 7 scrolls, ~67px/0.5s avg) with no pauses, then abruptly reverses direction (1.67s–1.75s: scrolls up 514px in 0.8s).
+  - Repeats this pattern: scrolls down to footer (2.44s–2.52s: 469px in 0.8s), then up to testimonials (3.29s–3.33s: 219px in 0.4s), then up again to CTA (3.94s–4.0s: 194px in 0.6s).
+  - **Key metric**: 12 scroll actions in 4.5s (2.67 scrolls/sec), with 4 direction changes (avg 1.1s between reversals). No sustained focus on any section.
+
+2. READING BEHAVIOR
+- **Skimmer with zero deep reading**
+  - Scrolls at ~134px/sec (avg of all scrolls), far exceeding typical reading speed (200–300 words/min ≈ 50–75px/sec for 12pt text).
+  - **No pauses >200ms** between scrolls in any sequence, indicating no time spent reading content.
+  - Max scroll depth: 982px (2.52s), but immediately scrolls up (3.29s) without interacting with footer content.
+  - Hover times (88–178ms) are too brief for reading; likely incidental mouse movement during scrolling.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement (votes/comments)**
+  - **All interactions are clicks** (10 total), with 50% being double-clicks (hero title, features, navigation, footer, testimonials).
+  - **Hover-to-click latency**: 88–178ms (avg 138ms), suggesting clicks are impulsive rather than deliberate.
+  - **No form inputs, text entry, or social interactions** (e.g., upvotes, replies) detected.
+  - **Click targets**: Structural elements (h1, nav, footer) and section headers, not content items.
+
+4. INTERACTION SPEED
+- **Hyper-fast with low deliberation**
+  - **Action frequency**: 2.22 actions/sec (10 clicks + 12 scrolls in 4.5s).
+  - **Inter-action latency**: 0.17s avg (range: 0.03s–0.37s), with 70% of actions occurring <0.2s apart.
+  - **Double-click intervals**: 110–270ms (avg 180ms), faster than human reaction time (200ms), suggesting automated or reflexive behavior.
+  - **Scroll duration**: All scrolls last exactly 0.5s (likely synthetic or capped by recording tool).
+
+5. CONTENT PREFERENCES
+- **No content engagement; only structural elements**
+  - **Clicked elements**:
+    - Hero title (h1) – 2 clicks (0.56s, 0.67s)
+    - "Features" section header – 2 clicks (1.31s, 1.62s)
+    - Navigation menu – 2 clicks (2.0s, 2.39s)
+    - Footer – 2 clicks (2.89s, 3.25s)
+    - "Testimonials" div – 2 clicks (3.74s, 3.91s)
+    - "Get Started" CTA button – 2 clicks (4.31s, 4.54s)
+  - **Ignored content**: No clicks on body text, images, links, or interactive widgets (e.g., forms, videos).
+  - **Scroll depth**: Reached 982px but did not pause to interact with mid-page content (e.g., features, testimonials).
+
+6. TYPING BEHAVIOR
+- **No typing detected**
+  - No text inputs, corrections, or form submissions in the log.
+  - **Implication**: Session did not reach any input fields (e.g., search, login, comments).
+
+7. FEATURE DISCOVERY
+- **Discovered but did not use functional features**
+  - **Used**:
+    - Navigation menu (2 clicks)
+    - CTA button (2 clicks)
+  - **Ignored**:
+    - Search functionality (no clicks on search bar)
+    - Interactive widgets (e.g., carousels, accordions, modals)
+    - Social sharing buttons
+    - Any content below section headers (e.g., feature lists, testimonial quotes)
+  - **Hover data**: Suggests mouse movement over elements, but no sustained engagement.
+
+8. SESSION FLOW
+- **Arc: Synthetic exploration → Impulsive clicking → Abrupt exit**
+  - **0.0s–0.56s (0.56s)**: Initial load → hesitation → rapid downward scroll (7 scrolls in 0.66s). **Behavior**: Testing page responsiveness.
+  - **0.56s–2.0s (1.44s)**: Double-clicks hero title → scrolls up → double-clicks navigation. **Behavior**: Attempting to trigger interactions (e.g., navigation dropdown).
+  - **2.0s–3.25s (1.25s)**: Scrolls to footer → double-clicks footer. **Behavior**: Boundary testing (bottom of page).
+  - **3.25s–4.54s (1.29s)**: Scrolls up → double-clicks testimonials → scrolls to CTA → double-clicks "Get Started". **Behavior**: Final interaction before session end.
+  - **Exit**: Session terminates immediately after last click (4.54s). No return to top or additional actions.
+  - **Key observation**: No progression from exploration to engagement. Clicks are distributed across unrelated elements with no thematic focus.
+```
+
+---
+**SUMMARY PROFILE**:
+This session exhibits **synthetic or automated behavior** characterized by:
+- **Unnaturally high interaction speed** (2.22 actions/sec, sub-200ms reaction times).
+- **Mechanical scrolling** (fixed 0.5s duration, uniform 67px increments).
+- **Repetitive double-clicking** (50% of clicks) on non-interactive elements.
+- **Zero content engagement** (no reading, no form inputs, no social actions).
+- **Boundary testing** (clicking top, middle, and bottom of page).
+
+**Likely explanation**: This is a **bot, synthetic test, or power-user script** designed to stress-test UI responsiveness, not a human user. No organic user would exhibit this combination of speed, precision, and lack of content focus.

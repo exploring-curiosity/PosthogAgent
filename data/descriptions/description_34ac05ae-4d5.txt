@@ -1,0 +1,60 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with rapid targeting**: The user exhibits a non-linear, high-velocity navigation style with abrupt shifts in focus. They begin with a 1.19s hesitation (likely page load delay or synthetic delay), then immediately scroll through 621px of content in 210ms (4 scroll actions at ~0.5s intervals), suggesting a "scan-first" approach. At 1.68s, they abruptly shift to the sidebar (hover: 106ms), then return to vertical scanning (3.06s–3.15s: 3 upward scrolls covering 384px in 150ms). Final clicks target "Stats Cards" (3.5s) and "Data Table" (4.92s), with no sustained engagement on any single element.
+- **No revisits**: No element is interacted with more than twice (sidebar: 2 clicks; stats cards: 2 clicks; data table: 2 clicks), indicating no iterative refinement of focus.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns reveal no deep reading:
+  - **Scroll velocity**: 155px–621px in 210ms (avg. 2,200px/s), then 621px–237px in 150ms (avg. 2,560px/s). This exceeds typical human reading speeds (300–500px/s for skimming; 100–200px/s for deep reading).
+  - **No pauses**: No scroll stalls >200ms (minimum detectable in log), suggesting no content absorption.
+  - **Max depth**: 733px (4.52s), but no sustained dwell time at any depth.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows no votes, comments, or input fields. All interactions are clicks (8 total) with the following characteristics:
+  - **Click latency**: 1.19s (initial hesitation), then 1.3s (sidebar), 1.82s (stats cards), 1.72s (data table). Post-click, no follow-up actions (e.g., form submission, modal interaction).
+  - **Hover-to-click ratio**: 3/8 clicks preceded by hovers (37.5%), with hover durations of 106ms, 208ms, and 243ms—suggesting rapid decision-making rather than deliberation.
+  - **Hesitation clicks**: 2/8 clicks labeled "[HESITATION]" (1.19s and 6.23s) with delays of 1,185ms and 1,309ms, likely synthetic pauses or system delays.
+
+4. INTERACTION SPEED
+- **Extremely fast with synthetic delays**:
+  - **Action intervals**: Median 0.57s between actions (excluding hesitations). Fastest interval: 60ms (3.06s–3.09s: scroll up).
+  - **Click speed**: 2 clicks on "Stats Cards" separated by 760ms (3.5s–4.24s); 2 clicks on "Data Table" separated by 1,310ms (4.92s–6.23s).
+  - **Scroll bursts**: 4–5 scroll actions in rapid succession (e.g., 1.26s–1.43s: 4 scrolls in 170ms), averaging 42.5ms between scroll events.
+
+5. CONTENT PREFERENCES
+- **Targeted UI elements, not content**:
+  - **Sidebar**: 2 clicks (1.68s, 2.99s) at coordinates (10, 621) and (13, 618)—likely a navigation menu.
+  - **Stats Cards**: 2 clicks (3.5s, 4.24s) at (520, 237) and (522, 231)—dashboard metrics or summary cards.
+  - **Data Table**: 2 clicks (4.92s, 6.9s) at (794, 733) and (797, 736)—tabular data at the bottom of the page.
+- **No content engagement**: No clicks on text, images, or links within these elements; only structural UI components.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no input field interactions, keystrokes, or form submissions. All actions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Sidebar navigation**: Used twice (1.68s, 2.99s).
+  - **Stats Cards**: Used twice (3.5s, 4.24s).
+  - **Data Table**: Used twice (4.92s, 6.9s).
+- **Ignored features**:
+  - **Primary content**: No clicks on main page body (e.g., articles, posts, or detailed content).
+  - **Search/filters**: No interactions with search bars or filters.
+  - **User controls**: No profile, settings, or account actions.
+  - **Interactive elements**: No tooltips, dropdowns, or modals triggered.
+
+8. SESSION FLOW
+- **Arc**: **Scan → Target → Abandon** (no engagement loop)
+  - **0.0s–1.19s**: Load and initial hesitation (synthetic delay or system pause).
+  - **1.19s–1.68s**: Rapid vertical scan (621px in 210ms) to assess page structure.
+  - **1.68s–3.5s**: Sidebar interaction (2 clicks) and upward scroll (384px in 150ms), likely reorienting.
+  - **3.5s–4.92s**: Stats Cards interaction (2 clicks) and downward scroll (496px in 240ms) to data table.
+  - **4.92s–6.9s**: Data Table interaction (2 clicks) with final hesitation (1.3s) before session end.
+- **Exit**: No gradual disengagement; session terminates immediately after final click (6.9s).
+- **No progression**: The user does not move from scanning to deeper engagement (e.g., no form fills, no content consumption).
+
+SUMMARY: SYNTHETIC/SCANNER BEHAVIOR
+- **Likely non-human**: The combination of sub-100ms scroll intervals, lack of content engagement, and synthetic hesitations strongly suggests a bot, crawler, or automated scanner. Human users cannot sustain 2,500px/s scroll speeds or click UI elements without content interaction.
+- **Purpose**: Appears to be a UI health check or automated test targeting structural elements (sidebar, cards, tables) rather than user-driven exploration.
+```

@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and linear with minor redundancy**: The user follows a clear, sequential path through the settings menu (Profile → Notifications → Privacy → Save Changes). However, they exhibit **3 instances of re-clicking the same navigation item** (e.g., "Settings Nav" at 1.91s and 4.22s; "Profile" at 5.02s and 7.23s; "Notifications" at 8.11s and 11.3s), suggesting either **confirmation-seeking behavior** or **interface responsiveness testing**.
+- **No exploratory detours**: No clicks on unrelated sections or backtracking to prior pages. All actions are confined to the settings hierarchy.
+- **Hover-heavy**: 4/10 clicks are preceded by hovers (avg. **616ms hover duration**), indicating deliberate pre-selection evaluation.
+
+2. READING BEHAVIOR
+- **Skimmer with targeted deep dives**: Scroll patterns reveal **rapid, segmented reading**:
+  - **Initial scan**: Scrolls from 0px → 900px in **1.0s** (avg. **900px/s**), suggesting a quick overview of the page.
+  - **Focused reading**: After selecting a section (e.g., "Profile" at 5.02s), scrolls **160px → 400px in 0.46s** (avg. **522px/s**), then slows to **60px increments** (e.g., 400px → 470px → 540px) at **~140px/s**, indicating **selective deep reading** of specific content blocks.
+  - **No full-page reads**: Max scroll depth per section is **~953px** (Privacy), but no evidence of reading to the absolute bottom of any section.
+- **Scroll direction reversals**: 2 instances of upward scrolling (e.g., 900px → 160px at 4.25s–4.3s) suggest **re-reading or verification** of prior content.
+
+3. ENGAGEMENT STYLE
+- **No traditional "engagement" actions** (e.g., voting, commenting, or content creation). This session is **purely navigational/configurational**.
+- **Interaction ratio**: 100% of clicks are **settings-related** (profile, notifications, privacy). No content consumption or social interactions.
+- **Hesitation markers**: 4 instances of **"[HESITATION]"** clicks (avg. **1,252ms delay**), likely representing **decision points** (e.g., choosing a settings tab) or **interface lag testing**.
+
+4. INTERACTION SPEED
+- **Deliberate but variable**:
+  - **Avg. time between actions**: **1.86s** (excluding hovers).
+  - **Fastest sequence**: 0.03s–0.05s between scrolls (e.g., 7.28s–7.46s), suggesting **automated or muscle-memory-driven** interactions.
+  - **Slowest sequence**: **2.03s** between "Notifications" click (11.3s) and first scroll (11.38s), likely **reading time**.
+  - **Hover-to-click latency**: Avg. **616ms**, indicating **premeditated selections**.
+- **No typing detected**: All interactions are clicks/scrolls.
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: Exclusively interacted with **3 settings sections**:
+  1. **Profile** (5.02s–7.46s): Spent **2.44s** (including scrolls).
+  2. **Notifications** (8.11s–11.57s): Spent **3.46s**.
+  3. **Privacy** (12.53s–13.34s): Spent **0.81s** (shortest engagement).
+- **No content consumption**: Did not view or interact with posts, comments, or media.
+
+6. TYPING BEHAVIOR
+- **No typing observed**: All actions are clicks, scrolls, or hovers. No form inputs, search queries, or text entry detected.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Navigation menu**: Clicked "Settings Nav" twice (1.91s, 4.22s).
+  - **Settings tabs**: "Profile," "Notifications," "Privacy" (all discovered and used).
+  - **Save functionality**: Clicked "Save Changes" twice (14.23s, 16.7s), with a **1.77s hesitation** before final click.
+- **Ignored features**:
+  - **No search bar usage**.
+  - **No help/tooltips** (no hovers or clicks on "?" icons or info buttons).
+  - **No account/security settings** (e.g., password, 2FA, connected apps).
+  - **No dark mode/appearance toggles** (common in settings pages).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–1.91s)**
+  - Loads settings page, hesitates (**922ms**), scrolls rapidly (**900px in 1s**), then clicks "Settings Nav" after **617ms hover**.
+  - **Goal**: Likely **locating the settings menu** or verifying page load.
+
+- **Phase 2: Redundant Navigation (1.91s–5.02s)**
+  - Re-clicks "Settings Nav" (**1.27s after first click**), scrolls up (**900px → 160px**), then selects "Profile" after **507ms hover**.
+  - **Behavior**: **Testing navigation consistency** or recovering from perceived misclick.
+
+- **Phase 3: Section Exploration (5.02s–14.23s)**
+  - **Profile (5.02s–7.46s)**: Scrolls **160px → 400px** in **2.44s**, then clicks "Notifications."
+  - **Notifications (8.11s–11.57s)**: Scrolls **400px → 749px** in **3.46s**, then clicks "Privacy."
+  - **Privacy (12.53s–13.34s)**: Scrolls **749px → 953px** in **0.81s**, then clicks "Save Changes."
+  - **Pattern**: **Linear progression** through settings, with **increasing scroll speed** (Profile: 522px/s → Privacy: 252px/s), suggesting **growing familiarity** or **decreasing interest**.
+
+- **Phase 4: Confirmation & Exit (14.23s–16.7s)**
+  - Clicks "Save Changes" (**14.23s**), hesitates (**1.77s**), then clicks again (**16.7s**).
+  - **Behavior**: **Double-checking submission** or **waiting for feedback** (e.g., success message).
+  - **Session ends abruptly** after final click (no further actions).
+
+---
+KEY INSIGHTS:
+- **Task-driven**: The user’s behavior aligns with **completing a specific goal** (updating settings) rather than browsing.
+- **Interface skepticism**: Repeated clicks on the same elements and long hovers suggest **low trust in UI responsiveness** or **cautious confirmation**.
+- **No distractions**: Zero deviation from the settings workflow, indicating **high focus** or **synthetic testing** (e.g., automated script or QA).
+- **Scroll as proxy for interest**: Slower scrolls in "Profile" and "Notifications" imply **higher engagement** with those sections vs. "Privacy."
+```

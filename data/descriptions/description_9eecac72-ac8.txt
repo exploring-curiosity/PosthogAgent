@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Highly linear with forced repetition**: The user follows a rigid, sequential path through the settings menu, clicking the same navigation elements twice in rapid succession (e.g., "Settings Nav" at 1.95s and 2.81s; "Profile" at 3.5s and 4.4s; "Notifications" at 5.9s and 6.65s). This suggests either:
+  a) A scripted interaction (e.g., automated test or bot), or
+  b) A user interface issue causing double-clicks to register as single clicks.
+- **No exploratory behavior**: The user does not deviate from the settings menu hierarchy (Settings → Profile → Notifications). No lateral movement to unrelated sections.
+- **Scattered focus**: Scrolling is erratic (see Reading Behavior), with no clear target area.
+
+2. READING BEHAVIOR:
+- **Skim-only, no deep reading**: Scroll patterns indicate rapid, shallow engagement:
+  - **Downward skimming**: 3 consecutive 0.5s scrolls (1.54s–1.64s) covering 865px (43% of viewport height per scroll).
+  - **Upward backtracking**: 3 consecutive 0.5s scrolls (2.86s–2.98s) retracing ~700px, suggesting no content retention.
+  - **Second downward skimming**: 5 consecutive 0.5s scrolls (5.04s–5.25s) covering 255px total (51px per scroll, ~5% of viewport).
+- **No pauses**: No dwell time >1s on any scroll segment, indicating no content absorption.
+- **Hover data**: Hover durations (149ms, 321ms, 367ms) are too brief for reading; likely incidental or synthetic.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The session contains no votes, comments, or submissions.
+- **Interaction metrics**:
+  - **Dead click**: At 5.0s, a click at (246, 880) registered as "[DEAD CLICK]", indicating a failed interaction (e.g., non-interactive element or UI lag).
+  - **Click redundancy**: All primary clicks (Settings, Profile, Notifications) are duplicated within 0.8–1.1s, suggesting either:
+    - UI unresponsiveness (user retries), or
+    - Synthetic input (e.g., scripted double-clicks).
+- **Engagement ratio**: 0 votes/comments per session.
+
+4. INTERACTION SPEED:
+- **Extremely fast, script-like timing**:
+  - **Click intervals**: 0.86s (Settings → Profile), 1.4s (Profile → Notifications).
+  - **Scroll intervals**: 0.05–0.07s between scrolls (1.54s–1.64s), faster than humanly possible (typical human scroll interval: ~0.2s).
+  - **Hover-to-click latency**: 149–367ms (below human reaction time for deliberate clicks).
+- **Action density**: 16 actions in 6.7s (2.4 actions/second), exceeding typical human interaction rates.
+
+5. CONTENT PREFERENCES:
+- **Settings menu only**: Exclusive focus on account settings subsections:
+  - **Settings Nav** (1.95s, 2.81s)
+  - **Profile** (3.5s, 4.4s)
+  - **Notifications** (5.9s, 6.65s)
+- **No content consumption**: No evidence of browsing posts, subreddits, or other content types.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no text input, corrections, or form submissions.
+
+7. FEATURE DISCOVERY:
+- **Features used**:
+  - Settings navigation (primary menu).
+  - Profile and Notifications submenus.
+- **Features ignored**:
+  - No engagement with content feeds, search, messaging, or community features.
+  - No use of interactive elements (e.g., toggles, dropdowns) beyond clicks.
+  - No evidence of feature exploration (e.g., tooltips, help sections).
+
+8. SESSION FLOW:
+- **Arc**: Linear, scripted traversal with no progression or exit intent.
+  - **0.0–1.5s**: Page load + initial hesitation (1.47s click at (0,0) may indicate synthetic delay).
+  - **1.5–3.0s**: Rapid downward scroll (865px) → upward backtrack (700px) → Settings Nav click.
+  - **3.0–5.0s**: Profile section access → dead click (failed interaction).
+  - **5.0–6.7s**: Downward scroll (423px) → Notifications click → session end.
+- **No exit action**: Session terminates abruptly after Notifications click; no logout, tab closure, or navigation away.
+- **No engagement loop**: No return to prior sections or iterative behavior.
+
+---
+
+SUMMARY:
+This session exhibits **non-human behavioral signatures** consistent with:
+- An automated script (e.g., synthetic monitoring, UI test, or bot), or
+- A severely impaired user interface causing repeated misclicks and unresponsive interactions.
+
+Key anomalies:
+- Sub-200ms hover durations.
+- 0.05s scroll intervals.
+- 100% click redundancy.
+- Dead click with no recovery.
+- No content engagement or typing.
+```

@@ -1,0 +1,56 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and task-focused with minimal deviation.
+- Follows a strict top-to-bottom then bottom-to-top flow on the settings page.
+- No exploratory clicks outside the settings menu (Notifications → Privacy).
+- Navigation is segmented into two clear phases:
+  a) Initial scroll-through (0.99s–1.17s) covering 959px in 0.18s total.
+  b) Targeted return to specific menu items (3.26s–6.98s) with precise clicks.
+
+2. READING BEHAVIOR
+- Skimming confirmed: 959px scrolled in 0.18s (avg 5,328px/s) during initial pass.
+- No pauses >200ms at any scroll depth, indicating no deep reading.
+- Post-click scrolls (4.33s–4.58s) are micro-adjustments (16–18px increments), likely aligning UI elements.
+
+3. ENGAGEMENT STYLE
+- No voting or commenting detected (no relevant UI elements in log).
+- Interaction is purely navigational: 6 clicks total, all on settings menu items.
+- Click sequence: Save Changes → Notifications → Privacy (2 clicks each).
+- Click-to-click interval: 0.8s–1.62s (fast, but with hover hesitation).
+
+4. INTERACTION SPEED
+- Click latency:
+  - First click (Save Changes) at 1.7s (916ms hesitation + 382ms hover).
+  - Subsequent clicks average 1.08s between action and next hover.
+- Scroll speed: 479px/s during initial pass; 36px/s during micro-adjustments.
+- No typing detected (no input fields engaged).
+
+5. CONTENT PREFERENCES
+- Sole focus: Settings menu items.
+- Sequence: Save Changes → Notifications → Privacy (chronological order).
+- No evidence of content consumption outside settings UI.
+
+6. TYPING BEHAVIOR
+- No typing events recorded.
+- No input fields or text areas interacted with.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Settings menu navigation (Notifications, Privacy).
+  - Save Changes button (clicked twice, likely due to UI lag).
+- Ignored features:
+  - No account/profile links clicked.
+  - No search or help functions engaged.
+  - No sidebar or footer interactions.
+
+8. SESSION FLOW
+- Arc: Linear task execution with UI friction.
+  0.0s–1.7s: Rapid page scan (959px scroll) → immediate Save Changes attempt.
+  1.7s–3.26s: UI friction (double-click on Save Changes, upward scroll).
+  3.26s–6.98s: Targeted navigation (Notifications → Privacy) with hesitation.
+  6.98s: Session ends after Privacy click.
+- Exit: Abrupt termination post-Privacy click (no further actions in 7s session).
+- No exploratory phase; direct task focus with minimal deviation.
+```

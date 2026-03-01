@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with repeated returns to key sections. They cover 4 distinct content areas (Hero, Testimonials, Features, Footer, Navigation) but revisit each 1-2 times.
+- **Depth progression**: Initial shallow exploration (0-174px in first 9s) → deeper dives (up to 1026px) → rapid retreat to top (28.23s) → final focused descent (32.53s-34.66s).
+- **Revisitation rate**: 66% of clicked elements (4/6 unique elements) were clicked twice, with 8-11s between first and second clicks (e.g., Hero Title at 9.75s and 13.69s).
+
+2. READING BEHAVIOR:
+- **Skimmer with selective deep dives**: Scroll patterns show:
+  - **Rapid scanning**: 3-4 scroll steps in 0.5s intervals (e.g., 13.73s-13.82s: 600px in 0.9s).
+  - **Micro-pauses**: Hover times (700ms-1522ms) on 4 elements suggest brief content evaluation.
+  - **No sustained reading**: Max scroll depth (1026px) held for <1s before upward retreat.
+- **Scroll velocity**: Average 196px/s downward, 512px/s upward (2.6x faster retreat).
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement** (no votes, comments, or form submissions detected).
+- **Interaction proxies**:
+  - **Dead click** (17.78s): Single failed interaction (click on non-interactive element at (1259, 1848)).
+  - **Hesitation markers**: 4 instances of "[HESITATION Xms]" clicks (8.69s-31.36s), totaling 15.31s of pre-click delay.
+- **Engagement ratio**: 0:0 (no measurable output).
+
+4. INTERACTION SPEED:
+- **Deliberate with acceleration**:
+  - **Initial latency**: 8.69s to first click (page load → hesitation).
+  - **Action intervals**: Average 2.1s between clicks (range: 0.04s-4.95s).
+  - **Hover-to-click**: 700ms-1522ms (median 844ms) before 4 key clicks.
+  - **End-of-session speed**: Final 3 clicks (32.49s-34.66s) occur in 2.17s (3x faster than average).
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward**:
+  - **Structural elements**: Navigation (2 clicks), Footer (2 clicks).
+  - **Content sections**: Features (2 clicks), Testimonials (2 clicks).
+  - **CTA**: "Get Started" button (final action, 33.62s-34.66s).
+- **Ignored**:
+  - **No clicks** on images, sidebars, or interactive widgets (if present).
+  - **No form fields** or search bars engaged.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: No text inputs, corrections, or form submissions in the log.
+
+7. FEATURE DISCOVERY:
+- **Discovered and used**:
+  - **Primary navigation** (2 clicks at 29.33s/32.49s).
+  - **Hero section** (2 clicks on title).
+  - **Testimonials** (2 clicks on div).
+  - **Features section** (2 clicks).
+  - **Footer** (2 clicks).
+  - **CTA button** (final action).
+- **Ignored features**:
+  - **No evidence** of engagement with:
+    - Search functionality (if present).
+    - Dropdown menus.
+    - Social sharing buttons.
+    - Modal popups or overlays.
+
+8. SESSION FLOW:
+- **Phase 1: Orientation (0s-8.69s)**:
+  - 8.69s pause post-load (no scrolling/clicks), suggesting initial assessment.
+- **Phase 2: Superficial Exploration (8.69s-17.78s)**:
+  - Rapid scrolls (0-773px) with 3 clicks (Hero, Testimonials).
+  - Dead click at 17.78s marks frustration or misclick.
+- **Phase 3: Re-evaluation (17.82s-28.23s)**:
+  - Upward scroll (773px→4px) in 1s, indicating retreat to top for reassessment.
+- **Phase 4: Targeted Descent (28.23s-34.66s)**:
+  - Navigation click (29.33s) → Features section (24.14s) → final CTA (33.62s).
+  - Accelerated clicks (2.17s for last 3 actions) suggest goal convergence.
+- **Exit**: Session ends immediately after CTA click (no post-click activity).
+```
+
+**Key Observations**:
+- **Hesitation-dominant**: 44% of clicks (4/9) preceded by explicit hesitation markers.
+- **Scroll asymmetry**: Downward scrolls 2.6x slower than upward (content evaluation vs. retreat).
+- **No deep engagement**: All interactions were structural (navigation, sections) or CTA-focused.
+- **Final action bias**: 22% of session duration (7.5s) spent on last 3 clicks (Navigation → CTA).

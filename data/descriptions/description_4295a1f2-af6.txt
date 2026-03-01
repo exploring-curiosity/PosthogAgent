@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with frequent backtracking. They repeatedly interact with the same elements (e.g., "Back to Shop" clicked 6 times, "Cart Summary" clicked 2 times, "Pay Now" clicked 2 times) and scroll rapidly in both directions.
+- **No clear progression**: Actions do not follow a logical checkout flow (e.g., clicking "Pay Now" before entering card details, then abandoning to scroll up/down).
+- **Spatial inconsistency**: Click coordinates vary slightly for the same elements (e.g., "Back to Shop" clicks range from (285, 1016) to (520, 975)), suggesting imprecise targeting or UI responsiveness issues.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns indicate rapid, shallow engagement:
+  - **Scroll speed**: ~120px/0.5s (240px/s) during both upward and downward movements.
+  - **Depth**: Max scroll depth of 1010px, but no sustained pauses at any depth. Scrolls are continuous and cover large ranges (e.g., 120px→675px in 0.5s at 3.89s).
+  - **No deep reading**: No pauses >1s at any scroll position; all scrolls are part of rapid transitions.
+- **Content avoidance**: Repeatedly scrolls past "Card Number" and "Email" fields without filling them, despite hovering over them.
+
+3. ENGAGEMENT STYLE
+- **No content creation**: The session contains no typing, voting, or commenting. All interactions are navigational (clicks, scrolls).
+- **Frustration signals**:
+  - **Rage clicks**: 6 instances (8.68s–9.04s on "Email" field; 16.96s–17.16s on "Back to Shop").
+  - **Dead click**: 1 instance (9.71s) on a non-interactive div.
+  - **Hesitation**: 5 instances (total 9.96s of hesitation), with the longest at 2.9s (3.57s) before clicking "Cart Summary" again.
+- **No engagement metrics**: No ratio to calculate (0 votes, 0 comments).
+
+4. INTERACTION SPEED
+- **High-speed with delays**: Two distinct phases:
+  - **Fast interactions**: Clicks and scrolls occur in rapid succession (e.g., 0.21s–0.67s: 4 actions in 0.46s; 4.58s–4.83s: 6 actions in 0.25s).
+  - **Prolonged hesitations**: 5 hesitations totaling 9.96s (avg 1.99s each), accounting for 58% of session duration.
+- **Hover times**: Short (avg 105ms), suggesting impulsive cursor movement rather than deliberate consideration.
+
+5. CONTENT PREFERENCES
+- **No content preferences observable**: The session is limited to a single checkout page (https://example.com/checkout). No subreddit or content-type data is available.
+- **Focus on UI elements**:
+  - **Primary targets**: "Back to Shop" (6 clicks), "Cart Summary" (2 clicks), "Pay Now" (2 clicks), "Card Number" (2 clicks), "Email" (1 click + rage clicks).
+  - **Ignored elements**: No interaction with product details, shipping options, or promotional content (if present).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Despite clicking on "Card Number" and "Email" fields, no keystrokes or input lengths are recorded.
+- **Input avoidance**: Fields are clicked but abandoned immediately (e.g., "Card Number" clicked at 5.06s, no input before next action at 6.8s).
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Checkout page navigation ("Back to Shop", "Cart Summary").
+  - Payment initiation ("Pay Now").
+  - Form fields ("Card Number", "Email").
+- **Ignored features**:
+  - No interaction with:
+    - Product list or cart items (if visible).
+    - Shipping/billing address fields.
+    - Payment method selectors (e.g., credit card vs. PayPal).
+    - Promo code fields or help links.
+- **Feature misuse**: "Pay Now" clicked twice (4.3s, 4.58s) before scrolling back to top, suggesting confusion or accidental clicks.
+
+8. SESSION FLOW
+- **Arc**: **Frustration-driven abandonment** with no progression toward completion.
+  - **0.0s–4.3s (Exploration)**: Rapid initial clicks/scrolls on "Cart Summary" and "Pay Now", likely assessing the page.
+  - **4.3s–7.68s (Avoidance)**: Scrolls away from payment fields, clicks "Back to Shop" (first attempt at 7.68s).
+  - **7.68s–17.2s (Repetition/Frustration)**:
+    - Repeated "Back to Shop" clicks (5 more times) with increasing hesitation (1.96s–2.29s) and rage clicks (16.96s–17.16s).
+    - Dead click (9.71s) and rage clicks on "Email" (8.68s–9.04s) indicate mounting frustration.
+  - **Exit**: Session ends abruptly after final rage clicks, with no return to checkout or completion.
+- **Key transitions**:
+  - **4.3s**: First "Pay Now" click → immediate scroll up (4.63s–4.83s), suggesting second thoughts.
+  - **7.68s**: First "Back to Shop" click → marks shift from exploration to exit attempts.
+  - **16.96s**: Rage clicks begin, signaling peak frustration.
+```
+
+**SUMMARY**: This user exhibits behavior consistent with a **frustrated, non-committal abandoner**. Their navigation is scattered, interactions are impulsive yet hesitant, and they repeatedly attempt to exit the checkout process without completing any inputs. The session is characterized by rapid scrolling, repeated clicks on the same elements, and clear signals of frustration (rage/dead clicks, long hesitations). No content engagement or typing occurred. The arc suggests a failed conversion due to UI friction or decision paralysis.

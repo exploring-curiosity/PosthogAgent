@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with focused intent**: The user exhibits a non-linear, exploratory navigation style with repeated attempts to access specific sections. They jump between settings categories (Privacy → Settings Nav → Profile → Notifications) without a clear sequential flow.
+- **Revisitation rate**: 4/7 primary clicks (57%) were duplicates of earlier actions (e.g., "Save Changes" clicked twice at 4.6s and 6.73s; "Privacy" at 9.07s and 12.42s).
+- **Spatial consistency**: Click coordinates for repeated actions are nearly identical (e.g., "Privacy" at (797,650) and (799,646)), suggesting deliberate targeting of the same UI element.
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow engagement**: Scroll patterns indicate rapid vertical scanning rather than deep reading:
+  - **Scroll speed**: 120–240px/s (e.g., 488px in 0.5s at 2.35s).
+  - **Depth coverage**: Max scroll depth of 976px (83% of viewport height) reached in 2.42s, but no sustained pauses.
+  - **Bidirectional scrolling**: 6/11 scroll actions (55%) were upward (e.g., 6.77s–12.7s), suggesting re-reading or navigation correction.
+- **No evidence of deep reading**: No scroll pauses >1s; all scrolls are continuous and rapid.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting observed**: The session log contains no actions related to voting, commenting, or content creation.
+- **Primary interaction**: Settings configuration only. All clicks target UI controls (buttons/divs with labels like "Save Changes," "Privacy," "Profile").
+- **Interaction ratio**: 100% navigation/control actions; 0% content engagement.
+
+4. INTERACTION SPEED
+- **Deliberate with hesitation**: Actions are spaced with significant delays:
+  - **Median inter-action time**: 1.8s (excluding scrolls).
+  - **Hesitation markers**: 4 explicit "[HESITATION]" events (2.28s, 5.11s, 10.44s, 20.74s) with durations of 517–2279ms (avg: 1569ms).
+  - **Hover times**: 3 elements hovered for 1181–1954ms (avg: 1691ms) before clicking.
+- **Click latency**: First click at 2.28s (after 2279ms hesitation); last click at 28.4s (2117ms hesitation).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: 100% of interactions target the settings page (https://example.com/settings).
+- **Category exploration**: User accessed 4 settings subsections in this order:
+  1. General (implied by "Save Changes" at 4.6s)
+  2. Privacy (9.07s)
+  3. Profile (18.52s)
+  4. Notifications (23.92s)
+- **No content/subreddit engagement**: No evidence of browsing or interacting with non-settings content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no keystrokes, input field interactions, or text submissions.
+- **Implications**: Either (a) the user did not modify any settings requiring text input, or (b) text inputs were not logged.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Settings navigation (4 subsections accessed).
+  - "Save Changes" button (clicked twice, 4.6s and 6.73s).
+- **Features ignored**:
+  - No evidence of account settings, security, or advanced options.
+  - No help/documentation links clicked.
+  - No search or filter functionality used.
+
+8. SESSION FLOW
+- **Phase 1: Initial Exploration (0–4.6s)**
+  - Page load → 2.28s hesitation → rapid downward scroll (0→976px) → "Save Changes" click.
+  - **Behavior**: Broad scan of page content; immediate attempt to save (possibly premature).
+- **Phase 2: Navigation Correction (4.6–12.7s)**
+  - Second "Save Changes" click (6.73s) → rapid upward scroll (976→41px) → "Privacy" click (9.07s).
+  - **Behavior**: Realization of error (unsaved changes?) → backtracking to top → targeted section access.
+- **Phase 3: Sequential Section Access (12.7–28.4s)**
+  - "Settings Nav" (14.16s) → "Profile" (18.52s) → "Notifications" (23.92s).
+  - **Behavior**: Methodical but non-linear progression through settings; each section accessed after hover hesitation.
+- **Exit**: Session ends abruptly after "Notifications" click (28.4s), with no confirmation of changes saved.
+
+KEY OBSERVATIONS:
+- **High hesitation, low confidence**: Repeated clicks on the same elements (e.g., "Save Changes," "Privacy") and long hover times suggest uncertainty or UI unfamiliarity.
+- **No content engagement**: Entire session confined to settings; no exploration of core site functionality.
+- **Scroll-heavy navigation**: Rapid scrolling used as a primary discovery mechanism, but with no evidence of deep reading.
+- **Potential UI friction**: Duplicate clicks and bidirectional scrolling may indicate unclear affordances or unintuitive layout.
+```

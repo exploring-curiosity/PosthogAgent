@@ -1,0 +1,165 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory, with repetitive validation*
+- **Initial hesitation (0–12.5s):** The user exhibits **two prolonged hesitations** (6.91s, 10.17s) before interacting with the navigation menu (8.89s, 12.5s). This suggests **cautious exploration** rather than immediate goal-driven behavior.
+- **Repetitive clicks:** The user clicks the same navigation element **twice** (8.89s, 12.5s) and footer links **twice** (13.66s, 16.24s), indicating **validation behavior** (e.g., confirming functionality or reorienting).
+- **Scroll-driven discovery:** After initial clicks, the user **rapidly scrolls** (12.5–12.74s) to the bottom of the page (1003px), then **backtracks** (16.31–16.47s) to the "Get Started" button (17.53s). This suggests **scanning for key elements** rather than linear progression.
+- **Feature-focused jumps:** Later interactions (24.71s–40.7s) show **direct clicks on specific sections** (Testimonials, Features) after scrolling, implying **targeted exploration** of high-value content.
+
+**Quantitative Summary:**
+- **Navigation clicks:** 4 (2 nav, 2 footer)
+- **Repetitive clicks:** 2 pairs (nav, footer)
+- **Scroll depth:** 1003px (max), with **5 upward/downward scroll sequences** (avg. 0.5s per scroll).
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skim-heavy with selective deep dives*
+- **Scroll speed:** The user **scrolls at ~400px/s** (e.g., 0–1003px in 2.24s total), which is **faster than typical reading speed** (200–300px/s for deep reading). This suggests **skimming** rather than thorough reading.
+- **Pause points:** The user **stops scrolling** at key sections (e.g., 316px for "Get Started," 724px for "Testimonials," 542px for "Features"), implying **visual anchoring** on headings/CTAs.
+- **Backtracking:** After reaching the footer (1003px), the user **scrolls up to 316px** (16.31–16.47s) to click "Get Started," indicating **revisiting high-priority content**.
+- **Hover times:** Long hovers (e.g., 1825ms on Testimonials, 1467ms on Features) suggest **brief engagement** with specific content blocks, but no evidence of deep reading.
+
+**Quantitative Summary:**
+- **Avg. scroll speed:** ~400px/s (skimming).
+- **Max scroll depth:** 1003px (full page).
+- **Hover durations:** 698–1825ms (avg. **1250ms**).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *Low-commitment, validation-heavy*
+- **No traditional engagement:** The log shows **no votes, comments, or form submissions** (e.g., no text input, no "like" buttons). All interactions are **clicks or scrolls**.
+- **Hesitation markers:** The user triggers **four "[HESITATION]"** events (6.91s, 10.17s, 20.5s, 26.82s, 31.46s, 38.08s), totaling **12.37s of hesitation** (30% of session). This suggests **decision paralysis** or **synthetic behavior** (e.g., automated testing).
+- **Click redundancy:** The user clicks the same elements **twice in quick succession** (e.g., "Get Started" at 17.53s and 22.44s), which may indicate:
+  - **Validation** (confirming the button works).
+  - **Synthetic testing** (e.g., checking for consistent behavior).
+- **No sustained engagement:** The longest pause between actions is **2.97s** (20.5–22.44s), but this is followed by a **repetitive click** (not deep engagement).
+
+**Quantitative Summary:**
+- **Hesitation time:** 12.37s (30% of session).
+- **Click redundancy:** 3 pairs (nav, footer, "Get Started").
+- **Engagement actions:** 0 (no votes/comments).
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Deliberate with bursts of rapid activity*
+- **Initial delay:** **6.91s** before first click (likely page load + hesitation).
+- **Avg. time between actions:** **2.4s** (excluding hesitations).
+- **Fastest sequence:** **0.05s** between nav click and scroll (12.5–12.55s).
+- **Slowest sequence:** **2.97s** before clicking "Get Started" again (20.5–22.44s).
+- **Hover-to-click latency:** **Avg. 1150ms** (e.g., 896ms on "Get Started," 1825ms on Testimonials).
+
+**Quantitative Summary:**
+- **Avg. action interval:** 2.4s.
+- **Hover-to-click latency:** 698–1825ms (avg. **1150ms**).
+- **Peak activity:** 12.5–12.74s (4 scrolls in 0.24s).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *CTAs and social proof over informational content*
+- **High-priority elements:**
+  - **"Get Started" button:** Clicked twice (17.53s, 22.44s) after **896ms hover**.
+  - **Testimonials:** Clicked twice (24.71s, 29.22s) after **1825ms hover** (longest hover in session).
+  - **Features:** Clicked twice (35.98s, 40.7s) after **1467ms hover**.
+- **Ignored content:**
+  - No clicks on **body text, images, or secondary CTAs**.
+  - No interaction with **navigation beyond initial clicks** (despite hovering).
+- **Footer engagement:** Clicked twice (13.66s, 16.24s), but **no evidence of reading** (immediate scroll-up).
+
+**Quantitative Summary:**
+- **CTA clicks:** 4 ("Get Started," Testimonials, Features).
+- **Hover focus:** Testimonials > Features > "Get Started".
+- **Ignored elements:** Body text, images, secondary links.
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *None detected*
+- **No text input:** The log shows **zero keystrokes, form submissions, or search queries**.
+- **No corrections:** N/A (no typing occurred).
+- **Implications:**
+  - Either the user **did not reach a typing step** (e.g., no forms on landing page).
+  - Or this is a **synthetic session** (e.g., automated testing).
+
+**Quantitative Summary:**
+- **Keystrokes:** 0.
+- **Input fields interacted with:** 0.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Pattern:** *Superficial discovery of primary CTAs*
+- **Discovered features:**
+  - **Navigation menu** (8.89s, 12.5s).
+  - **Footer links** (13.66s, 16.24s).
+  - **"Get Started" button** (17.53s, 22.44s).
+  - **Testimonials section** (24.71s, 29.22s).
+  - **Features section** (35.98s, 40.7s).
+- **Ignored features:**
+  - **No interaction with:** Dropdowns, modals, search bars, sidebars, or dynamic content.
+  - **No deep dives:** No clicks on **individual testimonials, feature details, or FAQs**.
+- **Scroll-based discovery:** Features were found **only after scrolling** (e.g., Testimonials at 724px, Features at 542px).
+
+**Quantitative Summary:**
+- **Features used:** 5 (nav, footer, "Get Started," Testimonials, Features).
+- **Features ignored:** All secondary/interactive elements.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Hesitant exploration → CTA validation → Social proof scanning → Exit*
+1. **0–12.5s: Hesitant Orientation**
+   - Loads page, **hesitates 6.91s**, clicks nav (8.89s), hesitates again (10.17s), re-clicks nav (12.5s).
+   - **Behavior:** Testing navigation functionality.
+
+2. **12.5–17.53s: Rapid Scanning**
+   - Scrolls **full page in 2.24s** (12.5–12.74s), then **backtracks to 316px** (16.31–16.47s).
+   - **Behavior:** Skimming for key elements.
+
+3. **17.53–22.44s: CTA Validation**
+   - Clicks "Get Started" (17.53s), hesitates **2.97s**, re-clicks (22.44s).
+   - **Behavior:** Confirming primary CTA functionality.
+
+4. **22.44–34.12s: Social Proof Focus**
+   - Scrolls to Testimonials (22.5–22.66s), clicks twice (24.71s, 29.22s), scrolls up to Hero Title (30.46s).
+   - **Behavior:** Seeking validation (testimonials) before conversion.
+
+5. **34.12–40.7s: Feature Exploration**
+   - Scrolls to Features (34.16–34.27s), clicks twice (35.98s, 40.7s).
+   - **Behavior:** Final scan of value proposition before exit.
+
+**Exit:** Session ends at **40.7s** with no further action.
+
+**Quantitative Summary:**
+- **Phases:**
+  - Orientation: 12.5s (31%).
+  - Scanning: 5s (12%).
+  - CTA Validation: 5s (12%).
+  - Social Proof: 11.7s (29%).
+  - Feature Exploration: 6.6s (16%).
+- **Exit trigger:** Final click on "Features" (no follow-up).
+
+---
+
+### OVERALL BEHAVIORAL CLASSIFICATION
+**Type:** *Synthetic/Cautious Explorer*
+- **Synthetic indicators:**
+  - **No typing, no deep engagement**, repetitive clicks, **uniform scroll speed** (~400px/s).
+  - **Hesitation events** may reflect automated delays (e.g., "think time" in testing scripts).
+- **Cautious indicators:**
+  - **Repetitive validation** (clicking the same elements twice).
+  - **Long hovers** (avg. 1150ms) before clicking.
+  - **No impulsive actions** (e.g., no accidental clicks).
+
+**Likely Context:**
+- **Automated testing** (e.g., PostHog session replay of a synthetic user).
+- **QA/UAT session** (validating UI functionality).
+- **Bot behavior** (e.g., monitoring tool checking page responsiveness).
+```

@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN
+- **Pattern**: Non-linear, hesitant, and repetitive with clear "testing" behavior.
+- **Evidence**:
+  - Repeated clicks on the same elements after hesitation (e.g., "Cart Summary" clicked twice at [3.84s] and [6.22s], "Email" at [7.83s] and [11.15s], "Card Number" at [13.18s] and [17.4s], "Pay Now" at [23.94s] and [26.18s]).
+  - Mid-session pivot: After scrolling to the bottom ([17.44s–17.51s]), user abruptly clicks "Back to Shop" ([19.33s]) before returning to "Pay Now" ([23.94s]).
+  - No linear progression through checkout steps (e.g., skipped directly to "Card Number" before completing "Email").
+- **Quantitative**: 4/8 primary actions (50%) were repeated clicks on the same element after delays.
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with rapid, shallow scrolls; no deep reading.
+- **Evidence**:
+  - Scroll depth: Max 996px (likely <50% of a typical checkout page), with no pauses >0.5s between scroll increments.
+  - Scroll speed: Consistent 35px/0.5s increments ([2.07s–2.24s], [11.21s–11.41s]), suggesting deliberate but cursory scanning.
+  - No evidence of reading form labels thoroughly (e.g., skipped "Name" and "Address" fields entirely).
+- **Quantitative**: 100% of scrolls were <0.5s duration; no single scroll exceeded 369px (difference between 627px and 996px).
+
+3. ENGAGEMENT STYLE
+- **N/A**: This is a checkout flow, not a voting/commenting platform. No engagement metrics (votes, comments) are applicable.
+
+4. INTERACTION SPEED
+- **Pattern**: Deliberate with prolonged hesitations; not a "fast" user.
+- **Evidence**:
+  - **Hover delays**: 1350ms–2056ms before clicks (e.g., 1762ms on "Back to Shop" [19.33s]).
+  - **Hesitation markers**: 5 explicit "[HESITATION Xms]" actions ([2.03s], [4.65s], [9.21s], [15.24s], [25.17s]), averaging **1,561ms** (1.56s) per hesitation.
+  - **Action intervals**: Average 2.9s between primary actions (excluding scrolls), but 4.4s when including hesitations.
+- **Quantitative**:
+  - Fastest action interval: 0.04s (scroll increments).
+  - Slowest action interval: 3.86s (between [17.4s] and [19.33s]).
+
+5. CONTENT PREFERENCES
+- **N/A**: No content/subreddit preferences are observable in a checkout flow. However:
+  - **Focus areas**: "Cart Summary" (2 clicks), "Email" (2 clicks), "Card Number" (2 clicks), "Pay Now" (2 clicks), "Back to Shop" (1 click).
+  - **Ignored**: No interaction with "Name," "Address," "Shipping Method," or "Promo Code" fields.
+
+6. TYPING BEHAVIOR
+- **N/A**: No typing events (keystrokes, input lengths, or corrections) are logged. Only clicks on input fields are recorded.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Cart Summary (expanded/collapsed twice).
+  - Email input field.
+  - Card Number input field.
+  - "Back to Shop" link (briefly).
+  - "Pay Now" button (final action).
+- **Ignored Features**:
+  - All other form fields (Name, Address, etc.).
+  - Payment method selectors (e.g., PayPal, Apple Pay).
+  - Promotional elements (no clicks on discounts/offers).
+  - Help/chat widgets (no interactions).
+- **Quantitative**: 5/10+ potential checkout features used (50% discovery rate).
+
+8. SESSION FLOW
+- **Arc**: **Testing → Aborted Exploration → Re-engagement → Hesitant Submission**
+  - **0.0s–3.84s (Testing)**: Initial page load, rapid skimming ([2.07s–2.24s]), and first click on "Cart Summary" after 1350ms hover.
+  - **3.84s–17.4s (Partial Engagement)**: Repeated clicks on "Cart Summary" and "Email," with hesitations. Scrolls to "Card Number" but does not complete input.
+  - **17.4s–19.33s (Aborted Exploration)**: Sudden deep scroll to bottom ([17.44s–17.51s]), then clicks "Back to Shop" after 1762ms hover.
+  - **19.33s–26.18s (Re-engagement)**: Scrolls back up ([22.1s–22.33s]) and clicks "Pay Now" twice after 1366ms hover, with final hesitation ([25.17s]).
+- **Exit**: Session ends immediately after second "Pay Now" click. No confirmation page load is recorded.
+- **Quantitative**:
+  - 3 distinct "phases" (Testing, Engagement, Re-engagement).
+  - 2 major pivots ("Back to Shop" and return to "Pay Now").
+  - 62% of session time (16.2s/26.2s) spent on hesitations or repeated actions.
+```
+
+**SUMMARY**: This user exhibits **synthetic, cautious, and exploratory** behavior, likely a bot or automated test script with simulated human-like delays. Key traits:
+- **Repetitive clicks** on the same elements after long hovers.
+- **No deep reading** (rapid, shallow scrolls).
+- **No typing** (only field clicks).
+- **Abrupt pivots** (e.g., "Back to Shop" mid-checkout).
+- **High hesitation-to-action ratio** (5 hesitations in 26.2s).
+- **Ignored 50% of checkout features**, focusing only on core fields and exit paths.

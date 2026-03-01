@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - Highly linear and goal-directed with minimal deviation.
+   - Progression follows a strict top-to-bottom flow through the checkout page:
+     Cart Summary (4.52s) → Email field (6.46s) → Card Number field (7.89s) → Pay Now button (9.15s) → Back to Shop (10.65s).
+   - No lateral exploration (e.g., no clicks on navigation menus, product details, or help links).
+   - Scrolling is segmented into discrete "steps" (e.g., 60px → 120px → 130px) rather than smooth continuous movement, suggesting deliberate, incremental content consumption.
+
+2. READING BEHAVIOR:
+   - Skimming with targeted deep dives:
+     - Initial scroll (3.63s–5.46s) covers 171px in 1.83s (avg. 93px/s), likely scanning headers/labels.
+     - Later scrolls (8.43s–9.97s) jump from 256px to 1021px in 1.54s (avg. 497px/s), indicating rapid bypass of content (e.g., terms/conditions or footer).
+   - Hover times (694ms on Cart Summary, 685ms on Email, 413ms on Card Number) suggest brief validation of field labels before clicking.
+   - No evidence of deep reading (e.g., no pauses >1s on static text blocks).
+
+3. ENGAGEMENT STYLE:
+   - N/A (No voting, commenting, or social interactions observed; this is a checkout flow, not a social platform).
+   - Interaction is purely transactional: form field clicks and button presses only.
+
+4. INTERACTION SPEED:
+   - Deliberate but efficient:
+     - Median time between primary actions (e.g., field clicks): 1.39s (range: 0.64s–1.77s).
+     - Hesitation markers:
+       - 3.59s initial hesitation (3592ms) before first scroll.
+       - Hover times on interactive elements: 413ms–694ms (avg. 568ms).
+     - No rapid-fire clicks; each action is preceded by a hover (suggesting intent confirmation).
+     - Scroll speed: 120px/s (consistent across all scrolls).
+
+5. CONTENT PREFERENCES:
+   - N/A (No content consumption beyond form fields; this is a checkout page).
+   - Focused exclusively on:
+     - Cart Summary (clicked twice at 4.52s and 5.16s).
+     - Email field (6.46s–7.03s).
+     - Card Number field (7.89s–8.38s).
+     - Pay Now button (9.15s–9.76s).
+     - Back to Shop link (10.65s–11.63s).
+
+6. TYPING BEHAVIOR:
+   - No typing observed (no keystrokes logged in the action log).
+   - Clicks on input fields (Email, Card Number) suggest intent to type, but no actual input was recorded.
+
+7. FEATURE DISCOVERY:
+   - Used features:
+     - Cart Summary (expanded/collapsed via clicks).
+     - Form fields (Email, Card Number).
+     - Primary CTA (Pay Now button).
+     - Exit link (Back to Shop).
+   - Ignored features:
+     - No interaction with:
+       - Shipping address fields (if present).
+       - Payment method selectors (e.g., PayPal, Apple Pay).
+       - Promo code fields.
+       - Help/chat widgets (no clicks on support links).
+       - Navigation menus (header/footer).
+
+8. SESSION FLOW:
+   - Arc: **Linear progression → Aborted checkout → Exit**
+     1. **Orientation (0.0s–3.59s)**: Page load + 3.59s hesitation (likely assessing page layout).
+     2. **Form Scanning (3.63s–5.46s)**: Incremental scroll to locate key fields (Cart Summary).
+     3. **Field Interaction (5.46s–9.76s)**:
+        - Cart Summary (4.52s–5.16s): Two clicks (possible expansion/collapse).
+        - Email field (6.46s–7.07s): Hover + click (no typing).
+        - Card Number field (7.89s–8.47s): Hover + click + rapid scroll (bypassing mid-page content).
+        - Pay Now button (9.15s–9.76s): Hover + click (no submission recorded).
+     4. **Post-Submission Scroll (9.8s–9.97s)**: Rapid scroll to bottom (likely checking for confirmation/error messages).
+     5. **Exit (10.65s–11.63s)**: Clicks "Back to Shop" (hover + click), terminating session.
+   - Key observation: **No completion of checkout flow** (no form submission or confirmation page load).
+```
+
+---
+**NOTES**:
+- The user’s behavior is consistent with a **synthetic/methodical user** (as labeled in the device profile), possibly a bot or automated test script. Evidence:
+  - Perfectly segmented scrolls (e.g., 60px increments).
+  - No typing despite clicking input fields.
+  - No mouse movement jitter or organic pauses.
+- If human, the behavior suggests **high familiarity with checkout flows** (efficient navigation) but **low intent to complete** (no typing, immediate exit).

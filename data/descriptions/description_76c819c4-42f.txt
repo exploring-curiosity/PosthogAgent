@@ -1,0 +1,114 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with micro-focus bursts*
+- **Initial hesitation (0.0–3.01s):** 3-second pause after page load suggests cautious orientation (no immediate action).
+- **Micro-exploration (3.01–5.32s):** Rapid, shallow scrolling (4 scrolls in 0.23s, covering 151px total) indicates surface-level scanning rather than deep reading.
+- **Feature-hopping (5.32–23.44s):** User jumps between 5 distinct UI elements (Stats Cards → Export → Data Table → Chart → Sidebar) with no return visits, suggesting exploratory intent rather than task-driven navigation.
+- **Scattered focus:** No single element held attention for >3.5s (excluding hover/hesitation). Actions are clustered in 2–4s bursts (e.g., 3 scrolls in 0.18s at 12.56–12.63s) followed by abrupt shifts.
+
+---
+
+### 2. READING BEHAVIOR
+**Style:** *Skimmer with intermittent deep dives*
+- **Scroll velocity:**
+  - *Fast skimming:* 4 scrolls in 0.23s (3.06–3.25s) covering 151px at ~650px/s.
+  - *Slower inspection:* 3 scrolls in 0.18s (12.56–12.63s) covering 710px at ~3,944px/s (likely skipping content).
+  - *Upward corrections:* 3 upward scrolls in 0.18s (17.58–17.66s) covering 197px, suggesting re-reading or backtracking.
+- **Depth:**
+  - Max scroll depth: 797px (14.53s), but only 1 interaction (Data Table) occurred at this depth.
+  - 66% of interactions (4/6) occurred above 600px, implying limited engagement with below-the-fold content.
+- **Hover data:**
+  - Long hovers (1,021–1,874ms) precede 4/6 clicks, indicating deliberate targeting but not necessarily deep reading.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Style:** *Observer, not contributor*
+- **No creation actions:** Zero instances of typing, voting, commenting, or input submission.
+- **Interaction ratio:** 100% clicks (10 total), 0% content creation/modification.
+- **Click timing:**
+  - *Hesitation clicks:* 3 "empty" clicks at (0,0) with 1,412–1,987ms delays (10.91s, 16.52s), likely accidental or placeholder actions.
+  - *Targeted clicks:* 7 clicks on UI elements (Stats Cards, Export, Data Table, Chart, Sidebar) with 966–1,874ms hovers preceding 4 of them.
+
+---
+
+### 4. INTERACTION SPEED
+**Speed:** *Deliberate with bursts of rapidity*
+- **Action intervals:**
+  - *Slow:* 2.26s (5.32–8.11s) and 2.38s (14.53–16.52s) between clicks, suggesting evaluation.
+  - *Fast:* 0.06s (8.11–8.17s) and 0.04s (17.54–17.58s) between sequential clicks/scrolls, indicating reflexive or corrective actions.
+- **Hover-to-click latency:**
+  - Mean: 1,390ms (range: 797–1,874ms).
+  - Longest hesitation: 1,987ms (16.52s) before an empty click.
+- **Scroll speed:**
+  - Downward: ~300px/s (3.06–3.25s) to ~3,944px/s (12.56–12.63s).
+  - Upward: ~1,094px/s (17.58–17.66s).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Gravitation:** *Data visualization and export tools*
+- **Interacted elements (by frequency):**
+  1. **Stats Cards** (2 clicks, 5.32s/8.11s) – Highest engagement (3.79s total time).
+  2. **Export** (2 clicks, 9.49s/12.51s) – 3.02s total time.
+  3. **Data Table** (2 clicks, 14.53s/17.54s) – 3.01s total time.
+  4. **Chart** (2 clicks, 18.82s/21.39s) – 2.57s total time.
+  5. **Sidebar** (2 clicks, 22.6s/23.44s) – 0.84s total time.
+- **Ignored elements:**
+  - No interaction with navigation menus, search bars, filters, or non-data UI components.
+  - No clicks on text links, images, or non-interactive content.
+
+---
+
+### 6. TYPING BEHAVIOR
+**Style:** *Nonexistent*
+- **Zero typing events** detected in the session.
+- **No input fields** were focused or interacted with.
+- **No corrections or edits** (e.g., backspacing, cursor movement).
+
+---
+
+### 7. FEATURE DISCOVERY
+**Discovered features:**
+- **Primary:**
+  - Stats Cards (5.32s), Export (9.49s), Data Table (14.53s), Chart (18.82s), Sidebar (22.6s).
+- **Secondary:**
+  - Scrolling (used 10 times for navigation).
+  - Hover tooltips (implied by hover durations).
+- **Ignored features:**
+  - Search functionality (no clicks on search bars).
+  - Filters/sorting (no dropdown or toggle interactions).
+  - Help/documentation (no clicks on "?" or info icons).
+  - User account/profile actions (no clicks on avatars or settings).
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploration → Micro-engagement → Abrupt exit*
+1. **Orientation (0.0–3.01s):**
+   - Page load followed by 3s hesitation (no action).
+2. **Surface Scanning (3.01–5.32s):**
+   - Rapid downward scrolling (151px in 0.23s) with no clicks.
+3. **Feature Sampling (5.32–12.51s):**
+   - Clicks on Stats Cards (5.32s) and Export (9.49s), separated by 2.26s of evaluation.
+   - Hesitation click (10.91s) suggests uncertainty.
+4. **Deep Dive (12.51–17.54s):**
+   - Aggressive downward scroll (710px in 0.18s) to Data Table (14.53s).
+   - Second hesitation click (16.52s) indicates frustration or reconsideration.
+5. **Backtracking (17.54–21.6s):**
+   - Upward scroll (197px in 0.18s) to Chart (18.82s), followed by 2.57s of interaction.
+6. **Exit (21.6–23.44s):**
+   - Final upward scroll (205px in 0.18s) to Sidebar (22.6s), then session ends.
+- **No clear goal:** Actions lack progression toward a task (e.g., no export confirmation, no data manipulation).
+- **Exit trigger:** Likely unrelated to content (no error messages or completion cues in log).
+```
+
+---
+**Key Takeaways:**
+- **Behavioral signature:** A synthetic or automated user (e.g., bot, test script) with human-like hesitation patterns but no content creation.
+- **Anomalies:** Empty clicks at (0,0), extreme scroll speeds, and 100% click-based interaction suggest non-human behavior.
+- **Design implications:** If human, the UI may lack clear affordances (hesitation clicks) or fail to guide users toward deeper engagement (no typing/commenting).

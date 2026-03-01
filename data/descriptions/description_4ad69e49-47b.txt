@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+----------------------------------------
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly focused, erratic, and non-linear with repetitive micro-interactions.
+- **Evidence**:
+  - Initial hesitation (822ms) before first click at (0,0) suggests confusion or synthetic delay.
+  - Rapid bidirectional scrolling (down to 290px, then up to 179px, then down again to 287px) indicates targeted scanning rather than linear progression.
+  - Repeated clicks on the same inputs ("Card Number" and "Email") within milliseconds (e.g., 2.36s and 2.42s for "Card Number") imply either validation errors or synthetic re-testing.
+  - No lateral navigation (e.g., no clicks on navigation menus, product links, or other page elements).
+
+2. READING BEHAVIOR
+- **Behavior**: Skimming with no evidence of deep reading.
+- **Evidence**:
+  - Scroll depth maxes at 290px (likely <30% of a full checkout page), suggesting minimal engagement with content below the fold.
+  - Scroll speed: 145px/0.5s (290px/s) during downward scans, then 29px/0.5s (58px/s) during upward corrections—consistent with rapid visual scanning.
+  - No pauses >500ms on any single element (hover times are synthetic delays, not reading time).
+
+3. ENGAGEMENT STYLE
+- **Behavior**: No traditional "engagement" (e.g., voting, commenting, or form submission). Interaction is limited to input field probing.
+- **Evidence**:
+  - Clicks are exclusively on form inputs ("Card Number", "Email") and a "Cart Summary" div—no social or content interactions.
+  - No submissions or data entry detected (session ends before any typing occurs).
+  - Hover times (324–350ms) are likely synthetic; no human would hover for such precise durations before clicking.
+
+4. INTERACTION SPEED
+- **Behavior**: Extremely rapid with artificial delays.
+- **Evidence**:
+  - Median time between actions: **0.5s** (excluding hesitations).
+  - Fastest sequence: 4 clicks/scrolls in 1.1s (2.42s–3.53s).
+  - Hesitations (822ms and 1649ms) are outliers and likely synthetic (e.g., scripted pauses or bot behavior).
+  - No organic typing or correction patterns observed.
+
+5. CONTENT PREFERENCES
+- **Behavior**: Exclusively focused on checkout form fields and cart summary.
+- **Evidence**:
+  - 100% of clicks target:
+    - Form inputs: "Card Number" (2 clicks), "Email" (2 clicks).
+    - Cart summary (2 clicks).
+  - No interaction with product listings, navigation, or other page sections.
+
+6. TYPING BEHAVIOR
+- **Behavior**: No typing detected.
+- **Evidence**:
+  - Input fields were clicked but no keystrokes or form submissions recorded.
+  - No backspacing, corrections, or pauses indicative of human typing.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Checkout form fields ("Card Number", "Email").
+  - Cart summary (clicked twice, possibly to expand/collapse).
+- **Ignored Features**:
+  - Navigation menus, product recommendations, footer links, help/chat widgets, or any non-checkout elements.
+  - No interaction with payment methods, shipping options, or promotional content.
+
+8. SESSION FLOW
+- **Arc**: Synthetic probing → Targeted form interaction → Abrupt exit.
+- **Breakdown**:
+  1. **0.0–0.82s**: Initial load + hesitation (synthetic delay).
+  2. **0.82–1.41s**: Rapid scrolling to scan page layout (down to 290px).
+  3. **1.41–3.07s**: Focused interaction with "Card Number" field (2 clicks, hover, then scroll up to "Email").
+  4. **3.07–4.76s**: Interaction with "Email" field (2 clicks, hover, then scroll down to cart summary).
+  5. **4.76–7.91s**: Cart summary clicks (2x) + final hesitation (1649ms).
+  6. **7.91s**: Session ends without submission or navigation.
+- **Exit**: No clear trigger (e.g., error, frustration, or completion). Likely script termination.
+
+SUMMARY
+This session exhibits **non-human behavior** consistent with a synthetic scanner or bot. Key indicators:
+- Unnaturally rapid, repetitive interactions with form fields.
+- Precise, scripted hesitations (822ms, 1649ms).
+- No typing, submissions, or deep engagement.
+- Exclusive focus on checkout inputs with no exploratory browsing.
+- Bidirectional scrolling at inhuman speeds (290px/s).
+- Device labeled as "synthetic/scanner" in the profile.
+```

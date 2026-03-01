@@ -1,0 +1,100 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS (9.5s)
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Scattered, non-linear, and erratic*
+- The user exhibits **no clear progression** through the checkout flow. Instead, they jump between unrelated elements (e.g., clicking "Cart Summary" twice, then "Back to Shop" twice).
+- **Key observations:**
+  - **Repetitive clicks:** "Cart Summary" is clicked at **1.29s** and again at **5.51s** (4.22s apart), suggesting confusion or validation-seeking behavior.
+  - **Backtracking:** After scrolling to the bottom (972px at **7.02s**), they immediately click "Back to Shop" (**7.37s**), then repeat the same click at **9.51s** (1.94s later).
+  - **No form completion:** Despite clicking the "Card Number" field (**6.01s**), no typing occurs, and the session ends without submission.
+- **Quantitative:** 4/11 actions (36%) are redundant clicks on the same elements ("Cart Summary" and "Back to Shop").
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Skim-only, no deep reading*
+- **Scroll depth:** Max depth = **972px** (likely <50% of a typical checkout page). No evidence of reading fine print (e.g., terms, shipping details).
+- **Scroll speed:**
+  - **Downward:** 380px in **0.5s** (**1.29s–1.9s**), 653px in **0.5s** (**6.95s–7.02s**) → **~760px/s** (extremely fast; likely not reading).
+  - **Upward:** 61px in **0.5s** (**5.55s–5.62s**) → **~122px/s** (slightly slower but still skimming).
+- **Hover times:**
+  - "Cart Summary" (**184ms hover at 1.29s**) and "Back to Shop" (**200ms hover at 7.37s**) are too brief for deliberate reading.
+- **Conclusion:** No evidence of sustained attention to content. Scrolling is mechanical, not exploratory.
+
+---
+
+### 3. ENGAGEMENT STYLE
+**N/A for this context** (No voting, commenting, or social interactions observed).
+- The session is **transactional** (checkout page), but the user fails to engage with core features (e.g., form fields, payment submission).
+- **Only "engagement":** Clicks on static elements ("Cart Summary," "Back to Shop") with no follow-through.
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Fast but hesitant*
+- **Action intervals:**
+  - **Fastest:** 0.04s (scroll up from 380px to 350px at **5.55s**).
+  - **Slowest:** 2.76s (hesitation before clicking "Cart Summary" at **4.05s**).
+  - **Average time between actions:** **1.06s** (excluding hesitations).
+- **Hesitations:**
+  - **3 instances** of "[HESITATION]" clicks at **0.8s**, **4.05s**, and **8.58s**, totaling **4.77s** (50% of session duration).
+  - Hesitation durations: **798ms**, **2760ms**, **1209ms**.
+- **Typing behavior:** None observed (no keystrokes in "Card Number" field despite clicks).
+
+---
+
+### 5. CONTENT PREFERENCES
+**N/A for this context** (Checkout page; no content/subreddit variety).
+- **Only elements interacted with:**
+  - "Cart Summary" (2 clicks).
+  - "Card Number" field (2 clicks, no input).
+  - "Back to Shop" (2 clicks).
+- **Ignored elements:**
+  - Payment form fields (e.g., "Expiry Date," "CVV").
+  - Buttons like "Place Order" or "Apply Coupon."
+  - Legal/FAQ links (no clicks or hovers).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *Nonexistent*
+- **Clicks on "Card Number" field:** **6.01s** and **6.89s**, but no keystrokes recorded.
+- **Implications:**
+  - Possible **synthetic session** (e.g., bot, scanner, or abandoned interaction).
+  - No evidence of typing speed, corrections, or input length.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Discovered features:**
+- "Cart Summary" (used twice).
+- "Back to Shop" (used twice).
+- "Card Number" field (clicked but unused).
+**Ignored features:**
+- **Critical checkout features:**
+  - Payment form (no input in "Expiry Date," "CVV," "Name on Card").
+  - Promotional elements (no hovers/clicks on coupons, discounts).
+  - Help/FAQ (no interaction with support links).
+- **Navigation:** No clicks on header/footer links (e.g., "Home," "Contact").
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Aimless probing → Abandonment*
+1. **Initial Load (0.0s–0.8s):**
+   - Page loads; **798ms hesitation** (possible confusion or synthetic delay).
+2. **False Start (0.8s–1.29s):**
+   - Scrolls down **380px** in **1s** (skimming), then clicks "Cart Summary" (**1.29s**).
+3. **Stagnation (1.29s–5.51s):**
+   - **2.76s hesitation** (**4.05s**), then re-clicks "Cart Summary" (**5.51s**).
+   - Scrolls up **61px** (**5.55s–5.62s**), then clicks "Card Number" (**6.01s**).
+4. **Rapid Exit (6.01s–9.51s):**
+   - Scrolls to bottom (**972px** at **7.02s**), clicks "Back to Shop" (**7.37s**).
+   - **1.21s hesitation** (**8.58s**), then repeats "Back to Shop" click (**9.51s**).
+- **Exit:** Session ends without completing checkout or navigating away.
+
+**Key takeaway:** The user **never progresses past the first step** of the checkout flow, despite multiple interactions with the same elements. Behavior suggests **disorientation, synthetic activity, or immediate abandonment**.
+```

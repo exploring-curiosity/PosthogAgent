@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with forced linearity**: The user exhibits non-linear, erratic navigation with repeated clicks on the same elements (e.g., "Navigation" twice at 1.99s and 4.64s, "Hero Title" twice at 5.15s and 8.38s, "Get Started" twice at 8.85s and 9.81s). However, the final path to conversion (scroll → "Get Started" click) suggests a forced linear progression toward a goal.
+- **No deep exploration**: Only 2 unique interactive elements were engaged ("Navigation" and "Hero Title/Get Started"), with no evidence of sidebar, footer, or secondary content exploration.
+- **Spatial inconsistency**: Clicks on "page text" at (0, 0) (1.43s, 3.79s, 7.03s) suggest either misclicks, placeholder interactions, or automated behavior (e.g., synthetic/scanner).
+
+2. READING BEHAVIOR:
+- **Skim-only**: Scroll patterns indicate rapid, shallow consumption:
+  - **3 distinct scroll bursts** (4.7s–4.82s, 8.45s–8.58s) covering 344px total depth (31.8% of a 1080px viewport).
+  - **No pauses**: Scrolls occur in 0.5s increments with no dwell time between actions, implying no reading of static content.
+  - **No horizontal scrolling**: Suggests no engagement with wide tables, images, or overflow content.
+- **No evidence of deep reading**: No scroll reversals, no sustained pauses (>1s) on any section.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The log shows no votes, comments, form inputs, or social interactions (e.g., shares, likes).
+- **Click-heavy, input-light**: 10 clicks recorded, but 3 are on non-interactive "page text" at (0, 0), and 2 are duplicates of the same button ("Get Started"). No text input or form submissions detected.
+- **Hover data**: Limited hover durations (118ms–357ms) suggest cursory interest, not deliberation.
+
+4. INTERACTION SPEED:
+- **Highly variable**: Action intervals range from 0.06s (between scrolls at 4.76s–4.82s) to 3.24s (between "Hero Title" click at 5.15s and next action at 8.38s).
+  - **Fast bursts**: Scroll sequences (4.7s–4.82s, 8.45s–8.58s) occur at 0.06s–0.07s intervals.
+  - **Long hesitations**: 3 instances of >1.4s hesitation before clicks (1.43s, 3.79s, 7.03s), all on non-interactive "page text."
+- **Median interval**: 0.85s between actions (excluding scrolls), but skewed by outliers.
+
+5. CONTENT PREFERENCES:
+- **No content differentiation**: The log references only generic elements ("Navigation," "Hero Title," "Get Started"). No subreddit, topic, or content-type data is visible.
+- **Gravitated toward CTAs**: Final actions focused on "Get Started" button, suggesting a conversion-oriented goal.
+- **Ignored secondary content**: No clicks on links, images, or non-primary elements.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: Zero form inputs, search queries, or text entries logged. Cannot assess speed, corrections, or input length.
+
+7. FEATURE DISCOVERY:
+- **Used**:
+  - Navigation menu (2 clicks).
+  - Hero section title (2 clicks).
+  - Primary CTA button ("Get Started," 2 clicks).
+  - Scrolling (3 bursts).
+- **Ignored**:
+  - All non-primary UI elements (e.g., sidebars, footers, secondary buttons).
+  - Interactive features (e.g., search, filters, tooltips).
+  - Multimedia (no clicks on images/videos).
+
+8. SESSION FLOW:
+- **Phase 1 (0.0s–4.64s): Erratic Exploration**
+  - Loads landing page, immediately clicks non-interactive "page text" (1.43s).
+  - Hovers and clicks "Navigation" (1.99s), then repeats "page text" click (3.79s).
+  - Clicks "Navigation" again (4.64s) with no visible outcome.
+- **Phase 2 (4.7s–5.15s): Forced Progression**
+  - Rapid scroll down (4.7s–4.82s) to 266px depth.
+  - Clicks "Hero Title" (5.15s) after 148ms hover.
+- **Phase 3 (7.03s–9.81s): Goal-Directed Conversion**
+  - Repeats "page text" click (7.03s) after 1.89s hesitation.
+  - Clicks "Hero Title" again (8.38s), then scrolls further (8.45s–8.58s) to 344px.
+  - Hovers (118ms) and clicks "Get Started" (8.85s), then repeats click (9.81s).
+- **Exit**: Session ends at 9.8s with no further actions.
+
+SUMMARY:
+This session reflects **automated or synthetic behavior** with characteristics of a **scanner/bot**:
+- **Repetitive clicks** on non-interactive elements (e.g., (0, 0) coordinates).
+- **Unnaturally consistent scroll increments** (0.5s duration, 88px–89px jumps).
+- **No typing or deep engagement**.
+- **Forced linearity** toward a CTA despite erratic early actions.
+- **No evidence of human reading patterns** (e.g., no dwell time, no scroll reversals).
+The profile is inconsistent with typical human browsing but aligns with **A/B testing, synthetic monitoring, or automated interaction scripts**.
+```

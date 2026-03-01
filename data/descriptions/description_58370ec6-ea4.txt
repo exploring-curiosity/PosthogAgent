@@ -1,0 +1,89 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly linear with rapid, sequential targeting of UI elements.
+- **Evidence**:
+  - Proceeds through 5 distinct UI components in strict order: Sidebar → Export → Data Table → Chart → Stats Cards.
+  - No backtracking or revisits to previously interacted elements.
+  - 100% of clicks target discrete, functional components (no exploratory clicks on non-interactive content).
+- **Quantitative**: 5 interaction clusters in 4.4s (1.1s per cluster avg).
+
+2. READING BEHAVIOR
+- **Pattern**: Extreme skimming with no evidence of deep reading.
+- **Evidence**:
+  - Scrolls at 368px/s (736px in 2s at 0.19–0.4s; 507px in 1.4s at 1.78–1.91s).
+  - Max scroll depth (920px) reached in 0.4s, suggesting no sustained content engagement.
+  - No pauses >100ms between scroll actions (hover times excluded).
+- **Quantitative**: 0% of scroll segments show deceleration or dwell time.
+
+3. ENGAGEMENT STYLE
+- **Interaction Type**: Pure functional engagement (no social/commenting actions).
+- **Evidence**:
+  - All 10 clicks target UI controls (sidebar, export, table, chart, stats cards).
+  - No text input, voting, or commenting actions detected.
+  - Hover-to-click ratio: 5:5 (100% of clicks preceded by hover, avg hover duration = 144ms).
+- **Quantitative**: 0% social engagement; 100% functional interaction.
+
+4. INTERACTION SPEED
+- **Tempo**: Hyper-accelerated with machine-like precision.
+- **Evidence**:
+  - Avg time between actions: 440ms (excluding scrolls).
+  - Click-to-click intervals: 160ms (sidebar), 330ms (export), 320ms (table), 370ms (chart), 340ms (stats cards).
+  - Scroll actions executed at fixed 0.5s intervals (suggesting scripted behavior).
+- **Quantitative**: 91% of actions occur within <500ms of prior action.
+
+5. CONTENT PREFERENCES
+- **Focus**: Data export and visualization tools.
+- **Evidence**:
+  - 4/5 interaction clusters target data-centric components (export, table, chart).
+  - Stats cards (likely KPIs) receive final interaction (4.09–4.43s).
+  - No engagement with non-data elements (e.g., navigation menus, help docs).
+- **Quantitative**: 80% of clicks on data-related UI; 20% on navigation (sidebar).
+
+6. TYPING BEHAVIOR
+- **Pattern**: No typing detected.
+- **Evidence**:
+  - Zero text input events in 4.4s session.
+  - No corrections, deletions, or form submissions.
+- **Quantitative**: 0 keystrokes; 0% typing engagement.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Sidebar navigation (0.83–0.99s)
+  - Data export (1.39–1.72s)
+  - Data table interaction (2.24–2.58s)
+  - Chart visualization (3.2–3.57s)
+  - Stats cards (4.09–4.43s)
+- **Ignored Features**:
+  - Search functionality (no clicks on search bars)
+  - User account/profile elements (no top-right UI interactions)
+  - Help/documentation (no clicks on "?" or support links)
+  - Filters/sorting (no dropdown or toggle interactions)
+- **Quantitative**: 5/5 interactions on core data features; 0% on ancillary tools.
+
+8. SESSION FLOW
+- **Arc**: Linear functional audit → rapid feature validation.
+- **Phases**:
+  1. **Orientation (0–0.83s)**: Scrolls full page (0–920px) to map layout.
+  2. **Navigation Test (0.83–1.06s)**: Clicks sidebar twice (possible double-click or validation).
+  3. **Data Export (1.39–1.78s)**: Targets export button after rapid scroll-up to top.
+  4. **Data Table (2.24–2.73s)**: Scrolls to bottom, interacts, then scrolls up.
+  5. **Visualization (3.2–3.75s)**: Clicks chart, then scrolls up to top.
+  6. **KPI Review (4.09–4.43s)**: Final interaction with stats cards before session end.
+- **Quantitative**:
+  - 6 distinct phases in 4.4s.
+  - Avg phase duration: 733ms.
+  - No exit action (session terminates mid-interaction with stats cards).
+```
+
+**SYNTHESIS**:
+This session exhibits characteristics of a **synthetic user or automated script** designed to validate UI functionality. The combination of:
+- Fixed 0.5s scroll intervals,
+- 100% hover-preceded clicks,
+- Sub-200ms click-to-click intervals,
+- Zero typing/reading engagement,
+- Perfectly linear feature targeting,
+and
+- No exploratory behavior
+strongly suggests non-human interaction. The "power_user" device label corroborates this interpretation.

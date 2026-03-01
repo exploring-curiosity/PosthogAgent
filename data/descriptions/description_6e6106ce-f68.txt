@@ -1,0 +1,87 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and task-driven with minimal deviation
+- Follows a strict vertical progression through settings categories:
+  * Settings Nav → Profile → Notifications → Privacy → Save Changes
+- No lateral exploration (e.g., no sidebar clicks, no backtracking to unrelated sections)
+- 4 distinct navigation clicks (Settings Nav ×2, Profile ×2, Notifications ×2, Privacy ×2) all targeting the same UI pattern (nav/div/button)
+- 100% of clicks occur on labeled interactive elements (no accidental clicks on non-interactive areas)
+
+2. READING BEHAVIOR
+- Skimming confirmed by scroll patterns:
+  * Average scroll speed: 160px/0.5s (320px/s) across 14 scroll actions
+  * No pauses >0.5s between scrolls (suggests no deep reading)
+  * Max scroll depth per section:
+    - Settings: 799px (2 scroll bursts)
+    - Profile: 488px (5 scroll bursts)
+    - Notifications: 858px (4 scroll bursts)
+    - Privacy: 931px (2 scroll bursts)
+- No evidence of re-reading (no upward scrolls except during navigation transitions)
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed
+- Purely navigational engagement with settings interface
+- Interaction pattern:
+  * Hover → Hesitation → Click (repeated 4×)
+  * Hover durations: 704–793ms (avg 750ms)
+  * Hesitation clicks (non-interactive page text) occur 3× (0.71s, 6.66s, 9.7s) with durations 524–1209ms (avg 817ms)
+- No form inputs or text entry detected
+
+4. INTERACTION SPEED
+- Deliberate with consistent micro-delays:
+  * Time between primary actions (clicks on interactive elements): 0.9–2.1s (avg 1.4s)
+  * Time between scroll bursts: 0.03–0.07s (avg 0.05s)
+  * Hover-to-click latency: 704–793ms (avg 749ms)
+- No rapid-fire clicks or double-clicks (all clicks separated by ≥0.5s)
+
+5. CONTENT PREFERENCES
+- Solely interacted with account settings categories:
+  * Settings (general)
+  * Profile (personal information)
+  * Notifications (communication preferences)
+  * Privacy (data controls)
+- No engagement with content feeds, search, or other non-settings features
+- No subreddit/community-specific interactions
+
+6. TYPING BEHAVIOR
+- No typing detected in the action log
+- No form fields, text inputs, or corrections observed
+
+7. FEATURE DISCOVERY
+- Used features:
+  * Vertical navigation menu (4×)
+  * Settings category pages (4×)
+  * "Save Changes" button (1×)
+- Ignored features:
+  * No search bar usage
+  * No help/documentation links
+  * No account dropdown or profile picture interactions
+  * No sidebar or footer links
+  * No keyboard shortcuts or hotkeys
+
+8. SESSION FLOW
+- Arc: Linear task completion with micro-hesitations
+  * 0.0–0.71s: Initial load + hesitation (711ms)
+  * 0.71–1.95s: Rapid downward scan of Settings (799px in 1.24s)
+  * 1.95–3.85s: Navigate to Profile (hover 766ms, click, scroll up 526px)
+  * 3.85–5.54s: Scan Profile (215px downward in 1.69s)
+  * 5.54–7.32s: Navigate to Notifications (hover 754ms, hesitation 1117ms, click)
+  * 7.32–8.49s: Scan Notifications (370px downward in 1.17s)
+  * 8.49–10.38s: Navigate to Privacy (hover 704ms, hesitation 1209ms, click)
+  * 10.38–11.41s: Scan Privacy (73px downward in 1.03s)
+  * 11.41–12.95s: Save Changes (hover 731ms, hesitation 524ms, click)
+- Exit: Session ends immediately after final click (no post-save confirmation observed)
+- Total time per category:
+  * Settings: 1.95s
+  * Profile: 3.59s
+  * Notifications: 2.95s
+  * Privacy: 2.66s
+  * Save: 1.54s
+```
+
+Key Observations:
+- The user exhibits **synthetic/methodical** behavior (as labeled in the device profile), with robotic consistency in scroll speeds (160px/0.5s ±5px) and hover durations (750ms ±50ms).
+- All hesitations occur at (0,0) coordinates, suggesting either a scripted pause or a non-human interaction artifact.
+- No organic user behaviors (e.g., mouse drift, accidental clicks, or variable timing) are present.

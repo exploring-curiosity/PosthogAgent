@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and focused, with no backtracking or exploratory detours.
+- Moved sequentially through the Settings navigation menu (Profile → Notifications → Privacy) in a strict top-to-bottom order.
+- All clicks were on pre-visible elements (no search or hidden menu usage).
+- 100% of clicks were on navigation items or the "Save Changes" button (no content exploration).
+
+2. READING BEHAVIOR
+- Minimal evidence of deep reading. Scroll patterns show:
+  - Rapid, incremental scrolling (7 discrete scroll actions, each ~0.5s duration, covering ~70-120px per scroll).
+  - No pauses >1s between scrolls (suggests skimming rather than reading).
+  - Max scroll depth per section: 117px (Settings Nav), 245px (Profile), 653px (Notifications), 941px (Privacy).
+  - No upward scrolling (no re-reading or review behavior).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content interaction observed (session limited to settings configuration).
+- All interactions were with UI controls (nav items, save button).
+- Click pattern: Double-clicks on all primary targets (6 total clicks, 3 pairs of near-identical coordinates).
+  - Suggests either UI responsiveness issues or deliberate confirmation behavior.
+
+4. INTERACTION SPEED
+- Deliberate but methodical pacing:
+  - Initial hesitation: 3.55s pause before first click (3548ms "HESITATION" tag).
+  - Hover-to-click delays: 403ms (Settings Nav), 751ms (Profile), 785ms (Notifications), 418ms (Privacy), 515ms (Save Changes).
+  - Time between section transitions: ~1.5s (e.g., 5.54s → 6.81s for Profile → Notifications).
+  - Final action (Save Changes) took 1.0s from hover to click (longest delay).
+
+5. CONTENT PREFERENCES
+- No content consumption observed. Session exclusively involved:
+  - Settings navigation (Profile, Notifications, Privacy).
+  - No subreddit/community interaction or content browsing.
+
+6. TYPING BEHAVIOR
+- No typing or input fields were engaged (no text entry, corrections, or form completion).
+- All interactions were clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Settings navigation menu (3/3 visible sections: Profile, Notifications, Privacy).
+  - "Save Changes" button (final action).
+- Ignored features:
+  - No account settings (e.g., security, connected apps).
+  - No help/documentation links.
+  - No search or filtering tools.
+  - No sidebar or footer navigation.
+
+8. SESSION FLOW
+- Arc: Linear configuration → Confirmation
+  - [0.0s-3.55s]: Initial load + hesitation (3.55s pause).
+  - [3.55s-5.54s]: Settings menu exploration (2 clicks, 2 scrolls).
+  - [5.54s-6.81s]: Profile section (2 clicks, 5 scrolls, 1.27s total).
+  - [6.81s-8.78s]: Notifications section (2 clicks, 2 scrolls, 1.97s total).
+  - [8.78s-10.64s]: Privacy section (2 clicks, 4 scrolls, 1.86s total).
+  - [10.64s-12.66s]: Save Changes (2 clicks, 2.02s total).
+- Exit: Session ends immediately after final click (no post-save review).
+- Total time per section: ~2s (consistent across all 3 sections).
+```
+
+Key Observations:
+- **Mechanical precision**: Identical hover/click patterns (e.g., Profile: 751ms hover → click at (1642,245) then (1639,243)).
+- **No errors**: No misclicks, back button usage, or abandoned actions.
+- **Synthetic signature**: Behavior resembles automated testing (consistent timing, no organic variability). Matches "synthetic/methodical_user" device label.

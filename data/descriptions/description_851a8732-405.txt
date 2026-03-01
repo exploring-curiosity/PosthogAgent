@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused with micro-exploration**: The user follows a clear, linear path through the settings hierarchy (Settings → Profile → Privacy → Notifications) with no deviations or backtracking. However, within each section, they exhibit rapid scrolling (see Reading Behavior) that suggests brief exploratory scanning before committing to an action.
+- **Navigation redundancy**: 6/10 clicks are preceded by an identical hover+click sequence (e.g., "Settings Nav [HOVER 91ms]" → "Settings Nav" at 0.73s/0.98s), indicating either UI hesitation or deliberate confirmation of selection.
+- **Spatial consistency**: Click coordinates are nearly identical for repeated actions (e.g., "Profile" clicks at (638,297) and (636,298)), suggesting precise targeting of known UI elements.
+
+2. READING BEHAVIOR
+- **Skim-heavy with rapid depth sampling**: Scroll patterns show:
+  - **Downward skimming**: 4 sequential scrolls (0.32s–0.46s) covering 721px in 140ms/page (1,350px/s), indicating no deep reading.
+  - **Upward re-scanning**: After reaching max depth (e.g., 957px at 1.99s), the user scrolls upward in 3–4 bursts (e.g., 957px→843px over 0.89s), likely re-checking content.
+  - **No dwell time**: No pauses >200ms between scrolls; average scroll duration is 0.5s (per action log).
+- **Max scroll depth per section**:
+  - Profile: 957px (1.99s)
+  - Privacy: 843px (3.0s)
+  - Notifications: 570px (3.68s)
+  Suggests decreasing engagement with later sections.
+
+3. ENGAGEMENT STYLE
+- **Action-only, no content creation**: The session contains only navigation clicks (10 total) and scrolling. No evidence of:
+  - Form inputs (typing, checkboxes, dropdowns)
+  - Submissions (e.g., "Save Changes" button is clicked but no confirmation of data entry)
+  - Comments or votes (not applicable to this settings page).
+- **Click timing**:
+  - Average time between primary clicks: 0.83s (e.g., 0.98s→1.53s = 0.55s; 1.53s→1.86s = 0.33s).
+  - Hover-to-click latency: 77–191ms (median 103ms), suggesting familiarity with UI layout.
+
+4. INTERACTION SPEED
+- **High-speed, deliberate execution**:
+  - **First action latency**: 270ms hesitation before initial click (0.27s), likely page load processing.
+  - **Subsequent actions**: Average 310ms between non-scroll actions (e.g., 0.98s→1.53s = 550ms; 1.86s→2.19s = 330ms).
+  - **Scroll speed**: 1,350px/s downward, 1,100px/s upward (calculated from 0.5s scroll durations).
+  - **No long pauses**: Longest gap between actions is 570ms (3.36s→3.92s), likely UI response time.
+
+5. CONTENT PREFERENCES
+- **Settings-specific focus**: The user exclusively interacts with:
+  - **Profile settings** (1.53s–2.32s): 790ms spent (including scrolls/clicks).
+  - **Privacy settings** (3.0s–3.36s): 360ms spent.
+  - **Notifications settings** (3.68s–3.92s): 240ms spent.
+- **No content consumption**: The session is purely navigational; no evidence of reading articles, posts, or other non-settings content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The action log contains no keystrokes, input field interactions, or text entry. The "Save Changes" button is clicked (2.19s–2.32s) but no prior form activity is recorded.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation menu (Settings Nav, 0.73s–0.98s).
+  - Section tabs (Profile, Privacy, Notifications, 1.53s–3.92s).
+  - "Save Changes" button (2.19s–2.32s).
+- **Ignored features**:
+  - No interaction with:
+    - Form fields (e.g., profile name, email, privacy toggles).
+    - Help/tooltips (no hover pauses >200ms).
+    - Secondary navigation (e.g., breadcrumbs, sidebars).
+    - Search or filter tools.
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–0.98s)**
+  - Loads settings page (0.0s), hesitates (270ms), then rapidly scrolls downward (0.32s–0.46s) to survey content.
+  - Clicks "Settings Nav" twice (0.73s, 0.98s), possibly to confirm section.
+- **Phase 2: Targeted Navigation (0.98s–2.32s)**
+  - Scrolls upward (1.04s–1.13s), then clicks "Profile" (1.53s–1.86s).
+  - Scrolls downward to max depth (1.91s–1.99s), clicks "Save Changes" (2.19s–2.32s).
+  - Scrolls upward (2.36s–2.59s), likely to return to navigation.
+- **Phase 3: Sequential Exploration (2.59s–3.92s)**
+  - Clicks "Privacy" (3.0s–3.2s), scrolls upward (3.25s–3.36s).
+  - Clicks "Notifications" (3.68s–3.92s), session ends.
+- **Exit**: No further actions after 3.92s; session duration 3.9s suggests abrupt termination (e.g., tab close, navigation away).
+
+KEY OBSERVATIONS:
+- **Efficiency-driven**: Prioritizes speed over thoroughness (e.g., no form interactions despite "Save Changes" click).
+- **UI familiarity**: Low hover times (77–191ms) and precise clicks suggest prior experience with the interface.
+- **No content engagement**: Purely navigational; no evidence of reading or data entry.
+- **Scroll-first strategy**: Uses rapid scrolling to locate sections before clicking.
+```

@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - Highly linear and sequential, with clear progression through settings subsections.
+   - Moved through 3 distinct sections (Notifications → Privacy → Profile) in strict order.
+   - No backtracking or revisits to previously viewed sections (except for scroll adjustments).
+   - Navigation was menu-driven, with no evidence of search or alternative discovery methods.
+
+2. READING BEHAVIOR:
+   - Rapid skimming with minimal deep reading:
+     * Initial scroll: Covered 546px in 1.54s (354px/s) before first click (Notifications)
+     * Second scroll: Covered 167px in 1.25s (134px/s) after Privacy click
+     * No pauses >500ms during scrolling (typical for reading)
+   - Scroll depth suggests content scanning rather than thorough reading:
+     * Max depth: 754px (likely full page height)
+     * No sustained viewing at any scroll position
+
+3. ENGAGEMENT STYLE:
+   - No voting, commenting, or content creation observed.
+   - Interaction limited to navigation clicks:
+     * 6 total clicks (3 menu items × 2 clicks each: hover + selection)
+     * All clicks targeted settings subsections (Notifications, Privacy, Profile)
+   - No engagement with content beyond menu navigation.
+
+4. INTERACTION SPEED:
+   - Fast but deliberate:
+     * Average time between actions: 0.9s (excluding initial hesitation)
+     * Menu selection pattern:
+       - Hover (200-250ms) → Click (40-60ms later)
+       - Consistent 200-250ms hover duration before each selection
+     * Scroll speed: 134-354px/s (consistent with scanning)
+   - Notable hesitation:
+     * 1.29s pause before first click (likely page load processing)
+     * No other pauses >500ms
+
+5. CONTENT PREFERENCES:
+   - No content consumption observed.
+   - Navigation focused exclusively on account settings:
+     * Notifications (selected at 1.86s)
+     * Privacy (selected at 3.42s)
+     * Profile (selected at 5.36s)
+   - No evidence of interest in other site features or content types.
+
+6. TYPING BEHAVIOR:
+   - No typing or text input detected in the session.
+   - No search queries, form fields, or text areas interacted with.
+
+7. FEATURE DISCOVERY:
+   - Used features:
+     * Settings menu navigation (3/3 primary subsections)
+     * Vertical scrolling (both up and down)
+   - Ignored features:
+     * No evidence of search functionality use
+     * No interaction with content (posts, comments, etc.)
+     * No account actions beyond navigation (e.g., no settings changes)
+     * No social features (sharing, messaging, etc.)
+     * No help/documentation access
+
+8. SESSION FLOW:
+   - Linear progression through 3 distinct phases:
+     1. INITIAL SCAN (0.0-1.86s):
+        * Page load → 1.29s hesitation → rapid scroll (546px) → Notifications click
+     2. SECTION EXPLORATION (1.86-4.73s):
+        * Notifications view → scroll to bottom → Privacy click
+     3. FINAL SELECTION (4.73-6.26s):
+        * Privacy view → scroll up → Profile click → session end
+   - No engagement loop or iterative behavior:
+     * Each section was visited exactly once
+     * No return to previous sections
+     * Session terminated immediately after final click
+   - Duration: 6.3s (extremely short for a settings page)
+
+ADDITIONAL OBSERVATIONS:
+- Synthetic/scanner user agent suggests possible automated behavior.
+- Precise click coordinates (e.g., (882, 546)) indicate consistent targeting of UI elements.
+- No mouse movement data beyond clicks and hovers (no wandering or exploration).
+- Viewport remained constant at 1920x1080 (no resizing or device rotation).
+```
+
+Key Takeaway: This appears to be a highly targeted, likely automated session focused solely on navigating through settings subsections with no content engagement or exploratory behavior. The linear progression, consistent timing, and lack of human-like variability suggest either a scripted interaction or a user with an extremely specific, pre-determined goal.

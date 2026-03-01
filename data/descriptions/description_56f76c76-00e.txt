@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern Type**: Focused but hesitant, with linear progression through settings subsections.
+- **Movement Flow**:
+  - Loads `/settings` (0.0s) → explores "Notifications" (9.37s) → "Privacy" (16.5s) → "Profile" (21.5s).
+  - No backtracking or non-linear jumps; strictly sequential navigation through settings tabs.
+  - **Quantitative**: 3 distinct sections visited in 25.3s (avg. 8.4s per section).
+  - **Hesitation Markers**: 3 instances of "[HESITATION]" clicks (8.2s, 13.49s, 23.89s) totaling 13.35s (52.8% of session duration).
+
+2. READING BEHAVIOR
+- **Depth**: Skims content without deep reading.
+  - **Scroll Patterns**:
+    - Rapid, incremental scrolling (avg. 167px/s) in both directions.
+    - **Downward**: 470px in 1.04s (8.26–9.3s), 510px in 1.07s (10.23–11.32s).
+    - **Upward**: 879px in 2.15s (14.7–17.86s), 735px in 2.17s (17.67–20.7s).
+  - **Max Depth**: 980px (viewport height: 1080px), suggesting full-page visibility but no prolonged pauses.
+  - **Hover Time**: 913ms ("Notifications"), 685ms ("Save Changes"), 1531ms ("Privacy"), 589ms ("Settings Nav"), 552ms ("Profile")—indicates brief evaluation before clicks.
+
+3. ENGAGEMENT STYLE
+- **Actions**: No voting, commenting, or content creation observed.
+- **Primary Engagement**: Settings configuration (clicks on "Save Changes" twice: 11.32s, 14.63s).
+- **Interaction Type**: Exclusively navigational/functional (no social or content engagement).
+- **Ratio**: N/A (no voting/commenting).
+
+4. INTERACTION SPEED
+- **Deliberate with Hesitation**:
+  - **Action Intervals**:
+    - Avg. 2.1s between non-scroll actions (excluding hesitations).
+    - **Hesitation Delays**: 8.2s (initial), 2.17s (post-"Save Changes"), 2.39s (post-"Profile").
+  - **Click Latency**:
+    - Hover-to-click: 913ms ("Notifications"), 685ms ("Save Changes"), 1531ms ("Privacy").
+    - **Fast Clicks**: 70ms between duplicate "Notifications" clicks (10.19s), 110ms between "Privacy" clicks (17.64s).
+  - **Scroll Speed**: Consistent 167px/s (likely automated or muscle memory).
+
+5. CONTENT PREFERENCES
+- **Focus**: Settings subsections only.
+  - **Gravitated Toward**:
+    - "Notifications" (9.37s), "Privacy" (16.5s), "Profile" (21.5s).
+  - **Ignored**: No evidence of exploring other content (e.g., no subreddit visits, posts, or comments).
+- **No Content Consumption**: Session limited to configuration tasks.
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**: No text inputs, corrections, or form submissions observed.
+- **Input Length**: N/A.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Settings navigation (tabs: Notifications, Privacy, Profile).
+  - "Save Changes" button (clicked twice, possibly due to hesitation or validation).
+- **Ignored Features**:
+  - No evidence of using search, help, account dropdown, or other UI elements.
+  - No social features (e.g., messaging, community interactions).
+
+8. SESSION FLOW
+- **Arc**: Linear configuration with validation loops.
+  - **0.0–8.2s**: Initial load + hesitation (32.4% of session).
+  - **8.2–14.63s**: "Notifications" exploration → "Save Changes" (25.4% of session).
+    - **Validation Loop**: Re-clicks "Save Changes" after 3.3s (11.32s → 14.63s).
+  - **14.63–21.5s**: Scrolls up → "Privacy" → "Settings Nav" (27.2% of session).
+  - **21.5–25.3s**: "Profile" selection + final hesitation (15% of session).
+- **Exit**: Session ends after "Profile" click (no confirmation of completion).
+- **Key Observations**:
+  - **Hesitation Clusters**: 3 distinct pauses (8.2s, 13.49s, 23.89s) totaling 13.35s.
+  - **Scroll Dominance**: 14 scroll actions (56% of all non-load actions).
+  - **No Abandonment**: User completes intended navigation path.
+```
+
+**Summary**: A cautious, task-focused user navigating settings linearly with high hesitation, rapid scrolling, and no content engagement. Interaction is deliberate but plagued by validation delays (e.g., re-clicking "Save Changes"). No typing or social features were used. Session arc suggests a goal-oriented configuration task with minimal exploration.

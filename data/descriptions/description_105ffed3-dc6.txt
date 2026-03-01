@@ -1,0 +1,82 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with repetitive loops**: The user exhibits a non-linear, erratic navigation pattern with frequent backtracking. They scroll rapidly through the page (0.98s–1.47s) before immediately attempting to exit via "Back to Shop" (1.47s). After failing to exit (2.27s–2.65s), they return to the top of the page (2.7s–3.37s) and focus on the "Cart Summary" section (3.37s–4.49s), followed by another attempt to interact with payment fields (4.72s–7.91s).
+- **Key evidence**:
+  - 5 scroll-down actions (0.98s–1.3s) followed by 5 scroll-up actions (2.7s–2.94s).
+  - Repeated clicks on "Back to Shop" (1.47s, 2.65s) and "Cart Summary" (3.37s, 3.6s).
+  - No progression to new pages or sections beyond the checkout page.
+
+2. READING BEHAVIOR:
+- **Skimmed aggressively**: Scroll speed (200px/0.5s) suggests rapid scanning without deep reading. The user covers ~1,000px in 1.5s (1.03s–2.53s) but never pauses to hover over specific elements (except for brief hovers before clicks).
+- **Key evidence**:
+  - Max scroll depth (1,014px) reached in 1.3s, then immediate scroll-up (2.7s).
+  - No hovers >150ms except pre-click hovers (e.g., 142ms on "Card Number" at 6.25s).
+  - No evidence of reading form labels or instructions (e.g., skipped "Email" until 7.6s).
+
+3. ENGAGEMENT STYLE:
+- **No content engagement**: The session is transactional (checkout) with no evidence of voting, commenting, or content interaction. All actions are UI-focused (clicks, scrolls, form inputs).
+- **Key evidence**:
+  - 100% of clicks target UI elements (buttons, inputs, divs).
+  - No text input detected (despite clicking on "Email" and "Card Number" fields).
+
+4. INTERACTION SPEED:
+- **Impulsive and frustrated**: Actions are rapid (avg. 0.3s between clicks) with clear signs of impatience (rage clicks, dead clicks).
+- **Key evidence**:
+  - **Hesitation**: 983ms (0.98s) and 804ms (2.27s) before initial clicks.
+  - **Rage clicks**: 5 consecutive clicks on "Cart Summary" (3.71s–4.21s) in 0.5s.
+  - **Dead click**: Click on non-interactive div at 4.49s.
+  - **Typical intervals**: 0.05s–0.5s between actions (e.g., 0.03s between scroll steps).
+
+5. CONTENT PREFERENCES:
+- **N/A**: The session is confined to a single checkout page. No content (e.g., products, articles) or subreddit-like sections were interacted with.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: Despite clicking on input fields ("Card Number" at 4.72s, "Email" at 7.6s), no keystrokes or input lengths are recorded. Suggests either:
+  - Abandonment before typing.
+  - Synthetic session (as labeled in device profile).
+- **Key evidence**:
+  - Clicks on inputs but no subsequent `input` or `change` events.
+  - No corrections or pauses indicative of typing.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - Scrolling (vertical navigation).
+  - "Back to Shop" button (attempted twice).
+  - "Cart Summary" section (clicked repeatedly).
+  - Payment form fields ("Card Number", "Email").
+  - "Pay Now" button (clicked once at 5.28s).
+- **Ignored features**:
+  - No interaction with:
+    - Product details or images.
+    - Promotional banners or upsells (if present).
+    - Help/support links (no hovers or clicks).
+    - Form validation messages (no pauses near error states).
+
+8. SESSION FLOW:
+- **Arc**: **Frustration-driven abandonment**
+  1. **Exploration (0.0s–1.47s)**:
+     - Loads checkout page, scrolls rapidly to bottom (1,014px in 1.3s).
+     - Attempts to exit via "Back to Shop" (1.47s).
+  2. **Re-evaluation (2.27s–3.37s)**:
+     - Hesitates (804ms), clicks "Back to Shop" again (2.65s).
+     - Scrolls back to top (2.7s–2.94s), focuses on "Cart Summary" (3.37s).
+  3. **Rage Interaction (3.37s–4.49s)**:
+     - Repeated clicks on "Cart Summary" (5 rage clicks in 0.5s).
+     - Dead click on non-interactive element (4.49s).
+  4. **Form Abandonment (4.72s–7.91s)**:
+     - Clicks "Card Number" (4.72s), scrolls to "Pay Now" (5.28s), clicks it (5.65s).
+     - Scrolls back up, clicks "Card Number" again (6.25s), then "Email" (7.6s).
+     - Session ends without completion.
+- **Exit**: No confirmation of payment or navigation away. Session terminates at 7.91s.
+
+ADDITIONAL OBSERVATIONS:
+- **Synthetic behavior**: The device label ("synthetic/impulsive_clicker") and lack of typing suggest this may be a bot or automated test. However, the rage clicks and hesitation align with human frustration patterns.
+- **UI pain points**:
+  - "Back to Shop" button may be unclear or non-functional (repeated clicks).
+  - "Cart Summary" section may be unresponsive (rage clicks).
+  - Form fields may lack affordance (e.g., no placeholder text, unclear labels).
+```
+
+**Summary**: This user exhibited a **highly frustrated, transactional session** with rapid, erratic navigation and no successful completion. Their behavior suggests **UI friction** (unresponsive elements, unclear navigation) and **impatience**, culminating in abandonment. No content engagement or typing was observed.

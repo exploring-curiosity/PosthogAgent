@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with targeted jumps**: The user follows a mostly sequential path through the checkout page, but with abrupt shifts in focus (e.g., jumping from "Card Number" input to "Cart Summary" at 2.04s). No exploratory detours or backtracking to earlier sections.
+- **Scroll-dominant**: 62% of actions (13/21) are scrolls, with 3 distinct scroll "bursts" (0.2s–0.46s, 1.12s–1.25s, 2.84s–2.95s) covering 90% of the page depth.
+- **Exit-driven**: Final action is a direct click on "Pay Now" (4.17s), suggesting goal-oriented behavior.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scroll speed averages **120px/s** (e.g., 22px→113px in 0.26s–0.46s), with no pauses >0.1s at any depth. No evidence of deep reading.
+- **Visual sampling**: Hover times (75ms–178ms) on interactive elements ("Email", "Card Number", "Cart Summary") suggest rapid visual confirmation rather than content absorption.
+- **Scroll depth**: Max depth (985px) exceeds typical viewport (1080px), but 76% of scrolls occur in the first 323px (top 30% of page).
+
+3. ENGAGEMENT STYLE
+- **Input-focused**: 7/21 actions (33%) are clicks on form fields ("Email", "Card Number") or buttons ("Pay Now", "Back to Shop").
+- **No social engagement**: Zero votes, comments, or interactions with user-generated content (session is purely transactional).
+- **Hesitation markers**: Two "[HESITATION]" clicks (0.14s, 2.66s) with delays (138ms, 614ms) indicate momentary indecision but no abandonment.
+
+4. INTERACTION SPEED
+- **Rapid but deliberate**: Median time between actions: **0.13s** (fast), but with outliers:
+  - 614ms hesitation (2.66s)
+  - 360ms gap before "Back to Shop" (3.3s–3.66s)
+- **Input latency**: 250ms–310ms between hover and click on form fields (e.g., "Email" hover at 0.7s → click at 1.05s).
+- **Scroll consistency**: All scrolls last **0.5s** (±0.01s), suggesting automated or highly practiced behavior.
+
+5. CONTENT PREFERENCES
+- **Transactional only**: All interactions are with checkout-specific elements:
+  - Form fields: "Email" (2 clicks), "Card Number" (2 clicks)
+  - Navigation: "Back to Shop" (2 clicks)
+  - Summary: "Cart Summary" (2 clicks)
+  - CTA: "Pay Now" (2 clicks)
+- **No product browsing**: Zero interactions with product listings, descriptions, or images.
+
+6. TYPING BEHAVIOR
+- **No visible typing**: While form fields are clicked, no keystrokes or input values are recorded. Possible explanations:
+  - Autofill/password manager usage (no manual input).
+  - Session recording limitations (masked inputs).
+  - Aborted typing (no corrections or pauses detected).
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Form inputs ("Email", "Card Number")
+  - Cart summary (clicked twice, 2.04s–2.77s)
+  - Navigation ("Back to Shop")
+  - Primary CTA ("Pay Now")
+- **Ignored features**:
+  - No interactions with:
+    - Promotional banners (if present)
+    - Help/chat widgets
+    - Payment method selectors (beyond "Card Number")
+    - Shipping address fields (if visible)
+    - Coupon codes or discounts
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–0.46s)**
+  - Loads checkout page → immediate downward scroll (0px→113px) at 120px/s.
+  - No engagement with content; likely assessing page structure.
+- **Phase 2: Form Interaction (0.7s–1.69s)**
+  - Clicks "Email" field (0.7s), then "Card Number" (1.56s).
+  - Brief hover pauses (75ms–159ms) suggest visual confirmation of field labels.
+- **Phase 3: Cart Review (2.04s–2.77s)**
+  - Jumps to "Cart Summary" (2.04s), then hesitates (614ms at 2.66s).
+  - Clicks summary again (2.77s), possibly to expand/collapse.
+- **Phase 4: Navigation (2.84s–3.66s)**
+  - Rapid scroll to bottom (323px→985px in 0.11s).
+  - Clicks "Back to Shop" (3.3s), then immediately scrolls up (985px→737px).
+- **Phase 5: Checkout (3.7s–4.17s)**
+  - Scrolls to mid-page (737px), clicks "Pay Now" (4.04s).
+  - Final click at 4.17s ends session.
+
+KEY OBSERVATIONS:
+- **Efficiency over exploration**: Zero wasted actions; all interactions serve the checkout goal.
+- **Automated traits**: Consistent scroll speeds (0.5s intervals) and hover-click latencies suggest a power user or synthetic session.
+- **No errors**: No misclicks, corrections, or repeated actions on the same element.
+- **Exit trigger**: "Pay Now" click aligns with typical checkout completion, but lack of typing data limits confirmation.
+```

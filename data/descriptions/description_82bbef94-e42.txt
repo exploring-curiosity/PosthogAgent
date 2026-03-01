@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with hesitation loops**: The user exhibits non-linear, erratic navigation with repeated backtracking and re-engagement. Key patterns:
+  * Initial downward scroll (1.52s–1.73s) suggests exploratory scanning of checkout page content.
+  * Immediate reversal to "Back to Shop" (3.1s–4.05s) indicates abandonment of checkout flow.
+  * Subsequent re-entry into checkout (5.47s–21.68s) shows fragmented focus, toggling between form fields and cart summary.
+- **Feature toggling**: 3 distinct cycles of engaging with "Cart Summary" (5.47s–7.08s) and "Pay Now" (8.62s–10.27s) before settling on form fields.
+
+2. READING BEHAVIOR
+- **Skim-heavy with rapid depth probing**:
+  * Initial scroll (1.52s–1.73s): Covered 979px in 0.21s (4,662px/s), suggesting no deep reading—likely scanning for key elements (e.g., pricing, buttons).
+  * Post-"Back to Shop" scroll (4.13s–4.16s): Upward scroll at 1,696px/s, indicating retreat without re-reading.
+  * No pauses >1s during scrolls; max depth (979px) reached in 1.73s implies no sustained content consumption.
+- **No evidence of deep reading**: No scroll stalls or revisits to specific sections.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting**: Irrelevant to checkout context (no social interactions logged).
+- **Frustration signals**:
+  * **Rage clicks**: 3 consecutive clicks on "Cart Summary" (6.92s–7.04s) within 120ms, suggesting UI unresponsiveness or confusion.
+  * **Dead click**: Final action (21.68s) on a non-interactive div, indicating potential session abandonment.
+- **Hover hesitation**: 4 instances of prolonged hovers (1,081–2,621ms) before clicks, signaling uncertainty.
+
+4. INTERACTION SPEED
+- **Bimodal speed**:
+  * **Fast actions**: Scrolls (0.5s duration), rage clicks (120ms intervals), and dead clicks (no delay).
+  * **Slow deliberation**: Hovers (mean: 1,448ms) and hesitations (mean: 1,435ms) before primary clicks.
+- **Action intervals**:
+  * Short: 40–400ms (e.g., scrolls, rage clicks).
+  * Long: 1.1–2.6s (e.g., hovers, hesitations).
+- **Typing latency**: No typing data logged (only input field clicks).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**:
+  * Gravitated toward **transactional elements**: "Pay Now" (2 clicks), "Cart Summary" (4 clicks), and form fields ("Card Number," "Email").
+  * **Ignored static content**: No engagement with product details, terms, or FAQs (despite scrolling past them).
+- **No subreddit/content exploration**: Irrelevant to this session.
+
+6. TYPING BEHAVIOR
+- **No observable typing**: Only input field clicks logged (12.28s, 15.5s, 17.41s, 21.16s). No keystrokes, corrections, or input lengths recorded.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  * "Back to Shop" (used twice: 3.1s, 4.05s).
+  * "Cart Summary" (clicked 4x, including rage clicks).
+  * "Pay Now" (clicked 2x).
+  * Form fields: "Card Number" (2x), "Email" (2x).
+- **Ignored features**:
+  * No interaction with promo codes, shipping options, or payment method selectors (despite scrolling past them).
+  * No help/chat widgets or secondary CTAs (e.g., "Save for Later").
+
+8. SESSION FLOW
+- **Arc**: **Exploration → Abandonment → Re-engagement → Frustration → Exit**
+  1. **0.0s–3.1s (Exploration)**: Loaded checkout, rapid scroll to bottom (979px), likely scanning for exit options.
+  2. **3.1s–4.16s (Abandonment)**: Clicked "Back to Shop" twice (hesitation: 1,081ms hover), then scrolled up to top.
+  3. **5.47s–10.27s (Re-engagement)**: Re-entered checkout, toggled between "Cart Summary" (rage clicks) and "Pay Now" (hesitation: 1,203ms hover).
+  4. **12.28s–21.68s (Frustration)**: Attempted form completion ("Card Number," "Email") with long hesitations (1,789ms, 1,587ms hovers). Final dead click suggests session termination.
+- **Exit**: No confirmation of purchase; session ended with a dead click after 21.7s.
+
+QUANTITATIVE SUMMARY
+- **Scrolls**: 12 (6 up, 6 down), mean speed: 3,800px/s.
+- **Clicks**: 16 total (4 rage, 1 dead, 2 "Back to Shop," 2 "Pay Now," 4 form fields).
+- **Hesitations**: 4 (mean: 1,435ms).
+- **Hover delays**: 4 (mean: 1,448ms).
+- **Max scroll depth**: 979px (reached in 1.73s).
+- **Session efficiency**: 0% conversion (no purchase completed).
+```

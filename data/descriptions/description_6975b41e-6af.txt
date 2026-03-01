@@ -1,0 +1,84 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no clear linear progression.
+- Repeated cycles of:
+  a) Rapid scrolling (both up/down) to explore page layout (e.g., 0.82s–1.08s: 5 downward scrolls covering 368px in 0.26s)
+  b) Targeted clicks on interactive elements (e.g., "Cart Summary" clicked 7 times across 4 distinct locations)
+  c) Rage clicks (12 instances) and dead clicks (2 instances) indicating frustration or misaligned expectations.
+- No sustained focus on any single section; average dwell time per "focus area" (e.g., Cart Summary, Card Number) = 2.1s before abandonment.
+
+2. READING BEHAVIOR
+- Skimming with minimal deep reading:
+  - Scroll speed: 147px/s (avg. across 20 scroll actions), suggesting rapid visual scanning.
+  - Max scroll depth: 1007px (4.17s), but only 3 instances of upward scrolling to revisit content (e.g., 2.25s–2.31s: 101px upward scroll).
+  - No pauses >500ms between scrolls, indicating no sustained reading.
+- Hesitation markers (2 instances: 0.76s, 6.48s) suggest brief cognitive load, but no evidence of content absorption.
+
+3. ENGAGEMENT STYLE
+- No traditional "engagement" (e.g., voting, commenting, form submission). Instead:
+  - Repetitive clicking on non-interactive or misaligned elements (e.g., "Cart Summary" div clicked 7 times despite no apparent state change).
+  - Rage clicks (12 total) clustered around:
+    - Cart Summary (7 instances: 1.77s–2.22s)
+    - Card Number input (5 instances: 6.87s–8.26s)
+  - Dead clicks (2 instances: 8.79s, 13.88s) on non-interactive areas.
+- Interaction ratio: 25 clicks on interactive elements (buttons/inputs) vs. 14 on non-interactive or misaligned elements (63.5% "effective" clicks).
+
+4. INTERACTION SPEED
+- Extremely fast, with signs of impulsivity:
+  - Avg. time between actions: 0.59s (excluding scrolls).
+  - Fastest sequence: 5 rage clicks on "Cart Summary" in 0.49s (1.77s–2.22s).
+  - Hover-to-click latency: 88ms (avg. across 8 hover events), suggesting minimal deliberation.
+  - Hesitation events (760ms, 1356ms) are outliers; 92% of actions occur <300ms apart.
+
+5. CONTENT PREFERENCES
+- Gravitated toward checkout-specific elements:
+  - "Cart Summary" (7 clicks, 4 distinct locations)
+  - "Pay Now" button (2 clicks)
+  - "Back to Shop" link (2 clicks)
+  - "Email" and "Card Number" inputs (6 clicks total)
+- No evidence of interest in product details, descriptions, or non-checkout features (e.g., no clicks on product images, quantities, or discounts).
+
+6. TYPING BEHAVIOR
+- No typing detected. All interactions with inputs ("Email", "Card Number") were clicks, not keystrokes.
+- Input fields clicked but never populated (e.g., "Card Number" clicked 6 times across 3 locations, but no text entry recorded).
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Scrolling (20 actions, 100% of session)
+  - Clicking on checkout elements (Cart Summary, Pay Now, Back to Shop, inputs)
+- Ignored features:
+  - Form submission (no "Submit" or "Place Order" clicks)
+  - Product customization (no clicks on quantity selectors, remove buttons, or product links)
+  - Help/support (no clicks on FAQs, chat, or tooltips)
+  - Navigation menus (no clicks on header/footer links)
+
+8. SESSION FLOW
+- Arc: Frustration-driven exploration → Abandonment
+  1. Initial Hesitation (0.0s–0.76s): Page load + 760ms pause (potential confusion).
+  2. Rapid Scanning (0.82s–1.37s): 5 downward scrolls to assess page layout.
+  3. First Frustration Spike (1.37s–2.25s):
+     - 7 clicks on "Cart Summary" (including 5 rage clicks in 0.49s).
+     - Upward scroll to revisit top of page (2.25s–2.31s).
+  4. Input Exploration (2.64s–3.84s):
+     - Clicks on "Email" and "Pay Now" (no data entry).
+     - Downward scroll to bottom of page (3.21s–3.31s).
+  5. Backtracking (4.56s–5.12s):
+     - Clicks "Back to Shop" twice (4.56s, 4.82s).
+     - Upward scroll to mid-page (4.85s–4.98s).
+  6. Second Frustration Spike (6.48s–8.79s):
+     - 1356ms hesitation (6.48s).
+     - 6 rage clicks on "Card Number" input (6.87s–8.26s).
+     - Dead click on non-interactive div (8.79s).
+  7. Final Abandonment (9.0s–14.6s):
+     - Repeated cycles of clicking "Cart Summary" (9.0s–13.14s) and "Back to Shop" (9.91s–10.04s).
+     - Final click on "Card Number" (14.6s) with no further action.
+
+KEY INSIGHTS:
+- User exhibited signs of severe frustration (rage/dead clicks) likely due to:
+  a) Unmet expectations (e.g., "Cart Summary" not expanding/updating on click).
+  b) Input fields not responding as anticipated (e.g., no cursor/keypad appearing).
+- No evidence of goal completion (no form submission, no product purchase).
+- Session terminated abruptly after 14.6s, suggesting abandonment.
+```

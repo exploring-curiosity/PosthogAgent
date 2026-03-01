@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and goal-directed**: The user follows a strict checkout flow with no deviations (e.g., no product page visits, no navigation menu interactions).
+- **Minimal exploration**: All actions occur on a single page (`/checkout`) with no backtracking or secondary page loads.
+- **Focused on form completion**: 75% of non-scroll actions (6/8) target checkout fields (card number, cart summary, pay button).
+
+2. READING BEHAVIOR
+- **Skimmer**: Scrolls rapidly through content with no pauses for deep reading.
+  - **Scroll velocity**: 120–140px/0.5s (e.g., 241px→382px in 0.6s at 2.25–2.31s).
+  - **Max depth**: 713px (viewport height: 1080px), suggesting ~66% of page content was viewed.
+  - **No dwell time**: No pauses >200ms between scrolls; immediate progression downward.
+
+3. ENGAGEMENT STYLE
+- **Not applicable**: This is a checkout session, not a social/commenting platform. No voting, commenting, or content creation occurred.
+- **Interaction pattern**: Binary clicks (no drags, hovers only as pre-click indicators).
+  - **Hover-to-click ratio**: 2/8 clicks (25%) had preceding hovers (349ms and 295ms durations).
+
+4. INTERACTION SPEED
+- **Fast but hesitant**: Two distinct hesitation periods:
+  - **Initial hesitation**: 765ms before first click (0.0–0.76s).
+  - **Mid-session hesitation**: 2,787ms before second "ghost" click (2.92–5.71s).
+- **Post-hesitation speed**:
+  - **Click intervals**: 0.08–0.78s between non-hesitation actions (e.g., 0.84–0.88s scrolls).
+  - **Form interaction**: 830ms between card number clicks (1.34–2.17s), likely due to focus/validation.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific**: Solely interacted with:
+  - Payment form (card number field: 2 clicks).
+  - Cart summary (2 clicks).
+  - Pay button (2 clicks).
+- **Ignored**: No engagement with navigation, promotions, or non-checkout elements.
+
+6. TYPING BEHAVIOR
+- **No visible typing**: No keystroke logs or input field changes detected.
+- **Possible autofill**: Card number field was clicked twice (1.34s and 2.17s) without intermediate typing, suggesting:
+  - Autofill attempt (failed or slow).
+  - Manual entry not captured in logs.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Scrolling (8 discrete scroll actions).
+  - Form fields (card number, cart summary, pay button).
+- **Ignored**:
+  - Navigation menus, sidebars, or footer links.
+  - Help/tooltip features (no hovers >350ms except pre-click).
+  - Non-primary CTAs (e.g., "Save for later").
+
+8. SESSION FLOW
+- **Phase 1 (0.0–0.76s): Load & Hesitation**
+  - Page load → 765ms pause (likely assessing page layout).
+- **Phase 2 (0.76–2.92s): Form Exploration**
+  - Rapid scrolling (4 scrolls in 1.5s) to locate fields.
+  - Card number field clicked twice (possible autofill issue).
+- **Phase 3 (2.92–5.71s): Mid-Session Pause**
+  - 2.79s hesitation (longest in session), possibly due to:
+    - Distraction.
+    - Autofill delay.
+    - Cart validation (e.g., price recalculation).
+- **Phase 4 (5.71–8.39s): Completion**
+  - Cart summary reviewed (2 clicks).
+  - Final scroll to pay button (2 scrolls in 0.5s).
+  - Pay button clicked twice (8.39s), suggesting confirmation or retry.
+
+**OVERALL ARC**:
+Linear, task-driven session with two hesitation spikes. No exploration; focused solely on checkout completion. Scrolling behavior indicates skimming, not deep reading. Interaction speed suggests familiarity with checkout flows but potential friction with autofill or cart validation.
+```

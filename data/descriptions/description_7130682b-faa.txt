@@ -1,0 +1,73 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and task-driven**: The user follows a clear, sequential path with minimal deviation:
+  1. Dashboard load → 2. Export attempt → 3. Stats Cards interaction → 4. Chart interaction → 5. Sidebar navigation → 6. Data Table interaction.
+- **No exploratory detours**: No evidence of browsing unrelated sections, backtracking, or revisiting prior elements.
+- **Precision targeting**: Clicks are consistently on specific UI elements (buttons, divs, tables) with near-identical coordinates for repeated actions (e.g., "Export" at (1728,106) and (1729,104)).
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns show rapid, incremental downward movement with no pauses or upward revisits:
+  - 0.27–0.3s: 0→106px (53px/s)
+  - 2.07–2.23s: 106→264px (158px/s)
+  - 3.58–3.71s: 264→418px (154px/s)
+  - 4.47–4.63s: 418→653px (147px/s)
+- **No deep reading**: Max scroll depth (653px) suggests content was scanned, not read in detail. No scroll reversals or sustained pauses.
+- **Content skipped**: User scrolls past ~500px of content in <2.5s (4.47–4.63s), indicating disinterest in intermediate material.
+
+3. ENGAGEMENT STYLE
+- **Action-only, no passive engagement**: All interactions are clicks (10 total); no evidence of voting, commenting, or text input.
+- **No social engagement**: No "like," "share," or "save" actions detected.
+- **Immediate execution**: Clicks occur within 200ms of hover (e.g., "Export [HOVER 134ms]" → click at 0.57s), suggesting premeditated actions.
+- **Repetitive clicks**: Identical elements clicked twice in quick succession (e.g., "Export" at 0.57s and 2.03s; "Stats Cards" at 2.67s and 3.54s), possibly due to UI lag or confirmation.
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median inter-action time = 0.34s (excluding hesitations).
+  - Fastest: 0.03s (scroll increments, e.g., 4.56–4.59s).
+  - Slowest: 1.27s (between "Chart" click at 4.43s and next scroll at 4.47s).
+- **Hesitations**: Three distinct pauses (labeled "[HESITATION Xms]") at:
+  - 0.21s (214ms)
+  - 1.84s (1269ms)
+  - 3.39s (723ms)
+  - Likely represent cognitive load or UI response delays.
+- **No typing detected**: Zero text input or corrections observed.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward data-centric UI elements**:
+  - **Export functionality**: Clicked twice (0.57s, 2.03s).
+  - **Stats Cards**: Clicked twice (2.67s, 3.54s).
+  - **Chart**: Clicked twice (4.14s, 4.43s).
+  - **Data Table**: Final interaction (5.4s, 5.68s).
+- **Ignored**: No clicks on navigation menus, search bars, or non-data elements (e.g., user profiles, settings).
+- **No subreddit/category preferences**: Data insufficient to determine content topics.
+
+6. TYPING BEHAVIOR
+- **None observed**: No text inputs, corrections, or form submissions detected in the 5.7s session.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Export (primary focus, 2 clicks).
+  - Stats Cards (2 clicks).
+  - Chart (2 clicks).
+  - Sidebar (1 click).
+  - Data Table (final interaction, 2 clicks).
+- **Ignored features**:
+  - Search/filters (no clicks).
+  - User account dropdowns (no clicks).
+  - Help/documentation (no clicks).
+  - Non-data UI elements (e.g., notifications, alerts).
+- **Discovery method**: Linear top-to-bottom scan; features used were encountered sequentially via scrolling.
+
+8. SESSION FLOW
+- **Arc**: **Task initiation → Rapid execution → Abrupt termination**.
+  - **0.0–0.57s (Initiation)**: Page load → initial scroll → first "Export" click.
+  - **0.57–2.67s (Primary Task)**: Hesitation → repeated "Export" clicks → scroll to Stats Cards.
+  - **2.67–4.43s (Secondary Tasks)**: Stats Cards → Chart interactions, rapid scrolling.
+  - **4.43–5.68s (Exploratory Phase)**: Sidebar → Data Table clicks (final action).
+- **Exit**: Session ends immediately after Data Table interaction (no logout, no return to top).
+- **No engagement loop**: No evidence of iterative refinement (e.g., filtering data, adjusting views).
+
+SUMMARY
+This user exhibits **highly efficient, task-oriented behavior** with a focus on data extraction (Export) and visualization (Stats Cards, Chart). Their navigation is **linear and deliberate**, with **no exploratory browsing** or social engagement. Scroll patterns indicate **skimming**, not deep reading, and interactions are **fast but repetitive**, suggesting either UI responsiveness issues or confirmation-seeking behavior. The session terminates abruptly after interacting with the Data Table, implying the user either achieved their goal or abandoned the task.
+```

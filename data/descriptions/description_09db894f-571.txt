@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered/impulsive with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with rapid shifts between UI elements. No clear progression through content is observed.
+- **Element-hopping**: Jumps between 4 distinct UI components (Data Table → Sidebar → Stats Cards → Chart) in rapid succession, with no sustained interaction (>1s) on any single component.
+- **Repetitive clicks**: 6/14 clicks (43%) are duplicates (same element clicked twice within <300ms), suggesting either accidental clicks or validation attempts.
+
+2. READING BEHAVIOR
+- **Skim-only**: No evidence of deep reading.
+  - **Scroll velocity**: 300–500px/s (e.g., 0.52–0.64s: 575px in 0.5s = 575px/s; 2.55–2.73s: 563px in 0.5s = 563px/s).
+  - **Max depth**: 862px (viewport height: 1080px), but never dwells beyond 1.29s at any scroll position.
+  - **Direction reversals**: 3 scroll direction changes (down → up → down) within 5.4s, indicating no sustained content consumption.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or form submissions detected.
+- **Interaction metrics**:
+  - **Click frequency**: 14 clicks in 5.4s (2.6 clicks/s).
+  - **Hover-to-click latency**: 37–116ms (median: 63ms), suggesting impulsive interactions rather than deliberate engagement.
+  - **Dead click**: 1/14 clicks (7%) at 3.63s ("[DEAD CLICK]"), indicating a failed interaction attempt.
+
+4. INTERACTION SPEED
+- **Hyper-fast**: Median inter-action time: 240ms (range: 40ms–440ms).
+  - **Fastest sequence**: 0.44s (hesitation) → 0.52s (scroll) → 0.56s (scroll) = 80–120ms between actions.
+  - **Slowest sequence**: 3.25s → 3.63s (380ms gap), likely due to dead click recovery.
+- **Hesitation**: Only 1 recorded hesitation (443ms at 0.44s), suggesting minimal cognitive processing.
+
+5. CONTENT PREFERENCES
+- **UI components targeted** (by click frequency):
+  1. Data Table: 4 clicks (29%)
+  2. Sidebar: 4 clicks (29%)
+  3. Stats Cards: 4 clicks (29%)
+  4. Chart: 2 clicks (14%)
+- **No content focus**: All interactions are with structural UI elements (tables, sidebars, cards), not textual or media content.
+- **Spatial bias**: Clicks cluster in right-side (x>1000px) and bottom (y>700px) regions, suggesting a preference for lower-right UI elements.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form interactions observed in the log.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Scrolling (vertical navigation).
+  - Click interactions with: Data Table, Sidebar, Stats Cards, Chart.
+- **Features ignored**:
+  - No navigation to other pages (only dashboard).
+  - No dropdowns, modals, or tooltips engaged.
+  - No search or filter functionality used.
+  - No hover tooltips sustained beyond 116ms.
+
+8. SESSION FLOW
+- **Arc**: **Impulsive exploration → validation attempts → abandonment**
+  - **0.0–0.86s (Exploration)**: Rapid scroll-down (862px in 0.64s) to reach bottom of page, followed by immediate click on Data Table.
+  - **0.86–2.5s (Validation)**: Repetitive clicks on Data Table (2x) and Sidebar (2x), with brief upward scrolls (likely to reorient).
+  - **2.5–3.63s (Frustration)**: Dead click at 3.63s suggests failed interaction (e.g., unclickable element).
+  - **3.63–5.43s (Re-engagement)**: Rapid re-targeting of Stats Cards (2x) and Chart (2x), with final downward scroll before session end.
+- **Exit**: Session terminates abruptly after Chart click at 5.43s, with no further actions.
+```
+
+**Summary**: This user exhibits **synthetic/impulsive behavior** (as labeled in the device profile) with no evidence of human-like engagement. The session is characterized by **mechanical, high-velocity interactions** (2.6 clicks/s, 500px/s scrolls) and **repetitive validation clicks**, suggesting either a bot, automated test, or a user with extreme impatience/ADHD-like patterns. No meaningful content consumption or feature discovery occurred.

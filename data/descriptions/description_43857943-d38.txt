@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive loops**: The user exhibits non-linear, erratic navigation with redundant actions. They repeatedly return to the same elements (e.g., "Back to Shop" clicked twice at 1.52s and 4.02s, "Cart Summary" clicked twice at 8.06s and 11.14s).
+- **No clear progression**: Actions oscillate between checkout form fields (Card Number) and cart summary, with no completion of any single task.
+- **Dead clicks**: One confirmed dead click at 11.35s (no functional outcome), suggesting confusion or misaligned expectations.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns show rapid, shallow engagement:
+  - Initial scroll (0.8s–0.98s): 4 sequential downward scrolls covering 1004px in 0.18s total (avg. 5578px/s), indicating no content absorption.
+  - Later scrolls (4.07s–4.18s, 7.39s–7.53s): Up/down movements at similar speeds (avg. 534px/s), with no pauses >0.5s to suggest reading.
+- **No deep dives**: Max scroll depth (1004px) is reached in <1s, then abandoned.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session lacks voting, commenting, or form submissions. All interactions are navigational or exploratory.
+- **Hover hesitation**: Two elements show pre-click hesitation:
+  - "Back to Shop" (287ms hover at 1.52s)
+  - "Card Number" (387ms hover at 4.87s)
+  - "Cart Summary" (339ms hover at 8.06s)
+- **Hesitation clusters**: Three instances of "[HESITATION]" clicks (0.75s, 3.37s, 5.84s, 10.45s) totaling 5.96s (52% of session duration), indicating decision paralysis or distraction.
+
+4. INTERACTION SPEED
+- **Bimodal speed**:
+  - **Fast bursts**: Scrolls and clicks occur in rapid succession (e.g., 4 scrolls in 0.18s at 0.8s–0.98s).
+  - **Deliberate pauses**: Hesitations range from 751ms to 2390ms (avg. 1493ms), suggesting cognitive load or external interruptions.
+- **Action intervals**: Time between non-hesitation actions averages 0.7s (excluding hesitations), but with high variance (e.g., 2.35s gap between 1.52s and 3.37s clicks).
+
+5. CONTENT PREFERENCES
+- **Checkout-focused**: All interactions center on checkout-related elements:
+  - "Back to Shop" (2 clicks)
+  - "Card Number" input (2 clicks)
+  - "Cart Summary" (2 clicks)
+- **No product exploration**: No clicks on product listings, descriptions, or related content.
+- **Form avoidance**: Despite clicking "Card Number" twice (4.87s, 7.34s), no typing or form submission occurred.
+
+6. TYPING BEHAVIOR
+- **No observable typing**: Despite two clicks on "Card Number" input, no keystrokes or input lengths are recorded. Suggests either:
+  - Technical failure (e.g., input blocked)
+  - Intentional avoidance of data entry
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - "Back to Shop" (used twice)
+  - "Card Number" input (interacted with twice)
+  - "Cart Summary" (interacted with twice)
+- **Ignored features**:
+  - No interaction with other checkout fields (e.g., Expiry Date, CVV, Name on Card).
+  - No use of promotional codes, shipping options, or payment method selectors.
+  - No navigation to other pages (e.g., product pages, FAQ).
+
+8. SESSION FLOW
+- **Phase 1: Rapid Exploration (0.0s–1.52s)**
+  - Loads checkout page, immediately scrolls full length (1004px) in 0.18s.
+  - Clicks "Back to Shop" after 287ms hover (1.52s).
+- **Phase 2: Indecision Loop (1.52s–4.02s)**
+  - Hesitates for 1858ms (3.37s), then re-clicks "Back to Shop" (4.02s).
+  - Scrolls up rapidly (4.07s–4.18s), reversing initial exploration.
+- **Phase 3: Form Interaction (4.87s–7.34s)**
+  - Clicks "Card Number" input after 387ms hover (4.87s), hesitates for 964ms (5.84s), then re-clicks (7.34s).
+  - No data entry occurs.
+- **Phase 4: Cart Summary Focus (8.06s–11.35s)**
+  - Clicks "Cart Summary" after 339ms hover (8.06s), hesitates for 2390ms (10.45s), then re-clicks (11.14s).
+  - Ends with a dead click (11.35s), terminating the session.
+
+SUMMARY
+This session reflects a **highly distracted or confused user** with no clear intent to complete checkout. Key traits:
+- **Repetitive, non-progressive navigation** (4 redundant clicks on 2 elements).
+- **Extreme skimming** (1004px scrolled in <1s) with no content engagement.
+- **Prolonged hesitation** (52% of session time) without actionable outcomes.
+- **Form avoidance** despite repeated interactions with input fields.
+- **No feature discovery beyond core checkout elements**.
+The session arc suggests **abandonment due to indecision or technical friction**, with no evidence of traditional engagement (e.g., typing, submissions).
+```

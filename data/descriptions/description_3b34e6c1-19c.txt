@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic with no clear linear progression.
+- Repeated toggling between "Privacy" (3 visits), "Notifications" (4 visits), and "Profile" (1 visit) sections.
+- 67% of clicks (12/18) target the same 3 settings categories, suggesting indecision or confusion.
+- Navigation jumps between distant UI regions (e.g., from (1231,923) "Save Changes" to (224,1855) "DEAD CLICK" at 3.98s).
+- No sustained focus on any single section (>2.5s max per section).
+
+2. READING BEHAVIOR
+- Skimming confirmed: 18 scroll actions in 10.7s (1.68 scrolls/sec), covering 1,855px total vertical movement.
+- Scroll speed: 496px/sec average (e.g., 248px in 0.5s at 0.36s).
+- No pauses >300ms at any scroll depth, indicating no deep reading.
+- Max scroll depth (1040px) reached at 5.63s, but immediately abandoned (up-scroll at 6.19s).
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content creation observed.
+- All interactions are UI navigation (settings toggles) or frustrated clicks (rage/dead clicks).
+- 33% of clicks (6/18) are frustration markers: 5 rage clicks (3.0s–3.49s, 9.77s–9.99s) and 2 dead clicks (3.98s, 10.74s).
+- No successful form submissions detected (despite 2 "Save Changes" attempts).
+
+4. INTERACTION SPEED
+- Hyper-fast: 18 clicks in 10.7s (1.68 clicks/sec).
+- Median inter-click interval: 345ms (range: 50ms–858ms).
+- Hesitation markers: 2 instances (311ms at 0.31s, 858ms at 9.26s) preceding failed clicks.
+- Hover times: 34–129ms (median 65ms), indicating minimal deliberation.
+
+5. CONTENT PREFERENCES
+- Sole focus: Account settings (Privacy, Notifications, Profile).
+- No evidence of content consumption (e.g., no article views, subreddit visits, or media interactions).
+- Settings toggles suggest interest in:
+  - Privacy controls (3 visits)
+  - Notification preferences (4 visits)
+  - Profile management (1 visit)
+
+6. TYPING BEHAVIOR
+- No typing detected in the log (no input fields, corrections, or text entry).
+- All interactions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Settings navigation (Privacy/Notifications/Profile tabs)
+  - "Save Changes" button (2 attempts)
+  - Scrollbar (extensively)
+- Ignored features:
+  - No evidence of form fields, dropdowns, or advanced settings.
+  - No help/documentation links clicked.
+  - No search functionality used.
+
+8. SESSION FLOW
+- 0.0s–0.88s: Rapid exploration (3 scrolls, 1 click) to discover settings options.
+- 0.88s–3.49s: Frustration phase 1 (Privacy/Notifications toggles + 5 rage clicks on "Save Changes").
+- 3.98s–6.13s: Recovery attempt (re-navigates to Privacy, then Settings Nav).
+- 6.7s–10.74s: Frustration phase 2 (Notifications/Profile toggles + 3 rage clicks on Notifications).
+- Arc: Linear progression absent; session is a loop of failed interactions with no resolution.
+- Exit: Abrupt (no logout/navigation away; session ends during dead click at 10.74s).
+```
+
+**Key Observations:**
+- **Primary Issue:** UI likely unresponsive or broken. 100% of "Save Changes" clicks (4 total) and 60% of Notifications clicks (3/5) triggered rage/dead clicks.
+- **User State:** High frustration (7 frustration markers in 10.7s) with no task completion.
+- **Device Note:** "Synthetic/impulsive_clicker" suggests possible bot or automated testing, but behavior aligns with human frustration patterns.

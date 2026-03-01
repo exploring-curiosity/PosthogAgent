@@ -1,0 +1,54 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - **Scattered with repetitive clicks**: The user exhibits non-linear, erratic navigation with frequent returns to the same elements (e.g., "Features" clicked twice at [3.11s] and [5.02s], "Footer" clicked twice at [5.51s] and [8.44s]).
+   - **No clear progression**: Actions jump between unrelated sections (e.g., from "Features" to "Footer" to "Navigation") without thematic continuity.
+   - **High redundancy**: 4/12 actions (33%) are repeated clicks on identical elements (e.g., two "Features" clicks, two "Footer" clicks, two "Navigation" clicks).
+
+2. READING BEHAVIOR:
+   - **Skim-only**: Scroll depth reaches 1016px (max) but occurs in rapid bursts:
+     - [2.7s–3.21s]: 519px in 0.51s (9.8px/ms).
+     - [5.07s–5.61s]: 500px in 0.54s (9.3px/ms).
+     - No pauses >1s at any scroll depth; no evidence of deep reading.
+   - **No content absorption**: Scrolls are immediately followed by clicks (e.g., [3.11s] click after scrolling to 519px), suggesting no engagement with content.
+
+3. ENGAGEMENT STYLE:
+   - **No traditional engagement**: No votes, comments, or submissions detected. All interactions are navigational clicks.
+   - **Hesitation-heavy**: 3/12 actions (25%) are labeled "[HESITATION]" with delays of 2657ms, 1327ms, and 1903ms, but no subsequent input (e.g., typing) occurs.
+   - **Hover data**: Brief hovers (175–273ms) precede 3/12 clicks (25%), but no sustained interaction.
+
+4. INTERACTION SPEED:
+   - **Bimodal timing**:
+     - **Fast bursts**: 7/12 actions (58%) occur within 0.5s of the prior action (e.g., scrolls at [2.7s–3.21s], [5.07s–5.61s]).
+     - **Long pauses**: 3/12 actions (25%) follow delays >1.3s (hesitations), with the longest gap at 2.66s (initial click).
+   - **Average action interval**: 0.86s (excluding hesitations), 1.9s (including hesitations).
+
+5. CONTENT PREFERENCES:
+   - **No discernible preferences**: Clicks target generic UI elements ("Features," "Footer," "Navigation") with no thematic or content-specific focus.
+   - **No subreddit/forum engagement**: No evidence of interaction with user-generated content or topic-based sections.
+
+6. TYPING BEHAVIOR:
+   - **No typing detected**: Zero text inputs, corrections, or form submissions in the 9.5s session.
+
+7. FEATURE DISCOVERY:
+   - **Discovered features**:
+     - "Features" section (clicked twice).
+     - Footer (clicked twice).
+     - Navigation bar (clicked twice).
+   - **Ignored features**:
+     - No interaction with search bars, login/signup prompts, or dynamic content (e.g., carousels, modals).
+     - No evidence of exploring secondary pages or dropdown menus.
+
+8. SESSION FLOW:
+   - **Arc**: **Mechanical scan → Repetitive clicks → Abrupt exit**
+     - [0.0s–2.66s]: Initial hesitation (2.66s delay before first click).
+     - [2.66s–5.51s]: Rapid scrolling (519px in 0.51s) + "Features" clicks.
+     - [5.51s–8.44s]: Footer interaction + upward scroll (506px in 0.5s).
+     - [8.44s–9.51s]: Navigation bar clicks + immediate exit.
+   - **Exit**: No gradual disengagement; final action is a navigation click at [9.51s] with no subsequent activity.
+```
+
+**NOTES**:
+- **Synthetic behavior flags**: Repetitive clicks, no typing, and rapid scrolls suggest a bot/scanner (aligned with "synthetic/scanner" device label).
+- **No human-like patterns**: Absence of pauses for reading, no content engagement, and no input errors.

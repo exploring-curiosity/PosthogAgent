@@ -1,0 +1,60 @@
+```
+BEHAVIORAL PROFILE: WEB SETTINGS SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated clicks on the same elements (e.g., "Profile" clicked twice at [0.5s] and [2.41s], "Notifications" at [3.62s] and [3.88s]). However, their movement is constrained by the settings menu structure, creating a false appearance of linearity (e.g., sequential clicks on "Profile" → "Notifications" → "Privacy").
+- **High redundancy**: 42% of clicks (6/14) are duplicates or near-duplicates of prior actions (e.g., "Save Changes" clicked twice at [2.81s] and [3.13s]).
+- **No backtracking**: Despite rage clicks, the user does not return to prior pages or use browser navigation (e.g., no back button usage).
+
+2. READING BEHAVIOR
+- **Skimmer with forced depth**: Scroll patterns suggest rapid skimming:
+  - **Scroll velocity**: Average 180px/s (e.g., 95px to 390px in 0.5s at [2.44s]).
+  - **Max depth**: Reaches 978px but only lingers at specific sections (e.g., pauses at 978px for "Save Changes" at [2.81s]).
+  - **No sustained reading**: No scroll pauses >0.5s; all scrolls are continuous sweeps.
+- **Targeted stops**: Scrolls halt only at interactive elements (e.g., stops at 978px for "Save Changes," 486px for "Notifications").
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session is confined to settings navigation; no voting, commenting, or content consumption is observed.
+- **Interaction metrics**:
+  - **Click latency**: Average 1.2s between primary actions (e.g., 1.61s between "Profile" and "Notifications" clicks).
+  - **Hesitation markers**: 3 instances of "[HESITATION]" (158ms, 1610ms, 2128ms), indicating decision paralysis or distraction.
+  - **Rage clicks**: 4 consecutive clicks on "Privacy" section at [4.76s–5.12s], suggesting frustration or UI unresponsiveness.
+
+4. INTERACTION SPEED
+- **Bimodal speed**:
+  - **Fast actions**: 64% of clicks occur <0.5s after prior action (e.g., scroll-to-click at [2.44s–2.81s]).
+  - **Slow hesitations**: 3 long pauses (>1.5s) at [2.11s], [7.86s], and initial load.
+- **Hover times**: Short (61–174ms), indicating rapid mouse movement but delayed execution.
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: Exclusively interacts with settings subsections:
+  - "Profile" (2 clicks)
+  - "Notifications" (2 clicks)
+  - "Privacy" (2 clicks + 4 rage clicks)
+  - "Save Changes" (2 clicks)
+- **No content consumption**: No evidence of browsing posts, subreddits, or other non-settings content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No input fields, text areas, or form submissions are engaged. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Settings sub-navigation (Profile, Notifications, Privacy).
+  - "Save Changes" button (used twice).
+- **Ignored features**:
+  - No interaction with account settings, security, or advanced options.
+  - No search, help, or support features used.
+  - No profile customization beyond initial clicks.
+
+8. SESSION FLOW
+- **Arc**: **Frustrated task completion → Abandonment**
+  - **0.0–2.44s (Exploration)**: Rapid initial scrolls and clicks on "Profile," suggesting goal-oriented behavior.
+  - **2.44–5.16s (Attempted Action)**: Scrolls to "Save Changes," clicks twice, then moves to "Notifications" and "Privacy." Rage clicks at [4.76s] indicate failure to achieve a goal (e.g., form not saving, UI lag).
+  - **5.16–8.1s (Disengagement)**: Final scrolls and hesitations ([7.86s]), followed by a click on "Settings Nav" at [8.06s]—likely an exit attempt. Session ends abruptly at 8.1s.
+- **Exit trigger**: Rage clicks and prolonged hesitation ([2128ms] at [7.86s]) suggest frustration or technical issues.
+```
+
+**Key Observations**:
+- **Power user traits**: High scroll velocity, rapid clicks, and familiarity with settings layout (e.g., precise clicks at (1676, 95)).
+- **Frustration signals**: Rage clicks, duplicate clicks, and long hesitations.
+- **No content engagement**: Entire session is settings navigation with no evidence of primary app usage (e.g., no posts, comments, or feeds).

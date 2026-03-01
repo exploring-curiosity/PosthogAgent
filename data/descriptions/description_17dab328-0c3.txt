@@ -1,0 +1,91 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly linear and methodical, with clear progression down the page.
+- No backtracking or lateral exploration; moves sequentially from top to bottom.
+- Primary interaction points: Navigation (0.48s–2.16s), Hero Title (3.24s–3.99s), Get Started button (4.9s–7.38s), Features section (8.5s–11.95s), Testimonials (12.68s–15.63s), Footer (16.25s–17.37s).
+- No evidence of exploratory clicks (e.g., no sidebar, dropdown, or secondary menu interactions).
+
+2. READING BEHAVIOR:
+- Skimming with minimal deep reading. Scroll patterns show:
+  - Rapid, incremental scrolls (7–50px per 0.5s interval) with no pauses >1s between scrolls.
+  - Max scroll depth: 985px (footer), but no sustained dwell time on any section.
+  - Scroll speed: ~140px/s (e.g., 214px→299px in 1.13s at 4.06s–4.33s).
+  - No evidence of re-reading (no upward scrolls or revisits to prior sections).
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or interactive engagement (e.g., forms, inputs) observed.
+- Interaction limited to clicks on static elements (navigation, headings, buttons, sections).
+- Click pattern: Hover → hesitation → click (e.g., "Get Started" at 4.9s: 438ms hover + 1.7s hesitation before final click at 7.38s).
+- No multi-click interactions (e.g., no double-clicks, drags, or text selection).
+
+4. INTERACTION SPEED:
+- Deliberate but inconsistent pacing:
+  - Fast initial clicks: 0.48s–2.16s (4 clicks in 1.68s).
+  - Slow mid-session: 6.62s–11.01s (hesitations of 1.7s–2.5s before clicks).
+  - Average time between actions: 1.1s (excluding hesitations).
+  - Hesitation clusters:
+    - 483ms at 0.48s (first click).
+    - 1716ms at 6.62s ("Get Started" hesitation).
+    - 2511ms at 11.01s ("Features" hesitation).
+    - 2253ms at 14.94s ("Testimonials" hesitation).
+
+5. CONTENT PREFERENCES:
+- Gravitated toward high-level structural elements:
+  - Navigation (2 clicks at 1.15s–2.16s).
+  - Hero Title (2 clicks at 3.24s–3.99s).
+  - Primary CTA ("Get Started" button, 2 clicks at 4.9s–7.38s).
+  - Features section (2 clicks at 8.5s–11.95s).
+  - Testimonials (2 clicks at 12.68s–15.63s).
+  - Footer (2 clicks at 16.25s–17.37s).
+- No engagement with:
+  - Secondary CTAs (e.g., "Learn More" links, if present).
+  - Images, videos, or embedded content.
+  - Forms or input fields.
+
+6. TYPING BEHAVIOR:
+- No typing, text input, or form submissions detected.
+- No evidence of corrections, deletions, or input length.
+
+7. FEATURE DISCOVERY:
+- Discovered and interacted with:
+  - Top navigation (2 clicks).
+  - Hero section (title + CTA button, 4 clicks total).
+  - Features section (2 clicks).
+  - Testimonials section (2 clicks).
+  - Footer (2 clicks).
+- Ignored:
+  - Search functionality (no clicks on search bars).
+  - Dropdown menus (no expansions).
+  - Social media links/icons.
+  - Any dynamic content (e.g., carousels, accordions).
+
+8. SESSION FLOW:
+- **Phase 1: Initial Exploration (0.0s–4.9s)**
+  - Loads page, hesitates (483ms), clicks navigation twice (likely testing responsiveness).
+  - Scrolls incrementally (0px→299px) while clicking Hero Title twice (possible accidental double-click).
+  - Duration: 4.9s.
+
+- **Phase 2: Primary CTA Interaction (4.9s–7.38s)**
+  - Hovers over "Get Started" (438ms), hesitates (1.7s), then clicks twice (likely intentional).
+  - Scrolls further (299px→545px) without pausing.
+  - Duration: 2.48s.
+
+- **Phase 3: Mid-Page Engagement (7.38s–12.68s)**
+  - Clicks "Features" section after 669ms hover + 2.5s hesitation.
+  - Scrolls rapidly (545px→852px) with no dwell time.
+  - Duration: 5.3s.
+
+- **Phase 4: Late-Page Interaction (12.68s–17.37s)**
+  - Clicks "Testimonials" after 372ms hover + 2.3s hesitation.
+  - Scrolls to footer (852px→985px), clicks footer twice.
+  - Session ends abruptly (no exit action recorded).
+  - Duration: 4.69s.
+
+- **Overall Arc**:
+  - Linear descent from top to bottom with no deviation.
+  - Repeated pattern: Hover → hesitation → click → scroll → repeat.
+  - No deep engagement; likely a synthetic/methodical scan (e.g., automated test, accessibility audit, or heuristic evaluation).
+  - Exit: No clear termination action (session ends at 17.37s with footer click).
+```

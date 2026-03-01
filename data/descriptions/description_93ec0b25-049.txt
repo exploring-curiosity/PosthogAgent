@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with hesitation loops**: The user exhibits a non-linear, backtracking pattern with repeated attempts to engage with the same elements. Navigation is not exploratory (no new pages visited) but rather oscillates between checkout form fields and cart summary.
+- **Key evidence**:
+  - Attempts to leave checkout twice (5.46s and 8.25s) via "Back to Shop" clicks.
+  - Repeatedly returns to the same form fields (Card Number: 10.29s/15.82s; Email: 30.23s/33.36s).
+  - Scrolls up/down frequently (12 scroll actions in 33.4s), suggesting uncertainty about layout or content.
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow engagement**: Scroll patterns indicate rapid scanning rather than deep reading.
+- **Key evidence**:
+  - Initial scroll (3.67s–3.75s): Covers 1015px in 0.8s (1269px/s), suggesting a quick overview.
+  - Later scrolls (e.g., 21.12s–21.27s) cover 341px in 0.15s (2273px/s), likely skipping content.
+  - No pauses >1s on any scroll segment; max depth (1015px) suggests no full-page reading.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting**: This is a checkout session; no social engagement (votes/comments) is applicable.
+- **Primary engagement**: Form field interactions (4 clicks on inputs) and cart summary checks (2 clicks).
+- **Hesitation markers**: 6 instances of "[HESITATION Xms]" (avg 2298ms), indicating decision paralysis.
+
+4. INTERACTION SPEED
+- **Deliberate with delays**: Actions are slow and punctuated by long hesitations.
+- **Key metrics**:
+  - Avg time between actions: 1.3s (excluding hesitations).
+  - Avg hesitation duration: 2.3s (range: 1.3s–2.9s).
+  - Longest pause: 2.9s before final "Pay Now" click (25.82s–28.32s).
+  - Hover times: Avg 1.6s (1434ms–1806ms) before clicks.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: All interactions are confined to:
+  - Payment form fields (Card Number, Email).
+  - Cart Summary section.
+  - "Back to Shop" and "Pay Now" buttons.
+- **No evidence** of interest in other content (e.g., product details, FAQs).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: All clicks on inputs (e.g., "Card Number," "Email") did not trigger visible typing events in the log.
+- **Possible explanations**:
+  - User clicked but did not type (abandoned input).
+  - Typing occurred but was not recorded (technical limitation).
+  - Inputs were pre-filled or auto-focused.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (12 actions).
+  - Form field selection (4 clicks).
+  - Cart Summary expansion (2 clicks).
+  - Primary CTA ("Pay Now," 2 clicks).
+  - Exit intent ("Back to Shop," 2 clicks).
+- **Ignored features**:
+  - No interaction with secondary CTAs (e.g., "Apply Coupon," "Shipping Options").
+  - No dropdown selections (e.g., country, card type).
+  - No help/support links clicked.
+
+8. SESSION FLOW
+- **Arc**: Hesitant exploration → Aborted exit → Form engagement → Cart verification → Final hesitation.
+- **Phases**:
+  1. **Initial Scan (0s–5.46s)**:
+     - Loads checkout page, scrolls full length (1015px) in 0.8s.
+     - Attempts to exit via "Back to Shop" (5.46s).
+  2. **Re-engagement (6.77s–15.82s)**:
+     - Returns to page, scrolls up, clicks "Card Number" input (10.29s).
+     - Hesitates (2.7s), re-clicks input (15.82s).
+  3. **Cart Verification (18.0s–22.94s)**:
+     - Expands "Cart Summary" (18.0s), scrolls through items (21.12s–21.27s).
+     - Hovers over "Pay Now" (22.94s).
+  4. **Final Hesitation (25.82s–33.36s)**:
+     - Long pause (2.9s), clicks "Pay Now" (28.32s), then scrolls up.
+     - Clicks "Email" input (30.23s), hesitates (1.8s), re-clicks (33.36s).
+- **Exit**: Session ends without completion (no "Pay Now" submission).
+```
+
+**Summary**: This user demonstrates **high friction** in the checkout process, characterized by repeated hesitations, backtracking, and shallow engagement with form fields. Their behavior suggests **decision paralysis** (evidenced by 6 hesitation events) and **lack of confidence** (e.g., verifying cart contents before payment). The session ends in **abandonment** without completing the primary goal.

@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no clear linear progression.
+- Repeated cycles of rapid scrolling (both up/down) followed by clustered clicks on the same UI elements.
+- 6 distinct "navigation zones" targeted: "Get Started" buttons (4x), "Features" sections (5x), "Navigation" (5x), "Footer" (2x), with no sustained focus on any single area.
+- 37% of clicks (10/27) occurred on non-interactive or dead zones (e.g., "[HESITATION]", "[DEAD CLICK]", "[RAGE CLICK]").
+- No evidence of sequential content consumption (e.g., reading articles, filling forms).
+
+2. READING BEHAVIOR
+- Extreme skimming with no deep reading:
+  - Scroll speed: 60-120px/0.5s (consistent across all scrolls).
+  - Max scroll depth: 1033px (full page height likely ~1200px), but never paused >0.5s at any depth.
+  - 8 scroll direction changes (up/down) in 19s, suggesting visual scanning rather than content absorption.
+  - No mouse hovers >200ms on text blocks (only on clickable elements).
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (voting/commenting) observed.
+- Interaction limited to:
+  - 16 clicks on interactive elements (buttons/nav/sections).
+  - 11 clicks on non-interactive areas (classified as hesitation/rage/dead clicks).
+- Click patterns:
+  - 38% of interactive clicks (6/16) were preceded by hover (114ms avg hover time).
+  - 62% (10/16) were immediate clicks with no hover.
+  - 5 "rage clicks" (rapid sequential clicks on "Features" section) between 2.37s-2.7s, indicating frustration.
+
+4. INTERACTION SPEED
+- Hyper-fast with no deliberation:
+  - Avg time between actions: 0.7s (19s/27 actions).
+  - Fastest sequence: 5 rage clicks in 0.36s (2.37s-2.73s).
+  - Longest pauses: 3 hesitation events (2.06s, 2.74s, 1.69s) at 6.34s, 10.94s, and 13.45s.
+  - 70% of actions (19/27) occurred in <0.5s intervals.
+
+5. CONTENT PREFERENCES
+- No content consumption detected. All interactions targeted UI elements:
+  - "Get Started" buttons: 4 clicks (24% of interactive clicks).
+  - "Features" sections: 5 clicks (31%).
+  - "Navigation" menu: 5 clicks (31%).
+  - "Footer": 2 clicks (12%).
+- No evidence of interest in specific content types (e.g., articles, products).
+
+6. TYPING BEHAVIOR
+- No typing or input fields engaged during session.
+- No form submissions, search queries, or text entry observed.
+
+7. FEATURE DISCOVERY
+- Discovered features (by click):
+  - Primary CTA ("Get Started"): Used 4x.
+  - Navigation menu: Used 5x (top-right and top-left positions).
+  - Features section: Used 5x (mid-page and bottom).
+  - Footer: Used 2x (bottom-left).
+- Ignored features:
+  - No interaction with sidebars, search bars, or content cards.
+  - No evidence of tooltips, dropdowns, or modals being triggered.
+
+8. SESSION FLOW
+- Arc: Frustrated exploration → Erratic UI testing → Abandonment.
+  - 0.0s-0.81s: Initial scan (scroll down to 296px, click "Get Started" twice).
+  - 0.81s-2.73s: First frustration spike (rage clicks on "Features", rapid scroll up).
+  - 2.73s-6.66s: Navigation testing (clicks on nav menu, scroll down to 565px).
+  - 6.66s-11.3s: Second hesitation (2.74s pause), then footer exploration.
+  - 11.3s-17.22s: Final attempt (click "Get Started" after 2.72s hesitation).
+  - 17.22s-19.0s: Session collapse (rapid nav clicks, no conversion).
+- Exit: No clear exit action (session ends mid-scroll at 19.0s).
+- Key metrics:
+  - 3 hesitation events (>2s pauses) totaling 6.49s (34% of session).
+  - 11 non-interactive clicks (41% of all clicks).
+  - 0 successful conversions or meaningful interactions.
+```
+
+**Summary**: This session represents a synthetic/automated user or an extreme case of UI frustration, characterized by hyper-fast, erratic interactions with no content engagement. The behavior suggests either:
+- A bot testing UI responsiveness, or
+- A human user experiencing severe usability issues (e.g., broken links, unclear CTAs).

@@ -1,0 +1,193 @@
+{
+  "user_profile": {
+    "session_id": "ba2c3a5a-7a3",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/scanner",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 7.3,
+  "total_raw_events": 31,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/settings",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 0.75,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 752ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 0.79,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 318,
+      "max_depth": 318,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.84,
+      "action": "SCROLL",
+      "scroll_from": 318,
+      "scroll_to": 636,
+      "max_depth": 636,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.9,
+      "action": "SCROLL",
+      "scroll_from": 636,
+      "scroll_to": 954,
+      "max_depth": 954,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 1.23,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Save Changes [HOVER 230ms]",
+      "target_href": "",
+      "target_class": "button.save",
+      "coordinates": [
+        1213,
+        954
+      ]
+    },
+    {
+      "time": 2.08,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Save Changes",
+      "target_href": "",
+      "target_class": "button.save",
+      "coordinates": [
+        1214,
+        959
+      ]
+    },
+    {
+      "time": 2.56,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Settings Nav [HOVER 158ms]",
+      "target_href": "",
+      "target_class": "nav.settings-nav",
+      "coordinates": [
+        219,
+        907
+      ]
+    },
+    {
+      "time": 3.18,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Settings Nav",
+      "target_href": "",
+      "target_class": "nav.settings-nav",
+      "coordinates": [
+        219,
+        907
+      ]
+    },
+    {
+      "time": 3.26,
+      "action": "SCROLL",
+      "scroll_from": 954,
+      "scroll_to": 789,
+      "max_depth": 954,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 3.3,
+      "action": "SCROLL",
+      "scroll_from": 789,
+      "scroll_to": 624,
+      "max_depth": 789,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 3.35,
+      "action": "SCROLL",
+      "scroll_from": 624,
+      "scroll_to": 459,
+      "max_depth": 624,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 3.39,
+      "action": "SCROLL",
+      "scroll_from": 459,
+      "scroll_to": 293,
+      "max_depth": 459,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 3.45,
+      "action": "SCROLL",
+      "scroll_from": 293,
+      "scroll_to": 128,
+      "max_depth": 293,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 3.77,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Profile [HOVER 248ms]",
+      "target_href": "",
+      "target_class": "div.profile-section",
+      "coordinates": [
+        584,
+        128
+      ]
+    },
+    {
+      "time": 5.96,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2190ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 7.3,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Profile",
+      "target_href": "",
+      "target_class": "div.profile-section",
+      "coordinates": [
+        586,
+        126
+      ]
+    }
+  ]
+}

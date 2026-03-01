@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with repeated clicks on the same elements (e.g., "Export" button clicked twice at [2.21s] and [4.04s]; "Stats Cards" clicked twice at [4.8s] and [6.27s]; "Data Table" clicked twice at [7.08s] and [7.65s]).
+- **Dead clicks**: One confirmed dead click at [6.48s] (no functional outcome).
+- **No clear progression**: Actions jump between unrelated elements (e.g., "Export" → "Stats Cards" → "Data Table") without intermediate steps or logical flow.
+- **Synthetic indicators**: The presence of "[HESITATION]" tags (1439ms at [1.44s], 565ms at [2.78s]) and "[HOVER]" durations (380ms, 367ms, 155ms) suggests scripted or automated behavior rather than organic navigation.
+
+2. READING BEHAVIOR:
+- **Skim-only**: Scroll depth increases rapidly in bursts (e.g., [4.11s–4.15s]: 78px → 251px in 0.4s; [6.55s–6.76s]: 251px → 910px in 0.21s), with no pauses or sustained viewing at any depth.
+- **No deep reading**: Max scroll depth (910px) is reached in 7.7s, with no evidence of content absorption (e.g., no clicks on specific table rows or card details).
+- **Scroll speed**: Consistent 0.5s intervals for 130–150px increments (e.g., [6.55s–6.76s]), indicating mechanical scrolling without engagement.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The session lacks votes, comments, or other participatory actions. All interactions are clicks on UI elements (buttons, divs, tables).
+- **Repetitive clicks**: 6/12 actions are duplicate clicks on the same element (e.g., "Export" x2, "Stats Cards" x2, "Data Table" x2), suggesting either testing or error recovery.
+- **Hover-to-click ratio**: 3/12 actions include hover durations (380ms, 367ms, 155ms), but these precede clicks rather than indicating deliberation.
+
+4. INTERACTION SPEED:
+- **High-speed with anomalies**: Average time between actions: **0.7s** (excluding scrolls). However:
+  - Fastest interval: 0.03s ([6.48s] dead click → [6.55s] scroll).
+  - Longest interval: 1.76s ([2.78s] hesitation → [4.04s] "Export" click).
+- **Hesitations**: Two prolonged pauses ([1.44s]: 1439ms; [2.78s]: 565ms) disrupt otherwise rapid interactions.
+- **Scroll bursts**: 0.5s per 130–150px scroll, consistent with automated behavior.
+
+5. CONTENT PREFERENCES:
+- **UI elements over content**: All clicks target functional components, not substantive content:
+  - **Export functionality** (2 clicks at [2.21s], [4.04s]).
+  - **Stats Cards** (2 clicks at [4.8s], [6.27s]).
+  - **Data Table** (2 clicks at [7.08s], [7.65s]).
+- **No content engagement**: No clicks on specific data points, links, or textual content. The user ignores:
+  - Dashboard metrics (no clicks on individual cards).
+  - Table rows/columns (no selection or filtering).
+  - Navigation menus (no clicks on sidebar or header elements).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no text input, corrections, or form submissions. All interactions are clicks or scrolls.
+
+7. FEATURE DISCOVERY:
+- **Discovered features**:
+  - **Export** (used twice, though likely unsuccessfully given the dead click at [6.48s]).
+  - **Stats Cards** (clicked twice, possibly to expand/collapse).
+  - **Data Table** (clicked twice, possibly to sort/filter).
+- **Ignored features**:
+  - **Navigation**: No clicks on menus, breadcrumbs, or search bars.
+  - **Filters/Sorting**: No interaction with table headers or dropdowns.
+  - **Help/Documentation**: No clicks on tooltips, guides, or support links.
+  - **User Settings**: No profile or account interactions.
+
+8. SESSION FLOW:
+- **Phase 1 (0.0s–2.21s): Initialization**
+  - Page load → hesitation (1439ms) → minimal scroll (78px) → first "Export" click.
+  - **Goal**: Likely testing the "Export" button (hover: 380ms).
+- **Phase 2 (2.21s–4.8s): Repetition and Scroll**
+  - Second "Export" click after hesitation (565ms) → rapid scroll to 251px.
+  - **Goal**: Unclear; may reflect failed export attempt or scripted retry.
+- **Phase 3 (4.8s–7.65s): Erratic Exploration**
+  - Clicks on "Stats Cards" (x2) → dead click → rapid scroll to 910px → "Data Table" clicks (x2).
+  - **Goal**: No clear objective; actions suggest probing UI elements without follow-through.
+- **Termination (7.7s)**: Session ends abruptly after "Data Table" click, with no confirmation of success or error.
+- **Arc**: **Mechanical probing → failed execution → abandonment**.
+  - No progression from exploration to engagement or exit. The session lacks organic intent or completion.
+```
+
+**SUMMARY**:
+This session exhibits **automated or synthetic behavior**, characterized by:
+- Repetitive, high-speed clicks on UI elements.
+- Mechanical scrolling with no content absorption.
+- No typing, voting, or commenting.
+- Dead clicks and hesitations inconsistent with human patterns.
+- **Likely a bot, scanner, or automated test** rather than a human user.

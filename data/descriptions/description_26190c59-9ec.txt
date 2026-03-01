@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered/Frustrated Looping**: The user exhibits a highly non-linear, repetitive navigation pattern centered on the "Settings Nav" element. They repeatedly return to the same navigation points (e.g., "Settings Nav" clicked 8 times, "Privacy" clicked twice) with no clear progression toward a goal.
+- **No Exploratory Depth**: No evidence of visiting new pages or sub-sections beyond the initial `/settings` page. All actions occur within a single URL.
+- **Spatial Inconsistency**: Clicks on "Settings Nav" occur at varying Y-coordinates (531px → 740px → 278px), suggesting either a moving target or erratic cursor behavior.
+
+2. READING BEHAVIOR:
+- **Skimmer with No Retention**: Scroll patterns show rapid, shallow engagement:
+  - Initial scroll: 0px → 969px in 0.63s (avg. 1,524px/s), covering ~90% of the viewport height in under a second.
+  - Later scrolls: Short bursts (e.g., 531px → 740px in 1.04s; 740px → 278px in 0.63s) with no pauses to suggest reading.
+- **No Deep Dives**: No sustained scroll pauses or re-reading (e.g., scrolling back up to review content). Max depth (969px) is reached quickly but abandoned.
+
+3. ENGAGEMENT STYLE:
+- **No Traditional Engagement**: No evidence of voting, commenting, or content creation. The session is entirely focused on navigation/interaction with UI elements.
+- **Impulsive Clicks**: High frequency of clicks (18 clicks in 7.4s; avg. 2.4 clicks/s) with:
+  - **Rage Clicks**: 5 consecutive clicks on "Settings Nav" (2.55s–3.0s) with <100ms between clicks, indicating frustration.
+  - **Hesitation**: Two instances of delayed clicks (236ms and 2,953ms hesitation) at (0,0), suggesting uncertainty or distraction.
+- **No Ratio Applicable**: No voting/commenting occurred.
+
+4. INTERACTION SPEED:
+- **Extremely Fast with Anomalies**:
+  - **Median Time Between Actions**: 0.27s (excluding the 2.95s hesitation).
+  - **Peak Speed**: 5 rage clicks in 0.45s (2.55s–3.0s; 111ms/click).
+  - **Outliers**:
+    - 2.95s hesitation at 6.41s (likely distraction or confusion).
+    - 72ms–119ms hover times before clicks (suggests rapid but intentional targeting).
+- **Double-Clicks**: 3 instances of near-identical clicks on the same element within 0.3s (e.g., "Save Changes" at 0.64s/1.07s; "Settings Nav" at 1.45s/1.75s).
+
+5. CONTENT PREFERENCES:
+- **No Content Engagement**: The user interacted exclusively with UI elements ("Settings Nav," "Save Changes," "Privacy"). No evidence of viewing or interacting with substantive content (e.g., articles, posts, or settings options beyond navigation labels).
+- **Gravitated Toward**:
+  - **Navigation Labels**: "Settings Nav" (primary focus) and "Privacy" (secondary).
+  - **Action Buttons**: "Save Changes" (clicked twice, likely accidentally given the 0.43s gap between clicks).
+
+6. TYPING BEHAVIOR:
+- **No Typing Detected**: No text inputs, corrections, or form submissions observed in the log. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY:
+- **Used Features**:
+  - **Navigation Menu**: Repeatedly clicked "Settings Nav" (8x) and "Privacy" (2x).
+  - **Save Functionality**: Clicked "Save Changes" twice (0.64s and 1.07s), possibly unintentionally.
+  - **Scrolling**: Used extensively (10 scroll actions) to traverse the page.
+- **Ignored Features**:
+  - **No Form Inputs**: No interaction with text fields, toggles, or dropdowns.
+  - **No Help/FAQ**: No clicks on help icons or tooltips.
+  - **No Secondary Navigation**: No clicks on sub-menus or breadcrumbs.
+
+8. SESSION FLOW:
+- **Arc**: **Frustration Loop → Abandonment**
+  - **0.0s–0.64s (Exploration)**: Page load → rapid scrolling (0px→969px) → click "Save Changes" (likely accidental).
+  - **0.64s–3.0s (Frustration Escalation)**:
+    - Double-click "Save Changes" (1.07s).
+    - Scroll up (1.12s–1.19s) and click "Settings Nav" twice (1.45s/1.75s).
+    - Scroll down (1.78s–1.99s) and rage-click "Settings Nav" 5x (2.55s–3.0s).
+  - **3.0s–6.41s (Distraction/Confusion)**:
+    - Click "Privacy" (3.46s) but no follow-up.
+    - 2.95s hesitation (6.41s) at (0,0) (cursor idle or off-screen).
+  - **6.41s–7.42s (Abandonment)**:
+    - Click "Privacy" again (6.73s), scroll up (6.78s–6.85s), and click "Settings Nav" twice (7.08s/7.42s) before session ends.
+- **Exit**: Session terminates abruptly after 7.42s with no confirmation of task completion.
+
+KEY OBSERVATIONS:
+- **Primary Issue**: The user appears trapped in a navigation loop, unable to locate or activate the desired setting (likely "Privacy"). Rage clicks and repeated "Settings Nav" interactions suggest a broken or unclear UI flow.
+- **No Content Interaction**: The session is purely navigational; no substantive engagement with settings or content.
+- **Device Note**: Labeled as "synthetic/impulsive_clicker," which may indicate automated testing or a user with atypical input patterns (e.g., assistive technology or scripted behavior).
+```

@@ -1,0 +1,80 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and non-linear with frequent page reloads (5 total reloads at 60.73s, 82.8s, 383.11s, 402.5s, 515.29s)
+- Repeated cycles of: click → hesitation → scroll → reload (e.g., 13.19s–60.73s loop)
+- No clear progression through content; returns to same page ("/r/manhattan") after each reload
+- 63% of clicks (17/27) occur in top half of viewport (Y < 300px), suggesting focus on header/navigation elements
+- 37% of clicks (10/27) target mid-to-lower page (Y > 300px), indicating sporadic deep dives
+
+2. READING BEHAVIOR
+- Skimming dominant with shallow scroll depths:
+  - 72% of scroll sessions (13/18) never exceed 205px (≈30% of 679px viewport)
+  - Deepest scroll: 536px (79% of viewport) at 428.01s, but immediately followed by full scroll-up
+  - Average scroll depth: 147px (22% of viewport)
+  - 89% of scrolls (16/18) show "micro-adjustments" (1–50px movements) before abandoning
+- Reading time proxies:
+  - 5 instances of 3+ second pauses at fixed scroll positions (e.g., 14.7s–14.9s at 205px)
+  - No sustained reading: longest dwell at fixed position = 4.2s (427.1s–427.31s)
+
+3. ENGAGEMENT STYLE
+- Vote-focused with no visible comments:
+  - 27 total clicks, 0 text inputs detected
+  - 100% of non-reload clicks target voting/selection elements (no evidence of comment submission)
+  - Vote-to-comment ratio: ∞:0 (no comments attempted)
+- Engagement speed:
+  - First vote at 17.24s (after 3 hesitations)
+  - 6 votes in first 60s (burst), then 1 vote every 37s on average
+  - 46% of votes (12/26) preceded by hesitations >4s (max: 317.96s at 83.04s)
+
+4. INTERACTION SPEED
+- Deliberate with extreme hesitation spikes:
+  - Median action interval: 4.2s (excluding hesitations)
+  - 7 hesitations >4s (total 382.3s of hesitation, 67% of session)
+  - Fastest sequence: 403.96s–413.08s (4 clicks in 9.12s, 2.28s/click)
+  - Slowest sequence: 83.04s–383.11s (300s hesitation + reload)
+- Click accuracy:
+  - 37% of clicks (10/27) at (0,0) coordinates (likely UI misfires or hesitation markers)
+  - 19% of clicks (5/27) target X>1100px (right-side elements)
+
+5. CONTENT PREFERENCES
+- Exclusive focus on "/r/manhattan" subreddit (no cross-subreddit navigation)
+- Content type indeterminate (no text/URLs captured in clicks)
+- Spatial patterns suggest:
+  - 41% of clicks (11/27) target left-center (X:100–300px, Y:200–400px) – likely post listings
+  - 26% of clicks (7/27) target right sidebar (X>1100px) – possibly filters/sort options
+
+6. TYPING BEHAVIOR
+- No typing detected in 570.8s session
+- 0 text inputs, corrections, or form submissions
+- All hesitations labeled as "[HESITATION Xms]" with no accompanying keystrokes
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Voting (26 clicks on voting elements)
+  - Scrolling (18 scroll sessions)
+  - Page reload (5 manual reloads)
+  - Potential filter/sort (7 right-sidebar clicks)
+- Ignored features:
+  - Commenting (0 attempts)
+  - Search (0 clicks on search bar)
+  - User profiles (0 clicks on usernames)
+  - Expandable content (0 clicks on "read more" or media previews)
+
+8. SESSION FLOW
+- Phase 1 (0–60.73s): Frantic exploration
+  - 12 clicks, 3 reloads, 1 scroll session
+  - 67% of hesitations occur here (5/7)
+  - Ends with page reload (60.73s)
+- Phase 2 (60.73–383.11s): Stalled engagement
+  - 1 click in 322s (83.04s)
+  - 317.96s hesitation (53% of phase)
+  - 2 reloads (82.8s, 383.11s)
+- Phase 3 (383.11–570.8s): Targeted interaction
+  - 14 clicks in 187s (13.4s/click avg)
+  - 3 scroll sessions (avg depth: 247px)
+  - 2 hesitations (avg 26.6s)
+  - Ends with click at 570.48s (no exit action recorded)
+- Arc: Exploration (10%) → Stagnation (56%) → Focused voting (34%)
+```

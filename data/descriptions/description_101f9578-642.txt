@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Focused but erratic**: The user exhibits a non-linear, task-driven navigation pattern with clear intent but inefficient execution.
+  - Targets two specific settings panels ("Privacy" and "Profile") in sequence, suggesting a premeditated goal.
+  - Navigation is **scattered** due to:
+    - Repeated clicks on the same elements (e.g., "Privacy" at 2.9s and 6.25s; "Profile" at 7.55s and 10.77s).
+    - Dead clicks (6.77s) and hesitation markers (2.23s, 5.56s, 10.01s) indicate uncertainty or UI friction.
+  - **Quantitative**: 6/14 actions (43%) are redundant clicks on the same elements.
+
+2. READING BEHAVIOR
+- **Skim-heavy with minimal deep reading**:
+  - Scroll patterns show **rapid, incremental progression** (4 downward scrolls at 2.28s–2.44s, 4 upward at 6.85s–6.99s, 4 downward at 10.85s–11.05s).
+  - **Scroll speed**: ~192px/0.5s (384px/s), consistent with skimming (typical deep reading: <100px/s).
+  - **Max scroll depth**: 945px (viewport: 1080px), suggesting the user never reached the bottom of the page.
+  - **No pauses**: No scroll stalls >1s, indicating no sustained reading of any section.
+
+3. ENGAGEMENT STYLE
+- **Action-only, no content creation**:
+  - **No voting/commenting**: The session involves only navigation and form interaction (no upvotes, replies, or text input).
+  - **Primary engagement**: Clicks on settings toggles/buttons (e.g., "Save Changes" at 11.62s/12.76s).
+  - **Interaction latency**:
+    - Hover-to-click delays: 287ms ("Privacy"), 337ms ("Profile"), 394ms ("Save Changes").
+    - Hesitation markers: 2.23s (2232ms), 5.56s (2657ms), 10.01s (2458ms) — likely UI confusion or decision-making.
+  - **Vote-to-comment ratio**: N/A (no voting/commenting observed).
+
+4. INTERACTION SPEED
+- **Fast but error-prone**:
+  - **Average time between actions**: 1.07s (excluding hesitations/dead clicks).
+  - **Peak speed**: 0.04s between scrolls (6.85s–6.99s), suggesting rapid scanning.
+  - **Deliberate pauses**:
+    - 2.23s–2.9s (670ms): Initial hesitation before first "Privacy" click.
+    - 5.56s–6.25s (690ms): Hesitation before re-clicking "Privacy".
+    - 10.01s–10.77s (760ms): Hesitation before "Profile" click.
+  - **Dead click**: 6.77s (no action triggered), indicating misaligned expectations.
+
+5. CONTENT PREFERENCES
+- **Settings-focused, no content consumption**:
+  - **Gravitated toward**: Account settings sub-panels ("Privacy" and "Profile").
+  - **Ignored**: No interaction with content feeds, posts, or other users (e.g., no subreddit links, comments, or media).
+  - **No preferences inferred**: Session limited to settings navigation; no content engagement.
+
+6. TYPING BEHAVIOR
+- **No observable typing**:
+  - No text input, corrections, or form fields filled (e.g., no username/password, profile edits, or search queries).
+  - **Implication**: Session may be synthetic (e.g., automated test) or the user abandoned text input.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Settings navigation (left sidebar or menu): "Privacy" and "Profile" panels.
+  - Form submission: "Save Changes" button (clicked twice at 11.62s and 12.76s).
+- **Ignored features**:
+  - No search bar, notifications, or help menus.
+  - No interaction with dynamic elements (e.g., tooltips, dropdowns, or modals).
+  - No social features (e.g., messaging, following, or community tabs).
+
+8. SESSION FLOW
+- **Arc**: **Task initiation → Friction → Reattempt → Completion → Exit**
+  - **0.0s–2.23s (Exploration)**: Page load; initial hesitation (2232ms) suggests unfamiliarity or UI confusion.
+  - **2.28s–2.44s (Scanning)**: Rapid downward scroll to locate "Privacy" (likely off-screen).
+  - **2.9s–6.77s (Engagement with Friction)**:
+    - First "Privacy" click (2.9s), followed by dead click (6.77s) and upward scroll (6.85s–6.99s), indicating failed interaction or misplaced element.
+  - **7.55s–10.77s (Reattempt)**:
+    - Switches to "Profile" (7.55s), hesitates (2458ms at 10.01s), then clicks (10.77s).
+  - **10.85s–12.76s (Completion)**:
+    - Scrolls downward (10.85s–11.05s), clicks "Save Changes" twice (11.62s, 12.76s).
+  - **Exit**: Session ends abruptly post-submission (no confirmation or follow-up actions).
+- **Quantitative summary**:
+  - **Time to first interaction**: 2.23s.
+  - **Time to task completion**: 12.76s (100% of session duration).
+  - **Error rate**: 2/14 actions (14%) were dead clicks or hesitations.
+```
+
+**NOTES**:
+- The session’s brevity (12.8s) and lack of content engagement suggest either:
+  - A **synthetic test** (e.g., automated script or QA check), or
+  - A **frustrated user** abandoning the task.
+- The "synthetic/scanner" device label in the profile supports the former hypothesis.

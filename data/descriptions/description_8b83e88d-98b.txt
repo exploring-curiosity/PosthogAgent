@@ -1,0 +1,60 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - Highly linear and goal-oriented with minimal deviation.
+   - Focused on checkout form fields (Email → Card Number) and a single exit path ("Back to Shop").
+   - No exploratory clicks, side navigation, or secondary content engagement.
+   - 83% of actions (10/12) involve either scrolling or interacting with form inputs/buttons.
+
+2. READING BEHAVIOR:
+   - Skimming confirmed: Rapid vertical scrolling (5 scroll actions in 1.1s at 3.2s–3.4s) covering 855px (88% of viewport height) in 0.2s intervals.
+   - No sustained pauses on static content; max scroll depth (977px) reached in 3.4s, followed by immediate upward scroll.
+   - Hesitation markers (926ms at 0.93s, 893ms at 2.56s) suggest brief cognitive load, but no evidence of deep reading.
+
+3. ENGAGEMENT STYLE:
+   - N/A (No voting, commenting, or social interactions observed).
+   - Sole engagement: Form field interactions (Email ×2, Card Number ×2) and "Back to Shop" button (×2).
+   - No content creation or reactive engagement (e.g., upvotes, replies).
+
+4. INTERACTION SPEED:
+   - Mixed cadence:
+     - Fast: Scroll bursts (0.5s per 171px segment) and rapid clicks (e.g., 0.93s–1.66s = 730ms between actions).
+     - Deliberate: Hesitations (926ms, 893ms) and hover delays (399ms on Email, 106ms on "Back to Shop").
+   - Median time between actions: 0.57s (excluding hesitations).
+
+5. CONTENT PREFERENCES:
+   - Checkout page only (no subreddit/content browsing).
+   - Gravitated toward:
+     - Form fields (Email, Card Number) – 4/12 actions (33%).
+     - Exit path ("Back to Shop") – 2/12 actions (17%).
+   - Ignored: Payment methods, shipping options, promotional content (no clicks/scroll pauses).
+
+6. TYPING BEHAVIOR:
+   - No typing detected (no keystroke logs or input duration data).
+   - Input clicks suggest preparation to type, but no evidence of corrections or input length.
+
+7. FEATURE DISCOVERY:
+   - Used:
+     - Form fields (Email, Card Number).
+     - "Back to Shop" button.
+     - Scrollbar (vertical navigation only).
+   - Ignored:
+     - Autofill/saved payment options (no hover/clicks).
+     - Help/tooltip links (no interactions).
+     - Checkout progress indicators (no pauses).
+
+8. SESSION FLOW:
+   - Arc: Linear progression with abrupt exit.
+     1. **Entry (0.0s)**: Loaded checkout page.
+     2. **Hesitation (0.93s–1.66s)**: Initial pause (926ms), shallow scroll (61px), then Email field hover (399ms).
+     3. **Form Engagement (1.66s–3.67s)**: Clicked Email (1.66s), scrolled rapidly to bottom (3.2s–3.4s), then "Back to Shop" hover (106ms).
+     4. **Exit (3.67s–6.07s)**: Clicked "Back to Shop" (3.67s), scrolled up (4.24s–4.32s), then Card Number clicks (4.91s–6.07s) before session end.
+   - No exploration phase; immediate focus on checkout abandonment.
+   - Exit likely triggered by "Back to Shop" click (3.67s), despite later Card Number interaction.
+```
+
+**NOTES**:
+- Device flags as "synthetic/scanner" suggest automated or bot-like behavior (e.g., crawler, security scan).
+- Hesitations and hovers may reflect synthetic delays rather than human cognition.
+- No evidence of human-like content consumption or engagement.

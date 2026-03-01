@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Linear with exploratory detours**: The user follows a top-to-bottom progression through the page (landing → navigation → hero → features → testimonials → footer) but exhibits repeated clicks on the same elements (e.g., "Navigation" clicked twice at [1.6s] and [4.26s], "Hero Title" at [5.38s] and [6.41s]).
+- **Scattered hesitation points**: Four instances of "[HESITATION]" clicks at (0,0) ([0.89s], [3.08s], [10.01s], [14.32s]) suggest pauses to process content or indecision.
+- **No backtracking**: No evidence of revisiting prior sections after scrolling forward.
+
+2. READING BEHAVIOR:
+- **Skim-heavy with shallow engagement**: Scroll patterns show rapid, incremental downward movement (e.g., 57px–114px over 0.5s at [4.29s–4.35s]) with no sustained pauses. Max scroll depth (992px) reached in 15.3s implies minimal deep reading.
+- **Scroll speed**: Average scroll rate of ~114px/0.5s (228px/s) across 14 scroll actions. No scrolls exceed 0.5s duration.
+- **Hover cues**: Hover times (542ms–720ms) on interactive elements ("Navigation," "Hero Title," "Get Started") suggest visual scanning before clicks, but no evidence of reading static text blocks.
+
+3. ENGAGEMENT STYLE:
+- **Click-focused, no content creation**: 100% of interactions are clicks (14 total); no typing, voting, or commenting observed.
+- **Double-click redundancy**: 5/14 clicks are duplicates (e.g., "Get Started" at [7.29s] and [8.17s]), possibly due to perceived unresponsiveness or verification.
+- **No social engagement**: No interactions with user-generated content (e.g., comments, upvotes).
+
+4. INTERACTION SPEED:
+- **Deliberate with bursts of speed**: Median inter-action time: 0.86s (excluding scrolls). Notable outliers:
+  - Fastest: 0.03s between scrolls ([6.51s–6.55s]).
+  - Slowest: 1.49s between "Testimonials" click and scroll ([12.21s–12.24s]).
+- **Hesitation clusters**: Four "[HESITATION]" events (894ms–1487ms) account for 26% of session duration.
+
+5. CONTENT PREFERENCES:
+- **Structural elements over content**: Clicks target UI components (navigation, buttons, section headers) rather than substantive content. No clicks on images, links, or body text.
+- **Hierarchical focus**: Prioritized elements in descending order:
+  1. Navigation (2 clicks)
+  2. Hero section (2 clicks on title)
+  3. CTA button (2 clicks)
+  4. Features/Testimonials/Footer (1 click each).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: Zero keystrokes, form inputs, or search queries recorded.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - Navigation menu (2 clicks)
+  - Hero section (title + CTA button, 4 clicks)
+  - Scrolling (14 actions)
+  - Section headers (Features, Testimonials, Footer, 3 clicks).
+- **Ignored features**:
+  - Links, images, or embedded media (no clicks).
+  - Interactive widgets (e.g., forms, carousels).
+  - Social sharing or login/signup prompts (no engagement).
+
+8. SESSION FLOW:
+- **Phase 1: Orientation (0–4.26s)**:
+  - Loads page, hesitates (894ms), explores navigation (hover 542ms), hesitates again (1487ms).
+  - Clicks navigation twice (likely testing responsiveness).
+- **Phase 2: Hero Engagement (4.26–8.17s)**:
+  - Scrolls to 317px, clicks hero title (hover 720ms) and CTA button (hover 555ms), both twice.
+  - Rapid scrolls (4 actions in 1.94s) suggest skimming.
+- **Phase 3: Feature Exploration (8.17–12.21s)**:
+  - Scrolls to 823px, clicks "Features" (hover 499ms) and "Testimonials" (hover 464ms).
+  - Hesitation (1065ms) at [10.01s] indicates potential confusion or distraction.
+- **Phase 4: Footer Exit (12.21–15.32s)**:
+  - Scrolls to 992px, clicks footer (hover 637ms), hesitates (1026ms), clicks footer again.
+  - Session ends abruptly (no exit link clicked).
+- **Arc**: Linear progression from top to bottom with **no conversion** (e.g., no form submission, link follow, or return visits). Dominated by UI testing over content consumption.
+```

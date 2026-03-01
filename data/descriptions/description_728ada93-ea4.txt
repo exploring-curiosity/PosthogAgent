@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN:
+- **Non-linear, exploratory with hesitation**: The user exhibits a scattered navigation pattern with frequent backtracking and revisits. They jump between settings sections (Privacy → Settings Nav → Profile → Notifications) without a clear linear progression.
+- **Revisits**: Clicked "Privacy" twice (7.16s, 11.84s) and "Settings Nav" twice (13.0s, 14.82s), suggesting uncertainty or reorientation.
+- **Hover-heavy**: 4/10 clicks were preceded by long hovers (avg. 1,229ms), indicating deliberation before interaction.
+
+2. READING BEHAVIOR:
+- **Skimmer with selective deep dives**: Scroll patterns show rapid, incremental scrolling (avg. 158px/0.5s) with no pauses >1s, suggesting skimming. However, they scrolled to max depths (e.g., 924px for "Save Changes") before interacting, implying targeted engagement with specific sections.
+- **Scroll direction changes**: 4 upward scrolls (e.g., 20.41s–20.45s) after reaching max depth (924px) suggest re-reading or verification.
+
+3. ENGAGEMENT STYLE:
+- **No voting/commenting observed**: The session is limited to settings navigation; no content interaction (e.g., posts, comments) is recorded.
+- **Action ratio**: 10 clicks total, 4 with hovers (40% "deliberate" clicks). No form submissions (e.g., text input) detected.
+
+4. INTERACTION SPEED:
+- **Deliberate with hesitation spikes**:
+  - Avg. time between actions: 3.02s (excluding hovers).
+  - 3 explicit "[HESITATION]" events (5.31s, 8.96s, 18.54s, 22.76s, 28.25s) averaging 2,156ms, accounting for 37% of session duration.
+  - Fastest click interval: 0.04s (5.31s–5.35s, likely a misclick or accidental scroll trigger).
+
+5. CONTENT PREFERENCES:
+- **Settings-focused**: Exclusively interacted with settings sections:
+  - Privacy (2 clicks)
+  - Settings Nav (2 clicks)
+  - Profile (2 clicks)
+  - Notifications (2 clicks)
+  - "Save Changes" (2 clicks, likely failed first attempt).
+- **No content/subreddit engagement**: Data shows no browsing of posts, communities, or other content.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: No text inputs, corrections, or form submissions recorded in the log.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - Settings navigation (Privacy, Profile, Notifications).
+  - "Save Changes" button (attempted twice).
+- **Ignored features**:
+  - No search, account dropdown, or help/support interactions.
+  - No engagement with sidebars, footers, or non-settings UI elements.
+
+8. SESSION FLOW:
+- **Arc**: Exploration → Hesitation → Targeted Adjustment → Exit
+  1. **Initial Exploration (0–7.16s)**:
+     - Loaded settings page, scrolled rapidly to 788px (5.35s–5.52s), paused to hover over "Privacy" (7.16s).
+  2. **Hesitation Phase (7.16s–14.82s)**:
+     - Clicked "Privacy" (7.16s), scrolled up (11.89s–12.08s), re-clicked "Privacy" (11.84s), then navigated to "Settings Nav" (13.0s–14.82s).
+  3. **Targeted Adjustment (14.82s–25.9s)**:
+     - Scrolled to "Save Changes" (14.88s–15.01s), hovered (16.31s), clicked twice (16.31s, 20.35s), then shifted to "Profile" (21.67s–24.22s) and "Notifications" (25.9s).
+  4. **Exit (28.25s–30.17s)**:
+     - Final hesitation (28.25s), clicked "Notifications" (30.17s), session ended.
+- **Exit trigger**: No confirmation of saved changes; session terminated abruptly after "Notifications" click.
+```
+
+**Key Observations**:
+- **High hesitation density**: 5 hesitation events in 30.2s (16.6% of session time).
+- **No completion confirmation**: "Save Changes" clicked twice but no success/error feedback recorded.
+- **Synthetic behavior**: The "synthetic/cautious_explorer" device label and lack of typing/form engagement suggest a non-human actor (e.g., automated test, bot, or scripted interaction).

@@ -1,0 +1,72 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-directed with minimal deviation.
+- Follows a strict vertical progression through the settings menu:
+  Settings Nav → Profile → Notifications → Privacy → Save Changes.
+- No backtracking, lateral exploration, or abandoned paths.
+- 100% of clicks target navigation elements (nav items, buttons) or hesitation markers.
+- Zero engagement with non-navigational content (e.g., no form fields, toggles, or help text).
+
+2. READING BEHAVIOR
+- Skimming confirmed by scroll patterns:
+  - Average scroll speed: 128px/s (67px–918px over 6.6s total scroll time).
+  - Scrolls occur in rapid 0.5s bursts (12 discrete scrolls, each covering ~67–76px).
+  - No pauses >0.5s between scrolls; max depth (918px) reached in 8.44s.
+  - No evidence of deep reading (no scroll reversals, no sustained pauses on specific sections).
+
+3. ENGAGEMENT STYLE
+- No traditional "engagement" (voting, commenting) observed.
+- Interaction limited to navigation and final submission:
+  - 6 clicks on nav items (Profile, Notifications, Privacy).
+  - 2 clicks on "Save Changes" button (final action).
+  - 4 hesitation clicks (non-interactive, likely misclicks or UI testing).
+- Vote-to-comment ratio: N/A (no voting or commenting occurred).
+
+4. INTERACTION SPEED
+- Deliberate with controlled acceleration:
+  - Initial hesitation: 537ms before first click (0.54s).
+  - Early actions: 0.6s–1.48s (avg 0.88s between actions).
+  - Mid-session: 2.59s–4.93s (avg 1.17s between actions).
+  - Late session: 7.76s–13.03s (avg 2.64s between actions).
+  - Final hesitation: 2682ms (12.02s) before last click.
+- Hover times: 337ms–749ms (avg 480ms) before clicks.
+
+5. CONTENT PREFERENCES
+- Exclusively interacted with settings categories:
+  - Profile (2 clicks, 2.59s–4.29s).
+  - Notifications (2 clicks, 4.93s–6.99s).
+  - Privacy (2 clicks, 7.76s–8.17s).
+- No evidence of interest in other content types (e.g., account settings, security, billing).
+
+6. TYPING BEHAVIOR
+- No typing detected in the log.
+- No form field interactions, corrections, or input durations recorded.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Vertical navigation menu (Settings Nav).
+  - Settings subcategories (Profile, Notifications, Privacy).
+  - "Save Changes" button (final action).
+- Ignored features:
+  - Form fields (no clicks on text inputs, toggles, or dropdowns).
+  - Help text/tooltips (no hovers or clicks on "?" icons).
+  - Secondary navigation (e.g., breadcrumbs, sidebar links).
+  - Cancel/back buttons (no use).
+
+8. SESSION FLOW
+- Arc: Linear progression with escalating hesitation → submission.
+  - 0.0s–1.48s: Orientation (page load, initial scroll, nav click).
+  - 1.48s–4.93s: Profile section (2 clicks, 2 scrolls).
+  - 4.93s–7.76s: Notifications section (2 clicks, 5 scrolls).
+  - 7.76s–9.33s: Privacy section (2 clicks, 5 scrolls).
+  - 9.33s–13.03s: Submission (2 clicks on "Save Changes" with 2682ms hesitation).
+- Exit: Session ends immediately after final click (no post-submission actions).
+- Key pattern: Each section follows a 3-step sequence:
+  1. Click nav item (hover + click).
+  2. Scroll through section (rapid, no pauses).
+  3. Hesitation click (non-interactive).
+```
+
+**SUMMARY**: This user exhibited methodical, task-focused behavior with no exploratory detours. Their interaction was characterized by rapid skimming, deliberate navigation, and escalating hesitation before submission, suggesting either UI friction or decision fatigue. The session was purely functional, with no engagement beyond the core task of accessing and saving settings.

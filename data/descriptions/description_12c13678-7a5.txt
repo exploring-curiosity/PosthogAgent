@@ -1,0 +1,168 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory, with repetitive validation*
+- **Initial exploration (0.0s–4.42s):** Linear downward scrolling (0px → 485px) with no backtracking, suggesting initial content scanning.
+- **Repetitive validation (4.42s–33.71s):** Cyclical pattern of:
+  1. Clicking a section (e.g., "Features" at 4.42s, "Hero Title" at 8.18s).
+  2. Hesitating (e.g., 2299ms at 10.48s, 2585ms at 27.47s).
+  3. Re-clicking the same section (e.g., "Features" again at 6.76s, "Hero Title" at 11.84s).
+  4. Scrolling to adjacent content (e.g., up/down after "Testimonials" at 18.03s).
+- **No deep dives:** Never clicks into sub-pages or expands content (e.g., no dropdowns, modals, or links beyond section headers).
+- **Exit:** Ends on a navigation click (33.71s), but no evidence of leaving the page (session ends abruptly).
+
+**Quantitative:**
+- 6/14 clicks (43%) are re-clicks of the same element within seconds.
+- 100% of clicks target *section headers* (e.g., "Features," "Hero Title") or *structural elements* (e.g., "Navigation," "Footer"), never body text or interactive widgets.
+
+---
+
+### 2. READING BEHAVIOR
+**Style:** *Skimmer with rapid scroll bursts*
+- **Scroll depth:**
+  - Max depth: 1029px (footer reached at 13.53s).
+  - Average scroll speed: **~240px/s** (e.g., 242px → 364px in 0.5s at 2.43s).
+  - No pauses >1s during scrolling; suggests no deep reading.
+- **Scroll direction shifts:**
+  - 5 downward scroll sequences (e.g., 2.35s–2.47s, 11.89s–12.08s).
+  - 4 upward scroll sequences (e.g., 6.83s–7.0s, 17.06s–17.27s).
+  - Upward scrolls often follow clicks (e.g., after "Features" at 6.76s, scrolls up to 234px by 7.0s).
+- **Hover times:**
+  - Average hover before click: **1262ms** (range: 578ms–2289ms).
+  - Longest hovers: "Get Started" (1861ms), "Hero Title" (952ms), "Features" (1615ms).
+  - Suggests *visual scanning* of click targets, not reading.
+
+**Quantitative:**
+- Total scroll distance: **3,840px** (1,029px down + 2,811px up).
+- Scroll-to-click ratio: **1.3 scrolls per click** (18 scrolls / 14 clicks).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Style:** *Observational, no active participation*
+- **No voting/commenting:** Zero instances of upvotes, downvotes, or text input.
+- **Click behavior:**
+  - All clicks are *structural* (headers, navigation, buttons) or *hesitation markers* (e.g., "[HESITATION 2289ms]" at 2.29s).
+  - No clicks on user-generated content (e.g., posts, comments, profiles).
+- **Hesitation markers:**
+  - 6/14 clicks (43%) are labeled "[HESITATION Xms]" (e.g., 2289ms at 2.29s, 2585ms at 27.47s).
+  - Average hesitation: **1,763ms** (1.76s) before clicking.
+  - Suggests *decision paralysis* or *synthetic input* (e.g., automated testing).
+
+**Quantitative:**
+- Engagement actions: **0** (no votes, comments, or submissions).
+- Passive actions: **14 clicks**, **18 scrolls**.
+
+---
+
+### 4. INTERACTION SPEED
+**Style:** *Deliberate with bursts of speed*
+- **Action intervals:**
+  - Average time between actions: **2.4s** (range: 0.03s–4.42s).
+  - Fastest sequence: 0.03s–0.07s (scrolls at 6.83s–6.97s).
+  - Slowest sequence: 4.42s gap (4.42s–8.18s, includes 1615ms hover + 952ms hover).
+- **Hover-to-click latency:**
+  - Average: **1262ms** (time from hover start to click).
+  - Longest: 2299ms (10.48s hesitation).
+- **Scroll speed:**
+  - Consistent **~240px/s** during scroll bursts (e.g., 2.35s–2.47s).
+
+**Quantitative:**
+- Total actions: **32** (14 clicks + 18 scrolls).
+- Actions per second: **0.95** (32 actions / 33.7s).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Gravitated toward:**
+- **Structural elements:**
+  - "Features" (clicked twice: 4.42s, 6.76s).
+  - "Hero Title" (clicked twice: 8.18s, 11.84s).
+  - "Footer" (clicked twice: 13.53s, 16.99s).
+  - "Testimonials" (clicked twice: 18.03s, 22.65s).
+  - "Navigation" (clicked twice: 29.34s, 33.71s).
+  - "Get Started" button (clicked twice: 24.88s, 28.39s).
+- **Ignored:**
+  - Body text (no clicks on paragraphs, lists, or images).
+  - Interactive widgets (e.g., forms, search bars, dropdowns).
+  - User-generated content (e.g., comments, posts).
+
+**Quantitative:**
+- 100% of clicks target *section headers* or *UI navigation*.
+- 0% of clicks target *content* (e.g., articles, videos, links).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Style:** *Nonexistent*
+- **No typing detected:** Zero instances of text input, corrections, or form submissions.
+- **No search queries:** No clicks on search bars or input fields.
+- **No chat/messaging:** No evidence of communication features.
+
+**Quantitative:**
+- Keystrokes: **0**.
+- Input length: **0 characters**.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Discovered and used:**
+- **Section headers:** "Features," "Hero Title," "Testimonials," "Footer."
+- **Navigation:** Top-level nav bar (clicked at 29.34s, 33.71s).
+- **Call-to-action:** "Get Started" button (clicked at 24.88s, 28.39s).
+- **Scrolling:** Used extensively to navigate vertically.
+
+**Ignored:**
+- **Interactive elements:**
+  - No dropdowns, modals, or tooltips clicked.
+  - No forms, search bars, or filters.
+- **Content:**
+  - No clicks on images, videos, or hyperlinks.
+  - No engagement with dynamic content (e.g., carousels, tabs).
+- **Social features:**
+  - No sharing, liking, or commenting.
+- **Account features:**
+  - No login/signup clicks (despite "Get Started" button).
+
+**Quantitative:**
+- Features used: **5** (headers, nav, CTA, scrolling).
+- Features ignored: **≥10** (forms, content, social, account).
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Repetitive validation loop → Abrupt exit*
+1. **Initial Scan (0.0s–4.42s):**
+   - Loads landing page, scrolls downward linearly (0px → 485px).
+   - Clicks "Features" after 1615ms hover (4.42s).
+2. **First Validation Loop (4.42s–11.84s):**
+   - Hesitates (726ms at 5.14s), re-clicks "Features" (6.76s).
+   - Scrolls up (485px → 234px), clicks "Hero Title" (8.18s).
+   - Hesitates (2299ms at 10.48s), re-clicks "Hero Title" (11.84s).
+3. **Deep Scroll (11.84s–13.53s):**
+   - Scrolls downward rapidly (234px → 1029px), reaches footer.
+4. **Second Validation Loop (13.53s–22.65s):**
+   - Clicks "Footer" (13.53s), hesitates (666ms at 14.2s), re-clicks "Footer" (16.99s).
+   - Scrolls up (1029px → 709px), clicks "Testimonials" (18.03s).
+   - Hesitates (2221ms at 20.25s), re-clicks "Testimonials" (22.65s).
+5. **CTA Focus (22.65s–28.39s):**
+   - Scrolls up (709px → 335px), clicks "Get Started" (24.88s).
+   - Hesitates (2585ms at 27.47s), re-clicks "Get Started" (28.39s).
+6. **Navigation Exit (28.39s–33.71s):**
+   - Scrolls up to top (335px → 24px), clicks "Navigation" (29.34s).
+   - Hesitates (1886ms at 31.22s), re-clicks "Navigation" (33.71s).
+   - Session ends.
+
+**Quantitative:**
+- Loops: **3** (Features → Hero Title → Footer/Testimonials → Get Started).
+- Exit: **Navigation click** (no confirmation of page change).
+- Session structure: **60% validation loops**, **40% linear exploration**.
+```
+
+---
+**Summary:** This user exhibits *highly repetitive, validation-driven behavior* with no deep engagement. Their actions suggest either:
+1. A **synthetic test script** (e.g., automated UI testing with simulated hesitation), or
+2. A **cautious human user** with extreme decision paralysis, focusing solely on structural navigation and avoiding content interaction. No typing, voting, or commenting occurred.

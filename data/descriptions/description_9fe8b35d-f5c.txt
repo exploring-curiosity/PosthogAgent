@@ -1,0 +1,147 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/IMPULSIVE_CLICKER SESSION ANALYSIS
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Scattered, non-linear, and erratic with repetitive targeting*
+- **Initial Hesitation (0.0–0.34s):** 344ms delay before first click (at (0,0), likely a misclick or synthetic artifact).
+- **Rapid Scrolling (0.38–0.55s):** Linear downward scrolling in 45px increments (5 scrolls in 0.17s), suggesting no intentional reading—likely automated or synthetic movement.
+- **Targeted Clicks (0.81–5.72s):** Repeated clicks on the same elements (e.g., `Hero Title` at 0.81s and 0.99s; `Footer` 5 times between 1.47s and 5.09s; `Get Started` at 2.33s and 2.52s). No exploration of distinct pages/links.
+- **Rage Clicks (3.34–3.59s):** 3 rapid clicks on the footer (labeled `[RAGE CLICK]`), indicating frustration or synthetic testing.
+- **No Page Transitions:** All actions occur on a single page (`/landing`). No navigation to other URLs.
+
+**Quantitative Summary:**
+- 22 total actions in 5.7s (3.86 actions/second).
+- 14/22 actions (64%) are clicks; 8/22 (36%) are scrolls.
+- 7/14 clicks (50%) are duplicates of the same element within <200ms.
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *No evidence of reading; skimming or synthetic scrolling*
+- **Scroll Depth:** Max depth = 1079px (viewport height = 1080px), suggesting full-page traversal but no pauses.
+- **Scroll Speed:**
+  - Downward: ~90px/0.5s (180px/s) consistently (0.38–2.79s).
+  - Upward: ~45px/0.5s (90px/s) (1.91–5.3s), slower but still too fast for reading.
+- **No Dwell Time:** No pauses >200ms between scrolls or clicks. Fastest scroll sequence: 5 downward scrolls in 0.17s (0.38–0.55s).
+- **Hover Times:** Minimal (56–144ms), insufficient for reading.
+
+**Quantitative Summary:**
+- Total scroll distance: 2,058px (1,079px down + 979px up).
+- Average scroll speed: 158px/s (down) / 79px/s (up).
+- No action suggests content consumption (e.g., no clicks on articles, no text selection).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *No meaningful engagement; synthetic interactions only*
+- **No Voting/Commenting:** No actions resemble voting, commenting, or content creation.
+- **Click Redundancy:**
+  - `Hero Title`: 2 clicks (0.81s, 0.99s) with 180ms gap.
+  - `Footer`: 5 clicks (1.47s–5.09s) with 4/5 clicks on the same coordinates (±4px).
+  - `Get Started`: 2 clicks (2.33s, 2.52s) with 190ms gap.
+- **Rage Clicks:** 3 clicks on `Footer` in 0.25s (3.34–3.59s), labeled as `[RAGE CLICK]`.
+
+**Quantitative Summary:**
+- Click-to-action ratio: 14 clicks / 0 meaningful actions = **0% engagement**.
+- Duplicate clicks: 7/14 (50%) of clicks are repeats of the same element.
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Extremely fast, likely automated or synthetic*
+- **Action Intervals:**
+  - Fastest: 30ms between scrolls (e.g., 0.42–0.46s).
+  - Slowest: 330ms between clicks (e.g., 4.48–4.73s).
+  - Median interval: **120ms** between actions.
+- **Hover Times:**
+  - `Hero Title`: 56ms (0.81s).
+  - `Get Started`: 129ms (2.33s).
+  - `Footer`: 70–144ms.
+- **Rage Click Cluster:** 3 clicks in 250ms (3.34–3.59s).
+
+**Quantitative Summary:**
+- Actions/second: 3.86 (22 actions / 5.7s).
+- 90% of actions occur within **<200ms** of the previous action.
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *No discernible preferences; random targeting*
+- **Clicked Elements:**
+  - `Hero Title` (h1): 2 clicks (0.81s, 0.99s).
+  - `Footer`: 8 clicks (1.47s–5.09s).
+  - `Get Started` (button): 2 clicks (2.33s, 2.52s).
+  - `Testimonials` (div): 2 clicks (5.52s, 5.72s).
+- **No Content Engagement:** All clicks are on structural elements (titles, buttons, footer), not content (e.g., articles, images, links).
+- **No Subreddit/Topic Focus:** Not applicable (single-page session).
+
+**Quantitative Summary:**
+- 100% of clicks target **non-content elements** (UI/navigation).
+- No clicks on hyperlinks, images, or interactive content.
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *No typing detected*
+- **No Input Fields:** No evidence of form submission, search queries, or text entry.
+- **No Corrections:** No backspacing, deletions, or typing pauses.
+
+**Quantitative Summary:**
+- 0 keystrokes recorded.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Pattern:** *Superficial interaction with basic UI elements; no advanced features*
+- **Used Features:**
+  - Scrolling (8/22 actions).
+  - Clicking on static elements (`Hero Title`, `Footer`, `Get Started`, `Testimonials`).
+- **Ignored Features:**
+  - Navigation menus (no clicks on links).
+  - Search bars (no interactions).
+  - Interactive content (e.g., forms, videos, carousels).
+  - Social sharing/engagement tools (e.g., upvote, comment).
+  - Mobile/desktop-specific features (e.g., hamburger menu).
+
+**Quantitative Summary:**
+- 100% of clicks target **top-level UI elements**.
+- 0% of actions interact with **secondary or tertiary features**.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Synthetic testing or automated script with no human-like progression*
+1. **Initialization (0.0–0.34s):**
+   - Page load; 344ms hesitation before first click (likely synthetic delay).
+2. **Rapid Traversal (0.38–0.55s):**
+   - 5 downward scrolls in 0.17s (no reading).
+3. **Targeted Clicks (0.81–2.52s):**
+   - Clicks on `Hero Title` (2x) and `Get Started` (2x), with hover times <150ms.
+4. **Footer Obsession (1.47–5.09s):**
+   - 8 clicks on `Footer` (5 unique instances), including rage clicks (3.34–3.59s).
+5. **Final Clicks (5.52–5.72s):**
+   - 2 clicks on `Testimonials` before session end.
+
+**Quantitative Summary:**
+- **No Exploration Phase:** 0 navigation to new pages.
+- **No Engagement Phase:** 0 meaningful interactions.
+- **No Exit Phase:** Session ends mid-action (last click at 5.72s).
+- **Session Shape:** Flat line with no progression (all actions on `/landing`).
+
+---
+
+### OVERALL BEHAVIORAL CLASSIFICATION
+**Type:** *Synthetic/Automated Script or Bot*
+**Key Indicators:**
+- Sub-200ms action intervals (median: 120ms).
+- 50% duplicate clicks on the same element.
+- Rage clicks (3 in 250ms).
+- No dwell time or reading behavior.
+- No navigation beyond the landing page.
+- No typing or form interactions.
+- Device labeled as `synthetic/impulsive_clicker`.
+
+**Confidence:** 99% likelihood this is not a human user.
+```

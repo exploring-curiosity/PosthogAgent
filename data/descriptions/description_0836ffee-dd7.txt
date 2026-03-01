@@ -1,0 +1,80 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly exploratory with rapid directional shifts**: The user exhibits a non-linear, zigzagging pattern across the page. They alternate between downward exploration (0.45s–1.21s, 0.36s–4.44s) and upward retracing (2.91s–5.15s) 3 times, covering the same content areas repeatedly.
+- **Targeted clicks with spatial clustering**: Clicks concentrate in 4 distinct vertical zones:
+  1) Top (hero section: 0.73s–3.55s)
+  2) Mid-page (features: 3.91s–4.25s)
+  3) Lower-mid (testimonials: 4.74s–4.96s)
+  4) Footer (1.46s–2.87s)
+- **No sequential progression**: Skips intermediate content (e.g., jumps from hero title at 3.55s to features at 3.91s, bypassing ~200px of content).
+
+2. READING BEHAVIOR
+- **Skim-dominant with micro-depth spikes**: Scroll speed averages **154px/0.5s** (308px/s), exceeding typical reading speeds (200–300 words/min ≈ 50–100px/s). However, pauses at:
+  - Features (3.91s–4.25s: 340ms hover + click)
+  - Testimonials (4.74s–4.96s: 183ms hover + click)
+- **No sustained dwell time**: Longest uninterrupted scroll segment is 1.2s (1.06s–2.26s), insufficient for deep reading (>3s required).
+- **Reverse scanning**: Upward scrolls (2.91s–5.15s) occur at **194px/0.5s** (388px/s), suggesting rapid re-evaluation of previously skimmed content.
+
+3. ENGAGEMENT STYLE
+- **Click-only interaction**: No text input, voting, or commenting detected. All engagement is via clicks (12 total), with:
+  - **Hover-to-click latency**: 80–384ms (median: 113ms)
+  - **Duplicate clicks**: 5/12 clicks (42%) are immediate repeats (e.g., "Get Started" at 0.73s/0.98s, "Hero Title" at 3.28s/3.55s).
+- **No social engagement**: No evidence of sharing, saving, or reacting to content.
+
+4. INTERACTION SPEED
+- **Hyper-accelerated with hesitation spikes**:
+  - **Median inter-action time**: 240ms (excluding hesitations).
+  - **Outliers**:
+    - 1,226ms hesitation at 2.69s (preceded by footer click at 2.87s).
+    - 384ms hesitation at 0.38s (initial page load).
+- **Click frequency**: 2.1 clicks/second during active phases (e.g., 3.28s–3.55s: 2 clicks in 270ms).
+- **Scroll bursts**: 4–5 scroll actions clustered in 0.5s windows (e.g., 0.45s–0.73s, 1.06s–1.21s).
+
+5. CONTENT PREFERENCES
+- **Structural elements over content**:
+  - 67% of clicks target UI affordances (buttons, nav, footer) vs. 33% on content (features, testimonials).
+  - **Most engaged elements**:
+    1) **CTA buttons**: "Get Started" (2 clicks, 0.73s–0.98s).
+    2) **Navigation**: Top nav (2 clicks, 5.45s–5.68s).
+    3) **Content sections**: Features (2 clicks, 3.91s–4.25s), Testimonials (2 clicks, 4.74s–4.96s).
+- **Ignored content**: No interaction with images, videos, or body text (only headers/divs clicked).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Session contains zero text input events (no search, forms, or comments). All interactions are point-and-click.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Primary navigation**: Top nav (5.45s–5.68s).
+  - **CTA buttons**: "Get Started" (0.73s–0.98s).
+  - **Content sections**: Features (3.91s), Testimonials (4.74s).
+  - **Footer**: 3 clicks (1.46s–2.87s).
+- **Ignored features**:
+  - Search functionality (no search bar clicks).
+  - Social media links (no clicks in footer).
+  - Interactive elements (no tooltips, dropdowns, or modals triggered).
+  - Sidebars or floating widgets (no lateral mouse movement).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–1.46s)**
+  - Loads page, hesitates (384ms), then scrolls downward at 308px/s.
+  - Clicks "Get Started" twice (0.73s–0.98s) with 120ms hover, suggesting recognition but no conversion.
+  - Reaches footer (1.46s), clicks once (83ms hover).
+- **Phase 2: Re-evaluation (2.69s–3.55s)**
+  - Long hesitation (1,226ms) at 2.69s, followed by footer re-click (2.87s).
+  - Rapid upward scroll (388px/s) to hero section, clicks "Hero Title" twice (3.28s–3.55s).
+- **Phase 3: Targeted Exploration (3.91s–4.96s)**
+  - Scrolls downward to "Features" (3.91s), clicks twice (80ms hover).
+  - Continues to "Testimonials" (4.74s), clicks twice (183ms hover).
+- **Phase 4: Exit Preparation (5.03s–5.68s)**
+  - Scrolls upward to top (5.15s), clicks navigation twice (5.45s–5.68s).
+  - Session ends abruptly (no exit link clicked).
+- **Arc**: **Exploratory probing → Hesitation → Retracing → Targeted sampling → Navigation exit**.
+  - No clear progression from exploration to engagement; ends in navigation (potential exit intent).
+```
+
+**Key Anomalies**:
+- **Duplicate clicks**: 5/12 clicks are immediate repeats (e.g., "Get Started" at 0.73s/0.98s), possibly indicating UI responsiveness issues or user uncertainty.
+- **Hesitation spikes**: 384ms (0.38s) and 1,226ms (2.69s) suggest cognitive load or distraction.
+- **Viewport coverage**: Explores 96% of page height (1,035px of 1,080px) but with no sustained focus.

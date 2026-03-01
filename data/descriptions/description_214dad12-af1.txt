@@ -1,0 +1,86 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive frustration loops**: The user exhibits a non-linear, erratic navigation pattern with clear signs of confusion and repeated attempts to interact with the same elements.
+  - **Primary focus**: Navigation menu (6 distinct clicks between 2.8s–6.57s, including 5 rage clicks) and key page sections (Hero Title, Get Started button, Features, Testimonials, Footer).
+  - **Secondary exploration**: Brief scrolls (6.62s–13.99s) to scan content, but no deep dives into specific sections.
+  - **Repetition**: 4 instances of clicking the same element twice (Navigation ×2, Hero Title ×2, Get Started ×2, Testimonials ×2) with minimal time between attempts (e.g., 0.56s between Hero Title clicks at 7.31s and 9.72s).
+  - **No progression**: No evidence of moving beyond the landing page (e.g., no form submissions, no secondary page loads).
+
+2. READING BEHAVIOR
+- **Skim-only with no deep reading**:
+  - **Scroll depth**: Max depth of 1070px (76% of a 1080px viewport), but scrolls are rapid (0.5s per 60–80px increment) and lack pauses.
+  - **Scroll patterns**:
+    - **Clustered scrolls**: 11 scroll actions grouped into 4 bursts (6.62s–6.68s, 9.76s–9.87s, 13.78s–13.99s, 18.37s–18.41s), each covering ~180px in 1.5–2.0s.
+    - **No sustained reading**: No pauses >1s between scrolls; average scroll duration = 0.5s.
+  - **Content interaction**: Clicks on section headers (Features, Testimonials) but no evidence of reading body text (e.g., no clicks on testimonial quotes or feature descriptions).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement (votes/comments)**:
+  - **Action types**: Exclusively clicks (22 total) and scrolls (11 total). No text input, form submissions, or social interactions (e.g., upvotes, comments).
+  - **Hesitation markers**: 5 instances of "[HESITATION]" clicks (1.84s, 5.49s, 8.75s, 11.48s, 17.73s, 21.9s), totaling 12.4s (55% of session duration) spent in apparent indecision.
+  - **Rage clicks**: 5 consecutive rage clicks on the navigation menu (6.17s–6.57s), indicating frustration with an unresponsive or unclear UI element.
+
+4. INTERACTION SPEED
+- **Bimodal speed: Fast frustration vs. slow hesitation**:
+  - **Fast interactions**:
+    - Rage clicks: 5 clicks in 0.4s (6.17s–6.57s; 12.5 clicks/second).
+    - Scrolls: 11 scrolls in 4.5s (2.4 scrolls/second).
+  - **Slow interactions**:
+    - Hesitation clicks: Average delay of 2.2s before clicking (range: 1.0s–2.8s).
+    - Hover times: Average hover duration = 586ms (707ms, 328ms, 336ms, 646ms, 791ms, 601ms).
+  - **Action intervals**:
+    - Median time between actions = 0.6s (excluding hesitations).
+    - Longest pauses: 2.8s (17.73s–21.9s) and 2.7s (5.49s–8.75s), both preceding hesitation clicks.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward high-level structural elements**:
+  - **Navigation menu**: 7 clicks (2.8s–6.57s), including rage clicks.
+  - **Hero section**: 3 clicks on "Hero Title" (7.31s–9.72s) and 2 clicks on "Get Started" button (10.46s–12.19s).
+  - **Section headers**: 2 clicks each on "Features" (13.09s–13.72s) and "Testimonials" (14.95s–18.32s).
+  - **Footer**: 2 clicks (19.23s–22.49s).
+- **Ignored**:
+  - Body text (e.g., feature descriptions, testimonial quotes).
+  - Interactive elements beyond primary buttons/headers (e.g., no clicks on links, images, or forms).
+  - No evidence of filtering, sorting, or searching.
+
+6. TYPING BEHAVIOR
+- **No typing detected**:
+  - No text inputs, form fields, or search queries observed in the log.
+  - No corrections, deletions, or input pauses.
+
+7. FEATURE DISCOVERY
+- **Discovered and attempted to use**:
+  - **Navigation menu**: Primary target (7 clicks), but likely unclear or broken (rage clicks).
+  - **Primary CTA**: "Get Started" button (2 clicks).
+  - **Section headers**: "Features" and "Testimonials" (2 clicks each).
+  - **Footer**: 2 clicks, possibly seeking contact/sitemap links.
+- **Ignored**:
+  - **Secondary CTAs**: No clicks on tertiary buttons/links.
+  - **Interactive content**: No engagement with forms, filters, or dynamic elements.
+  - **Media**: No clicks on images/videos (if present).
+  - **Social features**: No sharing, liking, or commenting.
+
+8. SESSION FLOW
+- **Arc: Frustration-driven abandonment**:
+  1. **Initial confusion (0.0s–6.57s)**:
+     - Loads page, hesitates (1.84s), clicks navigation (2.8s), then stalls (5.49s hesitation).
+     - Rage-clicks navigation (6.17s–6.57s), suggesting a broken or unclear menu.
+  2. **Superficial exploration (6.62s–14.95s)**:
+     - Rapid scrolls (6.62s–6.68s) to scan content.
+     - Clicks "Hero Title" (7.31s) and "Get Started" (10.46s), but hesitates after each (8.75s, 11.48s).
+     - Scrolls to "Features" (13.09s) and "Testimonials" (14.95s), clicking headers but not engaging with content.
+  3. **Final frustration (17.73s–22.49s)**:
+     - Long hesitation (17.73s; 2.8s pause), clicks "Testimonials" (18.32s), then scrolls to footer.
+     - Clicks footer (19.23s), hesitates again (21.9s; 2.7s pause), then clicks footer again (22.49s) before session ends.
+- **Exit**: Session terminates abruptly after 22.5s, likely due to frustration or perceived dead-end.
+```
+
+**Key Observations**:
+- **Primary issue**: Navigation menu appears dysfunctional (rage clicks) and/or unclear, derailing the session early.
+- **Secondary issue**: Lack of clear next steps post-CTA (e.g., "Get Started" leads to no visible action).
+- **Behavioral flags**:
+  - 55% of session time spent in hesitation.
+  - 0% of content read deeply (no pauses >1s on body text).
+  - 22% of clicks were rage clicks (5/22).

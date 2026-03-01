@@ -1,0 +1,78 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. They jump between unrelated page sections (header → mid-page → footer) without sustained engagement in any single area.
+- **Key evidence**:
+  - Starts at top (0.61s) → jumps to "Features" at 464px (1.27s) → returns to top (2.0s) → jumps to footer at 1068px (4.77s).
+  - No sequential progression through content (e.g., no gradual scroll from top to bottom).
+  - 60% of clicks target non-interactive or ambiguous elements ("[HESITATION]", "[DEAD CLICK]").
+
+2. READING BEHAVIOR
+- **Skim-only, no deep reading**:
+  - **Scroll velocity**: 185px/s (avg. across 5 scroll actions). For context, human reading speed typically correlates with scroll speeds of 50–100px/s for deep reading.
+  - **Max depth**: 1068px (4.23s), but only 0.5s spent at any depth >500px (no pauses for content absorption).
+  - **Regressive scrolling**: Abrupt upward scrolls (464px → 5px in 0.5s at 2.0s) suggest scanning, not comprehension.
+  - **No dwell time**: No pauses >0.5s on any scroll segment.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement** (e.g., no votes, comments, or form submissions).
+- **Interaction metrics**:
+  - **Click-to-hover ratio**: 2:1 (4 clicks with preceding hovers, 2 without).
+  - **Dead clicks**: 1 (6.43s), indicating failed interaction attempts.
+  - **Hesitation markers**: 2 instances (0.61s, 3.39s) totaling 1539ms of inactivity before clicks.
+  - **No content creation**: Zero text input or submission actions.
+
+4. INTERACTION SPEED
+- **Rapid but inconsistent**:
+  - **Median inter-action time**: 0.54s (excluding hesitations).
+  - **Outliers**:
+    - 1.46s delay before first "Features" click (1.27s).
+    - 933ms hesitation before second "[HESITATION]" click (3.39s).
+  - **Scroll speed**: 185px/s (consistent across 7 scroll actions).
+  - **Click latency**: 145–388ms hover time before 4/6 clicks.
+
+5. CONTENT PREFERENCES
+- **No clear preferences** (insufficient data for thematic analysis):
+  - Targeted elements: "Features" (mid-page), "Navigation" (header), "Footer".
+  - No content-specific interactions (e.g., no article clicks, no category filters).
+  - **Note**: All clicked text is generic UI labels, not substantive content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**:
+  - Zero keystrokes, input fields, or corrections recorded.
+  - No search queries, form submissions, or text entry.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Navigation menu (2 clicks: 2.45s, 4.15s).
+  - "Features" section (2 clicks: 1.27s, 1.93s).
+  - Footer (2 clicks: 4.77s, 5.8s).
+- **Ignored features**:
+  - No interaction with primary content (e.g., articles, products, CTAs).
+  - No use of search, filters, or interactive widgets.
+  - No social sharing or account-related actions.
+
+8. SESSION FLOW
+- **Arc**: **Mechanical scan → Failed engagement → Abrupt exit**
+  - **0.0–1.27s (Initial scan)**:
+    - Loads page → immediate scroll to 464px (5 scroll actions in 0.87s).
+    - Clicks "Features" after 145ms hover (1.27s).
+  - **1.93–4.15s (Disjointed navigation)**:
+    - Re-clicks "Features" (1.93s) → scrolls to top (2.0s) → clicks "Navigation" (2.45s).
+    - 933ms hesitation (3.39s) → re-clicks "Navigation" (4.15s).
+  - **4.18–6.43s (Footer probe → Exit)**:
+    - Scrolls to footer (4.23s) → clicks footer twice (4.77s, 5.8s).
+    - Dead click at (222, 2146) (6.43s) → session ends.
+- **Exit trigger**: Dead click suggests frustration or script termination.
+- **No progression**: Session lacks exploration → engagement → conversion phases.
+```
+
+**SYNTHESIS**:
+This session exhibits **automated or synthetic behavior** with high probability, given:
+- **Inhuman scroll speed** (185px/s) and **perfectly linear scroll increments** (92–93px per 0.5s).
+- **No typing**, **no content engagement**, and **repetitive clicks on UI labels**.
+- **Device profile**: Explicitly labeled as "synthetic/scanner".
+- **Hesitation markers** may reflect script delays, not human indecision.
+
+**Human-like anomalies** (e.g., hovers, dead clicks) could indicate a **bot mimicking human interaction** or a **broken automation script**. No evidence of organic user behavior.

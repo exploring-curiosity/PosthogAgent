@@ -1,0 +1,83 @@
+```
+BEHAVIORAL PROFILE: WEB CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with rapid shifts in focus. They jump between unrelated form fields (Card Number → Email → Back to Shop → Pay Now → Cart Summary) without completing any single task. The sequence suggests either:
+  - A broken user flow (e.g., form validation errors not visible in logs)
+  - Deliberate testing of UI boundaries (consistent with "synthetic/power_user" profile)
+- **No exploratory behavior**: All actions target functional elements (inputs, buttons) rather than content discovery. No evidence of browsing product pages or ancillary features.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns indicate zero deep reading:
+  - **Rapid vertical scanning**: 5 downward scrolls (0.37s–1.63s) covering 1,005px in 1.26s (avg. 800px/s), followed by 8 upward scrolls (0.82s–3.4s) covering 630px in 2.58s (avg. 244px/s).
+  - **No dwell time**: No pauses >200ms on any scroll segment. Max depth (1,005px) suggests the page is ~1,200–1,500px tall, but the user only briefly glimpsed the bottom 20%.
+  - **Field skipping**: Jumps from "Card Number" (323px) to "Email" (173px) without intermediate field interaction (e.g., "Name," "Expiry Date"), implying visual scanning for specific targets.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: This is a checkout flow, so "voting/commenting" analogs don’t apply. Instead:
+  - **Input-focused**: 6/14 non-scroll actions target form fields (Card Number, Email).
+  - **Button mashing**: 4 "RAGE CLICK" events (4.1s–4.46s) on "Cart Summary" (3 clicks in 320ms), suggesting frustration or UI unresponsiveness.
+  - **No completion**: No form submission or successful navigation to "Back to Shop" (despite clicking it).
+
+4. INTERACTION SPEED
+- **Hyper-fast with micro-hesitations**:
+  - **Action frequency**: 24 actions in 4.5s → **5.3 actions/second**.
+  - **Hover delays**: 317ms (initial hesitation), 101ms (Card Number), 152ms (Email), 176ms (Back to Shop), 133ms (Pay Now), 83ms (Cart Summary). Hovers are brief but present, indicating deliberate targeting.
+  - **Click latency**: 20–200ms between hover and click (e.g., 101ms hover → 0.65s click on Card Number).
+  - **Scroll speed**: 160–170px/s downward, 120–130px/s upward (consistent with mouse wheel use).
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: All interactions target:
+  - **Payment fields**: Card Number (2 clicks), Email (2 clicks).
+  - **Navigation controls**: "Back to Shop" (2 clicks), "Pay Now" (2 clicks).
+  - **Cart Summary**: 4 clicks (including rage clicks).
+- **No product/content engagement**: Zero interaction with product listings, descriptions, or ancillary UI (e.g., promo codes, shipping options).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Despite clicking input fields (Card Number, Email), there are no logged keystrokes, corrections, or input durations. Possible explanations:
+  - **Autofill failure**: User clicked fields but didn’t type (e.g., expecting autofill).
+  - **Synthetic session**: "Power_user" profile may simulate clicks without actual input.
+  - **Logging gap**: PostHog may not capture keystrokes in this session.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Core checkout fields**: Card Number, Email.
+  - **Primary CTAs**: "Pay Now," "Back to Shop."
+  - **Cart Summary**: Clicked but not expanded (no evidence of dropdown/accordion interaction).
+- **Ignored features**:
+  - **Secondary fields**: Name, Expiry Date, CVV, Billing Address (no clicks/scrolls).
+  - **Support elements**: Help links, FAQs, chat widgets (no hover/clicks).
+  - **Promotional UI**: No interaction with banners, discounts, or upsells.
+
+8. SESSION FLOW
+- **Arc**: **Frustration-driven abandonment** with 4 distinct phases:
+  1. **Initial scan (0.0s–0.65s)**:
+     - Loads page → hesitates (317ms) → scrolls downward (161px → 323px) to locate "Card Number."
+  2. **Field targeting (0.65s–2.0s)**:
+     - Clicks "Card Number" (0.65s) → "Email" (1.16s) → scrolls to bottom (1,005px) to find "Back to Shop."
+     - **Pattern**: Jumps between unrelated fields, suggesting either:
+       - Confusion about form order.
+       - Testing field validation (e.g., clicking to trigger errors).
+  3. **Escape attempt (2.0s–3.09s)**:
+     - Clicks "Back to Shop" (2.0s) but remains on page → scrolls upward (1,005px → 715px) → clicks "Pay Now" (2.84s).
+     - **Behavior**: Attempts to exit, then re-engages with primary CTA, possibly after realizing "Back to Shop" didn’t work.
+  4. **Rage quit (3.09s–4.5s)**:
+     - Scrolls upward (715px → 375px) → 4 rapid clicks on "Cart Summary" (4.1s–4.46s), including 3 rage clicks.
+     - **Exit**: Session ends abruptly; no further actions logged.
+- **Key observations**:
+  - **No task completion**: User never submits the form or navigates away.
+  - **Cyclic behavior**: Repeatedly returns to "Pay Now" and "Cart Summary" without progress.
+  - **UI unresponsiveness**: Rage clicks imply the UI failed to register actions (e.g., "Back to Shop" didn’t trigger navigation).
+```
+
+**SUMMARY**: This is a **high-speed, synthetic test session** exhibiting **frustration-driven abandonment**. The user’s actions suggest they were either:
+- **Testing UI responsiveness** (e.g., form validation, button functionality), or
+- **Simulating a failed checkout flow** (e.g., for QA purposes).
+
+Key red flags:
+- **Zero form completion** despite field clicks.
+- **Rage clicks** on "Cart Summary" (4 clicks in 360ms).
+- **No typing** in input fields.
+- **Cyclic navigation** between "Pay Now" and "Back to Shop."
+
+**Hypothesis**: This may be an automated script or power user deliberately stress-testing the checkout UI. The 4.5s duration and lack of organic behavior (e.g., typing, pauses) support this.

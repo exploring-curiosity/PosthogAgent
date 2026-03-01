@@ -1,0 +1,77 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly exploratory with repeated validation loops
+- **Movement**: Non-linear, cyclical, and fragmented. User revisits 4/6 major sections (Testimonials, Features, Footer, Hero, Navigation) at least twice each.
+- **Quantitative evidence**:
+  - 6 distinct section jumps (e.g., Testimonials → Features → Footer → Hero → Navigation)
+  - 4 "hesitation" clicks (3.91s, 8.73s, 16.21s, 22.17s, 30.25s) where user pauses before re-engaging
+  - 100% of sections clicked were re-clicked after initial hover (avg 2.8s delay between hover and click)
+
+2. READING BEHAVIOR
+- **Style**: Rapid skimming with targeted deep dives
+- **Scroll patterns**:
+  - **Skim**: 18 scroll actions in 12.4s (avg 0.69s per scroll), covering 184px–998px depth
+  - **Deep dive**: Only 2 sustained pauses (1.5s at Testimonials, 1.8s at Features) before re-scrolling
+  - **Direction**: 67% downward (exploration), 33% upward (re-validation)
+- **Content engagement**: No evidence of reading body text—only headers/section titles clicked
+
+3. ENGAGEMENT STYLE
+- **Actions**: Clicks only (no typing, voting, or commenting detected)
+- **Speed**: Deliberate with premeditation
+  - Avg 1.6s hover before click (range: 1.2s–2.9s)
+  - 5/12 clicks preceded by "hesitation" (avg 2.36s pause)
+- **Ratio**: N/A (no voting/commenting observed)
+
+4. INTERACTION SPEED
+- **Tempo**: Slow and methodical
+  - Avg 2.87s between actions (excluding scrolls)
+  - 3.91s initial hesitation (longest pause)
+  - 0.5s scroll bursts (consistent speed)
+- **Outliers**:
+  - Fastest: 0.03s between scrolls (4.0s–4.1s)
+  - Slowest: 2.91s hesitation (8.73s)
+
+5. CONTENT PREFERENCES
+- **Gravitated toward**:
+  - **Social proof**: Testimonials (2 clicks, 1.5s hover)
+  - **Features**: Features section (2 clicks, 1.8s hover)
+  - **Navigation**: Primary nav (2 clicks, 1.8s hover)
+  - **CTA**: "Get Started" button (2 clicks, 1.5s hover)
+- **Ignored**:
+  - Body copy (no clicks/text selection)
+  - Images/media (no hover/clicks on non-text elements)
+  - Secondary CTAs (e.g., no "Learn More" clicks)
+
+6. TYPING BEHAVIOR
+- **Observed**: None
+  - No form inputs, search queries, or text entry detected
+  - No corrections or typing pauses measurable
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Section headers (Testimonials, Features, Footer)
+  - Primary navigation
+  - Hero title (repeated clicks)
+  - Primary CTA button ("Get Started")
+- **Ignored**:
+  - Search functionality (no clicks)
+  - Interactive elements (no tooltips, dropdowns, or filters)
+  - Footer links (only clicked "Footer" header, not sub-links)
+  - Sidebars/secondary menus (no engagement)
+
+8. SESSION FLOW
+- **Arc**: Exploration → Validation → Re-exploration → Exit
+  - **0–5.82s**: Rapid initial scan (4 scrolls, 1 hesitation)
+  - **5.82–13.33s**: Targeted validation (Testimonials → Features, 2 hesitations)
+  - **13.33–25.47s**: Re-exploration (Footer → Hero, 2 hesitations)
+  - **25.47–34.36s**: Navigation → CTA (3 hesitations, 2 clicks on "Get Started")
+- **Exit**: Abrupt (no final hesitation, last action at 34.36s)
+- **Key transitions**:
+  - 11.15s: Re-clicks Testimonials after 2.4s hesitation
+  - 25.47s: Jumps from Footer to Hero (non-linear)
+  - 31.38s: Returns to Navigation after CTA hover
+```
+
+**SUMMARY**: This user exhibits a **cautious, validation-driven exploration style** with high hesitation, repeated section visits, and no deep content engagement. Their behavior suggests **evaluation of trust signals** (Testimonials, Features) before committing to a CTA, but their exit without conversion implies unresolved concerns. Scroll patterns indicate **skimming for structure**, not content. No typing or interactive engagement was detected.

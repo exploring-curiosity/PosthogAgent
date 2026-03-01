@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Scattered with repetitive validation
+- **Evidence**:
+  - Repeated clicks on the same elements after hesitation (e.g., "Stats Cards" clicked at 3.79s and again at 7.13s; "Export" at 9.01s and 13.56s; "Sidebar" at 14.75s and 18.11s; "Chart" at 19.81s and 22.21s; "Data Table" at 23.31s and 28.0s).
+  - 6/14 non-scroll actions (43%) were duplicate clicks on the same UI element within seconds.
+  - No linear progression through features; jumps between unrelated sections (e.g., from "Export" to "Sidebar" to "Chart" to "Data Table").
+  - Max scroll depth (827px) suggests partial exploration of long-form content, but with frequent backtracking (e.g., scrolled up from 483px to 373px at 18.18–18.29s).
+
+2. READING BEHAVIOR
+- **Pattern**: Skimming with minimal deep reading
+- **Evidence**:
+  - Scroll speed: 43–87px over 0.5s (2.5s total to reach 87px), then 87–483px over 1.0s (13.62–13.69s), and 373–827px over 1.1s (22.26–22.44s). Average scroll rate: ~300px/s.
+  - Max depth (827px) reached in 22.44s, but no sustained pauses (e.g., no >1s dwell time on any scroll segment).
+  - No evidence of reading static text (e.g., no clicks on paragraphs or hover pauses on text blocks).
+  - Focus on interactive elements (cards, buttons, tables) rather than content.
+
+3. ENGAGEMENT STYLE
+- **Pattern**: No voting/commenting; only UI interaction
+- **Evidence**:
+  - **Actions**: 100% of clicks targeted UI controls ("Stats Cards," "Export," "Sidebar," "Chart," "Data Table").
+  - **Timing**: Hesitations (2394ms, 2469ms, 1818ms, 833ms, 1976ms) precede all primary clicks, suggesting deliberation but no content creation.
+  - **Ratio**: N/A (no votes or comments observed).
+
+4. INTERACTION SPEED
+- **Pattern**: Deliberate with high hesitation
+- **Evidence**:
+  - **Hesitation metrics**: 5/14 non-scroll actions (36%) preceded by >800ms pauses (avg: 1,645ms).
+  - **Action intervals**:
+    - Fastest: 67ms (scroll increments at 18.18–18.29s).
+    - Slowest: 3,470ms (between "Export" click at 9.01s and next hesitation at 10.83s).
+    - Median interval: 1,730ms (excluding scrolls).
+  - **Hover times**: 949ms ("Stats Cards"), 1746ms ("Export"), 971ms ("Sidebar"), 1336ms ("Chart"), 768ms ("Data Table"). Avg hover: 1,154ms.
+
+5. CONTENT PREFERENCES
+- **Pattern**: Functional UI elements over content
+- **Evidence**:
+  - **Gravitated toward**:
+    - **Data visualization**: "Stats Cards" (2 clicks), "Chart" (2 clicks).
+    - **Data export**: "Export" button (2 clicks).
+    - **Navigation**: "Sidebar" (2 clicks).
+    - **Tabular data**: "Data Table" (2 clicks).
+  - **Ignored**:
+    - Static text (no clicks on paragraphs, headings, or non-interactive content).
+    - No evidence of filtering, sorting, or detailed data inspection (e.g., no clicks on table rows/cells).
+
+6. TYPING BEHAVIOR
+- **Pattern**: No typing observed
+- **Evidence**:
+  - No text inputs, search queries, or form submissions detected.
+  - All actions were clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - **Primary features**: "Stats Cards," "Export," "Sidebar," "Chart," "Data Table."
+  - **Interaction depth**: All features clicked exactly twice (suggesting validation rather than exploration).
+- **Ignored**:
+  - **Navigation**: No clicks on top-level menu items (e.g., no "Home," "Settings," or other sidebar links beyond the initial click).
+  - **Content**: No interaction with non-interactive elements (e.g., no clicks on images, descriptions, or help text).
+  - **Advanced features**: No evidence of tooltips, modals, or secondary actions (e.g., no "Share," "Filter," or "Sort" clicks).
+
+8. SESSION FLOW
+- **Arc**: Validation-driven exploration → Abrupt exit
+- **Phases**:
+  1. **Initial Hesitation (0–2.39s)**:
+     - Page load; 2.39s pause before first action (suggests unfamiliarity or caution).
+  2. **Superficial Exploration (2.39–13.62s)**:
+     - Clicks "Stats Cards" (3.79s), "Export" (9.01s), and "Sidebar" (14.75s) with high hesitation.
+     - Scrolls to 483px but no deep engagement.
+  3. **Repetitive Validation (13.62–28.0s)**:
+     - Repeats clicks on all previously interacted features ("Export," "Sidebar," "Chart," "Data Table").
+     - Scrolls to max depth (827px) but no new features discovered.
+     - Session ends immediately after second "Data Table" click (no exit confirmation or additional actions).
+- **Exit**: No gradual disengagement; abrupt termination after final click.
+```
+
+**SUMMARY**: This user exhibits a **cautious, validation-driven interaction style** with no content creation or deep reading. Their behavior is characterized by **repetitive clicks on the same UI elements** (6/14 actions), **high hesitation** (avg 1,645ms before clicks), and **rapid skimming** (scroll rate ~300px/s). They prioritize **functional features** (export, navigation, data visualization) over content, suggesting a **task-oriented but indecisive** approach. The session ends abruptly after 28s, with no evidence of goal completion.

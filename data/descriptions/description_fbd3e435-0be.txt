@@ -1,0 +1,59 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and sequential**: The user follows a clear, linear progression through dashboard components (Sidebar → Stats Cards → Chart → Data Table → Export).
+- **Vertical scanning**: Scrolls systematically in 150–200px increments (e.g., 0→225px, 225→450px) with no jumps or backtracking during initial exploration.
+- **No exploratory detours**: All clicks target distinct UI sections in a predictable order; no random clicks or abandoned paths.
+
+2. READING BEHAVIOR
+- **Skim-focused**: Scrolls at a consistent 300–450px/s (e.g., 225→450px in 0.5s), suggesting rapid visual scanning rather than deep reading.
+- **No dwell time**: Max scroll depth per section is reached within 0.5s (e.g., 450→675px at 0.98s), with no pauses >1s on any content block.
+- **Revisitation**: Returns to prior sections (e.g., scrolls up from 768px to 86px at 8.11–8.34s) but only after completing a full downward pass.
+
+3. ENGAGEMENT STYLE
+- **Click-only interaction**: No evidence of typing, voting, or commenting. All actions are clicks or scrolls.
+- **Hover-before-click pattern**: Every click is preceded by a hover (mean hover duration: 474ms; range: 303–652ms).
+- **No multi-click engagement**: Each UI element is clicked exactly twice (hover + click), with no repeated interactions (e.g., no double-clicks or drags).
+
+4. INTERACTION SPEED
+- **Deliberate but efficient**: Mean time between actions: 1.12s (excluding scrolls). Key intervals:
+  - 0.82s: Initial hesitation (821ms pause before first click).
+  - 0.84s: Between scrolls (e.g., 0.87–0.91s).
+  - 0.96s: Between clicks (e.g., 1.66–2.68s for Sidebar).
+- **No rushed actions**: Longest pause: 1.08s (4.91–5.99s) before Chart click.
+
+5. CONTENT PREFERENCES
+- **Dashboard components only**: Interacted exclusively with:
+  - Sidebar (2 clicks at 1.66s/2.68s).
+  - Stats Cards (2 clicks at 3.36s/4.23s).
+  - Chart (2 clicks at 4.91s/5.99s).
+  - Data Table (2 clicks at 7.04s/8.06s).
+  - Export button (2 clicks at 9.15s/9.99s).
+- **No content exploration**: Ignored all other page elements (e.g., no clicks on headers, footers, or non-interactive text).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, input fields, or text entry actions logged.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Vertical scrolling (12 scroll actions, 6 up/6 down).
+  - Click interactions (10 clicks: 5 hover + 5 primary).
+  - Export functionality (final action at 9.99s).
+- **Ignored features**:
+  - No search, filters, or navigation menus.
+  - No tooltips, dropdowns, or contextual menus.
+  - No mobile-specific features (e.g., hamburger menus).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0–1.66s)**
+  - Loads dashboard, hesitates (821ms), then scrolls downward in 3 rapid increments (0→675px).
+- **Phase 2: Targeted Interaction (1.66–9.99s)**
+  - Clicks Sidebar (1.66s), Stats Cards (3.36s), Chart (4.91s), and Data Table (7.04s) in sequence.
+  - Each click is preceded by a hover (mean 474ms) and followed by a scroll to adjust viewport.
+- **Phase 3: Exit (9.15–9.99s)**
+  - Scrolls upward to top (768→86px), hovers (632ms), then clicks Export twice (9.15s/9.99s).
+  - Session ends at 10.0s with no further actions.
+```
+
+**Summary**: A highly methodical, task-driven user who systematically scans and interacts with dashboard components in a linear sequence, prioritizing efficiency over exploration. No deep reading or content creation; likely a synthetic test or automated script given the precise timing and lack of variability.

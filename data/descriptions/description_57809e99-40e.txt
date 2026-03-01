@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with repetitive validation**: The user follows a strict top-to-bottom progression through the page (landing → navigation → hero → features → testimonials → footer). However, they repeatedly click the same UI elements (e.g., "Hero Title" twice, "Get Started" twice, "Features" twice, "Testimonials" twice) with near-identical coordinates, suggesting a methodical re-validation of each section rather than exploration.
+- **No deviation**: No lateral movement (e.g., no clicks on sidebars, dropdowns, or secondary links). All interactions are confined to primary page sections in sequential order.
+
+2. READING BEHAVIOR
+- **Skim-heavy with micro-depth checks**: Scroll patterns show rapid, incremental downward movement (4–5 scrolls per second, each covering ~40–120px) with no upward revisits. This indicates skimming rather than deep reading.
+  - **Scroll velocity**: ~80–120px/s (e.g., 45px → 91px in 0.5s).
+  - **Max depth**: 984px (footer), but no pauses >1s at any depth, suggesting no sustained reading.
+- **Hover-based previews**: All primary clicks are preceded by hovers (344–767ms), indicating the user previews content before interaction but does not linger.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, form submissions, or other participatory actions. All interactions are navigational (clicks, scrolls).
+- **Hesitation markers**: Three instances of "[HESITATION Xms]" clicks (1.11s, 6.76s, 12.74s, 17.69s) with delays of 1112–2852ms, likely representing pauses for decision-making or synthetic input (e.g., scripted delays).
+- **Click redundancy**: 100% of primary UI elements (hero title, CTA button, features, testimonials, footer) are clicked twice—once after hover, once immediately after. This suggests a validation step (e.g., testing clickability) rather than organic engagement.
+
+4. INTERACTION SPEED
+- **Bimodal timing**:
+  - **Fast sequences**: Scrolls and secondary clicks occur in rapid bursts (0.5–1.0s intervals, e.g., 2.78s–3.04s for 5 scrolls).
+  - **Deliberate pauses**: Primary clicks are preceded by 470–767ms hovers and followed by 1.1–2.9s hesitations (e.g., 4.08s click → 6.76s hesitation).
+- **Action intervals**:
+  - Short: 0.07–0.5s (scrolls, redundant clicks).
+  - Long: 1.1–2.9s (hesitations, hover-to-click transitions).
+
+5. CONTENT PREFERENCES
+- **Structural over substantive**: The user interacts exclusively with page architecture (navigation, hero title, CTA, section headers, footer) rather than content (e.g., no clicks on feature descriptions, testimonial text, or links).
+- **No content differentiation**: All section headers ("Features," "Testimonials") are treated identically—hovered, clicked twice, then scrolled past. No preference signals.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text inputs, corrections, or form interactions. All actions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Navigation menu (clicked at 1.59s, 2.71s).
+  - Hero section (title clicked at 4.08s, 7.88s; CTA button at 8.85s, 9.92s).
+  - Features section (header clicked at 11.04s, 13.92s).
+  - Testimonials section (header clicked at 14.84s, 18.44s).
+  - Footer (clicked at 19.44s, 20.55s).
+- **Ignored features**:
+  - No interaction with secondary navigation, dropdowns, search bars, or interactive elements (e.g., carousels, accordions).
+  - No clicks on images, links, or body text.
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0–4.08s)**
+  - Loads landing page, clicks navigation twice (validation?), scrolls 229px in 0.3s bursts.
+  - **Key action**: Hovers hero title for 767ms before first click.
+- **Phase 2: Validation Loop (4.08–11.04s)**
+  - Repeats clicks on hero title (4.08s, 7.88s) and CTA button (8.85s, 9.92s), with 2.7s hesitation between.
+  - Scrolls deeper (229px → 454px) in 1.5s.
+- **Phase 3: Section-by-Section Check (11.04–20.55s)**
+  - Methodically clicks each section header (Features, Testimonials, Footer) twice, with 1.7–2.9s hesitations.
+  - Scrolls to max depth (984px) in 4.5s, no upward movement.
+- **Exit**: Session ends immediately after final footer click (20.55s).
+
+---
+
+SUMMARY PROFILE
+- **Behavioral archetype**: Synthetic/methodical validator (likely automated or scripted).
+  - **Evidence**:
+    - Perfectly linear top-to-bottom flow with no exploration.
+    - Identical redundant clicks (2x per element) with precise coordinate repetition.
+    - Hover durations and hesitation times suggest programmed delays.
+    - No organic engagement (typing, content interaction, or deviation).
+- **Purpose**: Appears to test page structure (clickability, scroll depth) rather than user experience.
+- **Anomalies**:
+  - "[HESITATION Xms]" clicks at (0,0) coordinates (non-UI elements) may indicate synthetic event injection.
+  - No mouse movement data beyond clicks/scrolls (unusual for human sessions).
+```

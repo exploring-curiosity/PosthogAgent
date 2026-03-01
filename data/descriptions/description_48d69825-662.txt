@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: CHECKOUT SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Non-linear, hesitant, and exploratory with repeated backtracking**
+  - Initial page load (0.0s) is followed by 4.79s of inactivity ("HESITATION 4790ms") before first interaction.
+  - Repeated clicks on the same elements (e.g., "Cart Summary" at 6.1s and 10.81s; "Back to Shop" at 22.19s and 25.04s; "Pay Now" at 28.0s and 31.38s).
+  - Scrolling is **segmented and incremental**, with rapid bursts (e.g., 14.1s–14.36s: 5 scrolls in 0.26s covering 130px; 20.31s–20.46s: 4 scrolls in 0.15s covering 713px).
+  - **Dead click** at 25.72s (div at (795, 1660)) suggests misaligned expectations or accidental interaction.
+  - **No linear progression**: User jumps between form fields ("Email" → "Card Number" → "Pay Now") and navigational elements ("Back to Shop").
+
+2. READING BEHAVIOR
+- **Skim-heavy with minimal deep reading**
+  - **Scroll depth**: Max depth of 982px (viewport: 1080px), but most interactions occur in the top 300px (e.g., "Email" at 136px, "Card Number" at 269px).
+  - **Scroll speed**: Rapid downward scrolls (e.g., 20.31s–20.46s: 713px in 0.15s = ~4,753px/s) and upward scrolls (e.g., 25.76s–25.92s: 237px in 0.16s = ~1,481px/s) suggest **skimming for visual anchors** (e.g., buttons, form fields) rather than reading content.
+  - **Hover times**: Prolonged hovers (e.g., "Card Number" [1596ms], "Pay Now" [1968ms]) indicate **visual scanning** before committing to clicks, but no evidence of reading surrounding text (e.g., terms, disclaimers).
+
+3. ENGAGEMENT STYLE
+- **N/A**: This is a checkout session, not a social platform. No voting, commenting, or content creation observed.
+  - **Form interaction**: Attempts to engage with checkout fields ("Email," "Card Number") but **no successful input submission** (no keystrokes logged).
+  - **Navigational engagement**: Repeated clicks on "Back to Shop" (22.19s, 25.04s) suggest **abandonment intent** or **exploration of alternatives**.
+
+4. INTERACTION SPEED
+- **Deliberate but inconsistent**
+  - **Average time between actions**: 1.85s (excluding hesitations).
+  - **Hesitation clusters**:
+    - 4.79s (initial hesitation), 8.64s (2536ms), 17.37s (1314ms), 23.01s (822ms), 28.65s (653ms).
+    - **Longest pauses** occur before critical actions ("Card Number" [1596ms hover], "Pay Now" [1968ms hover]).
+  - **Fast interactions**: Scroll bursts (e.g., 14.1s–14.36s: 5 scrolls in 0.26s) and repeated clicks on the same element (e.g., "Cart Summary" at 6.1s and 10.81s, 4.71s apart).
+
+5. CONTENT PREFERENCES
+- **N/A**: No content consumption (e.g., articles, videos) logged. Focus is on **transactional elements**:
+  - **Form fields**: "Email" (11.93s, 14.04s), "Card Number" (16.06s, 20.24s).
+  - **Navigational**: "Cart Summary" (6.1s, 10.81s), "Back to Shop" (22.19s, 25.04s).
+  - **Primary goal**: "Pay Now" (28.0s, 31.38s), but **no completion**.
+
+6. TYPING BEHAVIOR
+- **No typing detected**
+  - Clicks on input fields ("Email," "Card Number") but **no keystrokes or input values** logged.
+  - **No corrections or deletions** observed (unsurprising given lack of input).
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Cart Summary**: Clicked twice (6.1s, 10.81s), likely to review items/pricing.
+  - **Form fields**: "Email" and "Card Number" (interacted with but not populated).
+  - **Primary CTA**: "Pay Now" (clicked twice, 28.0s and 31.38s).
+  - **Secondary CTA**: "Back to Shop" (clicked twice, 22.19s and 25.04s).
+- **Ignored features**:
+  - **No interaction** with:
+    - Shipping/billing address fields (if present).
+    - Promo code fields, terms/conditions, or help links.
+    - Any dynamic elements (e.g., dropdowns, tooltips).
+  - **Dead click** (25.72s) suggests **unexpected UI behavior** (e.g., missing element, misaligned click target).
+
+8. SESSION FLOW
+- **Arc**: **Hesitant exploration → Aborted engagement → Navigational retreat**
+  1. **Initial hesitation (0.0s–4.79s)**:
+     - Page load → 4.79s pause (likely scanning layout).
+  2. **Superficial engagement (4.86s–14.36s)**:
+     - Minimal scrolling (0px → 269px) and clicks on "Cart Summary" and "Email."
+     - **No deep interaction** (e.g., no form completion).
+  3. **Frustration/abandonment (16.06s–25.04s)**:
+     - Prolonged hover on "Card Number" (1596ms) → click → rapid scrolling (269px → 982px in 0.15s).
+     - Clicks "Back to Shop" (22.19s, 25.04s), suggesting **intent to exit checkout**.
+  4. **False recovery (25.72s–31.38s)**:
+     - Dead click (25.72s) and upward scrolling (982px → 745px) indicate **re-evaluation**.
+     - Final clicks on "Pay Now" (28.0s, 31.38s) but **no submission** (session ends at 31.4s).
+- **Exit**: Session terminates **without completion**, likely due to **abandonment** or **technical interruption**.
+```
+
+### Key Observations:
+- **High friction**: Repeated hesitations, dead clicks, and backtracking suggest **usability issues** (e.g., unclear form fields, lack of trust signals, or unexpected layout).
+- **No conversion**: Despite multiple attempts, **no form data was entered**, and the "Pay Now" button was clicked but not submitted.
+- **Scrolling as a proxy for intent**: Rapid scrolls correlate with **searching for an exit** ("Back to Shop") or **re-evaluating the page** (upward scrolls post-dead click).

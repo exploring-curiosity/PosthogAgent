@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with rapid exploration**: The user exhibits a non-linear, erratic navigation pattern with no clear progression through content. They jump between unrelated sections (footer → nav → features → testimonials → hero title → CTA) in under 7 seconds.
+- **Extreme viewport coverage**: Scrolls span the full page depth (0px → 994px → 24px → 820px → 211px) with no sustained focus on any section. 75% of scroll actions (9/12) occur in <0.5s bursts.
+- **No content consumption**: Zero dwell time on any section suggests no actual reading/viewing. All interactions are structural (nav, footer) or surface-level (clicks on titles/buttons).
+
+2. READING BEHAVIOR
+- **No reading detected**: Scroll patterns indicate skimming at best, but likely just mechanical navigation:
+  - 12 scroll actions in 7.1s (1.7 scrolls/second)
+  - Average scroll distance: 315px (≈3 viewport heights) per 0.5s
+  - No pauses >200ms between scrolls (typical reading speed requires ~250ms/word)
+- **Visual scanning only**: Hover times (77–176ms) are too brief for cognitive processing (typical hover-to-read threshold: 300ms+).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or form submissions detected.
+- **Frustration signals**:
+  - **Rage clicks**: 5 consecutive clicks on "Features" (2.7s–3.11s) with <100ms intervals (typical human reaction time: 150ms+).
+  - **Hesitation**: Two instances of delayed clicks (309ms at 0.31s; 2214ms at 6.92s) on non-interactive areas (0,0 coordinates).
+- **Interaction ratio**: 18 clicks in 7.1s (2.5 clicks/second), but 100% are structural (navigation) or error-related (rage clicks).
+
+4. INTERACTION SPEED
+- **Hyper-accelerated**: Median time between actions: 180ms (human threshold for deliberate action: ~300ms).
+  - Fastest sequence: 5 rage clicks in 430ms (2.3 clicks/second).
+  - Slowest deliberate action: 2214ms hesitation (6.92s), likely a script timeout or forced delay.
+- **Mechanical precision**: Click coordinates are pixel-perfect (e.g., (1919,994) → (1917,989) in 190ms), suggesting automated input.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: All clicks target structural elements:
+  - **Navigation**: 2 clicks (1.4s, 1.73s)
+  - **Footer**: 2 clicks (0.79s, 0.98s)
+  - **Features section**: 7 clicks (2.22s–3.11s, including rage clicks)
+  - **Testimonials**: 2 clicks (3.61s, 3.71s)
+  - **Hero title**: 2 clicks (4.24s, 4.34s)
+  - **CTA button**: 2 clicks (4.71s, 7.07s)
+- **No thematic preference**: No content blocks (e.g., articles, images) were interacted with.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero form inputs, search queries, or text entry events in the log.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Navigation menu (1.4s)
+  - Footer links (0.79s)
+  - Features section (2.22s)
+  - Testimonials section (3.61s)
+  - Hero title (4.24s)
+  - Primary CTA ("Get Started") (4.71s)
+- **Ignored features**:
+  - Any content below surface-level titles (e.g., no clicks on body text, images, or secondary CTAs).
+  - Interactive elements (e.g., no dropdowns, modals, or tooltips triggered).
+  - Search functionality (no search bar interactions).
+
+8. SESSION FLOW
+- **Phase 1: Structural Reconnaissance (0.0s–1.78s)**
+  - Loads page → immediate footer click → rapid scroll to bottom → scroll back to top → nav click.
+  - **Goal**: Map page layout (footer → nav → content hierarchy).
+  - **Duration**: 1.78s (25% of session).
+- **Phase 2: Surface-Level Interaction (1.78s–4.71s)**
+  - Scrolls to "Features" → rage clicks → scrolls to "Testimonials" → scrolls back to hero title.
+  - **Goal**: Test interactive elements (all clicks fail to trigger expected outcomes, e.g., no page transitions).
+  - **Duration**: 2.93s (41% of session).
+- **Phase 3: Forced Conversion Attempt (4.71s–7.07s)**
+  - Clicks CTA → 2214ms hesitation → final CTA click.
+  - **Goal**: Complete primary conversion action (likely scripted).
+  - **Duration**: 2.36s (33% of session).
+- **Exit**: Session ends immediately after final CTA click.
+
+KEY OBSERVATIONS:
+- **Automation indicators**:
+  - Sub-200ms reaction times (e.g., 71ms hover on CTA).
+  - Pixel-perfect click coordinates (e.g., (1806,24) → (1805,23)).
+  - No reading/scrolling pauses.
+- **Frustration artifacts**:
+  - Rage clicks on "Features" (5x in 430ms).
+  - Hesitation delays (309ms, 2214ms) on non-interactive areas.
+- **No human-like behavior**: Zero content engagement, no typing, no sustained attention.
+```
+
+**Conclusion**: This session is 100% synthetic (bot/script). The "power_user" device label, mechanical interaction speed, and lack of human cognitive patterns (reading, typing, deliberation) confirm automated testing or scraping activity. No valid user behavior can be inferred.

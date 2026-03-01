@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with forced repetition**: The user follows a strict top-to-bottom path (landing → nav → hero → CTA → features → testimonials → footer) but repeatedly clicks the same UI elements twice in rapid succession (e.g., nav at 2.09s/2.64s, hero title at 3.3s/3.73s, CTA at 4.5s/5.63s). This suggests either a scripted test or a user compensating for perceived unresponsiveness.
+- **No lateral exploration**: Zero clicks on sidebars, dropdowns, or secondary links; all interactions are on primary vertical flow elements.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth increases in uniform 30–90px increments (e.g., 0→28px at 2.68s, 28→56px at 2.71s) with no pauses >500ms. Average scroll speed = 60px/s (consistent across all scroll actions).
+- **No deep reading**: Max scroll depth = 993px (footer), but no single element held focus >677ms (longest hover on "Testimonials"). No backtracking or re-reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: Zero votes, comments, or form submissions detected. All clicks are on static page elements (nav, headings, buttons).
+- **Click redundancy**: 100% of primary UI elements (nav, hero title, CTA, features, testimonials, footer) are clicked twice within 1.3s (e.g., "Get Started" at 4.5s and 5.63s). Ratio of first-click to second-click latency = 1.12s (σ=0.21s).
+- **Hesitation markers**: Two "[HESITATION]" clicks at (0,0) (1.16s and 7.91s) totaling 2.485s of inactivity before proceeding.
+
+4. INTERACTION SPEED
+- **Accelerating then plateauing**: Initial hesitation (1.16s to first click), then average inter-action time = 0.98s (σ=0.42s) for the first 6 actions. Post-4.5s, speed stabilizes at 1.1s/action.
+- **Hover-to-click latency**: Mean hover duration = 572ms (σ=198ms) before clicks. Longest hover = 1325ms ("[HESITATION]" at 7.91s).
+- **Dead click**: Final action at 12.95s is a "[DEAD CLICK]" at (1693,1355) — likely an attempt to interact with content below the viewport (max scroll = 993px).
+
+5. CONTENT PREFERENCES
+- **Structural over substantive**: All clicks target layout elements (nav, headings, buttons, sections) rather than content. No clicks on images, links, or body text.
+- **Hierarchical focus**: Interactions follow a strict priority order:
+  1. Navigation (2.09s)
+  2. Hero section (3.3s)
+  3. Primary CTA (4.5s)
+  4. Features (6.58s)
+  5. Testimonials (9.67s)
+  6. Footer (11.62s)
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero form inputs, search queries, or text entry. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation menu (2.09s)
+  - Hero title (3.3s)
+  - Primary CTA button (4.5s)
+  - Features section (6.58s)
+  - Testimonials section (9.67s)
+  - Footer (11.62s)
+- **Ignored features**:
+  - Search bars, sidebars, or tertiary links (no interactions)
+  - Interactive elements (e.g., carousels, accordions, modals)
+  - Social sharing or secondary CTAs
+
+8. SESSION FLOW
+- **Phase 1 (0–2.09s): Orientation**
+  - 1.16s hesitation before first click (nav).
+  - Minimal scroll (0–142px) to establish page structure.
+- **Phase 2 (2.09–5.63s): Primary Engagement**
+  - Clicks on nav, hero title, and CTA in 3.54s.
+  - Scroll speed = 60px/s; no pauses >500ms.
+- **Phase 3 (5.63–10.82s): Secondary Exploration**
+  - Focus shifts to features (6.58s) and testimonials (9.67s).
+  - Scroll depth increases to 777px; still no deep reading.
+- **Phase 4 (10.82–12.95s): Exit Preparation**
+  - Footer interaction (11.62s) followed by dead click (12.95s).
+  - No return to top or re-engagement with prior sections.
+- **Termination**: Session ends with a dead click below the viewport, suggesting either:
+  - A scripted test concluding, or
+  - User frustration from unresponsive elements (evidenced by double-clicks).
+```
+
+**Key Anomalies**:
+- **Double-clicks**: 6/12 primary interactions are repeated within 1.3s (likely a script or user testing responsiveness).
+- **Dead click**: Final action targets coordinates (1693,1355) — 362px below the max scroll depth (993px), indicating a misaligned expectation of content.
+- **No organic behavior**: Zero typing, no lateral exploration, and uniform scroll speed suggest a synthetic or highly methodical user.

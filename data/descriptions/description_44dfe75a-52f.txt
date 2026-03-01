@@ -1,0 +1,85 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with targeted frustration**: The user exhibits a non-linear, erratic navigation pattern with repeated cycles of:
+  (a) Rapid scrolling (e.g., 0.23s–0.44s: 4 sequential scrolls covering 68px in 0.21s)
+  (b) Targeted clicks on UI elements (e.g., "Export" button at 0.88s, "Data Table" at 3.49s)
+  (c) Immediate rage-clicking (3+ rapid clicks on the same element within <0.2s) after primary interactions.
+- **No exploratory behavior**: All actions are directed at pre-identified UI components (buttons, tables, charts) with no evidence of lateral discovery (e.g., no clicks on navigation menus, filters, or help links).
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth never exceeds 941px (viewport height: 1080px), suggesting no deep reading. Key indicators:
+  - Initial scrolls (0.23s–0.44s) cover 68px in 0.21s (1.6px/ms), likely scanning headers/section titles.
+  - Later scrolls (3.24s–3.32s) jump from 68px to 941px in 0.08s (10.9px/ms), indicating a "fast-forward" to the table.
+  - No pauses >200ms at any scroll depth (typical for reading).
+- **No content absorption**: Rage-clicks on "Data Table" (3.86s–4.26s) and "Chart" (5.45s–5.94s) occur immediately after initial clicks, suggesting failed expectations rather than engagement with content.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, form submissions, or data input. All interactions are clicks on static UI elements.
+- **Frustration-driven interactions**:
+  - **Rage-click clusters**: 10 rage-clicks across 3 elements ("Export" button, "Data Table," "Chart"), averaging 3.3 rage-clicks per element.
+  - **Hesitation markers**: Two explicit "[HESITATION]" clicks (0.16s, 2.54s) with delays of 160ms and 1660ms, respectively, indicating cognitive friction.
+- **No constructive actions**: All clicks are either navigational (scrolling) or destructive (rage-clicks). No evidence of content creation or modification.
+
+4. INTERACTION SPEED
+- **Bimodal speed distribution**:
+  - **Fast actions**: 68% of interactions occur within <200ms of the previous action (e.g., scrolls at 0.23s–0.44s, rage-clicks at 3.01s–3.24s).
+  - **Deliberate pauses**: Two major hesitations (160ms at 0.16s, 1660ms at 2.54s) and hover delays (187ms at 0.88s, 56ms at 3.49s) suggest targeted but frustrated interactions.
+- **Action frequency**: 30 actions in 6.7s = **4.5 actions/second** (excluding scrolls: 18 clicks in 6.7s = **2.7 clicks/second**).
+
+5. CONTENT PREFERENCES
+- **UI elements over content**: All interactions target functional components, not informational content:
+  - **Buttons**: "Export" (3 clicks, 2 rage-click clusters).
+  - **Data structures**: "Data Table" (8 clicks, 6 rage-clicks), "Chart" (6 clicks, 5 rage-clicks).
+  - **Layout containers**: "Stats Cards" (2 clicks), "Sidebar" (2 clicks).
+- **No content engagement**: No clicks on text, images, or hyperlinks. The user ignores:
+  - Dashboard metrics (no clicks on numeric values or labels).
+  - Navigation (no clicks on sidebar items beyond the initial container).
+  - Help/documentation (no clicks on tooltips, "?" icons, or support links).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The session contains zero keystrokes, form inputs, or text selections. All interactions are mouse-based.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Export functionality**: Clicked at 0.88s, 2.89s (with hesitation and rage-clicks).
+  - **Data Table**: Engaged at 3.49s (with hover and rage-clicks).
+  - **Chart**: Engaged at 5.24s (with hover and rage-clicks).
+  - **Stats Cards**: Clicked at 4.63s (minimal interaction).
+  - **Sidebar**: Clicked at 6.53s (final action).
+- **Ignored features**:
+  - **Filters/search**: No clicks on filter dropdowns, search bars, or sort controls.
+  - **User settings**: No clicks on profile avatars, settings gears, or notification icons.
+  - **Help/support**: No clicks on FAQs, chat widgets, or documentation links.
+  - **Collaborative tools**: No clicks on share buttons, comments, or annotations.
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–0.88s)**
+  - Loads dashboard, immediately scrolls 68px (4 scrolls) in 0.21s to scan layout.
+  - Hesitation click (160ms) at 0.16s suggests confusion.
+  - Targets "Export" button at 0.88s after 187ms hover (first intentional action).
+
+- **Phase 2: First Failure (0.88s–3.49s)**
+  - Clicks "Export" at 0.88s, then hesitates for 1660ms at 2.54s (longest pause).
+  - Rage-clicks "Export" 3 times (3.01s–3.18s), indicating the button failed to respond as expected.
+  - Scrolls rapidly to "Data Table" (3.24s–3.32s: 68px→941px in 0.08s).
+
+- **Phase 3: Second Failure (3.49s–5.24s)**
+  - Clicks "Data Table" at 3.49s (56ms hover), then rage-clicks 6 times (3.86s–4.26s).
+  - Scrolls up to "Stats Cards" (4.3s–4.39s: 941px→129px in 0.09s), clicks twice (4.63s–4.81s).
+
+- **Phase 4: Third Failure (5.24s–6.68s)**
+  - Clicks "Chart" at 5.24s (81ms hover), rage-clicks 5 times (5.45s–5.94s).
+  - Scrolls up to sidebar (6.07s–6.16s: 528px→264px in 0.16s), clicks twice (6.53s–6.68s).
+  - Session ends abruptly at 6.7s with no exit action (e.g., tab close, navigation away).
+
+**OVERALL ARC**:
+The session follows a **frustration-driven failure loop**:
+1. **Target identification** (e.g., "Export" button at 0.88s).
+2. **Interaction attempt** (click).
+3. **Failure** (no response or unexpected outcome).
+4. **Rage-clicking** (3–6 rapid clicks).
+5. **Abandonment** (scroll to next target).
+This cycle repeats 3 times ("Export" → "Data Table" → "Chart") before the user exits. The absence of constructive actions or content engagement suggests the session was task-oriented (e.g., "export data") but terminated due to repeated UI failures.
+```

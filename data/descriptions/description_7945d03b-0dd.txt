@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and sequential, with no backtracking or revisits.
+- Moves through settings categories in strict left-to-right order: Profile → Notifications → Privacy.
+- No exploratory detours; each click targets the next logical menu item.
+- 100% of clicks (6/6) occur on navigation elements (no content interaction).
+
+2. READING BEHAVIOR
+- Minimal reading; skims only.
+- Scroll depth never exceeds 690px (likely just the settings sidebar).
+- Scroll bursts are rapid and uniform:
+  - 0.63–0.78s: 57px total over 150ms intervals (11–12px per 0.5s burst).
+  - 2.85–2.9s: 536px total in two 0.5s bursts (268px/burst).
+  - 4.03–4.18s: 74px total in four 0.5s bursts (18–25px/burst).
+- No pauses >200ms between scrolls; no evidence of content absorption.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or content interaction detected.
+- All engagement is navigational (menu clicks only).
+- Click pattern: Two clicks per menu item (hover + selection), suggesting UI redundancy or hesitation.
+- 0% content engagement (0/6 actions).
+
+4. INTERACTION SPEED
+- Fast but deliberate for navigation:
+  - First click: 580ms hesitation (0.58s).
+  - Menu transitions: 1.5s (Profile→Notifications), 1.46s (Notifications→Privacy).
+  - Hover durations: 255–381ms (mean: 316ms).
+  - Click intervals: 60–84ms between hover and selection (e.g., 2.77s→2.85s).
+- No typing detected.
+
+5. CONTENT PREFERENCES
+- No content interaction; only settings menu items accessed:
+  - Profile (2 clicks, 1.27–2.77s).
+  - Notifications (2 clicks, 3.33–3.99s).
+  - Privacy (2 clicks, 4.77–5.79s).
+- No subreddit or post engagement.
+
+6. TYPING BEHAVIOR
+- No typing detected in 5.8s session.
+- No input fields interacted with.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Settings sidebar navigation (3/3 primary menu items).
+  - Hover states (3/3 items).
+- Ignored features:
+  - Content feed (no scroll beyond sidebar).
+  - Search, user avatar, or other UI elements (no clicks outside sidebar).
+  - Any interactive content (posts, comments, etc.).
+
+8. SESSION FLOW
+- Arc: Navigation-only, no engagement.
+  - 0.0–0.58s: Page load + initial hesitation.
+  - 0.58–1.27s: Minimal scroll (57px) + first click (Profile).
+  - 1.27–3.33s: Profile menu interaction (2 clicks) + rapid scroll (536px).
+  - 3.33–4.77s: Notifications menu interaction (2 clicks) + scroll (74px).
+  - 4.77–5.79s: Privacy menu interaction (2 clicks) + session end.
+- Exit: Abrupt termination after final click (no further actions).
+- No exploration phase; purely utilitarian navigation.
+```
+
+**Key Observations:**
+- Session is likely synthetic (e.g., bot, scanner, or automated test) due to:
+  - Perfectly uniform scroll bursts (0.5s intervals).
+  - No content engagement despite 5.8s duration.
+  - Device labeled "synthetic/scanner."
+- Human-like hesitation (hover delays) but no human-like variability in scroll patterns.

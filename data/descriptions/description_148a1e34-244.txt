@@ -1,0 +1,58 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits non-linear, erratic navigation with repeated interactions on the same elements (e.g., "Cart Summary" clicked twice at [1.36s] and [5.26s]; "Back to Shop" clicked twice at [5.88s] and [9.59s]).
+- **No clear progression**: Actions oscillate between scrolling, clicking UI elements, and hesitations without advancing toward a goal (e.g., no form submission or checkout completion).
+- **Dead click**: A failed interaction at [10.31s] ("[DEAD CLICK]") suggests misaligned expectations or UI confusion.
+
+2. READING BEHAVIOR
+- **Rapid skimming with no deep reading**:
+  - Scroll speed: ~85px/0.5s (consistent across all scrolls), covering 994px in ~5.5s total.
+  - No pauses >1s during scrolling; max depth (994px) reached in <6s suggests scanning, not reading.
+  - Bidirectional scrolling: Upward scrolls at [10.37s–10.46s] indicate revisiting content, but speed remains high (~280px/0.5s).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement** (e.g., voting/commenting): The session is confined to a checkout page; no social interactions (e.g., upvotes, comments) are recorded.
+- **Hesitation-driven clicks**:
+  - 3 instances of "[HESITATION]" (637ms, 2585ms, 2867ms) preceding clicks at [0.64s], [3.94s], and [8.74s].
+  - Hover delays: "Cart Summary" (350ms), "Back to Shop" (174ms), "Email" (393ms) suggest deliberation but no follow-through.
+
+4. INTERACTION SPEED
+- **Variable speed with long pauses**:
+  - Fast actions: Scrolls (~0.5s each), repeated clicks on "Back to Shop" (separated by 3.71s).
+  - Deliberate delays: Hesitations (2.5–2.9s) and hover times (174–393ms) dominate.
+  - Action frequency: 18 actions in 11.9s (~1.5 actions/s), but clustered (e.g., 5 scrolls in 0.6s at [5.31s–5.46s]).
+
+5. CONTENT PREFERENCES
+- **Checkout page focus**: All interactions occur on `https://example.com/checkout`.
+- **Gravitated elements**:
+  - "Cart Summary" (clicked twice, hovered 350ms).
+  - "Back to Shop" (clicked twice, hovered 174ms).
+  - "Email" input (clicked twice, hovered 393ms).
+- **Ignored**: No interaction with payment fields, shipping options, or CTAs (e.g., "Place Order").
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The "Email" input was clicked twice ([11.1s], [11.89s]) but no keystrokes or corrections recorded.
+- **Input length**: Unknown (no text entry logged).
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (vertical navigation).
+  - Clickable elements: "Cart Summary," "Back to Shop," "Email" input.
+- **Ignored features**:
+  - Form fields (e.g., name, address, payment).
+  - Checkout buttons (e.g., "Continue," "Submit").
+  - UI components outside the viewport (e.g., no clicks below 996px except dead click at 1493px).
+
+8. SESSION FLOW
+- **Arc**: **Abandonment loop with false starts**
+  1. **Initial scan** (0.0–1.36s): Page load → hesitation → rapid scrolling (427px in 0.87s).
+  2. **False engagement** (1.36–5.88s): Clicks "Cart Summary" → hesitation → rescrolls deeper (to 994px).
+  3. **Exit attempt** (5.88–9.59s): Clicks "Back to Shop" → hesitation → repeats click.
+  4. **Dead-end interaction** (10.31–11.89s): Dead click → upward scroll → focuses on "Email" input.
+  5. **Session end**: No further actions after [11.89s] (clicking "Email" input twice without typing).
+- **Key observation**: The user repeatedly approaches but avoids completing the checkout process, suggesting indecision or UI friction.
+```
+
+**Summary**: This session reflects a **non-committal, scanner-like user** who rapidly explores the checkout page but fails to engage meaningfully. The pattern of hesitations, repeated clicks, and lack of form completion suggests either **UI confusion, lack of intent, or a synthetic/scanner bot** (supported by the "synthetic/scanner" device note). No deep reading or goal-oriented behavior is observed.

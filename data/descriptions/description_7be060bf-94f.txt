@@ -1,0 +1,66 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with micro-focus bursts**: The user exhibits a non-linear, erratic navigation pattern with rapid shifts between UI elements. They jump between the sidebar (0.66s–3.07s), stats cards (4.17s–4.86s), charts (5.59s–8.72s), and data tables (9.69s–10.84s) without sustained engagement in any single area.
+- **Repetitive clicks**: 3 "RAGE CLICK" events (2.81s–2.99s) on the sidebar suggest frustration or UI unresponsiveness.
+- **No backtracking**: After leaving an area (e.g., sidebar at 3.07s), they do not return, indicating either task abandonment or feature dismissal.
+
+2. READING BEHAVIOR
+- **Skim-heavy with shallow depth**: Scroll patterns show rapid, incremental movements (e.g., 52px–209px in 0.16s intervals at 0.73s–0.92s) with no pauses >0.5s, suggesting skimming rather than deep reading.
+- **Max scroll depth**: 945px (8.72s), but only 1.07s spent below 600px (8.56s–9.63s), indicating minimal engagement with lower-page content.
+- **Scroll direction reversals**: 4 upward scroll sequences (e.g., 3.07s–3.3s, 10.65s–10.84s) suggest re-scanning or second-pass skimming.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows no votes, comments, or submissions—only clicks on UI elements (sidebar, stats cards, charts, data table, export button).
+- **Hover-to-click latency**:
+  - Sidebar: 435ms hover (1.65s) → click (2.71s)
+  - Stats Cards: 663ms hover (4.17s) → click (4.8s)
+  - Chart: 599ms hover (5.59s) → click (8.52s)
+  - Data Table: 747ms hover (9.69s) → click (10.58s)
+  - Export: 447ms hover (11.46s) → click (13.47s)
+- **Rage clicks**: 3 consecutive clicks on the sidebar (2.81s–2.99s) with <100ms intervals, indicating frustration.
+
+4. INTERACTION SPEED
+- **Fast but erratic**: Average time between actions: **0.97s** (excluding scrolls). Peaks:
+  - 0.66s–1.65s: 0.99s/action (initial exploration)
+  - 2.71s–2.99s: 0.09s/action (rage clicks)
+  - 8.03s–8.52s: 0.49s/action (hesitation)
+- **Hesitation markers**: 3 instances of "[HESITATION]" (0.66s, 8.03s, 12.34s) with delays of 664ms, 2446ms, and 885ms, respectively.
+
+5. CONTENT PREFERENCES
+- **UI elements over content**: All interactions target functional components, not content:
+  - **Sidebar** (1.65s–3.07s): Primary focus, but abandoned after rage clicks.
+  - **Stats Cards** (4.17s–4.86s): Brief engagement, likely for summary data.
+  - **Chart** (5.59s–8.72s): Longest hover (599ms) and deepest scroll (945px), suggesting interest in visual data.
+  - **Data Table** (9.69s–10.84s): Rapid scroll up/down, indicating scanning for specific data.
+  - **Export Button** (11.46s–13.47s): Final action, possibly for offline analysis.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input, corrections, or form submissions.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Sidebar navigation (1.65s)
+  - Stats cards (4.17s)
+  - Chart visualization (5.59s)
+  - Data table (9.69s)
+  - Export functionality (11.46s)
+- **Ignored features**:
+  - No interaction with search bars, filters, or user-generated content.
+  - No evidence of tooltips, modals, or secondary menus.
+
+8. SESSION FLOW
+- **Phase 1: Disoriented Exploration (0.0s–3.07s)**
+  - Loads dashboard, hesitates (664ms), then rapidly scrolls down (0.73s–0.92s).
+  - Attempts sidebar interaction (1.65s) but abandons after rage clicks (2.81s–2.99s).
+- **Phase 2: Functional Scanning (3.07s–8.72s)**
+  - Scrolls up (3.07s–3.3s), then targets stats cards (4.17s) and charts (5.59s).
+  - Deep scroll (4.86s–8.72s) but minimal dwell time below 600px.
+- **Phase 3: Data Extraction (8.72s–13.47s)**
+  - Hovers over data table (9.69s), scrolls up/down (10.65s–10.84s), then targets export button (11.46s).
+  - Final hesitation (12.34s) before clicking export (13.47s).
+- **Exit**: Session ends abruptly post-export click (no confirmation or follow-up actions).
+```
+
+**SUMMARY**: This user exhibits **task-driven, frustrated behavior** with a focus on extracting data (charts/tables) rather than engaging with content. Their navigation is **scattered and reactive**, with rapid clicks, shallow scrolling, and repeated hesitation/rage clicks suggesting UI friction. The session arc follows a **failed exploration → functional scanning → data extraction** pattern, terminating after a single export action.

@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive loops**: The user exhibits non-linear, erratic navigation with frequent backtracking and redundant clicks.
+  - **Checkout abandonment**: Begins at `/checkout` (0.0s) but immediately attempts to leave via "Back to Shop" (1.61s–2.02s, 6.51s).
+  - **Feature cycling**: Clicks "Cart Summary" (0.8s–1.1s), "Pay Now" (2.48s–2.59s), and "Card Number" (3.18s–3.49s) in rapid succession, then reverts to "Back to Shop" (3.96s–6.51s).
+  - **Dead-end interaction**: Final action is a "[DEAD CLICK]" (7.12s) at an off-screen coordinate (691, 1967), suggesting frustration or UI confusion.
+- **No exploratory depth**: No evidence of visiting new pages or sub-features beyond the initial checkout page.
+
+2. READING BEHAVIOR
+- **Skim-only, no deep reading**:
+  - **Scroll speed**: 74–175px per 0.5s (avg. 148px/s) during downward scrolls (0.17s–3.68s), far exceeding typical reading speeds (200–300 words/min ≈ 50–100px/s for dense text).
+  - **Scroll depth**: Reaches 1011px (max) but never pauses >0.5s at any depth, indicating no sustained engagement with content.
+  - **Upward scrolls**: Similar speed (114–126px per 0.5s) during reversals (2.1s–2.82s), suggesting no re-reading.
+- **No content absorption**: Hesitation markers ("[HOVER 104–2063ms]") occur only on interactive elements (buttons/links), not text blocks.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement** (e.g., voting/commenting): This is a checkout flow, so no social interactions are applicable.
+- **Impulsive clicking**:
+  - **Double-clicks**: 5 instances of rapid duplicate clicks on the same element (e.g., "Cart Summary" at 0.8s/1.1s, "Back to Shop" at 1.61s/2.02s).
+  - **Hover-to-click latency**: 104–2063ms (median: 128ms) suggests impulsivity (low latency) with one outlier (2063ms hesitation at 6.02s).
+- **No form completion**: Clicks "Card Number" input (3.18s–3.49s) but no typing or corrections are recorded.
+
+4. INTERACTION SPEED
+- **Hyper-fast with outliers**:
+  - **Median action interval**: 0.3s (excluding scrolls).
+  - **Peak speed**: 0.05s between scroll steps (e.g., 0.21s–0.28s).
+  - **Deliberate pauses**: Only two >1s gaps (3.49s–3.96s: 470ms; 6.02s–6.51s: 490ms), likely due to hesitation or distraction.
+- **Synthetic behavior**: Device labeled "synthetic/impulsive_clicker" aligns with inhumanly consistent scroll timing (0.5s ± 0.02s per step).
+
+5. CONTENT PREFERENCES
+- **No content preferences observable**: All actions occur on a single checkout page.
+- **Gravitated toward exit paths**:
+  - "Back to Shop" clicked 3 times (1.61s, 3.96s, 6.51s), accounting for 3/10 total clicks.
+  - No evidence of product browsing or category exploration.
+
+6. TYPING BEHAVIOR
+- **No typing detected**:
+  - Clicks "Card Number" input (3.18s–3.49s) but no keystrokes or corrections recorded.
+  - Session ends before any input is provided.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Checkout elements**: "Cart Summary" (0.8s–1.1s), "Pay Now" (2.48s–2.59s), "Card Number" (3.18s–3.49s).
+  - **Navigation**: "Back to Shop" (1.61s–6.51s).
+- **Ignored features**:
+  - **Form fields**: No interaction with "Expiry Date," "CVV," or "Name on Card" (assuming standard checkout layout).
+  - **Promotions/upsells**: No clicks on potential cross-sell elements (e.g., "Add insurance").
+  - **Help/support**: No clicks on FAQs, chat, or tooltips.
+
+8. SESSION FLOW
+- **Arc**: **Frustration loop → Abandonment**
+  1. **Initial confusion (0.0s–0.8s)**:
+     - Page loads; immediate hesitation (123ms) and rapid scrolling (0.17s–0.37s) to scan page.
+  2. **False starts (0.8s–2.48s)**:
+     - Clicks "Cart Summary" (0.8s), then "Back to Shop" (1.61s), then reverses scroll to "Pay Now" (2.48s).
+     - Suggests indecision between checkout and cart review.
+  3. **Form avoidance (2.48s–3.96s)**:
+     - Clicks "Pay Now" (2.48s) but immediately scrolls to "Card Number" (3.18s), then abandons input.
+     - Scrolls to page bottom (3.68s) and clicks "Back to Shop" (3.96s).
+  4. **Final hesitation (3.96s–7.12s)**:
+     - 2063ms pause (6.02s) before re-clicking "Back to Shop" (6.51s).
+     - Session ends with a dead click (7.12s), likely indicating resignation or UI error.
+- **Exit**: No confirmation of checkout completion or navigation to "Back to Shop" page.
+
+SUMMARY
+This session reflects a **synthetic, non-human user** (per device label) exhibiting **mechanized, impulsive behavior** with no genuine engagement. Key traits:
+- **Navigation**: Repetitive, looped clicks on exit paths.
+- **Reading**: Skim-only; no pauses for content absorption.
+- **Speed**: Inhumanly consistent scroll timing (0.5s intervals) with rapid, redundant clicks.
+- **Intent**: Appears to test checkout flow (e.g., bot, QA script) rather than complete a purchase.
+- **Outcome**: Abandonment after 7.1s with no form completion or content interaction.
+```

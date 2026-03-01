@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Non-linear, exploratory with rapid targeting**: The user exhibits a "scan-and-pounce" pattern, alternating between broad vertical exploration (scrolling) and precise clicks on specific UI elements. Navigation is not linear (e.g., they jump from footer → hero title → testimonials → CTA button). 63% of actions (12/19) are scrolls, but these are interspersed with high-velocity clicks (avg. 0.3s between scroll end and next click).
+- **Spatial clustering**: Clicks are concentrated in 3 vertical zones:
+  * Bottom (footer: 981px, 1.31–1.51s)
+  * Middle (testimonials: 764px, 2.76–2.89s)
+  * Top (hero title: 195px, 2.0–2.28s; CTA: 299px, 3.41–3.64s)
+- **No backtracking**: After leaving a zone (e.g., footer at 1.56s), they do not return, suggesting targeted information foraging.
+
+2. READING BEHAVIOR
+- **Skimmer with depth sampling**: Scroll speed is consistent (avg. 220px/s) but punctuated by abrupt direction changes (4/7 scrolls reverse direction within 0.5s). Max depth (981px) is reached quickly (1.31s), but they only dwell in zones for 0.2–0.5s before clicking, indicating skimming.
+- **No sustained reading**: No pauses >200ms without interaction; even "hover" times (56–173ms) are too brief for deep reading. The 1379ms hesitation at 5.53s is the only exception, likely a pre-click delay.
+- **Visual anchoring**: Clicks target labeled UI elements (e.g., "Features," "Testimonials"), suggesting reliance on headers/buttons over body text.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement** (e.g., voting, commenting): The session contains only clicks and scrolls. All interactions are navigational (e.g., clicking "Features," "Get Started") or exploratory (hovering UI elements).
+- **Interaction ratio**: 100% clicks (12/12 non-scroll actions), 0% text input or form submission. The "[HESITATION]" entries at (0,0) may indicate attempted input (e.g., cursor in a search bar) but no keystrokes are recorded.
+- **Speed**: First click occurs at 0.2s (page text), with subsequent clicks averaging 0.4s apart (range: 0.12–1.38s).
+
+4. INTERACTION SPEED
+- **Hyper-fast, deliberate precision**: Median inter-action time is 0.24s (excluding the 1.379s hesitation). Key metrics:
+  * Click-to-click: 0.18s avg. (e.g., 0.6s → 0.82s for "Features" double-click)
+  * Scroll-to-click: 0.12s avg. (e.g., 0.97s scroll end → 1.31s footer click)
+  * Hover-to-click: 118–173ms (suggests premeditated targeting)
+- **Outlier**: The 1.379s hesitation at 5.53s is 5.7x longer than the median, likely a cognitive pause (e.g., deciding to exit).
+
+5. CONTENT PREFERENCES
+- **Gravitated toward**:
+  * **Structural elements**: Footer (1.31s), navigation (4.15s), hero title (2.0s) — 42% of clicks target global UI.
+  * **Feature-focused sections**: "Features" (0.6s), "Testimonials" (2.76s) — 25% of clicks.
+  * **Primary CTA**: "Get Started" button (3.41s) — 17% of clicks.
+- **Ignored**:
+  * Body text (no clicks on paragraphs or articles).
+  * Secondary CTAs (e.g., no clicks on "Learn More" if present).
+  * Interactive elements (e.g., no form submissions, no dropdown expansion).
+
+6. TYPING BEHAVIOR
+- **No observable typing**: The "[HESITATION]" entries at (0,0) (0.2s and 5.53s) suggest cursor placement in a text field (e.g., search bar) but no keystrokes or corrections are recorded. Input length and speed cannot be determined.
+
+7. FEATURE DISCOVERY
+- **Discovered and used**:
+  * **Navigation**: Clicked nav bar at 4.15s and 5.83s (likely a menu or link).
+  * **Scrolling**: Used extensively (7/19 actions) to explore page depth.
+  * **Hover states**: Triggered on 4 elements (avg. 110ms hover time), indicating awareness of interactive affordances.
+- **Ignored**:
+  * **Forms/input fields**: No text entry despite cursor hesitations.
+  * **Media**: No clicks on images/videos (if present).
+  * **Social/share buttons**: No engagement with secondary interactive elements.
+
+8. SESSION FLOW
+- **Arc**: **Rapid exploration → targeted sampling → exit**
+  * **0.0–1.61s (Exploration Phase)**:
+    - Loads page, immediately scrolls to 981px (max depth) in 1.31s, clicks footer at 1.31s.
+    - Scrolls back up to 195px by 1.61s, suggesting dissatisfaction with footer content.
+  * **2.0–3.68s (Sampling Phase)**:
+    - Clicks hero title (2.0s), scrolls down to testimonials (2.76s), then up to CTA (3.41s).
+    - Focus narrows to top/middle of page; clicks "Get Started" at 3.41s (likely intended conversion).
+  * **4.15–5.83s (Exit Phase)**:
+    - Clicks navigation at 4.15s (possible menu expansion), hesitates for 1.379s at 5.53s, then clicks nav again at 5.83s before session ends.
+    - No post-CTA engagement; exit is abrupt after nav interaction.
+- **Key transitions**:
+  * 1.61s: Shifts from bottom-heavy exploration to top/middle targeting.
+  * 3.68s: Post-CTA scroll up may indicate confirmation bias (seeking validation) or navigation prep.
+  * 5.53s: Long hesitation precedes final nav click, suggesting session termination.
+```
+
+**SUMMARY**: This user is a **high-velocity scanner** with **goal-oriented precision**, prioritizing structural UI elements (nav, footer, CTAs) over content. Their behavior resembles a **power user or synthetic agent** (e.g., automated test, bot, or expert user) given the sub-200ms reaction times, lack of reading pauses, and absence of traditional engagement (typing, voting). The session arc suggests **failed conversion** (despite clicking "Get Started") followed by a rapid exit.

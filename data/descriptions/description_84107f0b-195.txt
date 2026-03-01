@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive loops**: The user exhibits a non-linear, erratic navigation pattern with frequent backtracking. They cycle through the same 3 sections (Profile → Notifications → Privacy → Settings Nav) 3 times in 14 seconds, suggesting either confusion or deliberate testing.
+- **Section transitions**: 7 distinct section switches (e.g., Profile→Notifications at 1.54s, Notifications→Privacy at 2.47s, Privacy→Settings Nav at 3.15s).
+- **Rage clicks**: 5 consecutive rage clicks on "Settings Nav" (3.67s–4.12s), indicating frustration or UI unresponsiveness.
+
+2. READING BEHAVIOR
+- **Skim-only**: No evidence of deep reading. Scroll patterns show:
+  - **Rapid vertical scanning**: 24 scroll actions (avg. 0.5s duration each), covering 954px in 6.61s (max depth).
+  - **No pauses**: Scrolls are continuous with no >1s pauses between actions, suggesting no content absorption.
+  - **Directional flipping**: Abrupt scroll reversals (e.g., 2.89s–2.92s: up from 838px to 561px; 8.39s–8.58s: up from 954px to 61px).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or text inputs.
+- **UI interaction metrics**:
+  - **Click frequency**: 22 clicks in 14.1s (1.56 clicks/s), but 5 are rage clicks and 4 are hesitations (0s coordinates).
+  - **Hover delays**: Avg. hover time = 92ms (range: 32ms–138ms), suggesting rapid but superficial interaction.
+  - **No form submission**: "Save Changes" clicked 4 times (6.87s, 8.32s, 13.36s, 14.08s) but no confirmation of submission success.
+
+4. INTERACTION SPEED
+- **Hyper-fast with delays**: Two distinct phases:
+  - **Burst mode (0s–4.33s)**: 18 actions in 4.33s (4.16 actions/s), including 5 rage clicks in 0.5s.
+  - **Hesitation spikes (7.82s–13.92s)**: 4 hesitation events (avg. 1,016ms delay), totaling 3.9s of inactivity (28% of session).
+- **Click intervals**: Avg. 0.64s between clicks (excluding hesitations), but 0.1s–0.2s during rage clicks.
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: Exclusively interacted with 4 settings sections:
+  1. **Profile**: 3 clicks (0.96s, 1.08s, 8.79s)
+  2. **Notifications**: 2 clicks (1.54s, 1.87s)
+  3. **Privacy**: 6 clicks (2.47s–13.05s)
+  4. **Settings Nav**: 7 clicks (3.15s–4.56s, including rage clicks)
+- **No content exploration**: No evidence of browsing non-settings pages or subreddits.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form fields engaged. All clicks target static UI elements.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Navigation menu (Settings Nav)
+  - Section tabs (Profile/Notifications/Privacy)
+  - "Save Changes" button (clicked 4x)
+- **Ignored features**:
+  - No account dropdown, help links, or search bar usage.
+  - No form fields (e.g., profile fields, notification toggles) interacted with.
+  - No mobile/desktop toggle or theme settings.
+
+8. SESSION FLOW
+- **Phase 1 (0s–4.33s): Frantic Exploration**
+  - Rapid section cycling (Profile→Notifications→Privacy→Settings Nav).
+  - Rage clicks on Settings Nav (3.67s–4.12s) signal frustration.
+- **Phase 2 (4.33s–8.32s): Attempted Recovery**
+  - Revisits Privacy (5.07s) and Profile (8.79s), likely to "reset" state.
+  - Clicks "Save Changes" twice (6.87s, 8.32s) but no confirmation.
+- **Phase 3 (8.32s–14.1s): Repetitive Looping**
+  - Scrolls back to top (8.39s–8.58s), then repeats Privacy clicks (9.82s–13.05s).
+  - Final "Save Changes" clicks (13.36s, 14.08s) with hesitation delays.
+- **Exit**: Session ends abruptly post-final click (no page unload event).
+
+SUMMARY
+This is a **synthetic/automated or highly frustrated user session** characterized by:
+- **Mechanical interaction**: Repetitive clicks, no content engagement, and no typing.
+- **UI testing behavior**: May reflect a bot, QA tester, or user struggling with unresponsive UI.
+- **Zero value creation**: No comments, votes, or profile updates completed.
+- **Critical UX issues**: Rage clicks and hesitations suggest broken flows or unclear UI.
+```

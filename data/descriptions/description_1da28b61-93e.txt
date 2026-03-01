@@ -1,0 +1,84 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no clear linear progression.
+- Repeated toggling between sidebar (5 distinct click clusters) and dashboard elements (charts, stats cards, data table).
+- 42% of clicks (14/33) targeted the same 3 UI regions (sidebar, charts, stats cards) in rapid succession.
+- No sustained focus on any single feature for >2.5s before switching context.
+- 3 "dead clicks" (9.38s, 11.39s) on non-interactive areas, suggesting misaligned expectations or UI confusion.
+
+2. READING BEHAVIOR
+- Skimming dominant: 14 scroll actions (7 up, 7 down) with average duration of 0.5s per scroll.
+- Scroll depth varied wildly: 0px→954px→100px→1016px→100px, indicating no systematic content consumption.
+- Max scroll depth (954px) reached at 5.41s, but abandoned immediately after rage-clicking the data table.
+- No evidence of deep reading: all scrolls were rapid (avg 127px/s) with no pauses >0.3s between scrolls.
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (voting/commenting) detected - this appears to be a dashboard interface, not a social platform.
+- Interaction limited to:
+  - 5 rage-click clusters (4.38s-4.94s, 5.56s-5.89s, 7.35s-7.84s) totaling 13 clicks (39% of all clicks).
+  - 2 hesitation events (0.13s, 10.41s, 14.46s) with delays of 128ms, 536ms, and 2406ms respectively.
+- No form inputs or text entry detected.
+
+4. INTERACTION SPEED
+- Hyper-fast: 33 clicks in 14.8s (2.23 clicks/s).
+- Median inter-click interval: 0.17s (excluding rage-click clusters).
+- 68% of actions occurred within 0.5s of the previous action.
+- Longest deliberation: 2.4s hesitation at 14.46s before final click.
+
+5. CONTENT PREFERENCES
+- Dashboard-specific elements only:
+  - Sidebar: 8 clicks (24% of total)
+  - Charts: 6 clicks (18%)
+  - Stats Cards: 6 clicks (18%)
+  - Data Table: 7 clicks (21%)
+  - Export Button: 6 clicks (18%)
+- No evidence of preference for specific content types - all interactions were with UI controls, not data.
+
+6. TYPING BEHAVIOR
+- No typing detected in the session log.
+- No form fields, search boxes, or text inputs were engaged.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Sidebar navigation (repeatedly)
+  - Chart interactions
+  - Stats card interactions
+  - Data table scrolling/clicking
+  - Export functionality
+- Ignored features:
+  - No evidence of using filters, settings, or help menus.
+  - No hover tooltips or contextual menus engaged (despite hover events being logged).
+  - No keyboard shortcuts or alternative navigation methods detected.
+
+8. SESSION FLOW
+0.0s-2.14s: Disoriented Exploration
+- Immediate sidebar clicks (0.3s, 0.79s) with rapid abandonment.
+- Shallow scrolling (0px→370px) followed by chart clicks.
+
+2.14s-4.99s: Frustration Escalation
+- First rage-click cluster on charts (4.38s-4.94s, 6 clicks in 0.56s).
+- Aggressive scrolling (415px→954px) to data table.
+
+4.99s-7.87s: Feature Cycling
+- Data table rage-clicks (5.56s-5.89s, 5 clicks in 0.33s).
+- Rapid return to top (954px→107px in 0.84s).
+- Export button engagement with rage-clicks (7.35s-7.84s, 5 clicks in 0.49s).
+
+7.87s-14.8s: Final Attempts
+- Deep scroll to bottom (1016px) followed by immediate retreat (1016px→100px in 0.5s).
+- Final stats card interaction with extreme hesitation (2.4s delay at 14.46s).
+- Session ends with a single stats card click at 14.8s.
+
+OVERALL PATTERN
+This session demonstrates extreme frustration-driven behavior with:
+- 39% of clicks classified as rage-clicks
+- 3 dead clicks on non-interactive elements
+- 3 hesitation events with increasing delay (128ms→536ms→2406ms)
+- No successful task completion detected
+- All interactions were either repetitive (sidebar toggling) or destructive (rage-clicks)
+- The user appears to be either:
+  a) A synthetic test user ("impulsive_clicker" device label)
+  b) A human user experiencing severe usability issues
+```

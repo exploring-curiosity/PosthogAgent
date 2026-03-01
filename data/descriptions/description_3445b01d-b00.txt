@@ -1,0 +1,55 @@
+```
+BEHAVIORAL PROFILE: WEB SETTINGS SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and linear with minor redundancy**: The user follows a clear, sequential path through the settings menu (Settings Nav → Profile → Notifications → Privacy) with no backtracking or exploratory detours.
+- **Minimal redundancy**: Two duplicate clicks on "Settings Nav" (4.81s and 5.99s) and "Profile" (6.98s and 7.86s) suggest either accidental clicks or UI responsiveness issues.
+- **No abandonment**: Completes the full settings workflow (Profile → Notifications → Privacy → Save Changes) without exiting early.
+
+2. READING BEHAVIOR
+- **Skim-heavy with targeted deep dives**: Scroll patterns show rapid, incremental scrolling (e.g., 185px → 371px → 556px in 0.5s intervals at 3.84–3.98s) with no pauses, indicating skimming.
+- **Selective deep reading**: Longer hovers (596ms on "Settings Nav", 519ms on "Profile", 400ms on "Notifications", 529ms on "Privacy") suggest focused attention on menu labels before clicking.
+- **Scroll depth**: Max scroll depth (931px) aligns with the "Save Changes" button position, confirming the user reached the end of the Privacy section.
+
+3. ENGAGEMENT STYLE
+- **No content creation or interaction**: The session is purely navigational—no typing, voting, or commenting observed.
+- **UI-focused actions**: All clicks target navigation elements (menu items, buttons) rather than content.
+- **No engagement metrics**: Cannot calculate vote-to-comment ratio (N/A).
+
+4. INTERACTION SPEED
+- **Deliberate but efficient**: Average time between primary actions (e.g., clicking menu items) is **1.9s** (e.g., 4.81s to 6.98s for Settings → Profile).
+- **Hesitation markers**: Three instances of "[HESITATION Xms]" (3779ms at 3.78s, 628ms at 5.43s, 2175ms at 10.85s) suggest pauses for decision-making or UI lag.
+- **Rapid micro-interactions**: Scrolls and duplicate clicks occur in <0.5s intervals (e.g., 6.06–6.15s for upward scrolls).
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: Exclusively interacted with settings categories (Profile, Notifications, Privacy).
+- **No content consumption**: Did not engage with any substantive content (e.g., posts, articles, or user-generated content).
+- **No subreddit/section preferences**: Data does not indicate browsing of specific content types or topics.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form submissions observed in the log.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Settings navigation (4.81s, 5.99s)
+  - Profile section (6.98s, 7.86s)
+  - Notifications section (8.68s, 11.55s)
+  - Privacy section (12.58s, 13.52s)
+  - "Save Changes" button (14.54s, 15.14s)
+- **Ignored features**:
+  - No interaction with search, help, or account dropdowns.
+  - No engagement with dynamic content (e.g., tooltips, modals, or sidebars).
+
+8. SESSION FLOW
+- **Phase 1: Initial Exploration (0–4.81s)**
+  - Loaded settings page (0s), hesitated (3.78s), skimmed via rapid scrolling (3.84–3.98s).
+  - Clicked "Settings Nav" after 596ms hover (4.81s).
+- **Phase 2: Redundant Navigation (4.81–6.98s)**
+  - Hesitated (5.43s), re-clicked "Settings Nav" (5.99s), scrolled upward (6.06–6.15s).
+  - Clicked "Profile" after 519ms hover (6.98s).
+- **Phase 3: Targeted Workflow (6.98–15.14s)**
+  - Proceeded linearly: Profile → Notifications (8.68s) → Privacy (12.58s).
+  - Long hesitation (2175ms) before finalizing Notifications (10.85s).
+  - Saved changes after 629ms hover (14.54s), confirmed click (15.14s).
+- **Exit**: Session ended immediately after "Save Changes" (no post-save actions).
+```

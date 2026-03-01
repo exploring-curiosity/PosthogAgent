@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. Initial clicks (e.g., at 1.24s and 5.03s) target non-interactive areas (coordinates (0,0)), suggesting either misclicks, synthetic input, or placeholder actions. Subsequent interactions cluster around two distinct sections ("Features" and "Testimonials"), but with redundant clicks (e.g., "Features" at 1.7s and 2.32s; "Testimonials" at 3.01s and 6.15s). The final navigation to the "Navigation" bar (6.65s–8.09s) is the only linear progression.
+- **Scroll behavior**: Rapid bidirectional scrolling (e.g., 1.29s–2.47s downward, then 6.19s–6.33s upward) indicates scanning rather than focused reading. No sustained pauses (>1s) on any section.
+
+2. READING BEHAVIOR:
+- **Skim-only**: Scroll patterns reveal no deep reading:
+  - Downward scrolls (1.29s–2.47s) cover 737px in 1.18s (avg. 625px/s), with no pauses >300ms.
+  - Upward scrolls (6.19s–6.33s) cover 735px in 0.14s (avg. 5,250px/s), suggesting a "rewind" to the top.
+- **Hover times**: Brief hovers (150ms on "Features", 383ms on "Testimonials") align with skimming, not content absorption.
+- **Max depth**: 737px (≈60% of a 1080p viewport), implying no engagement with content below the fold.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The log shows no votes, comments, or form submissions. All interactions are clicks or scrolls.
+- **Redundant clicks**: Duplicate clicks on "Features" (2 actions, 620ms apart) and "Testimonials" (2 actions, 3.14s apart) suggest either:
+  - Synthetic input (e.g., automated testing/scraping).
+  - User confusion (e.g., expecting dynamic content after hover).
+- **Hesitation metrics**:
+  - First hesitation: 1,240ms (1.24s) before initial click.
+  - Second hesitation: 2,017ms (5.03s) before second (0,0) click.
+  - Hover durations (150–383ms) are too short for deliberate decision-making.
+
+4. INTERACTION SPEED:
+- **Extremely fast with anomalies**:
+  - **Action intervals**: Median time between actions = 0.57s (excluding hesitations). Fastest interval: 40ms (6.15s–6.19s, between "Testimonials" click and scroll up).
+  - **Scroll speed**: Downward scrolls average 498px/s; upward scrolls average 5,250px/s (likely synthetic).
+  - **Hesitations**: Two prolonged pauses (1.24s and 5.03s) disrupt otherwise rapid interactions, suggesting either:
+    - Automated script delays.
+    - User distraction/confusion.
+- **Click timing**: Clicks on interactive elements (e.g., "Features", "Testimonials") occur within 300–600ms of hover, faster than human reaction times (typical human click latency: 200–500ms *after* decision).
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward**:
+  - **Features section**: Two clicks (1.7s, 2.32s) and a 150ms hover. Positioned at (355, 499), likely a mid-page module.
+  - **Testimonials section**: Two clicks (3.01s, 6.15s) and a 383ms hover. Positioned at (226, 737), near the bottom of the viewport.
+- **Ignored**:
+  - **Above-the-fold content**: No interactions with the top 249px of the page (scrolled past immediately at 1.29s).
+  - **Navigation bar**: Only used at the end (6.65s–8.09s), despite being visible at (594, 2).
+  - **Other sections**: No clicks or hovers on unlogged content (e.g., hero section, CTAs, footer).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no text input, corrections, or form submissions. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - **Section links**: "Features" and "Testimonials" (clicked twice each).
+  - **Navigation bar**: Clicked once at the end of the session.
+- **Ignored features**:
+  - **Search/filters**: No evidence of use.
+  - **CTAs**: No clicks on buttons (e.g., "Sign Up", "Learn More").
+  - **Dynamic content**: No interactions with dropdowns, modals, or tooltips.
+  - **Social/media**: No clicks on embedded videos, images, or social icons.
+
+8. SESSION FLOW:
+- **Arc**: **Synthetic exploration → forced engagement → abrupt exit**.
+  - **0.0s–1.24s (Initialization)**: Page load + 1,240ms hesitation (likely script delay).
+  - **1.24s–3.01s (Scanning)**: Rapid downward scrolls (737px in 1.18s) with two clicks on "Features" (redundant).
+  - **3.01s–5.03s (Stagnation)**: 2,017ms hesitation after "Testimonials" hover, followed by a (0,0) click (no-op).
+  - **5.03s–6.65s (Rewind)**: Upward scroll to top (735px in 0.14s) + second "Testimonials" click.
+  - **6.65s–8.09s (Exit)**: Navigation bar click (likely script termination).
+- **Exit**: Session ends 8.09s after load, with no return or follow-up actions. The final click on "Navigation" may indicate a scripted exit trigger.
+
+---
+
+KEY OBSERVATIONS:
+- **Synthetic signature**: The combination of:
+  - Sub-200ms action intervals (e.g., 40ms between click and scroll).
+  - Pixel-perfect clicks (e.g., (355, 499) → (357, 505) on "Features").
+  - Bidirectional scrolls at 5,250px/s.
+  - Prolonged hesitations (1.24s, 2.02s) followed by rapid sequences.
+  strongly suggests an automated tool (e.g., crawler, synthetic test, or bot) rather than a human user.
+- **Human-like anomalies**: Hover times (150–383ms) and redundant clicks could be attempts to mimic human behavior, but the scroll speeds and click precision betray automation.
+- **No meaningful engagement**: The session lacks any human-like content consumption, decision-making, or input.
+```

@@ -1,0 +1,81 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Pattern**: Highly linear with deliberate progression, but with repeated hesitation before key actions.
+- **Evidence**:
+  - Moves sequentially through UI elements: Sidebar → Stats Cards → Export → Chart → Data Table.
+  - No backtracking to previously viewed sections (e.g., never returns to Stats Cards after moving to Chart).
+  - 7/11 clicks (64%) are preceded by explicit "[HESITATION]" events (avg. 1,755ms hesitation).
+  - Scrolling is methodical and segmented (e.g., 5 downward scrolls in 2.3s at 5.6s, 5 upward scrolls in 2.1s at 11.7s).
+
+2. READING BEHAVIOR
+- **Behavior**: Skimming with targeted deep dives.
+- **Evidence**:
+  - Initial scroll (5.6–5.86s): Rapid downward scroll (117px increments over 0.5s each) to max depth of 585px in 2.2s (≈266px/s).
+  - Later scrolls (e.g., 27.91–28.19s): Similar pattern to 969px in 2.2s (≈440px/s), suggesting scanning for specific content.
+  - No pauses >1s during scrolls; hovers (e.g., 1,024ms on Stats Cards) indicate brief focus on specific elements.
+
+3. ENGAGEMENT STYLE
+- **Actions**: No voting, commenting, or social interactions observed.
+- **Evidence**:
+  - All interactions are functional (clicks on UI elements: Sidebar, Stats Cards, Export, Chart, Data Table).
+  - No text input, upvotes, or replies detected in the 33s session.
+  - Hover durations (avg. 1,317ms) suggest evaluation of interactive elements, not passive reading.
+
+4. INTERACTION SPEED
+- **Speed**: Deliberate with significant pre-action hesitation.
+- **Evidence**:
+  - Avg. time between non-scroll actions: 4.1s (excluding scrolls).
+  - Avg. hesitation before clicks: 1,755ms (range: 615–2,125ms).
+  - Scroll speed: 234px/s (downward) and 188px/s (upward), consistent across segments.
+
+5. CONTENT PREFERENCES
+- **Focus**: Data-driven UI components.
+- **Evidence**:
+  - Interacted exclusively with:
+    - **Sidebar** (2 clicks, 1 hover)
+    - **Stats Cards** (2 clicks, 1 hover)
+    - **Export button** (2 clicks, 1 hover)
+    - **Chart** (2 clicks, 1 hover)
+    - **Data Table** (2 clicks, 1 hover)
+  - No engagement with static text, images, or non-interactive content.
+
+6. TYPING BEHAVIOR
+- **Behavior**: No typing detected.
+- **Evidence**:
+  - No text input events, corrections, or form submissions in the log.
+  - All actions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Used Features**:
+  - Sidebar navigation (2 clicks).
+  - Data visualization tools (Stats Cards, Chart, Data Table).
+  - Export functionality (2 clicks).
+- **Ignored Features**:
+  - No interaction with:
+    - Search bars (if present).
+    - User account menus (no profile clicks).
+    - Help/tooltips (no hover >2s on non-interactive elements).
+    - Mobile-specific features (viewport is desktop-only).
+
+8. SESSION FLOW
+- **Arc**: Structured exploration → targeted interaction → abrupt exit.
+- **Phases**:
+  1. **Orientation (0–5.6s)**:
+     - Page load → initial scroll to scan layout (585px in 2.2s).
+  2. **Sidebar Exploration (5.6–11.6s)**:
+     - Hover (1,162ms) → click → upward scroll to reset view.
+  3. **Data Evaluation (11.6–21.5s)**:
+     - Stats Cards (hover 1,024ms → click) → Export (hover 1,954ms → click).
+  4. **Deep Dive (21.5–33.0s)**:
+     - Chart (hover 1,769ms → click) → Data Table (hover 674ms → click).
+  5. **Exit (33.0s)**:
+     - Session ends immediately after Data Table click (no confirmation or follow-up).
+- **Key Observations**:
+  - No return to prior sections; linear progression suggests goal-driven behavior.
+  - Hesitation before each major action implies uncertainty or decision-making.
+  - Abrupt termination may indicate task completion or frustration.
+```
+
+**Summary**: A cautious, goal-oriented user who methodically explores data-centric UI elements with significant pre-action hesitation but no social engagement. Interaction speed is slow due to deliberation, not technical issues. Session flow suggests a task-focused visit (e.g., exporting data) with no exploratory detours.

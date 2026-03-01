@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly linear and methodical, following a strict top-to-bottom progression.
+- No backtracking, lateral exploration, or deviation from the vertical scroll path.
+- Navigation elements (nav bar, hero title, features, testimonials, footer) were clicked in exact page order.
+- 100% of clicks targeted primary UI elements in their expected sequence (navigation → hero → CTA → features → testimonials → footer).
+
+2. READING BEHAVIOR:
+- Skimming behavior confirmed by:
+  a) Rapid scroll bursts (6 distinct scroll sequences, each covering ~30-120px in 0.5s intervals)
+  b) No pauses >1s between scroll actions (average 0.04s gap between scrolls)
+  c) Max scroll depth (1050px) reached in 8.93s, with no return scrolling
+- No evidence of deep reading: all clicks occurred immediately after reaching a section's viewport position.
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or interactive content engagement detected.
+- All interactions were navigational clicks (12 total clicks, 100% on UI elements).
+- "Engagement" consisted solely of:
+  a) Double-clicking primary elements (6 instances: nav, hero title, CTA, features, testimonials, footer)
+  b) Hover delays (5 instances, avg 499ms) preceding clicks
+- No content creation or social interaction observed.
+
+4. INTERACTION SPEED:
+- Deliberate but rapid execution:
+  a) Avg 0.97s between actions (excluding scrolls)
+  b) Avg hesitation time: 511ms (465-724ms range)
+  c) Click-to-click intervals: 0.62s (fastest: 0.05s between scrolls) to 1.23s (slowest: between section clicks)
+- Scroll speed: 120px/s (consistent across all scroll sequences)
+
+5. CONTENT PREFERENCES:
+- No content preferences identifiable (no subreddit/forum data present).
+- Interacted exclusively with structural page elements:
+  - Navigation (2 clicks)
+  - Hero section (2 clicks)
+  - Primary CTA (2 clicks)
+  - Features section (2 clicks)
+  - Testimonials (2 clicks)
+  - Footer (2 clicks)
+- No evidence of content consumption beyond UI interaction.
+
+6. TYPING BEHAVIOR:
+- No typing detected in the action log.
+- No input fields, search bars, or text areas were interacted with.
+
+7. FEATURE DISCOVERY:
+- Discovered and used:
+  a) Navigation menu (2 clicks)
+  b) Hero title (2 clicks)
+  c) Primary CTA button (2 clicks)
+  d) Features section (2 clicks)
+  e) Testimonials section (2 clicks)
+  f) Footer (2 clicks)
+- Ignored:
+  a) Any secondary CTAs or links
+  b) Interactive elements (forms, dropdowns, etc.)
+  c) Sidebars or non-primary content
+  d) Multimedia (no video/audio interactions)
+
+8. SESSION FLOW:
+- 0.0-1.09s: Initial orientation (page load → nav hover → nav click)
+- 1.09-2.51s: Vertical exploration (scroll bursts to 260px)
+- 2.51-4.89s: Hero engagement (hero title clicks → CTA hover)
+- 4.89-6.19s: CTA interaction (double-click → scroll to 619px)
+- 6.19-8.07s: Features section (clicks → scroll to 789px)
+- 8.07-10.68s: Testimonials → Footer (clicks → session end)
+- Arc: Linear progression through UI hierarchy with no deviation or content engagement.
+- Exit: Immediate after final footer click (no return to top or additional actions).
+
+TECHNICAL NOTES:
+- All clicks occurred at precise UI element coordinates (e.g., (803, 260) for hero title).
+- "HESITATION" events at (0,0) suggest cursor repositioning between actions.
+- Synthetic/methodical_user agent indicates possible automated testing behavior.
+```

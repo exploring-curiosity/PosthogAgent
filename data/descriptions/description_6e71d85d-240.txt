@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. Initial exploration (0.0s–1.25s) is followed by rapid, repetitive interactions (e.g., clicking "Stats Cards" twice at 1.25s and 4.52s). The session lacks a clear goal-driven path, with actions often triggered by hesitation (e.g., 2.7s of inactivity before the second "Stats Cards" click at 3.96s). Scrolling is mechanical (consistent 0.5s intervals) and suggests forced progression rather than organic discovery.
+
+2. READING BEHAVIOR
+- **Skim-only, no deep reading**: Scroll depth increases in uniform 50–200px increments (0.63s–0.84s, 4.56s–4.74s), with no pauses or backtracking to suggest content absorption. Max scroll depth (1045px) is reached in 4.74s, but the user immediately reverses direction (6.27s–6.43s) without lingering. No evidence of reading—scroll speed (avg. 100px/0.5s) exceeds typical human reading rates (~20px/s for skimming).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The user does not vote, comment, or perform any content-creation actions. Interactions are limited to:
+  - **Repetitive clicks**: "Stats Cards" (2x), "Sidebar" (2x), "Export" (2x).
+  - **Dead clicks**: Final action at 9.14s is a "DEAD CLICK" (no functional outcome).
+  - **Hover hesitation**: 307ms–822ms delays before clicks (e.g., 1.25s, 5.28s, 7.55s) suggest uncertainty or scripted behavior.
+
+4. INTERACTION SPEED
+- **Artificially rapid with forced delays**: Two distinct phases:
+  - **Mechanical phase (0.0s–5.28s)**: Actions occur in rapid succession (avg. 0.15s between scrolls, 0.5s between clicks), with precise 0.5s scroll durations.
+  - **Hesitation phase (5.28s–9.14s)**: Clicks are preceded by unnaturally long pauses (365ms–2701ms), likely simulated to mimic human behavior. The 2.7s hesitation at 3.96s is the longest delay.
+  - **Total actions**: 19 actions in 9.1s (2.1 actions/second).
+
+5. CONTENT PREFERENCES
+- **No discernible preferences**: The user interacts exclusively with UI elements, not content:
+  - **Dashboard**: Initial page load (0.0s).
+  - **Stats Cards**: Clicked twice (1.25s, 4.52s) but no evidence of data review.
+  - **Sidebar**: Clicked twice (5.28s, 6.2s) but no navigation to subpages.
+  - **Export**: Clicked twice (6.73s, 8.83s) but no export confirmation or follow-up.
+  - **No content engagement**: No clicks on articles, posts, or media.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text input, corrections, or form interactions. All actions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Limited, superficial discovery**:
+  - **Used features**:
+    - Scrolling (mechanical, 100% of scrollable area covered).
+    - "Stats Cards" (2x clicks).
+    - "Sidebar" (2x clicks).
+    - "Export" button (2x clicks).
+  - **Ignored features**:
+    - No navigation to other pages (despite sidebar clicks).
+    - No search, filters, or settings.
+    - No interaction with dynamic content (e.g., charts, tables).
+    - No hover tooltips or dropdowns (despite hover hesitations).
+
+8. SESSION FLOW
+- **Arc: Synthetic exploration → forced interaction → abrupt exit**:
+  1. **Initial scan (0.0s–0.84s)**: Page load followed by rapid, uniform scrolling to 251px. No engagement.
+  2. **First interaction (1.25s–3.96s)**: Clicks "Stats Cards" after 307ms hover, then hesitates for 2.7s.
+  3. **Repetitive probing (4.52s–6.43s)**: Re-clicks "Stats Cards," scrolls to bottom (1045px), then scrolls back up to 105px. Sidebar clicked twice.
+  4. **Export attempt (6.73s–9.14s)**: Clicks "Export" twice with 822ms hesitation, ends with a dead click.
+- **Exit**: Session terminates immediately after the dead click (9.14s), with no confirmation of export or navigation.
+```
+
+**SUMMARY**: This session exhibits **highly unnatural, scripted behavior** consistent with a synthetic scanner or bot. Key red flags:
+- **Mechanical scrolling** (uniform speed/duration).
+- **Repetitive clicks** on the same elements.
+- **Unnatural hesitations** (e.g., 2.7s pause before re-clicking "Stats Cards").
+- **No content engagement** despite covering 100% of scrollable area.
+- **Dead clicks** and lack of functional outcomes.
+- **Device profile**: Labeled as "synthetic/scanner" in the user agent.
+
+**Hypothesis**: Likely a **security scanner, synthetic test, or bot** simulating human-like interactions for UI testing or vulnerability probing. No human user would exhibit this combination of precision, repetition, and lack of goal-oriented behavior.

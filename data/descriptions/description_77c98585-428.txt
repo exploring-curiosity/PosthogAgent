@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and impulsive, with no clear linear progression.
+- Repeatedly returns to the same sections (Features: 5 clicks, Testimonials: 4 clicks, Navigation: 6 clicks, Footer: 6 clicks).
+- 64% of clicks (14/22) occur on elements already interacted with earlier in the session.
+- Navigation bar clicks (6 total) suggest attempts to find alternative paths, but no single path is followed for >2 actions.
+- Max scroll depth (1071px) is revisited 3 times, indicating circular navigation rather than forward momentum.
+
+2. READING BEHAVIOR
+- Skimming with no deep reading:
+  - Initial scroll: 0px→568px in 0.62s (916px/s avg speed).
+  - Subsequent scrolls: 189px-378px segments in 0.5s (378px/s avg).
+  - No pauses >1s at any scroll depth; max dwell time at any depth: 0.95s (Features section).
+- Scroll direction reversals: 7 up/down direction changes in 14s (avg 2s between reversals).
+- 83% of scrolls (15/18) occur in <0.5s, suggesting rapid scanning rather than content absorption.
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (voting/commenting) observed.
+- Interaction limited to clicks, with:
+  - 3 rage-click clusters (8.15s-8.36s, 11.89s-12.07s, 12.34s dead click).
+  - 1 dead click (12.34s) at (1336, 1633) - likely misclick or broken element.
+- Hesitation markers:
+  - 2 explicit hesitation clicks (0.45s: 453ms, 3.92s: 2968ms).
+  - 11/22 clicks (50%) preceded by hover (avg hover duration: 98ms).
+- Click-to-click interval: 0.68s avg (range: 0.04s-2.97s), indicating impulsive rather than deliberative engagement.
+
+4. INTERACTION SPEED
+- Hyper-fast with erratic pacing:
+  - First click: 0.45s after page load.
+  - 14/22 clicks (64%) occur <1s after previous action.
+  - Longest pause: 2.97s (3.92s-6.89s) - likely confusion or distraction.
+  - Scroll speed: 378px/s avg (peaking at 916px/s in initial scroll).
+  - 7/18 scrolls (39%) occur at >500px/s.
+
+5. CONTENT PREFERENCES
+- Gravitated toward 4 distinct content zones:
+  1. Features section: 5 clicks (45% of total), 3 hover events.
+  2. Testimonials: 4 clicks (36%), 3 hover events.
+  3. Navigation bar: 6 clicks (27%), 3 hover events.
+  4. Footer: 6 clicks (27%), 3 rage-clicks.
+- No sustained engagement with any single content type; all interactions <1s duration.
+- Spatial clustering: 82% of clicks (18/22) occur in right half of viewport (x>960px).
+
+6. TYPING BEHAVIOR
+- No typing or input fields interacted with in the session.
+- No form submissions, search queries, or text entry observed.
+
+7. FEATURE DISCOVERY
+- Discovered and interacted with:
+  - Navigation bar (6 clicks, 3 hover events).
+  - Features section (5 clicks, 3 hover events).
+  - Testimonials (4 clicks, 3 hover events).
+  - Footer (6 clicks, 3 rage-clicks).
+- Ignored:
+  - Hero section (no clicks despite initial load position).
+  - Any potential search/cta elements (no evidence of interaction).
+  - Mobile menu or hamburger icon (no clicks at left viewport edge).
+  - Any content below 1071px (despite reaching max scroll depth).
+
+8. SESSION FLOW
+- Arc: Impulsive exploration → Frustration → Circular navigation → Abrupt exit.
+  0.0s-0.95s: Initial scan (0px→568px scroll, 1 click).
+  0.95s-4.95s: First engagement (Features/Testimonials, 3 clicks).
+  4.95s-8.36s: Navigation bar spamming (6 clicks) + footer rage-clicks (3).
+  8.36s-12.34s: Re-engagement with Features/Testimonials (6 clicks) + dead click.
+  12.34s-14.01s: Final scroll (742px→985px) + "Get Started" click (exit trigger).
+- Key transitions:
+  - 3.92s: 2.97s pause (longest in session) precedes navigation bar clicks.
+  - 8.15s: First rage-click cluster (footer).
+  - 12.34s: Dead click (session frustration peak).
+- Exit: "Get Started" click at 14.01s (no subsequent actions).
+```
+
+**Summary**: This session represents a synthetic/impulsive user exhibiting hyper-fast, scattered navigation with no content absorption. The behavior suggests either a bot, automated test, or severely frustrated human user, characterized by rapid scrolls, repeated clicks on the same elements, and rage-click clusters. No meaningful engagement or feature discovery occurred.

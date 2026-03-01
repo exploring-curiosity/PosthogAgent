@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and sequential**: The user follows a clear, linear progression through the dashboard's primary components (Sidebar → Stats Cards → Chart → Data Table → Export). No backtracking or revisits to prior sections.
+- **Hierarchical exploration**: Each interaction targets a distinct functional area, suggesting deliberate navigation through the UI's information architecture.
+- **No exploratory detours**: Zero clicks on non-primary elements (e.g., no navigation to secondary menus, help links, or unrelated UI regions).
+
+2. READING BEHAVIOR
+- **Skim-focused**: Scroll patterns show rapid, incremental movement (4–5 scrolls in 0.5s bursts) with no pauses >1s at any depth, indicating minimal deep reading.
+  - Initial scroll: 0px→242px in 2.1s (avg. 115px/s).
+  - Secondary scroll: 73px→844px in 2.1s (avg. 367px/s).
+- **No content absorption**: Max scroll depth (844px) is reached in 8.05s, but the user immediately scrolls back up (844px→83px in 1.97s), suggesting no sustained engagement with content at any depth.
+- **Visual scanning**: Hover times (628–790ms) on interactive elements (e.g., "Chart", "Data Table") are consistent with visual identification, not reading.
+
+3. ENGAGEMENT STYLE
+- **Action-only engagement**: No evidence of voting, commenting, or content creation. All interactions are clicks on UI controls (sidebar, cards, table, export).
+- **No passive engagement**: No dwell time >1s on any content block; all clicks are preceded by brief hovers (517–790ms) and followed by immediate action.
+- **Ratio**: N/A (no voting/commenting observed).
+
+4. INTERACTION SPEED
+- **Deliberate but efficient**: Median time between actions: **1.03s** (excluding scrolls).
+  - Fastest interval: 0.04s (between scrolls).
+  - Slowest interval: 1.51s (between "Stats Cards" click and next hesitation).
+- **Hesitation markers**: Two explicit hesitations (943ms and 1507ms) at timestamps 0.94s and 5.36s, likely indicating decision points or UI evaluation.
+- **Click latency**: Median hover-to-click delay: **684ms** (range: 517–790ms).
+
+5. CONTENT PREFERENCES
+- **Functional over informational**: Gravitated toward interactive UI components, not static content:
+  - **Sidebar** (2 clicks, 2.11–2.78s): Likely navigation or settings.
+  - **Stats Cards** (2 clicks, 3.86–5.87s): Data visualization or summary metrics.
+  - **Chart** (2 clicks, 6.89–7.93s): Data exploration.
+  - **Data Table** (2 clicks, 9.04–10.13s): Tabular data.
+  - **Export** (2 clicks, 11.04–12.19s): Utility function.
+- **No content consumption**: Zero interactions with text blocks, images, or non-interactive elements.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Session log contains no text input events (e.g., search bars, form fields, or comments). All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - **Sidebar navigation** (2 clicks).
+  - **Stats Cards** (2 clicks, likely for data extraction or filtering).
+  - **Chart interaction** (2 clicks, possibly for drill-down or tooltips).
+  - **Data Table** (2 clicks, likely sorting/filtering).
+  - **Export functionality** (2 clicks, final action).
+- **Ignored features**:
+  - No interactions with:
+    - Search/filters (if present).
+    - User profile/settings.
+    - Help/documentation.
+    - Non-primary UI regions (e.g., headers, footers, modals).
+    - Static content (e.g., text, images, videos).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0–2.11s)**
+  - Loads dashboard, hesitates (943ms), then scrolls rapidly to 242px to survey layout.
+  - Clicks sidebar (2.11s) after 744ms hover, possibly to navigate or adjust settings.
+- **Phase 2: Data Scanning (2.11–5.87s)**
+  - Scrolls back up (242px→73px) to top of page.
+  - Clicks "Stats Cards" (3.86s) after 628ms hover, then hesitates (1507ms) before second click (5.87s).
+- **Phase 3: Deep Dive (5.87–10.13s)**
+  - Scrolls down to 844px (5.94–8.05s) to access "Chart" and "Data Table".
+  - Clicks "Chart" (6.89s) and "Data Table" (9.04s) with consistent hover delays (~650–790ms).
+- **Phase 4: Exit (10.13–12.19s)**
+  - Scrolls back to top (844px→83px in 1.97s).
+  - Clicks "Export" (11.04s) after 517ms hover, then confirms (12.19s).
+  - Session ends immediately after export click (no further actions).
+- **Arc**: **Linear task completion** with no exploration or deviation. User appears goal-driven (likely exporting data) with minimal UI friction.
+```
+
+**Key Observations**:
+- **Task-oriented**: Session resembles a synthetic user or automated script (e.g., "synthetic/methodical_user" in device profile) completing a predefined workflow (export data).
+- **No curiosity**: Zero interactions with non-essential UI elements or content.
+- **Efficiency**: 12.2s session duration with 10 distinct actions (0.83 actions/s) suggests high familiarity with the UI or a scripted path.

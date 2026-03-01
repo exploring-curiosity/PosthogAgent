@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   - Highly focused and linear with minimal deviation.
+   - Progression follows a clear path: page load → initial hesitation → scroll → targeted clicks on form fields.
+   - No exploratory detours (e.g., no clicks on navigation menus, product links, or secondary elements).
+   - Spatial consistency: clicks cluster tightly around form fields (Cart Summary, Card Number, Email) with <10px variance in coordinates.
+
+2. READING BEHAVIOR
+   - Skimming confirmed by scroll patterns:
+     * Rapid downward scrolls (5 sequential scrolls in 1.4s at 2.45–2.65s) covering 225px (192px→282px) at ~45px/s.
+     * No pauses >500ms on any scroll segment; max depth (282px) reached in 2.65s.
+     * Upward scrolls (4.6–4.71s) suggest re-checking prior fields, but speed (~55px/s) indicates no deep reading.
+   - No evidence of reading static content (e.g., terms, product details).
+
+3. ENGAGEMENT STYLE
+   - N/A (No voting, commenting, or social interactions observed).
+   - Interaction limited to form field clicks (3 distinct fields) with hover delays:
+     * Cart Summary: 297ms hover
+     * Card Number: 236ms hover
+     * Email: 267ms hover
+   - No form submissions or data entry detected.
+
+4. INTERACTION SPEED
+   - Fast but deliberate:
+     * Median time between actions: 0.5s (scrolls) to 1.0s (clicks).
+     * Hesitation markers:
+       - 1015ms delay before first click (0.0–1.02s).
+       - Hover delays (236–297ms) before field clicks.
+     * No rapid-fire clicks; each click preceded by hover or pause.
+
+5. CONTENT PREFERENCES
+   - Exclusively interacted with checkout form elements:
+     * Cart Summary (2 clicks at 1.84s and 2.39s).
+     * Card Number field (2 clicks at 3.14s and 4.55s).
+     * Email field (2 clicks at 5.22s and 5.9s).
+   - No engagement with:
+     * Product listings, promotional banners, or navigation.
+     * Non-form UI elements (e.g., buttons, links outside the form).
+
+6. TYPING BEHAVIOR
+   - No typing detected (no keystrokes or input values logged).
+   - Clicks on input fields suggest preparation to type, but no actual input occurred.
+
+7. FEATURE DISCOVERY
+   - Used features:
+     * Scrolling (10 scroll actions, 5 up/5 down).
+     * Form field interaction (3 fields clicked, 6 total clicks).
+   - Ignored features:
+     * Navigation menus, sidebars, or footer links.
+     * Non-form buttons (e.g., "Continue," "Apply Coupon").
+     * Static content (e.g., product images, descriptions).
+
+8. SESSION FLOW
+   - Arc: Load → Hesitation → Linear Form Navigation → Exit.
+     * 0.0–1.02s: Page load + initial hesitation (1015ms delay).
+     * 1.02–2.65s: Rapid downward scroll to scan form (reached 282px depth).
+     * 1.84–5.9s: Sequential clicks on Cart Summary → Card Number → Email fields.
+     * 4.6–4.71s: Upward scroll to revisit prior fields (likely validation).
+     * 5.9s: Session ends mid-interaction (no submission or exit action).
+   - No exploratory phase; immediate focus on checkout form.
+   - Exit occurred during input field interaction (no completion).
+```
+
+**NOTES:**
+- Device flags ("synthetic/scanner") suggest this may be a bot or automated test, which could explain the linear, non-human-like precision.
+- All actions are form-centric, with no evidence of content consumption or exploratory behavior.

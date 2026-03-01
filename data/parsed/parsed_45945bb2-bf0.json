@@ -1,0 +1,448 @@
+{
+  "user_profile": {
+    "session_id": "45945bb2-bf0",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/cautious_explorer",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 35.5,
+  "total_raw_events": 74,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/landing",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 2.56,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2562ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 4.26,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation [HOVER 1400ms]",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        898,
+        31
+      ]
+    },
+    {
+      "time": 4.99,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 732ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 6.15,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        901,
+        32
+      ]
+    },
+    {
+      "time": 6.19,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 180,
+      "max_depth": 180,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.25,
+      "action": "SCROLL",
+      "scroll_from": 180,
+      "scroll_to": 361,
+      "max_depth": 361,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.3,
+      "action": "SCROLL",
+      "scroll_from": 361,
+      "scroll_to": 542,
+      "max_depth": 542,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 6.36,
+      "action": "SCROLL",
+      "scroll_from": 542,
+      "scroll_to": 723,
+      "max_depth": 723,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 7.38,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Testimonials [HOVER 906ms]",
+      "target_href": "",
+      "target_class": "div.testimonials",
+      "coordinates": [
+        251,
+        723
+      ]
+    },
+    {
+      "time": 9.38,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Testimonials",
+      "target_href": "",
+      "target_class": "div.testimonials",
+      "coordinates": [
+        256,
+        721
+      ]
+    },
+    {
+      "time": 9.45,
+      "action": "SCROLL",
+      "scroll_from": 723,
+      "scroll_to": 703,
+      "max_depth": 723,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 9.49,
+      "action": "SCROLL",
+      "scroll_from": 703,
+      "scroll_to": 684,
+      "max_depth": 703,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 9.55,
+      "action": "SCROLL",
+      "scroll_from": 684,
+      "scroll_to": 664,
+      "max_depth": 684,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 9.63,
+      "action": "SCROLL",
+      "scroll_from": 664,
+      "scroll_to": 644,
+      "max_depth": 664,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 9.68,
+      "action": "SCROLL",
+      "scroll_from": 644,
+      "scroll_to": 624,
+      "max_depth": 644,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 11.87,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features [HOVER 1951ms]",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        1764,
+        624
+      ]
+    },
+    {
+      "time": 13.86,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 1985ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 14.72,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        1762,
+        625
+      ]
+    },
+    {
+      "time": 14.8,
+      "action": "SCROLL",
+      "scroll_from": 624,
+      "scroll_to": 713,
+      "max_depth": 713,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.84,
+      "action": "SCROLL",
+      "scroll_from": 713,
+      "scroll_to": 801,
+      "max_depth": 801,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.89,
+      "action": "SCROLL",
+      "scroll_from": 801,
+      "scroll_to": 890,
+      "max_depth": 890,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.97,
+      "action": "SCROLL",
+      "scroll_from": 890,
+      "scroll_to": 978,
+      "max_depth": 978,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 15.01,
+      "action": "SCROLL",
+      "scroll_from": 978,
+      "scroll_to": 1067,
+      "max_depth": 1067,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 16.86,
+      "action": "CLICK",
+      "target_tag": "footer",
+      "target_text": "Footer [HOVER 1633ms]",
+      "target_href": "",
+      "target_class": "footer",
+      "coordinates": [
+        1284,
+        1067
+      ]
+    },
+    {
+      "time": 19.11,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2252ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 21.51,
+      "action": "CLICK",
+      "target_tag": "footer",
+      "target_text": "Footer",
+      "target_href": "",
+      "target_class": "footer",
+      "coordinates": [
+        1286,
+        1068
+      ]
+    },
+    {
+      "time": 21.56,
+      "action": "SCROLL",
+      "scroll_from": 1067,
+      "scroll_to": 893,
+      "max_depth": 1067,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 21.6,
+      "action": "SCROLL",
+      "scroll_from": 893,
+      "scroll_to": 719,
+      "max_depth": 893,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 21.67,
+      "action": "SCROLL",
+      "scroll_from": 719,
+      "scroll_to": 545,
+      "max_depth": 719,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 21.75,
+      "action": "SCROLL",
+      "scroll_from": 545,
+      "scroll_to": 371,
+      "max_depth": 545,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 21.81,
+      "action": "SCROLL",
+      "scroll_from": 371,
+      "scroll_to": 197,
+      "max_depth": 371,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 23.88,
+      "action": "CLICK",
+      "target_tag": "h1",
+      "target_text": "Hero Title [HOVER 1953ms]",
+      "target_href": "",
+      "target_class": "h1.hero-title",
+      "coordinates": [
+        876,
+        197
+      ]
+    },
+    {
+      "time": 26.45,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2571ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 28.19,
+      "action": "CLICK",
+      "target_tag": "h1",
+      "target_text": "Hero Title",
+      "target_href": "",
+      "target_class": "h1.hero-title",
+      "coordinates": [
+        878,
+        203
+      ]
+    },
+    {
+      "time": 28.26,
+      "action": "SCROLL",
+      "scroll_from": 197,
+      "scroll_to": 238,
+      "max_depth": 238,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 28.31,
+      "action": "SCROLL",
+      "scroll_from": 238,
+      "scroll_to": 280,
+      "max_depth": 280,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 28.38,
+      "action": "SCROLL",
+      "scroll_from": 280,
+      "scroll_to": 321,
+      "max_depth": 321,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 28.44,
+      "action": "SCROLL",
+      "scroll_from": 321,
+      "scroll_to": 362,
+      "max_depth": 362,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 30.44,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Get Started [HOVER 1784ms]",
+      "target_href": "",
+      "target_class": "button.cta-primary",
+      "coordinates": [
+        750,
+        362
+      ]
+    },
+    {
+      "time": 32.95,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2504ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 35.47,
+      "action": "CLICK",
+      "target_tag": "button",
+      "target_text": "Get Started",
+      "target_href": "",
+      "target_class": "button.cta-primary",
+      "coordinates": [
+        753,
+        365
+      ]
+    }
+  ]
+}

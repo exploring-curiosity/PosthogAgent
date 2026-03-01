@@ -1,0 +1,68 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linear elements**: The user exhibits a non-linear, erratic navigation pattern with no clear goal. Initial rapid scrolling (0.22s–0.49s) suggests exploratory behavior, but later actions (1.92s–2.39s) indicate frustration (rage clicks). The session lacks a coherent path—jumping between testimonials (0.93s), footer (1.51s), and features (4.89s) without sustained engagement.
+- **Key evidence**:
+  - 6 distinct content zones targeted (landing page → testimonials → footer → features).
+  - 5 rage clicks in 0.46s (1.92s–2.39s) on the footer, suggesting disorientation or broken functionality.
+  - No return to previously viewed sections (e.g., testimonials not revisited after 1.11s).
+
+2. READING BEHAVIOR
+- **Skimmer with no deep reading**: Scroll patterns show rapid, shallow consumption:
+  - **Scroll speed**: 146–153px/0.5s (0.22s–0.49s) and 66–68px/0.5s (1.11s–1.33s), far exceeding typical reading speeds (200–300 words/minute).
+  - **Max depth**: 1066px (2.77s), but no pauses >0.5s to suggest reading. Scrolling is continuous and mechanical.
+  - **No "dwell time"**: Clicks occur immediately after reaching a section (e.g., testimonials at 732px at 0.93s; features at 561px at 4.89s).
+
+3. ENGAGEMENT STYLE
+- **No substantive engagement**: The user does not vote, comment, or interact with dynamic content. All actions are:
+  - **Clicks on static elements**: Testimonials (2 clicks), footer (8 clicks), features (2 clicks).
+  - **Frustration markers**:
+    - 5 rage clicks (1.92s–2.39s) on the footer (clustered in a 47px radius).
+    - 1 dead click (2.77s) at (1176, 1527)—likely a misclick or unresponsive element.
+  - **Hover delays**: Brief hovers (48–76ms) precede clicks, but no sustained interaction.
+
+4. INTERACTION SPEED
+- **Impulsive and accelerating**:
+  - **Initial hesitation**: 184ms delay before first click (0.18s), but subsequent actions are rapid.
+  - **Click intervals**:
+    - 0.11s–0.18s between clicks on the same element (e.g., testimonials at 0.93s/1.04s; footer at 1.51s/1.79s).
+    - 0.09s–0.12s between rage clicks (1.92s–2.39s).
+  - **Scroll intervals**: 0.05s–0.07s between scrolls (0.22s–0.49s), indicating no content absorption.
+
+5. CONTENT PREFERENCES
+- **No clear preference**: The user targets peripheral UI elements, not core content:
+  - **Testimonials**: 2 clicks (0.93s–1.04s) at the bottom of the viewport (732px).
+  - **Footer**: 8 clicks (1.51s–4.43s), including rage clicks—likely seeking navigation or contact info.
+  - **Features**: 2 clicks (4.89s–5.09s) after scrolling up from the footer.
+  - **Ignored**: No interaction with primary CTAs, forms, or dynamic content (e.g., no clicks on hero section, navigation bar, or product cards).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input, corrections, or form submissions. All interactions are clicks/scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered but not used**:
+  - **Testimonials section**: Found via scrolling (0.49s) and clicked (0.93s), but no further engagement.
+  - **Footer**: Repeatedly targeted (1.51s–4.43s) but likely for navigation links (not visible in log).
+  - **Features section**: Clicked (4.89s) but no follow-up.
+  - **Ignored features**:
+    - Navigation menu (no clicks).
+    - Search bar (no interaction).
+    - Interactive elements (e.g., carousels, accordions, forms).
+
+8. SESSION FLOW
+- **Arc**: **Frustrated exploration → forced engagement → abandonment**
+  - **0.0s–0.49s (Exploration)**: Rapid scrolling to scan content (1066px in 0.49s). No pauses.
+  - **0.93s–1.33s (Forced Engagement)**: Clicks on testimonials (0.93s) and continues scrolling, but no meaningful interaction.
+  - **1.51s–2.77s (Frustration)**: Footer clicks escalate into rage clicks (1.92s–2.39s) and a dead click (2.77s). Scrolls up (2.82s–3.07s) but no resolution.
+  - **3.36s–5.09s (Last Attempts)**: Clicks footer twice (3.36s, 3.95s), scrolls up to features (4.47s–4.6s), and clicks features (4.89s) before session ends.
+- **Exit**: Session terminates abruptly at 5.1s with no confirmation of task completion or exit intent (e.g., no "back" button, tab close, or navigation to another page).
+```
+
+**SUMMARY**: This user exhibits **synthetic, non-human behavior** consistent with a bot or automated test script. Key indicators:
+- **Mechanical scrolling**: Fixed 0.5s intervals, no natural acceleration/deceleration.
+- **Rage clicks**: 5 in 0.46s on a static footer—unlikely for a human.
+- **No typing/form interaction**: Despite desktop viewport, no text input.
+- **Device label**: "synthetic/impulsive_clicker" explicitly flags non-human activity.
+
+If this is a real user, they are **highly frustrated** (rage clicks) and **unable to find desired content** (repeated footer clicks). The session lacks all hallmarks of organic browsing (e.g., reading pauses, varied scroll speeds, or goal-directed navigation).

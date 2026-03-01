@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with rapid toggling**: The user follows a structured, sequential path through the settings menu (Save Changes → Notifications → Privacy → Settings Nav → Profile), but does so with high frequency and minimal dwell time. No exploratory detours or backtracking to unrelated sections.
+- **Tab-like behavior**: Each settings subsection is accessed via a single click (no multi-click exploration), suggesting familiarity with the UI layout or a task-driven approach.
+- **Vertical dominance**: 100% of navigation occurs via vertical scrolling (14 scroll actions) and direct clicks; no horizontal movement or search bar usage.
+
+2. READING BEHAVIOR
+- **Skim-only**: No evidence of deep reading. Scroll speeds average **480px/s** (e.g., 239px in 0.5s), far exceeding typical reading speeds (200-300px/s for skimming).
+- **Pattern**: Rapid downward scrolls (4-5 sequential scrolls per subsection) followed by abrupt upward corrections (e.g., 959px → 731px at 1.24s), indicating content scanning rather than absorption.
+- **Max depth**: Reached 959px on initial load but only revisited 650px+ depths briefly (Privacy section), suggesting lower sections were either irrelevant or ignored.
+
+3. ENGAGEMENT STYLE
+- **Action-only**: No evidence of voting, commenting, or content creation. All interactions are UI navigation (clicks on settings elements).
+- **Click redundancy**: 50% of clicks are duplicates (e.g., "Save Changes" at 0.87s and 1.16s; "Notifications" at 1.55s and 1.73s), likely due to:
+  - **Hover delays**: All primary clicks are preceded by hovers (avg **142ms** hover time), suggesting deliberate targeting but potential UI lag or hesitation.
+  - **Double-clicks**: 4/8 primary actions are followed by a near-identical click within **180ms** (e.g., 1.55s → 1.73s for Notifications), possibly due to perceived unresponsiveness.
+
+4. INTERACTION SPEED
+- **Hyper-fast**: Median time between actions: **240ms** (excluding scrolls). Key metrics:
+  - **First click**: 140ms after page load (text click at 0.14s).
+  - **Subsection transitions**: Avg **350ms** between completing one section and starting another (e.g., 1.99s scroll end → 2.28s Privacy click).
+  - **Scroll bursts**: 5-6 sequential scrolls in **<1s** (e.g., 0.18s–0.35s), with no pauses for content review.
+- **Deliberate targeting**: Hover times (60–197ms) indicate precise cursor placement before clicks, despite overall speed.
+
+5. CONTENT PREFERENCES
+- **Settings-focused**: 100% of interactions are with settings subsections:
+  - **Profile**: Final destination (4.03s), suggesting primary goal.
+  - **Notifications/Privacy**: Intermediate stops, possibly to verify or adjust before Profile.
+  - **No content consumption**: No evidence of reading posts, articles, or other non-settings content.
+- **No preferences inferred**: All actions are UI navigation; no content types (e.g., text, images) or topics are engaged with.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form submissions observed in the 4-second window.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Settings navigation (5 subsections accessed: Save Changes, Notifications, Privacy, Settings Nav, Profile).
+  - Scrolling (14 actions, 100% vertical).
+  - Hover-to-click (all primary actions).
+- **Ignored features**:
+  - Search bar (no clicks or focus).
+  - Sidebars/headers (no interactions outside settings panel).
+  - Interactive elements (no toggles, sliders, or dropdowns used).
+  - Help/documentation (no clicks on "?" or tooltips).
+
+8. SESSION FLOW
+- **Phase 1: Rapid Scan (0.0s–0.87s)**
+  - Loads settings page, immediately scrolls downward at **480px/s** to 959px (max depth), likely scanning for a target.
+  - **Hesitation**: 138ms pause at (0,0) (0.14s) before scrolling begins.
+- **Phase 2: False Start (0.87s–1.73s)**
+  - Clicks "Save Changes" (0.87s) but scrolls upward immediately (1.24s), abandoning the action.
+  - Transitions to "Notifications" (1.55s–1.73s), scrolls minimally (502px → 650px), then exits.
+- **Phase 3: Targeted Navigation (1.73s–4.03s)**
+  - Moves sequentially through "Privacy" (2.28s–2.79s) and "Settings Nav" (3.1s–3.37s), with rapid scrolls and no dwell time.
+  - **Final destination**: "Profile" (3.81s–4.03s), suggesting this was the intended target all along.
+- **Exit**: Session ends abruptly at 4.03s with no further actions.
+
+SUMMARY
+This user exhibits **task-driven, hyper-efficient navigation** with no exploratory behavior. Their actions suggest:
+- **Goal**: Access the "Profile" settings (likely the primary objective).
+- **Method**: Linear, rapid scanning of settings subsections to locate the target.
+- **Style**: Minimal engagement with content; all interactions are UI-focused and redundant (double-clicks).
+- **Speed**: Near-instantaneous decision-making (median 240ms between actions) with precise targeting (hover delays).
+- **Constraints**: No typing, no content consumption, and no feature discovery beyond the settings panel.
+```

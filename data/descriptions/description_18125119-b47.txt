@@ -1,0 +1,39 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+   - Highly linear and task-focused with no exploratory detours.
+   - Moved sequentially through the checkout form fields in a top-to-bottom order: Card Number → Pay Now → Email.
+   - No lateral navigation (e.g., no clicks on navigation menus, help links, or secondary buttons).
+   - 100 % of clicks targeted form inputs or the primary CTA.
+
+2. READING BEHAVIOR
+   - Skimming / non-reading: scroll speed averaged 134 px/s downward and 312 px/s upward.
+   - No sustained dwell time on any text block; max scroll depth (653 px) reached in 2.97 s, suggesting the user did not pause to read fine print or terms.
+   - Scroll pattern: four rapid downward scrolls (0.5 s each) followed by three equally rapid upward scrolls (0.5 s each), indicating a quick scan rather than deep reading.
+
+3. ENGAGEMENT STYLE
+   - N/A (no voting, commenting, or social engagement observed in this checkout context).
+
+4. INTERACTION SPEED
+   - Fast but deliberate within form fields.
+   - Mean time between consecutive actions: 0.62 s (excluding hovers).
+   - Hover latencies: 396 ms (Card Number), 212 ms (Pay Now), 348 ms (Email), indicating brief pre-click evaluation.
+   - Double-clicks on both Card Number (2.15 s → 2.72 s, 570 ms apart) and Pay Now (3.44 s → 4.08 s, 640 ms apart) suggest either accidental clicks or rapid confirmation.
+
+5. CONTENT PREFERENCES
+   - N/A (no content or subreddit browsing; session confined to checkout form).
+
+6. TYPING BEHAVIOR
+   - No keystrokes recorded; therefore no typing speed, corrections, or input length can be measured.
+
+7. FEATURE DISCOVERY
+   - Used features: Card Number field, Pay Now button, Email field.
+   - Ignored features: promo code fields, shipping address fields, help/chat widgets, footer links, and any secondary CTAs (e.g., “Save for later”).
+
+8. SESSION FLOW
+   - Arc: Load → Hesitation (1.41 s) → Scan (1.44 s–2.97 s) → Form Interaction (2.15 s–6.23 s) → Exit.
+   - Exploration phase: 0.0 s–1.41 s (page load + initial hesitation).
+   - Engagement phase: 2.15 s–6.23 s (three form-field interactions).
+   - No exit action recorded within the 6.2 s window; session ends mid-interaction on the Email field.
+```

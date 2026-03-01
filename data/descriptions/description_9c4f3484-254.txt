@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+1. NAVIGATION PATTERN:
+- **Non-linear, exploratory with hesitation**: The user exhibits a scattered, back-and-forth navigation pattern with frequent revisits to UI elements. They jump between distinct sections (table → sidebar → chart → stats cards → export) without a clear linear progression.
+- **Re-engagement with elements**: Multiple clicks on the same elements (e.g., "Data Table" at [6.81s] and [8.6s], "Sidebar" at [9.8s] and [13.13s], "Chart" at [14.33s] and [18.43s]) suggest either validation of actions or uncertainty.
+- **Viewport coverage**: Explored ~50% of the vertical space (max scroll depth: 908px on a 1080px viewport) but with rapid, segmented scrolls (e.g., 454px → 908px in 0.5s).
+
+2. READING BEHAVIOR:
+- **Skim-heavy with shallow engagement**: Scroll patterns indicate rapid scanning rather than deep reading:
+  - **Downward skims**: 454px → 908px in 1s ([4.94s–5.01s]), 268px → 489px in 1.5s ([13.17s–13.31s]).
+  - **Upward skims**: 908px → 268px in 1.5s ([8.65s–8.82s]), 489px → 66px in 1.5s ([18.49s–18.74s]).
+- **No sustained pauses**: No single scroll segment exceeds 0.5s, and hover times (e.g., 1482ms on "Data Table") are brief for reading.
+- **Content avoidance**: Skipped over sections (e.g., scrolled from 908px to 268px without clicking mid-page).
+
+3. ENGAGEMENT STYLE:
+- **No traditional "voting" or "commenting"**: The log shows no actions resembling upvotes, downvotes, or text input. All interactions are navigational (clicks, scrolls).
+- **Action ratio**: 100% clicks/scrolls; 0% textual engagement.
+- **Hover delays**: Prolonged hovers (e.g., 1482ms on "Data Table", 1428ms on "Stats Cards") suggest deliberation but no follow-through to deeper engagement (e.g., no form submissions).
+
+4. INTERACTION SPEED:
+- **Deliberate with hesitation spikes**: Average time between actions: **2.7s** (excluding hesitations).
+  - **Fast segments**: 0.5s scrolls, 0.07s between clicks on the same element (e.g., "Data Table" at [8.6s]).
+  - **Slow segments**: Hesitations of **4865ms** ([4.87s]), **1058ms** ([10.86s]), **1323ms** ([15.66s]), **1316ms** ([24.42s])—accounting for **25% of session duration**.
+- **Click latency**: Median hover-to-click time: **1100ms** (range: 891ms–1482ms).
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward structured data displays**:
+  - **Tables**: "Data Table" (2 clicks, [6.81s], [8.6s]).
+  - **Charts**: "Chart" (2 clicks, [14.33s], [18.43s]).
+  - **Summary metrics**: "Stats Cards" (2 clicks, [20.3s], [21.87s]).
+- **Ignored**: Unstructured content (e.g., no clicks on text blocks, images, or navigation menus beyond the sidebar).
+- **Final action**: "Export" button ([23.1s], [27.29s]), suggesting a goal-oriented extraction of data.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no keystrokes, input fields, or corrections. All actions are mouse-based.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - **Data Table**: Primary interaction ([6.81s–8.6s]).
+  - **Sidebar**: Secondary navigation ([9.8s], [13.13s]).
+  - **Chart**: Tertiary focus ([14.33s–18.43s]).
+  - **Stats Cards**: Late-stage interaction ([20.3s–21.87s]).
+  - **Export**: Final action ([23.1s], [27.29s]).
+- **Ignored features**:
+  - **Search/filters**: No clicks on search bars or filter toggles.
+  - **Help/docs**: No interactions with tooltips, FAQs, or support links.
+  - **User settings**: No profile or account-related clicks.
+
+8. SESSION FLOW:
+- **Phase 1: Initial Hesitation (0–4.87s)**:
+  - Loaded dashboard; 4.87s pause (no scrolling/clicks).
+- **Phase 2: Rapid Exploration (4.87–9.8s)**:
+  - Skimmed downward ([4.94s–5.01s]), interacted with "Data Table" ([6.81s]), then scrolled upward ([8.65s–8.82s]).
+  - **Behavior**: High-speed scanning with shallow engagement.
+- **Phase 3: Sidebar Diversion (9.8–13.13s)**:
+  - Clicked sidebar ([9.8s]), hesitated ([10.86s]), re-clicked sidebar ([13.13s]).
+  - **Behavior**: Attempted navigation but reverted to prior content.
+- **Phase 4: Chart Focus (13.13–18.43s)**:
+  - Scrolled to chart ([13.17s–13.31s]), clicked twice ([14.33s], [18.43s]), then scrolled upward ([18.49s–18.74s]).
+  - **Behavior**: Targeted interaction but no deep analysis.
+- **Phase 5: Stats Cards + Export (18.43–27.29s)**:
+  - Clicked "Stats Cards" ([20.3s], [21.87s]), then "Export" ([23.1s], [27.29s]).
+  - **Behavior**: Goal-oriented; likely data extraction.
+- **Exit**: Session ended post-export; no further actions.
+- **Arc**: **Hesitation → Scattered Exploration → Targeted Extraction → Exit**.
+```

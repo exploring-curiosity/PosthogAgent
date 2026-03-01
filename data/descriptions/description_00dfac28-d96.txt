@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern characterized by:
+  - Rapid toggling between sections (e.g., Notifications → Settings Nav → Privacy → Save Changes) with no clear progression.
+  - 4 distinct "hesitation" events (0.93s, 4.02s, 7.35s, 13.63s) totaling **6.41s of inactivity** (44.5% of session duration).
+  - **Rage clicks** (9.54s–9.77s): 4 rapid clicks on the Settings Nav within 240ms, suggesting frustration or UI unresponsiveness.
+- **Scroll-heavy exploration**: 20 scroll actions (10 up, 10 down) across 4 distinct scroll sequences, often reversing direction within seconds (e.g., scroll down to 945px at 7.86s, then up to 814px by 9.06s).
+
+2. READING BEHAVIOR
+- **Skimmer with no deep reading**:
+  - **Scroll speed**: Average scroll velocity of **~350px/s** (e.g., 0–177px in 0.5s at 1.01s), far exceeding typical reading speeds (~200px/s for skimming, ~100px/s for deep reading).
+  - **No dwell time**: No pauses >500ms on any scroll segment; immediate direction reversals (e.g., scrolls down to 533px at 1.12s, then up to 452px by 4.52s).
+  - **Max scroll depth**: 964px (9.89s), but never lingers—suggests scanning for visual anchors (e.g., "Save Changes" button) rather than content consumption.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement** (e.g., no voting, commenting, or form inputs detected).
+- **Interaction targets**:
+  - **Repetitive clicks**: 3 clicks on "Notifications" (1.5s–4.97s), 3 on "Settings Nav" (5.61s–9.77s), 2 on "Privacy" (10.88s–13.81s), and 4 on "Save Changes" (8.31s–14.38s).
+  - **Hover delays**: Average hover time before clicks = **102ms** (range: 33ms–136ms), indicating rapid, impulsive selections.
+- **Vote-to-comment ratio**: N/A (no engagement actions recorded).
+
+4. INTERACTION SPEED
+- **Fast but erratic**:
+  - **Median time between actions**: **350ms** (excluding hesitations).
+  - **Peak speed**: 4 rage clicks in 240ms (9.54s–9.77s).
+  - **Hesitation outliers**: 4 events >900ms (longest: 2.53s at 4.02s), suggesting cognitive load or distraction.
+- **Click redundancy**: 50% of clicks (8/16) are duplicates (e.g., clicking "Notifications" twice within 37ms at 4.35s–4.97s).
+
+5. CONTENT PREFERENCES
+- **Settings-focused with no content exploration**:
+  - **100% of interactions** occur within the `/settings` page.
+  - **Sections visited**:
+    - Notifications (1.5s–4.97s)
+    - General Settings (5.61s–9.77s)
+    - Privacy (10.88s–14.38s)
+  - **No evidence** of interest in other content (e.g., no subreddit visits, posts, or profiles).
+
+6. TYPING BEHAVIOR
+- **No typing detected**:
+  - No form inputs, text fields, or corrections recorded.
+  - All interactions are clicks/scrolls; no evidence of text composition.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Navigation**: Settings Nav (5.61s–9.77s), Notifications tab (1.5s–4.97s), Privacy tab (10.88s–14.38s).
+  - **Primary action**: "Save Changes" button (4 clicks across 3 distinct scroll depths: 945px, 964px, 946px).
+- **Features ignored**:
+  - No evidence of using search, help menus, account dropdowns, or other UI elements.
+  - No exploration of sub-settings (e.g., "Account," "Security," "Connected Apps").
+
+8. SESSION FLOW
+- **Arc**: **Frustrated task completion → Repetitive cycles → Abrupt exit**
+  1. **Initial exploration (0–1.5s)**:
+     - Page load → hesitation (933ms) → rapid scrolling (0–533px) → first click on "Notifications."
+  2. **First cycle (1.5s–5.61s)**:
+     - Attempts to interact with Notifications (3 clicks) → scrolls up/down erratically → abandons.
+  3. **Second cycle (5.61s–9.77s)**:
+     - Clicks Settings Nav → hesitation (1.74s) → rage clicks (4 in 240ms) → scrolls to "Save Changes."
+  4. **Third cycle (9.77s–14.38s)**:
+     - Clicks "Save Changes" (2x) → jumps to Privacy → scrolls → clicks "Save Changes" again (2x).
+  5. **Exit (14.38s)**:
+     - Final click on "Save Changes" → session ends (no confirmation of success/failure).
+- **Key observations**:
+  - **No goal achievement**: Despite 4 attempts, no evidence of successfully saving changes (e.g., no confirmation toast, no page reload).
+  - **Repetition without progress**: Identical actions (e.g., clicking "Save Changes") recur at different scroll depths, suggesting UI state persistence issues.
+  - **No exit strategy**: Session ends mid-interaction; no logout, navigation away, or error handling.
+```
+
+**SUMMARY**: This user exhibits **highly erratic, task-focused behavior** with **no content engagement**, likely attempting to complete a settings change but hindered by **UI friction** (e.g., unresponsive elements, unclear state). Their **rapid, repetitive interactions** (rage clicks, redundant clicks) and **lack of progress** suggest frustration. The session is **not exploratory**—it’s a **failed attempt at a specific task** with no evidence of broader interest in the platform.

@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly focused and task-driven**: The user exhibits a non-linear but goal-oriented navigation pattern, jumping between distinct UI elements (charts, stats cards, export button, sidebar, data table) with minimal exploratory detours.
+- **Vertical prioritization**: 75% of scroll actions (12/16) occur in rapid bursts (0.5s duration each), suggesting targeted scanning rather than meandering. Scroll depth correlates with interaction targets (e.g., 469px for charts, 756px for data table).
+- **Element clustering**: Interactions cluster around 3 vertical zones:
+  * Top (61px–203px): Export button, stats cards
+  * Mid (469px–473px): Charts
+  * Bottom (756px–758px): Data table
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**: Scroll speed (avg. 153px/s) and lack of sustained pauses indicate skimming. However:
+  - **Hover pauses** (69ms–199ms) on 4 elements suggest brief validation of interactive targets.
+  - **Hesitation clicks** (340ms, 1582ms, 1282ms) at (0,0) may indicate cognitive load or UI confusion, but no explicit reading depth is measurable.
+- **No evidence of deep reading**: No scroll stutters, backtracking, or pauses >2s on non-interactive content.
+
+3. ENGAGEMENT STYLE
+- **Interaction-only engagement**: The user exclusively performs clicks (10 total) with no visible typing, voting, or commenting.
+- **Dual-click pattern**: 4/5 interactive elements (charts, stats cards, export, data table) receive a hover + click sequence (avg. 140ms hover-to-click delay), suggesting deliberate confirmation before action.
+- **No social engagement**: No evidence of upvotes, comments, or sharing.
+
+4. INTERACTION SPEED
+- **Rapid but deliberate**: Avg. 0.75s between actions (excluding hesitations), with two distinct modes:
+  - **Fast execution**: 0.34s–0.79s between scrolls/clicks (e.g., 0.37s–0.79s for chart discovery).
+  - **Prolonged hesitations**: 3 instances of 340ms–1582ms pauses (timestamps: 0.34s, 2.37s, 5.41s) at (0,0), likely indicating decision points or UI friction.
+- **Scroll acceleration**: Scroll speed increases from 234px/s (initial) to 306px/s (final), suggesting growing familiarity.
+
+5. CONTENT PREFERENCES
+- **Data-centric elements**: All interactions target analytical UI components:
+  - **Charts** (2 clicks, 469px–473px)
+  - **Stats cards** (2 clicks, 203px–206px)
+  - **Data table** (2 clicks, 756px–758px)
+  - **Export button** (2 clicks, 56px–61px)
+- **No preference for static content**: Sidebar (2 clicks) was the only non-data element engaged, possibly for navigation.
+- **No subreddit/category engagement**: Data does not show browsing of content categories or feeds.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input events, corrections, or form interactions.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Charts** (first interaction at 0.79s)
+  - **Stats cards** (3.26s)
+  - **Export functionality** (4.13s)
+  - **Sidebar navigation** (6.17s)
+  - **Data table** (7.15s)
+- **Ignored features**:
+  - No engagement with search bars, filters, or non-data UI elements (e.g., help menus, user profiles).
+  - No evidence of tooltips, modals, or secondary actions (e.g., right-clicks, drag-and-drop).
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–0.79s)**
+  - Loads dashboard, scrolls rapidly (4 scrolls, 0px→469px) to survey content.
+  - First click on chart after 69ms hover (0.79s), suggesting premeditated target.
+- **Phase 2: Validation (0.79s–3.54s)**
+  - Re-engages with chart (2.72s) after 1582ms hesitation, then scrolls up to stats cards (3.26s–3.54s).
+  - Dual-click pattern (hover + click) indicates confirmation behavior.
+- **Phase 3: Export Attempt (4.13s–5.73s)**
+  - Clicks export button (4.13s) after 118ms hover, then hesitates (1282ms) before re-clicking (5.73s).
+  - Possible friction point (e.g., modal, confirmation dialog).
+- **Phase 4: Navigation (6.17s–7.54s)**
+  - Clicks sidebar (6.17s), then scrolls aggressively (61px→756px in 0.8s) to data table.
+  - Final interaction: data table click (7.15s–7.54s).
+- **Exit**: Session ends abruptly at 7.54s post-load, possibly due to task completion or external interruption.
+
+KEY OBSERVATIONS:
+- **Task efficiency**: 10 clicks in 7.5s, with 80% targeting data-related features.
+- **Friction points**: 3 hesitation clicks (avg. 1068ms) may indicate UI ambiguity or decision paralysis.
+- **No exploratory behavior**: All actions align with a likely goal (e.g., data extraction or analysis).
+```

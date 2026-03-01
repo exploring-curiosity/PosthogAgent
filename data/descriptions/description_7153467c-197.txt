@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and linear with exploratory detours**
+  - Follows a top-to-bottom progression through the page (landing → nav → hero → features → testimonials → footer).
+  - Repeated clicks on the same elements (e.g., "Navigation" at 1.81s/2.34s, "Hero Title" at 3.09s/4.72s, "Get Started" at 5.72s/8.28s) suggest validation or hesitation.
+  - No lateral exploration (e.g., no clicks on sidebars, dropdowns, or secondary links).
+  - **Quantitative**: 15/23 actions (65%) are sequential scrolls or clicks on adjacent page sections.
+
+2. READING BEHAVIOR
+- **Skimmer with shallow engagement**
+  - Scrolls in rapid, incremental bursts (e.g., 5 sequential scrolls from 2.4s–5.01s covering 302px in 2.6s; 5 scrolls from 8.32s–8.55s covering 257px in 0.23s).
+  - **Scroll speed**: ~100px/0.5s (consistent across sessions), indicating no deep reading.
+  - **Max depth**: 1040px (full page height likely ~1200px), suggesting no content was skipped but none was read thoroughly.
+  - **Hover times**: 395–673ms on key elements (e.g., "Hero Title" at 3.09s, "Navigation" at 1.81s) imply cursory evaluation.
+
+3. ENGAGEMENT STYLE
+- **No traditional "engagement" (votes/comments) detected**
+  - All interactions are navigational (clicks, scrolls, hovers). No form submissions, text inputs, or dynamic interactions (e.g., upvotes, comments) observed.
+  - **Hesitation markers**: 3 instances of "[HESITATION Xms]" clicks at (0,0) (0.89s, 4.04s, 7.37s), totaling 3.48s of inactivity (27% of session duration).
+  - **Click redundancy**: 6/14 clicks (43%) are duplicates (e.g., clicking "Get Started" twice with 2.56s between attempts).
+
+4. INTERACTION SPEED
+- **Deliberate but inconsistent**
+  - **Average time between actions**: 0.59s (excluding hesitations).
+  - **Peak speed**: 0.05s between scrolls (e.g., 4.83s–4.87s).
+  - **Slowest intervals**: 1.65s (7.37s–9.1s) and 1.47s (4.04s–5.72s), coinciding with hesitation clicks.
+  - **Hover durations**: 385–673ms (median 425ms) suggest intentional but cautious interaction.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward structural elements, not content**
+  - **Primary targets**:
+    - Navigation (2 clicks at 1.81s/2.34s).
+    - Hero section (2 clicks on "Hero Title" at 3.09s/4.72s; 1 click on "Get Started" at 5.72s/8.28s).
+    - Features (2 clicks at 9.1s/9.82s).
+    - Testimonials (2 clicks at 10.45s/11.19s).
+    - Footer (2 clicks at 12.11s/12.97s).
+  - **Ignored**: No clicks on images, links, or embedded content (e.g., videos, CTAs beyond "Get Started").
+
+6. TYPING BEHAVIOR
+- **No typing detected**
+  - Zero text inputs, corrections, or form interactions observed.
+
+7. FEATURE DISCOVERY
+- **Used core navigational features; ignored secondary tools**
+  - **Discovered/used**:
+    - Top navigation (2 clicks).
+    - Hero section (3 clicks).
+    - Scrolling (13 actions, 57% of session).
+    - Primary CTA ("Get Started", 2 clicks).
+  - **Ignored**:
+    - Search bars, filters, or interactive widgets (none present in log).
+    - Social sharing buttons, secondary CTAs, or dynamic content (e.g., carousels).
+    - Mobile-specific features (e.g., hamburger menus).
+
+8. SESSION FLOW
+- **Arc: Validation → Exploration → Redundant Confirmation → Exit**
+  - **0.0s–2.4s (Validation)**: Loads page, hesitates (887ms), tests navigation (hover + click), initiates scroll.
+  - **2.4s–5.72s (Exploration)**: Scrolls through hero section, clicks "Hero Title" twice (hesitation at 4.04s), targets "Get Started".
+  - **5.72s–9.89s (Redundant Confirmation)**: Clicks "Get Started" twice (1.65s gap), scrolls rapidly through features, clicks "Features" twice.
+  - **9.89s–12.97s (Exit Prep)**: Scrolls to bottom, clicks "Testimonials" and "Footer" twice each, no further action.
+  - **Exit**: Session ends at 13.0s with no return or additional engagement.
+- **Key pattern**: Repeated clicks on the same elements (6/14 clicks) suggest either:
+  - **Testing** (e.g., verifying clickability).
+  - **Synthetic behavior** (e.g., automated script with human-like delays).
+```
+
+**NOTES**:
+- The user’s device is labeled "synthetic/methodical_user," which may explain the mechanical scroll/click patterns and lack of organic engagement.
+- No emotional or contextual cues (e.g., rage clicks, rapid exits) are present. Behavior is robotic but not erratic.

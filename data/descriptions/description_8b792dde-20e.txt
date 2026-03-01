@@ -1,0 +1,75 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered/Frustrated Exploration**: The user exhibits a highly erratic navigation pattern with no clear linear progression. They repeatedly return to the same elements (e.g., "Export" button, "Sidebar") after brief detours, suggesting either confusion or technical issues.
+- **Element Targeting**: Focuses on 4 distinct UI components:
+  * "Chart" (2 clicks at ~1.28s and 1.73s)
+  * "Sidebar" (4 clicks at ~2.46s, 2.84s, 9.43s, 9.62s + 5 rage clicks)
+  * "Export" (8 clicks + 10 rage clicks across 3 clusters: 3.41s–8.1s, 10.43s–12.1s)
+  * "Stats Cards" (2 clicks at ~8.46s–8.81s)
+  * "Data Table" (2 clicks at ~12.76s–13.02s)
+- **Spatial Inconsistency**: Clicks on the same element (e.g., "Export") vary by up to 46px in Y-coordinate, indicating either imprecise targeting or UI responsiveness issues.
+
+2. READING BEHAVIOR:
+- **Skim-Only**: No evidence of deep reading. Scroll patterns show:
+  * **Rapid Vertical Scanning**: 4 distinct scroll bursts (0.78s–0.91s, 2.92s–3.1s, 8.1s–8.22s, 12.13s–12.43s), each covering ~100–150px in 0.5s (equivalent to ~200–300px/s).
+  * **No Horizontal Scrolling**: Suggests no engagement with wide tables/charts.
+  * **Max Depth**: Reached 799px (12.43s), but never paused >0.5s at any depth, indicating no sustained attention.
+- **Regressive Scrolling**: Repeatedly scrolls up/down the same regions (e.g., 2.92s–3.1s: 327px → 64px; 8.85s–9.09s: 256px → 27px), suggesting disorientation or searching for a specific element.
+
+3. ENGAGEMENT STYLE:
+- **No Traditional Engagement**: No evidence of voting, commenting, or content creation. All interactions are navigational or functional (e.g., clicking "Export").
+- **Frustration Signals**:
+  * **Rage Clicks**: 13 total (7 on "Export", 5 on "Sidebar"), clustered at:
+    - 7.62s–8.04s (5 clicks in 0.42s on "Export")
+    - 9.74s–10.05s (5 clicks in 0.31s on "Sidebar")
+    - 11.71s–12.1s (3 clicks in 0.39s on "Export")
+  * **Dead Clicks**: 2 instances (2.07s, 6.96s) where clicks registered on non-interactive elements.
+  * **Hesitation**: 3 long pauses (735ms at 0.74s, 2723ms at 6.13s, 1041ms at 11.47s) before clicking empty space (0,0).
+
+4. INTERACTION SPEED:
+- **Highly Variable**:
+  * **Fast Clicks**: 0.04s–0.3s between actions during rage-click sequences (e.g., 7.62s–8.04s).
+  * **Slow Deliberation**: 2.72s pause before the 6.13s hesitation click; 1.04s before 11.47s hesitation.
+  * **Average Action Interval**: 0.65s (excluding rage clicks), but median is 0.31s, skewed by outliers.
+- **Hover Times**:
+  * Short: 50–141ms (e.g., "Export" at 7.08s, "Sidebar" at 9.43s).
+  * Longer: 133ms ("Chart" at 1.28s), suggesting brief consideration before clicking.
+
+5. CONTENT PREFERENCES:
+- **No Explicit Content Engagement**: The session lacks interaction with textual or media content. All clicks target UI controls:
+  * **Functional Elements**: "Export" (primary focus), "Sidebar" (navigation), "Chart"/"Stats Cards"/"Data Table" (data visualization).
+  * **No Evidence of**: Reading articles, watching videos, or engaging with user-generated content.
+- **Assumed Goal**: Exporting data (given 18 total interactions with "Export"), but failed to complete the action.
+
+6. TYPING BEHAVIOR:
+- **No Typing Detected**: No text inputs, search queries, or form submissions observed in the log.
+
+7. FEATURE DISCOVERY:
+- **Discovered Features**:
+  * **Export Functionality**: Attempted repeatedly (18 interactions).
+  * **Sidebar Navigation**: Used 4 times (2.46s–9.62s).
+  * **Data Visualizations**: Clicked "Chart" (2x), "Stats Cards" (2x), "Data Table" (2x).
+- **Ignored Features**:
+  * **Search/Filter**: No evidence of use.
+  * **User Account Controls**: No clicks on profile, settings, or notifications.
+  * **Content Creation**: No comments, posts, or uploads.
+  * **Help/Documentation**: No clicks on tooltips, FAQs, or support links.
+
+8. SESSION FLOW:
+- **Arc**: **Frustration-Driven Loop** with 3 distinct phases:
+  1. **Initial Exploration (0.0s–3.41s)**:
+     - Loads dashboard, scrolls down (0.78s–0.91s), clicks "Chart" (1.28s), then "Sidebar" (2.46s).
+     - First dead click (2.07s) and rapid scroll-up (2.92s–3.1s) suggest early confusion.
+  2. **Failed Export Attempts (3.41s–10.43s)**:
+     - First "Export" click at 3.41s (hover: 59ms), followed by hesitation (6.13s, 2723ms) and 5 rage clicks (7.62s–8.04s).
+     - Brief detour to "Stats Cards" (8.46s–8.81s) before returning to "Sidebar" (9.43s) and rage-clicking it (9.74s–10.05s).
+  3. **Final Export Struggle (10.43s–13.02s)**:
+     - Third export attempt (10.43s), hesitation (11.47s, 1041ms), and 3 rage clicks (11.71s–12.1s).
+     - Scrolls to bottom (12.13s–12.43s) and clicks "Data Table" (12.76s) before session ends.
+- **Exit**: Session terminates abruptly after "Data Table" click at 13.02s, with no confirmation of successful export or navigation away.
+
+SUMMARY:
+This user exhibits **extreme frustration** with the "Export" functionality, evidenced by repeated failed attempts, rage clicks, and dead clicks. Their behavior is **reactive and scattered**, with no clear goal beyond exporting data. Scroll patterns indicate **skimming without engagement**, and the session lacks any traditional content interaction. The **13-second duration** and **3 hesitation pauses** suggest the user may have abandoned the session due to technical issues or poor UX design.
+```

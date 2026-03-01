@@ -1,0 +1,56 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with repetitive validation**: The user follows a top-to-bottom progression through the page (landing → navigation → hero → features → testimonials → footer), but exhibits a **dual-click pattern** (hover + click) on 6/10 interactive elements (e.g., "Navigation" at 2.5s/3.28s, "Get Started" at 5.76s/8.19s). This suggests **methodical validation** of UI responsiveness rather than exploratory browsing.
+- **No backtracking**: No instances of upward scrolling or revisiting prior sections.
+- **Synthetic/methodical**: The user ID ("synthetic/methodical_user") and absence of organic hesitation patterns (e.g., no mid-scroll pauses) imply a **scripted or automated test sequence**.
+
+2. READING BEHAVIOR
+- **Skim-focused with rapid scroll bursts**: Scrolling occurs in **discrete 0.5s bursts** (e.g., 3.34s–3.47s: 4 scrolls covering 192px in 1.13s), averaging **~96px/s**. This aligns with **skimming** (no pauses >1s within sections).
+- **No deep reading**: Max scroll depth (986px) suggests the user reached the footer but **did not dwell** on any section for >1s (e.g., "Features" hovered for 615ms, clicked twice, then scrolled away).
+- **Visual anchoring**: Clicks on static elements (e.g., "Hero Title" at 4.09s) indicate **attention to headings**, but no evidence of reading body text.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The log shows **no votes, comments, or form submissions**. All interactions are **UI validation clicks** (e.g., testing button responsiveness).
+- **Hesitation markers**: Three instances of "[HESITATION]" clicks (1.93s, 7.08s, 13.15s) totaling **5.54s of inactivity**, likely representing **scripted delays** rather than organic hesitation.
+- **Vote-to-comment ratio**: N/A (no engagement actions).
+
+4. INTERACTION SPEED
+- **High-speed with scripted delays**:
+  - **Average time between actions**: 1.07s (excluding hesitations).
+  - **Fastest sequence**: 4 scrolls in 1.13s (3.34s–3.47s).
+  - **Slowest sequence**: 2.30s hesitation before "Testimonials" click (13.15s).
+- **Hover-to-click latency**: Consistent **~400–800ms** (e.g., "Get Started" hovered for 799ms before click at 5.76s), likely **simulated human-like delays**.
+
+5. CONTENT PREFERENCES
+- **No content preference signals**: The user interacted with **structural elements** (navigation, buttons, headings) but showed **no engagement with actual content** (e.g., no clicks on feature descriptions, testimonial quotes, or footer links).
+- **Gravitated toward**:
+  - **Primary CTAs**: "Get Started" (clicked twice).
+  - **Section headers**: "Features," "Testimonials" (hovered/clicked).
+  - **Footer**: Final interaction (14.96s–15.95s).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains **no form inputs, search queries, or text entry**. All interactions are **clicks/scrolls**.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Navigation**: Clicked twice (3.28s).
+  - **Primary CTA**: "Get Started" (5.76s, 8.19s).
+  - **Section headers**: "Features," "Testimonials" (hovered/clicked).
+  - **Scrolling**: Used to traverse the page (14 scroll events).
+- **Features ignored**:
+  - **No dropdowns/menus**: No interactions with nested navigation.
+  - **No forms**: No login, signup, or search fields.
+  - **No media**: No clicks on images/videos (if present).
+  - **No social sharing**: No footer social links clicked.
+
+8. SESSION FLOW
+- **Arc**: **Scripted UI validation** with no organic exploration.
+  - **0.0s–4.09s**: **Initial validation** (landing page load → navigation → hero title).
+  - **4.09s–8.19s**: **Primary CTA test** ("Get Started" hover/click + scroll).
+  - **8.19s–14.15s**: **Section traversal** (features → testimonials via rapid scrolling).
+  - **14.15s–16.0s**: **Footer interaction** (final clicks before session end).
+- **Exit**: Session terminated **0.05s after final footer click** (no gradual disengagement).
+- **Key observation**: The **absence of pauses >1s** and **repetitive dual-clicks** suggest a **synthetic test** designed to validate UI responsiveness, not user behavior.
+```

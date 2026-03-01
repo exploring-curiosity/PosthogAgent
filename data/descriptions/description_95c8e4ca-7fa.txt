@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no linear progression through the checkout flow.
+- Repeated cycles of:
+  a) Scrolling to bottom of page (4x: 0.34s–0.37s, 2.6s–2.71s, 5.08s–5.3s, 6.78s–6.92s)
+  b) Clicking "Back to Shop" (6x: 0.6s–1.38s, 5.58s–5.9s, 7.29s–9.27s, 10.55s–10.87s)
+  c) Scrolling back up (4x: 1.44s–1.56s, 3.84s–3.92s, 5.95s–6.06s, 9.33s–9.4s, 11.57s–11.8s)
+- No single element held attention for >1.5s before action.
+
+2. READING BEHAVIOR
+- Skimming only; no deep reading detected.
+- Scroll speed: 300–500px/s (e.g., 0.34s–0.37s: 999px in 0.5s = 1998px/s peak, but sustained ~300px/s).
+- Max scroll depth: 1025px (10.25s), but never paused >0.5s at any depth.
+- Revisited same vertical zones (e.g., 287px–321px for "Card Number" 4x) without sustained focus.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or form submission detected.
+- Interaction limited to:
+  - 6x "Back to Shop" clicks (0.6s–10.87s)
+  - 10x rage clicks (2.09s–3.76s) on "Email" and "Pay Now" (5 each)
+  - 2x dead clicks (11.5s, 12.64s)
+- No successful form field completion or submission.
+
+4. INTERACTION SPEED
+- Extremely fast, with median inter-action time: 0.17s (IQR: 0.08s–0.34s).
+- Hesitation markers:
+  - 271ms initial hesitation (0.27s)
+  - 1565ms hesitation (8.85s)
+- Rage click bursts: 5 clicks in 0.51s (2.09s–2.55s) and 6 clicks in 0.66s (3.21s–3.84s).
+
+5. CONTENT PREFERENCES
+- No content engagement detected.
+- Focused exclusively on:
+  - "Back to Shop" link (6x)
+  - "Email" input (5x rage clicks)
+  - "Pay Now" button (6x rage clicks)
+  - "Card Number" input (4x clicks)
+  - "Cart Summary" (1x dead click)
+- No product, pricing, or policy content interacted with.
+
+6. TYPING BEHAVIOR
+- No typing detected in any input field.
+- All clicks on inputs were rage clicks (no keystrokes logged).
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Scrolling (12x)
+  - Clicking "Back to Shop" (6x)
+  - Clicking form inputs (10x rage clicks)
+  - Clicking "Pay Now" (6x rage clicks)
+- Ignored features:
+  - No form field completion
+  - No coupon/promo code interaction
+  - No help/chat widgets
+  - No product details or reviews
+
+8. SESSION FLOW
+- 0.0s–0.6s: Initial load → immediate scrolling to bottom (exploratory)
+- 0.6s–1.38s: First "Back to Shop" cycle (abandonment attempt)
+- 1.44s–2.55s: Scroll up → rage click on "Email" (frustration)
+- 2.6s–3.76s: Scroll down → rage click on "Pay Now" (escalation)
+- 3.84s–5.9s: Scroll up → second "Back to Shop" cycle
+- 5.95s–7.29s: Scroll up → third "Back to Shop" cycle
+- 7.29s–10.87s: Hesitation → fourth "Back to Shop" cycle
+- 11.5s–12.64s: Dead clicks → exit (final frustration)
+- Arc: Exploratory → frustration → repeated abandonment attempts → exit.
+```

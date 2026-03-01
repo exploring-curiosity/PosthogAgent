@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and reactive**: The user exhibits no linear or exploratory flow. Actions are clustered around specific form fields (Card Number, Email, Cart Summary) with abrupt shifts between them.
+- **No progression**: The session begins and ends on the checkout page with no navigation to other pages or sections.
+- **Repetitive targeting**: 62% of clicks (8/13) target only 3 distinct elements (Card Number: 3x, Email: 2x, Cart Summary: 3x), suggesting fixation rather than exploration.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll patterns show rapid, incremental downward movement (5 scrolls in 2.5s at 4.51–4.75s) covering 295px total, followed by immediate upward correction (4 scrolls in 2s at 6.89–7.01s). No sustained pauses (>1s) at any scroll depth.
+- **No deep reading**: Max scroll depth (295px) suggests the user never viewed content below ~1.5 screen heights (assuming 1920x1080 viewport).
+- **Visual scanning**: Scroll increments (59px/0.5s) align with line-height jumps, indicating line-by-line skimming rather than paragraph-level reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or form submissions. All interactions are preparatory (clicks on inputs) or error-prone (rage clicks).
+- **Frustration signals**:
+  - **Rage clicks**: 5 consecutive clicks on "Cart Summary" (12.29–12.82s) with <150ms intervals, indicating repeated failed interactions.
+  - **Dead click**: Single click on a non-interactive `div` (6.83s) after hesitation.
+  - **Hesitation markers**: 3 instances of "[HESITATION Xms]" clicks (4.46s, 5.95s, 10.08s) totaling 7.8s of inactivity.
+
+4. INTERACTION SPEED
+- **Erratic pacing**: Action intervals range from 50ms (rage clicks) to 2.6s (hesitation). Median interval: 540ms.
+- **Accelerating frustration**:
+  - Early session: 4.46s hesitation → 4.51s scroll (450ms delay).
+  - Late session: 12.16s click → 12.29s rage click (130ms delay).
+- **Input latency**: Hover-to-click delays (338ms for Card Number, 301ms for Email) suggest deliberation, but no typing occurs.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific focus**: 100% of interactions target checkout form elements:
+  - Payment fields: 38% of clicks (Card Number: 3x, Email: 2x).
+  - Cart Summary: 38% of clicks (5 rage clicks + 2 normal clicks).
+- **No content engagement**: No clicks on product details, navigation, or non-checkout UI.
+
+6. TYPING BEHAVIOR
+- **No observable typing**: Despite 5 clicks on input fields (Card Number: 2x, Email: 2x), no keystrokes or input values are recorded.
+- **Input abandonment**: All form fields are clicked but never populated (e.g., Email clicked at 7.47s and 10.65s, but no text entry).
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Payment form (Card Number, Email fields).
+  - Cart Summary section.
+- **Ignored features**:
+  - No interaction with navigation menus, product listings, or auxiliary checkout options (e.g., promo codes, shipping methods).
+  - No use of help/chat widgets or tooltips (despite hesitation signals).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0–4.46s)**
+  - Page load → 4.46s hesitation (no action). Likely visual assessment of page layout.
+- **Phase 2: Rapid Skim (4.46–5.25s)**
+  - Hesitation click → 5 scrolls downward (295px in 2.5s) → immediate focus on Card Number field.
+- **Phase 3: Input Attempts (5.25–7.47s)**
+  - Card Number clicked (5.25s) → hesitation (5.95s) → dead click (6.83s) → scroll up (6.89–7.01s) → Email field clicked (7.47s).
+- **Phase 4: Abandonment (7.47–12.82s)**
+  - Email field clicked (7.47s) → 2.6s hesitation (10.08s) → re-click (10.65s) → scroll down (10.72–10.9s) → Cart Summary rage clicks (12.29–12.82s).
+- **Exit**: Session ends abruptly after rage clicks (no further actions in remaining 0.2s).
+
+KEY OBSERVATIONS:
+- **Frustration-driven**: Rage clicks and dead clicks suggest UI/UX friction (e.g., unresponsive elements, unclear affordances).
+- **No completion**: Checkout process was initiated but never completed (no form submission).
+- **Synthetic indicators**: Device labeled as "synthetic/scanner" may imply bot-like behavior, but human-like hesitation/rage patterns suggest a hybrid (e.g., automated test with human oversight or a script encountering errors).
+```

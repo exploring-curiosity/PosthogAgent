@@ -1,0 +1,77 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+   - Highly linear and goal-oriented with minimal deviation.
+   - Progression follows a clear path: checkout form → cart summary → payment → exit.
+   - No exploratory detours (e.g., no product browsing, no navigation to unrelated pages).
+   - 100% of clicks target form inputs or checkout-related elements (Email, Cart Summary, Pay Now, Card Number, Back to Shop).
+
+2. READING BEHAVIOR:
+   - Skimming with rapid, incremental scrolls (average scroll duration: 0.5s per 27–108px increment).
+   - No evidence of deep reading:
+     * Scrolls cover 1,021px in 3.8s (269px/s average speed).
+     * Max scroll depth (1,021px) suggests the page is ~1,000–1,200px tall, but user only pauses at form fields (e.g., 252px for Card Number).
+   - Scroll patterns are mechanical (consistent 0.5s intervals) and lack variability (e.g., no backtracking to re-read).
+
+3. ENGAGEMENT STYLE:
+   - No voting, commenting, or social interactions (session is purely transactional).
+   - Interaction is limited to form inputs and navigation:
+     * 6 clicks on form fields (Email, Card Number) or buttons (Pay Now, Back to Shop).
+     * 2 clicks on "Cart Summary" (likely to expand/collapse a section).
+   - No engagement with non-transactional elements (e.g., product details, help links).
+
+4. INTERACTION SPEED:
+   - Extremely fast with minimal hesitation:
+     * Average time between actions: 0.32s (excluding scrolls).
+     * Fastest click interval: 0.04s (between [0.15s] and [0.19s]).
+     * Longest pauses: 330ms (between [2.83s] and [3.04s] for Card Number input).
+   - Hover times are brief (69–199ms) but precede all primary clicks.
+   - No evidence of typing (no keystrokes logged).
+
+5. CONTENT PREFERENCES:
+   - Sole focus: Checkout process.
+   - No interaction with product listings, categories, or non-checkout content.
+   - Gravitated toward:
+     * Email field (first input at 0.6s).
+     * Cart Summary (expanded at 1.33s).
+     * Payment button (clicked at 2.12s).
+     * Card Number field (clicked at 2.83s).
+     * Exit link ("Back to Shop" at 3.67s).
+
+6. TYPING BEHAVIOR:
+   - No typing detected in the log (no keystroke events).
+   - Clicks on input fields suggest intent to type, but no text entry was recorded.
+
+7. FEATURE DISCOVERY:
+   - Used features:
+     * Form inputs (Email, Card Number).
+     * Cart Summary (expanded/collapsed).
+     * Payment button ("Pay Now").
+     * Exit link ("Back to Shop").
+   - Ignored features:
+     * No interaction with:
+       - Product recommendations.
+       - Customer support/chat.
+       - Promotional banners.
+       - Navigation menus (header/footer).
+       - Shipping options or discount codes.
+
+8. SESSION FLOW:
+   - Arc: Linear progression through checkout with abrupt exit.
+     1. **Entry (0.0s)**: Lands on checkout page.
+     2. **Initial Scan (0.0–0.6s)**: Rapid downward scroll (0–134px) to assess page layout.
+     3. **First Input (0.6–1.33s)**: Clicks Email field (2 attempts), then scrolls further.
+     4. **Cart Review (1.33–2.12s)**: Expands Cart Summary, scrolls to payment section.
+     5. **Payment Attempt (2.12–2.83s)**: Clicks "Pay Now" (2 attempts), then scrolls up to Card Number field.
+     6. **Abandonment (2.83–3.83s)**: Clicks Card Number (2 attempts), scrolls to bottom, exits via "Back to Shop."
+   - No exploration or engagement beyond the checkout workflow.
+   - Exit is sudden (no hesitation before "Back to Shop" click).
+```
+
+**Key Observations**:
+- The user behaves like an automated script or power user:
+  - Unnaturally consistent scroll timing (0.5s intervals).
+  - No typing despite input field clicks.
+  - Minimal hover times (69–199ms) but no hesitation in execution.
+- Likely a **synthetic session** (e.g., bot, test script, or power user with macro tools) given the mechanical precision and lack of human variability.

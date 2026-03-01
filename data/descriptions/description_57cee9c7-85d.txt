@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear with abrupt reversals
+- Initial progression: Checkout page (0.0s) → Cart Summary (0.57s) → Back to Shop (1.31s) → Email input (2.5s) → Pay Now (3.14s) → Card Number (4.09s)
+- Two distinct "U-turns":
+  * Abandoned Cart Summary after 0.36s of interaction (0.57s–0.93s) to return to shop
+  * Abandoned Pay Now after 0.31s (3.14s–3.45s) to scroll back up to payment details
+- 62.5% of clicks (5/8) were on primary CTAs (Cart Summary, Back to Shop, Pay Now, Email, Card Number)
+- No lateral exploration (e.g., no product pages, no account settings)
+
+2. READING BEHAVIOR
+- Skimming confirmed by scroll velocity and depth:
+  * Initial scroll: 35px/0.5s (0.2s–0.7s) → 70px/0.5s (0.26s–0.76s) → 105px/0.5s (0.33s–0.83s)
+  * Average scroll speed: 70px/s downward, 120px/s upward
+  * Max depth: 980px (1.05s) but immediately reversed direction (1.31s)
+  * No sustained pauses (>0.5s) at any scroll depth
+- Hover times (99–186ms) suggest rapid visual scanning, not deep reading
+
+3. ENGAGEMENT STYLE
+- N/A (No voting, commenting, or social interactions observed)
+- All interactions were transactional (navigation, form inputs)
+- 3 dead clicks (0.14s, 2.04s, 4.35s) indicate misfires or hesitation
+
+4. INTERACTION SPEED
+- Hyper-fast with micro-delays:
+  * Median time between actions: 0.27s
+  * Fastest sequence: 0.06s (3.49s–3.55s between scrolls)
+  * Slowest sequence: 0.45s (3.7s–4.09s before Card Number click)
+  * Hover-to-click latency: 59–186ms (median 104ms)
+- No typing detected (no keystrokes logged)
+
+5. CONTENT PREFERENCES
+- Checkout page only (no other URLs visited)
+- Focused on:
+  * Cart Summary (2 clicks, 0.57s–0.89s)
+  * Payment form (Email: 2.5s–2.77s, Card Number: 4.09s–4.35s)
+  * Primary CTAs (Back to Shop, Pay Now)
+- Ignored:
+  * Shipping details (no clicks/scrolls in that region)
+  * Promo codes (no interaction)
+  * Footer links (no deep scrolls)
+
+6. TYPING BEHAVIOR
+- No typing observed (no input events beyond clicks)
+- Input fields clicked but not populated (Email, Card Number)
+
+7. FEATURE DISCOVERY
+- Used:
+  * Scrolling (12 distinct scroll actions)
+  * Primary CTAs (Cart Summary, Back to Shop, Pay Now)
+  * Form inputs (Email, Card Number)
+- Ignored:
+  * Secondary navigation (no clicks on headers/footers)
+  * Help/chat widgets (no interaction)
+  * Product recommendations (no lateral clicks)
+
+8. SESSION FLOW
+- Phase 1 (0.0s–1.31s): Rapid checkout abandonment
+  * Loaded checkout → immediate scroll to Cart Summary → clicked twice → scrolled to bottom → clicked "Back to Shop" twice
+- Phase 2 (1.31s–2.5s): Dead-end exploration
+  * Dead click (2.04s) → rapid upward scroll (2.11s–2.21s) → returned to top
+- Phase 3 (2.5s–4.35s): Payment form engagement
+  * Clicked Email → scrolled downward → clicked Pay Now → rapid upward scroll → clicked Card Number
+- Arc: Linear progression → abrupt reversal → partial re-engagement → incomplete exit
+- No clear intent (neither purchase completion nor full abandonment)
+```
+
+**Key Observations:**
+- **Synthetic behavior**: Scroll patterns (precise 0.5s durations, uniform 35px increments) and lack of typing suggest automated/scripted interaction.
+- **No human pauses**: No >0.5s gaps between actions (typical for human hesitation/reading).
+- **Dead clicks**: 3/8 clicks were misfires (0.14s, 2.04s, 4.35s), likely script errors.
+- **Viewport consistency**: No resizing or device rotation (uncommon for human users).

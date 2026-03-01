@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with frequent backtracking. They alternate between:
+  - Rapid vertical scrolling (down/up sequences at 0.72–4.21s and 5.91–6.14s)
+  - Repeated clicks on the same elements (e.g., "Export" button clicked twice at 1.21s and 3.95s; "Chart" div clicked twice at 4.8s and 5.84s; "Sidebar" clicked twice at 6.57s and 9.63s)
+  - Hesitation clicks (3 instances at 0.65s, 3.17s, 8.25s) with no associated UI interaction, suggesting misclicks or confusion.
+- **No clear progression**: Actions do not follow a logical workflow (e.g., exporting before exploring content, then returning to export again).
+
+2. READING BEHAVIOR
+- **Skimmer with shallow engagement**: Scroll patterns indicate rapid, superficial content consumption:
+  - **Downward skimming**: 4 sequential scrolls (0.72–0.89s) covering 71px in 170ms, averaging **417px/s**.
+  - **Deeper skimming**: 4 scrolls (4.02–4.21s) covering 560px in 190ms, averaging **2,947px/s**.
+  - **Upward backtracking**: 5 scrolls (5.91–6.14s) covering 476px in 230ms, averaging **2,069px/s**.
+  - **Max depth**: 631px (4.21s), but no sustained pauses (>500ms) at any scroll depth, suggesting no deep reading.
+- **No evidence of content absorption**: No clicks on textual content (only UI elements like buttons/divs) and no dwell time on specific sections.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session lacks typical user actions like voting, commenting, or sharing. Instead:
+  - **UI-focused interactions**: All clicks target functional elements ("Export," "Chart," "Sidebar").
+  - **Repetitive clicks**: 6/11 clicks (54.5%) are duplicates of the same element within seconds (e.g., "Export" at 1.21s and 3.95s; "Chart" at 4.8s and 5.84s).
+  - **Hover delays**: 3 elements show pre-click hovers (182ms, 357ms, 132ms), but these are brief and followed by immediate clicks.
+- **No ratio applicable**: Zero votes/comments observed.
+
+4. INTERACTION SPEED
+- **Highly variable with bursts of speed**:
+  - **Fast actions**: 7/14 actions (50%) occur within **<100ms** of the previous action (e.g., scrolls at 0.72–0.89s, 4.02–4.21s).
+  - **Deliberate pauses**: 3 hesitation clicks (0.65s, 3.17s, 8.25s) with **1,955ms** (longest) and **648ms** delays, likely indicating confusion or misclicks.
+  - **Average time between actions**: **738ms** (excluding hesitations: **422ms**).
+  - **Click latency**: Median hover-to-click time = **223ms** (182–357ms range).
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user did not interact with any textual or media content. All actions targeted:
+  - **UI controls**: "Export" button (2 clicks), "Chart" div (2 clicks), "Sidebar" (2 clicks).
+  - **No subreddit/dashboards visited**: The session is confined to a single page (`/dashboard`).
+- **Inferred focus**: If "Chart" and "Export" are assumed to relate to data visualization/analytics, the user may prioritize **data extraction** over content consumption.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form submissions observed in the 9.6s session.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Export functionality**: Used twice (1.21s, 3.95s), suggesting intent to extract data.
+  - **Chart interaction**: Clicked twice (4.8s, 5.84s), possibly to view details or trigger a tooltip.
+  - **Sidebar navigation**: Clicked twice (6.57s, 9.63s), likely to access menu options.
+- **Ignored features**:
+  - **No search/filters**: No clicks on search bars or filter controls.
+  - **No content interaction**: No clicks on links, articles, or media.
+  - **No settings/help**: No engagement with user profile, settings, or help menus.
+
+8. SESSION FLOW
+- **Arc**: **Erratic exploration → UI testing → premature exit**
+  1. **Initial confusion (0.0–1.21s)**:
+     - Page load → hesitation click (0.65s) → rapid skimming (0.72–0.89s) → first "Export" click (1.21s).
+     - **Behavior**: Disoriented; no clear goal.
+  2. **Repetitive UI testing (1.21–6.57s)**:
+     - Second hesitation (3.17s) → repeat "Export" (3.95s) → aggressive skimming (4.02–4.21s) → "Chart" clicks (4.8s, 5.84s) → upward scroll (5.91–6.14s).
+     - **Behavior**: Testing UI responsiveness; no content engagement.
+  3. **Sidebar interaction (6.57–9.63s)**:
+     - "Sidebar" click (6.57s) → hesitation (8.25s) → repeat "Sidebar" click (9.63s).
+     - **Behavior**: Attempting navigation but failing to progress.
+  4. **Exit (9.63s)**:
+     - Session ends abruptly after second "Sidebar" click.
+     - **No logout/navigation**: Suggests abandonment or session timeout.
+- **Quantitative summary**:
+  - **Actions per second**: 1.46 (14 actions/9.6s).
+  - **Scroll distance**: 1,719px total (1,031px down, 688px up).
+  - **Click distribution**: 64% on UI controls, 36% hesitations/misclicks.
+```
+
+**KEY OBSERVATIONS**:
+- The session is **highly atypical for a human user**:
+  - **Synthetic/scanner device**: The "unknown" device type, rapid scroll speeds (>2,900px/s), and repetitive clicks suggest a **bot, automated test, or synthetic user**.
+  - **No human-like behavior**: Zero content engagement, no typing, and no logical workflow.
+- **Possible explanations**:
+  - **Automated UI test**: Checking button responsiveness or scroll functionality.
+  - **Security scanner**: Probing for vulnerabilities (e.g., export endpoints).
+  - **Broken session recording**: Partial capture of a longer session.

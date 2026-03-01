@@ -1,0 +1,74 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Scattered with repetitive cycles**: The user exhibits a non-linear, erratic navigation pattern with frequent back-and-forth scrolling and repeated clicks on the same elements.
+  - **Scrolling behavior**: 22 scroll actions (11 up, 11 down) in 11.5s, covering 0px–924px depth. Scrolls are rapid (0.5s duration) and often reversed within seconds (e.g., scrolls down to 815px at 3.42s, then up to 215px by 3.5s).
+  - **Click clusters**: Repeated clicks on identical elements (e.g., "Chart" at (596, 440) at 0.69s and (592, 437) at 0.87s; "Stats Cards" 4x between 3.89s–5.83s).
+  - **No clear progression**: Jumps between disparate UI regions (e.g., "Export" button at 6.21s → "Data Table" at 6.86s → "Chart" at 7.79s).
+
+2. READING BEHAVIOR:
+- **Skimmer with no deep reading**: Scroll speed (avg. 116px/s) and lack of pauses suggest skimming.
+  - **No dwell time**: No pauses >200ms between scrolls or clicks (except hesitations at 0.0s, 5.37s, 9.17s).
+  - **Max depth**: 924px (6.58s), but immediately scrolls up to 374px (7.56s), indicating no sustained engagement with content below the fold.
+  - **Hover data**: Hover durations (102–146ms) are too brief for reading; likely incidental to rapid mouse movement.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The session lacks voting, commenting, or form submissions. All interactions are clicks on static UI elements.
+  - **Click patterns**:
+    - **Repetitive clicks**: 10/30 clicks are "RAGE CLICK" events (7.17s–11.46s), defined as ≥3 rapid clicks on the same element in <1s.
+    - **Hesitation clicks**: 3 clicks labeled "[HESITATION]" (0.27s, 5.37s, 9.17s) with delays of 272–1381ms before action.
+  - **No input**: Zero typing or form interactions observed.
+
+4. INTERACTION SPEED:
+- **Extremely fast with impulsive bursts**:
+  - **Avg. time between actions**: 0.38s (excluding hesitations).
+  - **Fastest sequence**: 0.04s between scrolls (e.g., 0.92s–0.96s).
+  - **Slowest actions**: Hesitations (983ms at 5.37s; 1381ms at 9.17s) and rage-click clusters (e.g., 5 clicks in 0.43s at 10.99s–11.46s).
+  - **Hover-to-click latency**: 102–146ms (consistent with impulsive behavior).
+
+5. CONTENT PREFERENCES:
+- **UI elements over content**: All clicks target generic dashboard components, not specific content:
+  - **Charts**: 10 clicks (3 distinct chart elements).
+  - **Data Table**: 6 clicks (2 distinct table regions).
+  - **Stats Cards**: 5 clicks (2 distinct card regions).
+  - **Export Button**: 2 clicks.
+  - **No content differentiation**: Clicks are on UI labels ("Chart", "Data Table"), not data points or text.
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: Zero keystrokes, corrections, or input fields interacted with.
+
+7. FEATURE DISCOVERY:
+- **Discovered but misused features**:
+  - **Used**:
+    - **Charts**: Clicked 10x (likely expecting interactivity, e.g., tooltips or drill-downs).
+    - **Data Table**: Clicked 6x (may have expected sorting/filtering).
+    - **Export Button**: Clicked 2x (only functional feature used).
+    - **Stats Cards**: Clicked 5x (possibly expecting expandable details).
+  - **Ignored**:
+    - **Navigation menus**: No clicks on sidebars, headers, or links.
+    - **Filters/search**: No interactions with common dashboard tools.
+    - **Help/documentation**: No clicks on help icons or tooltips.
+
+8. SESSION FLOW:
+- **Arc**: **Frustration-driven exploration → repetitive clicking → rage quitting**
+  - **0.0s–3.5s (Exploration)**:
+    - Loads dashboard, immediately scrolls down (0.31s–2.02s) to 815px, then up to 215px (3.5s).
+    - Clicks 3 charts and 1 data table, likely testing interactivity.
+  - **3.89s–6.44s (Repetitive Engagement)**:
+    - Clicks "Stats Cards" 4x (3.89s–5.83s), then "Export" button (6.21s–6.44s).
+    - Scrolls erratically (e.g., down to 924px at 6.58s, then up to 374px by 7.56s).
+  - **6.86s–11.46s (Frustration/Rage)**:
+    - **Rage clicks** begin at 7.17s ("Data Table") and escalate at 9.77s ("Chart").
+    - 10 rage clicks in 4.3s (7.17s–11.46s), with no functional outcome.
+    - Final actions: Scrolls down (10.13s–10.23s), clicks a chart (10.49s), then 5 rage clicks (10.99s–11.46s).
+  - **Exit**: Session ends abruptly after rage clicks; no navigation away or closure event.
+```
+
+**SUMMARY**:
+This user exhibits **synthetic/impulsive behavior** consistent with a bot, automated test, or frustrated human user. Key indicators:
+- **No meaningful engagement**: Zero content interaction, only UI clicks.
+- **Repetitive rage clicks**: 33% of clicks are rage events, suggesting failed expectations (e.g., non-interactive charts).
+- **Extreme speed**: Actions occur faster than humanly possible (e.g., 0.04s between scrolls).
+- **No typing or input**: Suggests either a script or a user who gave up on forms.
+- **Session termination**: Ends mid-rage-click sequence, implying abandonment.

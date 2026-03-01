@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic with no clear linear progression.
+- Repeated toggling between "Profile" (3 distinct access attempts at 0.86s, 1.26s, 6.31s) and "Privacy" (5 distinct access attempts at 1.81s, 2.63s, 3.0s, 3.55s, 7.78s) sections.
+- Only explored 3/5+ possible settings sections (Profile, Privacy, Notifications) with no evidence of visiting others (e.g., Account, Security, Billing).
+- 62% of clicks (13/21) were on navigation elements (tabs/buttons), suggesting interface-driven movement rather than content-driven exploration.
+
+2. READING BEHAVIOR
+- Extreme skimming with no evidence of deep reading:
+  - Average scroll speed: 120px/s (2.4x faster than typical "reading" speed of 50px/s).
+  - 18 scroll actions in 15.5s (1.16 scrolls/s), with 72% being downward and 28% upward (rapid backtracking).
+  - Max scroll depth: 989px (only 52% of a 1920px viewport), suggesting content was never fully reviewed.
+  - No pauses >500ms between scrolls (typical for reading comprehension).
+
+3. ENGAGEMENT STYLE
+- No evidence of voting, commenting, or content creation.
+- All interactions were navigational (tab switching, button clicks) or frustration signals:
+  - 7 "RAGE CLICK" events (8.09s–14.86s) clustered in Privacy (3) and Notifications (4) sections.
+  - 1 "DEAD CLICK" (8.97s) at coordinates (1751,1357) – likely an attempt to click outside the viewport.
+  - 3 "HESITATION" events (0.31s, 2.44s, 5.53s, 13.85s) totaling 5.76s of inactivity (37% of session).
+- No engagement with form fields (e.g., no typing detected in Profile/Privacy/Notifications sections).
+
+4. INTERACTION SPEED
+- Hyper-fast with erratic pacing:
+  - Average time between actions: 0.74s (excluding hesitations).
+  - Fastest click sequence: 3 "Privacy" clicks in 1.34s (1.81s–3.14s).
+  - Slowest deliberate action: 2.84s hesitation before Notifications click (13.85s).
+  - Click latency patterns:
+    - 46–128ms hover-to-click (typical for UI navigation).
+    - 628–2841ms hesitation pauses (frustration/confusion signals).
+
+5. CONTENT PREFERENCES
+- No content consumption detected (no article reads, video plays, or image views).
+- Navigational focus:
+  - 48% of clicks on "Privacy" (10/21).
+  - 24% on "Profile" (5/21).
+  - 19% on "Notifications" (4/21).
+  - 9% on "Save Changes" (2/21).
+- No evidence of interest in specific content types (e.g., no subreddit visits, no search queries).
+
+6. TYPING BEHAVIOR
+- No typing detected in any form fields.
+- No evidence of:
+  - Text input (e.g., profile updates, privacy settings).
+  - Search queries.
+  - Corrections or deletions.
+
+7. FEATURE DISCOVERY
+- Used features:
+  - Navigation tabs (Profile, Privacy, Notifications).
+  - "Save Changes" button (2 attempts at 7.03s and 9.45s).
+  - Scrollbar (extensively, 18 actions).
+- Ignored features:
+  - No evidence of dropdown menus, tooltips, or help icons.
+  - No form fields (e.g., no toggles, text inputs, or checkboxes interacted with).
+  - No mobile/desktop toggle (despite desktop viewport).
+  - No logout/signout.
+
+8. SESSION FLOW
+- 0.0s–1.81s: Rapid exploration (Profile → Privacy tabs, aggressive scrolling).
+- 1.81s–5.53s: First frustration cluster (Privacy section, 3 rage clicks, 1.98s hesitation).
+- 5.53s–7.28s: Attempted recovery (Profile → Save Changes, but no form interaction).
+- 7.28s–10.42s: Second frustration cluster (Privacy → Notifications, 4 rage clicks).
+- 10.42s–15.47s: Session collapse (Notifications rage clicks, rapid scroll to exit, Settings Nav click).
+- Arc: No clear goal → interface confusion → frustration → abandonment.
+- Exit: Session ends with a click on "Settings Nav" (15.47s), likely a navigation reset or exit attempt.
+
+FRUSTRATION SIGNALS SUMMARY
+- 7 rage clicks (33% of all clicks).
+- 1 dead click (4.8% of clicks).
+- 4 hesitation pauses (25.8% of session time).
+- 2 "Save Changes" attempts with no form interaction.
+- 18 scroll actions (72% downward, 28% upward) indicating disorientation.
+```

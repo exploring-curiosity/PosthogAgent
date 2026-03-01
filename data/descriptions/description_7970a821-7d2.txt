@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in direction and repeated interactions with the same elements. Key observations:
+  - Initial hesitation (1.45s) before first interaction (1454ms delay).
+  - Rapid downward scroll (1.51s–2.15s) to "Testimonials" (820px depth), followed by immediate upward scroll (4.14s–4.3s) to "Get Started" (286px).
+  - Post-conversion scroll (6.79s–6.94s) to footer (1047px), suggesting forced exploration after primary goal completion.
+  - **Dead click** (4.11s) at (1917, 1689) indicates misaligned expectations or UI confusion.
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**: Scroll patterns reveal minimal content absorption:
+  - **Scroll speed**: 820px in 1.0s (1.51s–1.55s) and 761px in 1.0s (6.79s–6.94s) at ~800px/s, far exceeding typical reading speeds (200–300px/s).
+  - **Max depth**: 1047px (footer), but no sustained pauses >500ms at any depth.
+  - **Hover times**: 397ms on "Testimonials" (2.15s) and 143ms on "Footer" (7.25s) suggest cursory evaluation, not deep reading.
+  - **No backtracking**: After reaching 820px (2.15s), user immediately scrolls up (4.14s), implying no re-reading of earlier content.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session lacks voting, commenting, or other participatory actions. Instead:
+  - **Click-based engagement**: 8 clicks total, with 2 hesitations (1.45s, 5.92s) and 1 dead click (4.11s).
+  - **Conversion focus**: Primary interaction is "Get Started" (4.59s, 6.72s), clicked twice with 1326ms hesitation between attempts.
+  - **No ratio**: N/A (no votes/comments).
+
+4. INTERACTION SPEED
+- **Fast but deliberate with delays**:
+  - **Average action interval**: 1.07s (excluding hesitations).
+  - **Hesitation events**: 1454ms (1.45s) and 1326ms (5.92s) before clicks, suggesting decision-making friction.
+  - **Scroll bursts**: 4 sequential scrolls (4.14s–4.3s) at 0.5s intervals, indicating rapid navigation.
+  - **Click latency**: 397ms hover on "Testimonials" (2.15s) vs. 109ms on "Get Started" (4.59s), showing prioritization of conversion elements.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward conversion and social proof elements**:
+  - **Testimonials**: Clicked twice (2.15s, 3.61s) after rapid scroll to 820px.
+  - **CTA ("Get Started")**: Primary focus, clicked twice (4.59s, 6.72s) with hesitation.
+  - **Footer**: Final interaction (7.25s, 8.57s), likely post-conversion exploration.
+  - **Ignored**: No interaction with navigation menus, search, or other page sections.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input events (e.g., form fields, search bars, comments).
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Scrolling (primary navigation method).
+  - Clickable elements: "Testimonials," "Get Started," "Footer."
+- **Ignored**:
+  - Navigation menus (no clicks on headers/links).
+  - Search functionality (no input).
+  - Interactive widgets (e.g., carousels, accordions).
+  - Above-the-fold content (initial hesitation at 0px).
+
+8. SESSION FLOW
+- **Arc**: **Forced exploration → Conversion attempt → Post-conversion drift**
+  - **0.0s–2.15s**: Rapid exploration (scroll to 820px, hover on "Testimonials").
+  - **2.15s–4.59s**: Abrupt pivot (scroll up to 286px, dead click, hover on "Get Started").
+  - **4.59s–6.72s**: Conversion attempt (hesitation, two clicks on "Get Started").
+  - **6.72s–8.57s**: Post-conversion drift (scroll to footer, click footer twice).
+- **Exit**: Session ends at 8.6s with no further actions, suggesting abandonment or synthetic termination.
+```
+
+**Key Anomalies**:
+- **Synthetic/scanner device**: May explain rapid, erratic behavior (e.g., dead clicks, no typing).
+- **No sustained engagement**: 8.6s duration with no deep reading or participatory actions.
+- **Conversion focus**: Despite scattered navigation, primary goal appears to be "Get Started."

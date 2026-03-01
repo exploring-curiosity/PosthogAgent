@@ -1,0 +1,70 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly focused and task-driven**: The user exhibits a non-linear but goal-oriented navigation pattern, jumping between distinct UI regions (export button → chart → data table → stats cards → sidebar) with minimal exploratory detours.
+- **Spatial clustering**: Actions are concentrated in specific areas of the viewport (e.g., top-right for "Export" at (1742, 79), bottom-right for "Data Table" at (1735, 721), center for "Chart" at (497, 584)).
+- **No sequential browsing**: Skips intermediate content (e.g., jumps from 79px to 247px scroll depth without pausing).
+- **Dead click**: Final action at 4.03s is a "DEAD CLICK" at (526, 110), suggesting either a misclick or failed interaction.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scrolls rapidly through content with no sustained pauses:
+  - Downward scrolls: 0–79px (0.25–0.4s), 79–584px (0.88–0.95s), 584–721px (1.79–1.86s).
+  - Upward scrolls: 721–102px (2.44–2.57s) in 3 segments.
+- **Max depth**: 721px (viewport height: 1080px), indicating they viewed ~67% of the page vertically.
+- **No deep reading**: No scroll pauses >0.5s; average scroll speed = ~150px/s (e.g., 79–247px in 0.03s).
+- **Revisitation**: Returns to top (102px) after reaching 721px, suggesting confirmation of prior content.
+
+3. ENGAGEMENT STYLE
+- **No traditional "voting/commenting"**: The session is on a dashboard (not a social platform), so engagement metrics differ:
+  - **Primary interactions**: Clicks on functional UI elements ("Export," "Chart," "Data Table," "Stats Cards," "Sidebar").
+  - **Hover-to-click ratio**: 5/10 clicks preceded by hovers (avg hover duration: 120ms), indicating deliberate targeting.
+  - **Redundant clicks**: 4/10 clicks are duplicates (e.g., "Export" at 0.69s and 0.85s), possibly due to perceived unresponsiveness.
+  - **No form inputs/text entry**: No typing detected.
+
+4. INTERACTION SPEED
+- **Rapid and deliberate**:
+  - **Action frequency**: 20 actions in 4.0s → **5 actions/second** (peak: 6 actions between 0.85–1.42s).
+  - **Time between clicks**: Avg 0.28s (min: 0.03s, max: 0.87s).
+  - **Hover durations**: 54–183ms (avg 120ms), suggesting quick decision-making.
+  - **Scroll speed**: ~150px/s (consistent across directions).
+- **Hesitation**: Single 215ms pause at 0.21s ("[HESITATION 215ms]"), likely initial orientation.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward functional UI components** (in order of interaction):
+  1. **Export functionality** (0.69s): Top-right button, likely for data extraction.
+  2. **Chart** (1.42s): Bottom-center, possibly a visualization of interest.
+  3. **Data Table** (2.27s): Bottom-right, tabular data.
+  4. **Stats Cards** (2.75s): Top-center, summary metrics.
+  5. **Sidebar** (3.6s): Left-side navigation.
+- **Ignored**: Static text, images, or non-interactive elements (no clicks on non-functional areas).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form submissions in the log.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Export (primary action).
+  - Chart interaction (likely filtering/zooming).
+  - Data Table (sorting/filtering).
+  - Stats Cards (summary metrics).
+  - Sidebar (navigation).
+- **Ignored features**:
+  - Search bars (no clicks).
+  - Help/tooltips (no hovers >200ms).
+  - Non-interactive content (e.g., static text, images).
+  - Mobile-specific features (irrelevant for desktop).
+
+8. SESSION FLOW
+- **Arc**: **Task initiation → Rapid exploration → Feature testing → Exit**
+  - **0.0–0.21s (Orientation)**: Page load + initial hesitation.
+  - **0.21–0.69s (Scanning)**: Rapid downward scrolls (0–79px) to assess content.
+  - **0.69–1.42s (Primary Task)**: Clicks "Export" (twice), likely core goal.
+  - **1.42–2.27s (Secondary Tasks)**: Interacts with "Chart" (twice), scrolls to "Data Table."
+  - **2.27–3.6s (Validation)**: Clicks "Data Table" (twice), scrolls up to "Stats Cards," then "Sidebar."
+  - **3.6–4.03s (Exit)**: Dead click, session ends abruptly.
+- **No engagement loop**: Linear progression with no revisits to prior features after initial use.
+- **No completion confirmation**: No success/error messages logged; dead click suggests unmet expectation.
+```
+
+**SUMMARY**: This user is a **high-speed, task-driven operator** with a clear goal (likely data export) and minimal tolerance for friction. Their behavior suggests familiarity with dashboards (efficient targeting of UI elements) but frustration with responsiveness (duplicate clicks). The session ends without clear task completion.

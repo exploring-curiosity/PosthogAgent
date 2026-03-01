@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no linear progression.
+- Repeated toggling between 3 primary elements: "Email" input field, "Pay Now" button, and "Back to Shop" link.
+- 12 distinct scroll sequences (6 down, 6 up), covering the full page depth (0px–995px) multiple times.
+- 23 total clicks, with 10 (43%) on "Back to Shop," 7 (30%) on "Email," and 4 (17%) on "Pay Now."
+- No sustained focus on any single element for >1.5s (excluding rage clicks).
+
+2. READING BEHAVIOR
+- No evidence of deep reading. Scroll patterns indicate aggressive skimming:
+  - Average scroll speed: 240px/s (e.g., 0–994px in 0.87s at 1.2s).
+  - 5 full-page scrolls (top to bottom or vice versa) in 8.7s.
+  - No pauses >200ms at any scroll depth; immediate direction reversals (e.g., 1.6s: scrolls down to 994px, then up to 693px by 2.22s).
+- Max scroll depth (995px) suggests the page is ~1000px tall, but user never dwells below 600px for >300ms.
+
+3. ENGAGEMENT STYLE
+- No traditional "engagement" (e.g., voting, commenting, or form submission).
+- Interaction limited to:
+  - Input field clicks (7 total, 4 labeled "RAGE CLICK").
+  - Button/link clicks (16 total, 3 labeled "RAGE CLICK," 1 "DEAD CLICK").
+- Click frequency: 2.6 clicks/s (23 clicks in 8.7s).
+- No completed actions (e.g., no form submission, no navigation away from checkout page).
+
+4. INTERACTION SPEED
+- Extremely fast and impulsive:
+  - Median time between actions: 180ms (excluding scrolls).
+  - Fastest sequence: 4 rage clicks on "Email" in 420ms (4.58s–4.8s).
+  - Hover times: 36–135ms (median: 64ms), indicating rapid mouse movement.
+- Hesitation only at session start (250ms pause at 0.25s).
+
+5. CONTENT PREFERENCES
+- No content preferences observable. User remained on a single page (checkout) with no navigation to other URLs.
+- Focused exclusively on 3 interactive elements:
+  1. "Email" input field (7 clicks, 4 rage clicks).
+  2. "Pay Now" button (4 clicks).
+  3. "Back to Shop" link (10 clicks, 3 rage clicks).
+
+6. TYPING BEHAVIOR
+- No typing detected. All interactions with the "Email" input field were clicks (no keystrokes logged).
+- No corrections or input length data available.
+
+7. FEATURE DISCOVERY
+- Discovered and repeatedly interacted with:
+  - Form input ("Email" field).
+  - Primary CTA ("Pay Now" button).
+  - Secondary navigation ("Back to Shop" link).
+- Ignored:
+  - Any other page content (no clicks on non-interactive elements).
+  - Additional form fields (e.g., password, address) if present.
+  - Page header/footer (no clicks outside the 3 focal elements).
+
+8. SESSION FLOW
+- Arc: Frustration loop → Abandonment.
+  - 0.0–0.91s: Initial exploration (scrolls, hesitant click).
+  - 0.91–2.68s: Attempted engagement (email input, rapid scrolling).
+  - 2.68–5.59s: Escalating frustration (rage clicks on "Email" and "Back to Shop").
+  - 5.59–8.74s: Repetitive cycling (scrolling + clicking "Back to Shop" 5x in 3.15s).
+  - 7.03s: Dead click (final failed interaction).
+  - No exit action (session ends mid-scroll at 8.74s).
+- Quantitative summary:
+  - 64% of session spent in frustration loops (rage/dead clicks).
+  - 36% spent in exploratory scrolling.
+  - No successful task completion.
+```
+
+**KEY INSIGHTS:**
+- User behavior is consistent with a **synthetic/automated test** or **extreme frustration** (e.g., broken UI, bot-like interactions).
+- No human-like engagement patterns (e.g., no typing, no sustained attention).
+- Session terminated abruptly, likely due to script timeout or user abandonment.

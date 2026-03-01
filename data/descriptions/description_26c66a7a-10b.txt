@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly exploratory with rapid feature testing**: The user exhibits a non-linear, breadth-first navigation style, systematically clicking nearly every interactive element in descending order of page depth (footer → testimonials → features → hero → navigation). No evidence of deep content consumption.
+- **Spatial progression**: Clicks follow a vertical descent (footer at 976px → testimonials at 769px → features at 637px → hero at 123px → navigation at 35px), then reverse upward, suggesting deliberate UI coverage testing.
+- **Scattered focus**: 14 distinct click targets across 7.5s, with no repeated engagement on any single element beyond initial interaction.
+
+2. READING BEHAVIOR
+- **No reading detected**: Scroll patterns show rapid, incremental jumps (325px–976px in 0.5s intervals) with no sustained pauses at any depth. Max scroll speed: 652px/s (976px–325px over 0.5s).
+- **Skim validation**: All clicks occur immediately after reaching a new scroll depth (e.g., footer click at 976px within 0.46s of arrival), indicating visual scanning rather than content absorption.
+- **Reverse skimming**: Upward scrolls (e.g., 976px→123px in 1.5s) mirror downward patterns, reinforcing non-reading behavior.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: Zero evidence of voting, commenting, or content creation. All interactions are UI navigation clicks.
+- **Synthetic testing**: Click pattern suggests automated or scripted behavior:
+  - Dual clicks on every target (e.g., "Testimonials" at 2.01s and 2.38s).
+  - Hover durations (88–194ms) align with synthetic input timing.
+- **Engagement ratio**: 0:0 (votes:comments).
+
+4. INTERACTION SPEED
+- **Hyper-accelerated**: Average action interval: 0.54s (range: 0.04s–1.32s).
+  - Fastest: 0.04s between scroll steps (e.g., 0.91s–0.95s).
+  - Slowest: 1.32s hesitation at 7.34s (likely synthetic delay).
+- **Click latency**: Mean hover-to-click time: 126ms (n=6), with 3/6 clicks preceded by hovers.
+- **Scroll velocity**: Consistent 0.5s duration for 245–325px scrolls (490–650px/s).
+
+5. CONTENT PREFERENCES
+- **No content preference**: All clicks target UI elements (navigation, buttons, sections) rather than content. Targets include:
+  - Structural: Footer (2 clicks), Navigation (2 clicks), Hero Title (2 clicks).
+  - Functional: "Get Started" button (2 clicks), "Features" section (2 clicks).
+- **No subreddit/forum engagement**: Irrelevant to this session (not a Reddit-like platform).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero text inputs, corrections, or form interactions in the log.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - Core navigation: Header nav (2 clicks), footer (2 clicks).
+  - Conversion elements: "Get Started" button (2 clicks), "Testimonials" section (2 clicks).
+  - Content sections: "Features" (2 clicks), Hero Title (2 clicks).
+- **Features ignored**:
+  - No interaction with non-clickable content (e.g., body text, images).
+  - No form submissions, search, or dynamic elements.
+
+8. SESSION FLOW
+- **Phase 1 (0.0–1.41s): Rapid descent**
+  - Loads page → immediate scroll to footer (976px in 0.95s) → clicks footer.
+- **Phase 2 (1.41–3.65s): Systematic upward crawl**
+  - Scrolls up in 245–325px increments, clicking "Testimonials" (2.01s), "Features" (2.77s), and Hero Title (3.65s).
+- **Phase 3 (3.65–5.67s): Conversion focus**
+  - Clicks "Get Started" button (5.36s) after brief downward scroll (123px→304px).
+- **Phase 4 (5.67–7.49s): Navigation exit**
+  - Scrolls to top (35px) → clicks navigation (6.02s) → final hesitation (7.34s) → navigation click (7.49s).
+- **Arc**: **Synthetic UI audit** → No organic exploration or exit intent. Session terminates mid-action.
+```
+
+**Key Observations**:
+- **Synthetic signature**: Dual clicks, sub-200ms hovers, and 0.5s scroll intervals are consistent with automated testing or power-user "smoke testing."
+- **Zero content engagement**: All actions target UI functionality, not information.
+- **No exit**: Session ends mid-click (7.49s), suggesting forced termination or script completion.

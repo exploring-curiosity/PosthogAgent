@@ -1,0 +1,97 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly erratic and non-linear, with repeated cycles of:
+  a) Targeted clicks on navigation elements ("Profile", "Settings Nav", "Privacy")
+  b) Rapid scrolling (both up and down) between clicks
+  c) Rage-click clusters (5+ rapid clicks in <1s) on the same UI element
+- No clear progression through content; 67% of clicks (14/21) occur on navigation elements rather than content
+- 3 distinct "navigation loops" observed:
+  * Loop 1 (0.46s–4.73s): Settings → Profile → Settings
+  * Loop 2 (5.26s–8.34s): Profile → Settings → Privacy → Settings
+  * Loop 3 (10.42s–16.27s): Profile → Settings → Save Changes
+
+2. READING BEHAVIOR
+- Skimming confirmed by:
+  a) Scroll speed: 27–36px/100ms (consistent across all scrolls)
+  b) Scroll depth: Never pauses >0.5s at any depth (max pause: 0.34s between scrolls)
+  c) No sustained viewing at any scroll position (all scrolls are continuous)
+- Max scroll depth: 1069px (viewport height: 1080px), suggesting full-page scans but no deep reading
+- 4 instances of "scroll whiplash" (rapid up/down within 1s):
+  * 3.3s–3.5s: 945px → 17px (928px change in 0.2s)
+  * 6.43s–6.7s: 1054px → 744px (310px change in 0.27s)
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (votes/comments) detected
+- Interaction limited to:
+  a) Navigation clicks (14 total)
+  b) Form submission attempts ("Save Changes" x2)
+  c) Rage-clicks (15 total, 42% of all clicks)
+- Click-to-action ratio: 1.5 clicks per intended action (e.g., 3 clicks to select "Profile")
+- Hesitation markers:
+  * 3 instances of [HESITATION] (457ms, 2081ms, 2014ms) at session start, mid-point, and end
+  * All hesitations occur before navigation changes
+
+4. INTERACTION SPEED
+- Average action interval: 0.71s (excluding hesitations)
+- Fastest sequence: 0.03s between rage-clicks (1.33s–1.77s)
+- Slowest deliberate action: 2.08s (10.42s–12.5s, including hesitation)
+- Click clusters:
+  * 1.33s–1.77s: 6 rage-clicks on "Profile" in 0.44s
+  * 2.72s–3.27s: 6 rage-clicks on "Save Changes" in 0.55s
+  * 4.3s–4.69s: 5 rage-clicks on "Settings Nav" in 0.39s
+
+5. CONTENT PREFERENCES
+- No content consumption observed; all interactions are with:
+  a) Navigation elements (14 clicks):
+     - "Profile" (6 clicks)
+     - "Settings Nav" (6 clicks)
+     - "Privacy" (1 click)
+  b) Form controls (2 clicks on "Save Changes")
+- No evidence of content selection, reading, or engagement with substantive material
+
+6. TYPING BEHAVIOR
+- No typing detected in the action log
+- No form inputs, search queries, or text entry observed
+- All interactions are point-and-click
+
+7. FEATURE DISCOVERY
+- Used features:
+  a) Navigation menu (Settings, Profile, Privacy)
+  b) Form submission ("Save Changes")
+  c) Scrolling (vertical only)
+- Ignored features:
+  a) No evidence of:
+     - Search functionality
+     - Account dropdowns/menus
+     - Help/support links
+     - Interactive content (e.g., toggles, sliders)
+     - Sidebars or secondary navigation
+  b) No horizontal scrolling or viewport resizing
+
+8. SESSION FLOW
+- Arc: Frustration Loop → Abandonment
+  1. Initial Hesitation (0.0s–1.02s):
+     - 457ms hesitation after page load
+     - Slow scroll to explore (0.49s–0.66s)
+  2. First Navigation Attempt (1.02s–4.73s):
+     - 3 failed clicks on "Profile" (rage-clicks at 1.33s–1.77s)
+     - Scroll to bottom, attempt "Save Changes" (rage-clicks at 2.72s–3.27s)
+     - Return to "Settings" (4.2s–4.69s)
+  3. Second Navigation Attempt (5.26s–8.34s):
+     - Direct click to "Profile" (5.26s), immediate scroll to bottom
+     - Navigate to "Privacy" (7.05s), brief scroll
+     - Return to "Settings" (7.89s)
+  4. Final Frustration (10.42s–16.27s):
+     - 2081ms hesitation (longest in session)
+     - 7 rage-clicks on "Profile" (10.89s–11.36s)
+     - Scroll to bottom, attempt "Save Changes" (14.05s)
+     - 2014ms hesitation, final click (16.27s), session ends
+- Exit: No confirmation of successful navigation or form submission; session terminates after final click.
+```
+
+Key Observations:
+- **Primary Issue**: UI responsiveness failure. Rage-clicks suggest elements are not registering clicks or providing feedback.
+- **Behavioral Signature**: "Synthetic/impulsive_clicker" device tag aligns with observed patterns (rapid, repetitive clicks without deliberation).
+- **Session Outcome**: Likely abandonment due to frustration, with no evidence of task completion.

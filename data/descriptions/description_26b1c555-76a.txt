@@ -1,0 +1,58 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with frustration indicators**: The user exhibits non-linear, erratic navigation with repeated failed interactions. Initial hesitation (161ms delay at 0.16s) is followed by rapid, clustered clicks on the navigation element (6 clicks in 0.5s, 0.77s–1.21s), all marked as "[RAGE CLICK]". Post-frustration, they abandon the navigation and shift to vertical scrolling (1.26s–2.03s) before targeting discrete page sections (Hero Title, Footer, Get Started button, Testimonials, Features).
+- **Section-hopping**: After rage-clicking, the user jumps between 5 distinct page sections (Hero → Footer → Get Started → Testimonials → Features) with no return visits, suggesting exploratory but unfocused behavior.
+
+2. READING BEHAVIOR
+- **Skimmer with rapid scroll bursts**: Scroll patterns show:
+  - **Downward skimming**: 4 consecutive downward scrolls (1.26s–2.03s) covering 980px in 0.77s (avg. 1,273px/s), indicating no deep reading.
+  - **Upward backtracking**: After reaching the footer (2.41s), they scroll upward (2.83s–3.04s) at 1,372px/s, likely searching for missed content.
+  - **No dwell time**: No pauses >0.5s between scrolls; all scrolls are continuous and rapid.
+- **No evidence of deep reading**: Max scroll depth (980px) suggests they viewed ~55% of a 1920px-tall page (assuming standard 1.5x viewport multiplier), but no single section received >0.5s of focused attention.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or form submissions. All interactions are clicks or scrolls.
+- **Click-heavy with hover delays**: 14 total clicks, 5 of which are preceded by hovers (avg. hover duration: 132ms). Hover delays suggest deliberation but no follow-through on engagement (e.g., no form fields or interactive elements clicked).
+- **Frustration clicks**: 5/14 clicks are rage clicks (36%), all targeting the navigation menu. No "productive" engagement (e.g., links followed, forms submitted).
+
+4. INTERACTION SPEED
+- **Extremely rapid with frustration spikes**:
+  - **Pre-frustration**: First 3 actions occur at 0.16s, 0.51s, and 0.67s (avg. 255ms between actions).
+  - **Frustration cluster**: 6 navigation clicks in 0.5s (0.77s–1.21s; avg. 83ms between clicks).
+  - **Post-frustration**: Actions slow to avg. 340ms between interactions (1.26s–5.37s), but remain faster than human typing speeds.
+- **No pauses**: No gaps >0.5s between actions; session is continuous until abrupt end.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward structural elements, not content**:
+  - **Navigation menu**: 6 clicks (43% of total), all rage clicks.
+  - **Hero section**: 2 clicks on the H1 title (1.57s–1.76s), likely accidental (no hover on second click).
+  - **Footer**: 2 clicks (2.41s–2.78s), possibly seeking sitemap links.
+  - **CTA button**: 2 clicks on "Get Started" (3.32s–3.51s), highest hover duration (191ms) suggests intent but no conversion.
+  - **Testimonials/Features**: 2 clicks each (4.03s–5.37s), minimal hover time (170ms avg.).
+- **No content engagement**: No clicks on body text, images, or interactive widgets (e.g., forms, videos).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input events (e.g., search bars, forms, comments). All interactions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered but unused features**:
+  - **Navigation menu**: Found immediately (0.51s) but unusable (rage clicks).
+  - **CTA button**: Located (3.32s) but not activated (no form submission).
+  - **Footer links**: Clicked (2.41s) but no navigation followed.
+- **Ignored features**:
+  - **Search functionality**: No clicks on search bars (if present).
+  - **Interactive widgets**: No engagement with forms, carousels, or dynamic content.
+  - **Social sharing**: No clicks on share buttons (if present).
+
+8. SESSION FLOW
+- **Arc**: Frustration → Exploration → Abandonment
+  1. **0.0s–1.21s (Frustration)**: Hesitation (161ms) → failed navigation (rage clicks) → immediate abandonment of menu.
+  2. **1.26s–2.03s (Exploration)**: Rapid downward scroll to footer (980px), suggesting a "scan for anything useful" strategy.
+  3. **2.41s–5.37s (Targeted Probing)**: Clicks on discrete sections (Hero, Footer, CTA, Testimonials, Features) with no follow-through. Hover delays (132ms avg.) indicate evaluation but no commitment.
+  4. **5.37s (Abandonment)**: Session ends abruptly after Features click; no exit action (e.g., tab close) recorded.
+- **Exit**: No clear exit intent (e.g., no "back" button, no new page load). Session terminates mid-interaction.
+```
+
+**SUMMARY**: This user exhibited a **frustration-driven, exploratory session** with no productive engagement. Their behavior suggests a **broken navigation experience** (rage clicks) followed by **rapid, superficial scanning** of page sections. The session ended abruptly, likely due to abandonment. Key red flags: **36% rage clicks**, **no content engagement**, and **no typing/form submissions**.

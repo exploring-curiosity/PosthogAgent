@@ -1,0 +1,55 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive frustration loops**: The user exhibits a non-linear, erratic navigation pattern with no clear progression through content. They jump between distinct UI elements (Export button → Chart → Data Table → Sidebar → Export button) in rapid succession, with no sustained interaction with any single component.
+- **Backtracking**: After reaching the bottom of the page (900px at 2.5s), they immediately scroll upward (2.83s–3.53s) to revisit earlier sections, suggesting disorientation or failed goal completion.
+- **Feature-hopping**: 6 unique UI elements clicked in 4.6s (Export, Chart, Data Table, Sidebar), with no evidence of hierarchical or logical exploration.
+
+2. READING BEHAVIOR
+- **Skim-only with no deep reading**: Scroll patterns show rapid, incremental downward movement (0.7s–2.17s) with no pauses >0.5s, indicating no sustained engagement with content. Max scroll depth (900px) is reached in 2.17s, implying a scan of ~1.5 screens/second.
+- **No content absorption**: The user scrolls past 900px of content in 1.4s (1.78s–2.17s) without stopping to click or hover meaningfully (hover times: 62–149ms, below typical reading thresholds).
+- **Upward scrolls are abrupt**: After reaching the bottom, they scroll upward at 3.5x the speed of downward scrolling (e.g., 900px→83px in 0.7s at 3.53s), suggesting a "reset" rather than re-reading.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement (voting/commenting)**: The session contains no text input, upvotes, or comments. All interactions are clicks on UI elements.
+- **Frustration-driven clicks**: 4/15 clicks are labeled "[RAGE CLICK]" (4.33s–4.62s), clustered on the Export button. Preceding these are 3 failed attempts to click Export (1.19s, 1.39s, 3.77s, 4.19s), indicating repeated failed interactions.
+- **Hover-to-click ratio**: 6/15 clicks are preceded by hovers (avg hover duration: 86ms), but hovers are too brief for deliberate selection (typical hover thresholds: 300–500ms).
+
+4. INTERACTION SPEED
+- **Hyper-fast with no deliberation**: Median time between actions: 0.17s (excluding scrolls). Fastest sequence: 4 rage clicks in 0.29s (4.33s–4.62s).
+- **Hesitation only at start**: Initial click at 0.67s follows a 667ms hesitation (only pause >0.5s in session). Subsequent actions average 0.2–0.4s between clicks.
+- **Scroll speed**: Downward scrolls average 22–157px/0.5s (44–314px/s); upward scrolls average 180px/0.5s (360px/s).
+
+5. CONTENT PREFERENCES
+- **No content preference data**: The session contains no subreddit/community interactions or content consumption. All clicks target UI elements (Export, Chart, Data Table, Sidebar), not informational content.
+- **Gravitated toward interactive elements**: 100% of clicks target buttons/divs/tables with no evidence of reading text, images, or static content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text input, corrections, or form interactions. All actions are clicks or scrolls.
+
+7. FEATURE DISCOVERY
+- **Discovered features (used)**:
+  - Export button (clicked 6x, including rage clicks)
+  - Chart (clicked 2x)
+  - Data Table (clicked 2x)
+  - Sidebar (clicked 2x)
+- **Ignored features**:
+  - No evidence of using filters, search, settings, or help menus.
+  - No interaction with page content (e.g., no clicks on links, images, or text blocks).
+  - No navigation to other pages (session confined to /dashboard).
+
+8. SESSION FLOW
+- **0.0s–0.67s (Hesitation Phase)**: Page load followed by 667ms pause (only deliberative moment).
+- **0.67s–2.5s (Scanning Phase)**: Rapid downward scrolling (0→900px) with 3 exploratory clicks (Export, Chart, Data Table). No engagement with content.
+- **2.5s–3.53s (Backtracking Phase)**: Immediate upward scroll (900px→83px) with 1 click (Sidebar), suggesting a "reset" after failing to find a target.
+- **3.53s–4.62s (Frustration Phase)**: 6 clicks on Export button (4 rage clicks), indicating repeated failed attempts to trigger an action. Session ends mid-rage-click sequence.
+- **Arc**: Linear progression from hesitation → rapid scanning → backtracking → frustration, with no resolution or exit (session terminates during rage clicks).
+```
+
+**Key Observations**:
+- **Synthetic/automated behavior**: The device label ("synthetic/impulsive_clicker") and hyper-fast, repetitive interactions suggest this may be a bot, script, or automated test. Human users rarely exhibit:
+  - 4 rage clicks in 0.29s.
+  - 15 clicks in 4.6s with no typing or content engagement.
+  - Scroll speeds of 360px/s upward.
+- **Goal-oriented but failed**: The user appears to seek a specific action (likely Export) but fails to trigger it, leading to escalating frustration. No exploratory or casual browsing is evident.

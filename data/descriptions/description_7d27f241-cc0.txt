@@ -1,0 +1,85 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Linear with repetitive validation**: The user follows a top-to-bottom progression through the page (Navigation → Hero Title → Get Started → Features → Testimonials → Footer) but repeatedly returns to the same elements with near-identical clicks (e.g., "Navigation" clicked twice at [1.75s] and [2.94s], "Hero Title" at [3.87s] and [4.43s]).
+- **Synthetic/methodical**: 12/25 actions (48%) are clicks on non-interactive page text (labeled "[HESITATION]"), suggesting a scripted or automated interaction pattern rather than organic navigation.
+- **No deviation**: No lateral exploration (e.g., no sidebar clicks, no return to previous sections).
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth increases in rapid, uniform increments (28–57px per 0.5s) with no pauses >1s between scrolls, indicating no deep reading. Max depth (1042px) is reached in 12.82s, covering ~60% of a typical 1920x1080 viewport.
+- **No content absorption**: No clicks on body text, images, or links within sections—only on structural elements (headers, buttons, nav items).
+- **Scroll speed**: 57–60px/s (consistent across all scroll actions), faster than average human reading speed (~20px/s for skimming).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: Zero votes, comments, or form submissions detected. All interactions are clicks on static elements.
+- **Click redundancy**: 7/14 non-scroll actions (50%) are duplicate clicks on the same element (e.g., "Get Started" at [5.32s] and [7.71s]), with no functional outcome (no page navigation or modal triggers).
+- **Hover-to-click ratio**: 5/14 clicks (36%) are preceded by hovers (avg 491ms hover duration), but hovers do not correlate with increased hesitation (e.g., "Footer" hover [695ms] vs. "[HESITATION 2284ms]" at [16.16s]).
+
+4. INTERACTION SPEED
+- **Deliberate but inconsistent**:
+  - Avg time between actions: 0.67s (excluding scrolls).
+  - Fastest interval: 0.07s (between scrolls at [3.17s]–[3.23s]).
+  - Slowest intervals: 1.93s–2.28s (preceding "[HESITATION]" clicks at [7.25s], [11.56s], [16.16s]).
+- **Click latency**: Avg 480ms between hover start and click (range: 329ms–695ms).
+
+5. CONTENT PREFERENCES
+- **Structural over substantive**: 100% of clicks target:
+  - Navigation (2 clicks),
+  - Hero section (2 clicks on title),
+  - Primary CTA ("Get Started" button, 2 clicks),
+  - Section headers ("Features," "Testimonials," 2 clicks each),
+  - Footer (2 clicks).
+- **No content engagement**: Zero clicks on:
+  - Feature details,
+  - Testimonial quotes,
+  - Links (e.g., "About," "Contact"),
+  - Interactive elements (e.g., forms, carousels).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero form inputs, search queries, or text entry events in the log.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Navigation menu (used at [1.75s]),
+  - Hero section (title clicked at [3.87s]),
+  - Primary CTA ("Get Started" at [5.32s]),
+  - Features section (header at [8.47s]),
+  - Testimonials section (header at [10.27s]),
+  - Footer (at [13.87s]).
+- **Ignored features**:
+  - Secondary CTAs (e.g., "Learn More"),
+  - Social media links,
+  - Dropdown menus,
+  - Any dynamic content (e.g., accordions, tabs).
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–3.87s)**
+  - Loads page, clicks navigation twice (with 568ms hover), scrolls 144px in 0.23s, clicks hero title.
+  - **Goal**: Surface-level orientation (no content interaction).
+- **Phase 2: CTA Focus (3.87s–7.71s)**
+  - Clicks "Get Started" twice (with 1930ms hesitation), scrolls 92px.
+  - **Goal**: Apparent intent to convert, but no follow-through (no form submission).
+- **Phase 3: Section Sampling (7.71s–12.82s)**
+  - Scrolls to Features/Testimonials, clicks headers twice each, scrolls to 1042px.
+  - **Goal**: Checklist-style validation of page sections (no deep engagement).
+- **Phase 4: Footer Exit (12.82s–16.77s)**
+  - Clicks footer twice (with 2284ms hesitation), session ends.
+  - **Goal**: Terminal interaction (no return to top or re-engagement).
+- **Arc**: **Mechanical validation → Aborted conversion → Superficial exploration → Premature exit**.
+  - No progression from exploration to engagement; session ends without functional outcome.
+```
+
+**KEY OBSERVATIONS**:
+- **Synthetic behavior**: The combination of:
+  - Uniform scroll increments (28–57px/0.5s),
+  - Repeated clicks on non-interactive text ("[HESITATION]"),
+  - Zero typing/form submissions,
+  - Methodical top-to-bottom progression,
+  suggests this is a **bot, automated test, or synthetic user** rather than a human.
+- **No human-like patterns**: Absence of:
+  - Mouse movement trails,
+  - Random pauses,
+  - Backtracking,
+  - Content-specific interactions.
+- **Session purpose**: Likely **page health monitoring** (e.g., checking if elements are clickable) or **automated UX testing**.

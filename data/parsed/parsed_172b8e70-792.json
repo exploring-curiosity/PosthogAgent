@@ -1,0 +1,238 @@
+{
+  "user_profile": {
+    "session_id": "172b8e70-792",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/scanner",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 6.1,
+  "total_raw_events": 32,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/settings",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 0.8,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 803ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 0.88,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 13,
+      "max_depth": 13,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.93,
+      "action": "SCROLL",
+      "scroll_from": 13,
+      "scroll_to": 27,
+      "max_depth": 27,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 0.99,
+      "action": "SCROLL",
+      "scroll_from": 27,
+      "scroll_to": 40,
+      "max_depth": 40,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 1.05,
+      "action": "SCROLL",
+      "scroll_from": 40,
+      "scroll_to": 54,
+      "max_depth": 54,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 1.49,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Profile [HOVER 336ms]",
+      "target_href": "",
+      "target_class": "div.profile-section",
+      "coordinates": [
+        890,
+        54
+      ]
+    },
+    {
+      "time": 2.13,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Profile",
+      "target_href": "",
+      "target_class": "div.profile-section",
+      "coordinates": [
+        887,
+        56
+      ]
+    },
+    {
+      "time": 2.2,
+      "action": "SCROLL",
+      "scroll_from": 54,
+      "scroll_to": 173,
+      "max_depth": 173,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 2.27,
+      "action": "SCROLL",
+      "scroll_from": 173,
+      "scroll_to": 291,
+      "max_depth": 291,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 2.3,
+      "action": "SCROLL",
+      "scroll_from": 291,
+      "scroll_to": 410,
+      "max_depth": 410,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 2.38,
+      "action": "SCROLL",
+      "scroll_from": 410,
+      "scroll_to": 528,
+      "max_depth": 528,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 2.86,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Notifications [HOVER 302ms]",
+      "target_href": "",
+      "target_class": "div.notifications",
+      "coordinates": [
+        1538,
+        528
+      ]
+    },
+    {
+      "time": 3.46,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "Notifications",
+      "target_href": "",
+      "target_class": "div.notifications",
+      "coordinates": [
+        1543,
+        529
+      ]
+    },
+    {
+      "time": 3.52,
+      "action": "SCROLL",
+      "scroll_from": 528,
+      "scroll_to": 594,
+      "max_depth": 594,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.56,
+      "action": "SCROLL",
+      "scroll_from": 594,
+      "scroll_to": 659,
+      "max_depth": 659,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.6,
+      "action": "SCROLL",
+      "scroll_from": 659,
+      "scroll_to": 725,
+      "max_depth": 725,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.65,
+      "action": "SCROLL",
+      "scroll_from": 725,
+      "scroll_to": 791,
+      "max_depth": 791,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.7,
+      "action": "SCROLL",
+      "scroll_from": 791,
+      "scroll_to": 856,
+      "max_depth": 856,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.95,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Settings Nav [HOVER 145ms]",
+      "target_href": "",
+      "target_class": "nav.settings-nav",
+      "coordinates": [
+        81,
+        856
+      ]
+    },
+    {
+      "time": 5.35,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 1402ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 6.09,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Settings Nav",
+      "target_href": "",
+      "target_class": "nav.settings-nav",
+      "coordinates": [
+        79,
+        858
+      ]
+    }
+  ]
+}

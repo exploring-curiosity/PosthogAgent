@@ -1,0 +1,100 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and linear with targeted backtracking**
+  - Initial exploration: Linear downward scroll (0.47s–0.63s) covering 1,054px in 3 rapid 350px increments (0.5s each).
+  - After sidebar interaction (1.52s–2.29s), reversed direction with 4 upward scrolls (2.36s–2.5s) to return to top (62px).
+  - Repeated pattern: Downward scroll → interaction → upward scroll → new interaction (e.g., Stats Cards at 3.47s → scroll down 492px → Chart at 6.87s → scroll up 687px → Export at 11.05s).
+  - No lateral movement (e.g., no horizontal scrolling or tab switching).
+  - **Quantitative**: 12 scroll actions (7 down, 5 up) in 14.9s; 80% of scrolls occur in <0.5s bursts.
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**
+  - Scroll speed: 700–1,400px/s (e.g., 351px in 0.5s = 702px/s). Faster than average reading speed (~200–300px/s for deep reading).
+  - **Pause indicators**:
+    - Hover delays: 757ms (Sidebar), 692ms (Stats Cards), 488ms (Chart), 774ms (Data Table), 398ms (Export).
+    - Hesitation clicks: 429ms (0.43s), 1,452ms (4.92s), 2,896ms (13.95s) — likely decision points or distractions.
+  - **Depth**: Max scroll depth 1,054px (full page height ~1,080px based on viewport), but only 3 interactions below 500px (Chart, Data Table, Export).
+  - **Pattern**: Rapid scroll → hover pause → click → reverse scroll to top → repeat.
+
+3. ENGAGEMENT STYLE
+- **Interaction-only; no content creation**
+  - **Actions**: 8 clicks (4 with hovers, 4 direct), 0 form inputs, 0 text entry.
+  - **Timing**:
+    - First click: 0.43s (hesitation).
+    - First meaningful click: 1.52s (Sidebar).
+    - Fastest click interval: 0.04s (Sidebar at 2.29s → scroll at 2.36s).
+    - Slowest interval: 2.89s (Export hover at 11.05s → hesitation at 13.95s).
+  - **Ratio**: N/A (no votes/comments; only navigation and feature activation).
+
+4. INTERACTION SPEED
+- **Deliberate with bursts of speed**
+  - **Click latency**:
+    - Median time between clicks: 1.17s (excluding hesitations).
+    - Fastest: 0.04s (Sidebar → scroll).
+    - Slowest: 2.89s (Export hover → hesitation).
+  - **Hover delays**:
+    - Range: 398ms (Export) to 774ms (Data Table).
+    - Average hover: 621ms (suggests evaluation before action).
+  - **Scroll speed**: Consistent 0.5s per 350px segment (700px/s).
+
+5. CONTENT PREFERENCES
+- **Feature-focused, not content-focused**
+  - **Interacted elements**:
+    - **Sidebar** (1.52s–2.29s): Likely navigation menu.
+    - **Stats Cards** (3.47s–5.91s): Data visualization or summary metrics.
+    - **Chart** (6.87s–7.89s): Graphical data representation.
+    - **Data Table** (9.03s–10.19s): Tabular data.
+    - **Export** (11.05s–14.88s): Data export functionality.
+  - **Ignored**:
+    - No clicks on primary content (e.g., articles, posts, images).
+    - No interactions with search bars, filters, or user profiles.
+  - **Inferred preference**: Tools for data extraction/analysis over consumable content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**
+  - **Evidence**: 0 keystrokes, 0 form submissions, 0 text inputs.
+  - **Implications**: Session was purely navigational; no content creation or search queries.
+
+7. FEATURE DISCOVERY
+- **Discovered and used**:
+  - **Sidebar**: First interaction (1.52s), likely for navigation.
+  - **Stats Cards**: Clicked twice (3.47s, 5.91s), suggesting interest in summarized data.
+  - **Chart**: Clicked twice (6.87s, 7.89s), possibly to drill into details.
+  - **Data Table**: Clicked twice (9.03s, 10.19s), indicating tabular data review.
+  - **Export**: Final action (11.05s–14.88s), likely to extract data.
+- **Ignored**:
+  - No interactions with:
+    - Search functionality (if present).
+    - User account/profile elements.
+    - Social features (e.g., sharing, comments).
+    - Help/documentation links.
+    - Secondary navigation (e.g., tabs, breadcrumbs).
+
+8. SESSION FLOW
+- **Arc**: **Tool discovery → Data evaluation → Export**
+  - **Phase 1: Orientation (0.0s–2.29s)**
+    - Load → hesitation (0.43s) → rapid scroll (0.47s–0.63s) → sidebar click (1.52s–2.29s).
+    - **Goal**: Locate navigation or primary features.
+  - **Phase 2: Feature Sampling (2.36s–7.89s)**
+    - Scroll to top (2.36s–2.5s) → Stats Cards (3.47s–5.91s) → Chart (6.87s–7.89s).
+    - **Goal**: Test data visualization tools.
+  - **Phase 3: Data Review (7.97s–10.19s)**
+    - Scroll down (7.97s–8.11s) → Data Table (9.03s–10.19s) → scroll up (10.24s–10.45s).
+    - **Goal**: Inspect tabular data.
+  - **Phase 4: Export (11.05s–14.88s)**
+    - Export hover (11.05s) → hesitation (13.95s) → Export click (14.88s).
+    - **Goal**: Extract data; session ends post-click.
+- **Exit**: Abrupt (no logout, no return to top, no additional interactions).
+- **Quantitative summary**:
+  - 54% of time spent on interactions (8.1s of 14.9s).
+  - 36% of time spent scrolling (5.4s).
+  - 10% of time in hesitations (1.4s).
+```
+
+**KEY TAKEAWAYS**:
+- **User type**: Likely a **data analyst or power user** focused on extracting information, not consuming content.
+- **Behavioral signature**: **Methodical, tool-oriented, and output-driven** (e.g., prioritized export over exploration).
+- **Friction points**: Hesitations (429ms, 1,452ms, 2,896ms) suggest uncertainty or distractions at key decision points.
+- **Efficiency**: High scroll speed and rapid feature sampling indicate familiarity with dashboard UIs.

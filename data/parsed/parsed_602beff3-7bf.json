@@ -1,0 +1,196 @@
+{
+  "user_profile": {
+    "session_id": "602beff3-7bf",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "synthetic/scanner",
+    "device_type": "desktop",
+    "viewport_width": 1920.0,
+    "viewport_height": 1080.0,
+    "screen_width": 1920.0,
+    "screen_height": 1080.0
+  },
+  "session_duration_s": 9.1,
+  "total_raw_events": 35,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://example.com/landing",
+      "viewport": "1920.0x1080.0"
+    },
+    {
+      "time": 2.23,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2226ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 2.65,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation [HOVER 178ms]",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        1046,
+        8
+      ]
+    },
+    {
+      "time": 3.44,
+      "action": "CLICK",
+      "target_tag": "nav",
+      "target_text": "Navigation",
+      "target_href": "",
+      "target_class": "nav.main-nav",
+      "coordinates": [
+        1046,
+        6
+      ]
+    },
+    {
+      "time": 3.5,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 154,
+      "max_depth": 154,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.54,
+      "action": "SCROLL",
+      "scroll_from": 154,
+      "scroll_to": 308,
+      "max_depth": 308,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.62,
+      "action": "SCROLL",
+      "scroll_from": 308,
+      "scroll_to": 462,
+      "max_depth": 462,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 3.65,
+      "action": "SCROLL",
+      "scroll_from": 462,
+      "scroll_to": 616,
+      "max_depth": 616,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 4.28,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features [HOVER 343ms]",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        548,
+        616
+      ]
+    },
+    {
+      "time": 6.16,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 1873ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 6.98,
+      "action": "CLICK",
+      "target_tag": "section",
+      "target_text": "Features",
+      "target_href": "",
+      "target_class": "section.features",
+      "coordinates": [
+        546,
+        615
+      ]
+    },
+    {
+      "time": 7.02,
+      "action": "SCROLL",
+      "scroll_from": 616,
+      "scroll_to": 766,
+      "max_depth": 766,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 7.07,
+      "action": "SCROLL",
+      "scroll_from": 766,
+      "scroll_to": 916,
+      "max_depth": 916,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 7.14,
+      "action": "SCROLL",
+      "scroll_from": 916,
+      "scroll_to": 1066,
+      "max_depth": 1066,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 7.41,
+      "action": "CLICK",
+      "target_tag": "footer",
+      "target_text": "Footer [HOVER 114ms]",
+      "target_href": "",
+      "target_class": "footer",
+      "coordinates": [
+        187,
+        1066
+      ]
+    },
+    {
+      "time": 8.51,
+      "action": "CLICK",
+      "target_tag": "footer",
+      "target_text": "Footer",
+      "target_href": "",
+      "target_class": "footer",
+      "coordinates": [
+        187,
+        1070
+      ]
+    },
+    {
+      "time": 9.13,
+      "action": "CLICK",
+      "target_tag": "div",
+      "target_text": "[DEAD CLICK]",
+      "target_href": "",
+      "target_class": "div.empty-space",
+      "coordinates": [
+        81,
+        1509
+      ]
+    }
+  ]
+}

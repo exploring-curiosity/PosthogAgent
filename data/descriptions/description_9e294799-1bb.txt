@@ -1,0 +1,105 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical/Exploratory Hybrid**: The user exhibits a structured yet exploratory pattern. They systematically interact with major UI components (sidebar → stats cards → chart → data table → export) but do so in a non-linear, iterative manner.
+- **Component-Centric**: Navigation is organized by UI *regions* rather than a single linear path. After initial hesitation (0.61s), they scroll to survey the page (0.64s–0.81s), then target specific elements in sequence:
+  - Sidebar (1.37s, 3.15s)
+  - Stats Cards (3.95s, 4.96s)
+  - Chart (6.16s, 6.59s)
+  - Data Table (7.68s, 8.87s)
+  - Export Button (9.84s, 11.29s)
+- **Backtracking**: Repeated upward scrolls (3.22s–3.34s, 8.94s–9.14s) suggest re-evaluation of previously viewed content, possibly to confirm context or locate secondary actions.
+
+---
+
+2. READING BEHAVIOR
+- **Skim-Dominant with Selective Depth**: Scroll patterns indicate rapid scanning rather than deep reading:
+  - **Initial Scan**: First 0.81s involve a fast downward scroll (0px → 483px) at ~966px/s, covering ~45% of the viewport height per 0.5s segment. No pauses >100ms suggest cursory inspection.
+  - **Targeted Engagement**: After identifying regions of interest (e.g., Stats Cards at 3.95s, Data Table at 7.68s), scroll speed slows (e.g., 5.03s–5.08s: 294px/s) but remains too fast for detailed reading.
+  - **Revisitation**: Upward scrolls (e.g., 8.94s–9.14s) are faster (~1,136px/s) than downward scrolls, implying a "rewind" to locate a known element (Export button) rather than re-reading.
+- **Hover Clues**: Hover durations (347ms–760ms) on interactive elements (Stats Cards, Chart, Data Table) suggest brief consideration but no prolonged engagement with static text.
+
+---
+
+3. ENGAGEMENT STYLE
+- **Action-Oriented, No Content Creation**: The user exclusively *consumes* and *interacts* with existing content; no typing, voting, or commenting is observed.
+- **Click Behavior**:
+  - **Double-Click Pattern**: Every major UI element is clicked *twice* in rapid succession (e.g., Stats Cards at 3.95s/4.96s, Chart at 6.16s/6.59s), possibly due to:
+    - Unresponsive first click (technical lag).
+    - Confirmation of selection (behavioral habit).
+  - **Hesitation Clicks**: Two clicks labeled "[HESITATION]" (0.61s, 2.01s, 10.43s) occur at (0,0), likely misclicks or placeholder actions (e.g., clicking whitespace to focus the page).
+- **No Social Engagement**: No evidence of voting, commenting, or sharing.
+
+---
+
+4. INTERACTION SPEED
+- **Deliberate with Bursts of Speed**:
+  - **Initial Hesitation**: 606ms pause before first action (0.61s), followed by rapid scrolling (0.64s–0.81s).
+  - **Hover Latency**: Average hover-to-click delay = **572ms** (363ms–760ms), indicating moderate deliberation.
+  - **Action Intervals**:
+    - **Fast**: 40ms–300ms between scroll segments (e.g., 0.64s–0.81s).
+    - **Slow**: 600ms–1.14s between primary clicks (e.g., 3.15s → 3.95s = 800ms).
+  - **Export Decision**: Longest pre-click hover (760ms on Data Table at 7.68s) precedes the final action (Export at 9.84s), suggesting prioritization of data review before export.
+
+---
+
+5. CONTENT PREFERENCES
+- **Data-Centric Workflow**: Gravitated toward quantitative/analytical components:
+  1. **Stats Cards** (3.95s–4.96s): Likely summary metrics or KPIs.
+  2. **Chart** (6.16s–6.59s): Visual data representation.
+  3. **Data Table** (7.68s–8.87s): Tabular data, possibly for detailed review.
+- **Sidebar**: Interacted with early (1.37s, 3.15s) but not revisited, suggesting it was a navigation aid rather than a content target.
+- **Ignored Elements**: No interaction with:
+  - Text-heavy content (e.g., articles, descriptions).
+  - Social features (comments, upvotes).
+  - Multimedia (images, videos).
+
+---
+
+6. TYPING BEHAVIOR
+- **No Typing Detected**: Zero keystrokes, search queries, or form inputs observed. The session is entirely mouse-driven.
+
+---
+
+7. FEATURE DISCOVERY
+- **Discovered and Used**:
+  - **Sidebar Navigation**: Clicked twice (1.37s, 3.15s), likely for menu access.
+  - **Stats Cards**: Hovered and clicked (3.95s, 4.96s), possibly to expand details.
+  - **Chart**: Hovered (720ms) and clicked (6.16s, 6.59s), suggesting interaction (e.g., tooltips, filters).
+  - **Data Table**: Hovered (760ms) and clicked (7.68s, 8.87s), likely to sort/filter or select rows.
+  - **Export Function**: Final action (9.84s, 11.29s), indicating intent to save/analyze data offline.
+- **Ignored Features**:
+  - **Search/Filter**: No evidence of use.
+  - **Settings/Preferences**: No clicks on gear icons or user menus.
+  - **Help/Documentation**: No interaction with tooltips, guides, or FAQs.
+  - **Mobile/Responsive Features**: No viewport adjustments or mobile-specific actions.
+
+---
+
+8. SESSION FLOW
+- **Arc**: **Survey → Target → Extract**
+  1. **Orientation (0.0s–1.37s)**:
+     - Page load → initial hesitation (606ms) → rapid full-page scroll (0px → 483px) to assess layout.
+  2. **Exploration (1.37s–6.59s)**:
+     - Sidebar click (1.37s) → backtrack scroll (3.22s–3.34s) → Stats Cards (3.95s) → Chart (6.16s).
+     - Iterative clicks suggest testing functionality (e.g., double-clicks on interactive elements).
+  3. **Data Review (6.59s–8.87s)**:
+     - Deep scroll into Data Table (6.66s–6.74s: 517px → 927px) → hover (760ms) → click.
+     - Upward scroll (8.94s–9.14s) may indicate cross-referencing with earlier content.
+  4. **Exit (9.84s–11.29s)**:
+     - Export button hover (460ms) → click (9.84s) → hesitation (588ms) → final click (11.29s).
+     - Session ends abruptly post-export, with no further interaction.
+
+---
+
+SUMMARY
+This user demonstrates a **task-driven, data-extraction workflow** with minimal exploratory detours. Their behavior is:
+- **Efficient**: 11.3s session with 19 actions (~1.7 actions/s), focused on extracting structured data.
+- **Analytical**: Prioritizes charts, tables, and metrics over qualitative content.
+- **Technically Proficient**: Uses advanced features (export) but ignores social/engagement tools.
+- **Potential Friction Points**:
+  - Double-clicks may indicate UI responsiveness issues.
+  - Hesitation clicks (0,0) suggest accidental or placeholder interactions.
+- **Intent**: Likely a **business analyst, researcher, or power user** gathering data for offline use.
+```

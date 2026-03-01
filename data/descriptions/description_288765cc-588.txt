@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered and impulsive**: The user exhibits rapid, non-linear navigation with no clear progression through the settings interface.
+- **Repetitive clicks on the same elements**: "Privacy" was clicked 7 times (timestamps: 0.86s, 1.1s, 1.59s, 1.85s, 5.96s, 6.43s, 6.89s, 7.0s) and "Notifications" 4 times (3.22s, 3.6s, 4.53s, 4.63s). The "Settings Nav" was clicked twice (5.18s, 5.67s).
+- **No sequential menu exploration**: The user jumps between "Privacy" and "Notifications" without engaging with other settings options (e.g., no clicks on "Account," "Security," or "Appearance").
+- **Dead/rage clicks**: 3 dead clicks (2.79s, 4.16s) and 3 rage clicks (1.98s, 2.04s, 2.15s) indicate frustration or misaligned expectations.
+
+2. READING BEHAVIOR
+- **Skimmer with no deep reading**: Scroll patterns show rapid, shallow engagement:
+  - Initial scroll: 0px → 714px in 0.25s (0.39s–0.64s), averaging **1,428px/s**.
+  - Later scrolls: 714px → 764px (1.14s–1.22s) and 402px → 699px (4.71s–4.93s) at **~120px/s** (slower but still fast).
+- **No pauses**: No dwell time >0.5s on any scroll segment, suggesting no content absorption.
+- **Backtracking**: Upward scrolls (2.86s–2.99s) from 764px → 402px indicate disorientation or rechecking.
+
+3. ENGAGEMENT STYLE
+- **No substantive engagement**: The session contains **zero** votes, comments, or form submissions. All interactions are clicks on navigation elements.
+- **Impulsive clicking**: Clicks occur in bursts (e.g., 3 rage clicks in 0.17s at 1.98s–2.15s) with no follow-through.
+- **Hover-to-click latency**: Hovers precede clicks by **38–131ms** (median: 78ms), suggesting minimal deliberation.
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median time between actions: **0.27s** (excluding scrolls).
+  - Fastest sequence: 3 rage clicks in 0.17s (1.98s–2.15s).
+  - Slowest deliberate action: 0.53s between "Notifications" clicks (3.6s–4.16s).
+- **Synthetic/automated traits**: The device label ("synthetic/impulsive_clicker") and sub-100ms hover latencies imply non-human-like behavior.
+
+5. CONTENT PREFERENCES
+- **No content engagement**: The user interacted exclusively with **settings navigation elements** ("Privacy," "Notifications," "Settings Nav").
+- **No subreddit or post-level activity**: The log shows no visits to content pages (e.g., posts, comments, or subreddit listings).
+- **Focus on settings**: 100% of clicks targeted settings-related UI, with no exploration of other site sections.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no text inputs, corrections, or form submissions.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Settings navigation (clicked "Settings Nav" at 5.18s).
+  - Privacy and Notifications panels (clicked repeatedly).
+- **Ignored features**:
+  - No interaction with account settings, security, appearance, or other settings tabs.
+  - No search, help, or support features used.
+  - No engagement with content (posts, comments, upvotes).
+
+8. SESSION FLOW
+- **Phase 1: Rapid Exploration (0.0s–0.86s)**
+  - Page load → immediate scroll to 714px (0.64s) → first "Privacy" click (0.86s).
+  - **Goal**: Locate a specific setting (likely "Privacy") but no clear strategy.
+- **Phase 2: Frustration (0.86s–2.79s)**
+  - Repeated clicks on "Privacy" (4 clicks in 1.03s) with rage/dead clicks (1.98s–2.79s).
+  - **Behavior**: Expectation mismatch (e.g., element not responding as anticipated).
+- **Phase 3: Disoriented Browsing (2.86s–4.93s)**
+  - Scrolls upward (2.86s–2.99s) → clicks "Notifications" (3.22s) → more dead clicks (4.16s).
+  - **Behavior**: Abandons "Privacy" temporarily but fails to engage with "Notifications."
+- **Phase 4: Reversion to Start (5.18s–7.0s)**
+  - Clicks "Settings Nav" (5.18s) → returns to "Privacy" (5.96s–7.0s) with 3 more clicks.
+  - **Behavior**: Circular navigation with no resolution; session ends mid-interaction.
+
+SUMMARY
+This session reflects **non-human or highly synthetic behavior**, characterized by:
+- **Sub-100ms reaction times** (hover-to-click latencies).
+- **Repetitive, non-progressive clicks** (7 "Privacy" clicks with no outcome).
+- **No content engagement** (100% settings UI interactions).
+- **Frustration indicators** (rage/dead clicks) without problem-solving attempts.
+- **No typing or form submissions**, despite the context (settings page).
+The user’s goal appears to be **testing UI responsiveness** (e.g., automated QA) rather than genuine settings configuration.
+```

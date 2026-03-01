@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with rapid exploration**: The user exhibits a non-linear, high-velocity navigation pattern with no clear goal. They interact with 4 distinct UI regions (sidebar, chart, page, data table) in under 7.5 seconds, often revisiting elements (e.g., 2 clicks on "Sidebar" at 1.26s and 2.75s; 2 clicks on "Chart" at 3.32s and 5.83s).
+- **No sustained focus**: No single element holds attention for >2.5s. The longest dwell time is 1.48s (hesitation at 4.81s), but this is likely synthetic given the (0,0) click coordinates.
+- **Vertical scanning**: Scrolling dominates (6/14 actions), with rapid up/down movements suggesting visual scanning rather than deep reading.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scroll speed (159px/0.5s) exceeds typical reading rates (~20px/s for deep reading). The user covers 755px of content in 7.4s, implying they are scanning for visual cues (e.g., "Chart", "Data Table") rather than processing text.
+- **No evidence of deep reading**: No pauses >500ms on any content block. The longest hover (283ms) is on interactive elements, not static text.
+- **Scroll patterns**:
+  - **Downward**: 4 sequential scrolls (0.61s–0.77s) covering 637px in 1.16s (549px/s).
+  - **Upward**: 4 sequential scrolls (2.79s–2.97s) covering 292px in 0.8s (365px/s).
+  - **Reversal**: Direction changes 3x (down → up → down), indicating visual search rather than linear consumption.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: The session contains no votes, comments, or input fields. All interactions are clicks or scrolls.
+- **Synthetic interaction signature**:
+  - Clicks at (0,0) with "HESITATION" labels (0.55s, 4.81s) suggest automated or scripted behavior.
+  - Hover times (283ms) are unnaturally consistent (2x at 283ms, 1x at 308ms).
+- **Click-to-click ratio**: 8 clicks in 7.4s (1.08 clicks/s), with no functional output (e.g., form submission, navigation).
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median inter-action time = 0.56s (excluding the 1.48s "hesitation").
+  - Fastest: 0.04s (2.75s → 2.79s, click → scroll).
+  - Slowest: 1.49s (3.32s → 4.81s, likely synthetic delay).
+- **Deliberate pauses only on synthetic events**: The 1.48s "hesitation" (4.81s) is the sole outlier, suggesting a programmed delay rather than human deliberation.
+
+5. CONTENT PREFERENCES
+- **Gravitated toward interactive UI components**:
+  - **Sidebar**: 2 clicks (1.26s, 2.75s).
+  - **Chart**: 2 clicks (3.32s, 5.83s).
+  - **Data Table**: 2 clicks (6.41s, 7.38s).
+- **Ignored static content**: No interactions with text blocks, images, or non-interactive elements.
+- **No thematic preference**: The log does not reveal content topics (e.g., subreddits), only UI element types.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Zero keystrokes, input fields, or form interactions in the log. The session is entirely mouse-driven.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Sidebar**: Used twice (likely navigation or menu).
+  - **Chart**: Interacted with twice (possibly zooming, filtering, or tooltips).
+  - **Data Table**: Engaged twice (potentially sorting, selecting rows, or exporting).
+- **Ignored features**:
+  - **Static content**: No clicks on articles, descriptions, or non-interactive text.
+  - **Search/filters**: No evidence of use.
+  - **User-specific features**: No profile, settings, or account interactions.
+
+8. SESSION FLOW
+- **Arc**: **Synthetic scan → UI probing → abrupt exit**
+  - **0.0s–0.77s (Exploration)**: Page load followed by rapid downward scroll to 637px. Likely visual scan for interactive elements.
+  - **0.77s–3.32s (Probing)**: First sidebar click (1.26s), then upward scroll (2.79s–2.97s) to revisit top content. Second sidebar click (2.75s) suggests failed navigation or menu testing.
+  - **3.32s–5.88s (Targeted interaction)**: Chart clicks (3.32s, 5.83s) with downward scroll (5.88s–5.92s) to reach the data table.
+  - **5.88s–7.38s (Final engagement)**: Data table clicks (6.41s, 7.38s) with no further action. Session ends at 7.4s.
+- **Exit**: No natural conclusion (e.g., form submission, navigation away). Likely terminated by script or scanner timeout.
+- **Key observations**:
+  - No progression toward a goal (e.g., no checkout, no content creation).
+  - All interactions are "surface-level" (clicks on UI elements, not content).
+  - Session duration (7.4s) aligns with automated testing or synthetic monitoring.
+```
+
+**SUMMARY**: This session exhibits **automated or synthetic behavior** with no human-like engagement. The user (or script) rapidly scans and clicks interactive UI elements (sidebar, chart, data table) without reading content, typing, or completing tasks. The consistent hover times, (0,0) clicks, and lack of functional output strongly suggest a **monitoring tool, scanner, or synthetic test** rather than a human user.

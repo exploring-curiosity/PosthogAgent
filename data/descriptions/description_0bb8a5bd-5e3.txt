@@ -1,0 +1,80 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no linear progression through content.
+- Repeatedly returns to the same elements (e.g., "Features" clicked 7 times, "Hero Title" 4 times, "Get Started" 1 time).
+- Scrolling is bidirectional and rapid: 12 scroll actions (6 up, 6 down) with an average duration of 0.5s per scroll.
+- No clear path through the page; jumps between unrelated sections (e.g., "Hero Title" → "Testimonials" → "Features").
+- 44% of clicks (8/18) are on non-interactive or misaligned elements ("DEAD CLICK" or "RAGE CLICK").
+
+2. READING BEHAVIOR
+- Skimming with no evidence of deep reading:
+  - Max scroll depth: 727px (likely <50% of page content, assuming standard 1920x1080 layout).
+  - Average scroll speed: 374px/s (e.g., 0–562px in 0.56s).
+  - No pauses >1s on any section; longest hover before click: 1661ms (hesitation, not reading).
+  - Repeatedly scrolls up/down the same 200–300px ranges (e.g., 463–568px, 136–320px).
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (e.g., no voting, commenting, or form submissions).
+- Interaction is exclusively clicking, with 3 distinct patterns:
+  1. **Rage clicks**: 6 clicks in 0.39s (2.16s–2.42s) on "Features" at (1471, 467), suggesting frustration.
+  2. **Dead clicks**: 4 clicks on non-interactive elements (e.g., (112, 799), (42, 452)).
+  3. **Repetitive clicks**: 7 clicks on "Features" and 4 on "Hero Title" with near-identical coordinates.
+- No evidence of content creation or input (e.g., no typing, no form submissions).
+
+4. INTERACTION SPEED
+- Extremely fast and impulsive:
+  - Average time between actions: 0.28s (excluding the 1.66s hesitation at 10.1s).
+  - Fastest sequence: 5 rage clicks in 0.26s (2.16s–2.42s).
+  - Hover durations: 64–143ms (median: 91ms), indicating minimal deliberation.
+  - First click occurs at 0.42s (page load at 0.0s), suggesting no initial content review.
+
+5. CONTENT PREFERENCES
+- Gravitated toward 3 elements, all clicked multiple times:
+  1. **"Features" section**: 7 clicks (42% of total), including rage clicks.
+  2. **"Hero Title" (h1)**: 4 clicks (22% of total).
+  3. **"Testimonials"**: 2 clicks (11% of total).
+- No engagement with other content (e.g., no clicks on navigation, footer, or secondary CTAs).
+- "Get Started" button clicked once at the end (12.17s), but preceded by 11.77s of erratic behavior.
+
+6. TYPING BEHAVIOR
+- No typing detected in the session log.
+- No form inputs, search queries, or text entry of any kind.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Clicked "Features" (primary CTA), "Hero Title" (branding), "Testimonials" (social proof), and "Get Started" (conversion).
+  - Scrolling (both directions) to navigate vertically.
+- **Ignored features**:
+  - No interaction with navigation menus, sidebars, or footer.
+  - No evidence of tooltips, modals, or interactive widgets (e.g., carousels, accordions).
+  - No engagement with multimedia (e.g., videos, images).
+
+8. SESSION FLOW
+- **0.0s–0.73s (Exploration Phase)**:
+  - Immediate impulsive click at 0.42s (no hesitation).
+  - Rapid downward scrolling (0–562px in 0.56s) to scan content.
+- **0.73s–2.42s (Frustration Phase)**:
+  - First "Features" click at 0.73s, followed by 6 rage clicks (2.16s–2.42s) on the same element.
+  - Dead clicks on non-interactive areas (3.08s).
+- **2.42s–7.41s (Erratic Browsing Phase)**:
+  - Bidirectional scrolling (up/down) with repeated clicks on "Features" and "Hero Title".
+  - No clear goal; jumps between sections (e.g., "Testimonials" at 8.43s).
+- **7.41s–12.17s (Exit Attempt Phase)**:
+  - Final clicks on "Hero Title" (11.16s) and "Get Started" (11.77s).
+  - Session ends abruptly after "Get Started" click (no confirmation or next page load recorded).
+- **Key Observations**:
+  - No progression toward a goal (e.g., no form completion, no content consumption).
+  - Session terminated immediately after the first "successful" CTA click ("Get Started").
+  - 100% of interactions are either:
+    - Repetitive (same element clicked multiple times).
+    - Frustrated (rage/dead clicks).
+    - Non-deliberate (no hovers >200ms).
+```
+
+**SUMMARY**: This session represents a synthetic or bot-like user with no human-like behavior. The pattern suggests automated testing (e.g., click farming, stress testing) or a broken script, given the:
+- Sub-100ms hover times.
+- Identical click coordinates (e.g., "Features" at (1471, 467) ±5px).
+- Lack of typing or form engagement.
+- Immediate rage/dead clicks on load.

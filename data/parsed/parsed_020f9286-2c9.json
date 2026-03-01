@@ -1,0 +1,1501 @@
+{
+  "user_profile": {
+    "session_id": "020f9286-2c9",
+    "age_group": "unknown",
+    "country": "unknown",
+    "nyc_familiarity": "unknown",
+    "os": "unknown",
+    "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "device_type": "desktop",
+    "viewport_width": 1470.0,
+    "viewport_height": 679.0,
+    "screen_width": 1470.0,
+    "screen_height": 679.0
+  },
+  "session_duration_s": 570.8,
+  "total_raw_events": 893,
+  "high_level_actions": [
+    {
+      "time": 0.0,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/r/manhattan",
+      "viewport": "1470.0x679.0"
+    },
+    {
+      "time": 2.71,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 3661ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 8.66,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1179,
+        176
+      ]
+    },
+    {
+      "time": 9.55,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 3192ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 11.68,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1179,
+        167
+      ]
+    },
+    {
+      "time": 13.19,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2784ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 13.6,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 1,
+      "max_depth": 1,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 13.7,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 51,
+      "max_depth": 51,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 13.8,
+      "action": "SCROLL",
+      "scroll_from": 51,
+      "scroll_to": 96,
+      "max_depth": 96,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 13.9,
+      "action": "SCROLL",
+      "scroll_from": 96,
+      "scroll_to": 126,
+      "max_depth": 126,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.0,
+      "action": "SCROLL",
+      "scroll_from": 126,
+      "scroll_to": 131,
+      "max_depth": 131,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.23,
+      "action": "SCROLL",
+      "scroll_from": 131,
+      "scroll_to": 135,
+      "max_depth": 135,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.33,
+      "action": "SCROLL",
+      "scroll_from": 135,
+      "scroll_to": 203,
+      "max_depth": 203,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.43,
+      "action": "SCROLL",
+      "scroll_from": 203,
+      "scroll_to": 205,
+      "max_depth": 205,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 14.7,
+      "action": "SCROLL",
+      "scroll_from": 205,
+      "scroll_to": 204,
+      "max_depth": 205,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 14.8,
+      "action": "SCROLL",
+      "scroll_from": 204,
+      "scroll_to": 144,
+      "max_depth": 204,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 14.9,
+      "action": "SCROLL",
+      "scroll_from": 144,
+      "scroll_to": 0,
+      "max_depth": 144,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 17.24,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        353,
+        281
+      ]
+    },
+    {
+      "time": 19.9,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 4034ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 20.04,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        277,
+        265
+      ]
+    },
+    {
+      "time": 24.26,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 8778ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 24.55,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        201,
+        331
+      ]
+    },
+    {
+      "time": 34.35,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 9609ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 44.16,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 15293ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 59.95,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 9858ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 60.73,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/r/manhattan",
+      "viewport": "1470.0x679.0"
+    },
+    {
+      "time": 70.88,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 9961ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 82.8,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/r/manhattan",
+      "viewport": "1470.0x679.0"
+    },
+    {
+      "time": 83.04,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 317956ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 383.11,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/r/manhattan",
+      "viewport": "1470.0x679.0"
+    },
+    {
+      "time": 402.5,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/r/manhattan",
+      "viewport": "1470.0x679.0"
+    },
+    {
+      "time": 403.96,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 4800ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 404.03,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        167,
+        21
+      ]
+    },
+    {
+      "time": 410.01,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        218,
+        240
+      ]
+    },
+    {
+      "time": 413.08,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        216,
+        529
+      ]
+    },
+    {
+      "time": 418.53,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        164,
+        29
+      ]
+    },
+    {
+      "time": 419.65,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 1,
+      "max_depth": 1,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 419.75,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 18,
+      "max_depth": 18,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 419.85,
+      "action": "SCROLL",
+      "scroll_from": 18,
+      "scroll_to": 19,
+      "max_depth": 19,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 419.95,
+      "action": "SCROLL",
+      "scroll_from": 19,
+      "scroll_to": 21,
+      "max_depth": 21,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 420.05,
+      "action": "SCROLL",
+      "scroll_from": 21,
+      "scroll_to": 29,
+      "max_depth": 29,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 420.15,
+      "action": "SCROLL",
+      "scroll_from": 29,
+      "scroll_to": 34,
+      "max_depth": 34,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 421.71,
+      "action": "SCROLL",
+      "scroll_from": 34,
+      "scroll_to": 35,
+      "max_depth": 35,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 421.81,
+      "action": "SCROLL",
+      "scroll_from": 35,
+      "scroll_to": 131,
+      "max_depth": 131,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 421.91,
+      "action": "SCROLL",
+      "scroll_from": 131,
+      "scroll_to": 156,
+      "max_depth": 156,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 422.75,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        253,
+        460
+      ]
+    },
+    {
+      "time": 422.85,
+      "action": "SCROLL",
+      "scroll_from": 156,
+      "scroll_to": 0,
+      "max_depth": 156,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 423.93,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 1,
+      "max_depth": 1,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 424.03,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 10,
+      "max_depth": 10,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 424.13,
+      "action": "SCROLL",
+      "scroll_from": 10,
+      "scroll_to": 18,
+      "max_depth": 18,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 424.24,
+      "action": "SCROLL",
+      "scroll_from": 18,
+      "scroll_to": 22,
+      "max_depth": 22,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 424.34,
+      "action": "SCROLL",
+      "scroll_from": 22,
+      "scroll_to": 25,
+      "max_depth": 25,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 424.44,
+      "action": "SCROLL",
+      "scroll_from": 25,
+      "scroll_to": 27,
+      "max_depth": 27,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 425.96,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        145,
+        24
+      ]
+    },
+    {
+      "time": 425.97,
+      "action": "SCROLL",
+      "scroll_from": 27,
+      "scroll_to": 0,
+      "max_depth": 27,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 426.7,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 3,
+      "max_depth": 3,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 426.8,
+      "action": "SCROLL",
+      "scroll_from": 3,
+      "scroll_to": 73,
+      "max_depth": 73,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 426.9,
+      "action": "SCROLL",
+      "scroll_from": 73,
+      "scroll_to": 160,
+      "max_depth": 160,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.0,
+      "action": "SCROLL",
+      "scroll_from": 160,
+      "scroll_to": 181,
+      "max_depth": 181,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.1,
+      "action": "SCROLL",
+      "scroll_from": 181,
+      "scroll_to": 181,
+      "max_depth": 181,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.31,
+      "action": "SCROLL",
+      "scroll_from": 181,
+      "scroll_to": 184,
+      "max_depth": 184,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.41,
+      "action": "SCROLL",
+      "scroll_from": 184,
+      "scroll_to": 315,
+      "max_depth": 315,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.51,
+      "action": "SCROLL",
+      "scroll_from": 315,
+      "scroll_to": 368,
+      "max_depth": 368,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.61,
+      "action": "SCROLL",
+      "scroll_from": 368,
+      "scroll_to": 390,
+      "max_depth": 390,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.71,
+      "action": "SCROLL",
+      "scroll_from": 390,
+      "scroll_to": 403,
+      "max_depth": 403,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.81,
+      "action": "SCROLL",
+      "scroll_from": 403,
+      "scroll_to": 451,
+      "max_depth": 451,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 427.91,
+      "action": "SCROLL",
+      "scroll_from": 451,
+      "scroll_to": 529,
+      "max_depth": 529,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 428.01,
+      "action": "SCROLL",
+      "scroll_from": 529,
+      "scroll_to": 536,
+      "max_depth": 536,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 428.64,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        249,
+        385
+      ]
+    },
+    {
+      "time": 428.72,
+      "action": "SCROLL",
+      "scroll_from": 536,
+      "scroll_to": 0,
+      "max_depth": 536,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 434.43,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        166,
+        17
+      ]
+    },
+    {
+      "time": 437.35,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1181,
+        410
+      ]
+    },
+    {
+      "time": 439.88,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 1,
+      "max_depth": 1,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 439.98,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 72,
+      "max_depth": 72,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 440.08,
+      "action": "SCROLL",
+      "scroll_from": 72,
+      "scroll_to": 118,
+      "max_depth": 118,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 440.19,
+      "action": "SCROLL",
+      "scroll_from": 118,
+      "scroll_to": 123,
+      "max_depth": 123,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 440.32,
+      "action": "SCROLL",
+      "scroll_from": 123,
+      "scroll_to": 124,
+      "max_depth": 124,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 440.52,
+      "action": "SCROLL",
+      "scroll_from": 124,
+      "scroll_to": 123,
+      "max_depth": 124,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 440.62,
+      "action": "SCROLL",
+      "scroll_from": 123,
+      "scroll_to": 87,
+      "max_depth": 123,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 440.73,
+      "action": "SCROLL",
+      "scroll_from": 87,
+      "scroll_to": 74,
+      "max_depth": 87,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 441.56,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        319,
+        490
+      ]
+    },
+    {
+      "time": 441.62,
+      "action": "SCROLL",
+      "scroll_from": 74,
+      "scroll_to": 0,
+      "max_depth": 74,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 445.46,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        142,
+        152
+      ]
+    },
+    {
+      "time": 447.01,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        149,
+        112
+      ]
+    },
+    {
+      "time": 448.0,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 4226ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 453.63,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1188,
+        206
+      ]
+    },
+    {
+      "time": 455.13,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 1,
+      "max_depth": 1,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 455.24,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 75,
+      "max_depth": 75,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 455.33,
+      "action": "SCROLL",
+      "scroll_from": 75,
+      "scroll_to": 127,
+      "max_depth": 127,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 455.44,
+      "action": "SCROLL",
+      "scroll_from": 127,
+      "scroll_to": 173,
+      "max_depth": 173,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 455.54,
+      "action": "SCROLL",
+      "scroll_from": 173,
+      "scroll_to": 204,
+      "max_depth": 204,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 455.64,
+      "action": "SCROLL",
+      "scroll_from": 204,
+      "scroll_to": 205,
+      "max_depth": 205,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 456.56,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        467,
+        357
+      ]
+    },
+    {
+      "time": 456.63,
+      "action": "SCROLL",
+      "scroll_from": 205,
+      "scroll_to": 0,
+      "max_depth": 205,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 457.6,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 4350ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 458.65,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 1,
+      "max_depth": 1,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 458.75,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 6,
+      "max_depth": 6,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 458.85,
+      "action": "SCROLL",
+      "scroll_from": 6,
+      "scroll_to": 12,
+      "max_depth": 12,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 458.95,
+      "action": "SCROLL",
+      "scroll_from": 12,
+      "scroll_to": 18,
+      "max_depth": 18,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.05,
+      "action": "SCROLL",
+      "scroll_from": 18,
+      "scroll_to": 24,
+      "max_depth": 24,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.15,
+      "action": "SCROLL",
+      "scroll_from": 24,
+      "scroll_to": 30,
+      "max_depth": 30,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.25,
+      "action": "SCROLL",
+      "scroll_from": 30,
+      "scroll_to": 37,
+      "max_depth": 37,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.35,
+      "action": "SCROLL",
+      "scroll_from": 37,
+      "scroll_to": 43,
+      "max_depth": 43,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.45,
+      "action": "SCROLL",
+      "scroll_from": 43,
+      "scroll_to": 53,
+      "max_depth": 53,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.56,
+      "action": "SCROLL",
+      "scroll_from": 53,
+      "scroll_to": 63,
+      "max_depth": 63,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.66,
+      "action": "SCROLL",
+      "scroll_from": 63,
+      "scroll_to": 69,
+      "max_depth": 69,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.76,
+      "action": "SCROLL",
+      "scroll_from": 69,
+      "scroll_to": 75,
+      "max_depth": 75,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.86,
+      "action": "SCROLL",
+      "scroll_from": 75,
+      "scroll_to": 81,
+      "max_depth": 81,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 459.96,
+      "action": "SCROLL",
+      "scroll_from": 81,
+      "scroll_to": 87,
+      "max_depth": 87,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.06,
+      "action": "SCROLL",
+      "scroll_from": 87,
+      "scroll_to": 92,
+      "max_depth": 92,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.16,
+      "action": "SCROLL",
+      "scroll_from": 92,
+      "scroll_to": 94,
+      "max_depth": 94,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.26,
+      "action": "SCROLL",
+      "scroll_from": 94,
+      "scroll_to": 98,
+      "max_depth": 98,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.36,
+      "action": "SCROLL",
+      "scroll_from": 98,
+      "scroll_to": 105,
+      "max_depth": 105,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.47,
+      "action": "SCROLL",
+      "scroll_from": 105,
+      "scroll_to": 118,
+      "max_depth": 118,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.57,
+      "action": "SCROLL",
+      "scroll_from": 118,
+      "scroll_to": 142,
+      "max_depth": 142,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.67,
+      "action": "SCROLL",
+      "scroll_from": 142,
+      "scroll_to": 163,
+      "max_depth": 163,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.77,
+      "action": "SCROLL",
+      "scroll_from": 163,
+      "scroll_to": 176,
+      "max_depth": 176,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 460.87,
+      "action": "SCROLL",
+      "scroll_from": 176,
+      "scroll_to": 179,
+      "max_depth": 179,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 461.08,
+      "action": "SCROLL",
+      "scroll_from": 179,
+      "scroll_to": 178,
+      "max_depth": 179,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 461.18,
+      "action": "SCROLL",
+      "scroll_from": 178,
+      "scroll_to": 172,
+      "max_depth": 178,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 461.28,
+      "action": "SCROLL",
+      "scroll_from": 172,
+      "scroll_to": 163,
+      "max_depth": 172,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 461.38,
+      "action": "SCROLL",
+      "scroll_from": 163,
+      "scroll_to": 67,
+      "max_depth": 163,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 461.49,
+      "action": "SCROLL",
+      "scroll_from": 67,
+      "scroll_to": 35,
+      "max_depth": 67,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 461.59,
+      "action": "SCROLL",
+      "scroll_from": 35,
+      "scroll_to": 6,
+      "max_depth": 35,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 461.69,
+      "action": "SCROLL",
+      "scroll_from": 6,
+      "scroll_to": 0,
+      "max_depth": 6,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 462.38,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 4250ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 462.56,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        394,
+        292
+      ]
+    },
+    {
+      "time": 468.94,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        205,
+        348
+      ]
+    },
+    {
+      "time": 470.66,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 29325ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 499.2,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/r/manhattan",
+      "viewport": "1470.0x679.0"
+    },
+    {
+      "time": 500.57,
+      "action": "SCROLL",
+      "scroll_from": 0,
+      "scroll_to": 1,
+      "max_depth": 1,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 500.67,
+      "action": "SCROLL",
+      "scroll_from": 1,
+      "scroll_to": 23,
+      "max_depth": 23,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 500.77,
+      "action": "SCROLL",
+      "scroll_from": 23,
+      "scroll_to": 47,
+      "max_depth": 47,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 500.87,
+      "action": "SCROLL",
+      "scroll_from": 47,
+      "scroll_to": 49,
+      "max_depth": 49,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 501.38,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        278,
+        232
+      ]
+    },
+    {
+      "time": 504.33,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        173,
+        308
+      ]
+    },
+    {
+      "time": 505.64,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2358ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 506.33,
+      "action": "SCROLL",
+      "scroll_from": 49,
+      "scroll_to": 50,
+      "max_depth": 50,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 506.44,
+      "action": "SCROLL",
+      "scroll_from": 50,
+      "scroll_to": 65,
+      "max_depth": 65,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 506.54,
+      "action": "SCROLL",
+      "scroll_from": 65,
+      "scroll_to": 112,
+      "max_depth": 112,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 506.64,
+      "action": "SCROLL",
+      "scroll_from": 112,
+      "scroll_to": 270,
+      "max_depth": 270,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 506.74,
+      "action": "SCROLL",
+      "scroll_from": 270,
+      "scroll_to": 278,
+      "max_depth": 278,
+      "duration_s": 0.5,
+      "direction": "down"
+    },
+    {
+      "time": 507.16,
+      "action": "SCROLL",
+      "scroll_from": 278,
+      "scroll_to": 277,
+      "max_depth": 278,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 507.26,
+      "action": "SCROLL",
+      "scroll_from": 277,
+      "scroll_to": 151,
+      "max_depth": 277,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 507.36,
+      "action": "SCROLL",
+      "scroll_from": 151,
+      "scroll_to": 0,
+      "max_depth": 151,
+      "duration_s": 0.5,
+      "direction": "up"
+    },
+    {
+      "time": 508.15,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 2475ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 512.05,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1230,
+        124
+      ]
+    },
+    {
+      "time": 513.35,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        1207,
+        197
+      ]
+    },
+    {
+      "time": 515.29,
+      "action": "PAGE_LOAD",
+      "url": "https://fun-city-xi.vercel.app/r/manhattan",
+      "viewport": "1470.0x679.0"
+    },
+    {
+      "time": 516.2,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 31381ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 547.64,
+      "action": "CLICK",
+      "target_tag": "page",
+      "target_text": "[HESITATION 21970ms]",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    {
+      "time": 570.48,
+      "action": "CLICK",
+      "target_tag": "",
+      "target_text": "",
+      "target_href": "",
+      "target_class": "",
+      "coordinates": [
+        536,
+        63
+      ]
+    }
+  ]
+}

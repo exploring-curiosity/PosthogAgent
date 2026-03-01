@@ -1,0 +1,67 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical but non-linear**: The user follows a structured path through the checkout flow (Cart Summary → Email → Card Number → Pay Now → Back to Shop) but exhibits repeated backtracking and redundant interactions.
+- **Redundant clicks**: 4 instances of duplicate clicks on the same element (e.g., "Cart Summary" at 1.52s/2.42s, "Email" at 3.46s/4.21s, "Pay Now" at 7.36s/10.39s, "Back to Shop" at 11.4s/12.87s).
+- **Scroll-heavy**: 12 scroll actions (6 down, 6 up) in 12.9s, suggesting active content scanning rather than passive consumption.
+
+2. READING BEHAVIOR
+- **Skimmer with targeted depth**: Scroll patterns show rapid vertical scanning (avg. 120px/s) with brief pauses at functional elements (e.g., form fields, buttons).
+  - **Scroll clusters**: 3 distinct scroll bursts (0.9s–0.99s, 4.25s–4.41s, 6.49s–6.6s) covering 387px, 104px, and 477px respectively.
+  - **No deep reading**: Max scroll depth (1016px) is reached only at the session’s end, with no evidence of prolonged pauses on static content.
+- **Hover data**: 3 elements triggered hover delays (358ms–774ms), indicating momentary focus before interaction.
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting**: The session is confined to a checkout flow; no social engagement (votes, comments) is observed.
+- **Form-focused**: 100% of interactions target form inputs (Email, Card Number) and checkout buttons ("Pay Now", "Back to Shop").
+- **Hesitation markers**: 3 instances of "[HESITATION]" clicks (0.86s, 9.68s, 12.4s) totaling 4181ms of inactivity, suggesting decision uncertainty.
+
+4. INTERACTION SPEED
+- **Deliberate with bursts**: Avg. 1.16s between actions (excluding hesitations), but with extremes:
+  - **Fast**: 0.03s–0.07s between scroll steps (e.g., 0.9s–0.99s).
+  - **Slow**: 2.32s gap before final "Pay Now" click (7.36s–9.68s), including 2324ms hesitation.
+- **Hover delays**: Avg. 596ms hover time before clicks (358ms–774ms), indicating pre-interaction evaluation.
+
+5. CONTENT PREFERENCES
+- **Checkout-specific**: All interactions are tied to transactional elements:
+  - **Form fields**: Email (2 clicks), Card Number (2 clicks).
+  - **CTA buttons**: "Pay Now" (2 clicks), "Back to Shop" (2 clicks).
+  - **Cart Summary**: 2 clicks, suggesting price/quantity verification.
+- **No exploratory content**: No clicks on product details, navigation menus, or non-checkout elements.
+
+6. TYPING BEHAVIOR
+- **No typing observed**: Despite clicking form inputs (Email, Card Number), no keystrokes or input lengths are recorded.
+- **Input focus**: Clicks on form fields suggest intent to type, but no data confirms actual input or corrections.
+
+7. FEATURE DISCOVERY
+- **Used features**:
+  - Scrolling (12 actions).
+  - Form field interaction (Email, Card Number).
+  - Checkout buttons ("Pay Now", "Back to Shop").
+  - Cart Summary (expansion/collapse implied by clicks).
+- **Ignored features**:
+  - No interaction with navigation menus, product recommendations, or help/support links.
+  - No use of autofill, promo code fields, or guest checkout options.
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–1.52s)**
+  - Loads checkout page, scrolls rapidly (387px in 0.9s) to scan layout.
+  - Hesitates (857ms) before first interaction.
+- **Phase 2: Cart Verification (1.52s–3.46s)**
+  - Clicks "Cart Summary" twice (redundant), scrolls up (136px) to review.
+  - Hover delay (358ms) suggests price/quantity check.
+- **Phase 3: Form Engagement (3.46s–7.36s)**
+  - Clicks Email field (774ms hover), scrolls down (104px) to locate Card Number.
+  - Clicks Card Number (722ms hover), scrolls further (477px) to "Pay Now".
+- **Phase 4: Abandonment (7.36s–12.87s)**
+  - Clicks "Pay Now" (431ms hover), hesitates (2324ms), then clicks again.
+  - Scrolls to bottom (1016px), clicks "Back to Shop" twice (693ms hover, 1000ms hesitation).
+- **Exit**: Session ends after "Back to Shop" click.
+
+KEY OBSERVATIONS:
+- **Redundancy**: 44% of clicks (4/9) are duplicates, indicating UI confusion or validation issues.
+- **Scroll efficiency**: 66% of scrolls occur in bursts <0.5s, suggesting goal-driven navigation.
+- **Hesitation hotspots**: 32% of session time (4.18s) spent in "[HESITATION]" states, clustered around "Pay Now" and exit.
+- **No completion**: Checkout process is initiated but abandoned before submission.
+```

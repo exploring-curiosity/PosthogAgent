@@ -1,0 +1,76 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Methodical and linear with minor redundancy**: The user follows a clear top-to-bottom progression through the dashboard interface, moving sequentially from sidebar → stats cards → chart → data table → export button. Two instances of repeated clicks (sidebar at 4.12s/5.3s and stats cards at 6.16s/7.01s) suggest either accidental double-clicks or UI responsiveness issues, but the overall flow remains linear.
+- **No exploratory detours**: No evidence of lateral navigation (e.g., opening new tabs, returning to previous pages, or clicking unrelated elements). All actions are confined to the dashboard’s vertical structure.
+
+2. READING BEHAVIOR
+- **Skim-focused with rapid scrolling**: Scroll patterns show:
+  - **Downward skimming**: 5 consecutive downward scrolls (5.37s–11.48s) covering 955px in 6.11s (avg. 156px/s), with no pauses >0.5s between scrolls. This suggests the user is scanning content rather than reading deeply.
+  - **Upward correction**: A rapid upward scroll (13.29s–13.38s) covering 853px in 0.9s (avg. 948px/s) to return to the top, likely to access the export button. This indicates targeted navigation after skimming.
+- **No evidence of deep reading**: No prolonged pauses (>1s) on any single element except for hesitation clicks (e.g., 10.18s hesitation before chart interaction).
+
+3. ENGAGEMENT STYLE
+- **No voting/commenting observed**: The session log contains no actions related to voting, commenting, or other participatory behaviors (e.g., upvotes, replies, or form submissions). All interactions are navigational or data-oriented.
+- **Data-centric engagement**: Primary interactions involve:
+  - Clicking on **stats cards** (6.16s–7.01s)
+  - Interacting with a **chart** (8.02s–11.13s)
+  - Selecting a **data table** (12.29s–13.24s)
+  - **Exporting data** (13.97s–14.85s)
+
+4. INTERACTION SPEED
+- **Deliberate but efficient**:
+  - **Average time between actions**: 1.15s (excluding scrolls).
+  - **Hesitation events**:
+    - 3.58s: 3580ms hesitation before first click (likely orienting to the UI).
+    - 10.18s: 2158ms hesitation before chart interaction (potential decision-making or UI confusion).
+  - **Hover times**:
+    - Sidebar: 407ms (4.12s)
+    - Stats cards: 539ms (6.16s)
+    - Chart: 713ms (8.02s)
+    - Data table: 641ms (12.29s)
+    - Export button: 429ms (13.97s)
+  - **Click latency**: ~100–200ms between hover and click (e.g., 8.02s hover → 11.13s click on chart), suggesting familiarity with the UI but cautious interaction.
+
+5. CONTENT PREFERENCES
+- **Data-driven elements prioritized**:
+  - **Stats cards**: First substantive interaction (6.16s), suggesting interest in high-level metrics.
+  - **Chart**: Longest engagement (8.02s–11.13s, including hesitation), indicating focus on visual data representation.
+  - **Data table**: Final interactive element (12.29s–13.24s), implying a need for granular data.
+  - **Export**: Last action (13.97s–14.85s), confirming intent to extract data for external use.
+- **Ignored elements**:
+  - No interaction with headers, footers, or non-data UI components (e.g., settings, help menus).
+  - No evidence of engaging with textual content (e.g., descriptions, tooltips).
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no keystrokes, form inputs, or text entry. All interactions are clicks, hovers, or scrolls.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Sidebar navigation**: Initial clicks (4.12s–5.3s) suggest use of a collapsible/expandable sidebar.
+  - **Stats cards**: Interactive cards (6.16s–7.01s) likely displaying KPIs.
+  - **Chart**: Interactive visualization (8.02s–11.13s), possibly with filters or tooltips.
+  - **Data table**: Tabular data (12.29s–13.24s), potentially sortable/filterable.
+  - **Export functionality**: Final action (13.97s–14.85s), confirming data extraction.
+- **Features ignored**:
+  - No use of search, filters, or advanced settings.
+  - No engagement with notifications, user profile, or account settings.
+  - No evidence of tooltips, modals, or help documentation.
+
+8. SESSION FLOW
+- **Phase 1: Orientation (0.0s–5.3s)**
+  - Page load (0.0s) followed by a 3.58s hesitation (likely UI assessment).
+  - Initial sidebar interaction (4.12s–5.3s) to establish context.
+- **Phase 2: Data Exploration (5.3s–13.24s)**
+  - **Stats cards**: Quick interaction (6.16s–7.01s) to review metrics.
+  - **Chart**: Longest engagement (8.02s–11.13s), including hesitation (10.18s), suggesting analysis.
+  - **Data table**: Final data interaction (12.29s–13.24s), indicating a need for raw data.
+  - **Scrolling**: Rapid downward skimming (5.37s–11.48s) to survey content, followed by upward correction (13.29s–13.38s) to access export.
+- **Phase 3: Exit (13.24s–14.85s)**
+  - **Export action**: Clear intent to extract data (13.97s–14.85s), marking the session’s conclusion.
+  - **No return or re-engagement**: Session ends immediately after export click.
+
+SUMMARY
+This user exhibits a **task-driven, data-centric workflow** with no exploratory or social behaviors. Their navigation is **linear and efficient**, prioritizing **metrics → visualizations → raw data → export**. Interaction speed is **deliberate but not slow**, with **hesitations suggesting UI familiarity gaps or decision points**. Scrolling patterns indicate **skimming rather than deep reading**, and the session concludes with a **clear exit action (export)**. No typing or participatory actions (e.g., voting, commenting) were observed.
+```

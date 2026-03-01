@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly focused, goal-driven, but erratic in execution**
+  - Linear progression through checkout flow (Card Number → Pay Now → Email → Cart Summary → Back to Shop) with no detours.
+  - **Scattered micro-interactions**: 2 dead clicks (0.0s, 2.66s), 4 redundant clicks on the same elements (e.g., "Pay Now" at 1.66s/1.9s, "Cart Summary" at 3.77s/4.11s), and 1 hesitation (0.32s).
+  - **Scroll behavior**: Rapid bidirectional scrolling (e.g., 2.72s–2.94s: 705px → 132px in 0.22s) suggests frustration or validation checks, not exploration.
+
+2. READING BEHAVIOR
+- **Skimmer with selective deep dives**
+  - **Scroll speed**: 130–980px in 0.5s increments (avg. 260px/s), far exceeding typical reading speeds (~20px/s for deep reading).
+  - **Max depth**: 980px (4.36s), but only paused at key fields (Card Number, Email, Pay Now) and the "Back to Shop" CTA.
+  - **No evidence of deep reading**: No sustained pauses (>1s) on static text; all clicks target interactive elements.
+
+3. ENGAGEMENT STYLE
+- **N/A (Not applicable to this context)**
+  - No voting, commenting, or social interactions observed. Session is transactional (checkout flow).
+
+4. INTERACTION SPEED
+- **Fast but error-prone**
+  - **Action frequency**: 20 actions in 5s (4 actions/s avg.), with bursts up to 6 actions/s (e.g., 2.72s–2.94s: 5 scrolls in 0.22s).
+  - **Hesitation metrics**:
+    - 324ms hesitation at 0.32s (initial page load).
+    - 82ms hover on "Card Number" (0.82s), 179ms on "Pay Now" (1.66s), 111ms on "Email" (3.22s).
+  - **Redundant clicks**: 40% of clicks (8/20) are duplicates (e.g., "Pay Now" at 1.66s and 1.9s), suggesting misfires or validation attempts.
+
+5. CONTENT PREFERENCES
+- **N/A (Checkout flow only)**
+  - Sole focus: Payment form fields (Card Number, Email) and CTAs ("Pay Now", "Back to Shop").
+  - No engagement with non-transactional content (e.g., product details, FAQs).
+
+6. TYPING BEHAVIOR
+- **No typing detected**
+  - All clicks target inputs/buttons, but no keystrokes or input values are logged. Likely a synthetic session or abandoned form.
+
+7. FEATURE DISCOVERY
+- **Used**:
+  - Payment form (Card Number, Email fields).
+  - Primary CTAs ("Pay Now", "Back to Shop").
+  - Cart Summary (clicked but not expanded; no scroll pause).
+- **Ignored**:
+  - Shipping/billing address fields (no clicks/scroll pauses).
+  - Promo code fields, help links, or secondary CTAs (e.g., "Save for later").
+  - Static content (e.g., terms, privacy policy).
+
+8. SESSION FLOW
+- **Arc: Frustrated transaction → Abandonment**
+  - **0.0s–1.9s (Attempted Payment)**:
+    - Loads checkout page → hesitates → rapidly scrolls to "Card Number" → clicks "Pay Now" twice (misclicks?).
+  - **2.66s–3.53s (Validation Check)**:
+    - Dead click (2.66s) → rapid upward scroll (705px → 132px in 0.28s) → clicks "Email" field (likely to verify input).
+  - **3.77s–4.96s (Exit Preparation)**:
+    - Clicks "Cart Summary" (redundantly) → scrolls to bottom → clicks "Back to Shop" (exit intent).
+- **Key observations**:
+  - **No completion**: No form submission or confirmation page loaded.
+  - **Exit trigger**: "Back to Shop" click at 4.96s suggests abandonment, possibly due to friction (e.g., unclear form requirements, payment errors).
+  - **Synthetic traits**: Power-user device profile, no typing, and rapid redundant clicks may indicate a bot or automated test.
+```
+
+**SUMMARY**: This user exhibited hyper-focused, high-speed interactions with the checkout flow, marred by redundant clicks and rapid scrolling indicative of frustration or automation. The session terminated abruptly with an exit to the shop page, suggesting abandonment. No deep reading or exploratory behavior was observed.

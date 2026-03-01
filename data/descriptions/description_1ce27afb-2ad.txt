@@ -1,0 +1,61 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly scattered and erratic, with no linear progression.
+- Repeated toggling between 3 core elements: "Back to Shop" link (7 clicks), "Pay Now" button (5 clicks), and form fields ("Email" and "Card Number" inputs, 12 clicks combined).
+- 4 distinct scroll cycles (down-up-down-up) spanning the full page depth (0px–1022px), suggesting no clear target area.
+- 3 "DEAD CLICK" events (9.01s, 12.89s) on non-interactive elements, indicating misaligned expectations.
+- Spatial inconsistency: "Back to Shop" clicks span 157px–364px horizontally and 977px–1025px vertically, despite identical text.
+
+2. READING BEHAVIOR
+- Skimming only; no deep reading.
+- Scroll speed: 1000px/s (e.g., 0.23s–0.3s: 0px→1000px in 0.7s).
+- Max scroll depth (1022px) reached in 13.06s, but no sustained pauses (>200ms) at any depth.
+- 4 rapid scroll reversals (e.g., 3.56s–3.7s: 1000px→309px in 0.14s), suggesting visual scanning without content absorption.
+
+3. ENGAGEMENT STYLE
+- No voting or commenting observed (checkout page context).
+- Interaction ratio: 32 clicks total, 27 on primary targets ("Back to Shop", "Pay Now", form fields), 5 on non-functional elements ("DEAD CLICK", "RAGE CLICK").
+- Hesitation markers: 2 instances (0.19s: 187ms, 3.11s: 2089ms), indicating decision paralysis.
+- Rage clicks: 10 events (5.72s–12.16s), clustered on "Email" input (4 clicks) and "Cart Summary" (6 clicks), suggesting frustration with unresponsive elements.
+
+4. INTERACTION SPEED
+- Hyper-fast with bursts of inactivity.
+- Mean time between actions: 428ms (median: 200ms).
+- Fastest sequence: 5.72s–5.91s (4 rage clicks on "Email" in 190ms).
+- Slowest pause: 3.11s (2089ms hesitation before clicking blank space).
+- Click latency: 80–200ms hover before 80% of primary clicks (e.g., 4.75s: 81ms hover on "Pay Now").
+
+5. CONTENT PREFERENCES
+- Checkout page only (no subreddit/content browsing).
+- Gravitated toward:
+  - Exit paths: "Back to Shop" (7 clicks, 52% of primary interactions).
+  - Payment submission: "Pay Now" (5 clicks, 38%).
+  - Form fields: "Email" (4 clicks) and "Card Number" (3 clicks), but no evidence of typing or input completion.
+
+6. TYPING BEHAVIOR
+- No typing detected in any input field.
+- All form interactions were clicks (12 total), with no keystrokes or corrections.
+- Input focus duration: <100ms per click (e.g., 5.63s: "Email" click held for 60ms).
+
+7. FEATURE DISCOVERY
+- Used:
+  - Primary CTA: "Pay Now" button (5 clicks).
+  - Exit link: "Back to Shop" (7 clicks).
+  - Form fields: "Email" and "Card Number" (12 clicks).
+- Ignored:
+  - All other page elements (e.g., no clicks on shipping info, promo codes, or cart items).
+  - No evidence of reading terms/conditions or help text (no scroll pauses).
+
+8. SESSION FLOW
+- Arc: Frustration loop → Abandonment.
+  - 0.0s–0.49s: Initial scan (scroll to 1000px, click "Back to Shop").
+  - 0.82s–3.95s: First payment attempt (scroll to 309px, click "Card Number").
+  - 4.24s–7.91s: Escalating frustration (rage clicks on "Pay Now" and "Email", 3 scroll reversals).
+  - 8.26s–13.68s: Final exit attempt (scroll to 1022px, 2 "Back to Shop" clicks).
+- Exit: Session ends with "Back to Shop" click at 13.68s, no confirmation of navigation away.
+- Key pattern: 3 distinct cycles of (1) scroll to bottom, (2) click "Back to Shop", (3) scroll up to form, (4) attempt payment, (5) rage click.
+```
+
+**Summary**: This user exhibited extreme frustration with a non-functional checkout flow, characterized by rapid, erratic clicks, repeated scroll cycles, and rage clicks on unresponsive elements. No actual data entry occurred, and the session ended with an exit attempt. The behavior suggests a synthetic test or a user encountering a broken UI.

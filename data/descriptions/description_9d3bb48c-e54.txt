@@ -1,0 +1,64 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- **Highly linear with rapid progression**: The user moves through the page in a top-to-bottom sequence, with minimal backtracking. Navigation follows a clear path: landing page → navigation bar → features → hero title → CTA → testimonials → footer.
+- **No exploratory detours**: All clicks target primary UI elements (nav, sections, buttons) with no evidence of lateral exploration (e.g., no sidebar interactions, no secondary menu clicks).
+- **Scattered micro-interactions**: Repeated clicks on the same elements (e.g., "Navigation" at 0.53s/0.83s, "Features" at 1.6s/2.37s) suggest either UI responsiveness testing or accidental double-clicks.
+
+2. READING BEHAVIOR:
+- **Skim-focused**: Scroll speed is consistent (0.5s per 117px segment) with no pauses >0.5s, indicating no deep reading. Max scroll depth (1002px) suggests they viewed ~50-60% of a ~1800px page (assuming 1920x1080 viewport).
+- **No content engagement**: No text selection, no hover pauses on body content (only on interactive elements), and no scroll stutters (e.g., no re-reading of sections).
+- **Scroll pattern**: Rapid down/up/down movements (e.g., 2.43s–2.59s: scrolls up 388px in 0.16s, then down 108px in 0.76s) imply visual scanning rather than linear reading.
+
+3. ENGAGEMENT STYLE:
+- **No traditional engagement**: The session contains no votes, comments, form submissions, or other participatory actions. All interactions are navigational (clicks) or exploratory (scrolls).
+- **Click-to-interaction ratio**: 12 clicks in 5.7s (2.1 clicks/second), but all are UI-triggered (e.g., buttons, nav items). No content-driven actions (e.g., expanding accordions, playing media).
+- **Hover behavior**: Brief hovers (59ms–183ms) precede 5/12 clicks, suggesting intentional targeting but no prolonged consideration.
+
+4. INTERACTION SPEED:
+- **Extremely fast**: Median time between actions: 0.34s (excluding scrolls). Fastest interval: 0.04s (0.83s–0.88s: click → scroll). Slowest interval: 0.54s (2.14s–2.37s: hesitation click).
+- **Hesitation markers**: Two "[HESITATION]" events (113ms at 0.11s, 544ms at 2.14s) indicate momentary pauses, but these are outliers in an otherwise hyper-accelerated session.
+- **Scroll speed**: 117px/0.5s (234px/s) is 2–3x faster than typical human reading speed (70–100px/s), reinforcing skimming behavior.
+
+5. CONTENT PREFERENCES:
+- **Gravitated toward structural elements**:
+  - **Navigation**: Clicked "Navigation" twice (0.53s, 0.83s).
+  - **Features section**: Clicked "Features" twice (1.6s, 2.37s).
+  - **Hero title**: Clicked "Hero Title" twice (2.94s, 3.33s).
+  - **Primary CTA**: Clicked "Get Started" twice (3.69s, 4.07s).
+  - **Testimonials**: Clicked "Testimonials" twice (4.53s, 4.89s).
+  - **Footer**: Clicked "Footer" twice (5.5s, 5.7s).
+- **Ignored**: No interactions with images, videos, sidebars, search bars, or secondary CTAs (e.g., "Learn More" links).
+
+6. TYPING BEHAVIOR:
+- **No typing detected**: The log contains no text input events (e.g., search queries, form fields, comments). All interactions are point-and-click.
+
+7. FEATURE DISCOVERY:
+- **Used features**:
+  - Navigation menu (0.53s–0.83s).
+  - Section headers (e.g., "Features," "Testimonials").
+  - Primary CTA button ("Get Started").
+  - Footer.
+- **Ignored features**:
+  - Search functionality (no search bar interactions).
+  - Interactive widgets (e.g., carousels, tabs, modals).
+  - Social sharing buttons.
+  - Any form fields (e.g., email signup, contact forms).
+  - Multimedia (no video/audio plays, no image clicks).
+
+8. SESSION FLOW:
+- **Arc**: **Mechanical audit → rapid validation → exit**.
+  - **0.0s–1.6s (Audit Phase)**: Loads page, tests navigation responsiveness (double-clicks), scrolls to "Features" section. Duration: 1.6s.
+  - **1.6s–3.69s (Validation Phase)**: Returns to hero title, clicks CTA. Duration: 2.09s. Scrolls up/down to confirm layout consistency.
+  - **3.69s–5.7s (Exit Phase)**: Clicks "Testimonials" and footer, then exits. Duration: 2.01s.
+- **No engagement loop**: The session lacks a "browsing" phase; it’s a linear progression with no return to earlier sections.
+- **Exit trigger**: Final action is a footer click (5.7s), suggesting either:
+  - Completion of a checklist (e.g., QA testing).
+  - Loss of interest after scanning all primary sections.
+```
+
+**KEY TAKEAWAYS**:
+- **Behavioral signature**: This session resembles a **synthetic user audit** (e.g., automated testing, UX validation) or a **power user’s rapid content inventory**. The lack of hesitation, no typing, and mechanical interaction pattern are atypical for organic human behavior.
+- **Red flags**: Double-clicks on static elements, no content engagement, and sub-1s intervals between actions suggest non-human interaction (e.g., bot, script, or manual tester following a protocol).
+- **Content focus**: Prioritized structural elements (nav, CTA, footer) over body content, reinforcing a "checklist" mentality.

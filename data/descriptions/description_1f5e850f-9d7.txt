@@ -1,0 +1,69 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear and goal-driven**: The user follows a strict vertical progression through the page, with no lateral exploration (e.g., no horizontal scrolling, no clicks on unrelated elements).
+- **Systematic scanning**: Scrolls occur in fixed 126px increments (6 scrolls down, 6 scrolls up) with consistent 0.5s duration per scroll, suggesting deliberate, metered content consumption.
+- **No backtracking**: After reaching max depth (777px), the user immediately clicks the "Data Table" without revisiting prior sections.
+
+2. READING BEHAVIOR
+- **Skimmer**: Scroll speed (126px/0.5s = 252px/s) exceeds typical reading speeds (200-300 words/min ≈ 50-100px/s for 12pt text), indicating rapid visual scanning.
+- **No deep reading**: No pauses >200ms on any content block (e.g., "Chart" hovered for 105ms, "Stats Cards" for 56ms). Max hover time (198ms on initial click) suggests hesitation, not engagement.
+- **Scroll pattern**: Alternates between rapid downward scans (0.27s–0.54s) and targeted upward corrections (1.29s–2.64s) to revisit specific UI elements.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No evidence of voting, commenting, or input submission. All interactions are clicks on UI elements (sidebar, chart, stats cards, export button, data table).
+- **Click behavior**:
+  - **Double-clicks**: Every target is clicked twice (e.g., "Sidebar" at 0.88s and 1.23s), with ~350ms between clicks (likely intentional, not accidental).
+  - **Hover-then-click**: All clicks are preceded by hovers (56ms–198ms), indicating deliberate targeting.
+- **No ratio applicable**: No voting/commenting occurred.
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median time between actions = 0.35s (excluding scrolls). Fastest interval: 0.07s (between scrolls at 1.37s–1.4s).
+- **Deliberate pauses**: Only 3 pauses >300ms:
+  - 0.88s–1.23s (350ms): Between sidebar hover and click.
+  - 1.75s–1.99s (240ms): Between chart hover and click.
+  - 3.11s–3.4s (290ms): Between export hover and click.
+- **Scroll consistency**: All scrolls last exactly 0.5s, suggesting automated or highly practiced behavior.
+
+5. CONTENT PREFERENCES
+- **UI elements over content**: All clicks target functional components, not informational content:
+  - **Sidebar** (0.88s, 1.23s): Navigation or menu access.
+  - **Chart** (1.75s, 1.99s): Data visualization.
+  - **Stats Cards** (2.35s, 2.47s): Summary metrics.
+  - **Export button** (3.11s, 3.4s): Data extraction.
+  - **Data Table** (4.06s, 4.32s): Tabular data.
+- **No content engagement**: No clicks on text, images, or links suggesting interest in specific topics.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No input fields, search bars, or text areas were interacted with. No keystrokes or corrections recorded.
+
+7. FEATURE DISCOVERY
+- **Features used**:
+  - **Sidebar navigation** (0.88s–1.23s): Likely for menu access.
+  - **Chart interaction** (1.75s–1.99s): Possible drill-down or tooltip trigger.
+  - **Stats cards** (2.35s–2.47s): Summary data review.
+  - **Export functionality** (3.11s–3.4s): Data extraction.
+  - **Data table** (4.06s–4.32s): Tabular data inspection.
+- **Features ignored**:
+  - **Top navigation**: No clicks on header or primary nav.
+  - **Search/filters**: No interaction with search bars or filters.
+  - **Help/docs**: No clicks on help icons or documentation links.
+  - **Social features**: No sharing, bookmarking, or collaboration tools used.
+
+8. SESSION FLOW
+- **Phase 1: Initial Scan (0.0s–0.54s)**
+  - Loads dashboard, hesitates (198ms), then scrolls downward in 126px increments to 631px. **Purpose**: Rapid content inventory.
+- **Phase 2: Targeted Revisits (0.88s–2.64s)**
+  - Clicks sidebar (0.88s), then scrolls upward in 53px increments to 61px. **Purpose**: Locate specific UI elements (chart, stats cards) for interaction.
+- **Phase 3: Data Extraction (3.11s–4.32s)**
+  - Clicks export button (3.11s), scrolls downward to 777px, then clicks data table. **Purpose**: Retrieve or manipulate data (export + table interaction).
+- **Session end**: Abrupt termination at 4.32s after data table click. No exit confirmation or additional actions.
+
+SUMMARY
+This user exhibits **automated or power-user behavior**, characterized by:
+- **Mechanical precision**: Fixed scroll increments, double-clicks, and consistent hover times.
+- **Goal-oriented**: Focused on data extraction (export + table) and UI navigation (sidebar, chart, stats).
+- **No exploratory behavior**: No deviations, no content engagement, no typing.
+- **Synthetic traits**: The combination of extreme speed, lack of hesitation (except initial 198ms), and no reading suggests a script, bot, or highly trained user (e.g., QA tester, data analyst).
+```

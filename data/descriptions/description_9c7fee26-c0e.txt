@@ -1,0 +1,65 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. They jump between unrelated elements (e.g., "Pay Now" button → "Back to Shop" → "Email" input → "Cart Summary" → "Card Number") without completing any single workflow.
+- **Repetitive actions**: Multiple clicks on the same elements (e.g., "Pay Now" twice, "Back to Shop" twice, "Email" input 6 times, "Cart Summary" twice) suggest frustration or confusion.
+- **No clear path**: The session lacks a logical progression (e.g., checkout → abandon → return to shop → revisit checkout fields). The user appears to be "poking" the interface rather than following a goal-driven sequence.
+
+2. READING BEHAVIOR
+- **Skim-heavy with no deep reading**: Scroll patterns indicate rapid, shallow engagement:
+  - Initial scroll: 0px → 680px in 1.0s (340px/s), covering ~63% of the viewport height (1080px) in under a second.
+  - Later scrolls: 680px → 988px in 1.0s (308px/s), then 988px → 117px in 0.5s (1,742px/s) during a "rewind" to the top.
+  - No pauses or slow scrolls: All scrolls are rapid (0.5s duration) with no evidence of lingering on content.
+- **No evidence of reading**: The user does not dwell on any section long enough to read deeply (e.g., no pauses >1s between scrolls or clicks).
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement (voting/commenting)**: This is a checkout flow, so no voting or commenting is applicable. However:
+  - **Frustration-driven interactions**: The user exhibits "rage clicks" (5 consecutive clicks on the "Email" input in 0.3s at 4.11–4.42s) and long hesitations (1,835ms at 2.41s), indicating difficulty with the interface.
+  - **No successful completion**: The user does not complete any form fields or proceed to payment despite multiple attempts.
+
+4. INTERACTION SPEED
+- **Highly variable speed**:
+  - **Fast actions**: Clicks occur as quickly as 0.06s apart (e.g., 3.9s → 3.99s for "Email" input rage clicks).
+  - **Long hesitations**: 1,211ms (0.12s → 1.33s) and 1,835ms (2.41s) pauses before clicks, suggesting indecision or confusion.
+  - **Average time between actions**: ~0.4s (excluding hesitations), but this is skewed by rapid rage clicks.
+- **Hover delays**: Pre-click hovers range from 60ms to 155ms, indicating some deliberation but not deep consideration.
+
+5. CONTENT PREFERENCES
+- **No content preferences observable**: The session is confined to a checkout page (https://example.com/checkout). The user interacts with:
+  - **Primary actions**: "Pay Now" button (twice), "Back to Shop" link (twice).
+  - **Form fields**: "Email" input (6 clicks), "Card Number" input (1 hover + 1 click).
+  - **Secondary elements**: "Cart Summary" div (2 clicks).
+- **No exploration of other pages/content**: The user does not navigate to product pages, account settings, or other sections.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: Despite clicking on "Email" and "Card Number" inputs, there are no recorded keystrokes or input values. This suggests:
+  - The user may have clicked but not typed (e.g., distracted or interrupted).
+  - The recording may not capture input events (unlikely, given the granularity of other actions).
+- **No corrections or edits**: No backspaces, deletions, or input modifications are logged.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Checkout workflow: "Pay Now" button, "Back to Shop" link.
+  - Form fields: "Email" and "Card Number" inputs.
+  - Cart summary: Clicked but not expanded or interacted with beyond the initial click.
+- **Ignored features**:
+  - No interaction with other form fields (e.g., name, address, CVV, shipping options).
+  - No use of help/support links, promo code fields, or payment method selectors.
+  - No mobile/desktop-specific features (e.g., save for later, guest checkout).
+
+8. SESSION FLOW
+- **Arc**: **Frustration → Abandonment → Re-engagement → Exit**
+  - **0.0–0.57s (Exploration)**: Rapid scroll to bottom of page, click "Pay Now" (with 145ms hover).
+  - **0.57–2.64s (Hesitation)**: 1,835ms pause, then second "Pay Now" click (likely failed first attempt).
+  - **2.64–3.46s (Abandonment)**: Scrolls further down, clicks "Back to Shop" twice (possible intent to exit checkout).
+  - **3.46–4.42s (Re-engagement)**: Returns to top, clicks "Email" input 6 times (rage clicks), suggesting frustration with form.
+  - **4.42–5.69s (Distraction)**: Clicks "Cart Summary," scrolls minimally, then clicks "Card Number" input before session ends.
+- **Exit**: Session terminates abruptly at 5.7s with no confirmation of completion or navigation away.
+- **Key observations**:
+  - No successful task completion (e.g., payment, form submission).
+  - Repeated attempts to interact with the same elements suggest usability issues (e.g., unresponsive buttons, unclear form validation).
+  - The user appears to oscillate between trying to proceed and abandoning the flow.
+```
+
+**SUMMARY**: This is a **high-friction, frustration-driven session** characterized by rapid, erratic interactions, rage clicks, and no successful task completion. The user exhibits **no deep reading**, **no typing**, and **no linear progression** through the checkout flow. The session likely represents a **failed conversion** due to usability barriers (e.g., unresponsive buttons, unclear form requirements). The short duration (5.7s) and lack of input suggest the user may have given up or been interrupted.

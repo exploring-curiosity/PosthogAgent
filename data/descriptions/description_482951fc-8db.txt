@@ -1,0 +1,77 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly non-linear and fragmented. The user exhibits a "scattered" pattern with rapid jumps between unrelated sections (footer → testimonials → navigation → features → hero title).
+- No clear progression through content hierarchy. 67% of clicks target non-primary navigation elements (footer, testimonials, features).
+- 42% of scroll actions are upward (11/26 total scrolls), indicating frequent backtracking.
+- 3 distinct "zones" of focus: footer (0.59–1.35s), mid-page testimonials (1.89–2.32s), and top navigation (3.59–7.74s).
+
+2. READING BEHAVIOR
+- Extreme skimming. No sustained reading periods detected:
+  - Max scroll depth: 1028px (full page height not recorded, but likely <2 screens given 1080px viewport).
+  - Average scroll duration: 0.5s (too fast for meaningful content consumption).
+  - 83% of scrolls cover 90–114px (≈1–2 content blocks) before direction change.
+- No pauses >500ms between scrolls (typical for reading). Longest hesitation: 2241ms at 5.83s (likely distraction, not content processing).
+
+3. ENGAGEMENT STYLE
+- No traditional engagement (votes/comments) observed. All interactions are navigational clicks.
+- Click behavior:
+  - 100% of clicks are double-clicks (hover → click) with median 130ms hover time (range: 60–2241ms).
+  - 0% of clicks lead to sustained interaction (e.g., form submission, modal opening).
+  - Median time between clicks: 0.34s (range: 0.04–2.84s).
+
+4. INTERACTION SPEED
+- Hyper-fast. Median action interval: 0.06s (excluding the 2.24s hesitation at 5.83s).
+- Scroll speed: 180–220px/s (consistent across all scrolls).
+- Click latency:
+  - Median: 0.07s between hover and click.
+  - Outlier: 2.24s hesitation at 5.83s (only pause >1s).
+- No typing detected (no input fields engaged).
+
+5. CONTENT PREFERENCES
+- No content consumption observed. All clicks target structural elements:
+  - Footer (2 clicks at 1.12–1.27s).
+  - Testimonials section (2 clicks at 1.89–2.0s).
+  - "Get Started" CTA (2 clicks at 2.64–2.98s).
+  - Navigation (2 clicks at 3.59–6.15s).
+  - Features section (2 clicks at 6.72–6.97s).
+  - Hero title (2 clicks at 7.55–7.74s).
+- No preference for specific content types; all interactions are with UI affordances.
+
+6. TYPING BEHAVIOR
+- N/A. No text input detected in the 7.7s session.
+
+7. FEATURE DISCOVERY
+- Discovered features (by timestamp):
+  - 0.53s: Initial page load (no feature usage).
+  - 1.12s: Footer links (used).
+  - 1.89s: Testimonials section (used).
+  - 2.64s: Primary CTA ("Get Started") (used).
+  - 3.59s: Navigation menu (used).
+  - 6.72s: Features section (used).
+  - 7.55s: Hero title (used).
+- Ignored features:
+  - No interaction with search, filters, or secondary CTAs.
+  - No engagement with interactive elements (e.g., carousels, accordions).
+  - No form submissions or dropdown expansions.
+
+8. SESSION FLOW
+- Arc: "Rapid structural probing → abandonment"
+  - 0.0–0.53s: Initial load (passive).
+  - 0.53–3.25s: Aggressive structural testing (footer → testimonials → CTA → navigation; 8 clicks, 12 scrolls).
+  - 3.59–7.74s: Erratic top-of-page exploration (navigation → features → hero title; 6 clicks, 10 scrolls).
+  - 7.74s: Session ends mid-click (no exit action recorded).
+- Key observations:
+  - No content consumption phase.
+  - 100% of interactions are with UI scaffolding, not content.
+  - Session terminates during a click on the hero title (no confirmation of intent).
+  - No clear goal or conversion path followed.
+```
+
+**NOTES:**
+- The user profile ("synthetic/power_user") and behavior suggest this may be a bot, automated test, or scripted interaction. Human users rarely exhibit:
+  - Perfectly consistent 0.5s scroll durations.
+  - 100% double-clicks with sub-150ms hover times.
+  - No pauses for reading or decision-making.
+- If human, the behavior resembles "rage clicking" or frustration, but the synthetic label contradicts this.

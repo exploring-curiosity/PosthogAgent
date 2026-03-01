@@ -1,0 +1,84 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with repetitive validation**: The user exhibits non-linear, erratic navigation with frequent backtracking and redundant interactions.
+  - Initial focus: Settings page (0.0s–1.63s) → abrupt shift to "Profile" (4.72s–5.46s) → "Privacy" (6.75s–8.58s).
+  - **Redundant clicks**: 2 clicks on "Save Changes" (1.63s, 4.05s), 2 clicks on "Profile" (4.72s, 5.46s), 2 clicks on "Privacy" (6.75s, 8.58s).
+  - **Dead click**: Single dead click at (1196, 1218) (6.21s), suggesting misaligned expectations or UI confusion.
+- **No clear progression**: Jumps between unrelated sections (Settings → Profile → Privacy) without sustained engagement in any single area.
+
+2. READING BEHAVIOR
+- **Skim-heavy with rapid scrolling**:
+  - **Scroll speed**: 960px–1,000px/s (e.g., 496px in 0.5s at 1.07s; 415px in 0.5s at 4.1s).
+  - **Depth**: Max scroll depth = 992px (1.63s), but revisits shallower depths (e.g., 162px at 4.16s, 740px at 6.75s).
+  - **No sustained pauses**: No scroll stalls >0.5s; no evidence of deep reading (e.g., no hover >500ms on content).
+- **Hesitation markers**: 3 instances of "[HESITATION]" (1.01s, 3.02s, 7.6s) totaling 3,259ms, but no corresponding text input or correction behavior.
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or form submissions detected.
+- **Interaction type**: Exclusively navigational (clicks, scrolls) with no content creation or modification.
+- **Vote-to-comment ratio**: N/A (no engagement actions recorded).
+- **Action latency**:
+  - **Fast clicks**: 3 clicks with <100ms between scrolls (e.g., 4.05s–4.1s).
+  - **Delayed validation**: 2 clicks with >800ms hesitation (3.02s, 7.6s).
+
+4. INTERACTION SPEED
+- **Mixed cadence**:
+  - **Rapid bursts**: 5 actions in 1.1s (4.05s–5.16s: click, scroll up x2, scroll down x2).
+  - **Deliberate pauses**: 3 hesitations (1.01s, 3.02s, 7.6s) totaling 3,259ms (38% of session duration).
+- **Hover times**:
+  - "Save Changes": 321ms (1.63s).
+  - "Profile": 342ms (4.72s).
+  - "Privacy": 108ms (6.75s).
+- **Click-to-click intervals**:
+  - Shortest: 50ms (6.21s–6.24s).
+  - Longest: 1,396ms (3.02s–4.05s).
+
+5. CONTENT PREFERENCES
+- **No explicit content engagement**: Only interacted with UI navigation elements (Settings, Profile, Privacy).
+- **Gravitated toward**:
+  - **Settings sub-pages**: "Profile" and "Privacy" (4.72s–8.58s).
+  - **Save functionality**: 2 clicks on "Save Changes" (1.63s, 4.05s), suggesting intent to modify settings.
+- **Ignored**: No interaction with form fields, toggles, or other settings controls.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text input, corrections, or form field interactions in the log.
+- **Hesitation without input**: 3 "[HESITATION]" events (1.01s, 3.02s, 7.6s) but no subsequent typing.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - **Navigation tabs**: "Profile" (4.72s), "Privacy" (6.75s).
+  - **Save button**: "Save Changes" (1.63s, 4.05s).
+- **Ignored features**:
+  - **Form fields**: No clicks on input fields, toggles, or dropdowns.
+  - **Help/FAQ**: No interaction with help icons or documentation links.
+  - **Advanced settings**: No exploration beyond top-level tabs.
+
+8. SESSION FLOW
+- **Arc**: **Validation-driven exploration → Aborted modification → Erratic exit**
+  1. **Initial load (0.0s–1.63s)**:
+     - Page load → hesitation (1.01s) → rapid scroll (1.07s–1.15s) → "Save Changes" click (1.63s).
+     - *Interpretation*: Quick scan of settings, attempt to save (possibly premature).
+  2. **Re-evaluation (1.63s–4.72s)**:
+     - Hesitation (3.02s) → second "Save Changes" click (4.05s) → scroll up (4.1s–4.16s).
+     - *Interpretation*: Doubt about initial action; scroll up suggests review of prior content.
+  3. **Exploratory detour (4.72s–6.75s)**:
+     - "Profile" clicks (4.72s, 5.46s) → dead click (6.21s) → rapid scroll down (6.24s–6.46s).
+     - *Interpretation*: Shift to unrelated section; dead click indicates UI confusion or misclick.
+  4. **Final validation (6.75s–8.58s)**:
+     - "Privacy" hover (6.75s) → hesitation (7.6s) → "Privacy" click (8.58s).
+     - *Interpretation*: Last-minute check of another section before session end.
+- **Exit**: Session terminates at 8.6s with no further actions.
+- **Key anomalies**:
+  - **No form interaction**: Despite "Save Changes" clicks, no evidence of actual changes.
+  - **Repetitive clicks**: 2–3 clicks on the same element (e.g., "Profile," "Privacy") without progression.
+  - **Scroll whiplash**: Rapid up/down scrolls (e.g., 992px → 162px in 0.5s at 4.16s).
+```
+
+**SUMMARY**: This session reflects a **non-human or synthetic user** with **erratic, validation-driven behavior**. Key indicators:
+- **No typing or content engagement** despite navigational clicks.
+- **Repetitive, redundant interactions** (e.g., multiple clicks on the same element).
+- **Extreme scroll speeds** (960px/s) and **hesitations without input**.
+- **Dead click** and **no form field interaction** suggest UI testing or bot-like activity.
+- **Session duration (8.6s)** is atypically short for human settings modification.

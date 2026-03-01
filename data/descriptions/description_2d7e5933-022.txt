@@ -1,0 +1,79 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Highly linear with rapid scanning**: The user follows a strict top-to-bottom progression through the page, with no lateral exploration (e.g., no horizontal scrolling or side-panel interactions). After reaching the footer (2.65s), they reverse direction and scroll upward in a similarly linear fashion.
+- **Targeted clicks**: All clicks occur on static page elements (h1, button, div, footer, nav) in sequential order of appearance, suggesting a "checklist" approach rather than exploratory curiosity.
+- **No backtracking**: No instances of revisiting previously viewed sections or elements.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll speed is consistent (≈170px/0.5s or 340px/s) with no pauses >200ms, indicating no deep reading. Max scroll depth (1034px) suggests they viewed ~95% of a ~1080px viewport page.
+- **No dwell time**: No single section held attention for >0.5s. Even "hover" times (e.g., 200ms on Features) are too brief for substantive reading.
+- **Scroll pattern**: Three distinct phases:
+  1. Initial descent (0.3s–1.66s): 0px → 710px (710px in 1.36s)
+  2. Footer descent (2.2s–2.34s): 710px → 1034px (324px in 0.14s)
+  3. Rapid ascent (2.84s–3.99s): 1034px → 46px (988px in 1.15s)
+
+3. ENGAGEMENT STYLE
+- **No traditional engagement**: No votes, comments, or form submissions detected. All interactions are clicks on static page elements.
+- **Click redundancy**: Every click is duplicated within 100–200ms (e.g., "Get Started" at 1.38s and 1.52s), suggesting either:
+  - Synthetic testing (e.g., automated script with retry logic)
+  - User uncertainty (though no error states are logged)
+- **Hover-to-click latency**: Hover durations (62ms–200ms) are too short for deliberate consideration, reinforcing skimming behavior.
+
+4. INTERACTION SPEED
+- **Extremely fast**: Median inter-action time = 0.18s (excluding scrolls). Fastest sequence:
+  - 0.76s: Click "Hero Title"
+  - 0.99s: Click "Hero Title" again (230ms later)
+- **Scroll bursts**: Scroll actions occur in 0.5s intervals with no pauses, indicating continuous motion.
+- **No hesitation**: Even "hesitation" at 0.24s (239ms) is shorter than average human reaction time (250–300ms).
+
+5. CONTENT PREFERENCES
+- **No content differentiation**: All clicked elements are structural (h1, button, div, footer, nav) rather than content-specific. No evidence of preference for:
+  - Text vs. media
+  - Specific topics (e.g., testimonials vs. features)
+- **Gravitation toward interactive elements**: Clicks target elements with hover states (e.g., "HOVER 171ms"), suggesting a focus on affordances rather than content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: No text inputs, corrections, or form interactions logged. Session contains zero keystrokes.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Primary CTA ("Get Started" button)
+  - Navigation menu
+  - Structural sections (Hero Title, Testimonials, Features, Footer)
+- **Ignored features**:
+  - No interaction with:
+    - Search bars
+    - Dropdown menus
+    - Sidebars
+    - Images/media
+    - Links (no clicks on hyperlinked text)
+    - Forms (no input fields engaged)
+
+8. SESSION FLOW
+- **Phase 1: Rapid Descent (0.0s–2.65s)**
+  - Load → immediate scroll (0.3s) → sequential clicks on hero section (0.76s), CTA (1.38s), testimonials (2.06s), and footer (2.65s).
+  - **Goal**: Appears to be a "scan for interactive elements" rather than content consumption.
+- **Phase 2: Ascent and Re-engagement (2.65s–4.57s)**
+  - Scrolls upward (2.84s) → clicks "Features" (3.38s) → continues upward → clicks navigation (4.28s).
+  - **Goal**: Likely testing navigation functionality or verifying page structure.
+- **Exit**: Session ends abruptly at 4.57s with no further actions. No evidence of conversion or abandonment triggers.
+
+---
+
+KEY OBSERVATIONS:
+- **Synthetic user profile**: The combination of:
+  - Sub-200ms hover times
+  - Duplicate clicks within 100–200ms
+  - Perfectly linear scroll patterns
+  - No typing or content engagement
+  - High viewport consistency (1920x1080)
+  strongly suggests this is an automated test script or synthetic monitoring tool, not a human user.
+
+- **No human-like behavior**: Lacks:
+  - Mouse movement curves (all clicks are at precise coordinates)
+  - Variable scroll speeds
+  - Dwell time on content
+  - Contextual interactions (e.g., clicking links based on interest)
+```

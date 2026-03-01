@@ -1,0 +1,148 @@
+```
+BEHAVIORAL PROFILE: SYNTHETIC/CAUTIOUS_EXPLORER
+
+---
+
+### 1. NAVIGATION PATTERN
+**Pattern:** *Non-linear, exploratory with hesitation*
+- **Initial exploration (0.0s–6.15s):** User begins with two rapid navigation clicks (4.26s, 6.15s) after prolonged hesitation (2.56s, 4.99s). Navigation is tentative, with no clear goal.
+- **Content sampling (6.15s–35.47s):** User jumps between sections (Testimonials, Features, Footer, Hero Title) with no sequential flow. Each interaction is preceded by a hover (906ms–1953ms) and followed by a hesitation click (e.g., 13.86s, 19.11s).
+- **Repetitive actions:** Identical clicks on "Navigation" (4.26s/6.15s), "Testimonials" (7.38s/9.38s), "Features" (11.87s/14.72s), and "Footer" (16.86s/21.51s) suggest validation of prior actions or uncertainty.
+- **Scroll behavior:** Aggressive scrolling (e.g., 6.19s–6.36s: 723px in 1.17s) alternates with abrupt reversals (e.g., 9.45s–9.68s: scrolls up 100px in 0.23s), indicating skimming rather than linear progression.
+
+**Quantitative:**
+- 12 clicks, 4 unique targets (Navigation, Testimonials, Features, Footer, Hero Title, Get Started).
+- 25 scroll actions (13 down, 12 up), with 50% of scrolls reversed within 1s.
+- 6 "HESITATION" clicks (2.56s–32.95s), averaging **2.1s** between hesitation and next action.
+
+---
+
+### 2. READING BEHAVIOR
+**Pattern:** *Superficial skimming with selective deep dives*
+- **Scroll speed:** Average scroll velocity = **180px/s** (e.g., 6.19s–6.36s: 723px in 1.17s). Faster than typical reading speed (300–500 words/min ≈ 50–100px/s for 12pt text).
+- **Depth:** Max scroll depth = **1067px** (21.51s), but user rarely pauses >1s at any depth. Exceptions:
+  - **Testimonials (7.38s–9.38s):** Hovered 906ms, clicked twice, then scrolled up (suggests brief engagement).
+  - **Features (11.87s–14.72s):** Hovered 1951ms, scrolled down 446px (890px→1067px) in 0.2s (likely scanning).
+- **Revisits:** User returns to Hero Title (23.88s) and Get Started (30.44s) after scrolling away, indicating these sections may have been skimmed initially.
+
+**Quantitative:**
+- **Time at depth:**
+  - 0–362px (Hero/Features): 14.8s (42% of session).
+  - 723–1067px (Testimonials/Footer): 12.1s (34% of session).
+- **Scroll reversals:** 5 instances of immediate scroll-up after reaching a depth (e.g., 9.45s, 21.56s).
+
+---
+
+### 3. ENGAGEMENT STYLE
+**Pattern:** *No explicit engagement (votes/comments); passive consumption only*
+- **Actions:** All interactions are clicks or scrolls; no text input, form submissions, or social engagement (e.g., upvotes, comments).
+- **Hesitation clicks:** 6 "page text" clicks (e.g., 2.56s, 4.99s) with no visible target, possibly misclicks or placeholder interactions.
+- **Hover time:** Average hover duration = **1.5s** (range: 732ms–2571ms), suggesting deliberation but no follow-through.
+
+**Quantitative:**
+- **Vote-to-comment ratio:** 0:0 (no engagement).
+- **Click-to-hover ratio:** 1.0 (every hover preceded a click).
+
+---
+
+### 4. INTERACTION SPEED
+**Pattern:** *Deliberate with bursts of speed*
+- **Action intervals:**
+  - **Fastest:** 40ms (6.15s–6.19s: click → scroll).
+  - **Slowest:** 2.57s (26.45s–28.19s: hesitation → click).
+  - **Average:** **2.9s** between actions (excluding scrolls).
+- **Hesitation:** 6 instances of "HESITATION" clicks, averaging **2.1s** of inactivity before the next action.
+- **Scroll bursts:** 0.5s per scroll segment (e.g., 6.19s–6.36s: 4 scrolls in 1.17s).
+
+**Quantitative:**
+- **Time distribution:**
+  - 30% of session spent hovering (10.7s).
+  - 25% spent in "HESITATION" (8.9s).
+  - 45% active scrolling/clicking (15.9s).
+
+---
+
+### 5. CONTENT PREFERENCES
+**Pattern:** *Gravitates toward high-level sections; ignores granular content*
+- **Prioritized sections:**
+  1. **Navigation (4.26s, 6.15s):** Early clicks suggest interest in site structure.
+  2. **Testimonials (7.38s–9.38s):** Hovered 906ms, scrolled briefly (likely scanning for social proof).
+  3. **Features (11.87s–14.72s):** Longest hover (1951ms), deepest scroll (1067px), indicating functional interest.
+  4. **Footer (16.86s–21.51s):** Hovered 1633ms, scrolled up immediately (may have sought links/contact info).
+  5. **Hero Title (23.88s–28.19s):** Revisited after scrolling, possibly to reorient.
+  6. **Get Started (30.44s–35.47s):** Final action, hovered 1784ms (high intent but no conversion).
+- **Ignored content:**
+  - No clicks on images, sidebars, or interactive elements (e.g., forms, dropdowns).
+  - No engagement with dynamic content (e.g., carousels, videos).
+
+**Quantitative:**
+- **Section clicks:**
+  - Navigation: 2 clicks (16.7%).
+  - Testimonials: 2 clicks (16.7%).
+  - Features: 2 clicks (16.7%).
+  - Footer: 2 clicks (16.7%).
+  - Hero Title: 2 clicks (16.7%).
+  - Get Started: 2 clicks (16.7%).
+
+---
+
+### 6. TYPING BEHAVIOR
+**Pattern:** *No typing detected*
+- **Inputs:** Zero keystrokes, form fields, or search queries.
+- **Corrections:** N/A.
+- **Input length:** N/A.
+
+**Quantitative:**
+- **Typing speed:** 0 WPM.
+- **Input duration:** 0s.
+
+---
+
+### 7. FEATURE DISCOVERY
+**Pattern:** *Limited discovery; focuses on static, high-level elements*
+- **Used features:**
+  - **Navigation menu:** Clicked twice (4.26s, 6.15s).
+  - **Scrolling:** Primary interaction method (25 scroll actions).
+  - **Section headers:** Clicked "Testimonials," "Features," "Hero Title."
+  - **CTA button:** Clicked "Get Started" (30.44s, 35.47s).
+- **Ignored features:**
+  - **Interactive elements:** No clicks on dropdowns, modals, or expandable content.
+  - **Media:** No engagement with images/videos.
+  - **Forms:** No input fields used.
+  - **Dynamic content:** No carousels, tabs, or filters interacted with.
+
+**Quantitative:**
+- **Features used:** 4/10+ (estimated).
+- **Features ignored:** 6+.
+
+---
+
+### 8. SESSION FLOW
+**Arc:** *Exploration → Validation → Reorientation → Exit*
+1. **Orientation (0.0s–6.15s):**
+   - Lands on page, hesitates (2.56s), clicks navigation twice (4.26s, 6.15s) with no clear goal.
+   - Scrolls down 723px in 1.17s (skimming).
+2. **Content Sampling (6.15s–16.86s):**
+   - Clicks "Testimonials" (7.38s), scrolls up (9.45s–9.68s), then jumps to "Features" (11.87s).
+   - Hovers 1951ms on Features, scrolls down 446px (14.8s–14.97s), then up (21.56s–21.81s).
+3. **Reorientation (16.86s–28.19s):**
+   - Clicks Footer (16.86s), hesitates (19.11s), scrolls up 870px (21.56s–21.81s).
+   - Returns to Hero Title (23.88s), hovers 1953ms, clicks (28.19s).
+4. **Exit Intent (28.19s–35.47s):**
+   - Scrolls down 165px (28.26s–28.44s), clicks "Get Started" (30.44s), hesitates (32.95s), clicks again (35.47s).
+   - Session ends without conversion.
+
+**Quantitative:**
+- **Phase durations:**
+  - Orientation: 6.15s (17%).
+  - Content Sampling: 10.71s (30%).
+  - Reorientation: 11.33s (32%).
+  - Exit Intent: 7.28s (21%).
+- **Key transitions:**
+  - 6.15s: First scroll (exploration begins).
+  - 16.86s: Footer click (shift to reorientation).
+  - 30.44s: Get Started click (exit intent).
+```
+
+---
+**Summary:** This user exhibits *highly cautious, exploratory behavior* with no deep engagement. They prioritize scanning over reading, revisit sections for validation, and demonstrate prolonged hesitation before actions. The session ends with exit intent (Get Started clicks) but no conversion. Likely a synthetic user or a human with low intent.

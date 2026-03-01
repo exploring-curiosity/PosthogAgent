@@ -1,0 +1,98 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN:
+- Highly linear and goal-oriented, with no exploratory detours.
+- Focused exclusively on the checkout flow (card input → payment submission → exit).
+- No evidence of browsing other pages, product details, or navigation menus.
+- Scrolling is systematic and segmented (e.g., 0.97–1.06s: 3 rapid downward scrolls covering ~273px total; 3.49–3.62s: 4 scrolls covering ~429px).
+- Final action is a direct exit via "Back to Shop" (6.07–6.76s), suggesting abandonment of the checkout process.
+
+2. READING BEHAVIOR:
+- Skimming behavior inferred from rapid, shallow scrolls:
+  - Scroll speed: ~91px per 0.5s (182px/s) during initial exploration (0.97–1.06s).
+  - Later scrolls (3.49–3.62s) maintain similar speed (~107px per 0.5s or 214px/s).
+  - No pauses >200ms between scrolls, indicating no deep reading.
+- Max scroll depth: 977px (5.8s), covering ~53% of a 1920x1080 viewport (assuming ~1800px total page height).
+- No evidence of re-reading or upward scrolling to revisit content.
+
+3. ENGAGEMENT STYLE:
+- No voting, commenting, or social interactions observed (session is purely transactional).
+- Interaction limited to:
+  - Input field clicks (Card Number: 1.52s, 3.42s).
+  - Button clicks (Pay Now: 4.26s, 5.58s; Back to Shop: 6.07s, 6.76s).
+- Hesitation markers:
+  - 890ms delay before first click (0.89s).
+  - 872ms delay before second click (2.4s).
+  - 354ms hover before "Pay Now" (4.26s).
+  - 139ms hover before "Back to Shop" (6.07s).
+- No form submissions or data entry observed (no typing detected).
+
+4. INTERACTION SPEED:
+- Fast but deliberate with clear hesitation points:
+  - Initial hesitation: 890ms (0.0–0.89s).
+  - Time between first and second Card Number clicks: 1.9s (1.52–3.42s).
+  - Time between "Pay Now" clicks: 1.32s (4.26–5.58s), likely a double-click or retry.
+  - Time between "Pay Now" and "Back to Shop": 1.81s (5.58–6.07s).
+- Scroll actions are rapid and clustered (e.g., 4 scrolls in 0.13s at 3.49–3.62s).
+- No long pauses (>1s) except hesitations before clicks.
+
+5. CONTENT PREFERENCES:
+- No content preferences observable (session is limited to checkout page).
+- Focused solely on:
+  - Payment form fields (Card Number).
+  - Primary CTA ("Pay Now").
+  - Exit link ("Back to Shop").
+- No engagement with secondary elements (e.g., promo codes, shipping details, product summaries).
+
+6. TYPING BEHAVIOR:
+- No typing detected in the action log.
+- Input fields were clicked (1.52s, 3.42s) but no keystrokes or corrections recorded.
+- Possible explanations:
+  - User abandoned input after clicking.
+  - Synthetic/scanner session (per USER PROFILE) may not record typing.
+  - Autofill or external input method used.
+
+7. FEATURE DISCOVERY:
+- Used features:
+  - Scrolling (systematic, segmented).
+  - Form field interaction (Card Number input).
+  - Primary CTA ("Pay Now").
+  - Exit link ("Back to Shop").
+- Ignored features:
+  - No interaction with other form fields (e.g., Expiry Date, CVV, Name).
+  - No engagement with page chrome (header, footer, navigation).
+  - No use of help/tooltips, promo code fields, or alternative payment methods.
+
+8. SESSION FLOW:
+- **Phase 1: Initial Hesitation (0.0–0.89s)**
+  - Page load (0.0s).
+  - 890ms pause (no action), likely assessing page layout or waiting for elements to load.
+- **Phase 2: Rapid Exploration (0.89–1.52s)**
+  - Click at (0,0) (0.89s; possibly a misclick or placeholder action).
+  - 3 rapid downward scrolls (0.97–1.06s), covering ~273px in 0.09s.
+  - Suggests skimming to locate key elements (e.g., payment form).
+- **Phase 3: Targeted Interaction (1.52–4.26s)**
+  - Clicks Card Number field (1.52s) after 226ms hover.
+  - 872ms hesitation (2.4s) before second click at (0,0).
+  - Re-clicks Card Number (3.42s), possibly due to focus loss or input error.
+  - 4 rapid scrolls (3.49–3.62s), covering ~429px to reach "Pay Now" button.
+- **Phase 4: Payment Attempt (4.26–5.58s)**
+  - Hovers over "Pay Now" for 354ms (4.26s) before clicking.
+  - Clicks "Pay Now" again after 1.32s (5.58s), likely a retry or double-click.
+- **Phase 5: Abandonment (5.58–6.76s)**
+  - 4 rapid scrolls (5.64–5.8s), covering ~268px to reach page bottom.
+  - Hovers over "Back to Shop" for 139ms (6.07s) before clicking.
+  - Final click at 6.76s exits the session.
+- **Arc Summary**:
+  - Linear progression from exploration → targeted interaction → payment attempt → abandonment.
+  - No deviation from checkout flow; exit is abrupt and final.
+  - Hesitations and re-clicks suggest friction (e.g., unclear form validation, input errors, or synthetic behavior).
+```
+
+**Key Observations**:
+- Session duration (6.8s) is extremely short for a checkout flow, suggesting either:
+  - A bot/scanner (consistent with USER PROFILE's "synthetic" device).
+  - A user abandoning due to UX friction (e.g., unclear form requirements, lack of autofill).
+- No evidence of human-like behavior (e.g., typing, corrections, or exploratory clicks).
+- Scrolling is mechanical and segmented, reinforcing the synthetic hypothesis.

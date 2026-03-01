@@ -1,0 +1,63 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- Highly linear and goal-driven with minimal deviation.
+- Follows a vertical "scan-and-act" pattern: scrolls downward in rapid increments (34px–139px in 0.14s intervals), then clicks on the first interactive element encountered at the viewport bottom (Stats Cards at 139px, Data Table at 770px, Sidebar at 854px).
+- No lateral exploration; all clicks occur within 10px of the prior hover position.
+- 100 % of clicks target distinct UI components in descending order of appearance (Stats Cards → Data Table → Sidebar → Chart → Export).
+
+2. READING BEHAVIOR
+- Skimming confirmed; no deep reading.
+- Scroll velocity: 135 px/s downward, 113 px/s upward (consistent 0.5 s per 126 px segment).
+- Max scroll depth: 854 px (≈ 80 % of a 1080 px viewport).
+- No pauses > 200 ms at any scroll depth; average dwell per 126 px segment = 0.03 s.
+- 0 % of viewport time spent above the fold (0–1080 px) after initial load.
+
+3. ENGAGEMENT STYLE
+- No voting, commenting, or social actions detected.
+- Interaction is purely navigational: 6 clicks, 0 form submissions, 0 text inputs.
+- Click-to-click latency: 0.38 s median (min 0.18 s, max 0.53 s).
+- 1 dead click (2.12 s) with no subsequent retry, indicating immediate abandonment of non-responsive element.
+
+4. INTERACTION SPEED
+- Fast and deliberate.
+- First click at 0.21 s post-load (hesitation 205 ms).
+- Median inter-click interval: 0.35 s (n=5).
+- Median hover duration: 122 ms (n=4).
+- No typing detected; all interactions via mouse.
+
+5. CONTENT PREFERENCES
+- Gravitated toward dashboard widgets in strict vertical order:
+  • Stats Cards (0.61 s)
+  • Data Table (1.36 s)
+  • Sidebar (2.74 s)
+  • Chart (3.35 s)
+  • Export button (4.32 s)
+- No subreddit or content-type filtering observed; session confined to single dashboard page.
+
+6. TYPING BEHAVIOR
+- No typing events recorded.
+- 0 keystrokes, 0 corrections, 0 input fields engaged.
+
+7. FEATURE DISCOVERY
+- Used features:
+  • Stats Cards (2 clicks)
+  • Data Table (2 clicks)
+  • Sidebar (2 clicks)
+  • Chart (2 clicks)
+  • Export (2 clicks)
+- Ignored features:
+  • Navigation menus (0 clicks)
+  • Search bar (0 hovers)
+  • User profile dropdown (0 interactions)
+  • Any content below 854 px (0 exploration)
+
+8. SESSION FLOW
+- Arc: Load → Rapid vertical scan → Sequential feature activation → Immediate exit.
+- Phase 1 (0.0–0.61 s): Load & initial hesitation (205 ms).
+- Phase 2 (0.61–2.12 s): Stats Cards → Data Table (4 clicks, 1 dead click).
+- Phase 3 (2.12–3.35 s): Sidebar scroll-up → Chart activation.
+- Phase 4 (3.35–4.46 s): Export click → session end at 4.5 s.
+- No return visits, no revisits to prior elements.
+```

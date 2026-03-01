@@ -1,0 +1,58 @@
+```
+BEHAVIORAL PROFILE: WEB SESSION ANALYSIS
+
+1. NAVIGATION PATTERN
+- **Scattered with forced linearity**: The user exhibits a non-linear, erratic navigation pattern with abrupt shifts in focus. Scrolling is segmented into rapid bursts (e.g., 0.69s–0.96s: 5 sequential downward scrolls; 4.48s–4.7s: 5 sequential upward scrolls), suggesting scanning rather than deliberate exploration. Clicks are concentrated on three distinct UI regions (Stats Cards, Sidebar, Chart), with no clear progression between them.
+- **Spatial inconsistency**: Click coordinates vary by up to 10px for identical elements (e.g., Stats Cards at (1385,193) vs. (1379,192)), indicating either imprecise targeting or synthetic input.
+
+2. READING BEHAVIOR
+- **Skim-only**: Scroll depth reaches 909px (max) but is achieved in 4 rapid downward scrolls (2.28s–2.34s: 358px in 0.6s). No pauses >500ms occur during scrolling, and no text selections or hovers on content blocks are recorded. The user never returns to previously viewed areas (e.g., no re-scrolling to 0–193px after 2.28s).
+- **Scroll velocity**: Average downward speed = 716px/s (909px/1.26s); upward speed = 952px/s (476px/0.5s). These speeds exceed typical human reading rates (200–400px/s), confirming skimming.
+
+3. ENGAGEMENT STYLE
+- **No content engagement**: The session contains no votes, comments, or form submissions. All interactions are clicks on UI containers (Stats Cards, Sidebar, Chart), with no evidence of content consumption.
+- **Dead clicks**: 1/8 clicks (12.5%) is a dead click (7.0s), occurring after a 440ms pause post-chart interaction. No retry or correction follows.
+- **Hover-to-click latency**: Average hover duration = 336ms (384ms + 395ms + 231ms / 3). Clicks follow hovers with 0–6ms delay (e.g., 1.59s hover → 2.22s click), suggesting premeditated targeting.
+
+4. INTERACTION SPEED
+- **Rapid with hesitation**: Median inter-action interval = 560ms (excluding the 652ms initial hesitation). Fastest interval = 60ms (4.42s–4.48s: Sidebar click → scroll up); slowest = 1.36s (2.98s–4.42s: Sidebar hover → click).
+- **Hesitation markers**: Two prolonged pauses:
+  - 652ms before first click (0.0s–0.65s)
+  - 1.44s before Sidebar click (2.98s–4.42s)
+
+5. CONTENT PREFERENCES
+- **UI-focused, not content-focused**: All clicks target structural elements:
+  - Stats Cards (2 clicks, 1.59s–2.22s)
+  - Sidebar (2 clicks, 2.98s–4.42s)
+  - Chart (2 clicks, 5.19s–6.56s)
+- **No content interaction**: No clicks on links, buttons, or interactive content (e.g., no "Read More," "Like," or "Share" actions). The user ignores all textual or media content.
+
+6. TYPING BEHAVIOR
+- **No typing detected**: The log contains no keystrokes, form inputs, or text selections. All actions are mouse-based.
+
+7. FEATURE DISCOVERY
+- **Discovered features**:
+  - Stats Cards (used at 1.59s–2.22s)
+  - Sidebar (used at 2.98s–4.42s)
+  - Chart (used at 5.19s–6.56s)
+- **Ignored features**:
+  - Navigation menus (no clicks on headers/footers)
+  - Search bars (no focus or input)
+  - User profile/settings (no clicks on avatar or dropdowns)
+  - Call-to-action buttons (e.g., "Get Started," "Learn More")
+
+8. SESSION FLOW
+- **Arc**: **Synthetic scan → forced interaction → abrupt exit**
+  - **0.0s–0.65s (Hesitation)**: Page load followed by 652ms pause (potential DOM inspection or script delay).
+  - **0.65s–2.98s (UI Probing)**: Rapid scrolling (0.69s–0.96s) to 193px, then Stats Cards clicks (1.59s–2.22s), followed by deeper scroll to 909px (2.28s–2.34s).
+  - **2.98s–6.56s (Scattered Engagement)**: Sidebar clicks (2.98s–4.42s), upward scroll (4.48s–4.7s), Chart clicks (5.19s–6.56s).
+  - **6.56s–7.0s (Termination)**: Dead click at (1172,1150) with no recovery. Session ends at 7.0s.
+- **No progression**: The user does not transition from exploration to engagement (e.g., no content consumption or creation). Interactions are isolated and lack context.
+```
+
+**SUMMARY**: This session reflects a **non-human, synthetic interaction** (e.g., bot, scanner, or automated test) characterized by:
+- Superhuman scroll speeds (700–950px/s).
+- Precise, repetitive click patterns on UI containers.
+- No content engagement or typing.
+- Dead clicks and hesitation pauses inconsistent with organic behavior.
+- Device profile ("synthetic/scanner") corroborates this interpretation.
