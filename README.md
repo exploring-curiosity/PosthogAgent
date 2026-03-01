@@ -269,6 +269,10 @@ All fine-tuning runs are tracked in **Weights & Biases** for full experiment obs
 
 Each cluster gets its own W&B run under the `agentic-world` project, making it easy to compare training dynamics across demographics. Disable tracking with `--no-wandb` if needed.
 
+### Hugging Face Artifacts
+
+Trained LoRA adapters, training data, and model artifacts are uploaded to Hugging Face for reproducibility and sharing. The published repository is available at [amaan784/agentic-world-behavioral](https://huggingface.co/amaan784/agentic-world-behavioral).
+
 ### vLLM Multi-LoRA Serving
 
 After local fine-tuning, serve all cluster adapters via vLLM:
