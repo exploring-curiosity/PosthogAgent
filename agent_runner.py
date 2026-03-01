@@ -82,7 +82,11 @@ class ModelManager:
         print(f"[ModelManager] Base model ready")
 
     def load_adapter(self, adapter_path: str) -> bool:
-        """Load a LoRA adapter on top of the base model. Returns True if successful."""
+        """Load a LoRA adapter on top of the base model. Returns True if successful.
+        
+        Uses PeftModel directly (no merge_and_unload) to preserve base model
+        weights for subsequent adapter swaps.
+        """
         from peft import PeftModel
 
         if self._current_adapter == adapter_path:
@@ -96,20 +100,19 @@ class ModelManager:
 
         print(f"[ModelManager] Loading adapter: {adapter_path}")
 
-        # Unload previous adapter if any
-        if self._current_adapter is not None:
+        # Unload previous adapter — release PeftModel, revert to base
+        if self._current_adapter is not None and self.model is not self.base_model:
             del self.model
             gc.collect()
             self.torch.cuda.empty_cache()
-            self.model = self.base_model
 
+        # Wrap base model with new adapter (do NOT merge — preserves base weights)
         self.model = PeftModel.from_pretrained(
             self.base_model, adapter_path, torch_dtype=self.torch.bfloat16
         )
-        self.model = self.model.merge_and_unload()
         self.model.eval()
         self._current_adapter = adapter_path
-        print(f"[ModelManager] Adapter loaded and merged")
+        print(f"[ModelManager] Adapter loaded (PeftModel, no merge)")
         return True
 
     def generate(self, messages: list[dict], max_new_tokens: int = 256,

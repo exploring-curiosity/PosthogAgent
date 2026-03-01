@@ -259,7 +259,13 @@ def predict(req: PredictRequest, _auth=Depends(verify_api_key)):
             detail=f"Cluster {req.cluster_id} not found. Available: {available}",
         )
 
-    return _predict_single(req.cluster_id, req)
+    try:
+        return _predict_single(req.cluster_id, req)
+    except Exception as e:
+        import traceback
+        tb = traceback.format_exc()
+        print(f"[/predict ERROR] cluster={req.cluster_id}: {e}\n{tb}")
+        raise HTTPException(status_code=500, detail=f"Inference error: {str(e)}")
 
 
 @app.post("/predict/batch", response_model=list[PredictResponse])

@@ -372,8 +372,15 @@ def run_cluster_session(cluster_id: int, cluster_label: str) -> dict:
                 step_number=step,
                 elapsed_s=elapsed,
             )
-        except Exception as e:
+        except requests.exceptions.HTTPError as e:
+            detail = ""
+            try:
+                detail = e.response.json().get("detail", "")
+            except Exception:
+                detail = e.response.text[:200] if e.response else ""
             print(f"    VM ERROR: {e}")
+            if detail:
+                print(f"    Detail:  {detail[:120]}")
             action_history.append({
                 "elapsed": round(elapsed, 1),
                 "action": "vm_error",
