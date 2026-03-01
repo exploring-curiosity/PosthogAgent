@@ -60,6 +60,23 @@ from build_training_data import (
 )
 from feedback.session_logger import SessionLogger, StuckDetector
 
+# ── Weave tracing (optional) ──
+WEAVE_AVAILABLE = False
+try:
+    import weave
+    weave.init("agentic-world")
+    WEAVE_AVAILABLE = True
+except Exception:
+    pass
+
+
+def _weave_op(fn):
+    """Apply @weave.op() if Weave is available, otherwise return fn unchanged."""
+    if WEAVE_AVAILABLE:
+        return weave.op()(fn)
+    return fn
+
+
 # ============================================================
 # PARSE ARGS
 # ============================================================
@@ -95,6 +112,7 @@ if not app_description:
 # STEP 1: CLASSIFY INTO CLUSTER
 # ============================================================
 
+@_weave_op
 def classify_into_cluster(description: str) -> tuple[int, dict]:
     """Embed the app description and find the nearest cluster via KMeans."""
     from mistralai import Mistral
@@ -252,6 +270,7 @@ action_history = []  # [{elapsed, action, target, success, error, page_url}]
 current_plan = ""  # Tracks the model's current high-level plan
 
 
+@_weave_op
 def observe_page() -> str:
     """Get current page state via AgentQL and Playwright."""
     try:
@@ -310,6 +329,7 @@ def observe_page() -> str:
         return "Page: unknown"
 
 
+@_weave_op
 def build_prompt(error_context: str = "") -> list[dict]:
     """Build chat messages: system (persona) + user (product + state + history)."""
     lines = [product_context, ""]
@@ -348,6 +368,7 @@ def build_prompt(error_context: str = "") -> list[dict]:
     ]
 
 
+@_weave_op
 def predict_action(error_context: str = "") -> dict:
     """Call model to predict next action."""
     messages = build_prompt(error_context)
@@ -389,6 +410,7 @@ def predict_action(error_context: str = "") -> dict:
 # STEP 5: ACTION EXECUTION
 # ============================================================
 
+@_weave_op
 def execute_action(action_data: dict) -> tuple[bool, str]:
     """Execute a predicted action in the browser. Returns (success, error_msg)."""
     action = action_data.get("action", "wait")

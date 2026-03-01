@@ -49,6 +49,23 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel, Field
 import uvicorn
 
+# ── Weave tracing (optional) ──
+WEAVE_AVAILABLE = False
+try:
+    import weave
+    weave.init("agentic-world")
+    WEAVE_AVAILABLE = True
+except Exception:
+    pass
+
+
+def _weave_op(fn):
+    """Apply @weave.op() if Weave is available, otherwise return fn unchanged."""
+    if WEAVE_AVAILABLE:
+        return weave.op()(fn)
+    return fn
+
+
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import MODELS_DIR, CLUSTERS_DIR, ensure_data_dirs
@@ -182,6 +199,7 @@ class ClusterInfo(BaseModel):
 # CORE INFERENCE
 # ============================================================
 
+@_weave_op
 def _build_prompt(cluster_meta: dict, req: PredictRequest) -> list[dict]:
     """Build the chat messages for the model."""
     system_prompt = build_cluster_system_prompt(cluster_meta)
@@ -252,6 +270,7 @@ def _parse_action(raw: str) -> dict:
     }
 
 
+@_weave_op
 def _predict_single(cluster_id: int, req: PredictRequest) -> PredictResponse:
     """Run inference for one cluster."""
     global _current_cluster_id
