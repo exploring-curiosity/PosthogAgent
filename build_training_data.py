@@ -1,11 +1,13 @@
 """
-Build fine-tuning training data from parsed session recordings.
+Build fine-tuning training data from clustered session recordings.
 Converts each session's action sequence into supervised (state -> next_action)
 pairs that teach a model to mimic user *behavior patterns* on a product,
-given the product's feature description.
+given the product's feature description and the cluster's behavioral persona.
 
-No cluster dependency — reads all parsed sessions and uses the product
-feature description from config (TARGET_APP_DESCRIPTION) or CLI.
+Generates per-cluster training files: cluster_<id>_train.jsonl / val.jsonl
+so that each cluster can have its own fine-tuned LoRA adapter.
+
+Requires: clusters.json from process_synthetic_batch.py or cluster_demographics.py
 
 Usage:
     python build_training_data.py
@@ -23,6 +25,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from config import (
     PARSED_DIR,
     TRAINING_DIR,
+    CLUSTERS_DIR,
+    DESCRIPTIONS_DIR,
     TARGET_APP_DESCRIPTION,
     TARGET_APP_URL,
     TARGET_APP_NAME,
@@ -30,15 +34,15 @@ from config import (
 )
 
 
-# ── System prompt ────────────────────────────────────────────────────────────
+# ── System prompt (shared across all clusters) ──────────────────────────────
 
-SYSTEM_PROMPT = """You are a browser automation agent that mimics realistic human behavior on web applications. You are given a product's feature description and the current page state. Your job is to decide what a real user would do next.
+BASE_SYSTEM_PROMPT = """You are a browser automation agent that mimics realistic human behavior on web applications. You are given a product's feature description, a behavioral persona, and the current page state. Your job is to decide what a real user matching this persona would do next.
 
 Your response must be valid JSON with these fields:
 - "action": one of "click", "scroll", "type", "wait", "navigate_back"
 - "target": what to interact with — a semantic description of the element (e.g. "login button", "search input", "post title"), a scroll direction ("down 300px"), or text to type
-- "reasoning": brief explanation of why a real user would do this given the product features
-- "hesitation_ms": milliseconds to wait before acting (reflects natural human pace)
+- "reasoning": brief explanation of why this persona would do this given the product features
+- "hesitation_ms": milliseconds to wait before acting (reflects this persona's natural pace)
 
 Guidelines for mimicking realistic behavior:
 - Users explore features mentioned in the product description
@@ -47,6 +51,22 @@ Guidelines for mimicking realistic behavior:
 - Typing has natural hesitation; users don't instantly fill forms
 - Users navigate back when content isn't interesting
 - Early in a session users explore broadly; later they engage deeper"""
+
+
+def build_cluster_system_prompt(cluster: dict) -> str:
+    """Build a system prompt that includes the cluster's behavioral persona."""
+    label = cluster.get("label", f"Cluster {cluster['id']}")
+    description = cluster.get("description", "")
+    behaviors = cluster.get("key_behaviors", [])
+
+    persona_block = f"\n\nYour persona: \"{label}\""
+    if description:
+        persona_block += f"\n{description}"
+    if behaviors:
+        persona_block += "\nKey behaviors:\n" + "\n".join(f"- {b}" for b in behaviors)
+    persona_block += f"\nAvg session: {cluster.get('avg_duration_s', 0):.0f}s, {cluster.get('avg_actions', 0):.0f} actions"
+
+    return BASE_SYSTEM_PROMPT + persona_block
 
 
 def build_product_context(app_name: str, app_url: str, app_description: str) -> str:
@@ -171,16 +191,18 @@ def calculate_hesitation(actions: list[dict], idx: int) -> int:
 
 def build_training_examples(
     parsed_session: dict,
+    cluster: dict,
     product_context: str,
     window_size: int = 5,
 ) -> list[dict]:
-    """Convert one session into step-by-step training examples."""
+    """Convert one session into step-by-step training examples for a cluster."""
     actions = parsed_session.get("high_level_actions", [])
     duration = parsed_session.get("session_duration_s", 0)
 
     if len(actions) < 3:
         return []
 
+    system_prompt = build_cluster_system_prompt(cluster)
     examples = []
     skip_types = ("API_CALL", "PAGE_LOAD", "FULL_SNAPSHOT", "PAGE_META")
 
@@ -197,7 +219,7 @@ def build_training_examples(
 
         examples.append({
             "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": state},
                 {"role": "assistant", "content": json.dumps(response)},
             ]
@@ -206,14 +228,24 @@ def build_training_examples(
     return examples
 
 
+def load_clusters() -> dict:
+    """Load cluster assignments from clusters.json."""
+    cluster_path = CLUSTERS_DIR / "clusters.json"
+    if not cluster_path.exists():
+        print(f"ERROR: {cluster_path} not found.")
+        print("Run: python process_synthetic_batch.py --recordings-dir sessions --clusters 5")
+        sys.exit(1)
+    with open(cluster_path) as f:
+        return json.load(f)
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Build fine-tuning training data from parsed sessions")
+    parser = argparse.ArgumentParser(description="Build per-cluster fine-tuning training data")
     parser.add_argument("--window-size", type=int, default=5, help="Recent action window size")
     parser.add_argument("--val-split", type=float, default=0.1, help="Validation split ratio")
     parser.add_argument("--app-name", type=str, default=None, help="App name (overrides config)")
     parser.add_argument("--app-url", type=str, default=None, help="App URL (overrides config)")
     parser.add_argument("--app-description", type=str, default=None, help="App feature description (overrides config)")
-    parser.add_argument("--parsed-dir", type=str, default=None, help="Override parsed sessions directory")
     args = parser.parse_args()
 
     ensure_data_dirs()
@@ -228,64 +260,89 @@ def main():
 
     product_context = build_product_context(app_name, app_url, app_description)
 
-    parsed_dir = Path(args.parsed_dir) if args.parsed_dir else PARSED_DIR
-    parsed_files = sorted(parsed_dir.glob("parsed_*.json"))
-
-    if not parsed_files:
-        print(f"ERROR: No parsed_*.json files found in {parsed_dir}")
-        sys.exit(1)
-
+    # Load clusters
+    clusters_data = load_clusters()
+    n_clusters = clusters_data["num_clusters"]
     print(f"Product: {app_name}")
     print(f"URL: {app_url}")
-    print(f"Description: {app_description[:100]}..." if len(app_description) > 100 else f"Description: {app_description}")
-    print(f"Parsed sessions: {len(parsed_files)}")
+    desc_preview = app_description[:100] + "..." if len(app_description) > 100 else app_description
+    print(f"Description: {desc_preview}")
+    print(f"Clusters: {n_clusters} ({clusters_data['total_sessions']} total sessions)")
     print(f"Window size: {args.window_size}\n")
 
-    all_examples = []
+    grand_total_train = 0
+    grand_total_val = 0
 
-    for pf in parsed_files:
-        with open(pf) as f:
-            parsed = json.load(f)
+    for cluster in clusters_data["clusters"]:
+        cluster_id = cluster["id"]
+        label = cluster.get("label", f"Cluster {cluster_id}")
+        session_ids = cluster["session_ids"]
 
-        examples = build_training_examples(parsed, product_context, window_size=args.window_size)
-        sid = pf.stem.replace("parsed_", "")
-        n_actions = len(parsed.get("high_level_actions", []))
-        print(f"  {sid}: {n_actions} actions -> {len(examples)} training pairs")
-        all_examples.extend(examples)
+        print(f"{'='*50}")
+        print(f"Cluster {cluster_id}: {label} ({len(session_ids)} sessions)")
+        print(f"{'='*50}")
 
-    if not all_examples:
-        print("ERROR: No training examples generated")
-        sys.exit(1)
+        all_examples = []
 
-    # Shuffle and split
-    random.seed(42)
-    random.shuffle(all_examples)
+        for sid in session_ids:
+            parsed_path = PARSED_DIR / f"parsed_{sid}.json"
+            if not parsed_path.exists():
+                print(f"  WARNING: parsed data not found for {sid}")
+                continue
 
-    val_count = max(1, int(len(all_examples) * args.val_split))
-    val_examples = all_examples[:val_count]
-    train_examples = all_examples[val_count:]
+            with open(parsed_path) as f:
+                parsed = json.load(f)
 
-    # Save single train/val JSONL files (no cluster split)
-    train_path = TRAINING_DIR / "train.jsonl"
-    val_path = TRAINING_DIR / "val.jsonl"
+            examples = build_training_examples(
+                parsed, cluster, product_context, window_size=args.window_size
+            )
+            n_actions = len(parsed.get("high_level_actions", []))
+            print(f"  {sid}: {n_actions} actions -> {len(examples)} pairs")
+            all_examples.extend(examples)
 
-    with open(train_path, "w") as f:
-        for ex in train_examples:
-            f.write(json.dumps(ex) + "\n")
+        if not all_examples:
+            print(f"  WARNING: No training examples for cluster {cluster_id}")
+            continue
 
-    with open(val_path, "w") as f:
-        for ex in val_examples:
-            f.write(json.dumps(ex) + "\n")
+        # Shuffle and split
+        random.seed(42 + cluster_id)
+        random.shuffle(all_examples)
+
+        val_count = max(1, int(len(all_examples) * args.val_split))
+        val_examples = all_examples[:val_count]
+        train_examples = all_examples[val_count:]
+
+        # Save per-cluster JSONL files
+        train_path = TRAINING_DIR / f"cluster_{cluster_id}_train.jsonl"
+        val_path = TRAINING_DIR / f"cluster_{cluster_id}_val.jsonl"
+
+        with open(train_path, "w") as f:
+            for ex in train_examples:
+                f.write(json.dumps(ex) + "\n")
+
+        with open(val_path, "w") as f:
+            for ex in val_examples:
+                f.write(json.dumps(ex) + "\n")
+
+        print(f"  Train: {len(train_examples)} -> {train_path.name}")
+        print(f"  Val:   {len(val_examples)} -> {val_path.name}")
+
+        grand_total_train += len(train_examples)
+        grand_total_val += len(val_examples)
 
     print(f"\n{'='*60}")
     print("TRAINING DATA GENERATION COMPLETE")
     print(f"{'='*60}")
-    print(f"  Total examples: {len(all_examples)}")
-    print(f"  Train: {len(train_examples)} -> {train_path}")
-    print(f"  Val:   {len(val_examples)} -> {val_path}")
-    print(f"  Train size: {train_path.stat().st_size / 1024:.1f} KB")
-    print(f"  Val size:   {val_path.stat().st_size / 1024:.1f} KB")
-    print(f"\nReady for: python finetune_job.py")
+    print(f"  Total training examples: {grand_total_train}")
+    print(f"  Total validation examples: {grand_total_val}")
+    print(f"  Output directory: {TRAINING_DIR}")
+
+    for f in sorted(TRAINING_DIR.glob("cluster_*_*.jsonl")):
+        size_kb = f.stat().st_size / 1024
+        lines = sum(1 for _ in open(f))
+        print(f"  {f.name}: {lines} examples ({size_kb:.1f} KB)")
+
+    print(f"\nReady for: python finetune_job.py --all-clusters")
 
 
 if __name__ == "__main__":
