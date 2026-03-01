@@ -118,9 +118,15 @@ class ModelManager:
     def generate(self, messages: list[dict], max_new_tokens: int = 256,
                  temperature: float = 0.7) -> str:
         """Generate text from chat messages."""
-        input_ids = self.tokenizer.apply_chat_template(
+        encoded = self.tokenizer.apply_chat_template(
             messages, tokenize=True, add_generation_prompt=True, return_tensors="pt",
-        ).to(self.model.device)
+        )
+        # apply_chat_template may return a tensor or a BatchEncoding depending on
+        # the transformers version — handle both cases
+        if hasattr(encoded, "input_ids"):
+            input_ids = encoded.input_ids.to(self.model.device)
+        else:
+            input_ids = encoded.to(self.model.device)
         attention_mask = self.torch.ones_like(input_ids)
 
         with self.torch.no_grad():
