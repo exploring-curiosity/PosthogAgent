@@ -23,6 +23,7 @@ import pickle
 import asyncio
 import argparse
 import time
+import random
 import numpy as np
 from pathlib import Path
 from collections import Counter
@@ -319,26 +320,48 @@ async def _process_one_session(
     if desc_path.exists():
         description = desc_path.read_text()
     else:
-        async with semaphore:
-            print(f"  [{index}/{total}] {sid}: describing...")
-            try:
-                description = await describe_and_save_async(parsed, MISTRAL_API_KEY, str(desc_path))
-            except Exception as e:
-                print(f"  [{index}/{total}] {sid}: describe FAILED: {e}")
-                return None
+        max_retries = 5
+        for attempt in range(max_retries):
+            async with semaphore:
+                try:
+                    if attempt == 0:
+                        print(f"  [{index}/{total}] {sid}: describing...")
+                    else:
+                        print(f"  [{index}/{total}] {sid}: describing (retry {attempt})...")
+                    description = await describe_and_save_async(parsed, MISTRAL_API_KEY, str(desc_path))
+                    break
+                except Exception as e:
+                    if "429" in str(e) and attempt < max_retries - 1:
+                        wait = 2 ** attempt + random.uniform(0, 1)
+                        print(f"  [{index}/{total}] {sid}: rate limited, waiting {wait:.1f}s...")
+                        await asyncio.sleep(wait)
+                    else:
+                        print(f"  [{index}/{total}] {sid}: describe FAILED: {e}")
+                        return None
 
     # ── Embed ──
     if embed_path.exists():
         with open(embed_path) as f:
             embed_result = json.load(f)
     else:
-        async with semaphore:
-            print(f"  [{index}/{total}] {sid}: embedding...")
-            try:
-                embed_result = await encode_and_save_async(description, profile, MISTRAL_API_KEY, str(embed_path))
-            except Exception as e:
-                print(f"  [{index}/{total}] {sid}: embed FAILED: {e}")
-                return None
+        max_retries = 5
+        for attempt in range(max_retries):
+            async with semaphore:
+                try:
+                    if attempt == 0:
+                        print(f"  [{index}/{total}] {sid}: embedding...")
+                    else:
+                        print(f"  [{index}/{total}] {sid}: embedding (retry {attempt})...")
+                    embed_result = await encode_and_save_async(description, profile, MISTRAL_API_KEY, str(embed_path))
+                    break
+                except Exception as e:
+                    if "429" in str(e) and attempt < max_retries - 1:
+                        wait = 2 ** attempt + random.uniform(0, 1)
+                        print(f"  [{index}/{total}] {sid}: rate limited, waiting {wait:.1f}s...")
+                        await asyncio.sleep(wait)
+                    else:
+                        print(f"  [{index}/{total}] {sid}: embed FAILED: {e}")
+                        return None
 
     print(f"  [{index}/{total}] {sid}: done ({len(description)} chars, {embed_result.get('embedding_dim','?')}d)")
 
