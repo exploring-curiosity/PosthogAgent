@@ -199,6 +199,14 @@ def execute_action(page, action_data: dict, home_url: str) -> tuple[bool, str]:
             page.go_back()
             time.sleep(1)
             return True, ""
+        elif action == "navigate_to":
+            return _navigate_to(page, target, home_url)
+        elif action == "press_enter":
+            page.keyboard.press("Enter")
+            time.sleep(1)
+            return True, ""
+        elif action == "select":
+            return _click(page, target)  # treat select as click
         else:
             return False, f"Unknown action: {action}"
     except Exception as e:
@@ -264,8 +272,46 @@ def _scroll(page, target: str) -> tuple[bool, str]:
     return True, ""
 
 
+def _navigate_to(page, target: str, home_url: str) -> tuple[bool, str]:
+    """Navigate to a URL, but only if it's on the same domain as the target app."""
+    from urllib.parse import urlparse
+    url = target.strip()
+
+    # If it's a relative path, make it absolute
+    if url.startswith("/"):
+        parsed_home = urlparse(home_url)
+        url = f"{parsed_home.scheme}://{parsed_home.netloc}{url}"
+
+    # Only allow same-domain navigation
+    try:
+        parsed_target = urlparse(url)
+        parsed_home = urlparse(home_url)
+        if parsed_target.netloc and parsed_target.netloc != parsed_home.netloc:
+            # Redirect to home instead of external URL
+            print(f"    Blocked external nav to {parsed_target.netloc}, going home instead")
+            page.goto(home_url)
+            time.sleep(2)
+            return True, ""
+    except Exception:
+        pass
+
+    try:
+        page.goto(url)
+        time.sleep(2)
+        return True, ""
+    except Exception as e:
+        return False, f"Navigate failed: {e}"
+
+
 def _type(page, target: str) -> tuple[bool, str]:
     semantic = target.strip()
+
+    # Extract text to type if format is "field description: text to type"
+    text_to_type = None
+    if ":" in semantic:
+        parts = semantic.split(":", 1)
+        semantic = parts[0].strip()
+        text_to_type = parts[1].strip()
 
     # AgentQL
     try:
@@ -274,11 +320,14 @@ def _type(page, target: str) -> tuple[bool, str]:
         response = page.query_elements(query)
         if response.input_field:
             response.input_field.click()
-            sample_texts = [
-                "Hello world", "Testing 123", "Great post!",
-                "This is interesting", "Love this place", "Check this out",
-            ]
-            response.input_field.type(random.choice(sample_texts), delay=random.randint(50, 120))
+            if text_to_type:
+                response.input_field.type(text_to_type, delay=random.randint(50, 120))
+            else:
+                sample_texts = [
+                    "Hello world", "Testing 123", "Great post!",
+                    "This is interesting", "Love this place", "Check this out",
+                ]
+                response.input_field.type(random.choice(sample_texts), delay=random.randint(50, 120))
             time.sleep(0.3)
             return True, ""
     except Exception:

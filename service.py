@@ -168,27 +168,47 @@ class ClusterInfo(BaseModel):
 def _build_prompt(cluster_meta: dict, req: PredictRequest) -> list[dict]:
     """Build the chat messages for the model."""
     system_prompt = build_cluster_system_prompt(cluster_meta)
-    product_context = build_product_context(req.app_name, req.app_url, req.app_description)
 
-    lines = [product_context, ""]
-    lines.append(f"Session: step {req.step_number}, elapsed {req.elapsed_s:.1f}s / {req.max_duration_s:.0f}s")
-    lines.append(f"\n{req.page_state}")
+    # Strongly ground the model on the actual task, page, and supported actions
+    lines = []
+    lines.append(f"=== TASK ===")
+    lines.append(f"App: {req.app_name}")
+    lines.append(f"URL: {req.app_url}")
+    lines.append(f"Goal: {req.app_description}")
+    lines.append(f"Step {req.step_number + 1}, elapsed {req.elapsed_s:.1f}s / {req.max_duration_s:.0f}s")
+    lines.append("")
+    lines.append(f"=== CURRENT PAGE (you MUST act on what you see here, not hallucinated URLs) ===")
+    lines.append(req.page_state)
+    lines.append("")
+    lines.append("=== SUPPORTED ACTIONS ===")
+    lines.append('- "click": target = description of visible element on THIS page (e.g. "Sign Up button", "first post link")')
+    lines.append('- "type": target = description of input field + what to type (e.g. "email input: user@test.com")')
+    lines.append('- "scroll": target = direction + pixels (e.g. "down 300px", "up 200px")')
+    lines.append('- "navigate_to": target = a URL visible on the current page or the app URL')
+    lines.append('- "press_enter": target = description of focused element')
+    lines.append('- "wait": target = reason for waiting')
+    lines.append('- "navigate_back": target = reason for going back')
+    lines.append("")
+    lines.append("IMPORTANT: Only reference elements you can see in the CURRENT PAGE above.")
+    lines.append(f"IMPORTANT: Stay on {req.app_url} — do NOT navigate to external or made-up URLs.")
 
     window = req.action_history[-req.window_size:]
     if window:
-        lines.append("\nRecent actions:")
+        lines.append("\n=== RECENT ACTIONS ===")
         for a in window:
-            status = "" if a.get("success", True) else " [FAILED]"
-            line = f"  [{a.get('elapsed', 0):.1f}s] {a.get('action', '?')} -> {a.get('target', '?')[:50]}{status}"
+            status = "OK" if a.get("success", True) else "FAILED"
+            line = f"  [{a.get('elapsed', 0):.1f}s] {a.get('action', '?')} → {a.get('target', '?')[:50]} [{status}]"
             if not a.get("success", True) and a.get("error"):
                 line += f" ({a['error'][:40]})"
             lines.append(line)
 
     if req.error_context:
-        lines.append(f"\nLast action failed: {req.error_context}")
-        lines.append("Decide how to recover or try an alternative approach.")
+        lines.append(f"\nLast action FAILED: {req.error_context}")
+        lines.append("Try a different element or approach to achieve the goal.")
     else:
-        lines.append("\nWhat would you do next?")
+        lines.append(f"\nWhat action achieves the goal: \"{req.app_description}\"?")
+
+    lines.append("\nRespond with ONLY a JSON object: {\"action\": \"...\", \"target\": \"...\", \"reasoning\": \"...\", \"hesitation_ms\": ...}")
 
     return [
         {"role": "system", "content": system_prompt},
