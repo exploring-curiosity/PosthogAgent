@@ -5,7 +5,7 @@ Train AI agents on real user behavior from PostHog session recordings — not LL
 
 **Hugging Face Artifacts:** [amaan784/agentic-world-behavioral](https://huggingface.co/amaan784/agentic-world-behavioral)
 
-**Weights and Biases:**
+**Weights and Biases Finetuning Report:** https://api.wandb.ai/links/amaan784-columbia-university/5kjdhb4e
 
 **Youtube demo link:** https://youtu.be/XkuUeHlwi5k
 
