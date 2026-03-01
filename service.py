@@ -44,7 +44,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from config import MODELS_DIR, CLUSTERS_DIR, ensure_data_dirs
 from build_training_data import BASE_SYSTEM_PROMPT, build_cluster_system_prompt, build_product_context
-from agent_runner import ModelManager, get_available_cluster_ids, get_cluster_meta, load_all_cluster_metas
+from agent_runner import ModelManager, get_available_cluster_ids, get_cluster_meta, get_adapter_path, load_all_cluster_metas
 
 # ============================================================
 # APP + STATE
@@ -99,7 +99,7 @@ def startup_load_model():
 def _switch_cluster(cluster_id: int) -> dict:
     """Switch the active LoRA adapter. Returns cluster meta."""
     global _current_cluster_id
-    adapter_path = str(MODELS_DIR / f"cluster_{cluster_id}_lora")
+    adapter_path = get_adapter_path(cluster_id)
     with model_lock:
         success = model_manager.load_adapter(adapter_path)
     if success:

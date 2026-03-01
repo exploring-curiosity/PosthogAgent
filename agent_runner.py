@@ -148,8 +148,10 @@ class ModelManager:
 # ============================================================
 
 def load_all_cluster_metas() -> list[dict]:
-    """Load all cluster metadata from clusters.json."""
-    clusters_path = CLUSTERS_DIR / "clusters.json"
+    """Load all cluster metadata. Prefers real_clusters.json over clusters.json."""
+    real_path = CLUSTERS_DIR / "real_clusters.json"
+    old_path = CLUSTERS_DIR / "clusters.json"
+    clusters_path = real_path if real_path.exists() else old_path
     if not clusters_path.exists():
         return []
     with open(clusters_path) as f:
@@ -166,16 +168,40 @@ def get_cluster_meta(cluster_id: int) -> dict:
 
 
 def get_available_cluster_ids() -> list[int]:
-    """Return cluster IDs that have a trained adapter."""
-    ids = []
+    """Return cluster IDs that have a trained adapter.
+    
+    Prefers real_cluster_X_lora dirs. Falls back to cluster_X_lora.
+    """
+    # Check for real-data models first
+    real_ids = []
+    old_ids = []
     for d in sorted(MODELS_DIR.iterdir()):
-        if d.is_dir() and d.name.startswith("cluster_") and d.name.endswith("_lora"):
+        if not d.is_dir() or not d.name.endswith("_lora"):
+            continue
+        if d.name.startswith("real_cluster_"):
+            try:
+                cid = int(d.name.replace("real_cluster_", "").replace("_lora", ""))
+                real_ids.append(cid)
+            except ValueError:
+                pass
+        elif d.name.startswith("cluster_"):
             try:
                 cid = int(d.name.split("_")[1])
-                ids.append(cid)
+                old_ids.append(cid)
             except (IndexError, ValueError):
                 pass
-    return ids
+    return real_ids if real_ids else old_ids
+
+
+def get_adapter_path(cluster_id: int) -> str:
+    """Get the adapter directory path for a cluster.
+    
+    Prefers real_cluster_X_lora. Falls back to cluster_X_lora.
+    """
+    real_path = MODELS_DIR / f"real_cluster_{cluster_id}_lora"
+    if real_path.exists():
+        return str(real_path)
+    return str(MODELS_DIR / f"cluster_{cluster_id}_lora")
 
 
 # ============================================================
