@@ -1,0 +1,52 @@
+{
+  "session_target_duration_s": 123,
+  "navigation_style": "scattered",
+  "browsing_speed": "fast",
+  "feed_behavior": {
+    "initial_scroll_pattern": "quick_scan",
+    "sort_preference": "hot",
+    "max_posts_to_visit": 2,
+    "scroll_between_posts": false
+  },
+  "post_interaction": {
+    "comment_probability": 0.8,
+    "vote_probability": 0.0,
+    "vote_then_comment_order": "comment_first",
+    "avg_comment_length_chars": 15,
+    "typing_speed": "fast",
+    "makes_typos": true,
+    "read_before_engaging_s": 2
+  },
+  "subreddit_exploration": {
+    "explores_subreddits": true,
+    "preferred_subreddits": [
+      "nightlife"
+    ],
+    "subreddit_browse_depth": "surface"
+  },
+  "auth_behavior": {
+    "needs_auth": true,
+    "auth_method": "signup",
+    "auth_timing": "immediately"
+  },
+  "engagement_arc": {
+    "early_session": "exploring",
+    "mid_session": "browsing",
+    "late_session": "disengaging"
+  },
+  "action_sequence": [
+    "scan_feed",
+    "signup",
+    "open_post",
+    "write_comment",
+    "return_to_feed",
+    "scan_feed",
+    "open_post",
+    "write_comment",
+    "browse_subreddit",
+    "open_post",
+    "write_comment",
+    "return_to_feed",
+    "scan_feed"
+  ]
+}

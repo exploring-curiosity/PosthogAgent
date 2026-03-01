@@ -1,0 +1,45 @@
+{
+  "session_target_duration_s": 1500,
+  "navigation_style": "scattered",
+  "browsing_speed": "medium",
+  "feed_behavior": {
+    "initial_scroll_pattern": "no_scroll",
+    "sort_preference": "hot",
+    "max_posts_to_visit": 1,
+    "scroll_between_posts": false
+  },
+  "post_interaction": {
+    "comment_probability": 0.5,
+    "vote_probability": 0.5,
+    "vote_then_comment_order": "vote_first",
+    "avg_comment_length_chars": 7,
+    "typing_speed": "medium",
+    "makes_typos": true,
+    "read_before_engaging_s": 120
+  },
+  "subreddit_exploration": {
+    "explores_subreddits": false,
+    "preferred_subreddits": [],
+    "subreddit_browse_depth": "surface"
+  },
+  "auth_behavior": {
+    "needs_auth": true,
+    "auth_method": "signup",
+    "auth_timing": "immediately"
+  },
+  "engagement_arc": {
+    "early_session": "exploring",
+    "mid_session": "engaging",
+    "late_session": "disengaging"
+  },
+  "action_sequence": [
+    "scan_feed",
+    "signup",
+    "return_to_feed",
+    "open_post",
+    "vote_on_post",
+    "write_comment",
+    "return_to_feed",
+    "scan_feed"
+  ]
+}
