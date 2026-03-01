@@ -1,0 +1,47 @@
+{
+  "sessions": {
+    "019ca051-2ebc-7fa2-b3df-64070e2e4bb7": {
+      "cluster_id": 0,
+      "processed_at": "2026-03-01T00:11:58.889384",
+      "recording_path": "/Users/sudharshanramesh/Studies/Curiosity_New/PosthogAgent/data/recordings/export-019ca051-2ebc-7fa2-b3df-64070e2e4bb7-ph-recording.json",
+      "description_preview": "```\nBEHAVIORAL PROFILE\nUser ID: [REDACTED]\nSession ID: [REDACTED]\nDate: [REDACTED]\nDuration: 119.51 s\n\n-------------------------------------------------\n1. NAVIGATION PATTERN\nPattern: **Cyclic reloadi",
+      "embedding_dim": 1024
+    },
+    "019ca11b-fdbf-7d81-a2df-97201f389109": {
+      "cluster_id": 2,
+      "processed_at": "2026-03-01T00:12:30.978531",
+      "recording_path": "/Users/sudharshanramesh/Studies/Curiosity_New/PosthogAgent/data/recordings/export-019ca11b-fdbf-7d81-a2df-97201f389109-ph-recording.json",
+      "description_preview": "```\nBEHAVIORAL PROFILE: WEB SESSION ANALYSIS\n\n1. NAVIGATION PATTERN\n- **Static/Stagnant**: The user exhibits a highly unusual navigation pattern where they remain on the same URL (`https://fun-city-sa",
+      "embedding_dim": 1024
+    },
+    "019ca0c1-4d2a-745d-828e-48c6fc0cd042": {
+      "cluster_id": 1,
+      "processed_at": "2026-03-01T00:12:51.739056",
+      "recording_path": "/Users/sudharshanramesh/Studies/Curiosity_New/PosthogAgent/data/recordings/export-019ca0c1-4d2a-745d-828e-48c6fc0cd042-ph-recording.json",
+      "description_preview": "```\nBEHAVIORAL PROFILE: FUNCITY USER SESSION ANALYSIS\n\n1. NAVIGATION PATTERN\n- **Exploratory with focused engagement**: The user demonstrates a non-linear, exploratory pattern with distinct phases of ",
+      "embedding_dim": 1024
+    },
+    "019ca1b0-0b09-7402-890c-e7b3e9f23d25": {
+      "cluster_id": 1,
+      "processed_at": "2026-03-01T00:13:07.502072",
+      "recording_path": "/Users/sudharshanramesh/Studies/Curiosity_New/PosthogAgent/data/recordings/export-019ca1b0-0b09-7402-890c-e7b3e9f23d25-ph-recording.json",
+      "description_preview": "```\nBEHAVIORAL PROFILE: FUNCITY USER SESSION ANALYSIS\n\n1. NAVIGATION PATTERN\n- **Exploratory with focused bursts**: The user exhibits a non-linear, exploratory pattern with distinct phases of deep eng",
+      "embedding_dim": 1024
+    }
+  },
+  "cluster_new_counts": {
+    "0": 1,
+    "2": 1,
+    "1": 0
+  },
+  "retrain_history": [
+    {
+      "triggered_at": "2026-03-01T00:14:22.682228",
+      "cluster_ids": [
+        1
+      ],
+      "status": "completed",
+      "updated_at": "2026-03-01T00:14:27.217440"
+    }
+  ]
+}

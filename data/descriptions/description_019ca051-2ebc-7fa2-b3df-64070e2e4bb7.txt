@@ -1,0 +1,71 @@
+```
+BEHAVIORAL PROFILE
+User ID: [REDACTED]
+Session ID: [REDACTED]
+Date: [REDACTED]
+Duration: 119.51 s
+
+-------------------------------------------------
+1. NAVIGATION PATTERN
+Pattern: **Cyclic reloading**
+- The user exhibits a **strictly linear, repetitive navigation loop** confined to a single URL (`http://localhost:3000/`).
+- Three page loads occur at **0.0 s**, **59.51 s**, and **97.06 s**, indicating **two full reloads** within 119.51 s.
+- No lateral navigation (no clicks, no URL changes, no sub-page visits) is recorded.
+- **Scattered score**: 0 % (no deviation from the single URL).
+
+-------------------------------------------------
+2. READING BEHAVIOR
+Pattern: **Non-existent**
+- **No scroll events** are logged; viewport remains static at **1512×823** on a **2560×1318** canvas.
+- **Reading depth**: 0 % (no vertical movement).
+- **Skimming vs. deep reading**: N/A (no scroll = no reading).
+
+-------------------------------------------------
+3. ENGAGEMENT STYLE
+Pattern: **Zero engagement**
+- **Votes**: 0
+- **Comments**: 0
+- **Vote-to-comment ratio**: undefined (0/0)
+- **Engagement latency**: N/A (no engagement actions).
+
+-------------------------------------------------
+4. INTERACTION SPEED
+Pattern: **Ultra-slow, deliberate reloads**
+- **First reload** at **59.51 s** (59.51 s after initial load).
+- **Second reload** at **97.06 s** (37.55 s after first reload).
+- **Mean reload interval**: 48.53 s.
+- **Interaction speed score**: 1 % (only reloads, no other interactions).
+
+-------------------------------------------------
+5. CONTENT PREFERENCES
+Pattern: **No content exposure**
+- **Subreddits visited**: 0
+- **Content types**: N/A (no content loaded or interacted with).
+- **Gravitation score**: 0 %.
+
+-------------------------------------------------
+6. TYPING BEHAVIOR
+Pattern: **No typing**
+- **Keystrokes**: 0
+- **Typing speed**: 0 wpm
+- **Corrections**: 0
+- **Input length**: 0 characters.
+
+-------------------------------------------------
+7. FEATURE DISCOVERY
+Pattern: **No feature discovery**
+- **Features used**: 0 (only page reload via browser refresh or F5).
+- **Features ignored**: All (vote buttons, comment boxes, navigation menus, search bar, etc.).
+- **Discovery score**: 0 %.
+
+-------------------------------------------------
+8. SESSION FLOW
+Arc: **Load → Wait → Reload → Wait → Reload → Exit**
+- **0.0 s**: Initial page load.
+- **0.0–59.51 s**: **Idle wait** (59.51 s).
+- **59.51 s**: **First reload** (likely manual refresh).
+- **59.51–97.06 s**: **Second idle wait** (37.55 s).
+- **97.06 s**: **Second reload**.
+- **97.06–119.51 s**: **Final idle wait** (22.45 s) → session ends.
+- **Exit trigger**: Session timeout or browser close.
+```

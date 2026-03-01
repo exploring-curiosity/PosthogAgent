@@ -10,6 +10,7 @@ Usage:
 import json
 import sys
 import argparse
+import pickle
 import numpy as np
 from pathlib import Path
 from sklearn.cluster import KMeans
@@ -119,6 +120,12 @@ def cluster_sessions(sessions: list[dict], n_clusters: int = 3) -> dict:
 
     kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
     labels = kmeans.fit_predict(embeddings)
+
+    # Persist the fitted model so the online pipeline can classify new sessions
+    kmeans_path = CLUSTERS_DIR / "kmeans_model.pkl"
+    with open(kmeans_path, "wb") as f:
+        pickle.dump(kmeans, f)
+    print(f"  Saved KMeans model to {kmeans_path}")
 
     # Build cluster info
     clusters = []
