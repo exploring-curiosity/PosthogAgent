@@ -11,38 +11,46 @@ python build_training_data.py
 # 3. Fine-tune 5 LoRA adapters (one per cluster)
 python finetune_job.py --all-clusters --no-wandb --skip-inference
  
-# 4. Start the evaluation service (persistent — runs until you stop it)
+# =============================================
+# 4. ON VM: Start GPU inference service (stays running permanently)
+# =============================================
 python service.py
-# Service starts on http://0.0.0.0:8000
+# Listens on 0.0.0.0:8000
+# Models stay loaded in GPU — no reload per request
+# Swagger docs at http://<VM_IP>:8000/docs
 
-# 5. Ping the service to evaluate a website (from another terminal or curl)
-# This runs ALL 5 cluster models against the URL sequentially
-curl -X POST http://localhost:8000/evaluate \
+# =============================================
+# 5. ON LOCAL MACHINE: Run browser evaluation client
+# =============================================
+# This runs AgentQL + Playwright locally, calls VM for predictions.
+# Each cluster model gets its own browser session.
+# Closed feedback loop: error → retry with recovery action up to 3 times.
+
+python local_client.py \
+    --vm-url http://<VM_IP>:8000 \
+    --target-url https://fun-city-xi.vercel.app \
+    --description "Sign up for an account and comment on the top thread" \
+    --app-name "FunCity" \
+    --max-steps 20 \
+    --max-retries 3
+
+# Run specific clusters only:
+python local_client.py \
+    --vm-url http://<VM_IP>:8000 \
+    --target-url https://fun-city-xi.vercel.app \
+    --description "Browse posts and upvote content" \
+    --clusters 0 2 4
+
+# =============================================
+# Useful API calls (from any machine)
+# =============================================
+# Health check
+curl http://<VM_IP>:8000/health
+
+# List clusters + personas
+curl http://<VM_IP>:8000/clusters
+
+# Single prediction (raw API)
+curl -X POST http://<VM_IP>:8000/predict \
   -H "Content-Type: application/json" \
-  -d '{
-    "url": "http://localhost:3000",
-    "app_description": "A social platform for discovering and sharing experiences in NYC",
-    "app_name": "FunCity",
-    "max_steps": 20,
-    "headless": true
-  }'
-# Returns: {"job_id": "...", "status": "queued", ...}
-
-# 6. Check job status
-curl http://localhost:8000/status/{job_id}
-
-# 7. Get full results (after completion)
-curl http://localhost:8000/results/{job_id}
-
-# 8. List available clusters
-curl http://localhost:8000/clusters
-
-# 9. Health check
-curl http://localhost:8000/health
-
-# ---
-# OLD: Run agentic loop as a one-shot script (still works)
-# python agentic_loop.py \
-#     --url http://localhost:3000 \
-#     --app-description "A social platform for discovering and sharing experiences in NYC" \
-#     --max-steps 20
+  -d '{"cluster_id": 0, "page_state": "Page: https://example.com — Home", "app_description": "Social forum"}'

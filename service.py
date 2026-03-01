@@ -1,70 +1,63 @@
 """
 ============================================================
-Agentic Evaluation Service (FastAPI)
+GPU Inference Service (FastAPI) — runs on VM with A100
 ============================================================
-Persistent HTTP service that evaluates a target website using
-all trained cluster models sequentially.
+Pure inference API. No browser. Models stay loaded in GPU.
+
+The local client (local_client.py) runs the browser via AgentQL
+and calls this service for action predictions.
 
 Endpoints:
-    POST /evaluate       — Start evaluation (runs all clusters against URL)
-    GET  /status/{id}    — Check job status
-    GET  /results/{id}   — Get full results
-    GET  /clusters       — List available clusters
-    GET  /health         — Health check
+    POST /predict         — Predict next action for a given cluster + page state
+    POST /predict/batch   — Predict for ALL clusters given the same page state
+    GET  /clusters        — List available clusters + personas
+    POST /switch/{id}     — Pre-load a specific cluster adapter
+    GET  /health          — Health check
 
-Usage:
-    uvicorn service:app --host 0.0.0.0 --port 8000
-    # or
+Usage (on VM):
     python service.py
+    # Listens on 0.0.0.0:8000
 ============================================================
 """
 
 import os
 import sys
-import uuid
-import time
+import json
+import gc
 import threading
+import time
 from pathlib import Path
-from datetime import datetime
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 import uvicorn
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from config import ensure_data_dirs, TARGET_APP_NAME, TARGET_APP_DESCRIPTION
-from agent_runner import (
-    ModelManager,
-    AgentRunner,
-    get_available_cluster_ids,
-    get_cluster_meta,
-    load_all_cluster_metas,
-)
+from config import MODELS_DIR, CLUSTERS_DIR, ensure_data_dirs
+from build_training_data import BASE_SYSTEM_PROMPT, build_cluster_system_prompt, build_product_context
+from agent_runner import ModelManager, get_available_cluster_ids, get_cluster_meta, load_all_cluster_metas
 
 # ============================================================
 # APP + STATE
 # ============================================================
 
 app = FastAPI(
-    title="Agentic Evaluation Service",
-    description="Evaluate websites using per-cluster fine-tuned behavioral models",
-    version="1.0.0",
+    title="Agentic GPU Inference Service",
+    description="Predict browser actions using per-cluster fine-tuned models. Models stay loaded in GPU.",
+    version="2.0.0",
 )
 
 ensure_data_dirs()
 
-# Global model manager — loaded once at startup
 model_manager: ModelManager | None = None
 model_lock = threading.Lock()
-
-# Job store (in-memory)
-jobs: dict[str, dict] = {}
+_current_cluster_id: int | None = None
 
 
 # ============================================================
-# STARTUP — Load model
+# STARTUP
 # ============================================================
 
 @app.on_event("startup")
@@ -72,47 +65,72 @@ def startup_load_model():
     global model_manager
     model_name = os.environ.get("MODEL_NAME", "mistralai/Mistral-7B-Instruct-v0.3")
     print(f"\n{'='*60}")
-    print("AGENTIC EVALUATION SERVICE — STARTING")
+    print("GPU INFERENCE SERVICE — STARTING")
     print(f"{'='*60}")
     model_manager = ModelManager(model_name=model_name)
     clusters = get_available_cluster_ids()
     print(f"Available cluster adapters: {clusters}")
+    if clusters:
+        _switch_cluster(clusters[0])
+        print(f"Pre-loaded cluster {clusters[0]}")
+    print(f"Service ready on port 8000")
     print(f"{'='*60}\n")
+
+
+def _switch_cluster(cluster_id: int) -> dict:
+    """Switch the active LoRA adapter. Returns cluster meta."""
+    global _current_cluster_id
+    adapter_path = str(MODELS_DIR / f"cluster_{cluster_id}_lora")
+    with model_lock:
+        success = model_manager.load_adapter(adapter_path)
+    if success:
+        _current_cluster_id = cluster_id
+    meta = get_cluster_meta(cluster_id)
+    return meta
 
 
 # ============================================================
 # REQUEST / RESPONSE MODELS
 # ============================================================
 
-class EvaluateRequest(BaseModel):
-    url: str = Field(..., description="Target URL to evaluate")
-    app_name: str = Field(default="Web App", description="Application name")
-    app_description: str = Field(..., description="Description of the app and features to test")
-    cluster_ids: Optional[list[int]] = Field(
-        default=None,
-        description="Specific cluster IDs to run. If null, runs all available clusters."
-    )
-    max_steps: int = Field(default=20, ge=1, le=100, description="Max actions per cluster session")
-    max_duration: int = Field(default=300, ge=30, le=600, description="Max seconds per cluster session")
+class PredictRequest(BaseModel):
+    cluster_id: int = Field(..., description="Which cluster model to use")
+    page_state: str = Field(..., description="Current page observation (URL, title, elements)")
+    app_name: str = Field(default="Web App")
+    app_url: str = Field(default="")
+    app_description: str = Field(default="", description="App feature description")
+    action_history: list[dict] = Field(default_factory=list, description="Recent action history")
+    error_context: str = Field(default="", description="Error from last failed action (for replanning)")
+    step_number: int = Field(default=0)
+    elapsed_s: float = Field(default=0.0)
+    max_duration_s: float = Field(default=300.0)
     temperature: float = Field(default=0.7, ge=0.0, le=2.0)
-    headless: bool = Field(default=True, description="Run browser in headless mode")
+    window_size: int = Field(default=5, description="How many recent actions to include in prompt")
 
 
-class EvaluateResponse(BaseModel):
-    job_id: str
-    status: str
-    message: str
+class PredictResponse(BaseModel):
+    cluster_id: int
+    cluster_label: str
+    action: str
+    target: str
+    reasoning: str
+    hesitation_ms: int
+    raw_output: str = ""
 
 
-class JobStatus(BaseModel):
-    job_id: str
-    status: str  # "queued", "running", "completed", "failed"
-    started_at: Optional[str] = None
-    completed_at: Optional[str] = None
-    current_cluster: Optional[int] = None
-    clusters_completed: int = 0
-    clusters_total: int = 0
-    message: str = ""
+class BatchPredictRequest(BaseModel):
+    page_state: str = Field(..., description="Current page observation")
+    app_name: str = Field(default="Web App")
+    app_url: str = Field(default="")
+    app_description: str = Field(default="")
+    action_history: list[dict] = Field(default_factory=list)
+    error_context: str = Field(default="")
+    step_number: int = Field(default=0)
+    elapsed_s: float = Field(default=0.0)
+    max_duration_s: float = Field(default=300.0)
+    temperature: float = Field(default=0.7)
+    window_size: int = Field(default=5)
+    cluster_ids: Optional[list[int]] = Field(default=None, description="If null, runs all available")
 
 
 class ClusterInfo(BaseModel):
@@ -121,202 +139,177 @@ class ClusterInfo(BaseModel):
     has_adapter: bool
     description: str = ""
     key_behaviors: list[str] = []
+    persona_prompt: str = ""
 
 
 # ============================================================
-# BACKGROUND WORKER — runs evaluation across clusters
+# CORE INFERENCE
 # ============================================================
 
-def _run_evaluation(job_id: str, request: EvaluateRequest):
-    """Background task: run all cluster models against the target URL."""
-    global model_manager
+def _build_prompt(cluster_meta: dict, req: PredictRequest) -> list[dict]:
+    """Build the chat messages for the model."""
+    system_prompt = build_cluster_system_prompt(cluster_meta)
+    product_context = build_product_context(req.app_name, req.app_url, req.app_description)
 
-    job = jobs[job_id]
-    job["status"] = "running"
-    job["started_at"] = datetime.now().isoformat()
+    lines = [product_context, ""]
+    lines.append(f"Session: step {req.step_number}, elapsed {req.elapsed_s:.1f}s / {req.max_duration_s:.0f}s")
+    lines.append(f"\n{req.page_state}")
 
-    available = get_available_cluster_ids()
-    cluster_ids = request.cluster_ids or available
+    window = req.action_history[-req.window_size:]
+    if window:
+        lines.append("\nRecent actions:")
+        for a in window:
+            status = "" if a.get("success", True) else " [FAILED]"
+            line = f"  [{a.get('elapsed', 0):.1f}s] {a.get('action', '?')} -> {a.get('target', '?')[:50]}{status}"
+            if not a.get("success", True) and a.get("error"):
+                line += f" ({a['error'][:40]})"
+            lines.append(line)
 
-    # Filter to only clusters that have adapters
-    valid_ids = [cid for cid in cluster_ids if cid in available]
-    if not valid_ids:
-        job["status"] = "failed"
-        job["error"] = f"No valid cluster adapters found. Available: {available}, Requested: {cluster_ids}"
-        job["completed_at"] = datetime.now().isoformat()
-        return
+    if req.error_context:
+        lines.append(f"\nLast action failed: {req.error_context}")
+        lines.append("Decide how to recover or try an alternative approach.")
+    else:
+        lines.append("\nWhat would you do next?")
 
-    job["clusters_total"] = len(valid_ids)
-    job["cluster_results"] = {}
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": "\n".join(lines)},
+    ]
 
-    runner = AgentRunner(
-        model_manager=model_manager,
-        max_steps=request.max_steps,
-        max_duration=request.max_duration,
-        temperature=request.temperature,
-        headless=request.headless,
-    )
 
-    print(f"\n[Job {job_id[:8]}] Starting evaluation of {request.url}")
-    print(f"  Clusters: {valid_ids}")
-    print(f"  Max steps: {request.max_steps}, Max duration: {request.max_duration}s\n")
-
-    for i, cid in enumerate(valid_ids):
-        job["current_cluster"] = cid
-        job["clusters_completed"] = i
-        job["message"] = f"Running cluster {cid} ({i+1}/{len(valid_ids)})"
-
-        meta = get_cluster_meta(cid)
-        print(f"[Job {job_id[:8]}] Cluster {cid}: {meta.get('label', '?')}")
-
-        try:
-            with model_lock:
-                result = runner.run_session(
-                    url=request.url,
-                    app_name=request.app_name,
-                    app_description=request.app_description,
-                    cluster_id=cid,
-                    cluster_meta=meta,
-                )
-            job["cluster_results"][cid] = result
-            print(f"[Job {job_id[:8]}] Cluster {cid}: {result['status']} — "
-                  f"{result.get('total_steps', 0)} steps, "
-                  f"{result.get('completion_rate', 0)*100:.0f}% success")
-        except Exception as e:
-            print(f"[Job {job_id[:8]}] Cluster {cid}: ERROR — {e}")
-            job["cluster_results"][cid] = {
-                "cluster_id": cid,
-                "cluster_label": meta.get("label", "?"),
-                "status": "error",
-                "error": str(e),
-                "actions": [],
-            }
-
-    job["clusters_completed"] = len(valid_ids)
-    job["current_cluster"] = None
-    job["status"] = "completed"
-    job["completed_at"] = datetime.now().isoformat()
-    job["message"] = f"Evaluation complete: {len(valid_ids)} clusters tested"
-
-    # Build summary
-    total_actions = 0
-    total_success = 0
-    total_failed = 0
-    for r in job["cluster_results"].values():
-        total_actions += r.get("total_steps", 0)
-        total_success += r.get("successful_actions", 0)
-        total_failed += r.get("failed_actions", 0)
-
-    job["summary"] = {
-        "url": request.url,
-        "clusters_tested": len(valid_ids),
-        "total_actions": total_actions,
-        "total_successful": total_success,
-        "total_failed": total_failed,
-        "overall_success_rate": round(total_success / total_actions, 2) if total_actions > 0 else 0,
+def _parse_action(raw: str) -> dict:
+    """Parse model JSON output robustly."""
+    import re
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        match = re.search(r'\{[^{}]*\}', raw, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group())
+            except json.JSONDecodeError:
+                pass
+    return {
+        "action": "scroll", "target": "down 300px",
+        "reasoning": "fallback — unparseable model output",
+        "hesitation_ms": 500,
     }
 
-    print(f"\n[Job {job_id[:8]}] COMPLETE — {total_actions} actions, "
-          f"{total_success} ok, {total_failed} failed\n")
+
+def _predict_single(cluster_id: int, req: PredictRequest) -> PredictResponse:
+    """Run inference for one cluster."""
+    global _current_cluster_id
+
+    if _current_cluster_id != cluster_id:
+        meta = _switch_cluster(cluster_id)
+    else:
+        meta = get_cluster_meta(cluster_id)
+
+    messages = _build_prompt(meta, req)
+
+    with model_lock:
+        raw = model_manager.generate(messages, temperature=req.temperature)
+
+    action_data = _parse_action(raw)
+
+    return PredictResponse(
+        cluster_id=cluster_id,
+        cluster_label=meta.get("label", f"Cluster {cluster_id}"),
+        action=action_data.get("action", "wait"),
+        target=action_data.get("target", ""),
+        reasoning=action_data.get("reasoning", ""),
+        hesitation_ms=action_data.get("hesitation_ms", 0),
+        raw_output=raw[:500],
+    )
 
 
 # ============================================================
 # ENDPOINTS
 # ============================================================
 
-@app.post("/evaluate", response_model=EvaluateResponse)
-def evaluate(request: EvaluateRequest, background_tasks: BackgroundTasks):
-    """Start an evaluation job. Runs all cluster models against the target URL."""
+@app.post("/predict", response_model=PredictResponse)
+def predict(req: PredictRequest):
+    """Predict the next browser action for a specific cluster model."""
     if model_manager is None:
-        raise HTTPException(status_code=503, detail="Model not loaded yet. Wait for startup.")
+        raise HTTPException(status_code=503, detail="Model not loaded yet")
 
-    job_id = str(uuid.uuid4())
-    jobs[job_id] = {
-        "job_id": job_id,
-        "status": "queued",
-        "request": request.model_dump(),
-        "started_at": None,
-        "completed_at": None,
-        "current_cluster": None,
-        "clusters_completed": 0,
-        "clusters_total": 0,
-        "cluster_results": {},
-        "message": "Queued",
-    }
+    available = get_available_cluster_ids()
+    if req.cluster_id not in available:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Cluster {req.cluster_id} not found. Available: {available}",
+        )
 
-    background_tasks.add_task(_run_evaluation, job_id, request)
-
-    return EvaluateResponse(
-        job_id=job_id,
-        status="queued",
-        message=f"Evaluation queued. Track with GET /status/{job_id}",
-    )
+    return _predict_single(req.cluster_id, req)
 
 
-@app.get("/status/{job_id}", response_model=JobStatus)
-def get_status(job_id: str):
-    """Check the status of an evaluation job."""
-    if job_id not in jobs:
-        raise HTTPException(status_code=404, detail="Job not found")
+@app.post("/predict/batch", response_model=list[PredictResponse])
+def predict_batch(req: BatchPredictRequest):
+    """Predict next action from ALL cluster models (or specified subset)."""
+    if model_manager is None:
+        raise HTTPException(status_code=503, detail="Model not loaded yet")
 
-    job = jobs[job_id]
-    return JobStatus(
-        job_id=job_id,
-        status=job["status"],
-        started_at=job.get("started_at"),
-        completed_at=job.get("completed_at"),
-        current_cluster=job.get("current_cluster"),
-        clusters_completed=job.get("clusters_completed", 0),
-        clusters_total=job.get("clusters_total", 0),
-        message=job.get("message", ""),
-    )
+    available = get_available_cluster_ids()
+    cluster_ids = req.cluster_ids or available
+    valid_ids = [cid for cid in cluster_ids if cid in available]
+
+    if not valid_ids:
+        raise HTTPException(status_code=404, detail=f"No valid clusters. Available: {available}")
+
+    results = []
+    for cid in valid_ids:
+        single_req = PredictRequest(
+            cluster_id=cid,
+            page_state=req.page_state,
+            app_name=req.app_name,
+            app_url=req.app_url,
+            app_description=req.app_description,
+            action_history=req.action_history,
+            error_context=req.error_context,
+            step_number=req.step_number,
+            elapsed_s=req.elapsed_s,
+            max_duration_s=req.max_duration_s,
+            temperature=req.temperature,
+            window_size=req.window_size,
+        )
+        try:
+            result = _predict_single(cid, single_req)
+            results.append(result)
+        except Exception as e:
+            results.append(PredictResponse(
+                cluster_id=cid,
+                cluster_label=get_cluster_meta(cid).get("label", "?"),
+                action="wait",
+                target="",
+                reasoning=f"Error: {e}",
+                hesitation_ms=0,
+            ))
+
+    return results
 
 
-@app.get("/results/{job_id}")
-def get_results(job_id: str):
-    """Get full results for a completed evaluation job."""
-    if job_id not in jobs:
-        raise HTTPException(status_code=404, detail="Job not found")
+@app.post("/switch/{cluster_id}")
+def switch_cluster(cluster_id: int):
+    """Pre-load a specific cluster's adapter into GPU."""
+    if model_manager is None:
+        raise HTTPException(status_code=503, detail="Model not loaded yet")
 
-    job = jobs[job_id]
+    available = get_available_cluster_ids()
+    if cluster_id not in available:
+        raise HTTPException(status_code=404, detail=f"Cluster {cluster_id} not found. Available: {available}")
 
-    if job["status"] not in ("completed", "failed"):
-        return {
-            "job_id": job_id,
-            "status": job["status"],
-            "message": "Job still in progress. Check /status for updates.",
-        }
-
+    meta = _switch_cluster(cluster_id)
     return {
-        "job_id": job_id,
-        "status": job["status"],
-        "request": job.get("request"),
-        "started_at": job.get("started_at"),
-        "completed_at": job.get("completed_at"),
-        "summary": job.get("summary", {}),
-        "cluster_results": {
-            str(k): {
-                "cluster_id": v.get("cluster_id"),
-                "cluster_label": v.get("cluster_label"),
-                "status": v.get("status"),
-                "total_steps": v.get("total_steps", 0),
-                "successful_actions": v.get("successful_actions", 0),
-                "failed_actions": v.get("failed_actions", 0),
-                "completion_rate": v.get("completion_rate", 0),
-                "duration_s": v.get("duration_s", 0),
-                "stuck_events": v.get("stuck_events", 0),
-                "actions": v.get("actions", []),
-                "log_path": v.get("log_path", ""),
-                "error": v.get("error", ""),
-            }
-            for k, v in job.get("cluster_results", {}).items()
-        },
+        "status": "ok",
+        "cluster_id": cluster_id,
+        "cluster_label": meta.get("label", "?"),
+        "message": f"Adapter for cluster {cluster_id} loaded into GPU",
     }
 
 
 @app.get("/clusters", response_model=list[ClusterInfo])
 def list_clusters():
-    """List all available clusters and their adapter status."""
+    """List all available clusters, their personas, and adapter status."""
     available = set(get_available_cluster_ids())
     all_metas = load_all_cluster_metas()
 
@@ -332,16 +325,12 @@ def list_clusters():
             has_adapter=cid in available,
             description=meta.get("description", ""),
             key_behaviors=meta.get("key_behaviors", []),
+            persona_prompt=build_cluster_system_prompt(meta)[:200] + "..." if meta.get("description") else "",
         ))
 
-    # Include any adapters not in clusters.json
     for cid in available:
         if cid not in seen:
-            result.append(ClusterInfo(
-                id=cid,
-                label=f"Cluster {cid}",
-                has_adapter=True,
-            ))
+            result.append(ClusterInfo(id=cid, label=f"Cluster {cid}", has_adapter=True))
 
     return sorted(result, key=lambda x: x.id)
 
@@ -352,9 +341,8 @@ def health():
     return {
         "status": "ok",
         "model_loaded": model_manager is not None,
+        "current_cluster": _current_cluster_id,
         "available_clusters": get_available_cluster_ids(),
-        "active_jobs": sum(1 for j in jobs.values() if j["status"] == "running"),
-        "total_jobs": len(jobs),
     }
 
 
@@ -368,5 +356,5 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=8000,
         reload=False,
-        workers=1,  # single worker — model is in GPU memory
+        workers=1,
     )
