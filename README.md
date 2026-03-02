@@ -1,4 +1,4 @@
-# Shadow Verse
+# ShadowVerse
 ## Agentic World — Behavioral Digital Twins from Real User Data
 
 Train AI agents on real user behavior from PostHog session recordings — not LLM persona prompts — to create persistent digital twins of user demographics. These agents learn how different people actually interact with web products, then autonomously explore and evaluate any web application from their demographic's perspective.
